@@ -94,7 +94,7 @@ export default function HeroSection() {
           <div className="relative rounded-2xl overflow-hidden shadow-strong w-full h-[550px] bg-warmgray">
             <SafeImage
               src={heroUrl(900)}
-              alt="Cedar privacy fence installation in a Nashville backyard"
+              alt="nashville-fence-installers"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />
