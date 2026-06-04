@@ -11,15 +11,26 @@ const bullets = [
   'Fast local fence estimates',
 ]
 
+const heroUrl = (w: number) => IMAGES.hero.replace(/([?&])w=\d+/, `$1w=${w}`)
+
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-white">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[60%] h-full bg-warmgray/50" />
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-forest-50/40 blur-3xl" />
+    <section className="relative overflow-hidden bg-white min-h-screen">
+      <div className="absolute inset-0">
+        <SafeImage
+          src={heroUrl(1800)}
+          alt=""
+          className="w-full h-full object-cover opacity-20"
+          raw
+        />
       </div>
 
-      <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-forest-50/40 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full bg-oak-50/40 blur-3xl" />
+      </div>
+
+      <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -55,10 +66,10 @@ export default function HeroSection() {
           </ul>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <Link to="/get-quotes" className="btn-primary !px-6 !py-3.5">
+            <Link to="/get-quotes" className="btn-primary">
               Get Fence Quotes <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link to="/cost-guide" className="btn-secondary !px-6 !py-3.5">
+            <Link to="/cost-guide" className="btn-secondary">
               <Calculator className="w-4 h-4" /> Fence Cost Calculator
             </Link>
           </div>
@@ -78,13 +89,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="relative"
+          className="hidden lg:block relative"
         >
-          <div className="relative rounded-2xl overflow-hidden shadow-strong aspect-[5/6] bg-warmgray">
+          <div className="relative rounded-2xl overflow-hidden shadow-strong w-full h-[550px] bg-warmgray">
             <SafeImage
-              src={IMAGES.hero}
+              src={heroUrl(900)}
               alt="Cedar privacy fence installation in a Nashville backyard"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />
           </div>
