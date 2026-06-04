@@ -11,7 +11,16 @@ const bullets = [
   'Fast local fence estimates',
 ]
 
-const heroUrl = (w: number) => IMAGES.hero.replace(/([?&])w=\d+/, `$1w=${w}`)
+const heroUrl = (w: number) => {
+  if (/[?&]w=\d+/.test(IMAGES.hero)) {
+    return IMAGES.hero.replace(/([?&])w=\d+/, `$1w=${w}`)
+  }
+  if (/\/\d+x\d+(?=\b|$|\?)/.test(IMAGES.hero)) {
+    const h = Math.round(w * 0.75)
+    return IMAGES.hero.replace(/\/\d+x\d+/, `/${w}x${h}`)
+  }
+  return IMAGES.hero
+}
 
 export default function HeroSection() {
   return (
