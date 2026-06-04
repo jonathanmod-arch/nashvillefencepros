@@ -8,6 +8,7 @@
   }
   body {
     @apply font-sans text-onyx-700 antialiased bg-white;
+    font-feature-settings: 'ss01', 'cv11';
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tightest;
@@ -19,28 +20,32 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-forest-500 text-white font-semibold text-sm tracking-wide hover:bg-forest-600 transition-all duration-200 shadow-soft hover:shadow-medium;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-forest-500 text-white font-semibold text-[13px] tracking-wide hover:bg-forest-600 transition-all duration-200 shadow-soft hover:shadow-medium;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md border border-forest-500 text-forest-500 font-semibold text-sm tracking-wide hover:bg-forest-50 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-forest-500 text-forest-500 font-semibold text-[13px] tracking-wide hover:bg-forest-50 transition-all duration-200;
   }
   .btn-outline-white {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md border border-white/40 text-white font-semibold text-sm tracking-wide hover:bg-white/10 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-white/40 text-white font-semibold text-[13px] tracking-wide hover:bg-white/10 transition-all duration-200;
   }
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-14 md:py-20;
   }
   .label-eyebrow {
-    @apply inline-block text-xs font-bold uppercase tracking-[0.2em] text-oak-500;
+    @apply inline-block text-[11px] font-bold uppercase tracking-[0.22em] text-oak-500;
   }
   .heading-section {
-    @apply text-3xl md:text-5xl font-display font-bold tracking-tightest text-forest-500;
+    @apply text-[28px] md:text-[44px] font-display font-bold tracking-tightest text-forest-500 leading-[1.05];
+  }
+  .heading-serif {
+    font-family: 'Fraunces', 'Inter Tight', serif;
+    @apply font-medium tracking-tight;
   }
   .text-body-lead {
-    @apply text-base md:text-lg text-onyx-500 leading-relaxed;
+    @apply text-[15px] md:text-[17px] text-onyx-500 leading-relaxed;
   }
   .card-soft {
-    @apply bg-white rounded-2xl shadow-soft hover:shadow-medium transition-all duration-300;
+    @apply bg-white rounded-xl shadow-soft hover:shadow-medium transition-all duration-300;
   }
 }
 

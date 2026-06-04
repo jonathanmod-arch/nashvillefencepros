@@ -394,10 +394,10 @@ export const BENEFITS = [
 ]
 
 export const STATS = [
-  { label: 'Happy Homeowners', value: 1200, suffix: '+' },
-  { label: 'Avg. Contractor Rating', value: 4.9, suffix: '', decimals: 1 },
-  { label: 'Avg. Response Time', value: 48, suffix: ' hrs' },
-  { label: 'Licensed & Insured', value: 100, suffix: '%' },
+  { label: 'Homeowners Served', value: 792, suffix: '+' },
+  { label: 'Quotes Delivered', value: 1254, suffix: '+' },
+  { label: 'On-Time Completion', value: 67, suffix: '%' },
+  { label: 'Years Combined Experience', value: 28, suffix: ' yrs' },
 ]
 
 export const GALLERY = [

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { STATS } from '../../data/siteData'
 
-function useCountUp(target: number, decimals = 0, durationMs = 1400, start = false) {
+function useCountUp(target: number, durationMs = 1400, start = false) {
   const [value, setValue] = useState(0)
   const startedRef = useRef(false)
   useEffect(() => {
@@ -19,23 +19,20 @@ function useCountUp(target: number, decimals = 0, durationMs = 1400, start = fal
     }
     raf = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(raf)
-  }, [target, durationMs, start, decimals])
+  }, [target, durationMs, start])
   return value
 }
 
 function StatItem({ stat, inView }: { stat: typeof STATS[number]; inView: boolean }) {
-  const value = useCountUp(stat.value, stat.decimals ?? 0, 1500, inView)
-  const display =
-    stat.decimals !== undefined
-      ? value.toFixed(stat.decimals)
-      : Math.round(value).toLocaleString()
+  const value = useCountUp(stat.value, 1500, inView)
+  const display = Math.round(value).toLocaleString()
   return (
     <div className="text-center">
-      <div className="text-4xl md:text-5xl font-display font-bold text-forest-500 tracking-tightest">
+      <div className="text-[40px] md:text-[56px] font-display font-bold text-forest-500 tracking-tightest leading-none">
         {display}
         <span className="text-oak-500">{stat.suffix}</span>
       </div>
-      <div className="mt-2 text-xs md:text-sm uppercase font-semibold tracking-[0.15em] text-onyx-400">
+      <div className="mt-2 text-[11px] md:text-[12px] uppercase font-semibold tracking-[0.18em] text-onyx-400">
         {stat.label}
       </div>
     </div>
@@ -47,7 +44,7 @@ export default function TrustBar() {
   const inView = useInView(ref, { once: true, amount: 0.4 })
   return (
     <section className="bg-white border-y border-warmgray">
-      <div ref={ref} className="container-wide py-10 md:py-14">
+      <div ref={ref} className="container-wide py-10 md:py-12">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

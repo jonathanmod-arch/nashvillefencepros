@@ -25,10 +25,10 @@ export default function CostGuideSection() {
   return (
     <section className="bg-warmgray section-padding">
       <div className="container-wide">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="label-eyebrow">Pricing Transparency</span>
           <h2 className="mt-3 heading-section">Nashville Fence Cost Guide</h2>
-          <p className="mt-4 text-body-lead">
+          <p className="mt-3 text-body-lead">
             Real Middle Tennessee install prices. Move the slider, pick a material, and see
             your range update live.
           </p>
