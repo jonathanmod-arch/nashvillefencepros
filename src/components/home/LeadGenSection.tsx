@@ -1,6 +1,6 @@
 import { useState, useRef, DragEvent, ChangeEvent } from 'react'
 import { motion } from 'framer-motion'
-import { Upload, CheckCircle2, X, ShieldCheck, Clock, Users } from 'lucide-react'
+import { Upload, CheckCircle2, X, ShieldCheck, Clock, Star } from 'lucide-react'
 import { FENCE_TYPES } from '../../data/siteData'
 
 type FormState = {
@@ -65,50 +65,53 @@ export default function LeadGenSection() {
       </div>
 
       <div className="container-wide relative">
-        <div className="grid lg:grid-cols-5 gap-10 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-2"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-oak-400">
-              Free Quotes From Vetted Pros
+            <span className="block font-body text-sm font-semibold uppercase tracking-widest text-oak-400 mb-3">
+              Free Estimates
             </span>
-            <h2 className="mt-3 text-3xl md:text-5xl font-heading font-black text-white tracking-tightest leading-[1.05]">
+            <h2 className="font-heading font-black text-3xl sm:text-4xl text-white tracking-tightest leading-[1.05] mb-4">
               Get Fence Quotes From Nashville Professionals
             </h2>
-            <div className="heading-accent !bg-oak-400 mt-4" />
-            <p className="mt-5 text-onyx-200 leading-relaxed">
-              Share your project details once. We match you with up to 3 licensed Nashville
-              contractors who'll respond with detailed quotes within 48 hours.
+            <div className="w-12 h-0.5 bg-oak-400 mb-6" />
+            <p className="font-body font-normal text-lg text-white/70 leading-relaxed mb-8">
+              Submit your project details and receive estimates from up to 3 pre-vetted
+              Nashville fence contractors. Free, no-obligation, typically within 24 hours.
             </p>
 
-            <div className="mt-8 space-y-4">
+            <div className="space-y-5 mb-10">
               {[
-                { icon: ShieldCheck, label: 'Licensed, insured, background-checked pros only' },
-                { icon: Clock, label: 'Most homeowners hear back within 24 hours' },
-                { icon: Users, label: 'Compare apples-to-apples line-item quotes' },
+                { icon: ShieldCheck, label: 'All contractors are licensed and insured in Tennessee' },
+                { icon: Star, label: 'Only contractors with 4.7+ star ratings are featured' },
+                { icon: Clock, label: 'Most homeowners receive quotes within 24–48 hours' },
+                { icon: CheckCircle2, label: 'No-obligation — you choose whether to proceed' },
               ].map((b) => {
                 const Icon = b.icon
                 return (
-                  <div key={b.label} className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-forest-500 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-4 h-4 text-oak-300" />
+                  <div key={b.label} className="flex items-center gap-3">
+                    <div className="w-8 h-8 shrink-0 rounded-lg bg-forest-500 flex items-center justify-center">
+                      <Icon className="w-4 h-4 text-oak-400" />
                     </div>
-                    <p className="text-sm text-onyx-100 leading-relaxed pt-1.5">{b.label}</p>
+                    <p className="font-body text-sm text-white/80">{b.label}</p>
                   </div>
                 )
               })}
             </div>
 
-            <div className="mt-8 p-5 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-3xl font-heading font-bold text-oak-300 tracking-tightest">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+              <div className="font-body text-xs uppercase tracking-widest text-white/60 mb-2">
+                Average Savings
+              </div>
+              <div className="font-heading font-black text-white text-3xl leading-none">
                 $1,200
               </div>
-              <p className="text-xs text-onyx-200 mt-1">
-                Average savings from comparing multiple Nashville quotes
+              <p className="font-body text-sm text-white/60 mt-2">
+                when comparing 3+ Nashville contractor quotes
               </p>
             </div>
           </motion.div>
@@ -118,7 +121,7 @@ export default function LeadGenSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-3 bg-white rounded-3xl shadow-strong p-6 md:p-10"
+            className="bg-white rounded-3xl shadow-strong p-6 md:p-10"
           >
             {submitted ? (
               <div className="text-center py-16">
