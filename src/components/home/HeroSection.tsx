@@ -15,22 +15,13 @@ const heroUrl = (w: number) => IMAGES.hero.replace(/([?&])w=\d+/, `$1w=${w}`)
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-white min-h-screen">
-      <div className="absolute inset-0">
-        <SafeImage
-          src={heroUrl(1800)}
-          alt=""
-          className="w-full h-full object-cover opacity-20"
-          raw
-        />
-      </div>
-
+    <section className="relative overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-forest-50/40 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full bg-oak-50/40 blur-3xl" />
       </div>
 
-      <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center min-h-screen">
+      <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
