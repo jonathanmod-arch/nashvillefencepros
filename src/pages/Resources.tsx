@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
-import { RESOURCES } from '../data/siteData'
+import { RESOURCES, type ResourceSection } from '../data/siteData'
 import { Clock, ArrowRight, ArrowLeft } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
@@ -13,6 +13,115 @@ const CATEGORY_COLORS: Record<string, string> = {
   Permits: 'bg-forest-500 text-white',
   Cost: 'bg-oak-400 text-forest-500',
   Trends: 'bg-warmgray text-onyx-700',
+  Repair: 'bg-[#7C2D12] text-white',
+}
+
+function ArticleBody({ sections }: { sections: ResourceSection[] }) {
+  return (
+    <div className="space-y-5 text-onyx-700">
+      {sections.map((s, i) => {
+        switch (s.type) {
+          case 'h2':
+            return (
+              <h2 key={i} className="heading-card !text-2xl mt-8">
+                {s.text}
+              </h2>
+            )
+          case 'h3':
+            return (
+              <h3 key={i} className="heading-label !text-lg mt-6">
+                {s.text}
+              </h3>
+            )
+          case 'p':
+            return (
+              <p key={i} className="leading-relaxed text-[15.5px] text-onyx-700/85">
+                {s.text}
+              </p>
+            )
+          case 'ul':
+            return (
+              <ul key={i} className="space-y-2.5 pl-5 list-disc marker:text-oak-500">
+                {s.items.map((item, j) => (
+                  <li key={j} className="text-[15px] text-onyx-700/85 leading-relaxed">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )
+          case 'ol':
+            return (
+              <ol key={i} className="space-y-2.5 pl-5 list-decimal marker:text-forest-500 marker:font-bold">
+                {s.items.map((item, j) => (
+                  <li key={j} className="text-[15px] text-onyx-700/85 leading-relaxed pl-1">
+                    {item}
+                  </li>
+                ))}
+              </ol>
+            )
+          case 'table':
+            return (
+              <div
+                key={i}
+                className="overflow-x-auto rounded-xl border border-[#E2E8F0]"
+              >
+                <table className="w-full text-sm">
+                  <thead className="bg-forest-500 text-white">
+                    <tr>
+                      {s.headers.map((h, j) => (
+                        <th
+                          key={j}
+                          className="text-left px-4 py-3 font-semibold text-xs uppercase tracking-wider"
+                        >
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {s.rows.map((row, ri) => (
+                      <tr
+                        key={ri}
+                        className={ri % 2 === 0 ? 'bg-white' : 'bg-warmgray/40'}
+                      >
+                        {row.map((cell, ci) => (
+                          <td
+                            key={ci}
+                            className="px-4 py-3 text-onyx-700/85 align-top"
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )
+          case 'callout':
+            return (
+              <div
+                key={i}
+                className="bg-forest-50 border-l-4 border-forest-500 rounded-r-xl p-5 mt-8 not-prose"
+              >
+                <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-700 mb-1">
+                  Next Step
+                </div>
+                <div className="font-heading font-bold text-forest-500 mb-1">
+                  {s.title}
+                </div>
+                <p className="text-sm text-onyx-700/80 leading-relaxed">
+                  {s.text}
+                </p>
+                <Link to={s.ctaHref} className="btn-primary mt-4 !py-2.5">
+                  {s.ctaLabel} <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            )
+        }
+      })}
+    </div>
+  )
 }
 
 export default function Resources() {
@@ -67,52 +176,52 @@ export default function Resources() {
                 </span>
                 <span>· Nashville-specific guide</span>
               </div>
-              <div className="prose-content space-y-5 text-onyx-700">
-                <p className="text-lg leading-relaxed">
-                  {r.excerpt} This guide walks through what Middle Tennessee homeowners
-                  actually run into — not generic national advice.
-                </p>
-                <h2 className="heading-card !text-2xl mt-8">
-                  Why This Matters in Nashville
-                </h2>
-                <p className="leading-relaxed">
-                  Nashville's mix of historic neighborhoods, fast-growing suburbs, and
-                  large-lot acreage means a one-size-fits-all approach rarely works. Climate
-                  swings from summer humidity to ice storms also influence which materials
-                  hold up over the typical 15–25 year fence lifecycle.
-                </p>
-                <h2 className="heading-card !text-2xl mt-8">
-                  Key Things to Know
-                </h2>
-                <ul className="space-y-3 pl-5 list-disc marker:text-oak-500">
-                  <li>Local Metro permit rules typically allow up to 8 ft in rear and side yards.</li>
-                  <li>Historic overlay districts have stricter approval processes.</li>
-                  <li>Tennessee 811 marking is required at least 3 business days before digging.</li>
-                  <li>HOA review applies to most Williamson County subdivisions.</li>
-                  <li>Pool fences must comply with the 2018 ISPSC barrier code.</li>
-                </ul>
-                <h2 className="heading-card !text-2xl mt-8">
-                  Bottom Line
-                </h2>
-                <p className="leading-relaxed">
-                  Getting the right fence in Nashville comes down to material fit,
-                  contractor experience, and respect for local code. Use this guide as a
-                  starting point — then bring in 2–3 vetted quotes to nail down the
-                  specifics for your yard.
-                </p>
-                <div className="bg-forest-50 border-l-4 border-forest-500 rounded-r-xl p-5 mt-8">
-                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-700 mb-1">
-                    Next Step
-                  </div>
-                  <p className="text-sm text-forest-500 font-semibold">
-                    Compare quotes from up to 3 vetted Nashville fence pros — free, no
-                    pressure.
+              {'body' in r && Array.isArray((r as { body?: ResourceSection[] }).body) ? (
+                <ArticleBody sections={(r as { body: ResourceSection[] }).body} />
+              ) : (
+                <div className="prose-content space-y-5 text-onyx-700">
+                  <p className="text-lg leading-relaxed">
+                    {r.excerpt} This guide walks through what Middle Tennessee homeowners
+                    actually run into — not generic national advice.
                   </p>
-                  <Link to="/get-quotes" className="btn-primary mt-4 !py-2.5">
-                    Get Free Quotes <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  <h2 className="heading-card !text-2xl mt-8">
+                    Why This Matters in Nashville
+                  </h2>
+                  <p className="leading-relaxed">
+                    Nashville's mix of historic neighborhoods, fast-growing suburbs, and
+                    large-lot acreage means a one-size-fits-all approach rarely works.
+                    Climate swings from summer humidity to ice storms also influence which
+                    materials hold up over the typical 15–25 year fence lifecycle.
+                  </p>
+                  <h2 className="heading-card !text-2xl mt-8">Key Things to Know</h2>
+                  <ul className="space-y-3 pl-5 list-disc marker:text-oak-500">
+                    <li>Local Metro permit rules typically allow up to 8 ft in rear and side yards.</li>
+                    <li>Historic overlay districts have stricter approval processes.</li>
+                    <li>Tennessee 811 marking is required at least 3 business days before digging.</li>
+                    <li>HOA review applies to most Williamson County subdivisions.</li>
+                    <li>Pool fences must comply with the 2018 ISPSC barrier code.</li>
+                  </ul>
+                  <h2 className="heading-card !text-2xl mt-8">Bottom Line</h2>
+                  <p className="leading-relaxed">
+                    Getting the right fence in Nashville comes down to material fit,
+                    contractor experience, and respect for local code. Use this guide as a
+                    starting point — then bring in 2–3 vetted quotes to nail down the
+                    specifics for your yard.
+                  </p>
+                  <div className="bg-forest-50 border-l-4 border-forest-500 rounded-r-xl p-5 mt-8">
+                    <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-700 mb-1">
+                      Next Step
+                    </div>
+                    <p className="text-sm text-forest-500 font-semibold">
+                      Compare quotes from up to 3 vetted Nashville fence pros — free, no
+                      pressure.
+                    </p>
+                    <Link to="/get-quotes" className="btn-primary mt-4 !py-2.5">
+                      Get Free Quotes <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
+              )}
             </article>
 
             <aside>

@@ -230,6 +230,21 @@ export const NEIGHBORHOODS = [
     note: 'Larger lots and rolling terrain. Sloped-yard aluminum and tall cedar privacy panels are most requested.',
   },
 ]
+export type ResourceSection =
+  | { type: 'p'; text: string }
+  | { type: 'h2'; text: string }
+  | { type: 'h3'; text: string }
+  | { type: 'ul'; items: string[] }
+  | { type: 'ol'; items: string[] }
+  | { type: 'table'; headers: string[]; rows: string[][] }
+  | {
+      type: 'callout'
+      title: string
+      text: string
+      ctaLabel: string
+      ctaHref: string
+    }
+
 export const RESOURCES = [
   {
     slug: 'wood-vs-vinyl-nashville',
@@ -284,6 +299,239 @@ export const RESOURCES = [
     excerpt:
       'The design history behind the slat-style fence dominating East Nashville, 12 South, and Sylvan Park bungalows.',
     img: IMAGES.resources['horizontal-cedar-trend'],
+  },
+  {
+    slug: 'fence-repair-vs-replace-nashville',
+    title: 'When to Repair vs. Replace Your Nashville Fence (The 60% Rule)',
+    category: 'Repair',
+    readTime: '7 min',
+    excerpt:
+      'A simple cost-based rule for deciding whether to repair or replace a damaged Nashville fence — plus material-by-material repair cost ranges from Davidson and Williamson Counties.',
+    img: IMAGES.resources['fence-cost-breakdown'],
+    body: [
+      {
+        type: 'p',
+        text: "Standing in your Nashville backyard staring at a leaning fence is one of the more confusing moments of homeownership. Repair the section that's failing, or rip the whole thing out and start over? Local fence pros use a simple rule to decide: if the repair quote comes in above 60% of a full replacement, replacement is the better long-term call. Below that, repair wins. Here's how to actually run that math on a Nashville fence — material by material — and what the typical repair numbers look like in Davidson and Williamson Counties this year.",
+      },
+      { type: 'h2', text: 'The 60% Rule, Explained' },
+      {
+        type: 'p',
+        text: "The rule borrows from how insurance adjusters already think about partial structures. When the cost to fix what's broken passes roughly 60% of a brand-new replacement, you stop coming out ahead. Three things flip at that threshold: the warranty resets across the entire run, the rest of the structure gets the same useful life as the repaired sections, and you stop layering new wood onto posts that are already aging out.",
+      },
+      {
+        type: 'p',
+        text: "Work the math with real Nashville numbers. A 180 ft cedar privacy fence runs about $5,400 installed ($30 per linear foot). Your 60% breakpoint is $3,240. If the repair quote comes in at $2,800 — repair. If it comes in at $3,800 — replace and reset the clock.",
+      },
+      { type: 'h2', text: 'When Repair Is the Right Call' },
+      {
+        type: 'ul',
+        items: [
+          'Less than 20% of the total run is damaged',
+          'Posts are still sound — only panels, pickets, or rails need attention',
+          'Fence is under 10 years old',
+          'Hardware is the failure point (latches, hinges, post caps, gate operators)',
+          "You're staying in the home fewer than 5 years",
+          'Damage is isolated to one fence line, not the full perimeter',
+        ],
+      },
+      { type: 'h2', text: 'When You Should Replace Instead' },
+      {
+        type: 'ul',
+        items: [
+          'Posts are leaning or rotted at the base across multiple sections',
+          "Wood fence is 15+ years old with widespread weathering and graying",
+          'Repair quote exceeds 60% of a full replacement',
+          'Metro code or your HOA has changed and the existing fence is non-compliant',
+          "You're planning to sell within 12 months — buyers price an aging fence as a liability",
+          'The original fence skipped concrete-set posts and the soil is no longer holding them',
+        ],
+      },
+      { type: 'h2', text: 'Nashville Fence Repair Cost by Material' },
+      {
+        type: 'p',
+        text: 'Repair pricing in Middle Tennessee depends on three things: the material, how much of the run is affected, and how urgent the job is. Storm-season repairs in April and May run 15–25% above winter pricing because every Nashville crew is backlogged.',
+      },
+      {
+        type: 'table',
+        headers: ['Material', 'Typical repair range', 'Most common fix'],
+        rows: [
+          ['Wood (cedar / pressure-treated)', '$8–$22 / linear ft', 'Picket replacement + post reset'],
+          ['Vinyl (PVC)', '$12–$28 / linear ft', 'Cracked panel swap + post sleeve'],
+          ['Chain link', '$6–$14 / linear ft', 'Re-stretched mesh + bent post repair'],
+          ['Ornamental aluminum', '$14–$26 / linear ft', 'Bent rail / rust spot repair + repaint'],
+          ['Wrought iron', '$18–$36 / linear ft', 'Welded picket repair + gate hinge service'],
+          ['Pet / invisible fence', '$140–$520 / visit', 'Boundary wire break repair + collar service'],
+        ],
+      },
+      { type: 'h2', text: 'Common Repair Failures by Season in Nashville' },
+      {
+        type: 'p',
+        text: "Middle Tennessee weather is harder on fences than the national average. The combination of clay-heavy soil, freeze-thaw cycles, and a real spring storm season creates a predictable repair calendar — and a predictable contractor backlog every April.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Spring (Mar–May): wind-blown sections, broken posts, tree-fall damage — biggest backlog of the year',
+          'Summer (Jun–Aug): wood swelling, post rot at the base, gate sag from heat expansion',
+          'Fall (Sep–Nov): leaf debris pile-up against panels, leaning posts before freeze',
+          "Winter (Dec–Feb): chain link mesh stretch from ice load, frost heave on shallow-set posts",
+        ],
+      },
+      { type: 'h2', text: 'How to Get a Credible Repair Quote' },
+      {
+        type: 'ul',
+        items: [
+          'Photograph every damaged section before any contractor visits',
+          'Ask for a line-item quote — material, labor, post setting, and disposal split out separately',
+          'Get 2–3 quotes for any repair over $1,500',
+          'Verify the contractor actually does repair work, not just full installs (many Nashville crews skip repairs)',
+          'Confirm material warranty pass-through if you bought the original fence within the last 10 years',
+        ],
+      },
+      {
+        type: 'callout',
+        title: 'Get repair quotes from Nashville crews who actually do repairs',
+        text: 'We route your photos and address to vetted Nashville fence repair companies that specialize in repair (not just installation). Most homeowners hear back within 24 hours.',
+        ctaLabel: 'Get Free Repair Quotes',
+        ctaHref: '/repair',
+      },
+      { type: 'h2', text: 'Bottom Line' },
+      {
+        type: 'p',
+        text: "Repair vs. replace mostly answers itself once you've run the math. Pull a real replacement quote and a real repair quote, drop them into the 60% calculation, and pair the answer against how long you plan to own the home. Moving in two years? Lean repair. Staying ten? The math almost always points to replace — and you get a fresh warranty out of it.",
+      },
+      {
+        type: 'p',
+        text: "If the damage is from a storm and you're filing an insurance claim, the math gets a third variable: what the insurer will cover. Documentation in the first 24 hours is everything — start with photos before any debris gets moved.",
+      },
+    ] as ResourceSection[],
+  },
+  {
+    slug: 'storm-damaged-fence-nashville-insurance',
+    title: 'Storm-Damaged Fence in Nashville: Insurance Claim + Same-Week Repair',
+    category: 'Repair',
+    readTime: '6 min',
+    excerpt:
+      "Step-by-step Nashville guide to documenting storm fence damage, filing your Tennessee homeowner's insurance claim, and getting same-week fence repair from a vetted local contractor.",
+    img: IMAGES.resources['fence-cost-breakdown'],
+    body: [
+      {
+        type: 'p',
+        text: "Middle Tennessee gets hit with severe weather every spring. Between the wind events that roll through Davidson and Wilson Counties from March to June, the occasional derecho, and tornado activity across Williamson and Rutherford, a fence is one of the most-damaged outdoor structures on Nashville properties. If your fence took damage in a Nashville storm, you're in a small window where your insurance company, contractor availability, and your own documentation all need to come together fast. Move quickly and you can have it filed and repaired inside a week. Move slowly and you're looking at a 4–6 week contractor backlog plus a potentially weaker claim.",
+      },
+      { type: 'h2', text: 'First 24 Hours — Document Everything' },
+      {
+        type: 'p',
+        text: "Strong insurance claims have the most documentation, captured fastest. Your goal in the first day is to build a record an adjuster can't push back on.",
+      },
+      {
+        type: 'ol',
+        items: [
+          'Photograph every damaged section from multiple angles before anyone removes debris',
+          'Take a wide shot showing the property line and where the fence sits on it',
+          'Photograph adjacent damage too — fallen trees, scattered panel debris, damaged shed roofs (context matters)',
+          'Record the date, time, and weather event (a National Weather Service report URL helps your claim)',
+          'Save any city or county debris-removal notices that get posted to your door or mailbox',
+          "Keep all debris on your property until the adjuster sees it (or until your own photos clearly show it existed)",
+        ],
+      },
+      { type: 'h2', text: "Filing the Claim with Your Tennessee Insurer" },
+      {
+        type: 'p',
+        text: "Standard HO-3 homeowner's policies in Tennessee treat fences as 'other structures' — typically capped at 10% of your dwelling coverage. So if your home is insured for $400,000, you have up to $40,000 of fence and other-structure coverage available, minus deductible.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Call your insurer\'s claims line within 48 hours of the storm — speed matters',
+          'Tennessee statute gives insurers 30 days to acknowledge a claim and 60 days to investigate',
+          'Your deductible applies (usually $1,000–$2,500 — sometimes higher for named-storm wind/hail)',
+          'Ask explicitly whether your policy has separate wind/hail coverage with its own deductible',
+          'Request the claim number and adjuster name in writing before you hang up',
+        ],
+      },
+      { type: 'h2', text: "What's Covered vs Not Covered" },
+      {
+        type: 'p',
+        text: 'Tennessee homeowner policies cover sudden, accidental damage. Anything gradual or wear-related gets denied.',
+      },
+      {
+        type: 'table',
+        headers: ['Usually covered', 'Usually denied'],
+        rows: [
+          ['Wind damage from a documented storm', 'Gradual rot or aging'],
+          ['Hail damage to vinyl and aluminum', 'Leaning from soft soil (no triggering event)'],
+          ['Fallen tree damage (your tree or a neighbor\'s)', 'Poor original installation'],
+          ['Vehicle impact', 'Lack of maintenance / staining'],
+          ['Vandalism', 'Pet damage from your own animal'],
+        ],
+      },
+      { type: 'h2', text: 'Getting a Repair Estimate the Adjuster Will Accept' },
+      {
+        type: 'ul',
+        items: [
+          'Get the quote on contractor letterhead — handwritten estimates often get pushed back',
+          'Include separate line items for labor, materials, post setting, and debris haul-off',
+          'Have the contractor explicitly note "storm-related" or "wind damage" if that\'s the cause',
+          'Match the original spec (height, material, post depth) — upgrades come out of your pocket',
+          'Include a project timeline — adjusters approve faster when they see a real start date',
+        ],
+      },
+      { type: 'h2', text: "Same-Week Repair — What's Actually Realistic" },
+      {
+        type: 'p',
+        text: "After a major storm event in Nashville, every reputable fence company's phone rings nonstop for two weeks. Getting on a schedule within seven days is doable but requires you to move on the contractor's schedule, not yours.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Most Nashville crews are 2–3 weeks out normally — that stretches to 4–6 weeks after major storms',
+          'Same-week repair is realistic if you have photos + spec ready and accept any crew with bandwidth',
+          'Some Nashville fence companies run dedicated "storm response" crews — ask explicitly',
+          "Don't sign with the first knock-on-door contractor — verify license and insurance through the directory first",
+          'If your claim is approved, you control the contractor choice — your insurer doesn\'t pick for you',
+        ],
+      },
+      {
+        type: 'callout',
+        title: 'Need same-week storm fence repair in Nashville?',
+        text: "Upload your damage photos and address — we route to Nashville fence repair crews with bandwidth this week. Wood, vinyl, chain link, aluminum, and wrought iron all covered.",
+        ctaLabel: 'Get Storm Repair Quotes',
+        ctaHref: '/repair',
+      },
+      { type: 'h2', text: 'Common Nashville Storm-Damage Patterns' },
+      {
+        type: 'ul',
+        items: [
+          'Wind-blown sections — usually 2–4 adjacent panels need replacement, posts often survive',
+          'Snapped wood posts — wind torque breaks pressure-treated posts at ground level',
+          'Tree-fall damage — full section replacement plus post reset and clean-up',
+          "Hail dimpling on vinyl — mostly cosmetic, hard to claim unless severe",
+          'Chain link mesh stretch — usually fixable for under $300',
+          'Bent ornamental aluminum rails — straighten + repaint, rarely full replacement',
+        ],
+      },
+      { type: 'h2', text: 'Mistakes to Avoid' },
+      {
+        type: 'ul',
+        items: [
+          'Removing debris before the adjuster has seen it (or before you have time-stamped photos)',
+          'Accepting the first contractor who knocks on your door post-storm',
+          'Signing an "Assignment of Benefits" form without legal review — it transfers your claim payment to the contractor',
+          'Starting DIY repair before the claim is approved (insurers can deny the claim entirely)',
+          'Skipping the line-item breakdown on your estimate',
+        ],
+      },
+      { type: 'h2', text: "After Your Claim Is Approved" },
+      {
+        type: 'p',
+        text: "Once your approval letter is in hand, you have flexibility most homeowners don't realize: insurance doesn't dictate which contractor does the repair. Get 2–3 quotes — the claim approval is the floor, not the ceiling. Match the original spec or upgrade and pay the difference out of pocket. Confirm timeline in writing before signing.",
+      },
+      {
+        type: 'p',
+        text: "If your repair quote came in well below the 60% threshold of a full replacement, you're in good shape. If it's close to or above that line, talk to your contractor about a full replacement — your insurance proceeds typically apply either way, and you get a fresh fence with a fresh warranty.",
+      },
+    ] as ResourceSection[],
   },
 ]
 

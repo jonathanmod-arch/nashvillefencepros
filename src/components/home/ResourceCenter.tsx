@@ -10,6 +10,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Permits: 'bg-forest-500 text-white',
   Cost: 'bg-oak-400 text-forest-500',
   Trends: 'bg-warmgray text-onyx-700',
+  Repair: 'bg-[#7C2D12] text-white',
 }
 
 export default function ResourceCenter() {
