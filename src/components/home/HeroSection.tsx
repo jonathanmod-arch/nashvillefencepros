@@ -25,12 +25,12 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-50 text-forest-500 text-[12px] font-semibold">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest-50 text-forest-500 text-[13px] font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-forest-500" />
             Nashville's Most Trusted Fence Resource
           </span>
 
-          <h1 className="mt-6 text-[44px] sm:text-[60px] lg:text-[76px] font-heading font-black tracking-tightest leading-[0.95]">
+          <h1 className="mt-7 text-[44px] sm:text-[60px] md:text-[72px] lg:text-[84px] font-heading font-black tracking-tightest leading-[0.95]">
             <span className="text-onyx-700">Nashville Fence</span>
             <br />
             <span className="text-forest-500">Installation</span>
@@ -38,16 +38,16 @@ export default function HeroSection() {
             <span className="text-onyx-700">Done Right</span>
           </h1>
 
-          <div className="mt-5 h-[3px] w-16 bg-oak-400 rounded-full" />
+          <div className="mt-6 h-[3px] w-16 bg-oak-400 rounded-full" />
 
-          <p className="mt-6 font-body font-normal text-[16px] md:text-[18px] text-onyx-700/70 leading-relaxed max-w-lg">
+          <p className="mt-6 font-body font-normal text-[17px] md:text-[19px] text-onyx-700/70 leading-relaxed max-w-xl">
             Compare fence options, understand local regulations, estimate costs, and connect
             with trusted Nashville fence professionals.
           </p>
 
-          <ul className="mt-7 space-y-3">
+          <ul className="mt-7 space-y-3.5">
             {bullets.map((b) => (
-              <li key={b} className="flex items-start gap-3 text-[14.5px] md:text-[15px] text-onyx-700">
+              <li key={b} className="flex items-start gap-3 text-[15px] md:text-[16px] text-onyx-700">
                 <span className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-oak-400" />
                 {b}
               </li>
