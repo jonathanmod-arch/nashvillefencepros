@@ -20,6 +20,7 @@ export default function ResourceCenter() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="label-eyebrow">Learn Before You Build</span>
           <h2 className="mt-3 heading-section">Nashville Fence Resource Center</h2>
+          <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             In-depth guides built for Middle Tennessee homeowners — written by local pros.
           </p>
@@ -53,10 +54,10 @@ export default function ResourceCenter() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-display font-bold text-forest-500 text-lg tracking-tightest leading-tight mb-2 line-clamp-2">
+                  <h3 className="heading-card !text-lg leading-tight mb-2 line-clamp-2">
                     {r.title}
                   </h3>
-                  <p className="text-sm text-onyx-500 leading-relaxed line-clamp-3 mb-4">
+                  <p className="text-sm text-onyx-700/70 leading-relaxed line-clamp-3 mb-4">
                     {r.excerpt}
                   </p>
                   <div className="flex items-center justify-between text-xs text-onyx-400">

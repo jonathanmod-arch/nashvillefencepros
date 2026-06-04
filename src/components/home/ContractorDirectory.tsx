@@ -10,6 +10,7 @@ export default function ContractorDirectory() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="label-eyebrow">Pre-Vetted Pros</span>
           <h2 className="mt-3 heading-section">Best Fence Companies in Nashville</h2>
+          <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             Every contractor on this list is licensed, insured, and background-checked.
             Compare specialties, ratings, and service areas.
@@ -28,7 +29,7 @@ export default function ContractorDirectory() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="font-display font-bold text-forest-500 text-lg tracking-tightest leading-tight">
+                  <h3 className="heading-card !text-lg leading-tight">
                     {c.name}
                   </h3>
                   <div className="mt-1 text-xs text-onyx-400">
@@ -55,7 +56,7 @@ export default function ContractorDirectory() {
                 <span className="text-xs text-onyx-400">({c.reviews} reviews)</span>
               </div>
 
-              <p className="text-sm text-onyx-500 leading-relaxed mb-4 flex-1">
+              <p className="text-sm text-onyx-700/70 leading-relaxed mb-4 flex-1">
                 {c.blurb}
               </p>
 
@@ -75,7 +76,7 @@ export default function ContractorDirectory() {
                     ))}
                   </div>
                 </div>
-                <div className="flex items-start gap-1.5 text-xs text-onyx-500">
+                <div className="flex items-start gap-1.5 text-xs text-onyx-700/70">
                   <MapPin className="w-3.5 h-3.5 text-forest-500 flex-shrink-0 mt-0.5" />
                   <span>{c.areas.join(' · ')}</span>
                 </div>

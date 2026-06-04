@@ -30,6 +30,7 @@ export default function CostGuide() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="label-eyebrow">Material Pricing</span>
             <h2 className="mt-3 heading-section">Installed Cost by Fence Type</h2>
+            <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
               Prices below reflect a typical 6 ft residential install in the Nashville metro
               area, including materials, posts, and labor.
@@ -69,6 +70,7 @@ export default function CostGuide() {
           <div>
             <span className="label-eyebrow">Where Your Money Goes</span>
             <h2 className="mt-3 heading-section">Inside a $6,000 Nashville Fence Quote</h2>
+            <div className="heading-accent" />
             <p className="mt-4 text-body-lead">
               Roughly 60% of a typical install is materials, 30% is labor, and the
               remainder covers gates, permits, and disposal. Here's how the breakdown
@@ -118,10 +120,10 @@ export default function CostGuide() {
             return (
               <div key={c.title} className="p-6 rounded-2xl border border-warmgray">
                 <Icon className="w-6 h-6 text-forest-500 mb-3" />
-                <h3 className="font-display font-bold text-forest-500 mb-2 tracking-tightest">
+                <h3 className="heading-label mb-2">
                   {c.title}
                 </h3>
-                <p className="text-sm text-onyx-500 leading-relaxed">{c.body}</p>
+                <p className="text-sm text-onyx-700/70 leading-relaxed">{c.body}</p>
               </div>
             )
           })}

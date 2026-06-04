@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Calculator, Star } from 'lucide-react'
 import SafeImage from '../shared/SafeImage'
+import { IMAGES } from '../../data/imageUrls'
 
 const bullets = [
   'Wood, vinyl, aluminum, chain link and custom fencing',
@@ -81,7 +82,7 @@ export default function HeroSection() {
         >
           <div className="relative rounded-2xl overflow-hidden shadow-strong aspect-[5/6] bg-warmgray">
             <SafeImage
-              src="https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=1400&q=80"
+              src={IMAGES.hero}
               alt="Cedar privacy fence installation in a Nashville backyard"
               className="absolute inset-0 w-full h-full object-cover"
             />

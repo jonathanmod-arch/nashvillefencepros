@@ -11,6 +11,7 @@ export default function NeighborhoodsSection() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="label-eyebrow">Local Coverage</span>
           <h2 className="mt-3 heading-section">Nashville Neighborhoods We Serve</h2>
+          <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             Every Nashville area has its own fence personality — material trends, HOA quirks,
             and price bands. Find yours.
@@ -41,7 +42,7 @@ export default function NeighborhoodsSection() {
                     <div className="flex items-center gap-1.5 text-white/80 text-xs mb-1">
                       <MapPin className="w-3 h-3" /> ZIP {n.zip}
                     </div>
-                    <div className="font-display font-bold text-white text-xl tracking-tightest">
+                    <div className="font-heading font-bold text-white text-xl tracking-tightest">
                       {n.name}
                     </div>
                   </div>

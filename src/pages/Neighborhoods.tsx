@@ -50,9 +50,10 @@ export default function Neighborhoods() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h2 className="text-3xl font-display font-bold text-forest-500 tracking-tightest mb-4">
+              <h2 className="heading-section !text-3xl mb-2">
                 What Works in {n.name}
               </h2>
+              <div className="heading-accent mb-4" />
               <p className="text-body-lead mb-5">
                 {n.note} Whether you're replacing an aging cedar fence or starting from scratch on a
                 new build, the local landscape — lot sizes, soil, and tree cover — shapes what holds up.
@@ -166,7 +167,7 @@ export default function Neighborhoods() {
                     <div className="absolute inset-0 bg-gradient-to-t from-onyx-700/60 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <div className="text-white/80 text-xs">ZIP {n.zip}</div>
-                      <div className="font-display font-bold text-white text-xl tracking-tightest">
+                      <div className="font-heading font-bold text-white text-xl tracking-tightest">
                         {n.name}
                       </div>
                     </div>

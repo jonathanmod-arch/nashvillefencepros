@@ -38,6 +38,7 @@ export default function PermitsSection() {
           >
             <span className="label-eyebrow">Metro Compliance</span>
             <h2 className="mt-3 heading-section">Nashville Fence Permits & Rules</h2>
+            <div className="heading-accent" />
             <p className="mt-4 text-body-lead">
               Metro Nashville keeps fence rules relatively homeowner-friendly — but the wrong
               height or a missed historic overlay can mean removal at your expense. Here's the
@@ -53,10 +54,10 @@ export default function PermitsSection() {
                       <Icon className="w-5 h-5 text-forest-500" />
                     </div>
                     <div>
-                      <div className="font-display font-bold text-forest-500 mb-0.5">
+                      <div className="font-heading font-bold text-onyx-700 mb-0.5">
                         {r.title}
                       </div>
-                      <div className="text-sm text-onyx-500 leading-relaxed">{r.detail}</div>
+                      <div className="text-sm text-onyx-700/70 leading-relaxed">{r.detail}</div>
                     </div>
                   </div>
                 )

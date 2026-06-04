@@ -12,6 +12,7 @@ export default function FAQSection() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="label-eyebrow">Your Questions, Answered</span>
           <h2 className="mt-3 heading-section">Frequently Asked Questions</h2>
+          <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             The 8 most-searched fence questions in Nashville — answered by local pros.
           </p>
@@ -29,7 +30,7 @@ export default function FAQSection() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-start justify-between gap-4 py-5 text-left group"
                 >
-                  <span className="font-display font-bold text-base md:text-lg text-forest-500 tracking-tightest pr-2">
+                  <span className="heading-label !text-base md:!text-lg pr-2">
                     {f.q}
                   </span>
                   <span className="flex-shrink-0 w-8 h-8 rounded-full bg-forest-50 flex items-center justify-center group-hover:bg-forest-500 transition-colors">
@@ -49,7 +50,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-sm md:text-base text-onyx-500 leading-relaxed pb-5 pr-12">
+                      <p className="text-sm md:text-base text-onyx-700/70 leading-relaxed pb-5 pr-12">
                         {f.a}
                       </p>
                     </motion.div>

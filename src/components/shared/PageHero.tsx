@@ -39,11 +39,12 @@ export default function PageHero({
         <span className="text-xs font-bold uppercase tracking-[0.22em] text-oak-400">
           {eyebrow}
         </span>
-        <h1 className="mt-3 text-4xl md:text-6xl font-display font-bold tracking-tightest leading-[1.05] text-balance max-w-4xl">
+        <h1 className="mt-3 font-heading font-black tracking-tightest leading-none text-balance max-w-4xl text-4xl sm:text-5xl lg:text-6xl">
           {title}
         </h1>
+        <div className="heading-accent !bg-oak-400 mt-5" />
         {description && (
-          <p className="mt-5 text-white/80 text-lg leading-relaxed max-w-2xl">
+          <p className="mt-5 font-body text-white/80 text-lg leading-relaxed max-w-2xl">
             {description}
           </p>
         )}

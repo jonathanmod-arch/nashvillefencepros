@@ -62,7 +62,7 @@ export default function Resources() {
                   {r.excerpt} This guide walks through what Middle Tennessee homeowners
                   actually run into — not generic national advice.
                 </p>
-                <h2 className="text-2xl font-display font-bold text-forest-500 tracking-tightest mt-8">
+                <h2 className="heading-card !text-2xl mt-8">
                   Why This Matters in Nashville
                 </h2>
                 <p className="leading-relaxed">
@@ -71,7 +71,7 @@ export default function Resources() {
                   swings from summer humidity to ice storms also influence which materials
                   hold up over the typical 15–25 year fence lifecycle.
                 </p>
-                <h2 className="text-2xl font-display font-bold text-forest-500 tracking-tightest mt-8">
+                <h2 className="heading-card !text-2xl mt-8">
                   Key Things to Know
                 </h2>
                 <ul className="space-y-3 pl-5 list-disc marker:text-oak-500">
@@ -81,7 +81,7 @@ export default function Resources() {
                   <li>HOA review applies to most Williamson County subdivisions.</li>
                   <li>Pool fences must comply with the 2018 ISPSC barrier code.</li>
                 </ul>
-                <h2 className="text-2xl font-display font-bold text-forest-500 tracking-tightest mt-8">
+                <h2 className="heading-card !text-2xl mt-8">
                   Bottom Line
                 </h2>
                 <p className="leading-relaxed">
@@ -108,7 +108,7 @@ export default function Resources() {
             <aside>
               <div className="sticky top-32 space-y-5">
                 <div className="bg-warmgray rounded-2xl p-6">
-                  <h3 className="text-lg font-display font-bold text-forest-500 tracking-tightest mb-4">
+                  <h3 className="heading-label !text-lg mb-4">
                     Related Guides
                   </h3>
                   <ul className="space-y-4">
@@ -185,10 +185,10 @@ export default function Resources() {
                     </div>
                   </div>
                   <div className="p-5">
-                    <h3 className="font-display font-bold text-forest-500 text-lg tracking-tightest leading-tight mb-2">
+                    <h3 className="heading-card !text-lg leading-tight mb-2">
                       {r.title}
                     </h3>
-                    <p className="text-sm text-onyx-500 leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-sm text-onyx-700/70 leading-relaxed line-clamp-3 mb-4">
                       {r.excerpt}
                     </p>
                     <div className="flex items-center justify-between text-xs text-onyx-400">

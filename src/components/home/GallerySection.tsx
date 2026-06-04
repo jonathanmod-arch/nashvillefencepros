@@ -15,6 +15,7 @@ export default function GallerySection() {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="label-eyebrow">Project Gallery</span>
           <h2 className="mt-3 heading-section">Fence Style Gallery</h2>
+          <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             Real installs from Davidson, Williamson, and Sumner counties — filter by style.
           </p>

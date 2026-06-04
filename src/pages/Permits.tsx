@@ -38,6 +38,7 @@ export default function Permits() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="label-eyebrow">Height Limits</span>
             <h2 className="mt-3 heading-section">Nashville Fence Height by Yard</h2>
+            <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
               Metro Nashville's residential code keeps it simple — but corner lots, pool
               barriers, and overlay districts add layers.
@@ -54,7 +55,7 @@ export default function Permits() {
                 <div className="mt-1 text-3xl font-display font-bold text-forest-500 tracking-tightest">
                   {r.max}
                 </div>
-                <p className="text-sm text-onyx-500 mt-2 leading-relaxed">{r.detail}</p>
+                <p className="text-sm text-onyx-700/70 mt-2 leading-relaxed">{r.detail}</p>
               </div>
             ))}
           </div>
@@ -65,7 +66,7 @@ export default function Permits() {
         <div className="container-wide grid lg:grid-cols-2 gap-10">
           <div className="bg-white rounded-3xl p-8 shadow-soft">
             <FileText className="w-7 h-7 text-forest-500 mb-4" />
-            <h3 className="text-2xl font-display font-bold text-forest-500 tracking-tightest mb-3">
+            <h3 className="heading-card !text-2xl mb-3">
               When You Need a Permit
             </h3>
             <ul className="space-y-3 text-sm text-onyx-700">
@@ -94,10 +95,10 @@ export default function Permits() {
 
           <div className="bg-white rounded-3xl p-8 shadow-soft">
             <MapPin className="w-7 h-7 text-forest-500 mb-4" />
-            <h3 className="text-2xl font-display font-bold text-forest-500 tracking-tightest mb-3">
+            <h3 className="heading-card !text-2xl mb-3">
               Historic Overlay Districts
             </h3>
-            <p className="text-sm text-onyx-500 leading-relaxed mb-4">
+            <p className="text-sm text-onyx-700/70 leading-relaxed mb-4">
               Fences in these neighborhoods require Historic Zoning Commission review
               before installation — even for replacements.
             </p>
@@ -123,7 +124,7 @@ export default function Permits() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-oak-400 text-forest-500 text-xs font-bold uppercase tracking-[0.15em] mb-4">
                 <AlertTriangle className="w-3.5 h-3.5" /> Required
               </div>
-              <h3 className="text-2xl font-display font-bold tracking-tightest mb-3">
+              <h3 className="text-2xl font-heading font-bold tracking-tightest mb-3">
                 Tennessee 811 — Call Before You Dig
               </h3>
               <p className="text-white/80 text-sm leading-relaxed mb-5">
@@ -143,7 +144,7 @@ export default function Permits() {
             <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-white/20 blur-3xl" />
             <div className="relative">
               <Droplets className="w-7 h-7 mb-4" />
-              <h3 className="text-2xl font-display font-bold tracking-tightest mb-3">
+              <h3 className="text-2xl font-heading font-bold tracking-tightest mb-3">
                 Pool Barrier Code
               </h3>
               <p className="text-forest-700 text-sm leading-relaxed mb-5">

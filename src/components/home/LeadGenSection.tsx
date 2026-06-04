@@ -76,9 +76,10 @@ export default function LeadGenSection() {
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-oak-400">
               Free Quotes From Vetted Pros
             </span>
-            <h2 className="mt-3 text-3xl md:text-5xl font-display font-bold text-white tracking-tightest leading-[1.05]">
+            <h2 className="mt-3 text-3xl md:text-5xl font-heading font-black text-white tracking-tightest leading-[1.05]">
               Get Fence Quotes From Nashville Professionals
             </h2>
+            <div className="heading-accent !bg-oak-400 mt-4" />
             <p className="mt-5 text-onyx-200 leading-relaxed">
               Share your project details once. We match you with up to 3 licensed Nashville
               contractors who'll respond with detailed quotes within 48 hours.
@@ -124,10 +125,10 @@ export default function LeadGenSection() {
                 <div className="w-16 h-16 rounded-full bg-forest-500 mx-auto flex items-center justify-center mb-5">
                   <CheckCircle2 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-display font-bold text-forest-500 tracking-tightest mb-3">
+                <h3 className="heading-card !text-2xl md:!text-3xl mb-3">
                   Request Received — Welcome
                 </h3>
-                <p className="text-onyx-500 max-w-md mx-auto leading-relaxed">
+                <p className="text-onyx-700/70 max-w-md mx-auto leading-relaxed">
                   We're matching you with up to 3 vetted Nashville fence pros. Expect calls
                   and detailed quotes via email within the next 24–48 hours.
                 </p>
@@ -137,7 +138,7 @@ export default function LeadGenSection() {
                       <div className="text-[10px] font-bold uppercase tracking-[0.15em] text-oak-500">
                         Step {i + 1}
                       </div>
-                      <div className="text-sm font-display font-bold text-forest-500">
+                      <div className="text-sm font-heading font-bold text-forest-500">
                         {step}
                       </div>
                     </div>

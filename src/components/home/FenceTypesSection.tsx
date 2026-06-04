@@ -11,7 +11,8 @@ export default function FenceTypesSection() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="label-eyebrow">Materials & Styles</span>
           <h2 className="mt-3 heading-section">Nashville Fence Types & Styles</h2>
-          <p className="mt-3 text-body-lead">
+          <div className="heading-accent mx-auto" />
+          <p className="mt-4 text-body-lead">
             Six material families cover 95% of Middle Tennessee installs. Compare cost,
             durability, and the look that fits your yard.
           </p>
@@ -41,10 +42,10 @@ export default function FenceTypesSection() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-[18px] font-display font-bold text-forest-500 mb-1.5 tracking-tightest">
+                  <h3 className="heading-card !text-[18px] mb-1.5">
                     {t.name}
                   </h3>
-                  <p className="text-[13px] text-onyx-500 leading-relaxed line-clamp-3">
+                  <p className="font-body text-[13px] text-onyx-700/70 leading-relaxed line-clamp-3">
                     {t.description}
                   </p>
                   <div className="mt-4 pt-3.5 border-t border-warmgray flex items-center justify-between">

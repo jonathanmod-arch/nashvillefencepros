@@ -47,9 +47,10 @@ export default function FenceTypes() {
                 <SafeImage src={t.img} alt={t.name} className="w-full h-full object-cover" />
               </div>
 
-              <h2 className="text-3xl font-display font-bold text-forest-500 tracking-tightest mb-4">
+              <h2 className="heading-section !text-3xl mb-2">
                 The Look, the Cost, the Lifespan
               </h2>
+              <div className="heading-accent mb-4" />
               <p className="text-body-lead mb-5">{t.description}</p>
               <p className="text-body-lead mb-8">
                 Across Davidson and Williamson counties, {t.name.toLowerCase()} installs range from{' '}
@@ -57,7 +58,7 @@ export default function FenceTypes() {
                 materials and labor included. Exact pricing depends on height, terrain, and gate count.
               </p>
 
-              <h3 className="text-2xl font-display font-bold text-forest-500 tracking-tightest mb-4">
+              <h3 className="heading-card !text-2xl mb-4">
                 What's Included
               </h3>
               <div className="grid sm:grid-cols-2 gap-3 mb-10">
@@ -69,7 +70,7 @@ export default function FenceTypes() {
                 ))}
               </div>
 
-              <h3 className="text-2xl font-display font-bold text-forest-500 tracking-tightest mb-4">
+              <h3 className="heading-card !text-2xl mb-4">
                 Best Fit For
               </h3>
               <p className="text-body-lead mb-8">{t.bestFor}.</p>
@@ -133,6 +134,7 @@ export default function FenceTypes() {
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="label-eyebrow">Compare</span>
               <h2 className="mt-3 heading-section">Other Fence Types</h2>
+              <div className="heading-accent mx-auto" />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map((r) => (
@@ -149,7 +151,7 @@ export default function FenceTypes() {
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="font-display font-bold text-forest-500 text-lg tracking-tightest mb-1">
+                    <h3 className="heading-card !text-lg mb-1">
                       {r.name}
                     </h3>
                     <div className="text-sm text-onyx-400">
@@ -201,10 +203,10 @@ export default function FenceTypes() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-display font-bold text-forest-500 mb-2 tracking-tightest">
+                    <h3 className="heading-card !text-xl mb-2">
                       {t.name}
                     </h3>
-                    <p className="text-sm text-onyx-500 leading-relaxed line-clamp-3">
+                    <p className="text-sm text-onyx-700/70 leading-relaxed line-clamp-3">
                       {t.description}
                     </p>
                     <div className="mt-4 pt-4 border-t border-warmgray flex items-center justify-between">

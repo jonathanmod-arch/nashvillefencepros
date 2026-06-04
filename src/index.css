@@ -7,11 +7,12 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-sans text-onyx-700 antialiased bg-white;
+    @apply font-body text-onyx-700 antialiased bg-white;
     font-feature-settings: 'ss01', 'cv11';
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tightest;
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -32,17 +33,31 @@
     @apply py-14 md:py-20;
   }
   .label-eyebrow {
-    @apply inline-block text-[11px] font-bold uppercase tracking-[0.22em] text-oak-500;
+    @apply inline-block font-body text-[11px] font-bold uppercase tracking-[0.22em] text-oak-500;
+  }
+  .heading-page {
+    @apply font-heading font-black tracking-tightest text-onyx-700 leading-none text-4xl sm:text-5xl lg:text-6xl;
   }
   .heading-section {
-    @apply text-[28px] md:text-[44px] font-display font-bold tracking-tightest text-forest-500 leading-[1.05];
+    @apply font-heading font-black tracking-tightest text-onyx-700 leading-tight text-3xl sm:text-4xl;
   }
-  .heading-serif {
-    font-family: 'Fraunces', 'Inter Tight', serif;
-    @apply font-medium tracking-tight;
+  .heading-card {
+    @apply font-heading font-bold tracking-tightest text-onyx-700 text-xl sm:text-2xl;
+  }
+  .heading-label {
+    @apply font-heading font-bold tracking-tightest text-onyx-700 text-base sm:text-lg;
+  }
+  .heading-accent {
+    @apply block h-0.5 w-12 bg-oak-400 rounded-full mt-4;
+  }
+  .text-body {
+    @apply font-body font-normal text-onyx-700/70 text-base leading-relaxed;
   }
   .text-body-lead {
-    @apply text-[15px] md:text-[17px] text-onyx-500 leading-relaxed;
+    @apply font-body font-normal text-onyx-700/70 text-base sm:text-[17px] leading-relaxed;
+  }
+  .text-caption {
+    @apply font-body font-normal text-onyx-700/60 text-sm leading-relaxed;
   }
   .card-soft {
     @apply bg-white rounded-xl shadow-soft hover:shadow-medium transition-all duration-300;

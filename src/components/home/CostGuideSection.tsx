@@ -28,7 +28,8 @@ export default function CostGuideSection() {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="label-eyebrow">Pricing Transparency</span>
           <h2 className="mt-3 heading-section">Nashville Fence Cost Guide</h2>
-          <p className="mt-3 text-body-lead">
+          <div className="heading-accent mx-auto" />
+          <p className="mt-4 text-body-lead">
             Real Middle Tennessee install prices. Move the slider, pick a material, and see
             your range update live.
           </p>
@@ -44,7 +45,7 @@ export default function CostGuideSection() {
           <div className="p-6 md:p-10">
             <div className="flex flex-wrap items-center gap-2 mb-6">
               <Calculator className="w-5 h-5 text-forest-500" />
-              <h3 className="text-lg md:text-xl font-display font-bold text-forest-500">
+              <h3 className="heading-label text-lg md:text-xl">
                 Interactive Cost Calculator
               </h3>
             </div>
@@ -153,7 +154,7 @@ export default function CostGuideSection() {
                 />
               </div>
 
-              <div className="mt-5 flex items-start gap-2 text-xs text-onyx-500">
+              <div className="mt-5 flex items-start gap-2 text-xs text-onyx-700/70">
                 <Info className="w-4 h-4 text-forest-500 flex-shrink-0 mt-0.5" />
                 <p>
                   Range covers materials + labor for a standard residential install in

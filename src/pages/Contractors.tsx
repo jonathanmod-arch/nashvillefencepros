@@ -70,7 +70,7 @@ export default function Contractors() {
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div>
-                      <h3 className="font-display font-bold text-forest-500 text-lg tracking-tightest leading-tight">
+                      <h3 className="heading-card !text-lg leading-tight">
                         {c.name}
                       </h3>
                       <div className="mt-1 text-xs text-onyx-400">
@@ -95,7 +95,7 @@ export default function Contractors() {
                     <span className="text-sm font-bold text-onyx-700">{c.rating}</span>
                     <span className="text-xs text-onyx-400">({c.reviews})</span>
                   </div>
-                  <p className="text-sm text-onyx-500 leading-relaxed mb-4 flex-1">
+                  <p className="text-sm text-onyx-700/70 leading-relaxed mb-4 flex-1">
                     {c.blurb}
                   </p>
                   <div className="flex flex-wrap gap-1.5 mb-3">
@@ -108,7 +108,7 @@ export default function Contractors() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-start gap-1.5 text-xs text-onyx-500 mb-5">
+                  <div className="flex items-start gap-1.5 text-xs text-onyx-700/70 mb-5">
                     <MapPin className="w-3.5 h-3.5 text-forest-500 flex-shrink-0 mt-0.5" />
                     <span>{c.areas.join(' · ')}</span>
                   </div>

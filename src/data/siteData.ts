@@ -1,3 +1,5 @@
+import { IMAGES } from './imageUrls'
+
 export const COMPANY = {
   name: 'Nashville Fence Pros',
   phone: '(615) 555-0100',
@@ -16,7 +18,7 @@ export const FENCE_TYPES = [
     priceHigh: 35,
     description:
       'Classic cedar and pressure-treated pine privacy fences. The most popular Nashville choice for backyards, offering warmth, full screening, and easy customization.',
-    img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.fenceTypes['wood-privacy'],
     features: ['6–8 ft height options', 'Cedar, pine, redwood', '15–25 year lifespan'],
     bestFor: 'Privacy, traditional aesthetics, dog owners',
   },
@@ -28,7 +30,7 @@ export const FENCE_TYPES = [
     priceHigh: 48,
     description:
       'Maintenance-free vinyl panels in white, tan, and woodgrain finishes. No staining, no rot, and a clean modern look that suits new-build Nashville subdivisions.',
-    img: 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.fenceTypes['vinyl'],
     features: ['Zero maintenance', 'Lifetime warranties common', 'Will not rot or rust'],
     bestFor: 'Long-term value, modern subdivisions, HOA-friendly',
   },
@@ -40,7 +42,7 @@ export const FENCE_TYPES = [
     priceHigh: 62,
     description:
       'Elegant powder-coated aluminum with the look of wrought iron at a fraction of the weight. The dominant choice in Belle Meade, Forest Hills, and Brentwood estates.',
-    img: 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.fenceTypes['aluminum'],
     features: ['Rust-proof', 'Pool-code compliant', 'Sloped-yard friendly'],
     bestFor: 'Curb appeal, pools, prestige neighborhoods',
   },
@@ -52,7 +54,7 @@ export const FENCE_TYPES = [
     priceHigh: 22,
     description:
       'Affordable, durable, and quick to install. Available in classic silver or vinyl-coated black for a more refined backyard look.',
-    img: 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.fenceTypes['chain-link'],
     features: ['Lowest cost option', 'Black vinyl-coated upgrade', '20+ year lifespan'],
     bestFor: 'Pet containment, large lots, budget projects',
   },
@@ -64,7 +66,7 @@ export const FENCE_TYPES = [
     priceHigh: 58,
     description:
       'On-trend horizontal slat fencing in cedar or composite. The signature look for East Nashville, 12 South, and Sylvan Park modern builds.',
-    img: 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.fenceTypes['horizontal-privacy'],
     features: ['Architectural look', 'Cedar or composite', 'Mixed wood / metal options'],
     bestFor: 'Modern homes, East Nashville, design-forward yards',
   },
@@ -76,7 +78,7 @@ export const FENCE_TYPES = [
     priceHigh: 18,
     description:
       'Four-board, split-rail, and high-tensile wire fencing for acreage in Williamson and Sumner counties. Built for horses, livestock, and large property lines.',
-    img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.fenceTypes['farm-ranch'],
     features: ['Four-board, split-rail, wire', 'Livestock-safe spacing', 'Acreage-ready crews'],
     bestFor: 'Acreage, horses, rural Williamson/Sumner counties',
   },
@@ -87,7 +89,7 @@ export const NEIGHBORHOODS = [
     slug: 'belle-meade',
     name: 'Belle Meade',
     zip: '37205',
-    img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['belle-meade'],
     popularStyle: 'Ornamental Aluminum & Iron',
     avgCost: '$8,400 – $14,200',
     note: 'Estate lots, historic overlay rules. Aluminum and wrought iron dominate for both pools and front-yard estate fencing.',
@@ -96,7 +98,7 @@ export const NEIGHBORHOODS = [
     slug: 'green-hills',
     name: 'Green Hills',
     zip: '37215',
-    img: 'https://images.unsplash.com/photo-1592595896616-c37162298647?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['green-hills'],
     popularStyle: 'Wood Privacy & Aluminum',
     avgCost: '$5,800 – $9,800',
     note: 'Family neighborhoods with mature trees. Cedar privacy backyards paired with aluminum side gates are typical.',
@@ -105,7 +107,7 @@ export const NEIGHBORHOODS = [
     slug: 'east-nashville',
     name: 'East Nashville',
     zip: '37206',
-    img: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['east-nashville'],
     popularStyle: 'Horizontal Modern Cedar',
     avgCost: '$4,200 – $7,800',
     note: 'Design-forward bungalows. Horizontal slat cedar and mixed wood-metal fences define the look. Watch for historic overlays.',
@@ -114,7 +116,7 @@ export const NEIGHBORHOODS = [
     slug: 'germantown',
     name: 'Germantown',
     zip: '37208',
-    img: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['germantown'],
     popularStyle: 'Iron & Vinyl Privacy',
     avgCost: '$4,600 – $8,400',
     note: 'Historic district with strict design review. Wrought-iron front, vinyl or wood privacy rear is the standard.',
@@ -123,7 +125,7 @@ export const NEIGHBORHOODS = [
     slug: 'brentwood',
     name: 'Brentwood',
     zip: '37027',
-    img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['brentwood'],
     popularStyle: 'Aluminum & Wood Privacy',
     avgCost: '$6,400 – $11,800',
     note: 'Williamson County. HOA-driven aluminum front fencing with cedar privacy backyards. Pool-code compliance is critical.',
@@ -132,7 +134,7 @@ export const NEIGHBORHOODS = [
     slug: 'franklin',
     name: 'Franklin',
     zip: '37064',
-    img: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['franklin'],
     popularStyle: 'Four-Board & Aluminum',
     avgCost: '$5,200 – $12,000',
     note: 'Mix of estate lots and acreage. Four-board farm fence is common on larger Williamson County parcels.',
@@ -141,7 +143,7 @@ export const NEIGHBORHOODS = [
     slug: 'twelve-south',
     name: '12 South',
     zip: '37204',
-    img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['twelve-south'],
     popularStyle: 'Horizontal Cedar & Iron',
     avgCost: '$4,400 – $7,600',
     note: 'Trendy urban infill. Tight lots favor 6 ft horizontal cedar with steel gate hardware.',
@@ -150,7 +152,7 @@ export const NEIGHBORHOODS = [
     slug: 'sylvan-park',
     name: 'Sylvan Park',
     zip: '37209',
-    img: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['sylvan-park'],
     popularStyle: 'Wood Privacy & Modern Horizontal',
     avgCost: '$4,000 – $7,200',
     note: 'Walkable West Nashville. Mix of classic dog-ear cedar and modern horizontal builds.',
@@ -159,7 +161,7 @@ export const NEIGHBORHOODS = [
     slug: 'hendersonville',
     name: 'Hendersonville',
     zip: '37075',
-    img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['hendersonville'],
     popularStyle: 'Vinyl Privacy & Aluminum',
     avgCost: '$4,800 – $8,800',
     note: 'Sumner County waterfront and subdivision homes. Vinyl is dominant for HOA-compliant privacy.',
@@ -168,7 +170,7 @@ export const NEIGHBORHOODS = [
     slug: 'mount-juliet',
     name: 'Mount Juliet',
     zip: '37122',
-    img: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['mount-juliet'],
     popularStyle: 'Wood Privacy & Chain Link',
     avgCost: '$3,800 – $7,200',
     note: 'Growing Wilson County suburb. New construction favors 6 ft cedar; chain link still common on larger lots.',
@@ -177,7 +179,7 @@ export const NEIGHBORHOODS = [
     slug: 'hermitage',
     name: 'Hermitage',
     zip: '37076',
-    img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['hermitage'],
     popularStyle: 'Wood Privacy & Chain Link',
     avgCost: '$3,400 – $6,400',
     note: 'Established East Davidson County neighborhoods with practical wood privacy fencing throughout.',
@@ -186,7 +188,7 @@ export const NEIGHBORHOODS = [
     slug: 'forest-hills',
     name: 'Forest Hills',
     zip: '37215',
-    img: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.neighborhoods['forest-hills'],
     popularStyle: 'Aluminum & Cedar Privacy',
     avgCost: '$7,800 – $13,400',
     note: 'Larger lots and rolling terrain. Sloped-yard aluminum and tall cedar privacy panels are most requested.',
@@ -276,7 +278,7 @@ export const RESOURCES = [
     readTime: '7 min',
     excerpt:
       'How Middle Tennessee humidity, freeze-thaw cycles, and HOA rules tip the scale between cedar privacy and premium vinyl.',
-    img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.resources['wood-vs-vinyl-nashville'],
   },
   {
     slug: 'best-fences-for-dogs',
@@ -285,7 +287,7 @@ export const RESOURCES = [
     readTime: '6 min',
     excerpt:
       'Climb-proof heights, dig guards, and material picks that keep golden retrievers in and coyotes out across Davidson County.',
-    img: 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.resources['best-fences-for-dogs'],
   },
   {
     slug: 'pool-fence-safety-tn',
@@ -294,7 +296,7 @@ export const RESOURCES = [
     readTime: '5 min',
     excerpt:
       'A homeowner-friendly walkthrough of the 2018 ISPSC barrier code, self-closing gates, and 4 ft minimum requirements.',
-    img: 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.resources['pool-fence-safety-tn'],
   },
   {
     slug: 'metro-nashville-permits',
@@ -303,7 +305,7 @@ export const RESOURCES = [
     readTime: '8 min',
     excerpt:
       'When you do (and do not) need a permit, height limits by yard, and how to handle historic overlay districts.',
-    img: 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.resources['metro-nashville-permits'],
   },
   {
     slug: 'fence-cost-breakdown',
@@ -312,7 +314,7 @@ export const RESOURCES = [
     readTime: '9 min',
     excerpt:
       'Line-item analysis: materials, labor, post-setting, gates, and the hidden costs that surprise first-time buyers.',
-    img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.resources['fence-cost-breakdown'],
   },
   {
     slug: 'horizontal-cedar-trend',
@@ -321,7 +323,7 @@ export const RESOURCES = [
     readTime: '5 min',
     excerpt:
       'The design history behind the slat-style fence dominating East Nashville, 12 South, and Sylvan Park bungalows.',
-    img: 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=1200&q=80',
+    img: IMAGES.resources['horizontal-cedar-trend'],
   },
 ]
 
@@ -400,14 +402,19 @@ export const STATS = [
   { label: 'Years Combined Experience', value: 28, suffix: ' yrs' },
 ]
 
-export const GALLERY = [
-  { id: 1, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80' },
-  { id: 2, category: 'Aluminum', img: 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=900&q=80' },
-  { id: 3, category: 'Vinyl', img: 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=900&q=80' },
-  { id: 4, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=900&q=80' },
-  { id: 5, category: 'Gates', img: 'https://images.unsplash.com/photo-1597100190876-3a47e4d61df3?auto=format&fit=crop&w=900&q=80' },
-  { id: 6, category: 'Vinyl', img: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=900&q=80' },
-  { id: 7, category: 'Aluminum', img: 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=900&q=80' },
-  { id: 8, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80' },
-  { id: 9, category: 'Gates', img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80' },
+const GALLERY_CATEGORIES = [
+  'Wood Privacy',
+  'Aluminum',
+  'Vinyl',
+  'Wood Privacy',
+  'Gates',
+  'Vinyl',
+  'Aluminum',
+  'Wood Privacy',
+  'Gates',
 ]
+export const GALLERY = IMAGES.gallery.map((img, i) => ({
+  id: i + 1,
+  category: GALLERY_CATEGORIES[i] ?? 'Wood Privacy',
+  img,
+}))

@@ -20,7 +20,8 @@ export default function WhyFenceSection() {
           <h2 className="mt-3 heading-section">
             Why Nashville Homeowners Install Fences
           </h2>
-          <p className="mt-3 text-body-lead">
+          <div className="heading-accent mx-auto" />
+          <p className="mt-4 text-body-lead">
             From acreage in Williamson County to urban infill in East Nashville, the right fence
             does more than mark a line — it solves a specific problem.
           </p>
@@ -41,10 +42,10 @@ export default function WhyFenceSection() {
                 <div className="w-11 h-11 rounded-lg bg-forest-50 flex items-center justify-center group-hover:bg-forest-500 transition-colors mb-4">
                   <Icon className="w-5 h-5 text-forest-500 group-hover:text-oak-300 transition-colors" />
                 </div>
-                <h3 className="text-[17px] font-display font-bold text-forest-500 mb-1.5 tracking-tightest">
+                <h3 className="heading-label !text-[17px] mb-1.5">
                   {b.title}
                 </h3>
-                <p className="text-[13.5px] text-onyx-500 leading-relaxed">{b.body}</p>
+                <p className="font-body text-[13.5px] text-onyx-700/70 leading-relaxed">{b.body}</p>
               </motion.div>
             )
           })}

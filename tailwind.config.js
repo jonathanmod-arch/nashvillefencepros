@@ -47,7 +47,9 @@ export default {
       },
       fontFamily: {
         display: ['"Inter Tight"', 'system-ui', 'sans-serif'],
+        heading: ['"Inter Tight"', 'system-ui', 'sans-serif'],
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         tightest: '-0.02em',
