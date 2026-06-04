@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { to: '/repair', label: 'Fence Repair' },
   { to: '/contractors', label: 'Find a Pro' },
   { to: '/neighborhoods', label: 'Neighborhoods' },
-  { to: '/resources', label: 'Resources' },
 ]
 
 export default function Navbar() {
@@ -128,12 +127,6 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              to="/cost-guide"
-              className="text-sm font-semibold text-forest-500 hover:text-forest-600 transition-colors"
-            >
-              Cost Calculator
-            </Link>
-            <Link
               to="/get-quotes"
               className="bg-forest-500 hover:bg-forest-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
             >
@@ -186,12 +179,6 @@ export default function Navbar() {
                     {l.label}
                   </NavLink>
                 ))}
-                <NavLink
-                  to="/cost-guide"
-                  className="block py-2.5 text-sm font-semibold text-forest-500"
-                >
-                  Cost Calculator
-                </NavLink>
               </div>
               <Link
                 to="/get-quotes"
