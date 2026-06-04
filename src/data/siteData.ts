@@ -82,6 +82,42 @@ export const FENCE_TYPES = [
     features: ['Four-board, split-rail, wire', 'Livestock-safe spacing', 'Acreage-ready crews'],
     bestFor: 'Acreage, horses, rural Williamson/Sumner counties',
   },
+  {
+    slug: 'wrought-iron',
+    name: 'Wrought Iron',
+    short: 'Iron',
+    priceLow: 48,
+    priceHigh: 78,
+    description:
+      'Hand-forged wrought iron fence installation for Nashville estates, gated driveways, and historic homes. Custom finials, monograms, and automated entry options available.',
+    img: IMAGES.fenceTypes['wrought-iron'] ?? IMAGES.fenceTypes['aluminum'],
+    features: ['Hand-forged & welded', 'Custom monograms & finials', 'Pairs with automated gates'],
+    bestFor: 'Estates, historic homes, automated entry gates',
+  },
+  {
+    slug: 'pet-fence',
+    name: 'Invisible & Pet Fence',
+    short: 'Pet Fence',
+    priceLow: 4,
+    priceHigh: 12,
+    description:
+      'Invisible, hidden, and electric dog fence installation in Nashville. Boundary wire + GPS-collar systems trained to your yard, plus traditional pet-rated picket and chain link options.',
+    img: IMAGES.fenceTypes['pet-fence'] ?? IMAGES.fenceTypes['chain-link'],
+    features: ['Invisible & hidden boundary wire', 'GPS collar systems', 'Includes containment training'],
+    bestFor: 'Dog owners, HOA-restricted yards, large lots',
+  },
+  {
+    slug: 'pool-safety',
+    name: 'Pool Safety Fence',
+    short: 'Pool',
+    priceLow: 24,
+    priceHigh: 52,
+    description:
+      'Pool fence installation in Nashville that meets Tennessee\'s 2018 ISPSC barrier code. Aluminum, mesh, and glass pool fencing with self-closing, self-latching gates.',
+    img: IMAGES.fenceTypes['pool-safety'] ?? IMAGES.fenceTypes['aluminum'],
+    features: ['ISPSC code compliant', 'Self-closing, self-latching gate', 'Aluminum, mesh, or glass'],
+    bestFor: 'In-ground pools, child safety, insurance compliance',
+  },
 ]
 
 export const NEIGHBORHOODS = [

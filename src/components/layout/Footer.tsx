@@ -72,6 +72,8 @@ export default function Footer() {
               <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Height Limits by Yard</Link></li>
               <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Pool Fence Code</Link></li>
               <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Historic Overlays</Link></li>
+              <li><Link to="/repair" className="text-onyx-200 hover:text-oak-300 transition-colors">Fence Repair Nashville</Link></li>
+              <li><Link to="/commercial-fencing" className="text-onyx-200 hover:text-oak-300 transition-colors">Commercial Fencing</Link></li>
               <li><Link to="/resources" className="text-onyx-200 hover:text-oak-300 transition-colors">Resource Center</Link></li>
               <li><Link to="/submit-listing" className="text-onyx-200 hover:text-oak-300 transition-colors">Submit Your Business</Link></li>
               <li><Link to="/advertise" className="text-oak-300 hover:text-oak-400 font-semibold transition-colors">Advertise With Us →</Link></li>

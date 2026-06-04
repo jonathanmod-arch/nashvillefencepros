@@ -15,6 +15,7 @@ import {
   Users,
 } from 'lucide-react'
 import { COMPANY } from '../data/siteData'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 type Plan = {
   name: string
@@ -133,6 +134,12 @@ const CARD_CODE = `<a href="${SITE_URL}/contractors" target="_blank" rel="noopen
 </a>`
 
 export default function Advertise() {
+  useDocumentMeta({
+    title: 'Advertise on Nashville Fence Pros | Lead Gen for Fence Contractors',
+    description:
+      'Advertise to thousands of Nashville homeowners hiring fence installers. Premium listings, category sponsorships, and homepage placement on the leading Nashville fence directory. From $99/mo, month-to-month.',
+    canonical: '/advertise',
+  })
   return (
     <>
       <Hero />

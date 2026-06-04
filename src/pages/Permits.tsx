@@ -2,6 +2,7 @@ import PageHero from '../components/shared/PageHero'
 import PermitsSection from '../components/home/PermitsSection'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { Phone, AlertTriangle, MapPin, FileText, Ruler, Droplets } from 'lucide-react'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 const HEIGHT_RULES = [
   { yard: 'Front Yard — Solid', max: '3.5 ft', detail: 'Privacy panels, vinyl, solid wood' },
@@ -22,12 +23,18 @@ const HISTORIC_AREAS = [
 ]
 
 export default function Permits() {
+  useDocumentMeta({
+    title: 'Nashville Fence Permit Rules & Height Limits | Metro Code Guide',
+    description:
+      'Nashville fence permit requirements, Metro height limits, HOA rules, dig-safe 811, and historic overlay districts. Plain-English fence installation rules for Davidson and Williamson County homeowners.',
+    canonical: '/permits',
+  })
   return (
     <>
       <PageHero
         eyebrow="Metro Compliance"
         title="Nashville Fence Permits, Rules & Regulations"
-        description="Everything Davidson and Williamson County homeowners need to install a fence the right way — heights, permits, HOA, dig-safe, and historic overlays."
+        description="Everything Davidson and Williamson County homeowners need before fence installation in Nashville TN — heights, permits, HOA approvals, dig-safe 811, and historic overlays."
         crumbs={[{ label: 'Permits & Rules' }]}
       />
 

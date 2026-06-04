@@ -4,9 +4,69 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { FENCE_TYPES } from '../data/siteData'
 import { ArrowRight, ArrowLeft, Check, Wrench, Calendar, Ruler } from 'lucide-react'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
+
+const FENCE_TYPE_META: Record<string, { title: string; description: string }> = {
+  'wood-privacy': {
+    title: 'Wood Privacy Fence Installation Nashville TN | Cedar Fencing',
+    description:
+      'Wood privacy fence installation in Nashville TN. Cedar privacy fencing, 6 ft and 8 ft heights, $22–$35 per linear foot installed. Compare vetted Nashville wood fence installers and get free quotes.',
+  },
+  vinyl: {
+    title: 'Vinyl Fence Installation Nashville TN | Premium PVC Fencing',
+    description:
+      'Vinyl fence installation in Nashville TN. Premium PVC privacy and picket vinyl fencing, $32–$48 per linear foot. Compare licensed Nashville vinyl fence installers and get free quotes.',
+  },
+  aluminum: {
+    title: 'Aluminum Fence Installation Nashville TN | Ornamental Metal',
+    description:
+      'Aluminum and metal fence installation in Nashville TN. Powder-coated ornamental aluminum from $38–$62 per linear foot — pool-code compliant. Compare Nashville aluminum fence installers.',
+  },
+  'chain-link': {
+    title: 'Chain Link Fence Installation Nashville TN | Wire Fencing',
+    description:
+      'Chain link fence installation in Nashville TN. Galvanized and black vinyl-coated chain link from $12–$22 per linear foot — plus wire fencing supplies in Nashville. Compare vetted installers.',
+  },
+  'horizontal-privacy': {
+    title: 'Horizontal Cedar Privacy Fence Installation Nashville',
+    description:
+      'Horizontal cedar privacy fence installation in Nashville. Modern slat fencing for East Nashville, 12 South, and Sylvan Park, $38–$58 per linear foot. Compare design-build Nashville fence installers.',
+  },
+  'farm-ranch': {
+    title: 'Farm & Ranch Fence Installation Nashville TN | Williamson + Sumner',
+    description:
+      'Farm and ranch fence installation across Williamson, Sumner, and Wilson Counties. Four-board, split-rail, and wire fencing supplies in Nashville from $8–$18 per linear foot.',
+  },
+  'wrought-iron': {
+    title: 'Wrought Iron Fence Installation Nashville TN | Estate Iron',
+    description:
+      'Wrought iron fence installation in Nashville TN. Hand-forged ornamental iron fences and automated gates for Belle Meade, Forest Hills, and Brentwood estates. Compare iron fence installers + iron fence repair Nashville.',
+  },
+  'pet-fence': {
+    title: 'Invisible & Pet Fence Installation Nashville TN | Dog Fences',
+    description:
+      'Invisible, hidden, and electric dog fence installation in Nashville. Best-rated invisible fence installation in Nashville plus traditional pet fence installation services. Compare Nashville best dog fence installers.',
+  },
+  'pool-safety': {
+    title: 'Pool Fence Installation Nashville TN | ISPSC Pool Barriers',
+    description:
+      'Pool fence installation in Nashville TN that meets the 2018 ISPSC barrier code. Aluminum, mesh, and glass pool fencing installation and repair services in Nashville from vetted installers.',
+  },
+}
 
 export default function FenceTypes() {
   const { slug } = useParams<{ slug: string }>()
+
+  const typeMeta = slug ? FENCE_TYPE_META[slug] : undefined
+  useDocumentMeta({
+    title:
+      typeMeta?.title ??
+      'Nashville Fence Types & Materials | Installation Guide',
+    description:
+      typeMeta?.description ??
+      'Compare every Nashville fence type — wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm & ranch, wrought iron, pet/invisible, and pool safety fencing. Pricing per linear ft + vetted Nashville installers.',
+    canonical: slug ? `/fence-types/${slug}` : '/fence-types',
+  })
 
   if (slug) {
     const t = FENCE_TYPES.find((x) => x.slug === slug)

@@ -12,8 +12,16 @@ import FAQSection from '../components/home/FAQSection'
 import ResourceCenter from '../components/home/ResourceCenter'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { COMPANY } from '../data/siteData'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 export default function Home() {
+  useDocumentMeta({
+    title: 'Nashville Fence Installation | Pros, Costs & Repair | Nashville Fence Pros',
+    description:
+      'Compare vetted Nashville fence installers, get free fence installation quotes, calculate fence installation cost in Nashville TN, and find privacy, chain link, vinyl, aluminum, and pet fence pros.',
+    canonical: '/',
+  })
+
   useEffect(() => {
     const data = {
       '@context': 'https://schema.org',

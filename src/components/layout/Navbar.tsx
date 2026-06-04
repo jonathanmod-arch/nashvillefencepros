@@ -7,8 +7,9 @@ import { COMPANY, FENCE_TYPES } from '../../data/siteData'
 const NAV_LINKS = [
   { to: '/cost-guide', label: 'Costs & Pricing' },
   { to: '/permits', label: 'Permits & Rules' },
-  { to: '/neighborhoods', label: 'Neighborhoods' },
+  { to: '/repair', label: 'Fence Repair' },
   { to: '/contractors', label: 'Find a Pro' },
+  { to: '/neighborhoods', label: 'Neighborhoods' },
   { to: '/resources', label: 'Resources' },
 ]
 

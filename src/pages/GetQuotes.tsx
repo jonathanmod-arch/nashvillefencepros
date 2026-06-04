@@ -2,6 +2,7 @@ import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
 import TrustBar from '../components/home/TrustBar'
 import { ShieldCheck, Users, Clock, Award } from 'lucide-react'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 const STEPS = [
   {
@@ -34,12 +35,18 @@ const BENEFITS = [
 ]
 
 export default function GetQuotes() {
+  useDocumentMeta({
+    title: 'Free Nashville Fence Installation Quotes | Compare 3 Pros',
+    description:
+      'Get free fence installation quotes from up to 3 vetted Nashville fence installers. Wood, vinyl, chain link, aluminum, privacy, pet, pool, and commercial fence quotes near you in Nashville TN.',
+    canonical: '/get-quotes',
+  })
   return (
     <>
       <PageHero
         eyebrow="Free Quote Request"
-        title="Get Quotes From Top Nashville Fence Pros"
-        description="One short form, up to three vetted contractors, zero obligation. Most homeowners hear back within 24 hours."
+        title="Free Nashville Fence Installation Quotes"
+        description="One short form, up to three vetted Nashville fence installers, zero obligation. Most Nashville homeowners hear back within 24 hours — for new installs, fence repair, or commercial work."
         crumbs={[{ label: 'Get Quotes' }]}
       />
 

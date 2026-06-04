@@ -11,6 +11,9 @@ export const IMAGE_QUERIES = {
     'chain-link': 'chain link fence yard',
     'horizontal-privacy': 'horizontal wood slat fence modern',
     'farm-ranch': 'split rail farm fence pasture',
+    'wrought-iron': 'wrought iron estate fence gate',
+    'pet-fence': 'dog backyard pet fence',
+    'pool-safety': 'pool safety fence backyard',
   },
   neighborhoods: {
     'belle-meade': 'estate home wrought iron fence',

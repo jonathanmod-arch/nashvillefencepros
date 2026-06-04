@@ -4,6 +4,7 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { RESOURCES } from '../data/siteData'
 import { Clock, ArrowRight, ArrowLeft } from 'lucide-react'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 const CATEGORY_COLORS: Record<string, string> = {
   Comparison: 'bg-forest-50 text-forest-500',
@@ -16,9 +17,19 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 export default function Resources() {
   const { slug } = useParams<{ slug: string }>()
+  const r = slug ? RESOURCES.find((x) => x.slug === slug) : undefined
+
+  useDocumentMeta({
+    title: r
+      ? `${r.title} | Nashville Fence Resource`
+      : 'Nashville Fence Resource Center | Install, Repair & Permits',
+    description: r
+      ? `${r.excerpt} ${r.readTime} read on Nashville Fence Pros.`
+      : 'Nashville fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and Metro permit how-tos.',
+    canonical: slug ? `/resources/${slug}` : '/resources',
+  })
 
   if (slug) {
-    const r = RESOURCES.find((x) => x.slug === slug)
     if (!r) {
       return (
         <>

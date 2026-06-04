@@ -26,6 +26,7 @@ import {
   categoryLabel,
   galleryFor,
 } from '../data/contractors'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 const REVIEW_DISTRIBUTION = [
   { stars: 5, ratio: 0.83 },
@@ -38,6 +39,17 @@ const REVIEW_DISTRIBUTION = [
 export default function ContractorProfile() {
   const { slug } = useParams<{ slug: string }>()
   const c = useMemo(() => CONTRACTORS.find((x) => x.slug === slug), [slug])
+
+  useDocumentMeta({
+    title: c
+      ? `${c.name} — ${categoryLabel(c.category)} in Nashville TN`
+      : 'Nashville Fence Pro Not Found',
+    description: c
+      ? `${c.name} is a Nashville-area ${categoryLabel(c.category).toLowerCase()} serving ${c.areas.join(', ')}. ${c.description.slice(0, 110)}…`
+      : 'This Nashville fence contractor listing is no longer available. Browse the full Nashville fence installers directory instead.',
+    canonical: c ? `/contractors/${c.slug}` : '/contractors',
+    noindex: !c,
+  })
 
   if (!c) {
     return <Navigate to="/contractors" replace />

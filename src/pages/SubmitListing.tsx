@@ -12,6 +12,7 @@ import {
 import PageHero from '../components/shared/PageHero'
 import { COMPANY } from '../data/siteData'
 import { AREAS, SERVICE_CATEGORIES } from '../data/contractors'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 const SUGGESTED_LICENSES = [
   'Licensed & Insured',
@@ -89,6 +90,12 @@ const initialForm: FormState = {
 }
 
 export default function SubmitListing() {
+  useDocumentMeta({
+    title: 'Submit Your Nashville Fence Business | Free Listing',
+    description:
+      'Get listed on the Nashville Fence Pros directory for free. Submit your fence installation, repair, gate, surveying, or staining business in under 5 minutes and start receiving Nashville fence leads.',
+    canonical: '/submit-listing',
+  })
   const [form, setForm] = useState<FormState>(initialForm)
   const [files, setFiles] = useState<File[]>([])
   const [dragOver, setDragOver] = useState(false)

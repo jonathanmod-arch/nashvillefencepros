@@ -4,12 +4,23 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { NEIGHBORHOODS } from '../data/siteData'
 import { MapPin, ArrowRight, ArrowLeft, Check } from 'lucide-react'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 export default function Neighborhoods() {
   const { slug } = useParams<{ slug: string }>()
+  const n = slug ? NEIGHBORHOODS.find((x) => x.slug === slug) : undefined
+
+  useDocumentMeta({
+    title: n
+      ? `${n.name} Fence Installation TN | Nashville Fence Pros`
+      : 'Nashville Neighborhoods We Serve | Fence Installation by Area',
+    description: n
+      ? `Fence installation in ${n.name}, Nashville TN (${n.zip}). Popular style: ${n.popularStyle}. Typical project ${n.avgCost}. Compare vetted ${n.name} fence installers and get free quotes.`
+      : 'Compare Nashville fence installation by neighborhood — Belle Meade, Green Hills, East Nashville, Germantown, Brentwood, Franklin, 12 South, Sylvan Park, and more. Local pricing, popular styles, HOA notes.',
+    canonical: slug ? `/neighborhoods/${slug}` : '/neighborhoods',
+  })
 
   if (slug) {
-    const n = NEIGHBORHOODS.find((x) => x.slug === slug)
     if (!n) {
       return (
         <>

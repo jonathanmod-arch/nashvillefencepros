@@ -16,6 +16,8 @@ const Resources = lazy(() => import('./pages/Resources'))
 const FenceTypes = lazy(() => import('./pages/FenceTypes'))
 const Advertise = lazy(() => import('./pages/Advertise'))
 const SubmitListing = lazy(() => import('./pages/SubmitListing'))
+const Repair = lazy(() => import('./pages/Repair'))
+const CommercialFencing = lazy(() => import('./pages/CommercialFencing'))
 
 function RouteLoader() {
   return (
@@ -47,6 +49,8 @@ function App() {
             <Route path="/fence-types/:slug" element={<FenceTypes />} />
             <Route path="/advertise" element={<Advertise />} />
             <Route path="/submit-listing" element={<SubmitListing />} />
+            <Route path="/repair" element={<Repair />} />
+            <Route path="/commercial-fencing" element={<CommercialFencing />} />
           </Routes>
         </Suspense>
       </main>

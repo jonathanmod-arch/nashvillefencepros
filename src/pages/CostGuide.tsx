@@ -3,6 +3,7 @@ import CostGuideSection from '../components/home/CostGuideSection'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { FENCE_TYPES } from '../data/siteData'
 import { TrendingUp, AlertTriangle, Layers } from 'lucide-react'
+import { useDocumentMeta } from '../hooks/useDocumentMeta'
 
 const LINE_ITEMS = [
   { label: 'Posts & Concrete', share: 18, note: '4×4 posts set in concrete, 8 ft on center.' },
@@ -14,12 +15,18 @@ const LINE_ITEMS = [
 ]
 
 export default function CostGuide() {
+  useDocumentMeta({
+    title: 'Fence Installation Cost Nashville 2026 | Price by Material | Nashville Fence Pros',
+    description:
+      'Real Nashville fence installation cost data for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences. Interactive Nashville fence cost calculator + price-per-linear-foot ranges by material.',
+    canonical: '/cost-guide',
+  })
   return (
     <>
       <PageHero
         eyebrow="Nashville Cost Guide"
-        title="What Does a Fence Cost in Nashville in 2026?"
-        description="Real installed prices for Davidson, Williamson, and Sumner counties — plus the line items hiding behind your quote."
+        title="Fence Installation Cost in Nashville TN"
+        description="Real installed prices for fence installation in Nashville, Brentwood, Franklin, Hendersonville, and Murfreesboro — wood, vinyl, chain link, aluminum, wrought iron, privacy, pet, and pool fencing covered, plus the line items hiding behind your quote."
         crumbs={[{ label: 'Cost Guide' }]}
       />
 
