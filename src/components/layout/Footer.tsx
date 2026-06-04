@@ -95,34 +95,55 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-onyx-500">
-          <h4 className="text-oak-400 text-[10px] font-bold uppercase tracking-[0.22em] mb-3">
+        <div className="mt-14 pt-10 border-t border-onyx-500">
+          <h4 className="text-white text-[12px] font-bold uppercase tracking-[0.24em] mb-8">
             Nashville Fence Quick Facts
           </h4>
-          <p className="text-[11px] text-onyx-300 leading-relaxed max-w-6xl">
-            <strong className="text-white">Average installed cost in Nashville (2026):</strong> $3,300–$7,200 for a typical 150–200 linear ft residential fence.{' '}
-            <strong className="text-white">Metro Nashville height limits:</strong> rear/side yards up to 8 ft; front yards limited to 3.5 ft for solid privacy fencing and 4 ft for open-style (picket, aluminum, ornamental).{' '}
-            <strong className="text-white">Permits:</strong> not required for standard residential fences under 8 ft outside historic overlays, but always required in flood zones and historic districts (Germantown, parts of East Nashville, Edgefield).{' '}
-            <strong className="text-white">Dig-safe:</strong> Tennessee state law requires calling{' '}
-            <a href="tel:811" className="text-oak-300 underline">811</a>{' '}
-            at least 3 business days before digging post holes — Tennessee 811 will mark public utilities for free.{' '}
-            <strong className="text-white">Pool fence code:</strong> Tennessee follows the 2018 ISPSC, requiring a minimum 4 ft barrier with self-closing, self-latching gates around in-ground pools.{' '}
-            <strong className="text-white">Per linear ft pricing:</strong> chain link $12–$22, wood privacy $22–$35, vinyl $32–$48, horizontal cedar $38–$58, ornamental aluminum $38–$62.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <div>
+              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+                Average Fence Costs
+              </h5>
+              <p className="text-[13px] text-onyx-300 leading-relaxed">
+                Wood: $3,300–$6,750 · Vinyl: $4,800–$7,200 · Aluminum: $4,500–$7,800 · Chain Link: $1,800–$3,900 · Wrought Iron: $5,700–$9,750
+              </p>
+            </div>
+            <div>
+              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+                Nashville Permit Rules
+              </h5>
+              <p className="text-[13px] text-onyx-300 leading-relaxed">
+                Most residential fences under 6 ft do not require a Metro Nashville permit. Fences in historic overlays may require additional approval. Always check with Metro Nashville Planning.
+              </p>
+            </div>
+            <div>
+              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+                Height Regulations
+              </h5>
+              <p className="text-[13px] text-onyx-300 leading-relaxed">
+                Front yard: max 3.5 ft (solid) or 4 ft (open). Rear/side yard: max 8 ft. Corner lots have visibility triangle requirements. HOA rules may be more restrictive.
+              </p>
+            </div>
+            <div>
+              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+                Before You Install
+              </h5>
+              <p className="text-[13px] text-onyx-300 leading-relaxed">
+                Call Tennessee 811 before digging. Get a property survey to confirm boundary lines. Check HOA CC&Rs for approved fence styles and colors. Notify neighbors as a courtesy.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="border-t border-onyx-500 bg-onyx-700">
-        <div className="container-wide py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-[11px] text-onyx-300">
-            © {new Date().getFullYear()} {COMPANY.name}. Independent referral resource — not a licensed contractor.
+        <div className="container-wide py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+          <p className="text-[12px] text-onyx-300 leading-relaxed max-w-4xl">
+            <span className="text-white font-semibold">Disclaimer:</span> NashvilleFencePros.com is an independent local fence information and contractor referral platform created to help homeowners make informed fencing decisions. We are not a licensed contractor. Always verify permits and regulations with Metro Nashville directly.
           </p>
-          <div className="flex items-center gap-5 text-[11px] text-onyx-300">
-            <a href="#" className="hover:text-oak-300">Privacy</a>
-            <a href="#" className="hover:text-oak-300">Terms</a>
-            <a href="#" className="hover:text-oak-300">Accessibility</a>
-            <a href="#" className="hover:text-oak-300">Sitemap</a>
-          </div>
+          <p className="text-[12px] text-onyx-300 whitespace-nowrap">
+            © {new Date().getFullYear()} NashvilleFencePros.com
+          </p>
         </div>
       </div>
     </footer>
