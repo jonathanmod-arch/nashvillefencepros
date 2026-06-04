@@ -31,12 +31,12 @@ function StatItem({ stat, inView }: { stat: Stat; inView: boolean }) {
   const display = Math.round(value).toLocaleString()
   return (
     <div className="text-center">
-      <div className="font-heading font-black text-forest-500 tracking-tightest leading-none text-[44px] md:text-[56px] lg:text-[64px]">
+      <div className="font-heading font-black text-forest-500 tracking-tightest leading-none text-4xl">
         {stat.prefix}
         {display}
         {stat.suffix}
       </div>
-      <div className="mt-3 font-body font-normal text-onyx-700/80 text-[14px] md:text-[15px] lg:text-[16px] leading-snug max-w-[220px] mx-auto">
+      <div className="mt-3 font-body font-medium text-onyx-700/80 text-sm leading-snug max-w-[220px] mx-auto">
         {stat.label}
       </div>
     </div>

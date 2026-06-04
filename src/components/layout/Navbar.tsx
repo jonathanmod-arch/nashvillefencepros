@@ -127,7 +127,7 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Link to="/get-quotes" className="btn-primary !py-2.5 !px-5 !text-[13px]">
+            <Link to="/get-quotes" className="btn-primary !py-2.5 !px-5">
               Get Fence Quotes
             </Link>
           </div>

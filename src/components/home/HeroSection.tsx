@@ -30,7 +30,7 @@ export default function HeroSection() {
             Nashville's Most Trusted Fence Resource
           </span>
 
-          <h1 className="mt-7 text-[44px] sm:text-[60px] md:text-[72px] lg:text-[84px] font-heading font-black tracking-tightest leading-[0.95]">
+          <h1 className="mt-7 text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tightest leading-none">
             <span className="text-onyx-700">Nashville Fence</span>
             <br />
             <span className="text-forest-500">Installation</span>
@@ -40,7 +40,7 @@ export default function HeroSection() {
 
           <div className="mt-6 h-[3px] w-16 bg-oak-400 rounded-full" />
 
-          <p className="mt-6 font-body font-normal text-[17px] md:text-[19px] text-onyx-700/70 leading-relaxed max-w-xl">
+          <p className="mt-6 font-body font-normal text-lg text-onyx-700/70 leading-relaxed max-w-xl">
             Compare fence options, understand local regulations, estimate costs, and connect
             with trusted Nashville fence professionals.
           </p>
