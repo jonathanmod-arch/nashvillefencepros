@@ -18,7 +18,7 @@ export default function ContractorDirectory() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {CONTRACTORS.map((c, i) => (
+          {CONTRACTORS.slice(0, 6).map((c, i) => (
             <motion.div
               key={c.name}
               initial={{ opacity: 0, y: 16 }}
