@@ -141,9 +141,10 @@ export default function Navbar() {
           </div>
 
           <button
-            className="lg:hidden p-2 rounded-md text-onyx-700"
+            className="lg:hidden flex items-center justify-center w-11 h-11 -mr-2 rounded-md text-onyx-700 hover:bg-warmgray transition-colors"
             onClick={() => setMobileOpen((s) => !s)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

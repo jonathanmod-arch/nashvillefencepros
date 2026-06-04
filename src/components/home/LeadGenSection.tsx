@@ -329,7 +329,7 @@ export default function LeadGenSection() {
           border-radius: 0.5rem;
           border: 1px solid #E5E7EB;
           background: #F8F9FA;
-          font-size: 0.9rem;
+          font-size: 16px;
           color: #1A1D1E;
           outline: none;
           transition: all .15s ease;

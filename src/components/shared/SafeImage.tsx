@@ -16,21 +16,32 @@ const FALLBACK = `data:image/svg+xml;utf8,${encodeURIComponent(`
 </svg>
 `)}`
 
-// Unified color grading — pulls multi-photographer stock into one visual family.
-// Slight saturation drop + slight contrast lift = warmer, more editorial feel.
 const CONSISTENCY_FILTER = 'saturate(0.95) contrast(1.03)'
 
-type Props = ImgHTMLAttributes<HTMLImageElement> & { src: string; raw?: boolean }
+type Props = ImgHTMLAttributes<HTMLImageElement> & {
+  src: string
+  raw?: boolean
+  priority?: boolean
+}
 
-export default function SafeImage({ src, alt = '', className, style, raw, ...rest }: Props) {
+export default function SafeImage({
+  src,
+  alt = '',
+  className,
+  style,
+  raw,
+  priority,
+  ...rest
+}: Props) {
   const [errored, setErrored] = useState(false)
   const showFallback = errored
   return (
     <img
       src={showFallback ? FALLBACK : src}
       alt={alt}
-      loading="lazy"
+      loading={priority ? 'eager' : 'lazy'}
       decoding="async"
+      fetchPriority={priority ? 'high' : 'auto'}
       onError={() => setErrored(true)}
       className={className}
       style={{
@@ -41,4 +52,3 @@ export default function SafeImage({ src, alt = '', className, style, raw, ...res
     />
   )
 }
-

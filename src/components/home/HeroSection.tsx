@@ -96,6 +96,7 @@ export default function HeroSection() {
               src={heroUrl(900)}
               alt="nashville-fence-installers"
               className="w-full h-full object-cover"
+              priority
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />
           </div>
