@@ -86,7 +86,7 @@ export default function Home() {
       <CostGuideSection />
       <PermitsSection />
       <NeighborhoodsSection />
-      <ContractorDirectory />
+      <ContractorDirectory preview />
       <GallerySection />
       <FAQSection />
       <ResourceCenter />

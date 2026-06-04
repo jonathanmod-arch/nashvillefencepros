@@ -20,7 +20,7 @@ import {
   type Contractor,
 } from '../../data/contractors'
 
-export default function ContractorDirectory() {
+export default function ContractorDirectory({ preview = false }: { preview?: boolean } = {}) {
   const [query, setQuery] = useState('')
   const [area, setArea] = useState<string>('All Areas')
   const [category, setCategory] = useState<string>('all')
@@ -55,11 +55,13 @@ export default function ContractorDirectory() {
           <h2 className="mt-3 heading-section">Best Fence Companies in Nashville</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Hand-picked, licensed, and reviewed by real Nashville homeowners.
-            Filter by area, service, or project type.
+            {preview
+              ? "Hand-picked, licensed, and reviewed by real Nashville homeowners. Here are this month's top-rated picks."
+              : 'Hand-picked, licensed, and reviewed by real Nashville homeowners. Filter by area, service, or project type.'}
           </p>
         </div>
 
+        {!preview && (
         <div className="bg-[#F8F9FA] rounded-2xl p-5 border border-[#E2E8F0] mb-8">
           <div className="grid sm:grid-cols-[1fr_280px] gap-3 mb-4">
             <div className="relative">
@@ -128,13 +130,16 @@ export default function ContractorDirectory() {
             ))}
           </FilterRow>
         </div>
+        )}
 
+        {!preview && (
         <div className="mb-6 text-sm text-onyx-700/70">
           Showing <span className="font-semibold text-onyx-700">{filtered.length}</span>{' '}
           professional{filtered.length === 1 ? '' : 's'}
         </div>
+        )}
 
-        {filtered.length === 0 && (
+        {!preview && filtered.length === 0 && (
           <div className="text-center py-20">
             <HelpCircle className="w-12 h-12 text-onyx-700/30 mx-auto mb-4" />
             <h3 className="heading-card mb-2">No matches found</h3>
@@ -147,34 +152,47 @@ export default function ContractorDirectory() {
 
         {featured.length > 0 && (
           <div className="mb-12">
-            <div className="flex items-end justify-between mb-5 flex-wrap gap-2">
-              <div>
-                <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-oak-500" />
-                  <span className="label-eyebrow !text-oak-500">
-                    Featured Pros
-                  </span>
+            {!preview && (
+              <div className="flex items-end justify-between mb-5 flex-wrap gap-2">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-oak-500" />
+                    <span className="label-eyebrow !text-oak-500">
+                      Featured Pros
+                    </span>
+                  </div>
+                  <h3 className="heading-card mt-1">Top-rated picks this month</h3>
                 </div>
-                <h3 className="heading-card mt-1">Top-rated picks this month</h3>
+                <span className="text-sm text-onyx-700/60">
+                  {featured.length} featured · {rest.length} more below
+                </span>
               </div>
-              <span className="text-sm text-onyx-700/60">
-                {featured.length} featured · {rest.length} more below
-              </span>
-            </div>
+            )}
             <motion.div
               layout
               className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               <AnimatePresence mode="popLayout">
-                {featured.map((c) => (
+                {(preview ? featured.slice(0, 3) : featured).map((c) => (
                   <ContractorCard key={c.slug} c={c} featured />
                 ))}
               </AnimatePresence>
             </motion.div>
+            {preview && (
+              <div className="mt-10 text-center">
+                <Link
+                  to="/contractors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-forest-500 hover:text-forest-600 underline underline-offset-4"
+                >
+                  See all Nashville Fence Installers
+                  <Sparkles className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            )}
           </div>
         )}
 
-        {rest.length > 0 && (
+        {!preview && rest.length > 0 && (
           <div>
             {featured.length > 0 && (
               <div className="mb-5">
