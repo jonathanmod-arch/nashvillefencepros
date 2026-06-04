@@ -11,6 +11,7 @@ const CostGuide = lazy(() => import('./pages/CostGuide'))
 const Permits = lazy(() => import('./pages/Permits'))
 const Neighborhoods = lazy(() => import('./pages/Neighborhoods'))
 const Contractors = lazy(() => import('./pages/Contractors'))
+const ContractorProfile = lazy(() => import('./pages/ContractorProfile'))
 const Resources = lazy(() => import('./pages/Resources'))
 const FenceTypes = lazy(() => import('./pages/FenceTypes'))
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="/neighborhoods" element={<Neighborhoods />} />
             <Route path="/neighborhoods/:slug" element={<Neighborhoods />} />
             <Route path="/contractors" element={<Contractors />} />
+            <Route path="/contractors/:slug" element={<ContractorProfile />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:slug" element={<Resources />} />
             <Route path="/fence-types" element={<FenceTypes />} />

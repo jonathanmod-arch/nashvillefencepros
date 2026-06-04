@@ -9,257 +9,15 @@ import {
   HelpCircle,
   Sparkles,
 } from 'lucide-react'
-
-type ProjectType = 'residential' | 'commercial'
-
-type Contractor = {
-  name: string
-  category: string
-  projectType: ProjectType
-  description: string
-  areas: string[]
-  specialties: string[]
-  rating: number
-  reviews: number
-  badge: string
-  license: string
-  featured?: boolean
-}
-
-const AREAS = [
-  'All Areas',
-  'Nashville',
-  'Brentwood',
-  'Franklin',
-  'Hendersonville',
-  'Murfreesboro',
-  'Belle Meade',
-]
-
-const SERVICE_CATEGORIES = [
-  { id: 'all', label: 'All Services' },
-  { id: 'fencing', label: 'Fence Installers' },
-  { id: 'gates', label: 'Gates & Automation' },
-  { id: 'surveying', label: 'Land Surveyors' },
-  { id: 'prep', label: 'Site Prep & Clearing' },
-  { id: 'staining', label: 'Staining & Restoration' },
-  { id: 'design', label: 'Fence & Landscape Design' },
-] as const
-
-const PROJECT_TYPES = [
-  { id: 'all', label: 'All Projects' },
-  { id: 'residential', label: 'Residential' },
-  { id: 'commercial', label: 'Commercial' },
-] as const
-
-const BADGE_COLORS: Record<string, string> = {
-  'Top Rated 2026':
-    'bg-[#D4A373]/15 text-[#92400e] border border-[#D4A373]/40',
-  'Verified Pro':
-    'bg-[#1B4332]/10 text-[#1B4332] border border-[#1B4332]/25',
-  'Premium Partner':
-    'bg-[#1A1D1E]/10 text-[#1A1D1E] border border-[#1A1D1E]/20',
-  'Commercial Specialist':
-    'bg-blue-50 text-blue-800 border border-blue-200',
-}
-
-const categoryLabel = (id: string) =>
-  SERVICE_CATEGORIES.find((c) => c.id === id)?.label ?? id
-
-const contractors: Contractor[] = [
-  {
-    name: 'Music City Fence Co.',
-    category: 'fencing',
-    projectType: 'residential',
-    description:
-      "Nashville's largest residential fence installer. Specializing in high-end western red cedar privacy and premium vinyl fencing.",
-    areas: ['Nashville', 'Brentwood', 'Franklin'],
-    specialties: ['Wood Privacy', 'Vinyl Fence', 'Cedar'],
-    rating: 4.9,
-    reviews: 214,
-    badge: 'Top Rated 2026',
-    license: 'Licensed & Insured',
-    featured: true,
-  },
-  {
-    name: 'Tennessee Fence Pros',
-    category: 'fencing',
-    projectType: 'residential',
-    description:
-      'Family-owned fence contractor serving the greater Nashville area. Known for fast residential chain-link, wood, and aluminum builds.',
-    areas: ['Nashville', 'Hendersonville', 'Murfreesboro'],
-    specialties: ['Chain Link', 'Aluminum', 'Wood'],
-    rating: 4.8,
-    reviews: 156,
-    badge: 'Verified Pro',
-    license: 'Licensed & Insured',
-  },
-  {
-    name: 'Williamson County Fence & Rail',
-    category: 'fencing',
-    projectType: 'residential',
-    description:
-      "Brentwood and Franklin's trusted fence contractor. Specializing in HOA-compliant fencing and farm/ranch solutions for Williamson County.",
-    areas: ['Brentwood', 'Franklin'],
-    specialties: ['Vinyl Fence', 'Farm Fencing', 'HOA Approved'],
-    rating: 4.9,
-    reviews: 103,
-    badge: 'Top Rated 2026',
-    license: 'Licensed & Insured',
-    featured: true,
-  },
-  {
-    name: 'East Side Fence Company',
-    category: 'fencing',
-    projectType: 'residential',
-    description:
-      "East Nashville's go-to specialist for horizontal cedar designs and historic commission overlay compliant backyard boundaries.",
-    areas: ['Nashville', 'Hendersonville'],
-    specialties: ['Horizontal Privacy', 'Custom Wood', 'Modern Design'],
-    rating: 4.7,
-    reviews: 127,
-    badge: 'Verified Pro',
-    license: 'Licensed & Insured',
-  },
-  {
-    name: 'Middle Tennessee Commercial Fencing',
-    category: 'fencing',
-    projectType: 'commercial',
-    description:
-      'Commercial and industrial fence specialist serving businesses across Tennessee. High-security solutions for any commercial application.',
-    areas: ['Nashville', 'Murfreesboro'],
-    specialties: ['Commercial Security', 'Chain Link', 'Barbed Wire'],
-    rating: 4.8,
-    reviews: 67,
-    badge: 'Commercial Specialist',
-    license: 'Licensed & Insured',
-  },
-  {
-    name: 'Belle Meade Fence & Gate',
-    category: 'gates',
-    projectType: 'residential',
-    description:
-      'Specialists in custom estate entry gates. Installs structural ornamental wrought iron and premium solar automatic operator gates.',
-    areas: ['Belle Meade', 'Brentwood', 'Franklin'],
-    specialties: ['Automatic Gates', 'Ornamental Iron', 'Keypad Entry'],
-    rating: 4.9,
-    reviews: 89,
-    badge: 'Premium Partner',
-    license: 'Gate/Access Lic.',
-  },
-  {
-    name: 'Volt Guard Access Systems',
-    category: 'gates',
-    projectType: 'commercial',
-    description:
-      'State-certified technicians installing robust electronic driveway openers, card readers, and wireless app-controlled residential gates.',
-    areas: ['Nashville', 'Brentwood', 'Murfreesboro'],
-    specialties: ['LiftMaster Systems', 'Keypad Control', 'Maintenance'],
-    rating: 4.8,
-    reviews: 42,
-    badge: 'Verified Pro',
-    license: 'Electrical Lic.',
-  },
-  {
-    name: 'Cumberland Boundary Surveyors',
-    category: 'surveying',
-    projectType: 'residential',
-    description:
-      'Licensed Tennessee land surveyors. Essential for mapping out your exact property boundaries before placing your new fence line.',
-    areas: [
-      'Nashville',
-      'Brentwood',
-      'Franklin',
-      'Hendersonville',
-      'Murfreesboro',
-    ],
-    specialties: ['Boundary Mapping', 'Plot Verification', 'Staking'],
-    rating: 4.9,
-    reviews: 73,
-    badge: 'Verified Pro',
-    license: 'RLS Certified',
-  },
-  {
-    name: 'Davidson County Land Surveying',
-    category: 'surveying',
-    projectType: 'commercial',
-    description:
-      'Providing fast-turnaround boundary staking and topographic property layouts across Davidson and Williamson counties.',
-    areas: ['Nashville', 'Belle Meade', 'Brentwood'],
-    specialties: ['Boundary Staking', 'Property Line Pinning'],
-    rating: 4.7,
-    reviews: 31,
-    badge: 'Verified Pro',
-    license: 'RLS Certified',
-  },
-  {
-    name: 'Nashville Site Prep & Brush Clearing',
-    category: 'prep',
-    projectType: 'residential',
-    description:
-      'Specialists in clearing dense brush, overgrowth, tree limbs, and grading soil directly along prospective fence runs.',
-    areas: ['Nashville', 'Hendersonville', 'Murfreesboro'],
-    specialties: ['Brush Removal', 'Land Grading', 'Debris Hauling'],
-    rating: 4.8,
-    reviews: 64,
-    badge: 'Verified Pro',
-    license: 'Licensed & Insured',
-  },
-  {
-    name: 'Tennessee Stain & Seal Co.',
-    category: 'staining',
-    projectType: 'residential',
-    description:
-      'Commercial-grade deep washing and premium oil-based staining that doubles the lifespan of pressure-treated wood fences.',
-    areas: ['Nashville', 'Brentwood', 'Franklin', 'Murfreesboro'],
-    specialties: ['Fence Staining', 'Power Washing', 'Wood Sealing'],
-    rating: 4.9,
-    reviews: 112,
-    badge: 'Top Rated 2026',
-    license: 'Licensed & Insured',
-    featured: true,
-  },
-  {
-    name: 'Heritage Wood Restorations',
-    category: 'staining',
-    projectType: 'residential',
-    description:
-      'Specialists in revitalizing gray, weather-worn wood fences. Post straightening, picket replacements, and natural cedar sealing.',
-    areas: ['Nashville', 'Belle Meade', 'Brentwood'],
-    specialties: ['Wood Restoring', 'Picket Repair', 'Structural Sealing'],
-    rating: 4.6,
-    reviews: 58,
-    badge: 'Verified Pro',
-    license: 'Licensed & Insured',
-  },
-  {
-    name: 'Greenline Design Studio',
-    category: 'design',
-    projectType: 'residential',
-    description:
-      "Nashville-based outdoor design firm specializing in fence placement, privacy landscaping, and boundary beautification plans that complement your home's architecture.",
-    areas: ['Nashville', 'Brentwood', 'Franklin', 'Belle Meade'],
-    specialties: ['Fence Layout Design', 'Privacy Landscaping', 'Renderings'],
-    rating: 4.9,
-    reviews: 86,
-    badge: 'Top Rated 2026',
-    license: 'Licensed Designer',
-    featured: true,
-  },
-  {
-    name: 'Outdoor Boundary by Terrain Co.',
-    category: 'design',
-    projectType: 'residential',
-    description:
-      'Full-service landscape architects who integrate fence lines, garden beds, and hardscape into cohesive outdoor living plans for Nashville properties.',
-    areas: ['Nashville', 'Franklin', 'Hendersonville'],
-    specialties: ['Landscape Architecture', '3D Planning', 'HOA Submissions'],
-    rating: 4.8,
-    reviews: 49,
-    badge: 'Verified Pro',
-    license: 'Licensed Designer',
-  },
-]
+import {
+  CONTRACTORS,
+  AREAS,
+  SERVICE_CATEGORIES,
+  PROJECT_TYPES,
+  BADGE_COLORS,
+  categoryLabel,
+  type Contractor,
+} from '../../data/contractors'
 
 export default function ContractorDirectory() {
   const [query, setQuery] = useState('')
@@ -269,7 +27,7 @@ export default function ContractorDirectory() {
 
   const filtered = useMemo(
     () =>
-      contractors.filter((c) => {
+      CONTRACTORS.filter((c) => {
         const q = query.trim().toLowerCase()
         const matchesQuery =
           !q ||
@@ -301,7 +59,7 @@ export default function ContractorDirectory() {
           </p>
         </div>
 
-        <div className="bg-[#F8F9FA] rounded-2xl p-5 border border-[#E2E8F0] mb-10">
+        <div className="bg-[#F8F9FA] rounded-2xl p-5 border border-[#E2E8F0] mb-8">
           <div className="grid sm:grid-cols-[1fr_280px] gap-3 mb-4">
             <div className="relative">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-onyx-700/50" />
@@ -370,6 +128,11 @@ export default function ContractorDirectory() {
           </FilterRow>
         </div>
 
+        <div className="mb-6 text-sm text-onyx-700/70">
+          Showing <span className="font-semibold text-onyx-700">{filtered.length}</span>{' '}
+          professional{filtered.length === 1 ? '' : 's'}
+        </div>
+
         {filtered.length === 0 && (
           <div className="text-center py-20">
             <HelpCircle className="w-12 h-12 text-onyx-700/30 mx-auto mb-4" />
@@ -403,7 +166,7 @@ export default function ContractorDirectory() {
             >
               <AnimatePresence mode="popLayout">
                 {featured.map((c) => (
-                  <ContractorCard key={c.name} c={c} featured />
+                  <ContractorCard key={c.slug} c={c} featured />
                 ))}
               </AnimatePresence>
             </motion.div>
@@ -424,7 +187,7 @@ export default function ContractorDirectory() {
             >
               <AnimatePresence mode="popLayout">
                 {rest.map((c) => (
-                  <ContractorCard key={c.name} c={c} />
+                  <ContractorCard key={c.slug} c={c} />
                 ))}
               </AnimatePresence>
             </motion.div>
@@ -507,9 +270,13 @@ function ContractorCard({
       }`}
     >
       <div className="flex items-start justify-between gap-2 mb-4">
-        <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-onyx-700/70">
-          <Shield className="w-3 h-3" />
-          {c.license}
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 rounded-lg bg-warmgray flex items-center justify-center">
+            <Shield className="w-3.5 h-3.5 text-onyx-700/60" />
+          </div>
+          <span className="text-[10px] font-bold uppercase tracking-wider text-onyx-700/70 px-2 py-1 rounded-md bg-warmgray">
+            {c.license}
+          </span>
         </div>
         <span
           className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider whitespace-nowrap ${
@@ -520,7 +287,15 @@ function ContractorCard({
         </span>
       </div>
 
-      <div className="flex items-center gap-2 mb-3">
+      <h3 className="heading-card !text-xl leading-tight mb-1">{c.name}</h3>
+      <div className="text-[11px] font-bold uppercase tracking-wider text-oak-500 mb-3">
+        {categoryLabel(c.category)}
+      </div>
+      <p className="text-sm text-onyx-700/70 leading-relaxed mb-4 flex-1">
+        {c.description}
+      </p>
+
+      <div className="flex items-center gap-2 mb-4">
         <div className="flex">
           {[0, 1, 2, 3, 4].map((i) => (
             <Star
@@ -537,13 +312,14 @@ function ContractorCard({
         <span className="text-xs text-onyx-700/60">({c.reviews} reviews)</span>
       </div>
 
-      <h3 className="heading-card !text-xl leading-tight mb-1">{c.name}</h3>
-      <div className="text-[11px] font-bold uppercase tracking-wider text-forest-500 mb-3">
-        {categoryLabel(c.category)}
+      <div className="mb-4 pt-4 border-t border-[#E2E8F0]">
+        <div className="text-[10px] font-bold uppercase tracking-wider text-onyx-700/50 mb-1.5 flex items-center gap-1">
+          <MapPin className="w-3 h-3" /> Area Coverage
+        </div>
+        <div className="text-xs text-onyx-700/80">
+          {c.areas.join(' · ')}
+        </div>
       </div>
-      <p className="text-sm text-onyx-700/70 leading-relaxed mb-4 flex-1">
-        {c.description}
-      </p>
 
       <div className="flex flex-wrap gap-1.5 mb-5">
         {c.specialties.map((s) => (
@@ -556,22 +332,20 @@ function ContractorCard({
         ))}
       </div>
 
-      <div className="mb-5 pt-4 border-t border-[#E2E8F0]">
-        <div className="text-[10px] font-bold uppercase tracking-wider text-onyx-700/50 mb-1.5">
-          Area Coverage
-        </div>
-        <div className="flex items-start gap-1.5 text-xs text-onyx-700/80">
-          <MapPin className="w-3.5 h-3.5 text-forest-500 mt-0.5 flex-shrink-0" />
-          <span>{c.areas.join(' · ')}</span>
-        </div>
+      <div className="grid grid-cols-2 gap-2">
+        <Link
+          to={`/contractors/${c.slug}`}
+          className="block text-center bg-white text-[#1B4332] border border-[#1B4332] py-2.5 rounded-xl text-sm font-semibold hover:bg-[#1B4332]/5 transition-colors"
+        >
+          View Profile
+        </Link>
+        <Link
+          to="/get-quotes"
+          className="block text-center bg-[#1B4332] text-white py-2.5 rounded-xl text-sm font-semibold hover:bg-[#1B4332]/90 transition-colors"
+        >
+          Request Quote
+        </Link>
       </div>
-
-      <Link
-        to="/get-quotes"
-        className="block text-center bg-[#1B4332] text-white py-2.5 rounded-xl text-sm font-semibold hover:bg-[#1B4332]/90 transition-colors"
-      >
-        Request Quote
-      </Link>
     </motion.div>
   )
 }
