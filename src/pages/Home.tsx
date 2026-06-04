@@ -7,7 +7,6 @@ import CostGuideSection from '../components/home/CostGuideSection'
 import PermitsSection from '../components/home/PermitsSection'
 import NeighborhoodsSection from '../components/home/NeighborhoodsSection'
 import ContractorDirectory from '../components/home/ContractorDirectory'
-import GallerySection from '../components/home/GallerySection'
 import FAQSection from '../components/home/FAQSection'
 import ResourceCenter from '../components/home/ResourceCenter'
 import LeadGenSection from '../components/home/LeadGenSection'
@@ -87,7 +86,6 @@ export default function Home() {
       <PermitsSection />
       <NeighborhoodsSection />
       <ContractorDirectory preview />
-      <GallerySection />
       <FAQSection />
       <ResourceCenter />
       <LeadGenSection />
