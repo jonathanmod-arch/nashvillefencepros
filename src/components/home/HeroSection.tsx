@@ -19,7 +19,7 @@ export default function HeroSection() {
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-forest-50/40 blur-3xl" />
       </div>
 
-      <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center">
+      <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export default function HeroSection() {
             Nashville's Most Trusted Fence Resource
           </span>
 
-          <h1 className="mt-6 text-[52px] sm:text-[72px] md:text-[88px] lg:text-[100px] font-heading font-black tracking-tightest leading-[0.92]">
+          <h1 className="mt-6 text-[44px] sm:text-[60px] lg:text-[76px] font-heading font-black tracking-tightest leading-[0.95]">
             <span className="text-onyx-700">Nashville Fence</span>
             <br />
             <span className="text-forest-500">Installation</span>
