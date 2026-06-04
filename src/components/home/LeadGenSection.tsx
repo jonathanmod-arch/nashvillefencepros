@@ -7,7 +7,7 @@ type FormState = {
   name: string
   email: string
   phone: string
-  address: string
+  zip: string
   fenceType: string
   feet: string
   timeline: string
@@ -22,7 +22,7 @@ export default function LeadGenSection() {
     name: '',
     email: '',
     phone: '',
-    address: '',
+    zip: '',
     fenceType: '',
     feet: '',
     timeline: '',
@@ -178,13 +178,16 @@ export default function LeadGenSection() {
                       placeholder="(615) 555-0123"
                     />
                   </Field>
-                  <Field label="Project Address" required>
+                  <Field label="Your ZIP Code" required>
                     <input
                       required
-                      value={form.address}
-                      onChange={handle('address')}
+                      inputMode="numeric"
+                      pattern="\d{5}"
+                      maxLength={5}
+                      value={form.zip}
+                      onChange={handle('zip')}
                       className="input-base"
-                      placeholder="Street, ZIP"
+                      placeholder="e.g. 37205"
                     />
                   </Field>
                 </div>
