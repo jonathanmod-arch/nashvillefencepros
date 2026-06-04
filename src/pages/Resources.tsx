@@ -14,6 +14,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Cost: 'bg-oak-400 text-forest-500',
   Trends: 'bg-warmgray text-onyx-700',
   Repair: 'bg-[#7C2D12] text-white',
+  Hiring: 'bg-[#0F766E] text-white',
 }
 
 function ArticleBody({ sections }: { sections: ResourceSection[] }) {
