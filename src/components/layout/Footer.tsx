@@ -73,6 +73,7 @@ export default function Footer() {
               <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Pool Fence Code</Link></li>
               <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Historic Overlays</Link></li>
               <li><Link to="/resources" className="text-onyx-200 hover:text-oak-300 transition-colors">Resource Center</Link></li>
+              <li><Link to="/advertise" className="text-oak-300 hover:text-oak-400 font-semibold transition-colors">Advertise With Us →</Link></li>
             </ul>
           </div>
 
