@@ -194,6 +194,30 @@ export default function ContractorDirectory() {
             </motion.div>
           </div>
         )}
+
+        <div className="mt-12 rounded-2xl bg-forest-500 text-white p-6 md:p-8 relative overflow-hidden">
+          <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-oak-400/15 blur-3xl pointer-events-none" />
+          <div className="relative grid md:grid-cols-[1fr_auto] gap-5 items-center">
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-oak-400 mb-2">
+                Free Listing
+              </div>
+              <h3 className="font-heading font-black text-white text-xl sm:text-2xl tracking-tightest leading-tight mb-2">
+                Are you a Nashville fence pro?
+              </h3>
+              <p className="text-sm text-white/75 leading-relaxed max-w-xl">
+                Submit your business to the directory in under 5 minutes. Free listing,
+                direct lead forwarding, and a verified-pro badge for your website.
+              </p>
+            </div>
+            <Link
+              to="/submit-listing"
+              className="inline-flex items-center justify-center gap-2 bg-oak-400 hover:bg-oak-300 text-forest-500 text-sm font-semibold px-5 py-3 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Submit Your Business <Sparkles className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -554,6 +554,19 @@ export default function ContractorProfile() {
                 View on Google Maps <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </Card>
+
+            <div className="px-1 text-center">
+              <div className="text-[11px] text-onyx-700/55 mb-1">
+                Is this your business?
+              </div>
+              <Link
+                to="/submit-listing"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-forest-500 hover:text-forest-600 underline underline-offset-2"
+              >
+                Claim or update this listing
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
           </aside>
         </div>
       </section>
