@@ -6,7 +6,7 @@
  * replace them with topically-matched Pexels photos.
  */
 export const IMAGES = {
-  hero: 'https://source.unsplash.com/JLdl9Bq8eGU/1200x900',
+  hero: 'https://unsplash.com/photos/JLdl9Bq8eGU/download?w=1600&q=80',
   fenceTypes: {
     'wood-privacy': 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=1200&q=80',
     'vinyl': 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
