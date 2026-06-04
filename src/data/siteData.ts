@@ -307,7 +307,7 @@ export const RESOURCES = [
     readTime: '7 min',
     excerpt:
       'A simple cost-based rule for deciding whether to repair or replace a damaged Nashville fence — plus material-by-material repair cost ranges from Davidson and Williamson Counties.',
-    img: IMAGES.resources['fence-cost-breakdown'],
+    img: IMAGES.resources['fence-repair-vs-replace-nashville'],
     body: [
       {
         type: 'p',
@@ -413,7 +413,7 @@ export const RESOURCES = [
     readTime: '6 min',
     excerpt:
       "Step-by-step Nashville guide to documenting storm fence damage, filing your Tennessee homeowner's insurance claim, and getting same-week fence repair from a vetted local contractor.",
-    img: IMAGES.resources['fence-cost-breakdown'],
+    img: IMAGES.resources['storm-damaged-fence-nashville-insurance'],
     body: [
       {
         type: 'p',
@@ -540,7 +540,7 @@ export const RESOURCES = [
     readTime: '8 min',
     excerpt:
       'Nashville-specific vetting checklist for fence contractors — Tennessee licensing, 811 dig-safe, post depth, HOA approvals, payment terms, and the three recent installs every reputable Nashville crew should be able to show you.',
-    img: IMAGES.resources['metro-nashville-permits'],
+    img: IMAGES.resources['hire-nashville-fence-installer-questions'],
     body: [
       {
         type: 'p',

@@ -39,6 +39,9 @@ export const IMAGES = {
     'metro-nashville-permits': 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
     'fence-cost-breakdown': 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
     'horizontal-cedar-trend': 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=1200&q=80',
+    'fence-repair-vs-replace-nashville': 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    'storm-damaged-fence-nashville-insurance': 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=1200&q=80',
+    'hire-nashville-fence-installer-questions': 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
   },
   gallery: [
     'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80',
