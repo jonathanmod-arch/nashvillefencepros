@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { AlertTriangle, Ruler, Phone, ScrollText, ArrowRight } from 'lucide-react'
 
 const RULES = [
@@ -30,12 +29,7 @@ export default function PermitsSection() {
     <section className="bg-white section-padding">
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="reveal-up">
             <span className="label-eyebrow">Metro Compliance</span>
             <h2 className="mt-3 heading-section">Nashville Fence Permits & Rules</h2>
             <div className="heading-accent" />
@@ -67,14 +61,11 @@ export default function PermitsSection() {
             <Link to="/permits" className="btn-primary mt-7">
               Full Permit Guide <ArrowRight className="w-4 h-4" />
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:sticky lg:top-32"
+          <div
+            className="reveal-up lg:sticky lg:top-32"
+            style={{ animationDelay: '0.1s' }}
           >
             <div className="bg-forest-500 text-white rounded-3xl p-8 shadow-strong relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-oak-400/20 blur-3xl" />
@@ -109,7 +100,7 @@ export default function PermitsSection() {
                 and a site plan first.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

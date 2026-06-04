@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { MapPin, ArrowRight } from 'lucide-react'
 import { NEIGHBORHOODS } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
@@ -20,12 +19,10 @@ export default function NeighborhoodsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {NEIGHBORHOODS.map((n, i) => (
-            <motion.div
+            <div
               key={n.slug}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.4, delay: i * 0.03 }}
+              className="reveal-up"
+              style={{ animationDelay: `${i * 0.03}s` }}
             >
               <Link
                 to={`/neighborhoods/${n.slug}`}
@@ -74,7 +71,7 @@ export default function NeighborhoodsSection() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 

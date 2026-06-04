@@ -4,7 +4,6 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { NEIGHBORHOODS } from '../data/siteData'
 import { MapPin, ArrowRight, ArrowLeft, Check } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 export default function Neighborhoods() {
   const { slug } = useParams<{ slug: string }>()
@@ -147,12 +146,10 @@ export default function Neighborhoods() {
         <div className="container-wide">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {NEIGHBORHOODS.map((n, i) => (
-              <motion.div
+              <div
                 key={n.slug}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.4, delay: i * 0.03 }}
+                className="reveal-up"
+                style={{ animationDelay: `${i * 0.03}s` }}
               >
                 <Link
                   to={`/neighborhoods/${n.slug}`}
@@ -182,7 +179,7 @@ export default function Neighborhoods() {
                     <div className="text-xs font-bold text-forest-500">{n.avgCost}</div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

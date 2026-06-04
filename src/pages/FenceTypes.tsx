@@ -4,7 +4,6 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { FENCE_TYPES } from '../data/siteData'
 import { ArrowRight, ArrowLeft, Check, Wrench, Calendar, Ruler } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 export default function FenceTypes() {
   const { slug } = useParams<{ slug: string }>()
@@ -181,12 +180,10 @@ export default function FenceTypes() {
         <div className="container-wide">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {FENCE_TYPES.map((t, i) => (
-              <motion.div
+              <div
                 key={t.slug}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.45, delay: i * 0.04 }}
+                className="reveal-up"
+                style={{ animationDelay: `${i * 0.04}s` }}
               >
                 <Link
                   to={`/fence-types/${t.slug}`}
@@ -217,7 +214,7 @@ export default function FenceTypes() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

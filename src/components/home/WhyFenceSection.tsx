@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { Eye, Shield, Sparkles, PawPrint, Droplets, TrendingUp } from 'lucide-react'
 import { BENEFITS } from '../../data/siteData'
 
@@ -31,22 +30,17 @@ export default function WhyFenceSection() {
           {BENEFITS.map((b, i) => {
             const Icon = ICONS[b.icon] ?? Shield
             return (
-              <motion.div
+              <div
                 key={b.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group bg-white rounded-xl p-6 shadow-soft hover:shadow-medium hover:-translate-y-0.5 transition-all duration-300 border border-warmgray hover:border-forest-100"
+                className="reveal-up group bg-white rounded-xl p-6 shadow-soft hover:shadow-medium hover:-translate-y-0.5 transition-all duration-300 border border-warmgray hover:border-forest-100"
+                style={{ animationDelay: `${i * 0.05}s` }}
               >
                 <div className="w-11 h-11 rounded-lg bg-forest-50 flex items-center justify-center group-hover:bg-forest-500 transition-colors mb-4">
                   <Icon className="w-5 h-5 text-forest-500 group-hover:text-oak-300 transition-colors" />
                 </div>
-                <h3 className="heading-label !text-[17px] mb-1.5">
-                  {b.title}
-                </h3>
+                <h3 className="heading-label !text-[17px] mb-1.5">{b.title}</h3>
                 <p className="font-body text-[13.5px] text-onyx-700/70 leading-relaxed">{b.body}</p>
-              </motion.div>
+              </div>
             )
           })}
         </div>

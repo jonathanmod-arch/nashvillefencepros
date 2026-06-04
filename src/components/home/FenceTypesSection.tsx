@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { FENCE_TYPES } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
@@ -20,12 +19,10 @@ export default function FenceTypesSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {FENCE_TYPES.map((t, i) => (
-            <motion.div
+            <div
               key={t.slug}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.45, delay: i * 0.04 }}
+              className="reveal-up"
+              style={{ animationDelay: `${i * 0.04}s` }}
             >
               <Link
                 to={`/fence-types/${t.slug}`}
@@ -42,9 +39,7 @@ export default function FenceTypesSection() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="heading-card !text-[18px] mb-1.5">
-                    {t.name}
-                  </h3>
+                  <h3 className="heading-card !text-[18px] mb-1.5">{t.name}</h3>
                   <p className="font-body text-[13px] text-onyx-700/70 leading-relaxed line-clamp-3">
                     {t.description}
                   </p>
@@ -56,7 +51,7 @@ export default function FenceTypesSection() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

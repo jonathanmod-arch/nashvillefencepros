@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { Clock, ArrowRight } from 'lucide-react'
 import { RESOURCES } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
@@ -28,12 +27,10 @@ export default function ResourceCenter() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {RESOURCES.map((r, i) => (
-            <motion.div
+            <div
               key={r.slug}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.45, delay: i * 0.04 }}
+              className="reveal-up"
+              style={{ animationDelay: `${i * 0.04}s` }}
             >
               <Link
                 to={`/resources/${r.slug}`}
@@ -70,7 +67,7 @@ export default function ResourceCenter() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 

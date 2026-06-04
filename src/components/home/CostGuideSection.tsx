@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import { motion } from 'framer-motion'
 import { Calculator, Info } from 'lucide-react'
 
 const MATERIALS = [
@@ -35,13 +34,7 @@ export default function CostGuideSection() {
           </p>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white rounded-3xl shadow-medium overflow-hidden"
-        >
+        <div className="reveal-up bg-white rounded-3xl shadow-medium overflow-hidden">
           <div className="p-6 md:p-10">
             <div className="flex flex-wrap items-center gap-2 mb-6">
               <Calculator className="w-5 h-5 text-forest-500" />
@@ -164,7 +157,7 @@ export default function CostGuideSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
           {[

@@ -1,5 +1,4 @@
 import { useState, useRef, DragEvent, ChangeEvent } from 'react'
-import { motion } from 'framer-motion'
 import { Upload, CheckCircle2, X, ShieldCheck, Clock, Star } from 'lucide-react'
 import { FENCE_TYPES } from '../../data/siteData'
 
@@ -66,12 +65,7 @@ export default function LeadGenSection() {
 
       <div className="container-wide relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="reveal-up">
             <span className="block font-body text-sm font-semibold uppercase tracking-widest text-oak-400 mb-3">
               Free Estimates
             </span>
@@ -114,14 +108,11 @@ export default function LeadGenSection() {
                 when comparing 3+ Nashville contractor quotes
               </p>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white rounded-3xl shadow-strong p-6 md:p-10"
+          <div
+            className="reveal-up bg-white rounded-3xl shadow-strong p-6 md:p-10"
+            style={{ animationDelay: '0.1s' }}
           >
             {submitted ? (
               <div className="text-center py-16">
@@ -318,7 +309,7 @@ export default function LeadGenSection() {
                 </p>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
 
