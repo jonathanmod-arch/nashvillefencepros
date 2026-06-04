@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
+import SafeImage from '../components/shared/SafeImage'
 import { NEIGHBORHOODS } from '../data/siteData'
 import { MapPin, ArrowRight, ArrowLeft, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -43,7 +44,7 @@ export default function Neighborhoods() {
           <div className="container-wide grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-medium mb-8">
-                <img
+                <SafeImage
                   src={n.img}
                   alt={`Fence installation in ${n.name}`}
                   className="w-full h-full object-cover"
@@ -157,7 +158,7 @@ export default function Neighborhoods() {
                   className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-warmgray"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
-                    <img
+                    <SafeImage
                       src={n.img}
                       alt={n.name}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

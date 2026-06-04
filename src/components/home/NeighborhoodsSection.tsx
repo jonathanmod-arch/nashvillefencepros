@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MapPin, ArrowRight } from 'lucide-react'
 import { NEIGHBORHOODS } from '../../data/siteData'
+import SafeImage from '../shared/SafeImage'
 
 export default function NeighborhoodsSection() {
   return (
@@ -30,7 +31,7 @@ export default function NeighborhoodsSection() {
                 className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
-                  <img
+                  <SafeImage
                     src={n.img}
                     alt={`Fence installation in ${n.name}, Nashville`}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

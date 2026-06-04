@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Calculator, Star } from 'lucide-react'
+import SafeImage from '../shared/SafeImage'
 
 const bullets = [
   'Wood, vinyl, aluminum, chain link and custom fencing',
@@ -79,9 +80,9 @@ export default function HeroSection() {
           className="relative"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-strong aspect-[5/6] bg-warmgray">
-            <img
-              src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1400&q=80"
-              alt="Modern horizontal cedar privacy fence installation in Nashville"
+            <SafeImage
+              src="https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=1400&q=80"
+              alt="Cedar privacy fence installation in a Nashville backyard"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />

@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
+import SafeImage from '../components/shared/SafeImage'
 import { FENCE_TYPES } from '../data/siteData'
 import { ArrowRight, ArrowLeft, Check, Wrench, Calendar, Ruler } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -43,7 +44,7 @@ export default function FenceTypes() {
           <div className="container-wide grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-medium mb-8">
-                <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
+                <SafeImage src={t.img} alt={t.name} className="w-full h-full object-cover" />
               </div>
 
               <h2 className="text-3xl font-display font-bold text-forest-500 tracking-tightest mb-4">
@@ -141,7 +142,7 @@ export default function FenceTypes() {
                   className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
+                    <SafeImage
                       src={r.img}
                       alt={r.name}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -190,7 +191,7 @@ export default function FenceTypes() {
                   className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-strong transition-all duration-300 border border-warmgray hover:-translate-y-1"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden bg-warmgray">
-                    <img
+                    <SafeImage
                       src={t.img}
                       alt={`${t.name} fence in Nashville`}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

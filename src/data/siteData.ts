@@ -16,7 +16,7 @@ export const FENCE_TYPES = [
     priceHigh: 35,
     description:
       'Classic cedar and pressure-treated pine privacy fences. The most popular Nashville choice for backyards, offering warmth, full screening, and easy customization.',
-    img: 'https://images.unsplash.com/photo-1599644425057-08538b2c08c4?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=1200&q=80',
     features: ['6–8 ft height options', 'Cedar, pine, redwood', '15–25 year lifespan'],
     bestFor: 'Privacy, traditional aesthetics, dog owners',
   },
@@ -28,7 +28,7 @@ export const FENCE_TYPES = [
     priceHigh: 48,
     description:
       'Maintenance-free vinyl panels in white, tan, and woodgrain finishes. No staining, no rot, and a clean modern look that suits new-build Nashville subdivisions.',
-    img: 'https://images.unsplash.com/photo-1595407753234-0882f1e77954?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
     features: ['Zero maintenance', 'Lifetime warranties common', 'Will not rot or rust'],
     bestFor: 'Long-term value, modern subdivisions, HOA-friendly',
   },
@@ -40,7 +40,7 @@ export const FENCE_TYPES = [
     priceHigh: 62,
     description:
       'Elegant powder-coated aluminum with the look of wrought iron at a fraction of the weight. The dominant choice in Belle Meade, Forest Hills, and Brentwood estates.',
-    img: 'https://images.unsplash.com/photo-1568833312500-cd6a64fda4ef?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1200&q=80',
     features: ['Rust-proof', 'Pool-code compliant', 'Sloped-yard friendly'],
     bestFor: 'Curb appeal, pools, prestige neighborhoods',
   },
@@ -52,7 +52,7 @@ export const FENCE_TYPES = [
     priceHigh: 22,
     description:
       'Affordable, durable, and quick to install. Available in classic silver or vinyl-coated black for a more refined backyard look.',
-    img: 'https://images.unsplash.com/photo-1568374346154-6b8b75c00ab1?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1200&q=80',
     features: ['Lowest cost option', 'Black vinyl-coated upgrade', '20+ year lifespan'],
     bestFor: 'Pet containment, large lots, budget projects',
   },
@@ -64,7 +64,7 @@ export const FENCE_TYPES = [
     priceHigh: 58,
     description:
       'On-trend horizontal slat fencing in cedar or composite. The signature look for East Nashville, 12 South, and Sylvan Park modern builds.',
-    img: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=1200&q=80',
     features: ['Architectural look', 'Cedar or composite', 'Mixed wood / metal options'],
     bestFor: 'Modern homes, East Nashville, design-forward yards',
   },
@@ -276,7 +276,7 @@ export const RESOURCES = [
     readTime: '7 min',
     excerpt:
       'How Middle Tennessee humidity, freeze-thaw cycles, and HOA rules tip the scale between cedar privacy and premium vinyl.',
-    img: 'https://images.unsplash.com/photo-1599644425057-08538b2c08c4?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=1200&q=80',
   },
   {
     slug: 'best-fences-for-dogs',
@@ -285,7 +285,7 @@ export const RESOURCES = [
     readTime: '6 min',
     excerpt:
       'Climb-proof heights, dig guards, and material picks that keep golden retrievers in and coyotes out across Davidson County.',
-    img: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1200&q=80',
   },
   {
     slug: 'pool-fence-safety-tn',
@@ -294,7 +294,7 @@ export const RESOURCES = [
     readTime: '5 min',
     excerpt:
       'A homeowner-friendly walkthrough of the 2018 ISPSC barrier code, self-closing gates, and 4 ft minimum requirements.',
-    img: 'https://images.unsplash.com/photo-1568833312500-cd6a64fda4ef?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1200&q=80',
   },
   {
     slug: 'metro-nashville-permits',
@@ -303,7 +303,7 @@ export const RESOURCES = [
     readTime: '8 min',
     excerpt:
       'When you do (and do not) need a permit, height limits by yard, and how to handle historic overlay districts.',
-    img: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
   },
   {
     slug: 'fence-cost-breakdown',
@@ -312,7 +312,7 @@ export const RESOURCES = [
     readTime: '9 min',
     excerpt:
       'Line-item analysis: materials, labor, post-setting, gates, and the hidden costs that surprise first-time buyers.',
-    img: 'https://images.unsplash.com/photo-1595407753234-0882f1e77954?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
   },
   {
     slug: 'horizontal-cedar-trend',
@@ -321,7 +321,7 @@ export const RESOURCES = [
     readTime: '5 min',
     excerpt:
       'The design history behind the slat-style fence dominating East Nashville, 12 South, and Sylvan Park bungalows.',
-    img: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=1200&q=80',
   },
 ]
 
@@ -401,13 +401,13 @@ export const STATS = [
 ]
 
 export const GALLERY = [
-  { id: 1, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1599644425057-08538b2c08c4?auto=format&fit=crop&w=900&q=80' },
-  { id: 2, category: 'Aluminum', img: 'https://images.unsplash.com/photo-1568833312500-cd6a64fda4ef?auto=format&fit=crop&w=900&q=80' },
-  { id: 3, category: 'Vinyl', img: 'https://images.unsplash.com/photo-1595407753234-0882f1e77954?auto=format&fit=crop&w=900&q=80' },
-  { id: 4, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=900&q=80' },
-  { id: 5, category: 'Gates', img: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=900&q=80' },
-  { id: 6, category: 'Vinyl', img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80' },
-  { id: 7, category: 'Aluminum', img: 'https://images.unsplash.com/photo-1568374346154-6b8b75c00ab1?auto=format&fit=crop&w=900&q=80' },
-  { id: 8, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=900&q=80' },
-  { id: 9, category: 'Gates', img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80' },
+  { id: 1, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80' },
+  { id: 2, category: 'Aluminum', img: 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=900&q=80' },
+  { id: 3, category: 'Vinyl', img: 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=900&q=80' },
+  { id: 4, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1582036930868-d4e4eaf4f9f5?auto=format&fit=crop&w=900&q=80' },
+  { id: 5, category: 'Gates', img: 'https://images.unsplash.com/photo-1597100190876-3a47e4d61df3?auto=format&fit=crop&w=900&q=80' },
+  { id: 6, category: 'Vinyl', img: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=900&q=80' },
+  { id: 7, category: 'Aluminum', img: 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=900&q=80' },
+  { id: 8, category: 'Wood Privacy', img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80' },
+  { id: 9, category: 'Gates', img: 'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80' },
 ]

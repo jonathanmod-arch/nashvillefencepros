@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Clock, ArrowRight } from 'lucide-react'
 import { RESOURCES } from '../../data/siteData'
+import SafeImage from '../shared/SafeImage'
 
 const CATEGORY_COLORS: Record<string, string> = {
   Comparison: 'bg-forest-50 text-forest-500',
@@ -38,7 +39,7 @@ export default function ResourceCenter() {
                 className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 h-full"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
-                  <img
+                  <SafeImage
                     src={r.img}
                     alt={r.title}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

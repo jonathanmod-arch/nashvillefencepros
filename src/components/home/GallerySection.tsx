@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { GALLERY } from '../../data/siteData'
+import SafeImage from '../shared/SafeImage'
 
 const FILTERS = ['All', 'Wood Privacy', 'Vinyl', 'Aluminum', 'Gates']
 
@@ -54,7 +55,7 @@ export default function GallerySection() {
                     tall ? 'row-span-2 aspect-[3/5]' : 'aspect-square'
                   }`}
                 >
-                  <img
+                  <SafeImage
                     src={item.img}
                     alt={`${item.category} fence project`}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

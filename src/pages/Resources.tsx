@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
+import SafeImage from '../components/shared/SafeImage'
 import { RESOURCES } from '../data/siteData'
 import { Clock, ArrowRight, ArrowLeft } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -48,7 +49,7 @@ export default function Resources() {
           <div className="container-wide grid lg:grid-cols-3 gap-12">
             <article className="lg:col-span-2">
               <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-medium mb-8">
-                <img src={r.img} alt={r.title} className="w-full h-full object-cover" />
+                <SafeImage src={r.img} alt={r.title} className="w-full h-full object-cover" />
               </div>
               <div className="flex items-center gap-4 text-xs text-onyx-400 mb-6">
                 <span className="flex items-center gap-1">
@@ -118,7 +119,7 @@ export default function Resources() {
                           className="group flex gap-3 items-start"
                         >
                           <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
-                            <img
+                            <SafeImage
                               src={x.img}
                               alt={x.title}
                               className="w-full h-full object-cover"
@@ -170,7 +171,7 @@ export default function Resources() {
                   className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-warmgray h-full"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
-                    <img
+                    <SafeImage
                       src={r.img}
                       alt={r.title}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

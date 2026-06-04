@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { FENCE_TYPES } from '../../data/siteData'
+import SafeImage from '../shared/SafeImage'
 
 export default function FenceTypesSection() {
   return (
@@ -30,7 +31,7 @@ export default function FenceTypesSection() {
                 className="group block bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border border-warmgray hover:-translate-y-0.5"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-warmgray">
-                  <img
+                  <SafeImage
                     src={t.img}
                     alt={`${t.name} fence in Nashville`}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
