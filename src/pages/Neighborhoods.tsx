@@ -88,7 +88,7 @@ export default function Neighborhoods() {
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
                   Popular Style
                 </div>
-                <div className="text-xl font-display font-bold text-forest-500 tracking-tightest">
+                <div className="text-xl font-heading font-bold text-forest-500 tracking-tightest">
                   {n.popularStyle}
                 </div>
               </div>
@@ -96,7 +96,7 @@ export default function Neighborhoods() {
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
                   Average Project Cost
                 </div>
-                <div className="text-xl font-display font-bold text-forest-500 tracking-tightest">
+                <div className="text-xl font-heading font-bold text-forest-500 tracking-tightest">
                   {n.avgCost}
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function Neighborhoods() {
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
                   ZIP Code
                 </div>
-                <div className="text-xl font-display font-bold text-forest-500 tracking-tightest">
+                <div className="text-xl font-heading font-bold text-forest-500 tracking-tightest">
                   {n.zip}
                 </div>
               </div>

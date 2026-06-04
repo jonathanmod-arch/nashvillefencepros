@@ -28,7 +28,7 @@ function StatItem({ stat, inView }: { stat: typeof STATS[number]; inView: boolea
   const display = Math.round(value).toLocaleString()
   return (
     <div className="text-center">
-      <div className="text-[40px] md:text-[56px] font-display font-bold text-forest-500 tracking-tightest leading-none">
+      <div className="text-[40px] md:text-[56px] font-heading font-black text-forest-500 tracking-tightest leading-none">
         {display}
         <span className="text-oak-500">{stat.suffix}</span>
       </div>

@@ -52,7 +52,7 @@ export default function Permits() {
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500">
                   {r.yard}
                 </div>
-                <div className="mt-1 text-3xl font-display font-bold text-forest-500 tracking-tightest">
+                <div className="mt-1 text-3xl font-heading font-bold text-forest-500 tracking-tightest">
                   {r.max}
                 </div>
                 <p className="text-sm text-onyx-700/70 mt-2 leading-relaxed">{r.detail}</p>

@@ -83,7 +83,7 @@ export default function CostGuideSection() {
                 <label className="text-sm font-semibold text-onyx-700">
                   Linear Footage
                 </label>
-                <div className="text-2xl font-display font-bold text-forest-500 tracking-tightest">
+                <div className="text-2xl font-heading font-bold text-forest-500 tracking-tightest">
                   {feet} ft
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function CostGuideSection() {
                   <div className="text-xs font-bold uppercase tracking-[0.15em] text-oak-500 mb-1">
                     Low Estimate
                   </div>
-                  <div className="text-3xl font-display font-bold text-forest-500 tracking-tightest">
+                  <div className="text-3xl font-heading font-bold text-forest-500 tracking-tightest">
                     ${lowTotal.toLocaleString()}
                   </div>
                   <div className="text-xs text-onyx-400 mt-1">
@@ -120,7 +120,7 @@ export default function CostGuideSection() {
                   <div className="text-xs font-bold uppercase tracking-[0.15em] text-oak-500 mb-1">
                     Most Likely
                   </div>
-                  <div className="text-3xl font-display font-bold text-forest-500 tracking-tightest">
+                  <div className="text-3xl font-heading font-bold text-forest-500 tracking-tightest">
                     ${midTotal.toLocaleString()}
                   </div>
                   <div className="text-xs text-onyx-400 mt-1">
@@ -131,7 +131,7 @@ export default function CostGuideSection() {
                   <div className="text-xs font-bold uppercase tracking-[0.15em] text-oak-500 mb-1">
                     High Estimate
                   </div>
-                  <div className="text-3xl font-display font-bold text-forest-500 tracking-tightest">
+                  <div className="text-3xl font-heading font-bold text-forest-500 tracking-tightest">
                     ${highTotal.toLocaleString()}
                   </div>
                   <div className="text-xs text-onyx-400 mt-1">
@@ -177,7 +177,7 @@ export default function CostGuideSection() {
               <div className="text-xs font-bold uppercase tracking-[0.15em] text-oak-500">
                 {c.label}
               </div>
-              <div className="text-xl font-display font-bold text-forest-500 mt-1">
+              <div className="text-xl font-heading font-bold text-forest-500 mt-1">
                 {c.value}
               </div>
               <div className="text-xs text-onyx-400">{c.note}</div>

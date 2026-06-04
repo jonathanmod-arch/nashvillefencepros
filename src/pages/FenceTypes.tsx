@@ -85,7 +85,7 @@ export default function FenceTypes() {
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-300 mb-1">
                   Installed Price Range
                 </div>
-                <div className="text-3xl font-display font-bold text-white tracking-tightest">
+                <div className="text-3xl font-heading font-bold text-white tracking-tightest">
                   ${t.priceLow}–${t.priceHigh}
                 </div>
                 <div className="text-sm text-white/70 mt-1">per linear foot</div>

@@ -104,7 +104,7 @@ export default function LeadGenSection() {
             </div>
 
             <div className="mt-8 p-5 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-3xl font-display font-bold text-oak-300 tracking-tightest">
+              <div className="text-3xl font-heading font-bold text-oak-300 tracking-tightest">
                 $1,200
               </div>
               <p className="text-xs text-onyx-200 mt-1">

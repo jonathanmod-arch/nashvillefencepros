@@ -76,7 +76,7 @@ export default function GetQuotes() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {STEPS.map((s) => (
               <div key={s.n} className="bg-white rounded-2xl p-6 shadow-soft">
-                <div className="text-5xl font-display font-bold text-oak-300 tracking-tightest leading-none mb-3">
+                <div className="text-5xl font-heading font-bold text-oak-300 tracking-tightest leading-none mb-3">
                   {s.n}
                 </div>
                 <h3 className="heading-label mb-2">

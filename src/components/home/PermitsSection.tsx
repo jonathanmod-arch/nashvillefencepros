@@ -82,7 +82,7 @@ export default function PermitsSection() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-oak-400 text-forest-500 text-xs font-bold uppercase tracking-[0.15em] mb-5">
                   <AlertTriangle className="w-3.5 h-3.5" /> Call Before You Dig
                 </div>
-                <h3 className="text-2xl md:text-3xl font-display font-bold tracking-tightest mb-3">
+                <h3 className="text-2xl md:text-3xl font-heading font-bold tracking-tightest mb-3">
                   Always Call Tennessee 811
                 </h3>
                 <p className="text-white/80 leading-relaxed mb-5 text-sm">

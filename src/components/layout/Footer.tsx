@@ -14,7 +14,7 @@ export default function Footer() {
                   <path d="M3 21V7l3-3 3 3v14M9 21V7l3-3 3 3v14M15 21V7l3-3 3 3v14M2 11h20M2 17h20" />
                 </svg>
               </div>
-              <span className="font-display font-bold text-white text-base tracking-tightest">
+              <span className="font-heading font-bold text-white text-base tracking-tightest">
                 {COMPANY.name}
               </span>
             </div>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-white font-display font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
+            <h4 className="text-white font-heading font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
               Fence Types
             </h4>
             <ul className="space-y-2 text-[13px]">
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-white font-display font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
+            <h4 className="text-white font-heading font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
               Pricing & Permits
             </h4>
             <ul className="space-y-2 text-[13px]">
@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-white font-display font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
+            <h4 className="text-white font-heading font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
               Neighborhoods
             </h4>
             <ul className="grid grid-cols-2 gap-x-3 gap-y-2 text-[13px]">
@@ -101,7 +101,7 @@ export default function Footer() {
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div>
-              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+              <h5 className="text-white font-heading font-bold text-[14px] mb-3 tracking-tightest">
                 Average Fence Costs
               </h5>
               <p className="text-[13px] text-onyx-300 leading-relaxed">
@@ -109,7 +109,7 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+              <h5 className="text-white font-heading font-bold text-[14px] mb-3 tracking-tightest">
                 Nashville Permit Rules
               </h5>
               <p className="text-[13px] text-onyx-300 leading-relaxed">
@@ -117,7 +117,7 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+              <h5 className="text-white font-heading font-bold text-[14px] mb-3 tracking-tightest">
                 Height Regulations
               </h5>
               <p className="text-[13px] text-onyx-300 leading-relaxed">
@@ -125,7 +125,7 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <h5 className="text-white font-display font-bold text-[14px] mb-3 tracking-tightest">
+              <h5 className="text-white font-heading font-bold text-[14px] mb-3 tracking-tightest">
                 Before You Install
               </h5>
               <p className="text-[13px] text-onyx-300 leading-relaxed">

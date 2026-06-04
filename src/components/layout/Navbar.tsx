@@ -57,13 +57,13 @@ export default function Navbar() {
         <div className="container-wide flex items-center justify-between h-[72px]">
           <Link to="/" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 rounded-md bg-forest-500 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
-              <span className="text-white font-display font-bold text-[14px] tracking-tighter">NF</span>
+              <span className="text-white font-heading font-bold text-[14px] tracking-tighter">NF</span>
             </div>
             <div className="flex flex-col leading-none">
-              <span className="font-display font-bold text-onyx-700 text-[15px] tracking-tightest">
+              <span className="font-heading font-bold text-onyx-700 text-[15px] tracking-tightest">
                 Nashville
               </span>
-              <span className="font-display font-bold text-onyx-700 text-[15px] tracking-tightest">
+              <span className="font-heading font-bold text-onyx-700 text-[15px] tracking-tightest">
                 FencePros
               </span>
             </div>

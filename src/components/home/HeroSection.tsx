@@ -30,7 +30,7 @@ export default function HeroSection() {
             Nashville's Most Trusted Fence Resource
           </span>
 
-          <h1 className="mt-6 text-[44px] sm:text-[60px] lg:text-[76px] font-display font-bold tracking-tightest leading-[0.95]">
+          <h1 className="mt-6 text-[44px] sm:text-[60px] lg:text-[76px] font-heading font-black tracking-tightest leading-[0.95]">
             <span className="text-onyx-700">Nashville Fence</span>
             <br />
             <span className="text-forest-500">Installation</span>
@@ -40,7 +40,7 @@ export default function HeroSection() {
 
           <div className="mt-5 h-[3px] w-16 bg-oak-400 rounded-full" />
 
-          <p className="mt-6 text-[16px] md:text-[18px] text-onyx-500 leading-relaxed max-w-lg">
+          <p className="mt-6 font-body font-normal text-[16px] md:text-[18px] text-onyx-700/70 leading-relaxed max-w-lg">
             Compare fence options, understand local regulations, estimate costs, and connect
             with trusted Nashville fence professionals.
           </p>
@@ -98,7 +98,7 @@ export default function HeroSection() {
             <div className="text-[11px] font-semibold text-onyx-400 mb-1">
               Average Project Cost
             </div>
-            <div className="text-[38px] font-display font-bold text-forest-500 tracking-tightest leading-none">
+            <div className="text-[38px] font-heading font-black text-forest-500 tracking-tightest leading-none">
               $4,800
             </div>
             <div className="text-[12px] text-onyx-500 mt-1.5">
