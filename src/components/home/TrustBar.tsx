@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { Star } from 'lucide-react'
 import { STATS } from '../../data/siteData'
 
 function useCountUp(target: number, durationMs = 1400, start = false) {
@@ -23,16 +24,19 @@ function useCountUp(target: number, durationMs = 1400, start = false) {
   return value
 }
 
-function StatItem({ stat, inView }: { stat: typeof STATS[number]; inView: boolean }) {
+type Stat = (typeof STATS)[number] & { prefix?: string }
+
+function StatItem({ stat, inView }: { stat: Stat; inView: boolean }) {
   const value = useCountUp(stat.value, 1500, inView)
   const display = Math.round(value).toLocaleString()
   return (
     <div className="text-center">
-      <div className="text-[40px] md:text-[56px] font-heading font-black text-forest-500 tracking-tightest leading-none">
+      <div className="font-heading font-black text-forest-500 tracking-tightest leading-none text-[48px] sm:text-[60px] lg:text-[72px]">
+        {stat.prefix}
         {display}
-        <span className="text-oak-500">{stat.suffix}</span>
+        {stat.suffix}
       </div>
-      <div className="mt-2 text-[11px] md:text-[12px] uppercase font-semibold tracking-[0.18em] text-onyx-400">
+      <div className="mt-3 font-body text-onyx-700/70 text-[14px] sm:text-[15px] leading-snug max-w-[200px] mx-auto">
         {stat.label}
       </div>
     </div>
@@ -41,18 +45,34 @@ function StatItem({ stat, inView }: { stat: typeof STATS[number]; inView: boolea
 
 export default function TrustBar() {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, amount: 0.4 })
+  const inView = useInView(ref, { once: true, amount: 0.3 })
   return (
     <section className="bg-white border-y border-warmgray">
-      <div ref={ref} className="container-wide py-10 md:py-12">
+      <div ref={ref} className="container-wide py-12 md:py-16">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          transition={{ duration: 0.4 }}
+          className="flex items-center justify-center gap-2 mb-8 md:mb-12"
+        >
+          <div className="flex items-center gap-0.5">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star key={i} className="w-5 h-5 fill-oak-400 text-oak-400" />
+            ))}
+          </div>
+          <span className="font-body text-onyx-700 text-[15px] sm:text-[16px] ml-1">
+            Rated <span className="font-semibold">4.9/5</span> by Nashville homeowners
+          </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6"
         >
           {STATS.map((s) => (
-            <StatItem key={s.label} stat={s} inView={inView} />
+            <StatItem key={s.label} stat={s as Stat} inView={inView} />
           ))}
         </motion.div>
       </div>
