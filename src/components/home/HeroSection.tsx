@@ -1,66 +1,74 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Check, ArrowRight, Calculator, Star } from 'lucide-react'
+import { ArrowRight, Calculator, Star } from 'lucide-react'
 
-const trustPoints = [
-  'Local vetted pros — licensed, insured, background-checked',
-  'Detailed line-item quotes from up to 3 contractors',
-  'Metro permit & HOA compliance built into every match',
+const bullets = [
+  'Wood, vinyl, aluminum, chain link and custom fencing',
+  'Residential and commercial projects',
+  'Nashville permit and HOA guidance',
+  'Fast local fence estimates',
 ]
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-warmgray">
+    <section className="relative overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-forest-50 opacity-50 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-oak-50 opacity-40 blur-3xl" />
+        <div className="absolute top-0 right-0 w-[60%] h-full bg-warmgray/50" />
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-forest-50/40 blur-3xl" />
       </div>
 
-      <div className="container-wide relative pt-14 pb-12 md:pt-20 md:pb-16 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
+      <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="label-eyebrow">Nashville · Davidson · Williamson · Sumner</span>
-          <h1 className="mt-4 text-[40px] sm:text-[52px] lg:text-[64px] font-display font-bold tracking-tightest text-forest-500 leading-[0.98] text-balance">
-            Nashville Fence<br />Installation Done Right
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-50 text-forest-500 text-[12px] font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-forest-500" />
+            Nashville's Most Trusted Fence Resource
+          </span>
+
+          <h1 className="mt-6 text-[44px] sm:text-[60px] lg:text-[76px] font-display font-bold tracking-tightest leading-[0.95]">
+            <span className="text-onyx-700">Nashville Fence</span>
+            <br />
+            <span className="text-forest-500">Installation</span>
+            <br />
+            <span className="text-onyx-700">Done Right</span>
           </h1>
-          <p className="mt-5 text-body-lead max-w-xl">
-            Compare quotes from Nashville's top-rated fence contractors, calculate your install
-            cost in real time, and navigate Metro permits — all in one place.
+
+          <div className="mt-5 h-[3px] w-16 bg-oak-400 rounded-full" />
+
+          <p className="mt-6 text-[16px] md:text-[18px] text-onyx-500 leading-relaxed max-w-lg">
+            Compare fence options, understand local regulations, estimate costs, and connect
+            with trusted Nashville fence professionals.
           </p>
 
-          <ul className="mt-6 space-y-2.5">
-            {trustPoints.map((p) => (
-              <li key={p} className="flex items-start gap-2.5 text-[14px] md:text-[15px] text-onyx-700">
-                <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-forest-500 text-white flex items-center justify-center">
-                  <Check className="w-3 h-3" strokeWidth={3} />
-                </span>
-                {p}
+          <ul className="mt-7 space-y-3">
+            {bullets.map((b) => (
+              <li key={b} className="flex items-start gap-3 text-[14.5px] md:text-[15px] text-onyx-700">
+                <span className="mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-oak-400" />
+                {b}
               </li>
             ))}
           </ul>
 
-          <div className="mt-7 flex flex-col sm:flex-row gap-2.5">
-            <Link to="/get-quotes" className="btn-primary">
-              Get Free Quotes <ArrowRight className="w-4 h-4" />
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <Link to="/get-quotes" className="btn-primary !px-6 !py-3.5">
+              Get Fence Quotes <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link to="/cost-guide" className="btn-secondary">
-              <Calculator className="w-4 h-4" /> Cost Calculator
+            <Link to="/cost-guide" className="btn-secondary !px-6 !py-3.5">
+              <Calculator className="w-4 h-4" /> Fence Cost Calculator
             </Link>
           </div>
 
-          <div className="mt-8 flex items-center gap-5 text-[13px]">
-            <div className="flex items-center gap-1.5">
-              <div className="flex">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-oak-400 text-oak-400" />
-                ))}
-              </div>
-              <span className="font-semibold text-onyx-700">4.9 / 5</span>
-              <span className="text-onyx-400">(1,386 reviews)</span>
+          <div className="mt-7 flex items-center gap-2.5 text-[13.5px]">
+            <div className="flex">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <Star key={i} className="w-4 h-4 fill-oak-400 text-oak-400" />
+              ))}
             </div>
+            <span className="font-semibold text-onyx-700">4.9/5</span>
+            <span className="text-onyx-400">from 380+ Nashville homeowners</span>
           </div>
         </motion.div>
 
@@ -70,29 +78,29 @@ export default function HeroSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="relative"
         >
-          <div className="relative rounded-2xl overflow-hidden shadow-strong aspect-[5/6]">
+          <div className="relative rounded-2xl overflow-hidden shadow-strong aspect-[5/6] bg-warmgray">
             <img
-              src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80"
-              alt="Modern horizontal cedar fence installation in Nashville"
+              src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1400&q=80"
+              alt="Modern horizontal cedar privacy fence installation in Nashville"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/25 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />
           </div>
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="absolute -bottom-4 -right-2 sm:-right-6 bg-white rounded-xl shadow-strong px-5 py-4 max-w-[200px]"
+            className="absolute -bottom-5 left-4 sm:left-8 bg-white rounded-2xl shadow-strong px-6 py-5 max-w-[260px]"
           >
-            <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-oak-500">
-              Avg. Install Cost
+            <div className="text-[11px] font-semibold text-onyx-400 mb-1">
+              Average Project Cost
             </div>
-            <div className="text-[34px] font-display font-bold text-forest-500 tracking-tightest leading-none mt-1">
-              $6,000
+            <div className="text-[38px] font-display font-bold text-forest-500 tracking-tightest leading-none">
+              $4,800
             </div>
-            <div className="text-[11px] text-onyx-400 mt-1.5 leading-snug">
-              150–200 linear ft · standard residential
+            <div className="text-[12px] text-onyx-500 mt-1.5">
+              for 150 linear ft in Nashville
             </div>
           </motion.div>
         </motion.div>

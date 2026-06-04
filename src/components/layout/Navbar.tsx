@@ -5,11 +5,12 @@ import { Phone, Menu, X, ChevronDown } from 'lucide-react'
 import { COMPANY, FENCE_TYPES } from '../../data/siteData'
 
 const NAV_LINKS = [
-  { to: '/cost-guide', label: 'Cost Guide' },
+  { to: '/cost-guide', label: 'Costs & Pricing' },
   { to: '/permits', label: 'Permits & Rules' },
   { to: '/neighborhoods', label: 'Neighborhoods' },
   { to: '/contractors', label: 'Find a Pro' },
   { to: '/resources', label: 'Resources' },
+  { to: '/cost-guide', label: 'Cost Calculator' },
 ]
 
 export default function Navbar() {
@@ -32,8 +33,8 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="bg-forest-500 text-white text-xs">
-        <div className="container-wide flex items-center justify-between py-2">
+      <div className="bg-forest-500 text-white text-[12px]">
+        <div className="container-wide flex items-center justify-between py-2.5">
           <p className="hidden sm:block tracking-wide">
             Nashville's #1 Fence Resource & Contractor Referral Platform
           </p>
@@ -41,7 +42,7 @@ export default function Navbar() {
             href={`tel:${COMPANY.phoneRaw}`}
             className="flex items-center gap-1.5 font-semibold hover:text-oak-300 transition-colors"
           >
-            <Phone className="w-3.5 h-3.5" /> Call {COMPANY.phone}
+            <Phone className="w-3.5 h-3.5" /> {COMPANY.phone}
           </a>
         </div>
       </div>
@@ -49,23 +50,21 @@ export default function Navbar() {
       <div
         className={`transition-all duration-300 ${
           scrolled
-            ? 'bg-white/90 backdrop-blur-md shadow-soft'
+            ? 'bg-white/95 backdrop-blur-md shadow-soft'
             : 'bg-white'
         }`}
       >
-        <div className="container-wide flex items-center justify-between h-20">
+        <div className="container-wide flex items-center justify-between h-[72px]">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-lg bg-forest-500 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
-              <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5 text-oak-300" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                <path d="M3 21V7l3-3 3 3v14M9 21V7l3-3 3 3v14M15 21V7l3-3 3 3v14M2 11h20M2 17h20" />
-              </svg>
+            <div className="w-10 h-10 rounded-md bg-forest-500 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
+              <span className="text-white font-display font-bold text-[14px] tracking-tighter">NF</span>
             </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-display font-bold text-forest-500 text-lg tracking-tightest">
-                Nashville Fence Pros
+            <div className="flex flex-col leading-none">
+              <span className="font-display font-bold text-onyx-700 text-[15px] tracking-tightest">
+                Nashville
               </span>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-oak-500">
-                Trusted Local Resource
+              <span className="font-display font-bold text-onyx-700 text-[15px] tracking-tightest">
+                FencePros
               </span>
             </div>
           </Link>
@@ -76,7 +75,7 @@ export default function Navbar() {
               onMouseEnter={() => setTypesOpen(true)}
               onMouseLeave={() => setTypesOpen(false)}
             >
-              <button className="flex items-center gap-1 px-3.5 py-2 text-sm font-semibold text-onyx-700 hover:text-forest-500 transition-colors">
+              <button className="flex items-center gap-1 px-3 py-2 text-[14px] font-medium text-onyx-700 hover:text-forest-500 transition-colors">
                 Fence Types <ChevronDown className="w-3.5 h-3.5" />
               </button>
               <AnimatePresence>
@@ -96,14 +95,14 @@ export default function Navbar() {
                           className="flex items-center justify-between px-3 py-2.5 rounded-md hover:bg-warmgray group"
                         >
                           <div>
-                            <div className="text-sm font-semibold text-onyx-700 group-hover:text-forest-500">
+                            <div className="text-[13px] font-semibold text-onyx-700 group-hover:text-forest-500">
                               {t.name}
                             </div>
-                            <div className="text-xs text-onyx-400">
+                            <div className="text-[11px] text-onyx-400">
                               ${t.priceLow}–${t.priceHigh}/linear ft
                             </div>
                           </div>
-                          <ChevronDown className="w-4 h-4 -rotate-90 text-onyx-300 group-hover:text-forest-500" />
+                          <ChevronDown className="w-3.5 h-3.5 -rotate-90 text-onyx-300 group-hover:text-forest-500" />
                         </Link>
                       ))}
                     </div>
@@ -114,10 +113,10 @@ export default function Navbar() {
 
             {NAV_LINKS.map((l) => (
               <NavLink
-                key={l.to}
+                key={l.label}
                 to={l.to}
                 className={({ isActive }) =>
-                  `px-3.5 py-2 text-sm font-semibold transition-colors ${
+                  `px-3 py-2 text-[14px] font-medium transition-colors ${
                     isActive ? 'text-forest-500' : 'text-onyx-700 hover:text-forest-500'
                   }`
                 }
@@ -128,8 +127,8 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Link to="/get-quotes" className="btn-primary !py-2.5 !px-5">
-              Get Free Quotes
+            <Link to="/get-quotes" className="btn-primary !py-2.5 !px-5 !text-[13px]">
+              Get Fence Quotes
             </Link>
           </div>
 
@@ -154,14 +153,14 @@ export default function Navbar() {
           >
             <div className="container-wide py-4 flex flex-col gap-1">
               <div className="py-2">
-                <div className="text-xs uppercase font-bold tracking-[0.18em] text-oak-500 mb-2">
+                <div className="text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-2">
                   Fence Types
                 </div>
                 {FENCE_TYPES.map((t) => (
                   <Link
                     key={t.slug}
                     to={`/fence-types/${t.slug}`}
-                    className="block py-2 text-sm font-semibold text-onyx-700"
+                    className="block py-2 text-[14px] font-medium text-onyx-700"
                   >
                     {t.name}
                   </Link>
@@ -170,16 +169,16 @@ export default function Navbar() {
               <div className="border-t border-warmgray pt-2">
                 {NAV_LINKS.map((l) => (
                   <NavLink
-                    key={l.to}
+                    key={l.label}
                     to={l.to}
-                    className="block py-2.5 text-sm font-semibold text-onyx-700"
+                    className="block py-2.5 text-[14px] font-medium text-onyx-700"
                   >
                     {l.label}
                   </NavLink>
                 ))}
               </div>
               <Link to="/get-quotes" className="btn-primary mt-3">
-                Get Free Quotes
+                Get Fence Quotes
               </Link>
             </div>
           </motion.div>
