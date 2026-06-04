@@ -8,6 +8,7 @@ import {
   Search,
   HelpCircle,
   Sparkles,
+  ExternalLink,
 } from 'lucide-react'
 import {
   CONTRACTORS,
@@ -295,22 +296,43 @@ function ContractorCard({
         {c.description}
       </p>
 
-      <div className="flex items-center gap-2 mb-4">
-        <div className="flex">
-          {[0, 1, 2, 3, 4].map((i) => (
-            <Star
-              key={i}
-              className={`w-4 h-4 ${
-                i < Math.round(c.rating)
-                  ? 'fill-oak-400 text-oak-400'
-                  : 'text-onyx-200'
-              }`}
-            />
-          ))}
+      {c.source === 'google-maps' && c.googleMapsUrl ? (
+        <a
+          href={c.googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 mb-4 text-xs font-semibold text-blue-700 hover:text-blue-800"
+        >
+          <span
+            className="inline-flex items-center justify-center w-4 h-4 rounded text-white text-[8px] font-bold"
+            style={{
+              background:
+                'conic-gradient(from 0deg, #4285F4, #34A853, #FBBC05, #EA4335, #4285F4)',
+            }}
+          >
+            G
+          </span>
+          Live ratings on Google
+          <ExternalLink className="w-3 h-3" />
+        </a>
+      ) : (
+        <div className="flex items-center gap-2 mb-4">
+          <div className="flex">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <Star
+                key={i}
+                className={`w-4 h-4 ${
+                  i < Math.round(c.rating)
+                    ? 'fill-oak-400 text-oak-400'
+                    : 'text-onyx-200'
+                }`}
+              />
+            ))}
+          </div>
+          <span className="text-sm font-bold text-onyx-700">{c.rating}</span>
+          <span className="text-xs text-onyx-700/60">({c.reviews} reviews)</span>
         </div>
-        <span className="text-sm font-bold text-onyx-700">{c.rating}</span>
-        <span className="text-xs text-onyx-700/60">({c.reviews} reviews)</span>
-      </div>
+      )}
 
       <div className="mb-4 pt-4 border-t border-[#E2E8F0]">
         <div className="text-[10px] font-bold uppercase tracking-wider text-onyx-700/50 mb-1.5 flex items-center gap-1">

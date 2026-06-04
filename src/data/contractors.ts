@@ -23,6 +23,10 @@ export type Contractor = {
   address: string
   responseTime: string
   countiesServed: string
+  googleMapsUrl?: string
+  placeId?: string
+  coordinates?: [number, number]
+  source?: 'directory' | 'google-maps'
 }
 
 export const AREAS = [
@@ -60,6 +64,8 @@ export const BADGE_COLORS: Record<string, string> = {
     'bg-[#1A1D1E]/10 text-[#1A1D1E] border border-[#1A1D1E]/20',
   'Commercial Specialist':
     'bg-blue-50 text-blue-800 border border-blue-200',
+  'Listed on Google':
+    'bg-blue-50 text-blue-700 border border-blue-200',
 }
 
 export const categoryLabel = (id: string) =>
@@ -368,6 +374,32 @@ export const CONTRACTORS: Contractor[] = [
     address: '88 Bridge Ave, Nashville, TN 37206',
     responseTime: 'Within 24 hrs',
     countiesServed: 'Davidson, Williamson, and Sumner',
+  },
+  {
+    slug: 'east-tennessee-fence-co',
+    name: 'East Tennessee Fence Co',
+    category: 'fencing',
+    projectType: 'residential',
+    description:
+      'Local fence contractor serving the Knoxville and East Tennessee region. Listed on Google Maps under the fence contractor category — current ratings, reviews, hours, and contact details are maintained on the live Google listing.',
+    areas: ['Knoxville', 'East Tennessee'],
+    specialties: ['Wood Fence', 'Chain Link', 'Residential Installation'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Listed on Google',
+    license: 'Public Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: 'Knoxville, TN',
+    responseTime: '',
+    countiesServed: 'Knox and surrounding East Tennessee',
+    googleMapsUrl:
+      'https://www.google.com/maps/place/East+Tennessee+Fence+Co/@35.845548,-83.894237,15z/data=!4m6!3m5!1s0x885c1f2b6fa4ac71:0x532f5f526c40be32!8m2!3d35.845548!4d-83.894237!16s%2Fg%2F1vpfk7s9',
+    placeId: '0x885c1f2b6fa4ac71:0x532f5f526c40be32',
+    coordinates: [35.845548, -83.894237],
+    source: 'google-maps',
   },
 ]
 
