@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Star,
   MapPin,
@@ -168,16 +167,11 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
                 </span>
               </div>
             )}
-            <motion.div
-              layout
-              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              <AnimatePresence mode="popLayout">
-                {(preview ? featured.slice(0, 3) : featured).map((c) => (
-                  <ContractorCard key={c.slug} c={c} featured />
-                ))}
-              </AnimatePresence>
-            </motion.div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {(preview ? featured.slice(0, 3) : featured).map((c) => (
+                <ContractorCard key={c.slug} c={c} featured />
+              ))}
+            </div>
             {preview && (
               <div className="mt-10 text-center">
                 <Link
@@ -200,16 +194,11 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
                 <h3 className="heading-card mt-1">All Nashville pros</h3>
               </div>
             )}
-            <motion.div
-              layout
-              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              <AnimatePresence mode="popLayout">
-                {rest.map((c) => (
-                  <ContractorCard key={c.slug} c={c} />
-                ))}
-              </AnimatePresence>
-            </motion.div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {rest.map((c) => (
+                <ContractorCard key={c.slug} c={c} />
+              ))}
+            </div>
           </div>
         )}
 
@@ -302,13 +291,8 @@ function ContractorCard({
   featured?: boolean
 }) {
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.97 }}
-      transition={{ duration: 0.3 }}
-      className={`bg-white rounded-2xl border p-6 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col ${
+    <div
+      className={`reveal-up bg-white rounded-2xl border p-6 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col ${
         featured ? 'border-oak-200 ring-1 ring-oak-100' : 'border-[#E2E8F0]'
       }`}
     >
@@ -410,6 +394,6 @@ function ContractorCard({
           Request Quote
         </Link>
       </div>
-    </motion.div>
+    </div>
   )
 }

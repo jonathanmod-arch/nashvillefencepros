@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
 import { FAQS } from '../../data/siteData'
 
@@ -29,6 +28,7 @@ export default function FAQSection() {
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-start justify-between gap-4 py-5 text-left group"
+                  aria-expanded={isOpen}
                 >
                   <span className="heading-label !text-base md:!text-lg pr-2">
                     {f.q}
@@ -41,21 +41,20 @@ export default function FAQSection() {
                     )}
                   </span>
                 </button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
-                      className="overflow-hidden"
-                    >
-                      <p className="text-sm md:text-base text-onyx-700/70 leading-relaxed pb-5 pr-12">
-                        {f.a}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <div
+                  className={`grid overflow-hidden transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                    isOpen
+                      ? 'grid-rows-[1fr] opacity-100'
+                      : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                  aria-hidden={!isOpen}
+                >
+                  <div className="overflow-hidden">
+                    <p className="text-sm md:text-base text-onyx-700/70 leading-relaxed pb-5 pr-12">
+                      {f.a}
+                    </p>
+                  </div>
+                </div>
               </div>
             )
           })}

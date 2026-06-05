@@ -1,7 +1,31 @@
-import { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useEffect, useRef, useState, RefObject } from 'react'
 import { Star } from 'lucide-react'
 import { STATS } from '../../data/siteData'
+
+function useInViewOnce(ref: RefObject<HTMLElement>, threshold = 0.3): boolean {
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    if (inView) return
+    const el = ref.current
+    if (!el) return
+    if (typeof IntersectionObserver === 'undefined') {
+      setInView(true)
+      return
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setInView(true)
+          observer.disconnect()
+        }
+      },
+      { threshold },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [ref, threshold, inView])
+  return inView
+}
 
 function useCountUp(target: number, durationMs = 1400, start = false) {
   const [value, setValue] = useState(0)
@@ -45,15 +69,14 @@ function StatItem({ stat, inView }: { stat: Stat; inView: boolean }) {
 
 export default function TrustBar() {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, amount: 0.3 })
+  const inView = useInViewOnce(ref, 0.3)
   return (
     <section className="bg-white border-y border-warmgray">
       <div ref={ref} className="container-wide py-12 md:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.4 }}
-          className="flex items-center justify-center gap-3 mb-10 md:mb-14"
+        <div
+          className={`flex items-center justify-center gap-3 mb-10 md:mb-14 ${
+            inView ? 'reveal-up' : 'opacity-0'
+          }`}
         >
           <div className="flex items-center gap-0.5">
             {[0, 1, 2, 3, 4].map((i) => (
@@ -63,18 +86,18 @@ export default function TrustBar() {
           <span className="font-body text-onyx-700 text-[15px] md:text-[16px]">
             Rated 4.9/5 by Nashville homeowners
           </span>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6"
+        <div
+          className={`grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 ${
+            inView ? 'reveal-up' : 'opacity-0'
+          }`}
+          style={inView ? { animationDelay: '0.1s' } : undefined}
         >
           {STATS.map((s) => (
             <StatItem key={s.label} stat={s as Stat} inView={inView} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )
