@@ -150,7 +150,7 @@ export default function CommercialFencing() {
                     contractors who fit the scope and timeline.
                   </p>
                   <Link
-                    to="/get-quotes"
+                    to="/get-quotes#quote-form"
                     className="block text-center bg-oak-400 hover:bg-oak-300 text-forest-500 font-semibold text-sm px-5 py-3 rounded-lg transition-colors"
                   >
                     Get Commercial Quotes

@@ -55,7 +55,7 @@ export default function HeroSection() {
           </ul>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <Link to="/get-quotes" className="btn-primary">
+            <Link to="/get-quotes#quote-form" className="btn-primary">
               Get Fence Quotes <ArrowRight className="w-4 h-4" />
             </Link>
             <Link to="/cost-guide" className="btn-secondary">

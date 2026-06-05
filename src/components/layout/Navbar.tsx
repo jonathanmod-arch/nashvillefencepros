@@ -138,7 +138,7 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              to="/get-quotes"
+              to="/get-quotes#quote-form"
               className="bg-forest-500 hover:bg-forest-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
             >
               Get Fence Quotes
@@ -192,7 +192,7 @@ export default function Navbar() {
                 ))}
               </div>
               <Link
-                to="/get-quotes"
+                to="/get-quotes#quote-form"
                 className="bg-forest-500 hover:bg-forest-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors text-center mt-3"
               >
                 Get Fence Quotes

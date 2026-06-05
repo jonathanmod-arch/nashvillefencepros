@@ -261,7 +261,7 @@ export default function Resources() {
                       Compare quotes from up to 3 vetted Nashville fence pros — free, no
                       pressure.
                     </p>
-                    <Link to="/get-quotes" className="btn-primary mt-4 !py-2.5">
+                    <Link to="/get-quotes#quote-form" className="btn-primary mt-4 !py-2.5">
                       Get Free Quotes <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>

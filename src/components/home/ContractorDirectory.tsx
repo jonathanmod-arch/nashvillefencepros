@@ -404,7 +404,7 @@ function ContractorCard({
           View Profile
         </Link>
         <Link
-          to="/get-quotes"
+          to="/get-quotes#quote-form"
           className="block text-center bg-[#1B4332] text-white py-2.5 rounded-xl text-sm font-semibold hover:bg-[#1B4332]/90 transition-colors"
         >
           Request Quote

@@ -90,7 +90,7 @@ export default function Footer() {
             <ul className="space-y-2 text-[13px]">
               <li><Link to="/about" className="text-onyx-200 hover:text-oak-300 transition-colors">About</Link></li>
               <li><Link to="/resources" className="text-onyx-200 hover:text-oak-300 transition-colors">Resource Center</Link></li>
-              <li><Link to="/get-quotes" className="text-onyx-200 hover:text-oak-300 transition-colors">Request a Quote</Link></li>
+              <li><Link to="/get-quotes#quote-form" className="text-onyx-200 hover:text-oak-300 transition-colors">Request a Quote</Link></li>
               <li><Link to="/submit-listing" className="text-onyx-200 hover:text-oak-300 transition-colors">Submit Your Business</Link></li>
               <li><Link to="/advertise" className="text-oak-300 hover:text-oak-400 font-semibold transition-colors">Advertise With Us →</Link></li>
             </ul>

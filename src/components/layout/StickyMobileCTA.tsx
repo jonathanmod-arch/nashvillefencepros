@@ -33,7 +33,7 @@ export default function StickyMobileCTA() {
           <Phone className="w-4 h-4" /> Call
         </a>
         <Link
-          to="/get-quotes"
+          to="/get-quotes#quote-form"
           className="flex-1 inline-flex items-center justify-center gap-2 h-12 rounded-lg bg-forest-500 text-white font-semibold text-sm transition-colors active:bg-forest-600"
           aria-label="Get a free fence quote"
           tabIndex={visible ? 0 : -1}

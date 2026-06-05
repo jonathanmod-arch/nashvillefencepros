@@ -226,7 +226,7 @@ export default function Repair() {
                 </p>
               </div>
               <Link
-                to="/get-quotes"
+                to="/get-quotes#quote-form"
                 className="inline-flex items-center justify-center gap-2 bg-oak-400 hover:bg-oak-300 text-forest-500 text-sm font-semibold px-5 py-3 rounded-lg transition-colors whitespace-nowrap"
               >
                 Get Repair Quotes <ArrowRight className="w-4 h-4" />

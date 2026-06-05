@@ -179,7 +179,7 @@ export default function FenceTypes() {
               </h3>
               <p className="text-body-lead mb-8">{t.bestFor}.</p>
 
-              <Link to="/get-quotes" className="btn-primary">
+              <Link to="/get-quotes#quote-form" className="btn-primary">
                 Get {t.name} Quotes <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

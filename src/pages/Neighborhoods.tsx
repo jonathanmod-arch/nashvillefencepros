@@ -131,7 +131,7 @@ export default function Neighborhoods() {
                 ))}
               </div>
 
-              <Link to="/get-quotes" className="btn-primary">
+              <Link to="/get-quotes#quote-form" className="btn-primary">
                 Get {n.name} Quotes <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

@@ -133,7 +133,8 @@ export default function LeadGenSection() {
           </div>
 
           <div
-            className="reveal-up bg-white rounded-3xl shadow-strong p-6 md:p-10"
+            id="quote-form"
+            className="reveal-up bg-white rounded-3xl shadow-strong p-6 md:p-10 scroll-mt-24"
             style={{ animationDelay: '0.1s' }}
           >
             {submitted ? (

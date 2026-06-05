@@ -184,7 +184,7 @@ export default function ContractorProfile() {
 
             <div className="flex flex-col gap-2 lg:items-end">
               <Link
-                to="/get-quotes"
+                to="/get-quotes#quote-form"
                 className="w-full lg:w-auto inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 text-white text-sm font-semibold px-5 py-3 rounded-lg transition-colors"
               >
                 Request a Quote <ArrowRight className="w-4 h-4" />
@@ -318,7 +318,7 @@ export default function ContractorProfile() {
                 ))}
               </div>
               <Link
-                to="/get-quotes"
+                to="/get-quotes#quote-form"
                 className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-forest-500 hover:text-forest-600"
               >
                 Get a free personalized estimate <ArrowRight className="w-3.5 h-3.5" />
@@ -554,7 +554,7 @@ export default function ContractorProfile() {
                   contractors.
                 </p>
                 <Link
-                  to="/get-quotes"
+                  to="/get-quotes#quote-form"
                   className="block text-center bg-oak-400 hover:bg-oak-500 text-forest-500 font-semibold text-sm px-5 py-3 rounded-lg transition-colors"
                 >
                   Get Free Estimates
