@@ -9,6 +9,7 @@ import ContractorDirectory from '../components/home/ContractorDirectory'
 import FAQSection from '../components/home/FAQSection'
 import ResourceCenter from '../components/home/ResourceCenter'
 import LeadGenSection from '../components/home/LeadGenSection'
+import LazyMount from '../components/shared/LazyMount'
 import { FAQS } from '../data/siteData'
 import { CONTRACTORS } from '../data/contractors'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
@@ -52,10 +53,18 @@ export default function Home() {
       <CostGuideSection />
       <PermitsSection />
       <NeighborhoodsSection />
-      <ContractorDirectory preview />
-      <FAQSection />
-      <ResourceCenter />
-      <LeadGenSection />
+      <LazyMount>
+        <ContractorDirectory preview />
+      </LazyMount>
+      <LazyMount>
+        <FAQSection />
+      </LazyMount>
+      <LazyMount>
+        <ResourceCenter />
+      </LazyMount>
+      <LazyMount>
+        <LeadGenSection />
+      </LazyMount>
     </>
   )
 }
