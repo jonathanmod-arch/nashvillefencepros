@@ -1,4 +1,5 @@
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import PermitsSection from '../components/home/PermitsSection'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { Phone, AlertTriangle, MapPin, FileText, Ruler, Droplets } from 'lucide-react'
@@ -57,6 +58,7 @@ export default function Permits() {
         title="Nashville Fence Permits, Rules & Regulations"
         description="Everything Davidson and Williamson County homeowners need before fence installation in Nashville TN — heights, permits, HOA approvals, dig-safe 811, and historic overlays."
         crumbs={[{ label: 'Permits & Rules' }]}
+        right={<CallbackForm />}
       />
 
       <PermitsSection />
