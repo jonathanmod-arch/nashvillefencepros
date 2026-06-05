@@ -34,12 +34,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50">
       <div className="bg-forest-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs font-body">
-          <p className="hidden sm:block">
-            Nashville's #1 Fence Resource & Contractor Referral Platform
+          <p className="font-semibold">
+            Hire the best fence installers in Nashville
           </p>
           <a
             href={`tel:${COMPANY.phoneRaw}`}
-            className="flex items-center gap-1 font-semibold hover:text-oak-400 transition-colors"
+            className="hidden sm:flex items-center gap-1 font-semibold hover:text-oak-400 transition-colors"
           >
             <Phone className="w-3 h-3" /> {COMPANY.phone}
           </a>
@@ -54,21 +54,30 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-md bg-forest-500 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
-              <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-oak-300" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                <path d="M3 21V7l3-3 3 3v14M9 21V7l3-3 3 3v14M15 21V7l3-3 3 3v14M2 11h20M2 17h20" />
-              </svg>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-heading font-bold text-onyx-700 text-base leading-tight">
-                Nashville
-              </span>
-              <span className="font-heading font-bold text-forest-500 text-base leading-tight -mt-1">
-                FenceGuide
-              </span>
-            </div>
-          </Link>
+          <div className="flex items-center gap-2.5">
+            <Link to="/" className="flex items-center gap-2 group">
+              <div className="w-9 h-9 rounded-md bg-forest-500 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
+                <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-oak-300" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                  <path d="M3 21V7l3-3 3 3v14M9 21V7l3-3 3 3v14M15 21V7l3-3 3 3v14M2 11h20M2 17h20" />
+                </svg>
+              </div>
+              <div className="hidden lg:flex flex-col leading-tight">
+                <span className="font-heading font-bold text-onyx-700 text-base leading-tight">
+                  Nashville
+                </span>
+                <span className="font-heading font-bold text-forest-500 text-base leading-tight -mt-1">
+                  FenceGuide
+                </span>
+              </div>
+            </Link>
+            <a
+              href={`tel:${COMPANY.phoneRaw}`}
+              className="lg:hidden inline-flex items-center gap-1.5 font-heading font-bold text-forest-500 text-base hover:text-forest-600 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              {COMPANY.phone}
+            </a>
+          </div>
 
           <nav className="hidden lg:flex items-center gap-1">
             <div
