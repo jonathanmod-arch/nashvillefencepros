@@ -1,4 +1,5 @@
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import CostGuideSection from '../components/home/CostGuideSection'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { FENCE_TYPES } from '../data/siteData'
@@ -56,6 +57,7 @@ export default function CostGuide() {
         title="Fence Installation Cost in Nashville TN"
         description="Real installed prices for fence installation in Nashville, Brentwood, Franklin, Hendersonville, and Murfreesboro — wood, vinyl, chain link, aluminum, wrought iron, privacy, pet, and pool fencing covered, plus the line items hiding behind your quote."
         crumbs={[{ label: 'Cost Guide' }]}
+        right={<CallbackForm />}
       />
 
       <CostGuideSection />

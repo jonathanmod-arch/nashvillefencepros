@@ -9,6 +9,7 @@ import {
   Shield,
 } from 'lucide-react'
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
@@ -73,6 +74,7 @@ export default function CommercialFencing() {
         title="Commercial Fence Installation Nashville"
         description="Security fencing installation services in Nashville for industrial sites, warehouses, multifamily properties, and construction perimeters. Compare licensed commercial fence contractors in Davidson and Williamson counties."
         crumbs={[{ label: 'Commercial Fencing' }]}
+        right={<CallbackForm />}
       />
 
       <section className="bg-white section-padding">

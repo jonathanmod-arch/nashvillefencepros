@@ -11,6 +11,7 @@ import {
   Users,
 } from 'lucide-react'
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { COMPANY } from '../data/siteData'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
@@ -83,6 +84,7 @@ export default function About() {
         title="The Independent Nashville Fence Directory"
         description="Nashville Fence Guide is built for homeowners who want one place to compare vetted local fence pros, real installed prices, and Metro permit rules — without sifting through Yelp listings, contractor sales calls, or padded directory sites."
         crumbs={[{ label: 'About' }]}
+        right={<CallbackForm />}
       />
 
       <section className="bg-white section-padding">

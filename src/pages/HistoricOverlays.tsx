@@ -10,6 +10,7 @@ import {
   XCircle,
 } from 'lucide-react'
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
@@ -117,6 +118,7 @@ export default function HistoricOverlays() {
         title="Historic Overlay Fence Rules Nashville"
         description="If your Nashville home is in a historic overlay district, your fence needs HZC approval before installation — and the wrong design can mean a removal order at your expense. Here's how each overlay actually reviews fence applications."
         crumbs={[{ label: 'Historic Overlays' }]}
+        right={<CallbackForm />}
       />
 
       <section className="bg-white section-padding">

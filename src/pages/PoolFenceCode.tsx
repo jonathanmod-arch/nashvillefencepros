@@ -9,6 +9,7 @@ import {
   Shield,
 } from 'lucide-react'
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
@@ -106,6 +107,7 @@ export default function PoolFenceCode() {
         title="Pool Fence Code Nashville TN"
         description="Tennessee adopted the 2018 ISPSC pool barrier code. Here's every requirement that matters for Nashville homeowners installing or replacing a pool fence — plus the violations Metro inspectors flag most often."
         crumbs={[{ label: 'Pool Fence Code' }]}
+        right={<CallbackForm />}
       />
 
       <section className="bg-white section-padding">

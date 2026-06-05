@@ -6,11 +6,12 @@ export default function ScrollToTop() {
   useEffect(() => {
     if (hash) {
       const id = hash.slice(1)
+      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
       let attempts = 0
       const tryScroll = () => {
         const el = document.getElementById(id)
         if (el) {
-          el.scrollIntoView({ behavior: 'instant' as ScrollBehavior, block: 'start' })
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
           return
         }
         if (attempts < 30) {

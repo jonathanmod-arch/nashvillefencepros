@@ -9,6 +9,7 @@ import {
   Wrench,
 } from 'lucide-react'
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
@@ -122,6 +123,7 @@ export default function Repair() {
         title="Fence Repair Nashville TN"
         description="Compare vetted Nashville fence repair companies for wood, vinyl, chain link, aluminum, wrought iron, and pet fence repairs. Free repair estimates, typically within 24 hours."
         crumbs={[{ label: 'Fence Repair' }]}
+        right={<CallbackForm />}
       />
 
       <section className="bg-white section-padding">
