@@ -98,7 +98,7 @@ export default function Footer() {
 
           <div className="lg:col-span-2">
             <h4 className="text-white font-heading font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
-              Neighborhoods
+              Service Areas
             </h4>
             <ul className="space-y-2 text-[13px]">
               {POPULAR_NEIGHBORHOOD_SLUGS.map((slug) => {
@@ -106,14 +106,14 @@ export default function Footer() {
                 if (!n) return null
                 return (
                   <li key={n.slug}>
-                    <Link to={`/neighborhoods/${n.slug}`} className="text-onyx-200 hover:text-oak-300 transition-colors">
+                    <Link to={`/service-areas/${n.slug}`} className="text-onyx-200 hover:text-oak-300 transition-colors">
                       {n.name}
                     </Link>
                   </li>
                 )
               })}
             </ul>
-            <Link to="/neighborhoods" className="inline-block mt-3 text-[10px] font-bold uppercase tracking-[0.22em] text-oak-400 hover:text-oak-300">
+            <Link to="/service-areas" className="inline-block mt-3 text-[10px] font-bold uppercase tracking-[0.22em] text-oak-400 hover:text-oak-300">
               View All Areas →
             </Link>
           </div>

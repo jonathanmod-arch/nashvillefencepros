@@ -4,6 +4,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
+  "redirects": [
+    { "source": "/neighborhoods", "destination": "/service-areas", "permanent": true },
+    { "source": "/neighborhoods/:slug", "destination": "/service-areas/:slug", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ],

@@ -9,11 +9,11 @@ export default function NeighborhoodsSection() {
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="label-eyebrow">Local Coverage</span>
-          <h2 className="mt-3 heading-section">Nashville Neighborhoods We Serve</h2>
+          <h2 className="mt-3 heading-section">Nashville Service Areas We Cover</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Every Nashville area has its own fence personality — material trends, HOA quirks,
-            and price bands. Find yours.
+            Every Nashville-area city and neighborhood has its own fence personality — material
+            trends, HOA quirks, and price bands. Find yours.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export default function NeighborhoodsSection() {
               style={{ animationDelay: `${i * 0.03}s` }}
             >
               <Link
-                to={`/neighborhoods/${n.slug}`}
+                to={`/service-areas/${n.slug}`}
                 className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
@@ -76,8 +76,8 @@ export default function NeighborhoodsSection() {
         </div>
 
         <div className="text-center mt-10">
-          <Link to="/neighborhoods" className="btn-secondary">
-            View All Neighborhoods <ArrowRight className="w-4 h-4" />
+          <Link to="/service-areas" className="btn-secondary">
+            View All Service Areas <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

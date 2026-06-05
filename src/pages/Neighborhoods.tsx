@@ -23,11 +23,11 @@ export default function Neighborhoods() {
   useDocumentMeta({
     title: n
       ? `${n.name} Fence Installation TN | Nashville Fence Guide`
-      : 'Nashville Neighborhoods We Serve | Fence Installation by Area',
+      : 'Nashville Service Areas | Fence Installation by City & Neighborhood',
     description: n
       ? `Fence installation in ${n.name}, Nashville TN (${n.zip}). Popular style: ${n.popularStyle}. Typical project ${n.avgCost}. Compare vetted ${n.name} fence installers and get free quotes.`
-      : 'Compare Nashville fence installation by neighborhood — Belle Meade, Green Hills, East Nashville, Germantown, Brentwood, Franklin, 12 South, Sylvan Park, and more. Local pricing, popular styles, HOA notes.',
-    canonical: slug ? `/neighborhoods/${slug}` : '/neighborhoods',
+      : 'Compare Nashville fence installation by service area — Murfreesboro, Franklin, Brentwood, Hendersonville, Mount Juliet, Spring Hill, Smyrna, Clarksville, and every Davidson County neighborhood. Local pricing, popular styles, HOA notes.',
+    canonical: slug ? `/service-areas/${slug}` : '/service-areas',
   })
 
   useStructuredData(
@@ -35,31 +35,31 @@ export default function Neighborhoods() {
       ? [
           organization(),
           breadcrumbList([
-            { label: 'Neighborhoods', to: '/neighborhoods' },
+            { label: 'Service Areas', to: '/service-areas' },
             { label: n.name },
           ]),
           placeSchema(n),
           serviceSchema({
-            slug: `/neighborhoods/${slug}`,
+            slug: `/service-areas/${slug}`,
             name: `Fence Installation in ${n.name}, Nashville TN`,
             description: `Fence installation services in ${n.name}. Popular style: ${n.popularStyle}. Typical project cost ${n.avgCost}.`,
           }),
         ]
       : [
           organization(),
-          breadcrumbList([{ label: 'Neighborhoods' }]),
+          breadcrumbList([{ label: 'Service Areas' }]),
           collectionPageSchema({
-            slug: '/neighborhoods',
-            title: 'Nashville Neighborhoods We Serve',
+            slug: '/service-areas',
+            title: 'Nashville Service Areas',
             description:
-              'Local fence installation pricing, popular styles, and HOA notes for every Nashville-area neighborhood.',
+              'Local fence installation pricing, popular styles, and HOA notes for every city and neighborhood across the Nashville service area.',
           }),
           itemListSchema(
             NEIGHBORHOODS.map((x) => ({
               name: x.name,
-              url: `/neighborhoods/${x.slug}`,
+              url: `/service-areas/${x.slug}`,
             })),
-            'Nashville Neighborhood Fence Coverage',
+            'Nashville Service Area Fence Coverage',
           ),
         ],
   )
@@ -70,13 +70,13 @@ export default function Neighborhoods() {
         <>
           <PageHero
             eyebrow="Not Found"
-            title="Neighborhood Not Found"
+            title="Service Area Not Found"
             description="We don't have a guide for that area yet."
-            crumbs={[{ label: 'Neighborhoods', to: '/neighborhoods' }]}
+            crumbs={[{ label: 'Service Areas', to: '/service-areas' }]}
           />
           <div className="container-wide py-20 text-center">
-            <Link to="/neighborhoods" className="btn-primary">
-              <ArrowLeft className="w-4 h-4" /> Back to All Neighborhoods
+            <Link to="/service-areas" className="btn-primary">
+              <ArrowLeft className="w-4 h-4" /> Back to All Service Areas
             </Link>
           </div>
         </>
@@ -89,7 +89,7 @@ export default function Neighborhoods() {
           title={`${n.name} Fence Installation Guide`}
           description={n.note}
           crumbs={[
-            { label: 'Neighborhoods', to: '/neighborhoods' },
+            { label: 'Service Areas', to: '/service-areas' },
             { label: n.name },
           ]}
           right={<CallbackForm />}
@@ -165,7 +165,7 @@ export default function Neighborhoods() {
               </div>
               <div className="bg-forest-500 text-white rounded-2xl p-6">
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-300 mb-1">
-                  Nearby Neighborhoods
+                  Nearby Service Areas
                 </div>
                 <ul className="mt-3 space-y-2">
                   {NEIGHBORHOODS.filter((x) => x.slug !== n.slug)
@@ -173,7 +173,7 @@ export default function Neighborhoods() {
                     .map((x) => (
                       <li key={x.slug}>
                         <Link
-                          to={`/neighborhoods/${x.slug}`}
+                          to={`/service-areas/${x.slug}`}
                           className="text-sm text-white/90 hover:text-oak-300 flex items-center gap-1"
                         >
                           <MapPin className="w-3 h-3" /> {x.name}
@@ -194,9 +194,9 @@ export default function Neighborhoods() {
     <>
       <PageHero
         eyebrow="All Coverage Areas"
-        title="Nashville Neighborhoods We Serve"
-        description="From Belle Meade estates to Mount Juliet new builds — pick your area for local pricing, popular styles, and HOA guidance."
-        crumbs={[{ label: 'Neighborhoods' }]}
+        title="Nashville Service Areas"
+        description="From Belle Meade estates to Murfreesboro new builds — pick your city or neighborhood for local pricing, popular styles, and HOA guidance."
+        crumbs={[{ label: 'Service Areas' }]}
         right={<CallbackForm />}
       />
       <section className="bg-white section-padding">
@@ -209,7 +209,7 @@ export default function Neighborhoods() {
                 style={{ animationDelay: `${i * 0.03}s` }}
               >
                 <Link
-                  to={`/neighborhoods/${n.slug}`}
+                  to={`/service-areas/${n.slug}`}
                   className="group block bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border border-warmgray"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">

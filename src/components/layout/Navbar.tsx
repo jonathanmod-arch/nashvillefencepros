@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { to: '/permits', label: 'Permits & Rules' },
   { to: '/repair', label: 'Fence Repair' },
   { to: '/contractors', label: 'Find a Pro' },
-  { to: '/neighborhoods', label: 'Neighborhoods' },
+  { to: '/service-areas', label: 'Service Areas' },
 ]
 
 export default function Navbar() {

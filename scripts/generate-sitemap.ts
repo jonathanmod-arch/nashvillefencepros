@@ -26,7 +26,7 @@ const STATIC_ROUTES: string[] = [
   '/fence-types',
   '/cost-guide',
   '/permits',
-  '/neighborhoods',
+  '/service-areas',
   '/resources',
   '/repair',
   '/commercial-fencing',
@@ -47,7 +47,7 @@ const today = new Date().toISOString().slice(0, 10)
 const urls: UrlEntry[] = [
   ...STATIC_ROUTES.map((path) => ({ loc: `${SITE_URL}${path}`, lastmod: today })),
   ...FENCE_TYPES.map((t) => ({ loc: `${SITE_URL}/fence-types/${t.slug}`, lastmod: today })),
-  ...NEIGHBORHOODS.map((n) => ({ loc: `${SITE_URL}/neighborhoods/${n.slug}`, lastmod: today })),
+  ...NEIGHBORHOODS.map((n) => ({ loc: `${SITE_URL}/service-areas/${n.slug}`, lastmod: today })),
   ...CONTRACTORS.map((c) => ({ loc: `${SITE_URL}/contractors/${c.slug}`, lastmod: today })),
   ...RESOURCES.map((r) => ({
     loc: `${SITE_URL}/resources/${r.slug}`,

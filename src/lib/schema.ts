@@ -214,7 +214,7 @@ export function placeSchema(n: {
 }): SchemaEntity {
   return {
     '@type': 'Place',
-    '@id': `${SITE_URL}/neighborhoods/${n.slug}#place`,
+    '@id': `${SITE_URL}/service-areas/${n.slug}#place`,
     name: `${n.name}, Nashville, TN`,
     containedInPlace: {
       '@type': 'City',

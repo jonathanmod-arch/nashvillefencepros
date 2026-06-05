@@ -44,8 +44,8 @@ function App() {
             <Route path="/get-quotes" element={<GetQuotes />} />
             <Route path="/cost-guide" element={<CostGuide />} />
             <Route path="/permits" element={<Permits />} />
-            <Route path="/neighborhoods" element={<Neighborhoods />} />
-            <Route path="/neighborhoods/:slug" element={<Neighborhoods />} />
+            <Route path="/service-areas" element={<Neighborhoods />} />
+            <Route path="/service-areas/:slug" element={<Neighborhoods />} />
             <Route path="/contractors" element={<Contractors />} />
             <Route path="/contractors/:slug" element={<ContractorProfile />} />
             <Route path="/resources" element={<Resources />} />
