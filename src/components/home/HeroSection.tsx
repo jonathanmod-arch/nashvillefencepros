@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { ArrowRight, Calculator, Star } from 'lucide-react'
 import SafeImage from '../shared/SafeImage'
 import { IMAGES } from '../../data/imageUrls'
@@ -20,11 +19,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="reveal-up">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest-50 text-forest-500 text-[13px] font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-forest-500" />
             Nashville's Most Trusted Fence Resource
@@ -85,14 +80,9 @@ export default function HeroSection() {
               Proud Member
             </span>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="hidden lg:block relative"
-        >
+        <div className="hidden lg:block relative reveal-up" style={{ animationDelay: '0.1s' }}>
           <div className="relative rounded-2xl overflow-hidden shadow-strong w-full h-[550px] bg-warmgray">
             <SafeImage
               src={IMAGES.hero}
@@ -105,11 +95,9 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="absolute -bottom-5 left-4 sm:left-8 bg-white rounded-2xl shadow-strong px-6 py-5 max-w-[260px]"
+          <div
+            className="absolute -bottom-5 left-4 sm:left-8 bg-white rounded-2xl shadow-strong px-6 py-5 max-w-[260px] reveal-up"
+            style={{ animationDelay: '0.5s' }}
           >
             <div className="text-[11px] font-semibold text-onyx-400 mb-1">
               Average Project Cost
@@ -120,8 +108,8 @@ export default function HeroSection() {
             <div className="text-[12px] text-onyx-500 mt-1.5">
               for 150 linear ft in Nashville
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )
