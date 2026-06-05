@@ -46,7 +46,7 @@ export default function Permits() {
       description:
         'Metro Nashville fence permit rules, yard height limits, Tennessee 811 dig-safe protocol, pool fence code, and historic overlay districts.',
       category: 'Permits',
-      image: 'https://nashvillefencepros.com/og.jpg',
+      image: 'https://nashvillefencelist.com/og.jpg',
       publishedAt: RESOURCE_PUBLISHED_AT,
     }),
   ])

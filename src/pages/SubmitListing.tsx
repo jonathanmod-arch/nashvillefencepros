@@ -100,7 +100,7 @@ export default function SubmitListing() {
   useDocumentMeta({
     title: 'Submit Your Nashville Fence Business | Free Listing',
     description:
-      'Get listed on the Nashville Fence Pros directory for free. Submit your fence installation, repair, gate, surveying, or staining business in under 5 minutes and start receiving Nashville fence leads.',
+      'Get listed on the Nashville Fence List directory for free. Submit your fence installation, repair, gate, surveying, or staining business in under 5 minutes and start receiving Nashville fence leads.',
     canonical: '/submit-listing',
   })
 
@@ -187,7 +187,7 @@ export default function SubmitListing() {
               <h2 className="heading-card !text-2xl mb-3">What happens next</h2>
               <ol className="text-left max-w-md mx-auto space-y-3 text-sm text-onyx-700/80">
                 {[
-                  'A Nashville Fence Pros editor verifies your license and business details.',
+                  'A Nashville Fence List editor verifies your license and business details.',
                   'We confirm the photos and pricing match the work shown.',
                   'You receive an email when your free listing goes live — usually within 2 business days.',
                 ].map((step, i) => (
@@ -219,7 +219,7 @@ export default function SubmitListing() {
       <PageHero
         eyebrow="List Your Business — Free"
         title="Submit Your Business"
-        description="Join the Nashville Fence Pros directory in under 5 minutes. Free for verified Tennessee fence contractors, surveyors, gate installers, and outdoor design pros."
+        description="Join the Nashville Fence List directory in under 5 minutes. Free for verified Tennessee fence contractors, surveyors, gate installers, and outdoor design pros."
         crumbs={[
           { label: 'Find a Pro', to: '/contractors' },
           { label: 'Submit Your Business' },
@@ -642,7 +642,7 @@ export default function SubmitListing() {
                   onChange={(v) => set('agreedToTerms', v)}
                   label={
                     <>
-                      I agree to be listed in the Nashville Fence Pros directory and
+                      I agree to be listed in the Nashville Fence List directory and
                       consent to be contacted for lead opportunities.
                     </>
                   }

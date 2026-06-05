@@ -63,7 +63,7 @@ export default function Navbar() {
                 Nashville
               </span>
               <span className="font-heading font-bold text-forest-500 text-base leading-tight -mt-1">
-                FencePros
+                FenceList
               </span>
             </div>
           </Link>

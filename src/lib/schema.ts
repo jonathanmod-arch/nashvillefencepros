@@ -5,7 +5,7 @@ export type SchemaEntity = Record<string, unknown> & {
   '@type': string | string[]
 }
 
-const SITE_URL = 'https://nashvillefencepros.com'
+const SITE_URL = 'https://nashvillefencelist.com'
 const ORG_ID = `${SITE_URL}/#org`
 const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`
 const WEBSITE_ID = `${SITE_URL}/#website`

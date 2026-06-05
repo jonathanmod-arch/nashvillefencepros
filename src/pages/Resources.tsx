@@ -142,7 +142,7 @@ export default function Resources() {
       ? `${r.title} | Nashville Fence Resource`
       : 'Nashville Fence Resource Center | Install, Repair & Permits',
     description: r
-      ? `${r.excerpt} ${r.readTime} read on Nashville Fence Pros.`
+      ? `${r.excerpt} ${r.readTime} read on Nashville Fence List.`
       : 'Nashville fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and Metro permit how-tos.',
     canonical: slug ? `/resources/${slug}` : '/resources',
   })
