@@ -41,7 +41,7 @@ export default function ResourceCenter() {
                 <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
                   <SafeImage
                     src={r.img}
-                    alt={r.title}
+                    alt={('imageAlt' in r && r.imageAlt) || r.title}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div

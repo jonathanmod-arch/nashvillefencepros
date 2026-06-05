@@ -213,7 +213,14 @@ export default function Resources() {
           <div className="container-wide grid lg:grid-cols-3 gap-12">
             <article className="lg:col-span-2">
               <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-medium mb-8">
-                <SafeImage src={r.img} alt={r.title} className="w-full h-full object-cover" />
+                <SafeImage
+                  src={r.img}
+                  alt={('imageAlt' in r && r.imageAlt) || r.title}
+                  className="w-full h-full object-cover"
+                  sizes="(min-width: 1024px) 66vw, 100vw"
+                  widths={[480, 768, 1024, 1280, 1600]}
+                  priority
+                />
               </div>
               <div className="flex items-center gap-4 text-xs text-onyx-400 mb-6">
                 <span className="flex items-center gap-1">
@@ -285,7 +292,7 @@ export default function Resources() {
                           <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
                             <SafeImage
                               src={x.img}
-                              alt={x.title}
+                              alt={('imageAlt' in x && x.imageAlt) || x.title}
                               className="w-full h-full object-cover"
                             />
                           </div>
@@ -335,7 +342,7 @@ export default function Resources() {
                   <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
                     <SafeImage
                       src={r.img}
-                      alt={r.title}
+                      alt={('imageAlt' in r && r.imageAlt) || r.title}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div

@@ -256,6 +256,7 @@ export const RESOURCES = [
     excerpt:
       'How Middle Tennessee humidity, freeze-thaw cycles, and HOA rules tip the scale between cedar privacy and premium vinyl.',
     img: IMAGES.resources['wood-vs-vinyl-nashville'],
+    imageAlt: 'Cedar privacy fence in a Nashville backyard — wood vs vinyl fence comparison',
   },
   {
     slug: 'best-fences-for-dogs',
@@ -301,6 +302,7 @@ export const RESOURCES = [
     excerpt:
       'The design history behind the slat-style fence dominating East Nashville, 12 South, and Sylvan Park bungalows.',
     img: IMAGES.resources['horizontal-cedar-trend'],
+    imageAlt: 'Horizontal cedar slat fence — East Nashville horizontal privacy trend',
   },
   {
     slug: 'fence-repair-vs-replace-nashville',
