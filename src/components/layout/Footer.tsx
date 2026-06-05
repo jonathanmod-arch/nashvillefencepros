@@ -165,9 +165,15 @@ export default function Footer() {
           <p className="text-[12px] text-onyx-300 leading-relaxed max-w-4xl">
             <span className="text-white font-semibold">Disclaimer:</span> NashvilleFenceGuide.com is an independent local fence information and contractor referral platform created to help homeowners make informed fencing decisions. We are not a licensed contractor. Always verify permits and regulations with Metro Nashville directly.
           </p>
-          <p className="text-[12px] text-onyx-300 whitespace-nowrap">
-            © {new Date().getFullYear()} NashvilleFenceGuide.com
-          </p>
+          <div className="flex items-center gap-4 text-[12px] text-onyx-300 whitespace-nowrap">
+            <Link to="/privacy" className="hover:text-oak-300 transition-colors">
+              Privacy
+            </Link>
+            <Link to="/terms" className="hover:text-oak-300 transition-colors">
+              Terms
+            </Link>
+            <span>© {new Date().getFullYear()} NashvilleFenceGuide.com</span>
+          </div>
         </div>
       </div>
     </footer>

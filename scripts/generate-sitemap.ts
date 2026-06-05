@@ -36,6 +36,8 @@ const STATIC_ROUTES: string[] = [
   '/get-quotes',
   '/advertise',
   '/submit-listing',
+  '/privacy',
+  '/terms',
 ]
 
 type UrlEntry = { loc: string; lastmod: string }
