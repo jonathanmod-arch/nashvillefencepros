@@ -34,7 +34,7 @@ export const IMAGES = {
   },
   resources: {
     'wood-vs-vinyl-nashville': 'https://unsplash.com/photos/D9kfezvATOY/download?w=1200&q=80',
-    'best-fences-for-dogs': 'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1200&q=80',
+    'best-fences-for-dogs': 'https://unsplash.com/photos/XFLY0Yp3Gow/download?w=1200&q=80',
     'pool-fence-safety-tn': 'https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=1200&q=80',
     'metro-nashville-permits': 'https://images.unsplash.com/photo-1531386450460-39de17ce486f?auto=format&fit=crop&w=1200&q=80',
     'fence-cost-breakdown': 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',

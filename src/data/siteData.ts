@@ -266,6 +266,7 @@ export const RESOURCES = [
     excerpt:
       'Climb-proof heights, dig guards, and material picks that keep golden retrievers in and coyotes out across Davidson County.',
     img: IMAGES.resources['best-fences-for-dogs'],
+    imageAlt: 'Two dogs running on a fenced lawn — best fences for dogs in Nashville yards',
   },
   {
     slug: 'pool-fence-safety-tn',
