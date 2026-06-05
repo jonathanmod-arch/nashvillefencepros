@@ -78,8 +78,17 @@ export default function PermitsSection() {
                 </h3>
                 <p className="text-white/80 leading-relaxed mb-5 text-sm">
                   Tennessee state law requires a minimum 3 business-day notice before digging
-                  post holes. Tennessee 811 marks public utilities for free — hitting a gas or
-                  fiber line can mean thousands in damages and fines.
+                  post holes.{' '}
+                  <a
+                    href="https://tennessee811.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-oak-300 underline underline-offset-4 hover:text-oak-200"
+                  >
+                    Tennessee 811
+                  </a>{' '}
+                  marks public utilities for free — hitting a gas or fiber line can mean
+                  thousands in damages and fines.
                 </p>
                 <a
                   href="tel:811"

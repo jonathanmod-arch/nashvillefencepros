@@ -126,9 +126,18 @@ export default function HistoricOverlays() {
             <h2 className="mt-3 heading-section">Nashville's Six Active Overlay Districts</h2>
             <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
-              Nashville's Historic Zoning Commission reviews every fence application in
-              these districts. Preservation overlays apply the strictest standards;
-              Conservation overlays are more flexible but still require approval.
+              Nashville's{' '}
+              <a
+                href="https://www.nashville.gov/departments/historical-commission"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                Historic Zoning Commission
+              </a>{' '}
+              reviews every fence application in these districts. Preservation overlays
+              apply the strictest standards; Conservation overlays are more flexible but
+              still require approval.
             </p>
           </div>
 

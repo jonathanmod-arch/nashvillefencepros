@@ -116,8 +116,17 @@ export default function PoolFenceCode() {
             <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
               Tennessee enforces the 2018 International Swimming Pool and Spa Code at the
-              state level. Metro Nashville inspectors apply it to every residential pool
-              installation and every pool-barrier replacement.
+              state level.{' '}
+              <a
+                href="https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                Metro Nashville Codes
+              </a>{' '}
+              applies it to every residential pool installation and every pool-barrier
+              replacement.
             </p>
           </div>
 

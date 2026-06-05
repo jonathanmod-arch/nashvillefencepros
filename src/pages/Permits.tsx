@@ -68,8 +68,17 @@ export default function Permits() {
             <h2 className="mt-3 heading-section">Nashville Fence Height by Yard</h2>
             <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
-              Metro Nashville's residential code keeps it simple — but corner lots, pool
-              barriers, and overlay districts add layers.
+              Metro Nashville's{' '}
+              <a
+                href="https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                residential fence code
+              </a>{' '}
+              keeps it simple — but corner lots, pool barriers, and overlay districts add
+              layers.
             </p>
           </div>
 
@@ -127,8 +136,16 @@ export default function Permits() {
               Historic Overlay Districts
             </h3>
             <p className="text-sm text-onyx-700/70 leading-relaxed mb-4">
-              Fences in these neighborhoods require Historic Zoning Commission review
-              before installation — even for replacements.
+              Fences in these neighborhoods require{' '}
+              <a
+                href="https://www.nashville.gov/departments/historical-commission"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                Historic Zoning Commission
+              </a>{' '}
+              review before installation — even for replacements.
             </p>
             <div className="flex flex-wrap gap-2">
               {HISTORIC_AREAS.map((a) => (
