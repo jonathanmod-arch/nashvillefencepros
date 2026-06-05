@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react'
 import { COMPANY, FENCE_TYPES, NEIGHBORHOODS } from '../../data/siteData'
 
+const POPULAR_NEIGHBORHOOD_SLUGS = [
+  'belle-meade',
+  'green-hills',
+  'east-nashville',
+  'brentwood',
+  'franklin',
+]
+
 export default function Footer() {
   return (
     <footer className="bg-onyx-700 text-onyx-100">
@@ -88,18 +96,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h4 className="text-white font-heading font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
               Neighborhoods
             </h4>
-            <ul className="grid grid-cols-2 gap-x-3 gap-y-2 text-[13px]">
-              {NEIGHBORHOODS.slice(0, 10).map((n) => (
-                <li key={n.slug}>
-                  <Link to={`/neighborhoods/${n.slug}`} className="text-onyx-200 hover:text-oak-300 transition-colors">
-                    {n.name}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-2 text-[13px]">
+              {POPULAR_NEIGHBORHOOD_SLUGS.map((slug) => {
+                const n = NEIGHBORHOODS.find((x) => x.slug === slug)
+                if (!n) return null
+                return (
+                  <li key={n.slug}>
+                    <Link to={`/neighborhoods/${n.slug}`} className="text-onyx-200 hover:text-oak-300 transition-colors">
+                      {n.name}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
             <Link to="/neighborhoods" className="inline-block mt-3 text-[10px] font-bold uppercase tracking-[0.22em] text-oak-400 hover:text-oak-300">
               View All Areas →
