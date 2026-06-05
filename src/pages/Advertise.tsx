@@ -762,7 +762,7 @@ function ContactSection() {
                     type="tel"
                     value={form.phone}
                     onChange={handle('phone')}
-                    placeholder="(615) 555-0100"
+                    placeholder="(615) 555-0123"
                     className="ad-input"
                   />
                 </Field>
