@@ -7,6 +7,12 @@ type Meta = {
   noindex?: boolean
 }
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
 const SITE_URL = 'https://nashvillefenceguide.com'
 
 function ensureTag<T extends HTMLElement>(
@@ -88,6 +94,14 @@ export function useDocumentMeta({
         return m
       })
       robotsTag.setAttribute('content', 'noindex,nofollow')
+    }
+
+    if (!noindex && typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: window.location.pathname + window.location.search,
+        page_location: canonicalHref,
+        page_title: title,
+      })
     }
 
     return () => {
