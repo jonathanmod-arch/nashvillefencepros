@@ -12,7 +12,7 @@ export const IMAGES = {
     'vinyl': 'https://unsplash.com/photos/gmRXcuYNV6Q/download?w=1200&q=80',
     'aluminum': 'https://unsplash.com/photos/bzqc09sK_D0/download?w=1200&q=80',
     'chain-link': 'https://unsplash.com/photos/hJtoxKXnCyo/download?w=1200&q=80',
-    'horizontal-privacy': 'https://unsplash.com/photos/nNBU-9VxSWs/download?w=1200&q=80',
+    'horizontal-privacy': 'https://unsplash.com/photos/KNBDHM8XZG0/download?w=1200&q=80',
     'farm-ranch': 'https://unsplash.com/photos/Jl5wx2QVrSs/download?w=1200&q=80',
     'wrought-iron': 'https://unsplash.com/photos/oVueqggYsbU/download?w=1200&q=80',
     'pet-fence': 'https://unsplash.com/photos/7U1q8b4hinQ/download?w=1200&q=80',
