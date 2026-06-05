@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="bg-forest-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs font-body">
           <p className="font-semibold">
-            Hire the best fence installers in Nashville
+            Find and Hire The Best Fence Installation Companies in Nashville
           </p>
           <a
             href={`tel:${COMPANY.phoneRaw}`}
