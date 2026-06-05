@@ -18,6 +18,9 @@ const Advertise = lazy(() => import('./pages/Advertise'))
 const SubmitListing = lazy(() => import('./pages/SubmitListing'))
 const Repair = lazy(() => import('./pages/Repair'))
 const CommercialFencing = lazy(() => import('./pages/CommercialFencing'))
+const PoolFenceCode = lazy(() => import('./pages/PoolFenceCode'))
+const HistoricOverlays = lazy(() => import('./pages/HistoricOverlays'))
+const About = lazy(() => import('./pages/About'))
 
 function RouteLoader() {
   return (
@@ -51,6 +54,9 @@ function App() {
             <Route path="/submit-listing" element={<SubmitListing />} />
             <Route path="/repair" element={<Repair />} />
             <Route path="/commercial-fencing" element={<CommercialFencing />} />
+            <Route path="/pool-fence-code" element={<PoolFenceCode />} />
+            <Route path="/historic-overlays" element={<HistoricOverlays />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Suspense>
       </main>

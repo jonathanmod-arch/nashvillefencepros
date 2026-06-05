@@ -61,20 +61,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h4 className="text-white font-heading font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
               Pricing & Permits
             </h4>
             <ul className="space-y-2 text-[13px]">
               <li><Link to="/cost-guide" className="text-onyx-200 hover:text-oak-300 transition-colors">Nashville Cost Guide</Link></li>
-              <li><Link to="/cost-guide" className="text-onyx-200 hover:text-oak-300 transition-colors">Interactive Calculator</Link></li>
               <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Metro Permit Rules</Link></li>
-              <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Height Limits by Yard</Link></li>
-              <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Pool Fence Code</Link></li>
-              <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Historic Overlays</Link></li>
+              <li><Link to="/pool-fence-code" className="text-onyx-200 hover:text-oak-300 transition-colors">Pool Fence Code</Link></li>
+              <li><Link to="/historic-overlays" className="text-onyx-200 hover:text-oak-300 transition-colors">Historic Overlays</Link></li>
               <li><Link to="/repair" className="text-onyx-200 hover:text-oak-300 transition-colors">Fence Repair Nashville</Link></li>
               <li><Link to="/commercial-fencing" className="text-onyx-200 hover:text-oak-300 transition-colors">Commercial Fencing</Link></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-2">
+            <h4 className="text-white font-heading font-bold text-[11px] uppercase tracking-[0.22em] mb-4">
+              Company
+            </h4>
+            <ul className="space-y-2 text-[13px]">
+              <li><Link to="/about" className="text-onyx-200 hover:text-oak-300 transition-colors">About</Link></li>
               <li><Link to="/resources" className="text-onyx-200 hover:text-oak-300 transition-colors">Resource Center</Link></li>
+              <li><Link to="/get-quotes" className="text-onyx-200 hover:text-oak-300 transition-colors">Request a Quote</Link></li>
               <li><Link to="/submit-listing" className="text-onyx-200 hover:text-oak-300 transition-colors">Submit Your Business</Link></li>
               <li><Link to="/advertise" className="text-oak-300 hover:text-oak-400 font-semibold transition-colors">Advertise With Us →</Link></li>
             </ul>
