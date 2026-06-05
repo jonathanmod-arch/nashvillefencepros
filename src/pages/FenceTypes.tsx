@@ -148,7 +148,14 @@ export default function FenceTypes() {
           <div className="container-wide grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
               <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-medium mb-8">
-                <SafeImage src={t.img} alt={t.name} className="w-full h-full object-cover" />
+                <SafeImage
+                  src={t.img}
+                  alt={`${t.name} fence installation in Nashville, TN`}
+                  className="w-full h-full object-cover"
+                  sizes="(min-width: 1024px) 66vw, 100vw"
+                  widths={[480, 768, 1024, 1280, 1600]}
+                  priority
+                />
               </div>
 
               <h2 className="heading-section !text-3xl mb-2">
