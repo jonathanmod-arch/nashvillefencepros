@@ -122,6 +122,9 @@ export default function SubmitListing() {
   const [files, setFiles] = useState<File[]>([])
   const [dragOver, setDragOver] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [hp, setHp] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
@@ -160,10 +163,29 @@ export default function SubmitListing() {
   const removeFile = (idx: number) =>
     setFiles((prev) => prev.filter((_, i) => i !== idx))
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (submitting) return
+    setSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'submit-listing',
+          data: { ...form, fileNames: files.map((f) => f.name) },
+          _hp: hp,
+        }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setSubmitted(true)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } catch {
+      setError('Sorry — something went wrong. Please try again or email us directly.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -651,12 +673,27 @@ export default function SubmitListing() {
             </FormSection>
 
             <div className="pt-4 border-t border-[#E2E8F0]">
+              <input
+                type="text"
+                name="_hp"
+                tabIndex={-1}
+                autoComplete="off"
+                value={hp}
+                onChange={(e) => setHp(e.target.value)}
+                className="hidden"
+                aria-hidden="true"
+              />
+              {error && (
+                <div className="mb-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3">
+                  {error}
+                </div>
+              )}
               <button
                 type="submit"
-                disabled={!form.authorized || !form.agreedToTerms}
+                disabled={!form.authorized || !form.agreedToTerms || submitting}
                 className="w-full inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 disabled:bg-onyx-700/30 disabled:cursor-not-allowed text-white text-base font-semibold px-5 py-3.5 rounded-lg transition-colors"
               >
-                Submit Listing <ArrowRight className="w-4 h-4" />
+                {submitting ? 'Sending…' : (<>Submit Listing <ArrowRight className="w-4 h-4" /></>)}
               </button>
               <p className="text-xs text-onyx-700/60 text-center mt-3">
                 We review every submission. Listings typically go live within 2 business

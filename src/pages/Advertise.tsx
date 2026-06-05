@@ -525,6 +525,9 @@ function CardPreview() {
 
 function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [hp, setHp] = useState('')
   const [form, setForm] = useState({
     name: '',
     company: '',
@@ -533,6 +536,30 @@ function ContactSection() {
     interest: '',
     message: '',
   })
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (submitting) return
+    setSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'advertise-inquiry',
+          data: form,
+          _hp: hp,
+        }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setSubmitted(true)
+    } catch {
+      setError('Sorry — something went wrong. Please try again or email us directly.')
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   const interestOptions = useMemo(
     () => [
@@ -628,13 +655,7 @@ function ContactSection() {
               </p>
             </div>
           ) : (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                setSubmitted(true)
-              }}
-              className="space-y-4"
-            >
+            <form onSubmit={onSubmit} className="space-y-4">
               <h3 className="font-heading font-bold text-lg text-onyx-700 mb-4">
                 Advertising Inquiry
               </h3>
@@ -708,11 +729,27 @@ function ContactSection() {
                 />
               </Field>
 
+              <input
+                type="text"
+                name="_hp"
+                tabIndex={-1}
+                autoComplete="off"
+                value={hp}
+                onChange={(e) => setHp(e.target.value)}
+                className="hidden"
+                aria-hidden="true"
+              />
+              {error && (
+                <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3">
+                  {error}
+                </div>
+              )}
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 text-white text-base font-semibold px-5 py-3.5 rounded-lg transition-colors"
+                disabled={submitting}
+                className="w-full inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 disabled:opacity-60 disabled:cursor-not-allowed text-white text-base font-semibold px-5 py-3.5 rounded-lg transition-colors"
               >
-                Send Inquiry <ArrowRight className="w-4 h-4" />
+                {submitting ? 'Sending…' : (<>Send Inquiry <ArrowRight className="w-4 h-4" /></>)}
               </button>
               <p className="text-xs text-onyx-700/50 text-center">
                 We'll respond within one business day. No spam. Ever.

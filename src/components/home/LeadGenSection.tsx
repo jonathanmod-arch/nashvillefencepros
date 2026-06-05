@@ -30,6 +30,9 @@ export default function LeadGenSection() {
   const [files, setFiles] = useState<File[]>([])
   const [dragOver, setDragOver] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [hp, setHp] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
   const handle = (k: keyof FormState) => (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
@@ -51,9 +54,28 @@ export default function LeadGenSection() {
   const removeFile = (idx: number) =>
     setFiles((prev) => prev.filter((_, i) => i !== idx))
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    if (submitting) return
+    setSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'quote-request',
+          data: { ...form, fileNames: files.map((f) => f.name) },
+          _hp: hp,
+        }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setSubmitted(true)
+    } catch {
+      setError('Sorry — something went wrong. Please try again or call us directly.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -301,8 +323,27 @@ export default function LeadGenSection() {
                   )}
                 </div>
 
-                <button type="submit" className="btn-primary w-full !py-4 !text-base">
-                  Match Me With Local Pros
+                <input
+                  type="text"
+                  name="_hp"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={hp}
+                  onChange={(e) => setHp(e.target.value)}
+                  className="hidden"
+                  aria-hidden="true"
+                />
+                {error && (
+                  <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3">
+                    {error}
+                  </div>
+                )}
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="btn-primary w-full !py-4 !text-base disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {submitting ? 'Sending…' : 'Match Me With Local Pros'}
                 </button>
                 <p className="text-xs text-onyx-400 text-center">
                   We share your info only with up to 3 vetted Nashville contractors. No spam.
