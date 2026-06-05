@@ -3,6 +3,13 @@ import PermitsSection from '../components/home/PermitsSection'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { Phone, AlertTriangle, MapPin, FileText, Ruler, Droplets } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  articleSchema,
+} from '../lib/schema'
+import { RESOURCE_PUBLISHED_AT } from '../data/siteData'
 
 const HEIGHT_RULES = [
   { yard: 'Front Yard — Solid', max: '3.5 ft', detail: 'Privacy panels, vinyl, solid wood' },
@@ -29,6 +36,20 @@ export default function Permits() {
       'Nashville fence permit requirements, Metro height limits, HOA rules, dig-safe 811, and historic overlay districts. Plain-English fence installation rules for Davidson and Williamson County homeowners.',
     canonical: '/permits',
   })
+
+  useStructuredData([
+    organization(),
+    breadcrumbList([{ label: 'Permits & Rules' }]),
+    articleSchema({
+      slug: '/permits',
+      title: 'Nashville Fence Permits, Rules & Regulations',
+      description:
+        'Metro Nashville fence permit rules, yard height limits, Tennessee 811 dig-safe protocol, pool fence code, and historic overlay districts.',
+      category: 'Permits',
+      image: 'https://nashvillefencepros.com/og.jpg',
+      publishedAt: RESOURCE_PUBLISHED_AT,
+    }),
+  ])
   return (
     <>
       <PageHero

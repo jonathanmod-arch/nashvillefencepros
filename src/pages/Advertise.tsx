@@ -16,6 +16,12 @@ import {
 } from 'lucide-react'
 import { COMPANY } from '../data/siteData'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  webPageSchema,
+} from '../lib/schema'
 
 type Plan = {
   name: string
@@ -140,6 +146,17 @@ export default function Advertise() {
       'Advertise to thousands of Nashville homeowners hiring fence installers. Premium listings, category sponsorships, and homepage placement on the leading Nashville fence directory. From $99/mo, month-to-month.',
     canonical: '/advertise',
   })
+
+  useStructuredData([
+    organization(),
+    breadcrumbList([{ label: 'Advertise' }]),
+    webPageSchema({
+      slug: '/advertise',
+      title: 'Advertise on Nashville Fence Pros',
+      description:
+        'Premium listings, category sponsorships, and homepage placement on the leading Nashville fence directory.',
+    }),
+  ])
   return (
     <>
       <Hero />

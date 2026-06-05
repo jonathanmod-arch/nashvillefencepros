@@ -13,6 +13,13 @@ import PageHero from '../components/shared/PageHero'
 import { COMPANY } from '../data/siteData'
 import { AREAS, SERVICE_CATEGORIES } from '../data/contractors'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  webPageSchema,
+  registerListingAction,
+} from '../lib/schema'
 
 const SUGGESTED_LICENSES = [
   'Licensed & Insured',
@@ -96,6 +103,21 @@ export default function SubmitListing() {
       'Get listed on the Nashville Fence Pros directory for free. Submit your fence installation, repair, gate, surveying, or staining business in under 5 minutes and start receiving Nashville fence leads.',
     canonical: '/submit-listing',
   })
+
+  useStructuredData([
+    organization(),
+    breadcrumbList([
+      { label: 'Find a Pro', to: '/contractors' },
+      { label: 'Submit Your Business' },
+    ]),
+    webPageSchema({
+      slug: '/submit-listing',
+      title: 'Submit Your Nashville Fence Business',
+      description:
+        'Free listing submission for Nashville fence installation, repair, gate, surveying, staining, and outdoor design pros.',
+      potentialAction: registerListingAction(),
+    }),
+  ])
   const [form, setForm] = useState<FormState>(initialForm)
   const [files, setFiles] = useState<File[]>([])
   const [dragOver, setDragOver] = useState(false)

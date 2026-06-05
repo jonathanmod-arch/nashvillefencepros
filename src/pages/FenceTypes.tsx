@@ -5,6 +5,14 @@ import SafeImage from '../components/shared/SafeImage'
 import { FENCE_TYPES } from '../data/siteData'
 import { ArrowRight, ArrowLeft, Check, Wrench, Calendar, Ruler } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  collectionPageSchema,
+  itemListSchema,
+  serviceSchema,
+} from '../lib/schema'
 
 const FENCE_TYPE_META: Record<string, { title: string; description: string }> = {
   'wood-privacy': {
@@ -58,6 +66,7 @@ export default function FenceTypes() {
   const { slug } = useParams<{ slug: string }>()
 
   const typeMeta = slug ? FENCE_TYPE_META[slug] : undefined
+  const fenceType = slug ? FENCE_TYPES.find((x) => x.slug === slug) : undefined
   useDocumentMeta({
     title:
       typeMeta?.title ??
@@ -67,6 +76,42 @@ export default function FenceTypes() {
       'Compare every Nashville fence type — wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm & ranch, wrought iron, pet/invisible, and pool safety fencing. Pricing per linear ft + vetted Nashville installers.',
     canonical: slug ? `/fence-types/${slug}` : '/fence-types',
   })
+
+  useStructuredData(
+    slug && fenceType
+      ? [
+          organization(),
+          breadcrumbList([
+            { label: 'Fence Types', to: '/fence-types' },
+            { label: fenceType.name },
+          ]),
+          serviceSchema({
+            slug: `/fence-types/${slug}`,
+            name: `${fenceType.name} Fence Installation in Nashville TN`,
+            description: fenceType.description,
+            priceLow: fenceType.priceLow,
+            priceHigh: fenceType.priceHigh,
+            unitCode: 'FOT',
+          }),
+        ]
+      : [
+          organization(),
+          breadcrumbList([{ label: 'Fence Types' }]),
+          collectionPageSchema({
+            slug: '/fence-types',
+            title: 'Nashville Fence Types & Materials',
+            description:
+              'Compare every Nashville fence type — wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.',
+          }),
+          itemListSchema(
+            FENCE_TYPES.map((t) => ({
+              name: t.name,
+              url: `/fence-types/${t.slug}`,
+            })),
+            'Nashville Fence Type Catalog',
+          ),
+        ],
+  )
 
   if (slug) {
     const t = FENCE_TYPES.find((x) => x.slug === slug)

@@ -11,6 +11,8 @@ import {
 import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import { organization, breadcrumbList, serviceSchema } from '../lib/schema'
 
 const REPAIR_MATERIALS = [
   {
@@ -98,6 +100,20 @@ export default function Repair() {
       'Nashville fence repair for wood, vinyl, chain link, aluminum, wrought iron, and pet fences. Compare licensed Nashville fence repair companies and get free repair estimates.',
     canonical: '/repair',
   })
+
+  useStructuredData([
+    organization(),
+    breadcrumbList([{ label: 'Fence Repair' }]),
+    serviceSchema({
+      slug: '/repair',
+      name: 'Fence Repair Nashville TN',
+      description:
+        'Wood, vinyl, chain link, aluminum, wrought iron, and pet fence repair services across Nashville TN.',
+      priceLow: 4,
+      priceHigh: 36,
+      unitCode: 'FOT',
+    }),
+  ])
 
   return (
     <>

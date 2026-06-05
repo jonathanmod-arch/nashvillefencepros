@@ -4,6 +4,14 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import { FENCE_TYPES } from '../data/siteData'
 import { TrendingUp, AlertTriangle, Layers } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  articleSchema,
+  serviceSchema,
+} from '../lib/schema'
+import { RESOURCE_PUBLISHED_AT } from '../data/siteData'
 
 const LINE_ITEMS = [
   { label: 'Posts & Concrete', share: 18, note: '4×4 posts set in concrete, 8 ft on center.' },
@@ -21,6 +29,26 @@ export default function CostGuide() {
       'Real Nashville fence installation cost data for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences. Interactive Nashville fence cost calculator + price-per-linear-foot ranges by material.',
     canonical: '/cost-guide',
   })
+
+  useStructuredData([
+    organization(),
+    breadcrumbList([{ label: 'Cost Guide' }]),
+    articleSchema({
+      slug: '/cost-guide',
+      title: 'Nashville Fence Installation Cost Guide 2026',
+      description:
+        'Installed price ranges for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences in Nashville TN with material-by-material breakdowns.',
+      category: 'Cost',
+      image: 'https://nashvillefencepros.com/og.jpg',
+      publishedAt: RESOURCE_PUBLISHED_AT,
+    }),
+    serviceSchema({
+      slug: '/cost-guide',
+      name: 'Nashville Fence Installation Cost Estimates',
+      description:
+        'Per-linear-foot Nashville installed fence cost ranges from licensed local contractors.',
+    }),
+  ])
   return (
     <>
       <PageHero

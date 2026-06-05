@@ -9,6 +9,8 @@ export const COMPANY = {
   hours: 'Mon–Sat, 7:00 AM – 7:00 PM',
 }
 
+export const RESOURCE_PUBLISHED_AT = '2026-06-01T08:00:00-05:00'
+
 export const FENCE_TYPES = [
   {
     slug: 'wood-privacy',

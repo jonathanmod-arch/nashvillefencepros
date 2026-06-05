@@ -5,6 +5,15 @@ import SafeImage from '../components/shared/SafeImage'
 import { NEIGHBORHOODS } from '../data/siteData'
 import { MapPin, ArrowRight, ArrowLeft, Check } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  collectionPageSchema,
+  itemListSchema,
+  placeSchema,
+  serviceSchema,
+} from '../lib/schema'
 
 export default function Neighborhoods() {
   const { slug } = useParams<{ slug: string }>()
@@ -19,6 +28,40 @@ export default function Neighborhoods() {
       : 'Compare Nashville fence installation by neighborhood — Belle Meade, Green Hills, East Nashville, Germantown, Brentwood, Franklin, 12 South, Sylvan Park, and more. Local pricing, popular styles, HOA notes.',
     canonical: slug ? `/neighborhoods/${slug}` : '/neighborhoods',
   })
+
+  useStructuredData(
+    slug && n
+      ? [
+          organization(),
+          breadcrumbList([
+            { label: 'Neighborhoods', to: '/neighborhoods' },
+            { label: n.name },
+          ]),
+          placeSchema(n),
+          serviceSchema({
+            slug: `/neighborhoods/${slug}`,
+            name: `Fence Installation in ${n.name}, Nashville TN`,
+            description: `Fence installation services in ${n.name}. Popular style: ${n.popularStyle}. Typical project cost ${n.avgCost}.`,
+          }),
+        ]
+      : [
+          organization(),
+          breadcrumbList([{ label: 'Neighborhoods' }]),
+          collectionPageSchema({
+            slug: '/neighborhoods',
+            title: 'Nashville Neighborhoods We Serve',
+            description:
+              'Local fence installation pricing, popular styles, and HOA notes for every Nashville-area neighborhood.',
+          }),
+          itemListSchema(
+            NEIGHBORHOODS.map((x) => ({
+              name: x.name,
+              url: `/neighborhoods/${x.slug}`,
+            })),
+            'Nashville Neighborhood Fence Coverage',
+          ),
+        ],
+  )
 
   if (slug) {
     if (!n) {

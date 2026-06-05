@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import HeroSection from '../components/home/HeroSection'
 import TrustBar from '../components/home/TrustBar'
 import WhyFenceSection from '../components/home/WhyFenceSection'
@@ -10,8 +9,17 @@ import ContractorDirectory from '../components/home/ContractorDirectory'
 import FAQSection from '../components/home/FAQSection'
 import ResourceCenter from '../components/home/ResourceCenter'
 import LeadGenSection from '../components/home/LeadGenSection'
-import { COMPANY } from '../data/siteData'
+import { FAQS } from '../data/siteData'
+import { CONTRACTORS } from '../data/contractors'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  platformLocalBusiness,
+  webSiteSchema,
+  faqPageSchema,
+  itemListSchema,
+} from '../lib/schema'
 
 export default function Home() {
   useDocumentMeta({
@@ -21,60 +29,19 @@ export default function Home() {
     canonical: '/',
   })
 
-  useEffect(() => {
-    const data = {
-      '@context': 'https://schema.org',
-      '@graph': [
-        {
-          '@type': 'Organization',
-          '@id': 'https://nashvillefencepros.com/#org',
-          name: COMPANY.name,
-          url: 'https://nashvillefencepros.com',
-          telephone: COMPANY.phone,
-          email: COMPANY.email,
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Nashville',
-            addressRegion: 'TN',
-            addressCountry: 'US',
-          },
-          areaServed: [
-            'Nashville, TN',
-            'Brentwood, TN',
-            'Franklin, TN',
-            'Hendersonville, TN',
-            'Mount Juliet, TN',
-          ],
-        },
-        {
-          '@type': 'LocalBusiness',
-          '@id': 'https://nashvillefencepros.com/#localbusiness',
-          name: COMPANY.name,
-          image: 'https://nashvillefencepros.com/og.jpg',
-          telephone: COMPANY.phone,
-          priceRange: '$$',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Nashville',
-            addressRegion: 'TN',
-            addressCountry: 'US',
-          },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.9',
-            reviewCount: '1386',
-          },
-        },
-      ],
-    }
-    const tag = document.createElement('script')
-    tag.type = 'application/ld+json'
-    tag.text = JSON.stringify(data)
-    document.head.appendChild(tag)
-    return () => {
-      document.head.removeChild(tag)
-    }
-  }, [])
+  useStructuredData([
+    organization(),
+    platformLocalBusiness(),
+    webSiteSchema(),
+    faqPageSchema(FAQS),
+    itemListSchema(
+      CONTRACTORS.filter((c) => c.featured).map((c) => ({
+        name: c.name,
+        url: `/contractors/${c.slug}`,
+      })),
+      'Featured Nashville Fence Installers',
+    ),
+  ])
 
   return (
     <>

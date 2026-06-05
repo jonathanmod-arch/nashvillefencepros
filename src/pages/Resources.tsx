@@ -2,9 +2,17 @@ import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
-import { RESOURCES, type ResourceSection } from '../data/siteData'
+import { RESOURCES, RESOURCE_PUBLISHED_AT, type ResourceSection } from '../data/siteData'
 import { Clock, ArrowRight, ArrowLeft } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  collectionPageSchema,
+  itemListSchema,
+  articleSchema,
+} from '../lib/schema'
 
 const CATEGORY_COLORS: Record<string, string> = {
   Comparison: 'bg-forest-50 text-forest-500',
@@ -138,6 +146,42 @@ export default function Resources() {
       : 'Nashville fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and Metro permit how-tos.',
     canonical: slug ? `/resources/${slug}` : '/resources',
   })
+
+  useStructuredData(
+    slug && r
+      ? [
+          organization(),
+          breadcrumbList([
+            { label: 'Resources', to: '/resources' },
+            { label: r.category },
+          ]),
+          articleSchema({
+            slug: `/resources/${r.slug}`,
+            title: r.title,
+            description: r.excerpt,
+            category: r.category,
+            image: r.img,
+            publishedAt: RESOURCE_PUBLISHED_AT,
+          }),
+        ]
+      : [
+          organization(),
+          breadcrumbList([{ label: 'Resources' }]),
+          collectionPageSchema({
+            slug: '/resources',
+            title: 'Nashville Fence Resource Center',
+            description:
+              'In-depth Nashville fence installation, repair, cost, and permit guides written by local pros.',
+          }),
+          itemListSchema(
+            RESOURCES.map((x) => ({
+              name: x.title,
+              url: `/resources/${x.slug}`,
+            })),
+            'Nashville Fence Resource Library',
+          ),
+        ],
+  )
 
   if (slug) {
     if (!r) {

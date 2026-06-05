@@ -27,6 +27,12 @@ import {
   galleryFor,
 } from '../data/contractors'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  contractorLocalBusiness,
+} from '../lib/schema'
 
 const REVIEW_DISTRIBUTION = [
   { stars: 5, ratio: 0.83 },
@@ -50,6 +56,19 @@ export default function ContractorProfile() {
     canonical: c ? `/contractors/${c.slug}` : '/contractors',
     noindex: !c,
   })
+
+  useStructuredData(
+    c
+      ? [
+          organization(),
+          breadcrumbList([
+            { label: 'Find a Pro', to: '/contractors' },
+            { label: c.name },
+          ]),
+          contractorLocalBusiness(c),
+        ]
+      : [],
+  )
 
   if (!c) {
     return <Navigate to="/contractors" replace />

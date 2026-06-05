@@ -11,6 +11,8 @@ import {
 import PageHero from '../components/shared/PageHero'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import { organization, breadcrumbList, serviceSchema } from '../lib/schema'
 
 const USE_CASES = [
   {
@@ -51,6 +53,18 @@ export default function CommercialFencing() {
       'Commercial fence installation in Nashville — chain link, security fencing, automated gates, and temporary construction-site fencing. Compare licensed commercial fence contractors and get free Nashville TN quotes.',
     canonical: '/commercial-fencing',
   })
+
+  useStructuredData([
+    organization(),
+    breadcrumbList([{ label: 'Commercial Fencing' }]),
+    serviceSchema({
+      slug: '/commercial-fencing',
+      name: 'Commercial Fence Installation Nashville',
+      description:
+        'Commercial and industrial fence installation in Nashville — galvanized chain link, security fencing, automated gates, and construction-site temporary perimeters.',
+      audience: 'BusinessAudience',
+    }),
+  ])
 
   return (
     <>

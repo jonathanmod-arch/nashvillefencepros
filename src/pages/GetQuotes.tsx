@@ -3,6 +3,13 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import TrustBar from '../components/home/TrustBar'
 import { ShieldCheck, Users, Clock, Award } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { useStructuredData } from '../hooks/useStructuredData'
+import {
+  organization,
+  breadcrumbList,
+  webPageSchema,
+  requestQuoteAction,
+} from '../lib/schema'
 
 const STEPS = [
   {
@@ -41,6 +48,18 @@ export default function GetQuotes() {
       'Get free fence installation quotes from up to 3 vetted Nashville fence installers. Wood, vinyl, chain link, aluminum, privacy, pet, pool, and commercial fence quotes near you in Nashville TN.',
     canonical: '/get-quotes',
   })
+
+  useStructuredData([
+    organization(),
+    breadcrumbList([{ label: 'Get Quotes' }]),
+    webPageSchema({
+      slug: '/get-quotes',
+      title: 'Free Nashville Fence Installation Quotes',
+      description:
+        'Request free fence installation quotes from up to three vetted Nashville fence installers in under 5 minutes.',
+      potentialAction: requestQuoteAction(),
+    }),
+  ])
   return (
     <>
       <PageHero
