@@ -84,9 +84,15 @@ export default function CommercialFencing() {
             <h2 className="mt-3 heading-section">Built for Tennessee Job Sites</h2>
             <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
-              From single-fence security perimeters to multi-site rollouts, our network
-              of commercial fence installation companies in Nashville handles everything
-              from code-sized chain link to ornamental aluminum estate-grade work.
+              From single-fence security perimeters to multi-site rollouts, our network of
+              commercial fence installation companies in Nashville handles every common material
+              — code-sized chain link fence around warehouses and lots, ornamental aluminum
+              fence at corporate entries, vinyl fence around multifamily playgrounds, and welded
+              ornamental iron at premium properties. A reliable commercial fence is essential to
+              protect your property, control access, and add aesthetic appeal at the curb. Each
+              top rated fence contractor in our directory pairs high quality fence materials and
+              fence styles with the attention to details and competitive prices that turn a
+              security fencing solution into long-term peace of mind.
             </p>
           </div>
 

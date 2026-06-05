@@ -22,7 +22,13 @@ export default function WhyFenceSection() {
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             From acreage in Williamson County to urban infill in East Nashville, the right fence
-            does more than mark a line — it solves a specific problem.
+            does more than mark a line — it solves a specific problem. A high quality fence is
+            essential to protect your property, frame the yard, and add aesthetic appeal. Whether
+            you need a wooden fence for backyard privacy, a vinyl fence for an HOA street, an
+            aluminum fence around a pool, or a chain link fence for a side run, the fence
+            contractor crews in our directory match the right fence styles and fence materials to
+            your lot — at competitive prices, with the attention to details that turn a fencing
+            solution into peace of mind.
           </p>
         </div>
 
