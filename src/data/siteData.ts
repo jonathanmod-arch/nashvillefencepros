@@ -348,6 +348,160 @@ export const RESOURCES = [
       'Climb-proof heights, dig guards, and material picks that keep golden retrievers in and coyotes out across Davidson County.',
     img: IMAGES.resources['best-fences-for-dogs'],
     imageAlt: 'Two dogs running on a fenced lawn — best fences for dogs in Nashville yards',
+    body: [
+      {
+        type: 'p',
+        text: "Here's the thing nobody tells you when you bring a dog home in Nashville: the fence is a homework assignment your dog is about to grade. I've installed somewhere north of a thousand residential fences across Davidson and Williamson counties, and I've also been the guy who shows up two months later because Bella the Husky figured out she's basically a deer. So before you pick a material, a height, or a Pinterest aesthetic, let me walk you through what your dog is actually going to test.",
+      },
+      { type: 'h2', text: 'The Three Questions Your Dog Is About to Ask' },
+      {
+        type: 'p',
+        text: "Picture them at the back door the morning the install crew finishes. They're not admiring the cedar grain. They're running a three-question diagnostic on your investment, in roughly this order:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Can I jump it?',
+          'Can I dig under it?',
+          'Can I see something I want to chase?',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Most fence advice on the internet talks about the first one. The dogs that actually escape my installs in Nashville almost always escape on the second or third. Plan for all three.",
+      },
+      { type: 'h2', text: 'Height — Read Your Dog, Not Just the Tape Measure' },
+      {
+        type: 'p',
+        text: "Forget 'small dog needs 4 ft, big dog needs 6 ft.' That guideline is going to get a Border Collie owner some unpleasant phone calls from a neighbor down the street. Athleticism matters more than size — and breed-driven prey drive matters more than both.",
+      },
+      { type: 'h3', text: 'The height map that actually works in Nashville' },
+      {
+        type: 'ul',
+        items: [
+          'Under 25 lbs, low energy: 4 ft. Maltese, Cavalier, a French Bulldog with the personality of a coffee table — fine.',
+          'Under 25 lbs, high energy (Jack Russell, Mini Schnauzer, Dachshund): 5 ft. Or 4 ft with a serious dig footer, because these guys are diggers.',
+          'Between 25 and 50 lbs, casual: 5 ft. Most family Goldens, Labs, mixed-breed adoptees who like the couch more than the yard.',
+          'Between 25 and 50 lbs, athletic (Border Collies, Aussies, anything herding): 6 ft. They are not jumping for fun, they are jumping because they are bored and they have a plan.',
+          'Over 50 lbs, athletic (Huskies, Vizslas, working-line German Shepherds, any Pit-mix with a healthy prey drive): 6 ft minimum, plus a 45-degree inward-angled top extension or a coyote roller along the rail. Looks ridiculous. Works.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If your dog is already an escape artist when you call me — they've cleared a 5-ft chain link at a friend's house, say — start the conversation at 7 ft and we'll work backwards from there.",
+      },
+      { type: 'h2', text: 'Materials That Actually Hold Up to Dogs' },
+      {
+        type: 'p',
+        text: "Every material has a quirk when there's a dog inside the fence line. Here's the honest breakdown.",
+      },
+      { type: 'h3', text: 'Wood Privacy (Cedar)' },
+      {
+        type: 'p',
+        text: "Western red cedar holds up fine to teeth in the short term. The real problem is the cedar fence next door that your dog stares at every day, slowly turning it into a chew toy. Cedar is also a teething puppy's favorite snack — if you have a young one or a separation-anxiety case, plan to replace the bottom 6 inches of pickets within two years. Adding a horizontal 2x4 cap rail at the top discourages climbers and costs almost nothing.",
+      },
+      { type: 'h3', text: 'Chain Link' },
+      {
+        type: 'p',
+        text: "Cheap, fast, dog-proof if you spec the right height. The downside is that everyone can see your dog, including the mail carrier, the squirrels, and the Doberman two houses down. If you have a reactive dog, chain link will hand them a full-time job they don't need. Black vinyl-coated chain link costs about 20 percent more than galvanized and looks dramatically less industrial — usually worth the upgrade.",
+      },
+      { type: 'h3', text: 'Vinyl' },
+      {
+        type: 'p',
+        text: "Smooth, dense, almost impossible to chew or scratch up. Vinyl is the move if you have a determined chewer — a panel that would be sawdust by Tuesday in cedar stays pristine for years in vinyl. Premium vinyl runs $32 to $44 a linear foot installed in Nashville, so you pay for that durability. July heat softens cheaper vinyl — buy from a contractor who has actually pulled out a sagging fence in August, not one selling out of a builder-grade catalog.",
+      },
+      { type: 'h3', text: 'Aluminum Ornamental' },
+      {
+        type: 'p',
+        text: "Looks great, sails through HOA review in neighborhoods that want consistency, and gives a dog excellent visibility (good for confident dogs, bad for reactive ones). The detail that surprises every homeowner: picket spacing. Four inches is the max for puppies or small breeds — a Mini Pinscher will be on the lawn in 30 seconds through anything wider. If you are not sure, specify 3 7/8 inches and move on.",
+      },
+      { type: 'h3', text: 'Welded Wire and Farm Mesh' },
+      {
+        type: 'p',
+        text: "Best for acreage outside Brentwood, Franklin, and the rural pockets of Williamson County. Cheaper per foot than privacy fencing and holds large dogs fine. Don't try to use it as a standalone barrier for a determined Husky — it will bow at the push points. Pair it with sturdy line posts every 8 feet, and add a hot wire along the top if you really need to keep something in.",
+      },
+      { type: 'h2', text: 'The Underground Game' },
+      {
+        type: 'p',
+        text: "If your dog is a digger — and Beagles, Huskies, Terriers, and Dachshunds are factory-shipped as diggers — the fence itself isn't enough. The trench under the fence is.",
+      },
+      {
+        type: 'p',
+        text: "Three dig-prevention options, cheap to expensive:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'L-footer: bend 18 inches of welded wire mesh outward along the ground at the base of the fence, then bury it 2-3 inches under sod. The dog hits buried mesh on the first dig attempt and gives up. Cheap materials, one day of labor.',
+          'Gravel trench: 12 inches of compacted gravel buried directly under the fence line. Dogs hate digging in gravel, and it doubles as drainage on flatter Davidson County lots. Middle option for cost and effort.',
+          'Concrete curb: a 6-inch concrete strip poured along the fence line. Permanent, a little ugly until the grass grows over it, completely dog-proof. Adds $8-12 per linear foot to the install.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Whatever you pick, make sure your installer talks about it. If you mention you have a dog and they don't bring up dig prevention on their own, that's a yellow flag and you should ask follow-up questions before signing anything.",
+      },
+      { type: 'h2', text: 'Privacy vs. Visibility — A Behavior Question, Not an Aesthetic' },
+      {
+        type: 'p',
+        text: "Counterintuitive insight from a guy who has been on a lot of backyard consults: solid privacy is not always the right call. If your dog is reactive — barks at squirrels, lunges at strollers, has a problem with the school bus — a privacy fence is heaven. They can't see the trigger, they don't react, the neighbors stop leaving notes.",
+      },
+      {
+        type: 'p',
+        text: "But if your dog is anxious — afraid of noises, suspicious of the unknown — solid privacy can make it worse. They hear the trigger but can't verify what it is, which is the dog brain's worst-case scenario. A see-through aluminum or a 4-inch picket spacing lets them check, confirm it's fine, and go back to napping.",
+      },
+      {
+        type: 'p',
+        text: "Mix-and-match works: 6 ft cedar privacy along the side neighbor (the loud one) and 5 ft aluminum across the back (the view of the woods). Most install crews in Nashville will quote that combination without blinking.",
+      },
+      { type: 'h2', text: 'Nashville-Specific Stuff Nobody Else Will Tell You' },
+      {
+        type: 'p',
+        text: "Three things that come up in this metro that don't make it into the standard fence guides.",
+      },
+      { type: 'h3', text: 'Coyotes are real and they are athletic' },
+      {
+        type: 'p',
+        text: "If you are on the outskirts of Davidson County, in the rural parts of Williamson, or anywhere with a wooded greenway behind you — you have coyote pressure whether you have seen one or not. A 4-ft fence is a suggestion to a coyote. Plan for 5 ft minimum, no foot holds on the top rail (no horizontal stringer they can use as a step), and serious dig prevention. Coyotes are diggers too.",
+      },
+      { type: 'h3', text: 'HOAs run this town' },
+      {
+        type: 'p',
+        text: "Brentwood, Franklin, and most of the planned communities require black aluminum or specific privacy specs. Get the architectural review board paperwork before the install crew shows up — the redo cost if you skip this is somewhere between $1,500 and the full project price. A good fence contractor should ask about HOA paperwork in the first ten minutes of the consultation. If they don't, ask them.",
+      },
+      { type: 'h3', text: 'Historic overlays do not care about your dog' },
+      {
+        type: 'p',
+        text: "Edgefield, Germantown, Lockeland Springs, Belle Meade Conservation — they care about the street-facing elevation, not your golden retriever's containment plan. The compromise that wins approval: traditional ornamental iron or picket out front (the part the review board sees), and modern dog-appropriate cedar or wire in the rear yard. The Historic Zoning Commission isn't your enemy. They just want to see a thoughtful application.",
+      },
+      { type: 'h2', text: 'What I Wish More People Asked Before They Hired Me' },
+      {
+        type: 'p',
+        text: "Eight questions that separate the contractors who think about dogs from the ones who think about linear footage:",
+      },
+      {
+        type: 'ol',
+        items: [
+          'What dig prevention do you include in the base bid? (If the answer is none, that is fine — just price the add-on now, not later.)',
+          'What is the picket spacing in inches? (Four-inch max for puppies and small breeds.)',
+          'How do you set the gate latch? Most escapes happen through gates, not fences — your dog has been watching you open the gate for weeks.',
+          'How do you handle the gap between the fence bottom and uneven ground? (This is where small dogs escape.)',
+          'What is the warranty if a dog damages the fence? (Usually none, but if it is offered, that is a sign the contractor has thought about dog installs.)',
+          "Have you installed for breed X before? A lot of contractors have never installed a coyote roller.",
+          'What is the tallest height the HOA will approve at my exact address?',
+          'Can I see one of your installs that is at least three years old — preferably one with a dog?',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Good answers to all eight earn the deposit. Vague answers to half of them mean keep calling.",
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Your dog will get out of any fence once if they really want to. The job of a good fence isn't to be uncrackable — it's to be a 99-percent containment system that buys you the time to fix the gate latch, plug the soft spot in the trench, or call your contractor back to add the section you didn't think you needed. Pick someone who treats the install as the start of the relationship, not the end. The right fence company will pick up the phone in October when the November rain washes out the L-footer they put in for you in May.",
+      },
+    ],
   },
   {
     slug: 'pool-fence-safety-tn',
