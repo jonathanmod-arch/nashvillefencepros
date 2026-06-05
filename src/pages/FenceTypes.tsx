@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
+import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { FENCE_TYPES } from '../data/siteData'
@@ -142,6 +143,7 @@ export default function FenceTypes() {
             { label: 'Fence Types', to: '/fence-types' },
             { label: t.name },
           ]}
+          right={<CallbackForm />}
         />
 
         <section className="bg-white section-padding">
@@ -287,6 +289,7 @@ export default function FenceTypes() {
         title="Nashville Fence Types & Styles"
         description="Cedar privacy, vinyl, aluminum, chain link, horizontal modern, farm — six material families that cover almost every Nashville install."
         crumbs={[{ label: 'Fence Types' }]}
+        right={<CallbackForm />}
       />
       <section className="bg-white section-padding">
         <div className="container-wide">
