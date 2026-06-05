@@ -24,7 +24,7 @@ const LINE_ITEMS = [
 
 export default function CostGuide() {
   useDocumentMeta({
-    title: 'Fence Installation Cost Nashville 2026 | Price by Material | Nashville Fence List',
+    title: 'Fence Installation Cost Nashville 2026 | Price by Material | Nashville Fence Guide',
     description:
       'Real Nashville fence installation cost data for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences. Interactive Nashville fence cost calculator + price-per-linear-foot ranges by material.',
     canonical: '/cost-guide',
@@ -39,7 +39,7 @@ export default function CostGuide() {
       description:
         'Installed price ranges for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences in Nashville TN with material-by-material breakdowns.',
       category: 'Cost',
-      image: 'https://nashvillefencelist.com/og.jpg',
+      image: 'https://nashvillefenceguide.com/og.jpg',
       publishedAt: RESOURCE_PUBLISHED_AT,
     }),
     serviceSchema({

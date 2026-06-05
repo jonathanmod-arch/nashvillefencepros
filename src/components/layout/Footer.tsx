@@ -143,10 +143,10 @@ export default function Footer() {
       <div className="border-t border-onyx-500 bg-onyx-700">
         <div className="container-wide py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
           <p className="text-[12px] text-onyx-300 leading-relaxed max-w-4xl">
-            <span className="text-white font-semibold">Disclaimer:</span> NashvilleFenceList.com is an independent local fence information and contractor referral platform created to help homeowners make informed fencing decisions. We are not a licensed contractor. Always verify permits and regulations with Metro Nashville directly.
+            <span className="text-white font-semibold">Disclaimer:</span> NashvilleFenceGuide.com is an independent local fence information and contractor referral platform created to help homeowners make informed fencing decisions. We are not a licensed contractor. Always verify permits and regulations with Metro Nashville directly.
           </p>
           <p className="text-[12px] text-onyx-300 whitespace-nowrap">
-            © {new Date().getFullYear()} NashvilleFenceList.com
+            © {new Date().getFullYear()} NashvilleFenceGuide.com
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ export default function Neighborhoods() {
 
   useDocumentMeta({
     title: n
-      ? `${n.name} Fence Installation TN | Nashville Fence List`
+      ? `${n.name} Fence Installation TN | Nashville Fence Guide`
       : 'Nashville Neighborhoods We Serve | Fence Installation by Area',
     description: n
       ? `Fence installation in ${n.name}, Nashville TN (${n.zip}). Popular style: ${n.popularStyle}. Typical project ${n.avgCost}. Compare vetted ${n.name} fence installers and get free quotes.`

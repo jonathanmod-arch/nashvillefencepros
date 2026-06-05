@@ -120,11 +120,11 @@ const SERVICES = [
   },
 ]
 
-const SITE_URL = 'https://nashvillefencelist.com'
+const SITE_URL = 'https://nashvillefenceguide.com'
 
 const BADGE_CODE = `<a href="${SITE_URL}/contractors" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;font-weight:600;text-decoration:none;color:#1B4332;background:#fff;border:1px solid #1B4332;border-radius:9999px;line-height:1;">
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B4332" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-  Verified on NashvilleFenceList.com
+  Verified on NashvilleFenceGuide.com
 </a>`
 
 const CARD_CODE = `<a href="${SITE_URL}/contractors" target="_blank" rel="noopener noreferrer" style="display:inline-flex;flex-direction:column;gap:8px;padding:16px 20px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;text-decoration:none;background:#fff;border:1px solid #E2E8F0;border-radius:12px;max-width:280px;color:#1A1D1E;">
@@ -132,7 +132,7 @@ const CARD_CODE = `<a href="${SITE_URL}/contractors" target="_blank" rel="noopen
     <div style="width:32px;height:32px;border-radius:6px;background:#1B4332;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:-0.02em;">NF</div>
     <div style="font-size:10px;color:#1A1D1E;opacity:0.55;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;">Verified Pro</div>
   </div>
-  <div style="font-size:14px;font-weight:700;color:#1A1D1E;line-height:1.25;">Featured on Nashville Fence List</div>
+  <div style="font-size:14px;font-weight:700;color:#1A1D1E;line-height:1.25;">Featured on Nashville Fence Guide</div>
   <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#1A1D1E;opacity:0.7;">
     <span style="color:#D4A373;letter-spacing:1px;">★★★★★</span>
     <span>4.9 by Nashville homeowners</span>
@@ -141,7 +141,7 @@ const CARD_CODE = `<a href="${SITE_URL}/contractors" target="_blank" rel="noopen
 
 export default function Advertise() {
   useDocumentMeta({
-    title: 'Advertise on Nashville Fence List | Lead Gen for Fence Contractors',
+    title: 'Advertise on Nashville Fence Guide | Lead Gen for Fence Contractors',
     description:
       'Advertise to thousands of Nashville homeowners hiring fence installers. Premium listings, category sponsorships, and homepage placement on the leading Nashville fence directory. From $99/mo, month-to-month.',
     canonical: '/advertise',
@@ -152,7 +152,7 @@ export default function Advertise() {
     breadcrumbList([{ label: 'Advertise' }]),
     webPageSchema({
       slug: '/advertise',
-      title: 'Advertise on Nashville Fence List',
+      title: 'Advertise on Nashville Fence Guide',
       description:
         'Premium listings, category sponsorships, and homepage placement on the leading Nashville fence directory.',
     }),
@@ -184,7 +184,7 @@ function Hero() {
           </span>
         </h1>
         <p className="mt-5 font-body text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-          NashvilleFenceList.com connects thousands of Nashville homeowners and
+          NashvilleFenceGuide.com connects thousands of Nashville homeowners and
           businesses with fence contractors every month. Get your company in front of
           high-intent buyers.
         </p>
@@ -410,7 +410,7 @@ function WidgetSection() {
           <h2 className="mt-3 heading-section">Add a Badge to Your Website</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Show your customers you're a verified Nashville Fence List professional.
+            Show your customers you're a verified Nashville Fence Guide professional.
             Copy and paste the code anywhere on your website.
           </p>
         </div>
@@ -491,7 +491,7 @@ function BadgePreview() {
         <path d="M9 12l2 2 4-4" />
         <circle cx="12" cy="12" r="10" />
       </svg>
-      Verified on NashvilleFenceList.com
+      Verified on NashvilleFenceGuide.com
     </span>
   )
 }
@@ -513,7 +513,7 @@ function CardPreview() {
         </div>
       </div>
       <div className="text-sm font-bold text-onyx-700 leading-tight">
-        Featured on Nashville Fence List
+        Featured on Nashville Fence Guide
       </div>
       <div className="flex items-center gap-1.5 text-xs text-onyx-700/70">
         <span className="text-oak-400 tracking-wider">★★★★★</span>

@@ -1,10 +1,10 @@
 import { IMAGES } from './imageUrls'
 
 export const COMPANY = {
-  name: 'Nashville Fence List',
+  name: 'Nashville Fence Guide',
   phone: '(615) 555-0100',
   phoneRaw: '+16155550100',
-  email: 'hello@nashvillefencelist.com',
+  email: 'hello@nashvillefenceguide.com',
   address: 'Nashville, TN',
   hours: 'Mon–Sat, 7:00 AM – 7:00 PM',
 }

@@ -7,7 +7,7 @@ type Meta = {
   noindex?: boolean
 }
 
-const SITE_URL = 'https://nashvillefencelist.com'
+const SITE_URL = 'https://nashvillefenceguide.com'
 
 function ensureTag<T extends HTMLElement>(
   selector: string,
