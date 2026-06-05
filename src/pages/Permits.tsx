@@ -78,7 +78,17 @@ export default function Permits() {
                 residential fence code
               </a>{' '}
               keeps it simple — but corner lots, pool barriers, and overlay districts add
-              layers.
+              layers. For a plain-English walkthrough of every yard, gate, and pool
+              requirement, see the{' '}
+              <a
+                href="https://tnfencerules.com/fence-rules-nashville-city-tennessee/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                Nashville fence-rules summary
+              </a>
+              .
             </p>
           </div>
 

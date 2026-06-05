@@ -126,7 +126,16 @@ export default function PoolFenceCode() {
                 Metro Nashville Codes
               </a>{' '}
               applies it to every residential pool installation and every pool-barrier
-              replacement.
+              replacement. For how the same rules apply outside Nashville,{' '}
+              <a
+                href="https://tnfencerules.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                tnfencerules.com
+              </a>{' '}
+              summarises pool-barrier requirements across Tennessee.
             </p>
           </div>
 

@@ -36,7 +36,16 @@ export default function PermitsSection() {
             <p className="mt-4 text-body-lead">
               Metro Nashville keeps fence rules relatively homeowner-friendly — but the wrong
               height or a missed historic overlay can mean removal at your expense. Here's the
-              straightforward breakdown.
+              straightforward breakdown — and{' '}
+              <a
+                href="https://tnfencerules.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                tnfencerules.com
+              </a>{' '}
+              covers the same ground for the rest of Tennessee.
             </p>
 
             <div className="mt-7 space-y-4">

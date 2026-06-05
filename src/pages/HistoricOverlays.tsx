@@ -137,7 +137,16 @@ export default function HistoricOverlays() {
               </a>{' '}
               reviews every fence application in these districts. Preservation overlays
               apply the strictest standards; Conservation overlays are more flexible but
-              still require approval.
+              still require approval. The{' '}
+              <a
+                href="https://tnfencerules.com/fence-rules-nashville-city-tennessee/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                Nashville fence-rules summary
+              </a>{' '}
+              has the overlay-by-overlay snapshot.
             </p>
           </div>
 
