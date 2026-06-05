@@ -55,8 +55,10 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded bg-forest-500 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
-              <span className="font-heading font-bold text-sm text-white">NF</span>
+            <div className="w-9 h-9 rounded-md bg-forest-500 flex items-center justify-center group-hover:bg-forest-600 transition-colors">
+              <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-oak-300" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <path d="M3 21V7l3-3 3 3v14M9 21V7l3-3 3 3v14M15 21V7l3-3 3 3v14M2 11h20M2 17h20" />
+              </svg>
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-heading font-bold text-onyx-700 text-base leading-tight">
