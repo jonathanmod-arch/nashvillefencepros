@@ -145,7 +145,10 @@ const buildCardCode = (profileUrl: string, businessName?: string): string => {
     <div style="font-size:10px;color:#1A1D1E;opacity:0.55;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;">Verified Pro</div>
   </div>
   <div style="font-size:14px;font-weight:700;color:#1A1D1E;line-height:1.25;">${heading}</div>
-  <div style="font-size:12px;color:#1B4332;font-weight:600;">View on Nashville Fence Guide →</div>
+  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#1A1D1E;">
+    <span style="color:#D4A373;letter-spacing:1px;">★★★★★</span>
+    <span style="font-weight:600;">Top Rated</span>
+  </div>
 </a>`
 }
 
@@ -577,8 +580,9 @@ function CardPreview({ businessName }: { businessName?: string }) {
       <div className="text-sm font-bold text-onyx-700 leading-tight">
         {businessName || 'Featured on Nashville Fence Guide'}
       </div>
-      <div className="text-xs text-forest-500 font-semibold">
-        View on Nashville Fence Guide →
+      <div className="flex items-center gap-1.5 text-xs text-onyx-700">
+        <span className="text-oak-400 tracking-wider">★★★★★</span>
+        <span className="font-semibold">Top Rated</span>
       </div>
     </a>
   )
