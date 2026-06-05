@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-forest-500 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs font-body">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-[11px] sm:text-xs font-body">
           <p className="font-semibold">
             Find and Hire The Best Fence Installation Companies in Nashville
           </p>
