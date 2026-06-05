@@ -22,11 +22,11 @@ export default function Neighborhoods() {
 
   useDocumentMeta({
     title: n
-      ? `${n.name} Fence Installation TN | Nashville Fence Guide`
-      : 'Nashville Service Areas | Fence Installation by City & Neighborhood',
+      ? `Fence Installation Nashville — ${n.name}, TN | Pros, Costs & Free Quotes`
+      : 'Fence Installation Nashville | Service Areas Across Davidson, Williamson & Rutherford',
     description: n
-      ? `Fence installation in ${n.name}, Nashville TN (${n.zip}). Popular style: ${n.popularStyle}. Typical project ${n.avgCost}. Compare vetted ${n.name} fence installers and get free quotes.`
-      : 'Compare Nashville fence installation by service area — Murfreesboro, Franklin, Brentwood, Hendersonville, Mount Juliet, Spring Hill, Smyrna, Clarksville, and every Davidson County neighborhood. Local pricing, popular styles, HOA notes.',
+      ? `Fence installation in Nashville's ${n.name} area (ZIP ${n.zip}). Compare vetted ${n.name} fence contractors for ${n.popularStyle.toLowerCase()} — typical project ${n.avgCost}. Wood, vinyl, aluminum, chain link, and ornamental iron — free quotes within 24 hours.`
+      : 'Fence installation Nashville — compare vetted fence contractors across every city and neighborhood in the Nashville metro. Local pricing, popular fence styles, and HOA notes for Murfreesboro, Franklin, Brentwood, Hendersonville, Mount Juliet, Spring Hill, Smyrna, Clarksville, and more.',
     canonical: slug ? `/service-areas/${slug}` : '/service-areas',
   })
 
@@ -113,10 +113,23 @@ export default function Neighborhoods() {
                 {n.note} Whether you're replacing an aging cedar fence or starting from scratch on a
                 new build, the local landscape — lot sizes, soil, and tree cover — shapes what holds up.
               </p>
-              <p className="text-body-lead mb-8">
+              <p className="text-body-lead mb-5">
                 Most {n.name} homeowners landing on this page are weighing privacy, curb appeal, and
                 neighborhood character. Our network has done hundreds of installs here and can match
                 you with a crew that already knows the local nuances.
+              </p>
+              <p className="text-body-lead mb-8">
+                A good fence is essential to protect your property, frame the yard, and add
+                aesthetic appeal — and in {n.name} the right call depends on lot size, HOA rules,
+                and what your neighbors already run. The fence company network we list installs
+                every common material in this area: a wooden fence for backyard privacy, a vinyl
+                fence on HOA-controlled lots, an aluminum fence along pools and front entries, and
+                chain link fence on larger parcels or side runs out of view. Each fence contractor
+                in our directory works at competitive prices with the attention to details that
+                drive a clean, warrantied fence installation — and the peace of mind that comes
+                with it. Whatever fencing solution fits your {n.name} home — residential fence or
+                commercial fences for a local business — the top rated pros we recommend will walk
+                you through high quality fence styles and fence materials that hold up on your lot.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -201,6 +214,24 @@ export default function Neighborhoods() {
       />
       <section className="bg-white section-padding">
         <div className="container-wide">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <p className="text-body-lead mb-4">
+              Fence installation in Nashville covers a sprawling metro — from Davidson County's
+              Belle Meade estates and East Nashville bungalows through Williamson County's Franklin
+              and Brentwood subdivisions, east into Wilson County's Mount Juliet and Lebanon, south
+              to Murfreesboro and Spring Hill, and north to Hendersonville and Gallatin. Every area
+              has its own fence styles, HOA quirks, and price bands.
+            </p>
+            <p className="text-body-lead">
+              A high quality fence is essential to protect your property and add aesthetic appeal,
+              whether you need a residential fence in a quiet cul-de-sac or commercial fences
+              around a local business. The fence contractor crews in our directory install every
+              common material — wooden fence, vinyl fence, aluminum fence, chain link fence, and
+              ornamental iron — at competitive prices, with the attention to details that turn a
+              fencing solution into peace of mind. Pick your city below for the top rated fence
+              company picks in that area.
+            </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {NEIGHBORHOODS.map((n, i) => (
               <div
