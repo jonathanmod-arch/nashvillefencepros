@@ -13,6 +13,8 @@
     "generate-sitemap": "tsx scripts/generate-sitemap.ts"
   },
   "dependencies": {
+    "@fontsource/inter-tight": "^5.2.7",
+    "@fontsource/plus-jakarta-sans": "^5.2.8",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",
     "react": "^18.3.1",
