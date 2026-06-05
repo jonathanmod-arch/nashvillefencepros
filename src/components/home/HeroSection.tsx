@@ -11,17 +11,6 @@ const bullets = [
   'Fast local fence estimates',
 ]
 
-const heroUrl = (w: number) => {
-  if (/[?&]w=\d+/.test(IMAGES.hero)) {
-    return IMAGES.hero.replace(/([?&])w=\d+/, `$1w=${w}`)
-  }
-  if (/\/\d+x\d+(?=\b|$|\?)/.test(IMAGES.hero)) {
-    const h = Math.round(w * 0.75)
-    return IMAGES.hero.replace(/\/\d+x\d+/, `/${w}x${h}`)
-  }
-  return IMAGES.hero
-}
-
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-white">
@@ -93,9 +82,11 @@ export default function HeroSection() {
         >
           <div className="relative rounded-2xl overflow-hidden shadow-strong w-full h-[550px] bg-warmgray">
             <SafeImage
-              src={heroUrl(900)}
+              src={IMAGES.hero}
               alt="nashville-fence-installers"
               className="w-full h-full object-cover"
+              sizes="(min-width: 1024px) 45vw, 0px"
+              widths={[768, 1024, 1280, 1600]}
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />
