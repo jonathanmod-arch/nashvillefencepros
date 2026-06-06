@@ -655,6 +655,145 @@ export const RESOURCES = [
     excerpt:
       'When you do (and do not) need a permit, height limits by yard, and how to handle historic overlay districts.',
     img: IMAGES.resources['metro-nashville-permits'],
+    body: [
+      {
+        type: 'p',
+        text: "I've pulled somewhere around four hundred fence permits at the Metro Codes office on Korean Veterans Boulevard, and I can tell you the actual hard part isn't the application. The hard part is figuring out whether you needed the permit at all, and if so, which Metro department you owe a phone call to first. This article is the short version of every conversation I've had on a Nashville driveway in the last decade.",
+      },
+      { type: 'h2', text: 'The Honest 80/20 — When You Need a Permit' },
+      {
+        type: 'p',
+        text: "For an average single-family residential fence in Nashville, you do NOT need a Metro Codes permit if all of the following are true:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'The fence is 8 feet tall or shorter.',
+          'The property is NOT in a historic overlay district.',
+          'There is no pool, pond, or water feature the fence is also serving as a barrier for.',
+          'You are not in a designated flood zone with a fence in the regulated area.',
+          'The fence is not part of a commercial property.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Hit all five and you can install without a Metro permit. That's how the majority of cedar privacy fences in Davidson County get built — no paperwork, just measure and dig. But miss even one and you're in permit territory, and Metro absolutely follows up on unpermitted work that crosses their radar (a neighbor complaint, a pool inspection, a real-estate disclosure).",
+      },
+      { type: 'h2', text: 'Height Limits by Yard — The Map You Actually Need' },
+      {
+        type: 'p',
+        text: "Even without a permit, Metro has zoning rules on height. These apply whether you're permitting or not, and your contractor should know them cold. Show them this list at the consultation if you want to see who knows their job:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Front yard, solid panel (privacy, vinyl, solid wood): 3.5 feet maximum.',
+          'Front yard, open style (picket, ornamental aluminum, iron): 4 feet maximum.',
+          'Side yard: 8 feet maximum on a standard residential lot.',
+          'Rear yard: 8 feet maximum.',
+          'Corner-lot sight triangle (within 30 feet of an intersection): 3 feet maximum, no exceptions, no negotiation.',
+          'Pool barrier: 4 feet minimum (this is a separate state-level rule that overrides the zoning numbers).',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If you want a taller fence than these — say a 10-foot acoustic fence along a noisy back street — you need a Metro Codes variance and a building permit. Expect to add 30 to 60 days to the project timeline.",
+      },
+      { type: 'h2', text: 'The Permit Process When You Actually Need One' },
+      {
+        type: 'p',
+        text: "When a permit is required, the steps are short but easy to mess up.",
+      },
+      { type: 'h3', text: 'Step 1 — Confirm your zoning' },
+      {
+        type: 'p',
+        text: "Pull up your property on the Metro Davidson Parcel Viewer and verify the zoning district, the overlay status, and any flood zone designation. This is free and takes 90 seconds. Bring screenshots to the contractor consultation so you both look at the same data.",
+      },
+      { type: 'h3', text: 'Step 2 — Submit the application' },
+      {
+        type: 'p',
+        text: "You can apply online through the Metro ePermits portal or walk into the Codes office. Walk-ins used to be faster; the online portal has caught up in the last two years and is now my default. You'll need a site plan (a hand-drawn parcel map with the fence line marked is fine), the proposed materials, and the height. Fee is around $50-100 for a residential fence permit at time of writing, but verify the current schedule.",
+      },
+      { type: 'h3', text: 'Step 3 — Wait for plan review' },
+      {
+        type: 'p',
+        text: "Plan review takes anywhere from one day to two weeks depending on Codes' backlog. A clean, simple residential fence application typically clears in 3-5 business days. Historic overlay applications take longer because they also route through the Historic Zoning Commission.",
+      },
+      { type: 'h3', text: 'Step 4 — Inspection after install' },
+      {
+        type: 'p',
+        text: "Most residential fence permits in Nashville require a single rough-and-final inspection after the install is complete. Schedule it through Metro, meet the inspector on site, and have the permit number ready. Pool barriers add a separate barrier inspection — see the Pool Fence Safety article for the details.",
+      },
+      { type: 'h2', text: 'Historic Overlay Districts — A Different Animal' },
+      {
+        type: 'p',
+        text: "Nashville has eight active historic overlay districts as of this writing, and your fence application in any of them goes through the Metro Historic Zoning Commission BEFORE it goes through Codes. The districts that come up most often in fence work:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Edgefield (East Nashville)',
+          'Germantown',
+          'Lockeland Springs',
+          'Richland-West End',
+          'Hillsboro-West End',
+          'Belle Meade Conservation (technically a separate city, even stricter)',
+        ],
+      },
+      {
+        type: 'p',
+        text: "The Historic Zoning Commission cares almost entirely about street-facing elevations. They want to see materials, height, and style that fit the period of the district. The compromise that wins approval almost every time: traditional wood picket or wrought iron on the front yard, modern dog-appropriate cedar or aluminum in the rear yard where reviewers can't see it from the street.",
+      },
+      {
+        type: 'p',
+        text: "Submit the Preservation Permit application through Metro Historic Zoning. Once approved, the preservation permit attaches to your standard Metro Codes building permit. Skipping the HZC step and going straight to Codes is a guaranteed reject — they catch it on plan review and route you back. Plan an extra 4-6 weeks for the HZC review window.",
+      },
+      { type: 'h2', text: 'HOA Versus Metro — They Are Not the Same' },
+      {
+        type: 'p',
+        text: "Brentwood, Franklin, Spring Hill, most of the planned communities, and even some neighborhoods inside Davidson County have HOAs with their own architectural review boards. The HOA is a private contract you signed at closing. Metro is the government. They run on completely separate tracks.",
+      },
+      {
+        type: 'p',
+        text: "Metro approval does not satisfy your HOA. HOA approval does not satisfy Metro. You need both, in any order, before the dig. The HOA review is usually faster (1-2 weeks) but the rules are often tighter — many HOAs require specific colors, specific materials, or specific manufacturers. Read your CC&Rs before you get a quote, not after.",
+      },
+      { type: 'h2', text: "Tennessee 811 — Don't Skip This" },
+      {
+        type: 'p',
+        text: "Before any post hole goes in the ground in Tennessee, state law requires you (or your contractor) to call 811 and give a minimum of three business days notice. The free Tennessee 811 utility-marking service will come out, paint flags for gas, electric, water, fiber, and telecom, and that's it. Don't skip it.",
+      },
+      {
+        type: 'p',
+        text: "Hitting a gas line is a five-figure fine plus restoration plus whatever the gas company decides to add. Hitting a fiber line is the same plus an angry tech crew rerouting service for the block. Hitting a water line is just inconvenient and embarrassing. Your contractor should make the 811 call. If they don't, that's a major yellow flag.",
+      },
+      { type: 'h2', text: 'Common Homeowner Mistakes That Cost Money' },
+      {
+        type: 'ul',
+        items: [
+          'Assuming the permit covers the HOA review. They are separate processes.',
+          'Building the fence before HZC approval in a historic district. Removal at your expense is the standard penalty.',
+          'Setting a corner-lot fence above 3 feet within the sight triangle. Metro will make you tear it down.',
+          'Not pulling a permit for a commercial property fence "because it is just a small one." Commercial fences always need a permit, regardless of size.',
+          'Replacing an existing fence at a different height without checking the current rules. Old grandfathered heights do not always transfer to new construction.',
+        ],
+      },
+      { type: 'h2', text: 'Questions to Ask Your Fence Contractor About Permits' },
+      {
+        type: 'ol',
+        items: [
+          'Do you pull the Metro Codes permit on my behalf, or am I pulling it myself? (Almost every reputable contractor pulls it for you — included in the bid.)',
+          'How many Metro fence permits have you pulled in the last 12 months?',
+          'Will you submit the HZC application if my property is in a historic overlay?',
+          'Do you make the Tennessee 811 call, or do I?',
+          'What happens to my deposit if the permit gets denied?',
+        ],
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Metro Codes inspectors are reasonable people doing a routine job. Your fence project is the 47th of their day. Have the permit number ready, walk the line with them, and let them do the work. The permit fee is the cheapest part of the project, and the peace of mind of a closed-out permit is worth dramatically more on the day you sell the house. Get it done right the first time.",
+      },
+    ],
   },
   {
     slug: 'fence-cost-breakdown',
