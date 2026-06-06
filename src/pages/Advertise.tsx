@@ -27,6 +27,7 @@ import {
 type Plan = {
   name: string
   price: string
+  leads: number
   blurb: string
   features: string[]
   cta: string
@@ -39,6 +40,7 @@ const PLANS: Plan[] = [
   {
     name: 'Premium Listing',
     price: '$99',
+    leads: 3,
     blurb: 'Get noticed with a standout listing and direct lead forwarding.',
     features: [
       'Enhanced directory listing',
@@ -51,6 +53,7 @@ const PLANS: Plan[] = [
   {
     name: 'Category Feature',
     price: '$249',
+    leads: 6,
     blurb: 'Own your service category and capture more leads in your specialty.',
     features: [
       'Featured placement in your category',
@@ -65,6 +68,7 @@ const PLANS: Plan[] = [
   {
     name: 'Directory Feature',
     price: '$349',
+    leads: 9,
     blurb:
       'Maximum visibility across the platform — homepage, directory, and blog.',
     features: [
@@ -82,6 +86,7 @@ const PLANS: Plan[] = [
   {
     name: 'Homepage Sponsor',
     price: '$499',
+    leads: 15,
     blurb:
       'Maximum brand exposure with a dedicated sponsor banner on the homepage.',
     features: [
@@ -634,6 +639,16 @@ function PlanCard({ plan }: { plan: Plan }) {
         <span className={`text-sm ${dark ? 'text-white/60' : 'text-onyx-700/60'}`}>
           /mo
         </span>
+      </div>
+      <div
+        className={`mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold w-fit ${
+          dark
+            ? 'bg-white/10 text-oak-300 border border-white/15'
+            : 'bg-forest-50 text-forest-500 border border-forest-100'
+        }`}
+      >
+        <span className={`w-1.5 h-1.5 rounded-full ${dark ? 'bg-oak-400' : 'bg-forest-500'}`} />
+        ≈ {plan.leads} leads/mo
       </div>
       <p
         className={`mt-3 font-body text-sm leading-relaxed ${
