@@ -182,11 +182,23 @@ export default function Advertise() {
   )
 }
 
+const ROI_PLANS = [
+  { id: 'premium', name: 'Premium Listing', price: 99, leads: 3 },
+  { id: 'category', name: 'Category Feature', price: 249, leads: 6 },
+  { id: 'directory', name: 'Directory Feature', price: 349, leads: 9 },
+  { id: 'sponsor', name: 'Homepage Sponsor', price: 499, leads: 15 },
+] as const
+
+type PlanId = (typeof ROI_PLANS)[number]['id']
+
 function ROICalculator() {
+  const [planId, setPlanId] = useState<PlanId>('directory')
   const [avgTicket, setAvgTicket] = useState(4800)
-  const [leads, setLeads] = useState(20)
   const [profitMargin, setProfitMargin] = useState(35)
   const [closeRate, setCloseRate] = useState(30)
+
+  const plan = ROI_PLANS.find((p) => p.id === planId) ?? ROI_PLANS[2]
+  const leads = plan.leads
 
   const newCustomers = leads * (closeRate / 100)
   const monthlyRevenue = newCustomers * avgTicket
@@ -194,6 +206,8 @@ function ROICalculator() {
   const avgProfitPerJob = avgTicket * (profitMargin / 100)
   const valuePerLead = avgTicket * (closeRate / 100)
   const netMarginPerLead = valuePerLead * (profitMargin / 100)
+  const netAfterPlan = monthlyProfit - plan.price
+  const roiMultiple = plan.price > 0 ? monthlyProfit / plan.price : 0
 
   const fmtMoney = (n: number) =>
     n >= 1000
@@ -224,30 +238,54 @@ function ROICalculator() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid sm:grid-cols-2 gap-4 mb-4">
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <label className="block text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3">
-                Average ticket per install
-              </label>
-              <div className="flex items-center gap-2">
-                <span className="font-heading font-bold text-oak-400 text-2xl">$</span>
-                <input
-                  type="number"
-                  value={avgTicket}
-                  onChange={(e) => setAvgTicket(Math.max(0, Number(e.target.value) || 0))}
-                  min={0}
-                  className="roi-input"
-                />
-              </div>
+          <div className="mb-4">
+            <div className="text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3 text-center">
+              Pick a Plan — Drag the sliders below to see your ROI
             </div>
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <label className="block text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3">
-                Leads you'd take each month
-              </label>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              {ROI_PLANS.map((p) => {
+                const active = p.id === planId
+                return (
+                  <button
+                    key={p.id}
+                    type="button"
+                    onClick={() => setPlanId(p.id)}
+                    className={`text-left rounded-2xl border p-4 transition-all ${
+                      active
+                        ? 'bg-oak-400/15 border-oak-400 ring-2 ring-oak-400/40'
+                        : 'bg-white/5 border-white/10 hover:border-white/30 hover:bg-white/10'
+                    }`}
+                  >
+                    <div className={`text-[10px] font-bold uppercase tracking-[0.18em] mb-1 ${active ? 'text-oak-400' : 'text-white/50'}`}>
+                      {active ? 'Selected' : 'Plan'}
+                    </div>
+                    <div className="font-heading font-bold text-white text-base leading-tight">
+                      {p.name}
+                    </div>
+                    <div className="mt-2 flex items-baseline justify-between gap-2">
+                      <span className="text-white font-heading font-black text-xl tracking-tightest">
+                        ${p.price}<span className="text-xs font-semibold text-white/60 ml-0.5">/mo</span>
+                      </span>
+                      <span className="text-xs font-semibold text-oak-400">
+                        {p.leads} leads/mo
+                      </span>
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-4">
+            <label className="block text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3">
+              Average ticket per install
+            </label>
+            <div className="flex items-center gap-2">
+              <span className="font-heading font-bold text-oak-400 text-2xl">$</span>
               <input
                 type="number"
-                value={leads}
-                onChange={(e) => setLeads(Math.max(0, Number(e.target.value) || 0))}
+                value={avgTicket}
+                onChange={(e) => setAvgTicket(Math.max(0, Number(e.target.value) || 0))}
                 min={0}
                 className="roi-input"
               />
@@ -362,6 +400,37 @@ function ROICalculator() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-6 rounded-2xl bg-forest-500 text-white p-6 md:p-8 relative overflow-hidden">
+            <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-oak-400/20 blur-3xl pointer-events-none" />
+            <div className="relative grid md:grid-cols-[1fr_auto] gap-6 items-center">
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-oak-400 mb-2">
+                  Plan ROI
+                </div>
+                <div className="font-heading font-black text-white text-2xl md:text-3xl tracking-tightest leading-tight">
+                  On the {plan.name} at ${plan.price}/mo, you net{' '}
+                  <span className={netAfterPlan >= 0 ? 'text-oak-400' : 'text-white'}>
+                    {netAfterPlan >= 0 ? fmtMoney(netAfterPlan) : `-${fmtMoney(Math.abs(netAfterPlan))}`}
+                  </span>
+                  /mo after the listing fee.
+                </div>
+                <p className="text-sm text-white/75 mt-3 leading-relaxed max-w-2xl">
+                  ${Math.round(monthlyProfit).toLocaleString()} projected monthly profit minus the ${plan.price} plan
+                  cost. Tap a different plan above to compare.
+                </p>
+              </div>
+              <div className="text-center md:text-right md:border-l md:border-white/15 md:pl-6">
+                <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-oak-400 mb-1">
+                  Return Multiple
+                </div>
+                <div className="font-heading font-black text-oak-400 text-5xl md:text-6xl tracking-tightest leading-none">
+                  {roiMultiple.toFixed(1)}<span className="text-3xl md:text-4xl">×</span>
+                </div>
+                <div className="text-xs text-white/60 mt-2">profit ÷ plan cost</div>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-10">
