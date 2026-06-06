@@ -1479,6 +1479,128 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'property-line-survey-nashville-fence',
+    title: 'Property Line Surveys Before Your Nashville Fence Install',
+    category: 'Planning',
+    readTime: '7 min',
+    excerpt:
+      'When you actually need a property line survey before installing a fence in Nashville, what it costs in Davidson and Williamson Counties, and the Tennessee adverse-possession risk if you skip it.',
+    img: IMAGES.resources['property-line-survey-nashville-fence'],
+    imageAlt: 'Wooden fence along a residential property boundary — Nashville property line survey guide',
+    body: [
+      {
+        type: 'p',
+        text: "About one in five fence calls I take is on a project that's already going wrong. The most expensive way for a fence project to go wrong in Nashville isn't a leaning post or a bent panel — it's a property line dispute. I've watched two scenarios this year that didn't have to happen. A homeowner in Inglewood paid to remove a six-month-old cedar fence that turned out to be 14 inches over the line. A Brentwood couple lost a 4-foot strip of their backyard because the neighbor's chain link had sat over the line for more than seven years. Both could have been avoided with a $700 survey. This article is how to know when you need one.",
+      },
+      { type: 'h2', text: 'The Three Scenarios Where You Need a Survey Before You Sign Anything' },
+      {
+        type: 'ul',
+        items: [
+          "New build, OR your subdivision was platted more than 25 years ago. Original corner pins are often gone — weathered into the soil, buried under landscaping, or pulled out during utility work. Without pins, your fence line is just a guess.",
+          "Your neighbor's fence, garden bed, or driveway is anywhere near where you think the line is. Assume at least one of you is wrong. I've never been to a property where both sides agreed on the line without a survey and were both right.",
+          "You're putting in any fence taller than 4 feet within 10 feet of a side or front line. Metro setback rules apply in this zone, and getting them wrong is a removal order.",
+        ],
+      },
+      { type: 'h2', text: 'When You Can Probably Skip the Full Survey' },
+      {
+        type: 'ul',
+        items: [
+          "You have a recent (under 5 years) recorded plat with corner pins still visible and unmoved.",
+          "The new fence sits more than 5 feet inside the closest known line — well clear of any plausible dispute.",
+          "You're replacing an existing fence in the exact same location and no neighbor has ever objected to where the old one was.",
+          "You're in a new subdivision (under 10 years) and the developer's recorded pin survey is on file with the county.",
+        ],
+      },
+      { type: 'h2', text: 'What a Tennessee Property Survey Actually Costs in Nashville' },
+      {
+        type: 'p',
+        text: "Four flavors of survey come up in fence work. Costs are 2026 ranges for Davidson and Williamson Counties — Wilson, Sumner, and Rutherford run roughly the same.",
+      },
+      { type: 'h3', text: 'Pin survey — the cheapest' },
+      {
+        type: 'p',
+        text: "A licensed surveyor locates your existing corner pins, verifies them against the recorded plat, and re-flags or re-sets any that have gone missing. If pins exist and there's no question about lot dimensions, this is enough for most fence projects. $400-700 in Davidson County. Fastest turnaround — usually 1-2 weeks.",
+      },
+      { type: 'h3', text: 'Boundary survey — the standard' },
+      {
+        type: 'p',
+        text: "The surveyor verifies your lot dimensions against your deed, sets new pins at every corner, and stakes the line at intermediate points (usually every 50 feet). This is what every reputable fence contractor wants to see for a project on or near a line. $700-1,400 in Davidson and Williamson. 2-4 week turnaround in normal conditions.",
+      },
+      { type: 'h3', text: 'Topographic survey' },
+      {
+        type: 'p',
+        text: "Boundary survey plus elevations. Useful if you have a sloped lot and the contractor needs to plan a stepped fence, or if you're combining the fence with grading or hardscape work. $1,200-2,500.",
+      },
+      { type: 'h3', text: 'Title or ALTA survey' },
+      {
+        type: 'p',
+        text: "Boundary survey plus all recorded easements, encumbrances, and rights-of-way. Required by some lenders, very rarely needed for a fence project alone. $1,500-2,500. Skip unless your title company has specifically asked for it.",
+      },
+      { type: 'h2', text: 'The Tennessee Adverse Possession Risk Most Homeowners Have Never Heard Of' },
+      {
+        type: 'p',
+        text: "Tennessee has an adverse possession statute. With color of title (a flawed deed that the occupier reasonably believed gave them the land), the statutory window is 7 years. Without color of title — straight squatter math — it's 20 years. Either way, the practical rule is the same: if a neighbor uses a strip of your land openly, continuously, and exclusively for the statutory window, they can claim it as theirs. I'm not a lawyer; this is a contractor's translation of the law that you should verify with one before acting on it.",
+      },
+      {
+        type: 'p',
+        text: "The classic Nashville version: their grandfather's fence has been 18 inches inside your line since 1962, and three deeds ago somebody described the lot using that fence as the boundary instead of the recorded plat. By the time you bought the house, the strip was already legally lost. The buyers who avoid this are the ones who get a boundary survey BEFORE closing and renegotiate (or walk) if the lines don't match the fence.",
+      },
+      {
+        type: 'p',
+        text: "How to protect yourself if you spot an encroachment now: get a current survey, send the neighbor a certified letter documenting that you don't agree to the fence location, and require it removed or relocated by a specific date. The certified letter is what breaks the clock — courts read it as you exercising your possession rights. Talk to a Tennessee real-estate attorney before sending it. The letter is the cheap part; the path that follows it matters.",
+      },
+      { type: 'h2', text: 'What a Fence Contractor Actually Wants From a Survey' },
+      {
+        type: 'p',
+        text: "When you hand me a survey at the consultation, here's the order I look at things:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Physical stakes in the ground at every corner I can see from the truck. PDFs without physical markers don't help me dig holes.",
+          "A drawing showing the new fence line offset from the surveyed line — three to six inches inside, never directly on it. Building on the exact line invites every kind of dispute, and most municipalities want a small setback anyway.",
+          "Notes on every easement crossing the lot — utility, drainage, sewer, shared driveway. Posts can't go in easements without the easement holder's written permission.",
+          "The date the survey was completed. Under 18 months is fresh. Over 5 years is stale and I'll want a re-pin before we dig.",
+        ],
+      },
+      { type: 'h2', text: 'Working With a Tennessee Land Surveyor' },
+      {
+        type: 'p',
+        text: "All survey work in Tennessee requires a state-licensed Registered Land Surveyor. The license number — RLS-followed-by-digits — appears on every legitimate surveyor's drawing. If it isn't there, you don't have a legal survey, you have an expensive map. Look for someone with active Davidson and Williamson County experience; older subdivisions in these counties have plat quirks that surveyors from out of region miss.",
+      },
+      {
+        type: 'p',
+        text: "Get the quote in writing with a turnaround time. 3-4 weeks from contract to deliverables is the normal window in Nashville. Faster than 2 weeks usually costs a rush fee. Storm season (April-June) and end-of-year (November-December) are the slowest periods because insurance adjusters are pulling surveyors for claims work — plan around it.",
+      },
+      { type: 'h2', text: 'Two Stories I Tell Every Homeowner Who Tries to Skip This' },
+      {
+        type: 'p',
+        text: "Story one. East Nashville bungalow, 2017 install. The owner relied on Google Earth measurements and the corner of the neighbor's old fence to estimate the line. Six months after the install, the neighbor's surveyor flagged 14 inches of encroachment along a 70-foot run. Removal cost $1,800. Re-install cost $4,800. A pin survey at the start would have been $600. Total avoidable cost: $6,000.",
+      },
+      {
+        type: 'p',
+        text: "Story two. Brentwood couple, inherited the property. The neighbor's chain link had been over the recorded line for at least nine years. By the time they realized it during a refinance survey, the 7-year adverse possession window had already run, and the title insurance company recommended a quiet-title action to clear the cloud. They lost a 4-foot-wide strip across the back of the lot — roughly 280 square feet of lawn. A survey done at the original purchase would have flagged it and given them a window to act.",
+      },
+      { type: 'h2', text: 'What to Ask a Surveyor Before You Hire' },
+      {
+        type: 'ol',
+        items: [
+          "What's your Tennessee RLS license number? (Verify it's current with the state board before you sign.)",
+          "How many residential boundary surveys have you done in my county in the last 12 months?",
+          "What's included — pin replacement, physical stakes, recorded drawing, follow-up if a neighbor disputes?",
+          "What's the turnaround from contract to deliverables?",
+          "Do you provide stakes for the new fence line offset, or just the property line itself?",
+          "What's your fee structure if you find an encroachment that requires a corrected drawing?",
+        ],
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "A property line survey is the cheapest insurance available on a fence install. The $700 cost of a clean pin survey is less than the cost of moving a single fence section, dramatically less than the cost of a property dispute, and orders of magnitude less than the cost of losing four feet of your backyard to a 1962 fence line. Get it before you sign the contractor's quote. Hand the surveyor's drawing to whoever you hire. Tell them to set the new fence three to six inches inside the line. Sleep better.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
