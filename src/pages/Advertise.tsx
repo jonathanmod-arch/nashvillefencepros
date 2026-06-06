@@ -272,7 +272,7 @@ function ROICalculator() {
                         ${p.price}<span className="text-xs font-semibold text-white/60 ml-0.5">/mo</span>
                       </span>
                       <span className="text-xs font-semibold text-oak-400">
-                        {p.leads} leads/mo
+                        {p.leads}+ leads/mo
                       </span>
                     </div>
                   </button>
@@ -648,7 +648,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         }`}
       >
         <span className={`w-1.5 h-1.5 rounded-full ${dark ? 'bg-oak-400' : 'bg-forest-500'}`} />
-        ≈ {plan.leads} leads/mo
+        {plan.leads}+ leads/mo
       </div>
       <p
         className={`mt-3 font-body text-sm leading-relaxed ${
