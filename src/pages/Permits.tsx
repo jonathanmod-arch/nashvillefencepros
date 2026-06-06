@@ -53,9 +53,9 @@ export default function Permits() {
   return (
     <>
       <PageHero
-        eyebrow="Metro Compliance"
-        title="Nashville Fence Permits, Rules & Regulations"
-        description="Everything Davidson and Williamson County homeowners need before fence installation in Nashville TN, heights, permits, HOA approvals, dig-safe 811, and historic overlays."
+        eyebrow={`${CITY.permitOffice.shortName} Compliance`}
+        title={`${CITY.name} Fence Permits, Rules & Regulations`}
+        description={`Everything ${CITY.primaryCounty} and ${CITY.secondaryCounty} County homeowners need before fence installation in ${CITY.name} ${CITY.stateAbbr}, heights, permits, HOA approvals, dig-safe 811, and historic overlays.`}
         crumbs={[{ label: 'Permits & Rules' }]}
         right={<CallbackForm />}
       />
@@ -66,12 +66,12 @@ export default function Permits() {
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="label-eyebrow">Height Limits</span>
-            <h2 className="mt-3 heading-section">Nashville Fence Height by Yard</h2>
+            <h2 className="mt-3 heading-section">{CITY.name} Fence Height by Yard</h2>
             <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
-              Metro Nashville's{' '}
+              {CITY.permitOffice.shortName}'s{' '}
               <a
-                href="https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence"
+                href={CITY.permitOffice.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
@@ -79,17 +79,7 @@ export default function Permits() {
                 residential fence code
               </a>{' '}
               keeps it simple, but corner lots, pool barriers, and overlay districts add
-              layers. For a plain-English walkthrough of every yard, gate, and pool
-              requirement, see the{' '}
-              <a
-                href="https://tnfencerules.com/fence-rules-nashville-city-tennessee/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
-              >
-                Nashville fence-rules summary
-              </a>
-              .
+              layers.
             </p>
           </div>
 
@@ -149,12 +139,12 @@ export default function Permits() {
             <p className="text-sm text-onyx-700/70 leading-relaxed mb-4">
               Fences in these neighborhoods require{' '}
               <a
-                href="https://www.nashville.gov/departments/historical-commission"
+                href={CITY.historicCommission.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
-                Historic Zoning Commission
+                {CITY.historicCommission.name}
               </a>{' '}
               review before installation, even for replacements.
             </p>
@@ -181,10 +171,10 @@ export default function Permits() {
                 <AlertTriangle className="w-3.5 h-3.5" /> Required
               </div>
               <h3 className="text-2xl font-heading font-bold tracking-tightest mb-3">
-                Tennessee 811, Call Before You Dig
+                {CITY.dig811.name}, Call Before You Dig
               </h3>
               <p className="text-white/80 text-sm leading-relaxed mb-5">
-                Tennessee law requires at least 3 business days notice before any digging.
+                {CITY.state} law requires at least {CITY.dig811.noticeBusinessDays} business days notice before any digging.
                 Free utility marking for gas, electric, water, fiber, and telecom.
               </p>
               <a
@@ -204,7 +194,7 @@ export default function Permits() {
                 Pool Barrier Code
               </h3>
               <p className="text-forest-700 text-sm leading-relaxed mb-5">
-                Tennessee adopts the 2018 ISPSC: a minimum 4 ft barrier, openings no greater
+                {CITY.state} adopts the {CITY.poolBarrierCode}: a minimum 4 ft barrier, openings no greater
                 than 4 inches, and a self-closing, self-latching gate that swings outward
                 from the pool.
               </p>

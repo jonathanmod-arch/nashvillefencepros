@@ -107,8 +107,7 @@ const SERVICES = [
   {
     icon: Search,
     name: 'Google My Business Optimization',
-    blurb:
-      'We audit, optimize, and manage your Google Business Profile so you show up in local map searches across Nashville. Includes photo uploads, review response management, and category optimization.',
+    blurb: `We audit, optimize, and manage your Google Business Profile so you show up in local map searches across ${CITY.name}. Includes photo uploads, review response management, and category optimization.`,
     startingAt: '$149/mo',
   },
   {
@@ -121,13 +120,12 @@ const SERVICES = [
   {
     icon: BarChart3,
     name: 'Local SEO Services',
-    blurb:
-      'Get your business ranking for "fence contractor Nashville" and other high-intent keywords. Includes on-page SEO, local citations, backlink building, and monthly ranking reports.',
+    blurb: `Get your business ranking for "fence contractor ${CITY.name}" and other high-intent keywords. Includes on-page SEO, local citations, backlink building, and monthly ranking reports.`,
     startingAt: '$299/mo',
   },
 ]
 
-const SITE_URL = 'https://nashvillefenceguide.com'
+const SITE_URL = CITY.siteUrl
 
 const escapeHtml = (s: string): string =>
   s
@@ -140,11 +138,11 @@ const escapeHtml = (s: string): string =>
 const buildBadgeCode = (profileUrl: string): string =>
   `<a href="${profileUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;font-weight:600;text-decoration:none;color:#1B4332;background:#fff;border:1px solid #1B4332;border-radius:9999px;line-height:1;">
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B4332" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-  Verified on NashvilleFenceGuide.com
+  Verified on ${CITY.domain}
 </a>`
 
 const buildCardCode = (profileUrl: string, businessName?: string): string => {
-  const heading = businessName ? escapeHtml(businessName) : 'Featured on Nashville Fence Guide'
+  const heading = businessName ? escapeHtml(businessName) : `Featured on ${CITY.siteName}`
   return `<a href="${profileUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;flex-direction:column;gap:8px;padding:16px 20px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;text-decoration:none;background:#fff;border:1px solid #E2E8F0;border-radius:12px;max-width:280px;color:#1A1D1E;">
   <div style="display:flex;align-items:center;gap:10px;">
     <div style="width:32px;height:32px;border-radius:6px;background:#1B4332;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:-0.02em;">NF</div>
@@ -232,7 +230,7 @@ function ROICalculator() {
             Lead Value Calculator
           </span>
           <h2 className="font-heading font-black text-3xl sm:text-4xl text-white tracking-tightest leading-[1.05] mb-3">
-            What's a Nashville Fence Lead Worth to Your Shop?
+            What's a {CITY.name} Fence Lead Worth to Your Shop?
           </h2>
           <div className="w-12 h-0.5 bg-oak-400 mx-auto mb-5" />
           <p className="font-body text-base text-white/70">
@@ -442,7 +440,7 @@ function ROICalculator() {
               href="#advertise-contact"
               className="inline-flex items-center justify-center gap-2 bg-oak-400 hover:bg-oak-300 text-forest-500 text-base font-semibold px-6 py-3.5 rounded-lg transition-colors"
             >
-              Get Nashville Fence Leads <ArrowRight className="w-4 h-4" />
+              Get {CITY.name} Fence Leads <ArrowRight className="w-4 h-4" />
             </a>
             <p className="text-xs text-white/50 mt-3">
               Numbers are projections, actuals depend on your sales process and follow-up speed.
@@ -523,21 +521,21 @@ function Hero() {
         <span className="label-eyebrow !text-oak-400">Partner With Us</span>
         <h1 className="mt-3 font-heading font-black tracking-tightest leading-none">
           <span className="block text-4xl sm:text-5xl lg:text-6xl text-white">
-            Reach Nashville Homeowners
+            Reach {CITY.name} Homeowners
           </span>
           <span className="block text-4xl sm:text-5xl lg:text-6xl text-oak-400 mt-1">
             Ready to Buy
           </span>
         </h1>
         <p className="mt-5 font-body text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-          NashvilleFenceGuide.com connects thousands of Nashville homeowners and
+          {CITY.domain} connects thousands of {CITY.name} homeowners and
           businesses with fence contractors every month. Get your company in front of
           high-intent buyers.
         </p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
           <StatCard icon={Users} value="12,000+" label="Monthly visitors" />
-          <StatCard icon={MapPin} value="100%" label="Nashville-focused traffic" />
+          <StatCard icon={MapPin} value="100%" label={`${CITY.name}-focused traffic`} />
           <StatCard icon={TrendingUp} value="4.8★" label="Avg. contractor rating" />
         </div>
       </div>
@@ -701,7 +699,7 @@ function Services() {
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             Beyond directory placement, we offer full-service digital marketing for
-            Nashville fence contractors.
+            {' '}{CITY.name} fence contractors.
           </p>
         </div>
 
@@ -785,7 +783,7 @@ function WidgetSection() {
           <h2 className="mt-3 heading-section">Add a Badge to Your Website</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Paste your Nashville Fence Guide listing URL to generate a badge that links
+            Paste your {CITY.siteName} listing URL to generate a badge that links
             directly to your profile. Copy and paste the code anywhere on your website.
           </p>
         </div>
@@ -799,7 +797,7 @@ function WidgetSection() {
               type="url"
               value={listingUrl}
               onChange={(e) => setListingUrl(e.target.value)}
-              placeholder="https://nashvillefenceguide.com/contractors/your-business-slug"
+              placeholder={`${CITY.siteUrl}/contractors/your-business-slug`}
               className="ad-input"
               autoComplete="off"
               spellCheck={false}
@@ -899,7 +897,7 @@ function BadgePreview() {
         <path d="M9 12l2 2 4-4" />
         <circle cx="12" cy="12" r="10" />
       </svg>
-      Verified on NashvilleFenceGuide.com
+      Verified on {CITY.domain}
     </span>
   )
 }
@@ -921,7 +919,7 @@ function CardPreview({ businessName }: { businessName?: string }) {
         </div>
       </div>
       <div className="text-sm font-bold text-onyx-700 leading-tight">
-        {businessName || 'Featured on Nashville Fence Guide'}
+        {businessName || `Featured on ${CITY.siteName}`}
       </div>
       <div className="flex items-center gap-1.5 text-xs text-onyx-700">
         <span className="text-oak-400 tracking-wider">★★★★★</span>
@@ -1034,7 +1032,7 @@ function ContactSection() {
             </div>
             <ul className="space-y-2.5 text-sm text-white/80">
               {[
-                '100% Nashville-focused, high-intent traffic',
+                `100% ${CITY.name}-focused, high-intent traffic`,
                 'No long-term contracts, month-to-month',
                 'Dedicated account support',
                 'Real lead forwarding, not just impressions',

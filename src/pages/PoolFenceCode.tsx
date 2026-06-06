@@ -67,7 +67,7 @@ const COMMON_VIOLATIONS = [
 ]
 
 const APPROVED_MATERIALS = [
-  { name: 'Powder-coated aluminum (4 ft+)', note: 'Most common Nashville code-compliant choice. Vertical pickets, narrow spacing.' },
+  { name: 'Powder-coated aluminum (4 ft+)', note: `Most common ${CITY.name} code-compliant choice. Vertical pickets, narrow spacing.` },
   { name: 'Mesh pool fence (removable)', note: 'Black polyester mesh on aluminum poles. Often used as a secondary inner barrier.' },
   { name: 'Glass panel fence', note: 'Tempered glass on stainless posts. Premium look, full visibility, fully code-compliant when sized right.' },
   { name: 'Vinyl picket (4 ft+, < 4" spacing)', note: 'Must use the narrow-picket profile, not standard 6" privacy spacing.' },
@@ -158,7 +158,7 @@ export default function PoolFenceCode() {
             <div className="rounded-2xl border border-red-100 bg-red-50/40 p-6">
               <div className="flex items-center gap-2 mb-3">
                 <AlertTriangle className="w-5 h-5 text-red-600" />
-                <h3 className="heading-card !text-lg">Common Nashville Inspection Failures</h3>
+                <h3 className="heading-card !text-lg">Common {CITY.name} Inspection Failures</h3>
               </div>
               <p className="text-sm text-onyx-700/70 mb-4 leading-relaxed">
                 These are the violations Metro inspectors flag most often on pool-fence
@@ -177,7 +177,7 @@ export default function PoolFenceCode() {
             <div className="rounded-2xl border border-forest-100 bg-forest-50/40 p-6">
               <div className="flex items-center gap-2 mb-3">
                 <CheckCircle2 className="w-5 h-5 text-forest-500" />
-                <h3 className="heading-card !text-lg">Code-Compliant Materials in Nashville</h3>
+                <h3 className="heading-card !text-lg">Code-Compliant Materials in {CITY.name}</h3>
               </div>
               <p className="text-sm text-onyx-700/70 mb-4 leading-relaxed">
                 Materials Metro inspectors approve consistently when installed to spec.
@@ -221,10 +221,10 @@ export default function PoolFenceCode() {
                   Pass first inspection
                 </div>
                 <h3 className="font-heading font-black text-white text-xl sm:text-2xl tracking-tightest leading-tight mb-2">
-                  Hire a Nashville pool-fence installer who knows the code
+                  Hire a {CITY.name} pool-fence installer who knows the code
                 </h3>
                 <p className="text-sm text-white/75 leading-relaxed max-w-xl">
-                  Our pool-safety category lists Nashville installers who have done 50+
+                  Our pool-safety category lists {CITY.name} installers who have done 50+
                   code-compliant pool barriers and have a 100% first-inspection pass rate.
                 </p>
               </div>
@@ -246,7 +246,7 @@ export default function PoolFenceCode() {
                 Pool fence pricing per linear foot →
               </div>
               <div className="text-onyx-700/70 text-xs">
-                See aluminum / mesh / glass pool fence cost ranges in Nashville.
+                See aluminum / mesh / glass pool fence cost ranges in {CITY.name}.
               </div>
             </Link>
             <Link
@@ -254,7 +254,7 @@ export default function PoolFenceCode() {
               className="block bg-white border border-[#E2E8F0] rounded-xl p-5 hover:border-forest-500 transition-colors"
             >
               <div className="font-heading font-bold text-forest-500 mb-1">
-                Nashville fence permits & rules →
+                {CITY.name} fence permits & rules →
               </div>
               <div className="text-onyx-700/70 text-xs">
                 Metro height limits, dig-safe 811, and historic overlay requirements.

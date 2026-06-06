@@ -67,7 +67,7 @@ export default function CostGuide() {
             <h2 className="mt-3 heading-section">Installed Cost by Fence Type</h2>
             <div className="heading-accent mx-auto" />
             <p className="mt-4 text-body-lead">
-              Prices below reflect a typical 6 ft residential install in the Nashville metro
+              Prices below reflect a typical 6 ft residential install in the {CITY.name} metro
               area, including materials, posts, and labor.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function CostGuide() {
         <div className="container-wide grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <span className="label-eyebrow">Where Your Money Goes</span>
-            <h2 className="mt-3 heading-section">Inside a $6,000 Nashville Fence Quote</h2>
+            <h2 className="mt-3 heading-section">Inside a $6,000 {CITY.name} Fence Quote</h2>
             <div className="heading-accent" />
             <p className="mt-4 text-body-lead">
               Roughly 60% of a typical install is materials, 30% is labor, and the
@@ -138,7 +138,7 @@ export default function CostGuide() {
             {
               icon: TrendingUp,
               title: 'Prices Trending Up 4–6%',
-              body: 'Cedar lumber has stabilized but skilled labor is still the biggest year-over-year increase for Middle Tennessee.',
+              body: `Cedar lumber has stabilized but skilled labor is still the biggest year-over-year increase for ${CITY.metroLabel}.`,
             },
             {
               icon: Layers,
