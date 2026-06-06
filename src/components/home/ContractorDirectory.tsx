@@ -143,7 +143,7 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
             <HelpCircle className="w-12 h-12 text-onyx-700/30 mx-auto mb-4" />
             <h3 className="heading-card mb-2">No matches found</h3>
             <p className="text-onyx-700/70 max-w-md mx-auto">
-              Try widening your selection — adjust the area, service, or
+              Try widening your selection, adjust the area, service, or
               project filters to see more pros.
             </p>
           </div>

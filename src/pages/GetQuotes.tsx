@@ -25,7 +25,7 @@ const STEPS = [
   {
     n: '03',
     title: 'Compare Detailed Quotes',
-    body: 'You receive line-item proposals — materials, labor, gates, permits — usually within 48 hours.',
+    body: 'You receive line-item proposals, materials, labor, gates, permits, usually within 48 hours.',
   },
   {
     n: '04',
@@ -36,7 +36,7 @@ const STEPS = [
 
 const BENEFITS = [
   { icon: ShieldCheck, title: 'Vetted & Licensed', body: 'Every pro in our network is insured, licensed, and background-checked.' },
-  { icon: Users, title: 'Multiple Bids', body: 'Compare 2–3 quotes side-by-side — no commitment.' },
+  { icon: Users, title: 'Multiple Bids', body: 'Compare 2–3 quotes side-by-side, no commitment.' },
   { icon: Clock, title: 'Fast Response', body: 'Average response time is under 24 hours.' },
   { icon: Award, title: 'No Lowballers', body: 'We screen out high-pressure sales tactics and bait-and-switch quotes.' },
 ]
@@ -65,7 +65,7 @@ export default function GetQuotes() {
       <PageHero
         eyebrow="Free Quote Request"
         title="Free Nashville Fence Installation Quotes"
-        description="One short form, up to three vetted Nashville fence installers, zero obligation. Most Nashville homeowners hear back within 24 hours — for new installs, fence repair, or commercial work."
+        description="One short form, up to three vetted Nashville fence installers, zero obligation. Most Nashville homeowners hear back within 24 hours, for new installs, fence repair, or commercial work."
         crumbs={[{ label: 'Get Quotes' }]}
       />
 

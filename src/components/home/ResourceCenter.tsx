@@ -26,7 +26,7 @@ export default function ResourceCenter() {
           <h2 className="mt-3 heading-section">Nashville Fence Resource Center</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            In-depth guides built for Middle Tennessee homeowners — written by local pros.
+            In-depth guides built for Middle Tennessee homeowners, written by local pros.
           </p>
         </div>
 

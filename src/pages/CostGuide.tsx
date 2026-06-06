@@ -55,7 +55,7 @@ export default function CostGuide() {
       <PageHero
         eyebrow="Nashville Cost Guide"
         title="Fence Installation Cost in Nashville TN"
-        description="Real installed prices for fence installation in Nashville, Brentwood, Franklin, Hendersonville, and Murfreesboro — wood, vinyl, chain link, aluminum, wrought iron, privacy, pet, and pool fencing covered, plus the line items hiding behind your quote."
+        description="Real installed prices for fence installation in Nashville, Brentwood, Franklin, Hendersonville, and Murfreesboro, wood, vinyl, chain link, aluminum, wrought iron, privacy, pet, and pool fencing covered, plus the line items hiding behind your quote."
         crumbs={[{ label: 'Cost Guide' }]}
         right={<CallbackForm />}
       />

@@ -71,7 +71,7 @@ export default function Privacy() {
           <ul>
             <li>To match Nashville homeowners with up to three vetted local fence contractors.</li>
             <li>To respond to listing and advertising inquiries.</li>
-            <li>To detect spam and abuse — a hidden honeypot field on every form plus serverless rate checks.</li>
+            <li>To detect spam and abuse, a hidden honeypot field on every form plus serverless rate checks.</li>
             <li>To improve the site through aggregated analytics. We do not sell traffic data.</li>
           </ul>
 
@@ -84,7 +84,7 @@ export default function Privacy() {
             </li>
             <li>
               <strong>Listing and advertising submissions</strong> are not shared with
-              outside parties — they go directly to our editorial inbox.
+              outside parties, they go directly to our editorial inbox.
             </li>
             <li>
               <strong>Service providers</strong> who process data on our behalf: Resend
@@ -108,7 +108,7 @@ export default function Privacy() {
             </li>
             <li>
               Use your browser's do-not-track setting or an ad blocker if you don't want
-              analytics — gtag.js will not load.
+              analytics, gtag.js will not load.
             </li>
           </ul>
 

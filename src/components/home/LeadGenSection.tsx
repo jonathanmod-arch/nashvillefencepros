@@ -72,7 +72,7 @@ export default function LeadGenSection() {
       if (!res.ok) throw new Error('Submission failed')
       setSubmitted(true)
     } catch {
-      setError('Sorry — something went wrong. Please try again or call us directly.')
+      setError('Sorry, something went wrong. Please try again or call us directly.')
     } finally {
       setSubmitting(false)
     }
@@ -105,7 +105,7 @@ export default function LeadGenSection() {
                 { icon: ShieldCheck, label: 'All contractors are licensed and insured in Tennessee' },
                 { icon: Star, label: 'Only contractors with 4.7+ star ratings are featured' },
                 { icon: Clock, label: 'Most homeowners receive quotes within 24–48 hours' },
-                { icon: CheckCircle2, label: 'No-obligation — you choose whether to proceed' },
+                { icon: CheckCircle2, label: 'No-obligation, you choose whether to proceed' },
               ].map((b) => {
                 const Icon = b.icon
                 return (
@@ -143,7 +143,7 @@ export default function LeadGenSection() {
                   <CheckCircle2 className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="heading-card !text-2xl md:!text-3xl mb-3">
-                  Request Received — Welcome
+                  Request Received, Welcome
                 </h3>
                 <p className="text-onyx-700/70 max-w-md mx-auto leading-relaxed">
                   We're matching you with up to 3 vetted Nashville fence pros. Expect calls

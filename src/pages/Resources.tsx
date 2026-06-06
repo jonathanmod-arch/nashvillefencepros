@@ -273,7 +273,7 @@ export default function Resources() {
                 <div className="prose-content space-y-5 text-onyx-700">
                   <p className="text-lg leading-relaxed">
                     {r.excerpt} This guide walks through what Middle Tennessee homeowners
-                    actually run into — not generic national advice.
+                    actually run into, not generic national advice.
                   </p>
                   <h2 className="heading-card !text-2xl mt-8">
                     Why This Matters in Nashville
@@ -296,7 +296,7 @@ export default function Resources() {
                   <p className="leading-relaxed">
                     Getting the right fence in Nashville comes down to material fit,
                     contractor experience, and respect for local code. Use this guide as a
-                    starting point — then bring in 2–3 vetted quotes to nail down the
+                    starting point, then bring in 2–3 vetted quotes to nail down the
                     specifics for your yard.
                   </p>
                   <div className="bg-forest-50 border-l-4 border-forest-500 rounded-r-xl p-5 mt-8">
@@ -304,7 +304,7 @@ export default function Resources() {
                       Next Step
                     </div>
                     <p className="text-sm text-forest-500 font-semibold">
-                      Compare quotes from up to 3 vetted Nashville fence pros — free, no
+                      Compare quotes from up to 3 vetted Nashville fence pros, free, no
                       pressure.
                     </p>
                     <Link to="/get-quotes#quote-form" className="btn-primary mt-4 !py-2.5">

@@ -16,7 +16,7 @@ export default function GallerySection() {
           <h2 className="mt-3 heading-section">Fence Style Gallery</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Real installs from Davidson, Williamson, and Sumner counties — filter by style.
+            Real installs from Davidson, Williamson, and Sumner counties, filter by style.
           </p>
         </div>
 

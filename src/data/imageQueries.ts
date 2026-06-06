@@ -6,7 +6,7 @@
  * - 2–3 word queries beat 5+ word queries on Pexels search.
  * - The most distinctive noun goes first (e.g. "wrought iron fence",
  *   not "Nashville home wrought iron fence").
- * - Don't include city / state names — Pexels doesn't tag by US city.
+ * - Don't include city / state names, Pexels doesn't tag by US city.
  *   Geo signal happens via slot mapping, not query content.
  */
 export const IMAGE_QUERIES = {
@@ -40,7 +40,7 @@ export const IMAGE_QUERIES = {
     'forest-hills': 'luxury home driveway',
   },
   // Resource images should match the article topic, not the umbrella
-  // category — repair articles get repair photos, not generic fence shots.
+  // category, repair articles get repair photos, not generic fence shots.
   resources: {
     'wood-vs-vinyl-nashville': 'cedar fence detail',
     'best-fences-for-dogs': 'dog backyard',

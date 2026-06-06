@@ -26,7 +26,7 @@ export default function Home() {
   useDocumentMeta({
     title: 'Fence Installation Nashville | Pros, Costs & Repair | Call (615) 560-9956',
     description:
-      'Fence installation Nashville — compare vetted Nashville fence contractors, get free fence installation quotes, calculate fence installation cost in Nashville TN, and find privacy, chain link, vinyl, aluminum, and pet fence pros.',
+      'Fence installation Nashville, compare vetted Nashville fence contractors, get free fence installation quotes, calculate fence installation cost in Nashville TN, and find privacy, chain link, vinyl, aluminum, and pet fence pros.',
     canonical: '/',
   })
 

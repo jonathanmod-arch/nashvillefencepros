@@ -182,7 +182,7 @@ export default function SubmitListing() {
       setSubmitted(true)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } catch {
-      setError('Sorry — something went wrong. Please try again or email us directly.')
+      setError('Sorry, something went wrong. Please try again or email us directly.')
     } finally {
       setSubmitting(false)
     }
@@ -193,7 +193,7 @@ export default function SubmitListing() {
       <>
         <PageHero
           eyebrow="Submission Received"
-          title="Thanks — we'll be in touch"
+          title="Thanks, we'll be in touch"
           description="Your listing is in review. We typically respond within two business days."
           crumbs={[
             { label: 'Find a Pro', to: '/contractors' },
@@ -211,7 +211,7 @@ export default function SubmitListing() {
                 {[
                   'A Nashville Fence Guide editor verifies your license and business details.',
                   'We confirm the photos and pricing match the work shown.',
-                  'You receive an email when your free listing goes live — usually within 2 business days.',
+                  'You receive an email when your free listing goes live, usually within 2 business days.',
                 ].map((step, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-full bg-forest-50 text-forest-500 text-xs font-bold flex items-center justify-center flex-shrink-0">
@@ -239,7 +239,7 @@ export default function SubmitListing() {
   return (
     <>
       <PageHero
-        eyebrow="List Your Business — Free"
+        eyebrow="List Your Business, Free"
         title="Submit Your Business"
         description="Join the Nashville Fence Guide directory in under 5 minutes. Free for verified Tennessee fence contractors, surveyors, gate installers, and outdoor design pros."
         crumbs={[
@@ -586,7 +586,7 @@ export default function SubmitListing() {
             <FormSection
               eyebrow="06"
               title="Pricing guide"
-              hint="Optional but encouraged — shows typical price ranges so leads come in pre-qualified."
+              hint="Optional but encouraged, shows typical price ranges so leads come in pre-qualified."
             >
               <div className="space-y-3">
                 {form.pricing.map((p, i) => (
@@ -711,7 +711,7 @@ export default function SubmitListing() {
                 </h3>
                 <ul className="space-y-2.5 text-sm text-white/85">
                   {[
-                    'Free — no contracts, no card on file',
+                    'Free, no contracts, no card on file',
                     'Direct lead emails when homeowners request quotes',
                     'Verified Pro badge widget for your website',
                     'Nashville-only audience actively shopping for fence work',

@@ -48,7 +48,7 @@ export default function ContractorProfile() {
 
   useDocumentMeta({
     title: c
-      ? `${c.name} — ${categoryLabel(c.category)} in Nashville TN`
+      ? `${c.name}, ${categoryLabel(c.category)} in Nashville TN`
       : 'Nashville Fence Pro Not Found',
     description: c
       ? `${c.name} is a Nashville-area ${categoryLabel(c.category).toLowerCase()} serving ${c.areas.join(', ')}. ${c.description.slice(0, 110)}…`

@@ -13,7 +13,7 @@ export default function FAQSection() {
           <h2 className="mt-3 heading-section">Frequently Asked Questions</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            The 8 most-searched fence questions in Nashville — answered by local pros.
+            The 8 most-searched fence questions in Nashville, answered by local pros.
           </p>
         </div>
 

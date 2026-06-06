@@ -432,7 +432,7 @@ export const CONTRACTORS: Contractor[] = [
     category: 'fencing',
     projectType: 'residential',
     description:
-      'Local fence contractor serving the Knoxville and East Tennessee region. Listed on Google Maps under the fence contractor category — current ratings, reviews, hours, and contact details are maintained on the live Google listing.',
+      'Local fence contractor serving the Knoxville and East Tennessee region. Listed on Google Maps under the fence contractor category, current ratings, reviews, hours, and contact details are maintained on the live Google listing.',
     areas: ['Knoxville', 'East Tennessee'],
     specialties: ['Wood Fence', 'Chain Link', 'Residential Installation'],
     rating: 0,
@@ -695,8 +695,8 @@ export const PRICING_GUIDE_BY_CATEGORY: Record<
   staining: {
     items: [
       { label: 'Power Wash', sub: 'Soft wash + cleaning, per linear ft', price: '$2.50–$4 / linear ft' },
-      { label: 'Stain & Seal — Oil', sub: 'Premium penetrating oil, 6 ft fence', price: '$5–$8 / linear ft' },
-      { label: 'Stain & Seal — Solid Color', sub: 'Two-coat solid stain', price: '$7–$11 / linear ft' },
+      { label: 'Stain & Seal, Oil', sub: 'Premium penetrating oil, 6 ft fence', price: '$5–$8 / linear ft' },
+      { label: 'Stain & Seal, Solid Color', sub: 'Two-coat solid stain', price: '$7–$11 / linear ft' },
       { label: 'Minimum Project', sub: 'Applies to all jobs', price: '$650' },
     ],
   },

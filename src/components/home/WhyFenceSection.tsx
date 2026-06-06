@@ -23,11 +23,11 @@ export default function WhyFenceSection() {
           <div className="mt-5 text-left space-y-4">
             <p className="text-body-lead">
               From acreage in Williamson County to urban infill in East Nashville, the right
-              fence does more than mark a line — it solves a specific problem.
+              fence does more than mark a line, it solves a specific problem.
             </p>
             <p className="text-body-lead">
               A high quality fence is essential to protect your property, frame the yard, and
-              add aesthetic appeal — whether that's a wooden fence for backyard privacy or
+              add aesthetic appeal, whether that's a wooden fence for backyard privacy or
               aluminum around a pool.
             </p>
             <p className="text-body-lead">

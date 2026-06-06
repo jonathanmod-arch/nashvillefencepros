@@ -29,7 +29,7 @@ export default function CallbackForm() {
       if (!res.ok) throw new Error('Submission failed')
       setSubmitted(true)
     } catch {
-      setError('Sorry — something went wrong. Please try again or call us directly.')
+      setError('Sorry, something went wrong. Please try again or call us directly.')
     } finally {
       setSubmitting(false)
     }
@@ -62,7 +62,7 @@ export default function CallbackForm() {
           Request a Call Back
         </h3>
         <p className="text-xs text-onyx-700/60 mt-1">
-          We'll call you within one business day — no obligation.
+          We'll call you within one business day, no obligation.
         </p>
       </div>
 

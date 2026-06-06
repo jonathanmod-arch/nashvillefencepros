@@ -26,7 +26,7 @@ const OVERLAY_DISTRICTS = [
   {
     name: 'Germantown',
     type: 'Historic Preservation Zoning Overlay',
-    note: 'Strictest review — wrought iron and woven-wire ornamental favored in front yards. No vinyl, no chain link in front.',
+    note: 'Strictest review, wrought iron and woven-wire ornamental favored in front yards. No vinyl, no chain link in front.',
   },
   {
     name: 'Edgefield (East Nashville)',
@@ -50,7 +50,7 @@ const OVERLAY_DISTRICTS = [
   },
   {
     name: 'Belle Meade Conservation',
-    type: 'City of Belle Meade — separate review',
+    type: 'City of Belle Meade, separate review',
     note: 'Belle Meade is its own city, not Metro. ARB review for any new fence regardless of historic status.',
   },
 ]
@@ -60,7 +60,7 @@ const COMMON_REJECTIONS = [
   'Chain link visible from the public right-of-way in any overlay district',
   '6 ft solid wood privacy fence in the front yard of a corner lot',
   'Modern horizontal slat design in a Preservation overlay (Conservation overlays are usually OK)',
-  'Pressure-treated pine without a stain or paint plan — left to weather gray',
+  'Pressure-treated pine without a stain or paint plan, left to weather gray',
   'Submission without a site plan, material spec sheet, and elevation drawing',
 ]
 
@@ -107,7 +107,7 @@ export default function HistoricOverlays() {
       slug: '/historic-overlays',
       name: 'Historic-Overlay-Approved Fence Installation in Nashville',
       description:
-        'Fence installation that passes Metro Historic Zoning Commission review on the first submission — for Germantown, Edgefield, and Conservation overlay districts.',
+        'Fence installation that passes Metro Historic Zoning Commission review on the first submission, for Germantown, Edgefield, and Conservation overlay districts.',
     }),
   ])
 
@@ -116,7 +116,7 @@ export default function HistoricOverlays() {
       <PageHero
         eyebrow="Historic Zoning"
         title="Historic Overlay Fence Rules Nashville"
-        description="If your Nashville home is in a historic overlay district, your fence needs HZC approval before installation — and the wrong design can mean a removal order at your expense. Here's how each overlay actually reviews fence applications."
+        description="If your Nashville home is in a historic overlay district, your fence needs HZC approval before installation, and the wrong design can mean a removal order at your expense. Here's how each overlay actually reviews fence applications."
         crumbs={[{ label: 'Historic Overlays' }]}
         right={<CallbackForm />}
       />
@@ -217,8 +217,8 @@ export default function HistoricOverlays() {
                 'Confirm your address is in an overlay (Metro Codes parcel viewer). If not, you can skip HZC entirely.',
                 'Submit a Preservation Permit application through Metro Historic Zoning before applying for any building permit.',
                 'Application packet: site plan with setbacks, elevation drawings, material spec sheet, paint/stain color sample, and photos of the existing yard.',
-                'Staff review (2–3 weeks) — Conservation overlays often get approved at staff level without a commission hearing.',
-                'Commission hearing (if required) — held monthly. Preservation overlays almost always require a hearing.',
+                'Staff review (2–3 weeks), Conservation overlays often get approved at staff level without a commission hearing.',
+                'Commission hearing (if required), held monthly. Preservation overlays almost always require a hearing.',
                 'Once approved, the Preservation Permit attaches to your standard Metro Codes building permit.',
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -247,7 +247,7 @@ export default function HistoricOverlays() {
             </div>
             <p className="text-sm text-onyx-700/80 leading-relaxed">
               Installing a non-compliant fence in a historic overlay can trigger a
-              removal order from Metro Historic Zoning at your expense — including
+              removal order from Metro Historic Zoning at your expense, including
               demolition, haul-off, and replacement cost. The Codes inspector won't
               catch it before install, but a neighbor or HZC staff visit usually does.
               Always confirm overlay status at the address before signing a fence contract.

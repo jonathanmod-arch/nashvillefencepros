@@ -51,7 +51,7 @@ export default function CommercialFencing() {
   useDocumentMeta({
     title: 'Commercial Fence Installation Nashville | Security Fencing TN',
     description:
-      'Commercial fence installation in Nashville — chain link, security fencing, automated gates, and temporary construction-site fencing. Compare licensed commercial fence contractors and get free Nashville TN quotes.',
+      'Commercial fence installation in Nashville, chain link, security fencing, automated gates, and temporary construction-site fencing. Compare licensed commercial fence contractors and get free Nashville TN quotes.',
     canonical: '/commercial-fencing',
   })
 
@@ -62,7 +62,7 @@ export default function CommercialFencing() {
       slug: '/commercial-fencing',
       name: 'Commercial Fence Installation Nashville',
       description:
-        'Commercial and industrial fence installation in Nashville — galvanized chain link, security fencing, automated gates, and construction-site temporary perimeters.',
+        'Commercial and industrial fence installation in Nashville, galvanized chain link, security fencing, automated gates, and construction-site temporary perimeters.',
       audience: 'BusinessAudience',
     }),
   ])
@@ -129,7 +129,7 @@ export default function CommercialFencing() {
               </h2>
               <p className="text-onyx-700/80 leading-relaxed mb-6">
                 Every Nashville commercial fence install is bid against the same spec
-                sheet so you can compare on equal footing — material grade, height,
+                sheet so you can compare on equal footing, material grade, height,
                 gate count, and add-ons like privacy slats or anti-climb mesh.
               </p>
 

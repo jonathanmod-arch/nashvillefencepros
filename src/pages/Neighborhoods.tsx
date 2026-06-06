@@ -22,11 +22,11 @@ export default function Neighborhoods() {
 
   useDocumentMeta({
     title: n
-      ? `Fence Installation Nashville — ${n.name}, TN | Pros, Costs & Free Quotes`
+      ? `Fence Installation Nashville, ${n.name}, TN | Pros, Costs & Free Quotes`
       : 'Fence Installation Nashville | Service Areas Across Davidson, Williamson & Rutherford',
     description: n
-      ? `Fence installation in Nashville's ${n.name} area (ZIP ${n.zip}). Compare vetted ${n.name} fence contractors for ${n.popularStyle.toLowerCase()} — typical project ${n.avgCost}. Wood, vinyl, aluminum, chain link, and ornamental iron — free quotes within 24 hours.`
-      : 'Fence installation Nashville — compare vetted fence contractors across every city and neighborhood in the Nashville metro. Local pricing, popular fence styles, and HOA notes for Murfreesboro, Franklin, Brentwood, Hendersonville, Mount Juliet, Spring Hill, Smyrna, Clarksville, and more.',
+      ? `Fence installation in Nashville's ${n.name} area (ZIP ${n.zip}). Compare vetted ${n.name} fence contractors for ${n.popularStyle.toLowerCase()}, typical project ${n.avgCost}. Wood, vinyl, aluminum, chain link, and ornamental iron, free quotes within 24 hours.`
+      : 'Fence installation Nashville, compare vetted fence contractors across every city and neighborhood in the Nashville metro. Local pricing, popular fence styles, and HOA notes for Murfreesboro, Franklin, Brentwood, Hendersonville, Mount Juliet, Spring Hill, Smyrna, Clarksville, and more.',
     canonical: slug ? `/service-areas/${slug}` : '/service-areas',
   })
 
@@ -111,7 +111,7 @@ export default function Neighborhoods() {
               <div className="heading-accent mb-4" />
               <p className="text-body-lead mb-5">
                 {n.note} Whether you're replacing an aging cedar fence or starting from scratch on a
-                new build, the local landscape — lot sizes, soil, and tree cover — shapes what holds up.
+                new build, the local landscape, lot sizes, soil, and tree cover, shapes what holds up.
               </p>
               <p className="text-body-lead mb-5">
                 Most {n.name} homeowners landing on this page are weighing privacy, curb appeal, and
@@ -132,7 +132,7 @@ export default function Neighborhoods() {
               <p className="text-body-lead mb-8">
                 Each fence contractor in our directory works at competitive prices with the
                 attention to details that drive a clean, warrantied install. Whatever fencing
-                solution fits your {n.name} home — residential or commercial — the top rated
+                solution fits your {n.name} home, residential or commercial, the top rated
                 pros we recommend will walk you through fence styles and materials that hold up
                 on your lot.
               </p>
@@ -213,7 +213,7 @@ export default function Neighborhoods() {
       <PageHero
         eyebrow="All Coverage Areas"
         title="Nashville Service Areas"
-        description="From Belle Meade estates to Murfreesboro new builds — pick your city or neighborhood for local pricing, popular styles, and HOA guidance."
+        description="From Belle Meade estates to Murfreesboro new builds, pick your city or neighborhood for local pricing, popular styles, and HOA guidance."
         crumbs={[{ label: 'Service Areas' }]}
         right={<CallbackForm />}
       />
@@ -232,13 +232,13 @@ export default function Neighborhoods() {
             </p>
             <p className="text-body-lead">
               A high quality fence is essential to protect your property and add aesthetic
-              appeal — whether you need a residential fence in a quiet cul-de-sac or
+              appeal, whether you need a residential fence in a quiet cul-de-sac or
               commercial fences around a local business.
             </p>
             <p className="text-body-lead">
-              The fence contractor crews in our directory install every common material —
+              The fence contractor crews in our directory install every common material , 
               wooden fence, vinyl fence, aluminum fence, chain link fence, and ornamental
-              iron — at competitive prices. Pick your city below for the top rated fence
+              iron, at competitive prices. Pick your city below for the top rated fence
               company picks in that area.
             </p>
           </div>

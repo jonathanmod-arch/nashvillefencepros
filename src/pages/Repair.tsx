@@ -78,7 +78,7 @@ const WHEN_TO_REPAIR_VS_REPLACE = [
     title: 'Repair makes sense when…',
     bullets: [
       'Less than 20% of the run is damaged',
-      'Posts are still sound — only panels need work',
+      'Posts are still sound, only panels need work',
       'Fence is under 10 years old',
       'Hardware (gates, latches, hinges) is the failure point',
     ],
@@ -133,7 +133,7 @@ export default function Repair() {
               { icon: Wrench, label: 'Material-specific crews', body: 'Wood, vinyl, chain link, aluminum, wrought iron, and pet fence specialists in one directory.' },
               { icon: Clock, label: 'Fast response', body: 'Most Nashville fence repair quotes come back within 24–48 hours of submitting a request.' },
               { icon: Shield, label: 'Licensed & insured', body: 'Every repair contractor in our network carries general liability and workers\' comp.' },
-              { icon: CheckCircle2, label: 'Repair-first', body: 'We match you with crews who actually do repairs — not just install-only fence companies.' },
+              { icon: CheckCircle2, label: 'Repair-first', body: 'We match you with crews who actually do repairs, not just install-only fence companies.' },
             ].map((b) => {
               const Icon = b.icon
               return (
@@ -159,7 +159,7 @@ export default function Repair() {
               </p>
               <p className="text-body-lead">
                 Wooden fence post replacements, vinyl fence panel swaps, aluminum fence section
-                rebuilds, chain link stretching, and ornamental iron weld work — all of it
+                rebuilds, chain link stretching, and ornamental iron weld work, all of it
                 shows up on the same trucks.
               </p>
               <p className="text-body-lead">
@@ -234,7 +234,7 @@ export default function Repair() {
                 </h3>
                 <p className="text-sm text-white/75 leading-relaxed max-w-xl">
                   Submit a request with photos and we'll route it to Nashville fence
-                  repair crews who can do emergency work — wood, vinyl, chain link,
+                  repair crews who can do emergency work, wood, vinyl, chain link,
                   aluminum, or iron.
                 </p>
               </div>

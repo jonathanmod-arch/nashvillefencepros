@@ -26,7 +26,7 @@ const VALUES = [
   {
     icon: Shield,
     title: 'Vetted, never sold',
-    body: 'Every contractor listing in our directory clears the same seven-question vetting checklist — Tennessee insurance, 811 protocol, post-depth spec, warranty in writing. We don\'t accept pay-to-play listings.',
+    body: 'Every contractor listing in our directory clears the same seven-question vetting checklist, Tennessee insurance, 811 protocol, post-depth spec, warranty in writing. We don\'t accept pay-to-play listings.',
   },
   {
     icon: Eye,
@@ -52,7 +52,7 @@ const HOW_WE_MAKE_MONEY = [
 ]
 
 const WHAT_WE_DONT_DO = [
-  'We are not a licensed fence contractor — we do not install fences ourselves',
+  'We are not a licensed fence contractor, we do not install fences ourselves',
   'We do not accept payment from contractors to suppress negative reviews',
   'We do not pad our directory with companies we have not personally verified',
   'We do not sell your contact information to third-party data brokers',
@@ -82,7 +82,7 @@ export default function About() {
       <PageHero
         eyebrow="About Us"
         title="The Independent Nashville Fence Directory"
-        description="Nashville Fence Guide is built for homeowners who want one place to compare vetted local fence pros, real installed prices, and Metro permit rules — without sifting through Yelp listings, contractor sales calls, or padded directory sites."
+        description="Nashville Fence Guide is built for homeowners who want one place to compare vetted local fence pros, real installed prices, and Metro permit rules, without sifting through Yelp listings, contractor sales calls, or padded directory sites."
         crumbs={[{ label: 'About' }]}
         right={<CallbackForm />}
       />
@@ -96,7 +96,7 @@ export default function About() {
             <div className="mt-6 space-y-4 text-[15.5px] text-onyx-700/80 leading-relaxed">
               <p>
                 Most Nashville homeowners get a fence quote once every 10–20 years, which
-                means they walk into the process with no benchmark for what's normal — what
+                means they walk into the process with no benchmark for what's normal, what
                 a fair price is, what questions to ask, which contractors actually show up
                 on time, which permits apply, and what their HOA or historic overlay will
                 accept.

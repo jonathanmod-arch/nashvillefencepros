@@ -69,7 +69,7 @@ export default function Terms() {
           <p>
             When you submit a quote request, we share your project details with up to
             three matched contractors. The resulting estimates and any agreement are
-            between you and those contractors — Nashville Fence Guide is not a party to
+            between you and those contractors, Nashville Fence Guide is not a party to
             any contract you sign.
           </p>
 

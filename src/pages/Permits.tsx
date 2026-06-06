@@ -13,9 +13,9 @@ import {
 import { RESOURCE_PUBLISHED_AT } from '../data/siteData'
 
 const HEIGHT_RULES = [
-  { yard: 'Front Yard — Solid', max: '3.5 ft', detail: 'Privacy panels, vinyl, solid wood' },
-  { yard: 'Front Yard — Open', max: '4 ft', detail: 'Picket, aluminum, ornamental iron' },
-  { yard: 'Side Yard', max: '8 ft', detail: 'Most residential lots — no permit needed' },
+  { yard: 'Front Yard, Solid', max: '3.5 ft', detail: 'Privacy panels, vinyl, solid wood' },
+  { yard: 'Front Yard, Open', max: '4 ft', detail: 'Picket, aluminum, ornamental iron' },
+  { yard: 'Side Yard', max: '8 ft', detail: 'Most residential lots, no permit needed' },
   { yard: 'Rear Yard', max: '8 ft', detail: 'Tallest allowed without special review' },
   { yard: 'Corner Lot Sight Triangle', max: '3 ft', detail: 'Within 30 ft of intersections' },
   { yard: 'Pool Barrier', max: '4 ft min', detail: 'Per 2018 ISPSC + self-latching gate' },
@@ -56,7 +56,7 @@ export default function Permits() {
       <PageHero
         eyebrow="Metro Compliance"
         title="Nashville Fence Permits, Rules & Regulations"
-        description="Everything Davidson and Williamson County homeowners need before fence installation in Nashville TN — heights, permits, HOA approvals, dig-safe 811, and historic overlays."
+        description="Everything Davidson and Williamson County homeowners need before fence installation in Nashville TN, heights, permits, HOA approvals, dig-safe 811, and historic overlays."
         crumbs={[{ label: 'Permits & Rules' }]}
         right={<CallbackForm />}
       />
@@ -79,7 +79,7 @@ export default function Permits() {
               >
                 residential fence code
               </a>{' '}
-              keeps it simple — but corner lots, pool barriers, and overlay districts add
+              keeps it simple, but corner lots, pool barriers, and overlay districts add
               layers. For a plain-English walkthrough of every yard, gate, and pool
               requirement, see the{' '}
               <a
@@ -125,7 +125,7 @@ export default function Permits() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-500 font-bold">→</span>
-                Any fence in a flood zone — additional FEMA review applies.
+                Any fence in a flood zone, additional FEMA review applies.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-forest-500 font-bold">→</span>
@@ -157,7 +157,7 @@ export default function Permits() {
               >
                 Historic Zoning Commission
               </a>{' '}
-              review before installation — even for replacements.
+              review before installation, even for replacements.
             </p>
             <div className="flex flex-wrap gap-2">
               {HISTORIC_AREAS.map((a) => (
@@ -182,7 +182,7 @@ export default function Permits() {
                 <AlertTriangle className="w-3.5 h-3.5" /> Required
               </div>
               <h3 className="text-2xl font-heading font-bold tracking-tightest mb-3">
-                Tennessee 811 — Call Before You Dig
+                Tennessee 811, Call Before You Dig
               </h3>
               <p className="text-white/80 text-sm leading-relaxed mb-5">
                 Tennessee law requires at least 3 business days notice before any digging.

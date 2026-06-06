@@ -29,12 +29,12 @@ const FENCE_TYPE_META: Record<string, { title: string; description: string }> = 
   aluminum: {
     title: 'Aluminum Fence Installation Nashville TN | Ornamental Metal',
     description:
-      'Aluminum and metal fence installation in Nashville TN. Powder-coated ornamental aluminum from $38–$62 per linear foot — pool-code compliant. Compare Nashville aluminum fence installers.',
+      'Aluminum and metal fence installation in Nashville TN. Powder-coated ornamental aluminum from $38–$62 per linear foot, pool-code compliant. Compare Nashville aluminum fence installers.',
   },
   'chain-link': {
     title: 'Chain Link Fence Installation Nashville TN | Wire Fencing',
     description:
-      'Chain link fence installation in Nashville TN. Galvanized and black vinyl-coated chain link from $12–$22 per linear foot — plus wire fencing supplies in Nashville. Compare vetted installers.',
+      'Chain link fence installation in Nashville TN. Galvanized and black vinyl-coated chain link from $12–$22 per linear foot, plus wire fencing supplies in Nashville. Compare vetted installers.',
   },
   'horizontal-privacy': {
     title: 'Horizontal Cedar Privacy Fence Installation Nashville',
@@ -74,7 +74,7 @@ export default function FenceTypes() {
       'Nashville Fence Types & Materials | Installation Guide',
     description:
       typeMeta?.description ??
-      'Compare every Nashville fence type — wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm & ranch, wrought iron, pet/invisible, and pool safety fencing. Pricing per linear ft + vetted Nashville installers.',
+      'Compare every Nashville fence type, wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm & ranch, wrought iron, pet/invisible, and pool safety fencing. Pricing per linear ft + vetted Nashville installers.',
     canonical: slug ? `/fence-types/${slug}` : '/fence-types',
   })
 
@@ -102,7 +102,7 @@ export default function FenceTypes() {
             slug: '/fence-types',
             title: 'Nashville Fence Types & Materials',
             description:
-              'Compare every Nashville fence type — wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.',
+              'Compare every Nashville fence type, wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.',
           }),
           itemListSchema(
             FENCE_TYPES.map((t) => ({
@@ -167,7 +167,7 @@ export default function FenceTypes() {
               <p className="text-body-lead mb-5">{t.description}</p>
               <p className="text-body-lead mb-8">
                 Across Davidson and Williamson counties, {t.name.toLowerCase()} installs range from{' '}
-                <strong className="text-forest-500">${t.priceLow}–${t.priceHigh} per linear foot</strong> installed —
+                <strong className="text-forest-500">${t.priceLow}–${t.priceHigh} per linear foot</strong> installed , 
                 materials and labor included. Exact pricing depends on height, terrain, and gate count.
               </p>
 
@@ -287,7 +287,7 @@ export default function FenceTypes() {
       <PageHero
         eyebrow="Materials & Styles"
         title="Nashville Fence Types & Styles"
-        description="Cedar privacy, vinyl, aluminum, chain link, horizontal modern, farm — six material families that cover almost every Nashville install."
+        description="Cedar privacy, vinyl, aluminum, chain link, horizontal modern, farm, six material families that cover almost every Nashville install."
         crumbs={[{ label: 'Fence Types' }]}
         right={<CallbackForm />}
       />

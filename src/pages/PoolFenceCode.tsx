@@ -35,7 +35,7 @@ const CODE_REQUIREMENTS = [
   {
     icon: Ruler,
     title: 'Openings ≤ 4 inches',
-    body: 'No opening anywhere in the barrier may allow passage of a 4-inch sphere — picket spacing, lattice, gates, all of it.',
+    body: 'No opening anywhere in the barrier may allow passage of a 4-inch sphere, picket spacing, lattice, gates, all of it.',
   },
   {
     icon: FileText,
@@ -45,7 +45,7 @@ const CODE_REQUIREMENTS = [
   {
     icon: AlertTriangle,
     title: 'No climb-aid horizontals',
-    body: 'Horizontal members on the outside face spaced under 45" apart effectively become a ladder — code-non-compliant.',
+    body: 'Horizontal members on the outside face spaced under 45" apart effectively become a ladder, code-non-compliant.',
   },
   {
     icon: Droplets,
@@ -76,7 +76,7 @@ export default function PoolFenceCode() {
   useDocumentMeta({
     title: 'Pool Fence Code Nashville TN | ISPSC Compliance Guide 2026',
     description:
-      'Pool fence code requirements in Nashville TN — Tennessee ISPSC barrier rules, minimum height, gate latch, common inspection failures, and how to install a pool fence that passes the first time.',
+      'Pool fence code requirements in Nashville TN, Tennessee ISPSC barrier rules, minimum height, gate latch, common inspection failures, and how to install a pool fence that passes the first time.',
     canonical: '/pool-fence-code',
   })
 
@@ -96,7 +96,7 @@ export default function PoolFenceCode() {
       slug: '/pool-fence-code',
       name: 'ISPSC-Compliant Pool Fence Installation in Nashville',
       description:
-        'Pool fence installation that meets Tennessee ISPSC barrier code on the first inspection — aluminum, mesh, and glass options.',
+        'Pool fence installation that meets Tennessee ISPSC barrier code on the first inspection, aluminum, mesh, and glass options.',
     }),
   ])
 
@@ -105,7 +105,7 @@ export default function PoolFenceCode() {
       <PageHero
         eyebrow="Pool Fence Compliance"
         title="Pool Fence Code Nashville TN"
-        description="Tennessee adopted the 2018 ISPSC pool barrier code. Here's every requirement that matters for Nashville homeowners installing or replacing a pool fence — plus the violations Metro inspectors flag most often."
+        description="Tennessee adopted the 2018 ISPSC pool barrier code. Here's every requirement that matters for Nashville homeowners installing or replacing a pool fence, plus the violations Metro inspectors flag most often."
         crumbs={[{ label: 'Pool Fence Code' }]}
         right={<CallbackForm />}
       />
@@ -203,7 +203,7 @@ export default function PoolFenceCode() {
                 'Schedule rough inspection after posts are set but before gate hardware install.',
                 'Schedule final inspection after the gate is hung and self-latch is installed.',
                 'Inspector measures: barrier height, opening size, latch height, gate swing direction, climbability of horizontals.',
-                'If you fail, you have 30 days to correct and re-inspect — usually at no additional fee.',
+                'If you fail, you have 30 days to correct and re-inspect, usually at no additional fee.',
               ].map((step, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="w-6 h-6 rounded-full bg-forest-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">

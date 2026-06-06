@@ -15,7 +15,7 @@ export default function Contractors() {
   useDocumentMeta({
     title: 'Nashville Fence Installers & Companies | Vetted Directory',
     description:
-      'Vetted directory of Nashville fence installers and companies. Compare licensed fence contractors in Nashville TN for installation and repair — filter by service area, fence type, and project type.',
+      'Vetted directory of Nashville fence installers and companies. Compare licensed fence contractors in Nashville TN for installation and repair, filter by service area, fence type, and project type.',
     canonical: '/contractors',
   })
 
@@ -38,7 +38,7 @@ export default function Contractors() {
       <PageHero
         eyebrow="Vetted Local Pros"
         title="Nashville Fence Installers & Companies"
-        description="Compare licensed Nashville fence installers and companies for residential and commercial fence installation. Hand-picked, insured, and rated by real Nashville homeowners — filter by area, fence type, and project type."
+        description="Compare licensed Nashville fence installers and companies for residential and commercial fence installation. Hand-picked, insured, and rated by real Nashville homeowners, filter by area, fence type, and project type."
         crumbs={[{ label: 'Find a Pro' }]}
       />
       <ContractorDirectory />

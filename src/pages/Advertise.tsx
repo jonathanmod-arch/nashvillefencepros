@@ -70,7 +70,7 @@ const PLANS: Plan[] = [
     price: '$349',
     leads: 9,
     blurb:
-      'Maximum visibility across the platform — homepage, directory, and blog.',
+      'Maximum visibility across the platform, homepage, directory, and blog.',
     features: [
       'Homepage featured contractor spot',
       'Directory page featured placement',
@@ -245,7 +245,7 @@ function ROICalculator() {
         <div className="max-w-5xl mx-auto">
           <div className="mb-4">
             <div className="text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3 text-center">
-              Pick a Plan — Drag the sliders below to see your ROI
+              Pick a Plan, Drag the sliders below to see your ROI
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
               {ROI_PLANS.map((p) => {
@@ -446,7 +446,7 @@ function ROICalculator() {
               Get Nashville Fence Leads <ArrowRight className="w-4 h-4" />
             </a>
             <p className="text-xs text-white/50 mt-3">
-              Numbers are projections — actuals depend on your sales process and follow-up speed.
+              Numbers are projections, actuals depend on your sales process and follow-up speed.
             </p>
           </div>
         </div>
@@ -964,7 +964,7 @@ function ContactSection() {
       if (!res.ok) throw new Error('Submission failed')
       setSubmitted(true)
     } catch {
-      setError('Sorry — something went wrong. Please try again or email us directly.')
+      setError('Sorry, something went wrong. Please try again or email us directly.')
     } finally {
       setSubmitting(false)
     }
@@ -972,10 +972,10 @@ function ContactSection() {
 
   const interestOptions = useMemo(
     () => [
-      'Premium Listing — $99/mo',
-      'Category Feature — $249/mo',
-      'Directory Feature — $349/mo',
-      'Homepage Sponsor — $499/mo',
+      'Premium Listing, $99/mo',
+      'Category Feature, $249/mo',
+      'Directory Feature, $349/mo',
+      'Homepage Sponsor, $499/mo',
       'Google My Business Optimization',
       'Website Management',
       'Local SEO Services',
@@ -1036,7 +1036,7 @@ function ContactSection() {
             <ul className="space-y-2.5 text-sm text-white/80">
               {[
                 '100% Nashville-focused, high-intent traffic',
-                'No long-term contracts — month-to-month',
+                'No long-term contracts, month-to-month',
                 'Dedicated account support',
                 'Real lead forwarding, not just impressions',
               ].map((line) => (

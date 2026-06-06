@@ -5,7 +5,7 @@ const RULES = [
   {
     icon: Ruler,
     title: 'Rear & Side Yards',
-    detail: 'Up to 8 ft tall — no permit required for standard residential fencing under that height.',
+    detail: 'Up to 8 ft tall, no permit required for standard residential fencing under that height.',
   },
   {
     icon: Ruler,
@@ -20,7 +20,7 @@ const RULES = [
   {
     icon: AlertTriangle,
     title: 'Corner Lots',
-    detail: 'Sight-distance triangles apply at intersections — clear-view zones are typically 30 ft.',
+    detail: 'Sight-distance triangles apply at intersections, clear-view zones are typically 30 ft.',
   },
 ]
 
@@ -34,9 +34,9 @@ export default function PermitsSection() {
             <h2 className="mt-3 heading-section">Nashville Fence Permits & Rules</h2>
             <div className="heading-accent" />
             <p className="mt-4 text-body-lead">
-              Metro Nashville keeps fence rules relatively homeowner-friendly — but the wrong
+              Metro Nashville keeps fence rules relatively homeowner-friendly, but the wrong
               height or a missed historic overlay can mean removal at your expense. Here's the
-              straightforward breakdown — and{' '}
+              straightforward breakdown, and{' '}
               <a
                 href="https://tnfencerules.com"
                 target="_blank"
@@ -96,14 +96,14 @@ export default function PermitsSection() {
                   >
                     Tennessee 811
                   </a>{' '}
-                  marks public utilities for free — hitting a gas or fiber line can mean
+                  marks public utilities for free, hitting a gas or fiber line can mean
                   thousands in damages and fines.
                 </p>
                 <a
                   href="tel:811"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-white text-forest-500 font-bold text-sm hover:bg-oak-100 transition-colors"
                 >
-                  <Phone className="w-4 h-4" /> Dial 811 — Free Service
+                  <Phone className="w-4 h-4" /> Dial 811, Free Service
                 </a>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function PermitsSection() {
               </div>
               <p className="text-sm text-onyx-700 leading-relaxed">
                 Williamson County HOAs (Brentwood, Franklin, Nolensville) typically require
-                Architectural Review approval before installation — submit material samples
+                Architectural Review approval before installation, submit material samples
                 and a site plan first.
               </p>
             </div>

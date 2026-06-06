@@ -12,7 +12,7 @@ export default function NeighborhoodsSection() {
           <h2 className="mt-3 heading-section">Nashville Service Areas We Cover</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Every Nashville-area city and neighborhood has its own fence personality — material
+            Every Nashville-area city and neighborhood has its own fence personality, material
             trends, HOA quirks, and price bands. Find yours.
           </p>
         </div>
