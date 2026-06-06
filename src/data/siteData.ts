@@ -1729,6 +1729,161 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'driveway-gate-cost-nashville',
+    title: 'How Much Does a Driveway Gate Cost in Nashville?',
+    category: 'Gates',
+    readTime: '6 min',
+    excerpt:
+      'Real installed price ranges for driveway gates in Nashville — from a basic $2,000 single swing to a $40,000 estate gate, plus the line items most contractors leave off the first quote.',
+    img: IMAGES.resources['driveway-gate-cost-nashville'],
+    imageAlt: 'Black metal driveway gate at a Nashville home — driveway gate cost guide',
+    body: [
+      {
+        type: 'p',
+        text: "The first question every homeowner asks me on a driveway gate consultation is 'about how much?' The honest answer is 'somewhere between $2,000 and $45,000.' That's not a dodge — it's the actual range, and where your project lands in it depends on six things that almost nobody asks about up front. Let me walk you through the math the way I would at the end of your driveway in Brentwood or Belle Meade, and you'll be able to read any gate quote that hits your inbox.",
+      },
+      { type: 'h2', text: 'The Four Cost Tiers in Nashville' },
+      {
+        type: 'p',
+        text: "Most driveway gates in Davidson and Williamson Counties fall into one of these four buckets. Pick the bucket first, then work the line items.",
+      },
+      {
+        type: 'table',
+        headers: ['Tier', 'What you get', 'Installed cost in Nashville'],
+        rows: [
+          ['Manual entry', 'Single swing wood or aluminum, no operator, manual latch', '$1,800-$3,500'],
+          ['Mid-range automated', 'Single-leaf ornamental aluminum, basic operator, keypad', '$5,500-$10,500'],
+          ['Premium automated', 'Dual swing or sliding, premium operator, full access control', '$10,500-$18,000'],
+          ['Custom estate', 'Ornamental iron, cellular intercom + video, multiple operators', '$18,000-$45,000+'],
+        ],
+      },
+      {
+        type: 'p',
+        text: "Most of my Nashville installs land in the mid-range bracket. The most common phone call is 'I want something that looks like the neighbor's gate but not $20,000,' and the honest answer is usually 'OK, that's an aluminum single-leaf with a LiftMaster operator and a keypad, $7,500 to $9,500.'",
+      },
+      { type: 'h2', text: 'The Line Items Hiding in a Driveway Gate Quote' },
+      {
+        type: 'p',
+        text: "A real driveway gate quote has at least eight separate cost lines. If yours is one number on a page, ask for the breakdown before you sign.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Gate fabrication (the actual metal or wood): the biggest line. Varies hugely with material — aluminum runs $1,800-3,500 for a single 10-12 ft leaf, ornamental iron runs $3,500-8,500 for the same footprint.',
+          'Operator (the motor + controller): $1,200-3,200. LiftMaster Elite, FAAC, BFT, and HySecurity are the brands you actually want. The cheap operators in the catalog get returned to the shop within two years.',
+          'Access control (how guests open the gate): $400-2,800. Keypad alone is the floor. Cellular intercom with video is the ceiling.',
+          'Gate posts and foundations: $400-1,200. Gate posts are bigger than fence posts and go deeper — 36-48 inches in Nashville clay, set in concrete.',
+          'Safety devices (UL325 compliant): $200-500. Photo eyes are the minimum, loop detectors and edge sensors are the standard on a residential operator.',
+          'Electrical run from the house: $500-2,500. This is the surprise that blows budgets. Trenching through 80 feet of landscaped yard with a buried conduit costs real money.',
+          'Programming and commissioning: usually rolled into the operator install, but ask. A gate that\'s installed but never properly calibrated will fail inside six months.',
+          "Permit fee: $50-150 in some Metro Nashville zones. Most residential driveway gates don't require a permit, but verify before signing — historic overlays and HOA neighborhoods often do.",
+        ],
+      },
+      { type: 'h2', text: 'What Drives the Price Up' },
+      {
+        type: 'p',
+        text: "Six factors push gate cost above the mid-range bracket in Nashville:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Width. Every foot beyond 12 feet adds material and structural cost. A 16-foot dual swing costs roughly 1.6x a 10-foot single, not 1.6x the material — the operator and posts both go up too.',
+          'Slope. Sloped driveways need offset hinges or a custom-designed leaf shape. Driveways with more than 6 inches of fall across the gate opening usually need a sliding gate instead of swing, which adds $1,500-3,000.',
+          'Distance from electrical source. Trenching the conduit run is often as expensive as the gate itself if your house service panel is 80+ feet from the gate location.',
+          'Ornamental fabrication. Welded scrolls, custom panels, and forged finials add 30-60 percent to a quote versus straight vertical pickets.',
+          'Access control complexity. A cellular intercom with video calling adds $1,500-2,800 over a basic keypad, plus an ongoing cellular service plan ($30-50 monthly).',
+          'HOA design requirements. Belle Meade, Forest Hills, and most Williamson County subdivisions spec specific gate styles. Match them or your install gets pulled.',
+        ],
+      },
+      { type: 'h2', text: 'What Keeps the Price Down' },
+      {
+        type: 'ul',
+        items: [
+          'Standard widths (10-12 feet single, 14-16 feet double). Operators are sized in these increments and material yards stock to these dimensions.',
+          'A flat driveway near the house. Short electrical runs and standard hinge geometry both save real money.',
+          'Solar operator. Eliminates the electrical trench entirely. Adds $400-900 to the operator price but saves $1,000-2,500 on trenching. Net savings on most jobs.',
+          'Simple keypad versus cellular intercom. Keypad is $400-800 installed, cellular intercom is $1,800-3,200.',
+          'Aluminum versus ornamental iron. Aluminum runs $1,800-3,500 for a single leaf. Iron runs $3,500-8,500 for the same.',
+        ],
+      },
+      { type: 'h2', text: 'Hidden Costs Most Quotes Skip' },
+      {
+        type: 'p',
+        text: "Five line items that show up on the final invoice if they weren't on the first quote:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Driveway widening if the existing pour is too narrow to accommodate posts plus gate clearance. $800-2,200.',
+          'HOA approval review fee: $50-300, plus 2-6 weeks of waiting.',
+          'Concrete pier footings for gate posts that go deeper than expected. $200-400 extra per post if the soil is rocky or saturated.',
+          'B-rated versus commercial operator. If you have a long driveway and the gate cycles 30+ times per day, you need a commercial-grade operator ($800-1,600 upgrade).',
+          'Cellular service plan for intercom: $30-50 per month, ongoing. Easy to forget when comparing install quotes.',
+        ],
+      },
+      { type: 'h2', text: 'Maintenance Costs Are a Line Item Too' },
+      {
+        type: 'p',
+        text: "A driveway gate is the only fence-adjacent product on the property with moving parts. Plan for it:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Annual operator service: $150-400 (recommended on premium operators, optional on basic).',
+          'Battery replacement (UPS backup or solar): $80-200, every 3-4 years.',
+          'Hinge bushing replacement: $200-500, typically around year 7 on heavy gates.',
+          'Operator replacement: $1,800-3,500, expected around year 12-15.',
+          'Refinishing iron: $400-900, every 5-7 years.',
+        ],
+      },
+      { type: 'h2', text: 'Does a Driveway Gate Actually Add Property Value?' },
+      {
+        type: 'p',
+        text: "Reality check from the appraiser side: yes, but not at the rate the gate sales pitch suggests. A $5,000 economy gate adds roughly $3,000-4,000 to appraised value on a typical Nashville lot — call it 60-80 percent recovery. A $20,000 premium estate gate adds roughly $12,000-15,000. The bigger win is buyer perception and curb appeal, not the appraisal number. Gated driveways read as a category signal in the Nashville market, and homes with them tend to sell faster.",
+      },
+      { type: 'h2', text: 'How to Read a Driveway Gate Quote' },
+      {
+        type: 'p',
+        text: "The five things to verify before you sign:",
+      },
+      {
+        type: 'ol',
+        items: [
+          'The gate is on its own line, separate from the operator.',
+          "The operator brand AND series. 'LiftMaster Elite 8500W' is a real spec. 'LiftMaster operator' is a slogan.",
+          'Safety devices are listed by name (photo eyes minimum, loop detector recommended).',
+          'Electrical scope is explicit — who pulls the permit, who trenches, who runs the conduit, who connects to the panel.',
+          'Three separate warranties spelled out — gate warranty (often lifetime structural), operator warranty (1-5 years), install warranty (90 days to 2 years).',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If any of those five are missing, ask before signing. The same logic that applies to a [fence quote](/resources/fence-cost-breakdown) applies to a gate quote, only doubled.",
+      },
+      { type: 'h2', text: 'Red Flags in a Driveway Gate Quote' },
+      {
+        type: 'ul',
+        items: [
+          'Quote without operator brand and model.',
+          "No safety devices listed. UL325 compliance is the legal bar — gates installed without it carry liability if a kid or pet gets hit.",
+          "Vague 'automation included' without specifying access control type.",
+          "Deposit over 50 percent. The Nashville norm is 30-50 percent.",
+          'No permit line for jurisdictions that require one.',
+          'Sub-2-week turnaround on a premium gate. Custom fabrication takes 4-8 weeks, period. Anyone promising faster is using off-the-shelf stock.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "The same screening logic from the [Questions to Ask Before Hiring a Nashville Fence Installer](/resources/hire-nashville-fence-installer-questions) article applies to gate installers — actually more strictly, because gate work involves electrical and high-cycle mechanical parts that residential fence crews don't always handle correctly. When in doubt, browse our directory of Nashville [gates and access systems](/contractors) specialists.",
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Driveway gates are one of the few exterior upgrades where the difference between a $5,000 install and a $15,000 install is genuinely visible from the street every day. The cheap gate is the one you'll be replacing in seven years. The right gate is the one you'll forget you have, because it just opens when it should and closes when it should, and looks the same in year ten as it did the week it went in. Spend at the level you want to live with. Then forget you spent it.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
