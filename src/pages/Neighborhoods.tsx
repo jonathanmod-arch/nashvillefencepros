@@ -181,35 +181,8 @@ export default function Neighborhoods() {
                   {n.zip}
                 </div>
               </div>
-              {'cityResources' in n && n.cityResources && n.cityResources.length > 0 && (
-                <div className="bg-white border border-warmgray rounded-2xl p-6">
-                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-3">
-                    City Permit Resources
-                  </div>
-                  <ul className="space-y-2.5">
-                    {n.cityResources.map((r) => (
-                      <li key={r.url}>
-                        <a
-                          href={r.url}
-                          target="_blank"
-                          rel="noopener noreferrer nofollow"
-                          className="group flex items-start gap-2 text-sm text-onyx-700 hover:text-forest-500"
-                        >
-                          <ExternalLink className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-forest-500 group-hover:text-forest-600" />
-                          <span className="underline underline-offset-4 decoration-warmgray group-hover:decoration-forest-500">
-                            {r.label}
-                          </span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-3 text-[11px] text-onyx-700/55 leading-relaxed">
-                    Official city page. Always confirm requirements directly with the municipality before installing.
-                  </p>
-                </div>
-              )}
-              <div className="bg-forest-500 text-white rounded-2xl p-6">
-                <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-300 mb-1">
+              <div className="bg-warmgray rounded-2xl p-6">
+                <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
                   Nearby Service Areas
                 </div>
                 <ul className="mt-3 space-y-2">
@@ -219,14 +192,41 @@ export default function Neighborhoods() {
                       <li key={x.slug}>
                         <Link
                           to={`/service-areas/${x.slug}`}
-                          className="text-sm text-white/90 hover:text-oak-300 flex items-center gap-1"
+                          className="text-sm text-onyx-700 hover:text-forest-500 flex items-center gap-1"
                         >
-                          <MapPin className="w-3 h-3" /> {x.name}
+                          <MapPin className="w-3 h-3 text-forest-500" /> {x.name}
                         </Link>
                       </li>
                     ))}
                 </ul>
               </div>
+              {'cityResources' in n && n.cityResources && n.cityResources.length > 0 && (
+                <div className="bg-forest-500 text-white rounded-2xl p-6">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-300 mb-3">
+                    City Permit Resources
+                  </div>
+                  <ul className="space-y-2.5">
+                    {n.cityResources.map((r) => (
+                      <li key={r.url}>
+                        <a
+                          href={r.url}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="group flex items-start gap-2 text-sm text-white hover:text-oak-300"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-oak-300 group-hover:text-oak-400" />
+                          <span className="underline underline-offset-4 decoration-white/30 group-hover:decoration-oak-300">
+                            {r.label}
+                          </span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 text-[11px] text-white/65 leading-relaxed">
+                    Official city page. Always confirm requirements directly with the municipality before installing.
+                  </p>
+                </div>
+              )}
             </aside>
           </div>
         </section>
