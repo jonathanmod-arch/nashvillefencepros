@@ -803,6 +803,172 @@ export const RESOURCES = [
     excerpt:
       'Line-item analysis: materials, labor, post-setting, gates, and the hidden costs that surprise first-time buyers.',
     img: IMAGES.resources['fence-cost-breakdown'],
+    body: [
+      {
+        type: 'p',
+        text: "Three contractors hand you three quotes. One is $4,200, one is $5,800, one is $7,400. Same fence. Same yard. What's actually going on? In my experience the answer is almost never that the cheap guy is hiding savings or that the expensive guy is gouging — it's that the three of them are quoting three different scopes and burying the differences in the line items. This article is a flashlight for the fine print.",
+      },
+      { type: 'h2', text: 'The Anatomy of an Honest Fence Quote' },
+      {
+        type: 'p',
+        text: "A complete residential fence quote in Nashville should have, at minimum, these line items broken out. If any of them are missing, ask why before you sign.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Materials (boards, posts, hardware) — usually quoted per linear foot.',
+          'Labor — either rolled into the per-foot rate or broken out separately.',
+          'Post setting and concrete.',
+          'Gates (each one priced individually).',
+          'Demolition and haul-off of the existing fence.',
+          'Permits and fees.',
+          'Tennessee 811 utility marking coordination.',
+          'Site prep and minor grading.',
+          'Cleanup and final walkthrough.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "A quote that's just 'Wood Privacy Fence — $5,800' is not a quote. It's a number on a napkin. Push for the line items. A contractor who can't break them out either doesn't know their own costs or doesn't want you to know.",
+      },
+      { type: 'h2', text: 'Materials — Per Linear Foot Means Different Things' },
+      {
+        type: 'p',
+        text: "Materials are usually the biggest single line and the easiest place to skim. Cedar privacy fence runs $28 to $38 per linear foot installed in Nashville, premium vinyl runs $32 to $44, aluminum ornamental runs $30 to $48, chain link runs $12 to $22. Those are the typical 2026 ranges for Davidson and Williamson County jobs. Below the bottom of each range, ask what's getting cut.",
+      },
+      {
+        type: 'p',
+        text: "The three places contractors save money on materials without telling you:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Picket thickness. A 5/8-inch dog-ear cedar picket is the bargain spec. 3/4-inch is the standard. 1-inch is premium. Pickets warp at thinner gauges, especially through a Nashville summer.',
+          'Post grade. 4x4 pressure-treated posts are standard for wood privacy. 6x6 posts on gate ends and corners are upgrade territory. Steel posts wrapped in wood sleeves are commercial-grade. Cheap quotes use the smallest post they can get away with.',
+          'Hardware. Galvanized screws and nails are baseline. Stainless steel costs more, lasts decades, and is what you want anywhere salt or moisture lingers. A quote that says "fasteners" without specifying material is hiding something.',
+        ],
+      },
+      { type: 'h2', text: 'Post Setting — Where Nashville Soil Punishes Shortcuts' },
+      {
+        type: 'p',
+        text: "Middle Tennessee has clay soil that swells, contracts, and freezes a few inches deep most winters. A fence post that's set wrong here looks fine on day one and leans within 18 months. The right post-setting spec in Nashville:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Post hole depth: 30 inches minimum for a 6-foot fence, 36 inches for an 8-foot fence. The frost line in Nashville is shallow — 8-10 inches — but the leverage on a tall fence in clay soil punishes shallow posts.',
+          'Concrete: a 60-pound bag of high-strength concrete per post is the floor. A bag and a half per post is the contractor who actually does it right. Quotes that don\'t mention concrete on the post-setting line are using dirt-pack, and that fence will lean.',
+          'Gravel base: 3-4 inches of crushed stone at the bottom of every post hole for drainage. Skipping this is the number one reason wood posts rot from the bottom up.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If the quote says 'set posts in concrete' and that's it, ask follow-up questions. If they say 'set posts' with no concrete spec, walk away.",
+      },
+      { type: 'h2', text: 'Gates — Always More Than You Think' },
+      {
+        type: 'p',
+        text: "Gates are where the budget surprises live. A walk-gate adds $250-400 to a wood fence install, $400-700 to a vinyl, and $500-900 to an aluminum ornamental. A double drive-gate (the wide one for vehicles) is $1,200-2,800 depending on material and hardware. Automatic operators are another $1,800-3,200 on top.",
+      },
+      {
+        type: 'p',
+        text: "Three line items to verify on every gate:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Posts: gate posts are bigger and set deeper than line posts. 6x6 wood or steel-reinforced are standard for wide gates. Check the spec.',
+          'Hardware: gate hinges and latches take far more abuse than fence hardware. Pool-rated self-closing hinges run $80 each. Standard residential hinges are $20. Big difference, easy to substitute, hard to see after install.',
+          'Hardware warranty: most fence warranties exclude gate hardware. Ask. A separate hardware warranty is reasonable to expect on a higher-end install.',
+        ],
+      },
+      { type: 'h2', text: "Demolition and Haul-Off — The Forgotten Line" },
+      {
+        type: 'p',
+        text: "If you have an existing fence, removing it and hauling it away is not free. Most Nashville contractors charge $4-8 per linear foot for tear-out, depending on whether the posts are set in concrete. A 150-foot existing chain link comes out for $600-1,200. A 150-foot old cedar fence with the bottom rotted comes out for $750-1,500.",
+      },
+      {
+        type: 'p',
+        text: "Look for the demo line. If it's missing from the quote, ask if it's bundled into labor or excluded. 'Excluded' means you're tearing it out, which is a real Saturday of work and a dump truck rental.",
+      },
+      { type: 'h2', text: 'Permits, 811, and the Stuff That Looks Small' },
+      {
+        type: 'p',
+        text: "These line items individually are minor, collectively they add up to a few hundred dollars, and missing them is how budgets blow.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Metro Codes permit: $50-100 for a residential fence permit when required. Should be a line item if your project needs one.',
+          'Historic Zoning Commission application: another $100-150 in overlay districts.',
+          'Tennessee 811 utility marking: free service, but the contractor builds the scheduling time into their labor bid. Verify they handle the call.',
+          'Site survey: needed if your property lines aren\'t marked. $400-900 in Davidson County, more in Williamson for larger lots.',
+          'Stake-out before dig: the contractor walking the line with you to mark every post location. This is critical and should happen 24-48 hours before the install crew shows up.',
+        ],
+      },
+      { type: 'h2', text: 'The Hidden Costs That Surprise First-Time Buyers' },
+      {
+        type: 'p',
+        text: "Things that don't always make the initial quote but show up on the final invoice:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Tree-line clearing. If brush is in the way, expect $4-9 per linear foot of clearing labor. Worth getting in writing.',
+          'Rock encounters. Limestone is everywhere under Nashville soil. Hitting bedrock can add $40-80 per post hole. Reputable contractors quote this as a contingency rather than a surprise.',
+          'Grade changes. Stepped fence on slopes adds 10-15% to the labor.',
+          'Long material runs. Hauling fence panels into a backyard with no driveway access adds an hour of crew time per day.',
+          'HOA color or stain requirements. Specified stain colors add $3-6 per linear foot.',
+          'Concrete curb for pool barriers. $8-12 per linear foot, almost always missing from quote 1.',
+        ],
+      },
+      { type: 'h2', text: 'How to Compare Three Quotes That Look Different' },
+      {
+        type: 'p',
+        text: "The biggest mistake homeowners make is comparing the total at the bottom. The real comparison is line by line. Ask each contractor to break their quote into the categories above. If one of them refuses, that's your answer.",
+      },
+      {
+        type: 'p',
+        text: "Then for each category, ask: is the spec the same? Same picket thickness, same post size, same concrete spec, same hardware grade, same demo scope, same warranty terms. Once you normalize the specs, the price differences shrink to almost nothing — usually within 8-12 percent.",
+      },
+      {
+        type: 'p',
+        text: "If after normalizing, one quote is still 20+ percent cheaper, something is missing. Find it before you sign.",
+      },
+      { type: 'h2', text: 'Red Flags in a Quote' },
+      {
+        type: 'ul',
+        items: [
+          'No itemized line breakdown.',
+          'No mention of post depth or concrete.',
+          'No demo and haul-off line for a replacement project.',
+          'No mention of permits in a permit-required scenario.',
+          '50% deposit demanded up front. (30% is the Nashville standard for residential fence work. Anything higher is a yellow flag and 100% is a red flag.)',
+          'No written warranty.',
+          'Verbal-only quote ("I\'ll text you the number tomorrow"). Get it in writing.',
+          'Pressure to sign today for a "special price."',
+        ],
+      },
+      { type: 'h2', text: 'What to Ask Before You Sign' },
+      {
+        type: 'ol',
+        items: [
+          'Is this quote good for 30 days or 60 days?',
+          'What is your deposit structure?',
+          'What is the warranty on labor? On materials? On gate hardware separately?',
+          'Who handles the Metro Codes permit and the Tennessee 811 call?',
+          'What is your change-order process if you hit rock or have to clear brush?',
+          'How many crews do you have, and which one will be on my install?',
+          'Can I see two recent installs in my zip code, with the customers contact info?',
+          'What is your callback policy if a post leans within the warranty window?',
+        ],
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Cheap fence quotes are not a deal — they're usually a smaller scope with the cuts hidden in the line items. Expensive quotes aren't a rip-off — they're usually a contractor doing the work the right way and explaining each dollar. Honest middle quotes from contractors who can explain every line are almost always the right answer. The cheapest fence in Nashville is the one you put in correctly the first time.",
+      },
+    ],
   },
   {
     slug: 'horizontal-cedar-trend',
