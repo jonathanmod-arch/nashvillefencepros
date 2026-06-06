@@ -42,12 +42,44 @@ function ArticleBody({ sections }: { sections: ResourceSection[] }) {
                 {s.text}
               </h3>
             )
-          case 'p':
+          case 'p': {
+            const parts: Array<string | { text: string; to: string }> = []
+            const re = /\[([^\]]+)\]\(([^)]+)\)/g
+            let last = 0
+            let m: RegExpExecArray | null
+            while ((m = re.exec(s.text)) !== null) {
+              if (m.index > last) parts.push(s.text.slice(last, m.index))
+              parts.push({ text: m[1], to: m[2] })
+              last = m.index + m[0].length
+            }
+            if (last < s.text.length) parts.push(s.text.slice(last))
             return (
               <p key={i} className="leading-relaxed text-[15.5px] text-onyx-700/85">
-                {s.text}
+                {parts.map((p, j) => {
+                  if (typeof p === 'string') return p
+                  return p.to.startsWith('/') ? (
+                    <Link
+                      key={j}
+                      to={p.to}
+                      className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+                    >
+                      {p.text}
+                    </Link>
+                  ) : (
+                    <a
+                      key={j}
+                      href={p.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+                    >
+                      {p.text}
+                    </a>
+                  )
+                })}
               </p>
             )
+          }
           case 'ul':
             return (
               <ul key={i} className="space-y-2.5 pl-5 list-disc marker:text-oak-500">

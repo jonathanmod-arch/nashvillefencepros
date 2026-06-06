@@ -472,7 +472,7 @@ export const RESOURCES = [
       { type: 'h3', text: 'Historic overlays do not care about your dog' },
       {
         type: 'p',
-        text: "Edgefield, Germantown, Lockeland Springs, Belle Meade Conservation — they care about the street-facing elevation, not your golden retriever's containment plan. The compromise that wins approval: traditional ornamental iron or picket out front (the part the review board sees), and modern dog-appropriate cedar or wire in the rear yard. The Historic Zoning Commission isn't your enemy. They just want to see a thoughtful application.",
+        text: "Edgefield, Germantown, Lockeland Springs, Belle Meade Conservation — they care about the street-facing elevation, not your golden retriever's containment plan. The compromise that wins approval: traditional ornamental iron or picket out front (the part the review board sees), and modern dog-appropriate cedar or wire in the rear yard. The [Historic Zoning Commission](/historic-overlays) isn't your enemy. They just want to see a thoughtful application.",
       },
       { type: 'h2', text: 'What I Wish More People Asked Before They Hired Me' },
       {
@@ -722,12 +722,12 @@ export const RESOURCES = [
       { type: 'h3', text: 'Step 4 — Inspection after install' },
       {
         type: 'p',
-        text: "Most residential fence permits in Nashville require a single rough-and-final inspection after the install is complete. Schedule it through Metro, meet the inspector on site, and have the permit number ready. Pool barriers add a separate barrier inspection — see the Pool Fence Safety article for the details.",
+        text: "Most residential fence permits in Nashville require a single rough-and-final inspection after the install is complete. Schedule it through Metro, meet the inspector on site, and have the permit number ready. Pool barriers add a separate barrier inspection — see the [Pool Fence Safety](/resources/pool-fence-safety-tn) article for the details.",
       },
       { type: 'h2', text: 'Historic Overlay Districts — A Different Animal' },
       {
         type: 'p',
-        text: "Nashville has eight active historic overlay districts as of this writing, and your fence application in any of them goes through the Metro Historic Zoning Commission BEFORE it goes through Codes. The districts that come up most often in fence work:",
+        text: "Nashville has eight active [historic overlay districts](/historic-overlays) as of this writing, and your fence application in any of them goes through the Metro Historic Zoning Commission BEFORE it goes through Codes. The districts that come up most often in fence work:",
       },
       {
         type: 'ul',
@@ -1075,7 +1075,7 @@ export const RESOURCES = [
       { type: 'h2', text: 'Historic Overlay Considerations' },
       {
         type: 'p',
-        text: "Three of the four neighborhoods where horizontal cedar is most popular — Edgefield, Germantown, and Lockeland Springs — are inside historic overlay districts. The Historic Zoning Commission tends to be skeptical of horizontal slat fences in front yards. They read as too modern for the period of the neighborhoods.",
+        text: "Three of the four neighborhoods where horizontal cedar is most popular — Edgefield, Germantown, and Lockeland Springs — are inside [historic overlay districts](/historic-overlays). The Historic Zoning Commission tends to be skeptical of horizontal slat fences in front yards. They read as too modern for the period of the neighborhoods.",
       },
       {
         type: 'p',
@@ -1207,7 +1207,7 @@ export const RESOURCES = [
       },
       {
         type: 'p',
-        text: "If the damage is from a storm and you're filing an insurance claim, the math gets a third variable: what the insurer will cover. Documentation in the first 24 hours is everything — photos before debris gets moved, photos of adjacent damage, the National Weather Service summary for that exact date. The Storm-Damaged Fence guide on this site walks you through that part. Otherwise, run the 60 percent rule, pick the right call, and the rest is just scheduling.",
+        text: "If the damage is from a storm and you're filing an insurance claim, the math gets a third variable: what the insurer will cover. Documentation in the first 24 hours is everything — photos before debris gets moved, photos of adjacent damage, the National Weather Service summary for that exact date. The [Storm-Damaged Fence guide](/resources/storm-damaged-fence-nashville-insurance) on this site walks you through that part. Otherwise, run the 60 percent rule, pick the right call, and the rest is just scheduling.",
       },
     ] as ResourceSection[],
   },
@@ -1341,7 +1341,7 @@ export const RESOURCES = [
       },
       {
         type: 'p',
-        text: "If the repair quote comes in well below 60 percent of a full replacement, you're in good shape — repair is the right call. If it's close to or above that line, talk to the contractor about a full replacement. Your insurance proceeds usually apply either way, and you get a fresh fence with a fresh warranty instead of a patched one with a clock.",
+        text: "If the repair quote comes in well below 60 percent of a full replacement, you're in good shape — repair is the right call. If it's close to or above that line, talk to the contractor about a full replacement. (The full [60 Percent Rule walkthrough](/resources/fence-repair-vs-replace-nashville) explains the math.) Your insurance proceeds usually apply either way, and you get a fresh fence with a fresh warranty instead of a patched one with a clock.",
       },
       { type: 'h2', text: 'One Last Thing' },
       {
