@@ -152,15 +152,22 @@ export default function Repair() {
             <span className="label-eyebrow">By Material</span>
             <h2 className="mt-3 heading-section">What We Repair</h2>
             <div className="heading-accent mx-auto" />
-            <p className="mt-4 text-body-lead">
-              Nashville fence repair pricing varies by material, age, and access. The ranges
-              below cover typical residential fence repairs in Davidson and Williamson counties —
-              wooden fence post replacements, vinyl fence panel swaps, aluminum fence section
-              rebuilds, chain link fence stretching, and ornamental iron weld work. A good fence
-              company doesn't just patch the failure point; the right fence contractor checks
-              gate hardware, post footings, and adjacent runs so the repair holds up and you get
-              the peace of mind that comes with a clean, warrantied job at a competitive price.
-            </p>
+            <div className="mt-5 text-left space-y-4">
+              <p className="text-body-lead">
+                Nashville fence repair pricing varies by material, age, and access. The ranges
+                below cover typical residential repairs in Davidson and Williamson counties.
+              </p>
+              <p className="text-body-lead">
+                Wooden fence post replacements, vinyl fence panel swaps, aluminum fence section
+                rebuilds, chain link stretching, and ornamental iron weld work — all of it
+                shows up on the same trucks.
+              </p>
+              <p className="text-body-lead">
+                A good fence company doesn't just patch the failure point. The right contractor
+                checks gate hardware, post footings, and adjacent runs so the repair holds up
+                and you get the peace of mind that comes with a clean, warrantied job.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-14">

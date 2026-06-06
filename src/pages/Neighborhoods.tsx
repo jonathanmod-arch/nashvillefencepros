@@ -118,18 +118,23 @@ export default function Neighborhoods() {
                 neighborhood character. Our network has done hundreds of installs here and can match
                 you with a crew that already knows the local nuances.
               </p>
-              <p className="text-body-lead mb-8">
+              <p className="text-body-lead mb-5">
                 A good fence is essential to protect your property, frame the yard, and add
-                aesthetic appeal — and in {n.name} the right call depends on lot size, HOA rules,
-                and what your neighbors already run. The fence company network we list installs
-                every common material in this area: a wooden fence for backyard privacy, a vinyl
-                fence on HOA-controlled lots, an aluminum fence along pools and front entries, and
-                chain link fence on larger parcels or side runs out of view. Each fence contractor
-                in our directory works at competitive prices with the attention to details that
-                drive a clean, warrantied fence installation — and the peace of mind that comes
-                with it. Whatever fencing solution fits your {n.name} home — residential fence or
-                commercial fences for a local business — the top rated pros we recommend will walk
-                you through high quality fence styles and fence materials that hold up on your lot.
+                aesthetic appeal. In {n.name} the right call depends on lot size, HOA rules,
+                and what your neighbors already run.
+              </p>
+              <p className="text-body-lead mb-5">
+                The fence company network we list installs every common material here: wooden
+                fence for backyard privacy, vinyl fence on HOA-controlled lots, aluminum fence
+                along pools and front entries, and chain link fence on larger parcels or side
+                runs out of view.
+              </p>
+              <p className="text-body-lead mb-8">
+                Each fence contractor in our directory works at competitive prices with the
+                attention to details that drive a clean, warrantied install. Whatever fencing
+                solution fits your {n.name} home — residential or commercial — the top rated
+                pros we recommend will walk you through fence styles and materials that hold up
+                on your lot.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -214,21 +219,26 @@ export default function Neighborhoods() {
       />
       <section className="bg-white section-padding">
         <div className="container-wide">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-body-lead mb-4">
-              Fence installation in Nashville covers a sprawling metro — from Davidson County's
-              Belle Meade estates and East Nashville bungalows through Williamson County's Franklin
-              and Brentwood subdivisions, east into Wilson County's Mount Juliet and Lebanon, south
-              to Murfreesboro and Spring Hill, and north to Hendersonville and Gallatin. Every area
-              has its own fence styles, HOA quirks, and price bands.
+          <div className="max-w-2xl mx-auto text-left space-y-4 mb-12">
+            <p className="text-body-lead">
+              Fence installation in Nashville covers a sprawling metro. From Davidson County's
+              Belle Meade estates and East Nashville bungalows through Williamson County's
+              Franklin and Brentwood subdivisions.
             </p>
             <p className="text-body-lead">
-              A high quality fence is essential to protect your property and add aesthetic appeal,
-              whether you need a residential fence in a quiet cul-de-sac or commercial fences
-              around a local business. The fence contractor crews in our directory install every
-              common material — wooden fence, vinyl fence, aluminum fence, chain link fence, and
-              ornamental iron — at competitive prices, with the attention to details that turn a
-              fencing solution into peace of mind. Pick your city below for the top rated fence
+              East into Wilson County's Mount Juliet and Lebanon, south to Murfreesboro and
+              Spring Hill, north to Hendersonville and Gallatin. Every area has its own fence
+              styles, HOA quirks, and price bands.
+            </p>
+            <p className="text-body-lead">
+              A high quality fence is essential to protect your property and add aesthetic
+              appeal — whether you need a residential fence in a quiet cul-de-sac or
+              commercial fences around a local business.
+            </p>
+            <p className="text-body-lead">
+              The fence contractor crews in our directory install every common material —
+              wooden fence, vinyl fence, aluminum fence, chain link fence, and ornamental
+              iron — at competitive prices. Pick your city below for the top rated fence
               company picks in that area.
             </p>
           </div>

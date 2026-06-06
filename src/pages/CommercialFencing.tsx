@@ -83,17 +83,24 @@ export default function CommercialFencing() {
             <span className="label-eyebrow">Use Cases</span>
             <h2 className="mt-3 heading-section">Built for Tennessee Job Sites</h2>
             <div className="heading-accent mx-auto" />
-            <p className="mt-4 text-body-lead">
-              From single-fence security perimeters to multi-site rollouts, our network of
-              commercial fence installation companies in Nashville handles every common material
-              — code-sized chain link fence around warehouses and lots, ornamental aluminum
-              fence at corporate entries, vinyl fence around multifamily playgrounds, and welded
-              ornamental iron at premium properties. A reliable commercial fence is essential to
-              protect your property, control access, and add aesthetic appeal at the curb. Each
-              top rated fence contractor in our directory pairs high quality fence materials and
-              fence styles with the attention to details and competitive prices that turn a
-              security fencing solution into long-term peace of mind.
-            </p>
+            <div className="mt-5 text-left space-y-4">
+              <p className="text-body-lead">
+                From single security perimeters to multi-site rollouts, our network of
+                commercial fence installation companies in Nashville handles every common
+                material.
+              </p>
+              <p className="text-body-lead">
+                Code-sized chain link around warehouses and lots, ornamental aluminum at
+                corporate entries, vinyl around multifamily playgrounds, welded ornamental
+                iron at premium properties.
+              </p>
+              <p className="text-body-lead">
+                A reliable commercial fence is essential to protect your property, control
+                access, and add aesthetic appeal at the curb. Each top rated contractor in our
+                directory pairs high quality materials with the attention to details that turn
+                a security fencing solution into long-term peace of mind.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
