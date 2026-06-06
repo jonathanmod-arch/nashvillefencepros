@@ -20,6 +20,7 @@ import {
   serviceSchema,
 } from '../lib/schema'
 import { RESOURCE_PUBLISHED_AT } from '../data/siteData'
+import { CITY } from '../config/city'
 
 const CODE_REQUIREMENTS = [
   {
@@ -74,9 +75,8 @@ const APPROVED_MATERIALS = [
 
 export default function PoolFenceCode() {
   useDocumentMeta({
-    title: 'Pool Fence Code Nashville TN | ISPSC Compliance Guide 2026',
-    description:
-      'Pool fence code requirements in Nashville TN, Tennessee ISPSC barrier rules, minimum height, gate latch, common inspection failures, and how to install a pool fence that passes the first time.',
+    title: `Pool Fence Code ${CITY.name} ${CITY.stateAbbr} | ISPSC Compliance Guide 2026`,
+    description: `Pool fence code requirements in ${CITY.name} ${CITY.stateAbbr}, ${CITY.state} ISPSC barrier rules, minimum height, gate latch, common inspection failures, and how to install a pool fence that passes the first time.`,
     canonical: '/pool-fence-code',
   })
 
@@ -85,18 +85,16 @@ export default function PoolFenceCode() {
     breadcrumbList([{ label: 'Pool Fence Code' }]),
     articleSchema({
       slug: '/pool-fence-code',
-      title: 'Nashville Pool Fence Code & ISPSC Compliance Guide',
-      description:
-        'Tennessee pool fence code requirements, Nashville Metro inspection rules, common violations, approved materials, and the permit process for residential pool barriers.',
+      title: `${CITY.name} Pool Fence Code & ISPSC Compliance Guide`,
+      description: `${CITY.state} pool fence code requirements, ${CITY.permitOffice.shortName} inspection rules, common violations, approved materials, and the permit process for residential pool barriers.`,
       category: 'Compliance',
-      image: 'https://nashvillefenceguide.com/og.jpg',
+      image: `${CITY.siteUrl}/og.jpg`,
       publishedAt: RESOURCE_PUBLISHED_AT,
     }),
     serviceSchema({
       slug: '/pool-fence-code',
-      name: 'ISPSC-Compliant Pool Fence Installation in Nashville',
-      description:
-        'Pool fence installation that meets Tennessee ISPSC barrier code on the first inspection, aluminum, mesh, and glass options.',
+      name: `ISPSC-Compliant Pool Fence Installation in ${CITY.name}`,
+      description: `Pool fence installation that meets ${CITY.state} ISPSC barrier code on the first inspection, aluminum, mesh, and glass options.`,
     }),
   ])
 
@@ -104,8 +102,8 @@ export default function PoolFenceCode() {
     <>
       <PageHero
         eyebrow="Pool Fence Compliance"
-        title="Pool Fence Code Nashville TN"
-        description="Tennessee adopted the 2018 ISPSC pool barrier code. Here's every requirement that matters for Nashville homeowners installing or replacing a pool fence, plus the violations Metro inspectors flag most often."
+        title={`Pool Fence Code ${CITY.name} ${CITY.stateAbbr}`}
+        description={`${CITY.state} adopted the ${CITY.poolBarrierCode} pool barrier code. Here's every requirement that matters for ${CITY.name} homeowners installing or replacing a pool fence, plus the violations ${CITY.permitOffice.shortName} inspectors flag most often.`}
         crumbs={[{ label: 'Pool Fence Code' }]}
         right={<CallbackForm />}
       />

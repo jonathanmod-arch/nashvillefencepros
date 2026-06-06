@@ -13,6 +13,7 @@ import {
   serviceSchema,
 } from '../lib/schema'
 import { RESOURCE_PUBLISHED_AT } from '../data/siteData'
+import { CITY } from '../config/city'
 
 const LINE_ITEMS = [
   { label: 'Posts & Concrete', share: 18, note: '4×4 posts set in concrete, 8 ft on center.' },
@@ -25,9 +26,8 @@ const LINE_ITEMS = [
 
 export default function CostGuide() {
   useDocumentMeta({
-    title: 'Fence Installation Cost Nashville 2026 | Price by Material | Nashville Fence Guide',
-    description:
-      'Real Nashville fence installation cost data for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences. Interactive Nashville fence cost calculator + price-per-linear-foot ranges by material.',
+    title: `Fence Installation Cost ${CITY.name} 2026 | Price by Material | ${CITY.siteName}`,
+    description: `Real ${CITY.name} fence installation cost data for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences. Interactive ${CITY.name} fence cost calculator + price-per-linear-foot ranges by material.`,
     canonical: '/cost-guide',
   })
 
@@ -36,26 +36,24 @@ export default function CostGuide() {
     breadcrumbList([{ label: 'Cost Guide' }]),
     articleSchema({
       slug: '/cost-guide',
-      title: 'Nashville Fence Installation Cost Guide 2026',
-      description:
-        'Installed price ranges for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences in Nashville TN with material-by-material breakdowns.',
+      title: `${CITY.name} Fence Installation Cost Guide 2026`,
+      description: `Installed price ranges for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences in ${CITY.name} ${CITY.stateAbbr} with material-by-material breakdowns.`,
       category: 'Cost',
-      image: 'https://nashvillefenceguide.com/og.jpg',
+      image: `${CITY.siteUrl}/og.jpg`,
       publishedAt: RESOURCE_PUBLISHED_AT,
     }),
     serviceSchema({
       slug: '/cost-guide',
-      name: 'Nashville Fence Installation Cost Estimates',
-      description:
-        'Per-linear-foot Nashville installed fence cost ranges from licensed local contractors.',
+      name: `${CITY.name} Fence Installation Cost Estimates`,
+      description: `Per-linear-foot ${CITY.name} installed fence cost ranges from licensed local contractors.`,
     }),
   ])
   return (
     <>
       <PageHero
-        eyebrow="Nashville Cost Guide"
-        title="Fence Installation Cost in Nashville TN"
-        description="Real installed prices for fence installation in Nashville, Brentwood, Franklin, Hendersonville, and Murfreesboro, wood, vinyl, chain link, aluminum, wrought iron, privacy, pet, and pool fencing covered, plus the line items hiding behind your quote."
+        eyebrow={`${CITY.name} Cost Guide`}
+        title={`Fence Installation Cost in ${CITY.name} ${CITY.stateAbbr}`}
+        description={`Real installed prices for fence installation in ${CITY.topServiceAreaCities.slice(0, 5).join(', ')}, wood, vinyl, chain link, aluminum, wrought iron, privacy, pet, and pool fencing covered, plus the line items hiding behind your quote.`}
         crumbs={[{ label: 'Cost Guide' }]}
         right={<CallbackForm />}
       />

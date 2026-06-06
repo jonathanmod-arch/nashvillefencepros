@@ -10,12 +10,12 @@ import {
   collectionPageSchema,
   itemListSchema,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 export default function Contractors() {
   useDocumentMeta({
-    title: 'Nashville Fence Installers & Companies | Vetted Directory',
-    description:
-      'Vetted directory of Nashville fence installers and companies. Compare licensed fence contractors in Nashville TN for installation and repair, filter by service area, fence type, and project type.',
+    title: `${CITY.name} Fence Installers & Companies | Vetted Directory`,
+    description: `Vetted directory of ${CITY.name} fence installers and companies. Compare licensed fence contractors in ${CITY.name} ${CITY.stateAbbr} for installation and repair, filter by service area, fence type, and project type.`,
     canonical: '/contractors',
   })
 
@@ -24,21 +24,20 @@ export default function Contractors() {
     breadcrumbList([{ label: 'Find a Pro' }]),
     collectionPageSchema({
       slug: '/contractors',
-      title: 'Nashville Fence Installers & Companies',
-      description:
-        'Vetted directory of Nashville fence installers and companies for installation and repair across Davidson and Williamson Counties.',
+      title: `${CITY.name} Fence Installers & Companies`,
+      description: `Vetted directory of ${CITY.name} fence installers and companies for installation and repair across ${CITY.primaryCounty} and ${CITY.secondaryCounty} Counties.`,
     }),
     itemListSchema(
       CONTRACTORS.map((c) => ({ name: c.name, url: `/contractors/${c.slug}` })),
-      'Nashville Fence Contractor Directory',
+      `${CITY.name} Fence Contractor Directory`,
     ),
   ])
   return (
     <>
       <PageHero
         eyebrow="Vetted Local Pros"
-        title="Nashville Fence Installers & Companies"
-        description="Compare licensed Nashville fence installers and companies for residential and commercial fence installation. Hand-picked, insured, and rated by real Nashville homeowners, filter by area, fence type, and project type."
+        title={`${CITY.name} Fence Installers & Companies`}
+        description={`Compare licensed ${CITY.name} fence installers and companies for residential and commercial fence installation. Hand-picked, insured, and rated by real ${CITY.name} homeowners, filter by area, fence type, and project type.`}
         crumbs={[{ label: 'Find a Pro' }]}
       />
       <ContractorDirectory />

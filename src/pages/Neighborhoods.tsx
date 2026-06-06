@@ -15,6 +15,7 @@ import {
   placeSchema,
   serviceSchema,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 export default function Neighborhoods() {
   const { slug } = useParams<{ slug: string }>()
@@ -22,11 +23,11 @@ export default function Neighborhoods() {
 
   useDocumentMeta({
     title: n
-      ? `Fence Installation Nashville, ${n.name}, TN | Pros, Costs & Free Quotes`
-      : 'Fence Installation Nashville | Service Areas Across Davidson, Williamson & Rutherford',
+      ? `Fence Installation ${CITY.name}, ${n.name}, ${CITY.stateAbbr} | Pros, Costs & Free Quotes`
+      : `Fence Installation ${CITY.name} | Service Areas Across ${CITY.counties.slice(0, 3).join(', ')}`,
     description: n
-      ? `Fence installation in Nashville's ${n.name} area (ZIP ${n.zip}). Compare vetted ${n.name} fence contractors for ${n.popularStyle.toLowerCase()}, typical project ${n.avgCost}. Wood, vinyl, aluminum, chain link, and ornamental iron, free quotes within 24 hours.`
-      : 'Fence installation Nashville, compare vetted fence contractors across every city and neighborhood in the Nashville metro. Local pricing, popular fence styles, and HOA notes for Murfreesboro, Franklin, Brentwood, Hendersonville, Mount Juliet, Spring Hill, Smyrna, Clarksville, and more.',
+      ? `Fence installation in ${CITY.name}'s ${n.name} area (ZIP ${n.zip}). Compare vetted ${n.name} fence contractors for ${n.popularStyle.toLowerCase()}, typical project ${n.avgCost}. Wood, vinyl, aluminum, chain link, and ornamental iron, free quotes within 24 hours.`
+      : `Fence installation ${CITY.name}, compare vetted fence contractors across every city and neighborhood in the ${CITY.name} metro. Local pricing, popular fence styles, and HOA notes for ${CITY.topServiceAreaCities.slice(1).join(', ')}, and more.`,
     canonical: slug ? `/service-areas/${slug}` : '/service-areas',
   })
 
@@ -41,7 +42,7 @@ export default function Neighborhoods() {
           placeSchema(n),
           serviceSchema({
             slug: `/service-areas/${slug}`,
-            name: `Fence Installation in ${n.name}, Nashville TN`,
+            name: `Fence Installation in ${n.name}, ${CITY.name} ${CITY.stateAbbr}`,
             description: `Fence installation services in ${n.name}. Popular style: ${n.popularStyle}. Typical project cost ${n.avgCost}.`,
           }),
         ]
@@ -50,16 +51,15 @@ export default function Neighborhoods() {
           breadcrumbList([{ label: 'Service Areas' }]),
           collectionPageSchema({
             slug: '/service-areas',
-            title: 'Nashville Service Areas',
-            description:
-              'Local fence installation pricing, popular styles, and HOA notes for every city and neighborhood across the Nashville service area.',
+            title: `${CITY.name} Service Areas`,
+            description: `Local fence installation pricing, popular styles, and HOA notes for every city and neighborhood across the ${CITY.name} service area.`,
           }),
           itemListSchema(
             NEIGHBORHOODS.map((x) => ({
               name: x.name,
               url: `/service-areas/${x.slug}`,
             })),
-            'Nashville Service Area Fence Coverage',
+            `${CITY.name} Service Area Fence Coverage`,
           ),
         ],
   )
@@ -85,7 +85,7 @@ export default function Neighborhoods() {
     return (
       <>
         <PageHero
-          eyebrow={`Nashville · ZIP ${n.zip}`}
+          eyebrow={`${CITY.name} · ZIP ${n.zip}`}
           title={`${n.name} Fence Installation Guide`}
           description={n.note}
           crumbs={[
@@ -212,7 +212,7 @@ export default function Neighborhoods() {
     <>
       <PageHero
         eyebrow="All Coverage Areas"
-        title="Nashville Service Areas"
+        title={`${CITY.name} Service Areas`}
         description="From Belle Meade estates to Murfreesboro new builds, pick your city or neighborhood for local pricing, popular styles, and HOA guidance."
         crumbs={[{ label: 'Service Areas' }]}
         right={<CallbackForm />}

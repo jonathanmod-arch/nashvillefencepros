@@ -11,6 +11,7 @@ import {
   articleSchema,
 } from '../lib/schema'
 import { RESOURCE_PUBLISHED_AT } from '../data/siteData'
+import { CITY } from '../config/city'
 
 const HEIGHT_RULES = [
   { yard: 'Front Yard, Solid', max: '3.5 ft', detail: 'Privacy panels, vinyl, solid wood' },
@@ -32,9 +33,8 @@ const HISTORIC_AREAS = [
 
 export default function Permits() {
   useDocumentMeta({
-    title: 'Nashville Fence Permit Rules & Height Limits | Metro Code Guide',
-    description:
-      'Nashville fence permit requirements, Metro height limits, HOA rules, dig-safe 811, and historic overlay districts. Plain-English fence installation rules for Davidson and Williamson County homeowners.',
+    title: `${CITY.name} Fence Permit Rules & Height Limits | ${CITY.permitOffice.shortName} Code Guide`,
+    description: `${CITY.name} fence permit requirements, ${CITY.permitOffice.shortName} height limits, HOA rules, dig-safe 811, and historic overlay districts. Plain-English fence installation rules for ${CITY.primaryCounty} and ${CITY.secondaryCounty} County homeowners.`,
     canonical: '/permits',
   })
 
@@ -43,11 +43,10 @@ export default function Permits() {
     breadcrumbList([{ label: 'Permits & Rules' }]),
     articleSchema({
       slug: '/permits',
-      title: 'Nashville Fence Permits, Rules & Regulations',
-      description:
-        'Metro Nashville fence permit rules, yard height limits, Tennessee 811 dig-safe protocol, pool fence code, and historic overlay districts.',
+      title: `${CITY.name} Fence Permits, Rules & Regulations`,
+      description: `${CITY.permitOffice.name} fence permit rules, yard height limits, ${CITY.dig811.name} dig-safe protocol, pool fence code, and historic overlay districts.`,
       category: 'Permits',
-      image: 'https://nashvillefenceguide.com/og.jpg',
+      image: `${CITY.siteUrl}/og.jpg`,
       publishedAt: RESOURCE_PUBLISHED_AT,
     }),
   ])

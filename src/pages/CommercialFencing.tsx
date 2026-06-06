@@ -14,12 +14,13 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import { organization, breadcrumbList, serviceSchema } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const USE_CASES = [
   {
     icon: Factory,
     title: 'Industrial & Warehouse',
-    body: 'Galvanized chain link perimeters, vinyl-coated black mesh, and barbed-wire top guards for Davidson and Rutherford County industrial sites.',
+    body: `Galvanized chain link perimeters, vinyl-coated black mesh, and barbed-wire top guards for ${CITY.primaryCounty} and Rutherford County industrial sites.`,
   },
   {
     icon: Lock,
@@ -34,7 +35,7 @@ const USE_CASES = [
   {
     icon: Construction,
     title: 'Construction & Temporary',
-    body: 'Construction-site fence installation in Nashville with rental panels, barricades, and short-term security perimeters.',
+    body: `Construction-site fence installation in ${CITY.name} with rental panels, barricades, and short-term security perimeters.`,
   },
 ]
 
@@ -43,15 +44,14 @@ const SPECS = [
   { label: 'Materials', value: 'Galvanized chain link, vinyl-coated black mesh, ornamental aluminum, steel palisade' },
   { label: 'Add-ons', value: 'Barbed wire, razor coil, anti-climb mesh, privacy slats, windscreen' },
   { label: 'Gate options', value: 'Cantilever slide, double swing, keypad, card reader, video intercom' },
-  { label: 'Service area', value: 'Nashville, Brentwood, Franklin, Hendersonville, Murfreesboro, La Vergne, Lebanon' },
+  { label: 'Service area', value: CITY.topServiceAreaCities.join(', ') },
   { label: 'Insurance', value: '$1M+ general liability, workers\' comp on every crew' },
 ]
 
 export default function CommercialFencing() {
   useDocumentMeta({
-    title: 'Commercial Fence Installation Nashville | Security Fencing TN',
-    description:
-      'Commercial fence installation in Nashville, chain link, security fencing, automated gates, and temporary construction-site fencing. Compare licensed commercial fence contractors and get free Nashville TN quotes.',
+    title: `Commercial Fence Installation ${CITY.name} | Security Fencing ${CITY.stateAbbr}`,
+    description: `Commercial fence installation in ${CITY.name}, chain link, security fencing, automated gates, and temporary construction-site fencing. Compare licensed commercial fence contractors and get free ${CITY.name} ${CITY.stateAbbr} quotes.`,
     canonical: '/commercial-fencing',
   })
 
@@ -60,9 +60,8 @@ export default function CommercialFencing() {
     breadcrumbList([{ label: 'Commercial Fencing' }]),
     serviceSchema({
       slug: '/commercial-fencing',
-      name: 'Commercial Fence Installation Nashville',
-      description:
-        'Commercial and industrial fence installation in Nashville, galvanized chain link, security fencing, automated gates, and construction-site temporary perimeters.',
+      name: `Commercial Fence Installation ${CITY.name}`,
+      description: `Commercial and industrial fence installation in ${CITY.name}, galvanized chain link, security fencing, automated gates, and construction-site temporary perimeters.`,
       audience: 'BusinessAudience',
     }),
   ])
@@ -71,8 +70,8 @@ export default function CommercialFencing() {
     <>
       <PageHero
         eyebrow="Commercial Fencing"
-        title="Commercial Fence Installation Nashville"
-        description="Security fencing installation services in Nashville for industrial sites, warehouses, multifamily properties, and construction perimeters. Compare licensed commercial fence contractors in Davidson and Williamson counties."
+        title={`Commercial Fence Installation ${CITY.name}`}
+        description={`Security fencing installation services in ${CITY.name} for industrial sites, warehouses, multifamily properties, and construction perimeters. Compare licensed commercial fence contractors in ${CITY.primaryCounty} and ${CITY.secondaryCounty} counties.`}
         crumbs={[{ label: 'Commercial Fencing' }]}
         right={<CallbackForm />}
       />

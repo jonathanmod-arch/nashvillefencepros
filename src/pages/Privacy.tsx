@@ -3,14 +3,14 @@ import { COMPANY } from '../data/siteData'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import { organization, breadcrumbList, webPageSchema } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const EFFECTIVE_DATE = 'June 5, 2026'
 
 export default function Privacy() {
   useDocumentMeta({
-    title: 'Privacy Policy | Nashville Fence Guide',
-    description:
-      'How Nashville Fence Guide collects, uses, and shares information from quote requests, listing submissions, and site analytics.',
+    title: `Privacy Policy | ${CITY.siteName}`,
+    description: `How ${CITY.siteName} collects, uses, and shares information from quote requests, listing submissions, and site analytics.`,
     canonical: '/privacy',
   })
 

@@ -14,52 +14,44 @@ import {
   itemListSchema,
   serviceSchema,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const FENCE_TYPE_META: Record<string, { title: string; description: string }> = {
   'wood-privacy': {
-    title: 'Wood Privacy Fence Installation Nashville TN | Cedar Fencing',
-    description:
-      'Wood privacy fence installation in Nashville TN. Cedar privacy fencing, 6 ft and 8 ft heights, $22–$35 per linear foot installed. Compare vetted Nashville wood fence installers and get free quotes.',
+    title: `Wood Privacy Fence Installation ${CITY.name} ${CITY.stateAbbr} | Cedar Fencing`,
+    description: `Wood privacy fence installation in ${CITY.name} ${CITY.stateAbbr}. Cedar privacy fencing, 6 ft and 8 ft heights, $22–$35 per linear foot installed. Compare vetted ${CITY.name} wood fence installers and get free quotes.`,
   },
   vinyl: {
-    title: 'Vinyl Fence Installation Nashville TN | Premium PVC Fencing',
-    description:
-      'Vinyl fence installation in Nashville TN. Premium PVC privacy and picket vinyl fencing, $32–$48 per linear foot. Compare licensed Nashville vinyl fence installers and get free quotes.',
+    title: `Vinyl Fence Installation ${CITY.name} ${CITY.stateAbbr} | Premium PVC Fencing`,
+    description: `Vinyl fence installation in ${CITY.name} ${CITY.stateAbbr}. Premium PVC privacy and picket vinyl fencing, $32–$48 per linear foot. Compare licensed ${CITY.name} vinyl fence installers and get free quotes.`,
   },
   aluminum: {
-    title: 'Aluminum Fence Installation Nashville TN | Ornamental Metal',
-    description:
-      'Aluminum and metal fence installation in Nashville TN. Powder-coated ornamental aluminum from $38–$62 per linear foot, pool-code compliant. Compare Nashville aluminum fence installers.',
+    title: `Aluminum Fence Installation ${CITY.name} ${CITY.stateAbbr} | Ornamental Metal`,
+    description: `Aluminum and metal fence installation in ${CITY.name} ${CITY.stateAbbr}. Powder-coated ornamental aluminum from $38–$62 per linear foot, pool-code compliant. Compare ${CITY.name} aluminum fence installers.`,
   },
   'chain-link': {
-    title: 'Chain Link Fence Installation Nashville TN | Wire Fencing',
-    description:
-      'Chain link fence installation in Nashville TN. Galvanized and black vinyl-coated chain link from $12–$22 per linear foot, plus wire fencing supplies in Nashville. Compare vetted installers.',
+    title: `Chain Link Fence Installation ${CITY.name} ${CITY.stateAbbr} | Wire Fencing`,
+    description: `Chain link fence installation in ${CITY.name} ${CITY.stateAbbr}. Galvanized and black vinyl-coated chain link from $12–$22 per linear foot, plus wire fencing supplies in ${CITY.name}. Compare vetted installers.`,
   },
   'horizontal-privacy': {
-    title: 'Horizontal Cedar Privacy Fence Installation Nashville',
-    description:
-      'Horizontal cedar privacy fence installation in Nashville. Modern slat fencing for East Nashville, 12 South, and Sylvan Park, $38–$58 per linear foot. Compare design-build Nashville fence installers.',
+    title: `Horizontal Cedar Privacy Fence Installation ${CITY.name}`,
+    description: `Horizontal cedar privacy fence installation in ${CITY.name}. Modern slat fencing for East ${CITY.name}, 12 South, and Sylvan Park, $38–$58 per linear foot. Compare design-build ${CITY.name} fence installers.`,
   },
   'farm-ranch': {
-    title: 'Farm & Ranch Fence Installation Nashville TN | Williamson + Sumner',
-    description:
-      'Farm and ranch fence installation across Williamson, Sumner, and Wilson Counties. Four-board, split-rail, and wire fencing supplies in Nashville from $8–$18 per linear foot.',
+    title: `Farm & Ranch Fence Installation ${CITY.name} ${CITY.stateAbbr} | ${CITY.secondaryCounty} + Sumner`,
+    description: `Farm and ranch fence installation across ${CITY.secondaryCounty}, Sumner, and Wilson Counties. Four-board, split-rail, and wire fencing supplies in ${CITY.name} from $8–$18 per linear foot.`,
   },
   'wrought-iron': {
-    title: 'Wrought Iron Fence Installation Nashville TN | Estate Iron',
-    description:
-      'Wrought iron fence installation in Nashville TN. Hand-forged ornamental iron fences and automated gates for Belle Meade, Forest Hills, and Brentwood estates. Compare iron fence installers + iron fence repair Nashville.',
+    title: `Wrought Iron Fence Installation ${CITY.name} ${CITY.stateAbbr} | Estate Iron`,
+    description: `Wrought iron fence installation in ${CITY.name} ${CITY.stateAbbr}. Hand-forged ornamental iron fences and automated gates for Belle Meade, Forest Hills, and Brentwood estates. Compare iron fence installers + iron fence repair ${CITY.name}.`,
   },
   'pet-fence': {
-    title: 'Invisible & Pet Fence Installation Nashville TN | Dog Fences',
-    description:
-      'Invisible, hidden, and electric dog fence installation in Nashville. Best-rated invisible fence installation in Nashville plus traditional pet fence installation services. Compare Nashville best dog fence installers.',
+    title: `Invisible & Pet Fence Installation ${CITY.name} ${CITY.stateAbbr} | Dog Fences`,
+    description: `Invisible, hidden, and electric dog fence installation in ${CITY.name}. Best-rated invisible fence installation in ${CITY.name} plus traditional pet fence installation services. Compare ${CITY.name} best dog fence installers.`,
   },
   'pool-safety': {
-    title: 'Pool Fence Installation Nashville TN | ISPSC Pool Barriers',
-    description:
-      'Pool fence installation in Nashville TN that meets the 2018 ISPSC barrier code. Aluminum, mesh, and glass pool fencing installation and repair services in Nashville from vetted installers.',
+    title: `Pool Fence Installation ${CITY.name} ${CITY.stateAbbr} | ISPSC Pool Barriers`,
+    description: `Pool fence installation in ${CITY.name} ${CITY.stateAbbr} that meets the ${CITY.poolBarrierCode} barrier code. Aluminum, mesh, and glass pool fencing installation and repair services in ${CITY.name} from vetted installers.`,
   },
 }
 
@@ -71,10 +63,10 @@ export default function FenceTypes() {
   useDocumentMeta({
     title:
       typeMeta?.title ??
-      'Nashville Fence Types & Materials | Installation Guide',
+      `${CITY.name} Fence Types & Materials | Installation Guide`,
     description:
       typeMeta?.description ??
-      'Compare every Nashville fence type, wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm & ranch, wrought iron, pet/invisible, and pool safety fencing. Pricing per linear ft + vetted Nashville installers.',
+      `Compare every ${CITY.name} fence type, wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm & ranch, wrought iron, pet/invisible, and pool safety fencing. Pricing per linear ft + vetted ${CITY.name} installers.`,
     canonical: slug ? `/fence-types/${slug}` : '/fence-types',
   })
 
@@ -88,7 +80,7 @@ export default function FenceTypes() {
           ]),
           serviceSchema({
             slug: `/fence-types/${slug}`,
-            name: `${fenceType.name} Fence Installation in Nashville TN`,
+            name: `${fenceType.name} Fence Installation in ${CITY.name} ${CITY.stateAbbr}`,
             description: fenceType.description,
             priceLow: fenceType.priceLow,
             priceHigh: fenceType.priceHigh,
@@ -100,16 +92,15 @@ export default function FenceTypes() {
           breadcrumbList([{ label: 'Fence Types' }]),
           collectionPageSchema({
             slug: '/fence-types',
-            title: 'Nashville Fence Types & Materials',
-            description:
-              'Compare every Nashville fence type, wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.',
+            title: `${CITY.name} Fence Types & Materials`,
+            description: `Compare every ${CITY.name} fence type, wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.`,
           }),
           itemListSchema(
             FENCE_TYPES.map((t) => ({
               name: t.name,
               url: `/fence-types/${t.slug}`,
             })),
-            'Nashville Fence Type Catalog',
+            `${CITY.name} Fence Type Catalog`,
           ),
         ],
   )
@@ -137,7 +128,7 @@ export default function FenceTypes() {
       <>
         <PageHero
           eyebrow="Fence Material Guide"
-          title={`${t.name} Fencing in Nashville`}
+          title={`${t.name} Fencing in ${CITY.name}`}
           description={t.description}
           crumbs={[
             { label: 'Fence Types', to: '/fence-types' },
@@ -152,7 +143,7 @@ export default function FenceTypes() {
               <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-medium mb-8">
                 <SafeImage
                   src={t.img}
-                  alt={`${t.name} fence installation in Nashville, TN`}
+                  alt={`${t.name} fence installation in ${CITY.name}, ${CITY.stateAbbr}`}
                   className="w-full h-full object-cover"
                   sizes="(min-width: 1024px) 66vw, 100vw"
                   widths={[480, 768, 1024, 1280, 1600]}
@@ -166,7 +157,7 @@ export default function FenceTypes() {
               <div className="heading-accent mb-4" />
               <p className="text-body-lead mb-5">{t.description}</p>
               <p className="text-body-lead mb-8">
-                Across Davidson and Williamson counties, {t.name.toLowerCase()} installs range from{' '}
+                Across {CITY.primaryCounty} and {CITY.secondaryCounty} counties, {t.name.toLowerCase()} installs range from{' '}
                 <strong className="text-forest-500">${t.priceLow}–${t.priceHigh} per linear foot</strong> installed , 
                 materials and labor included. Exact pricing depends on height, terrain, and gate count.
               </p>

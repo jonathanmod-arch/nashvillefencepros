@@ -14,6 +14,7 @@ import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import { organization, breadcrumbList, serviceSchema } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const REPAIR_MATERIALS = [
   {
@@ -51,7 +52,7 @@ const REPAIR_MATERIALS = [
   },
   {
     name: 'Aluminum & Iron Fence Repair',
-    keywords: 'Ornamental aluminum, wrought iron fence repair Nashville',
+    keywords: `Ornamental aluminum, wrought iron fence repair ${CITY.name}`,
     common: [
       'Rust spotting and repaint',
       'Bent rails and finials',
@@ -96,9 +97,8 @@ const WHEN_TO_REPAIR_VS_REPLACE = [
 
 export default function Repair() {
   useDocumentMeta({
-    title: 'Fence Repair Nashville TN | Wood, Vinyl, Chain Link, Iron',
-    description:
-      'Nashville fence repair for wood, vinyl, chain link, aluminum, wrought iron, and pet fences. Compare licensed Nashville fence repair companies and get free repair estimates.',
+    title: `Fence Repair ${CITY.name} ${CITY.stateAbbr} | Wood, Vinyl, Chain Link, Iron`,
+    description: `${CITY.name} fence repair for wood, vinyl, chain link, aluminum, wrought iron, and pet fences. Compare licensed ${CITY.name} fence repair companies and get free repair estimates.`,
     canonical: '/repair',
   })
 
@@ -107,9 +107,8 @@ export default function Repair() {
     breadcrumbList([{ label: 'Fence Repair' }]),
     serviceSchema({
       slug: '/repair',
-      name: 'Fence Repair Nashville TN',
-      description:
-        'Wood, vinyl, chain link, aluminum, wrought iron, and pet fence repair services across Nashville TN.',
+      name: `Fence Repair ${CITY.name} ${CITY.stateAbbr}`,
+      description: `Wood, vinyl, chain link, aluminum, wrought iron, and pet fence repair services across ${CITY.name} ${CITY.stateAbbr}.`,
       priceLow: 4,
       priceHigh: 36,
       unitCode: 'FOT',
@@ -119,9 +118,9 @@ export default function Repair() {
   return (
     <>
       <PageHero
-        eyebrow="Nashville Fence Repair"
-        title="Fence Repair Nashville TN"
-        description="Compare vetted Nashville fence repair companies for wood, vinyl, chain link, aluminum, wrought iron, and pet fence repairs. Free repair estimates, typically within 24 hours."
+        eyebrow={`${CITY.name} Fence Repair`}
+        title={`Fence Repair ${CITY.name} ${CITY.stateAbbr}`}
+        description={`Compare vetted ${CITY.name} fence repair companies for wood, vinyl, chain link, aluminum, wrought iron, and pet fence repairs. Free repair estimates, typically within 24 hours.`}
         crumbs={[{ label: 'Fence Repair' }]}
         right={<CallbackForm />}
       />
@@ -131,7 +130,7 @@ export default function Repair() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {[
               { icon: Wrench, label: 'Material-specific crews', body: 'Wood, vinyl, chain link, aluminum, wrought iron, and pet fence specialists in one directory.' },
-              { icon: Clock, label: 'Fast response', body: 'Most Nashville fence repair quotes come back within 24–48 hours of submitting a request.' },
+              { icon: Clock, label: 'Fast response', body: `Most ${CITY.name} fence repair quotes come back within 24–48 hours of submitting a request.` },
               { icon: Shield, label: 'Licensed & insured', body: 'Every repair contractor in our network carries general liability and workers\' comp.' },
               { icon: CheckCircle2, label: 'Repair-first', body: 'We match you with crews who actually do repairs, not just install-only fence companies.' },
             ].map((b) => {
@@ -154,8 +153,8 @@ export default function Repair() {
             <div className="heading-accent mx-auto" />
             <div className="mt-5 text-left space-y-4">
               <p className="text-body-lead">
-                Nashville fence repair pricing varies by material, age, and access. The ranges
-                below cover typical residential repairs in Davidson and Williamson counties.
+                {CITY.name} fence repair pricing varies by material, age, and access. The ranges
+                below cover typical residential repairs in {CITY.primaryCounty} and {CITY.secondaryCounty} counties.
               </p>
               <p className="text-body-lead">
                 Wooden fence post replacements, vinyl fence panel swaps, aluminum fence section

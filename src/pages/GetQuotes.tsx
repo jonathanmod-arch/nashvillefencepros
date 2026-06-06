@@ -10,6 +10,7 @@ import {
   webPageSchema,
   requestQuoteAction,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const STEPS = [
   {
@@ -20,7 +21,7 @@ const STEPS = [
   {
     n: '02',
     title: 'We Match Vetted Pros',
-    body: 'We hand-pick up to 3 licensed Nashville contractors whose specialties fit your project.',
+    body: `We hand-pick up to 3 licensed ${CITY.name} contractors whose specialties fit your project.`,
   },
   {
     n: '03',
@@ -43,9 +44,8 @@ const BENEFITS = [
 
 export default function GetQuotes() {
   useDocumentMeta({
-    title: 'Free Nashville Fence Installation Quotes | Compare 3 Pros',
-    description:
-      'Get free fence installation quotes from up to 3 vetted Nashville fence installers. Wood, vinyl, chain link, aluminum, privacy, pet, pool, and commercial fence quotes near you in Nashville TN.',
+    title: `Free ${CITY.name} Fence Installation Quotes | Compare 3 Pros`,
+    description: `Get free fence installation quotes from up to 3 vetted ${CITY.name} fence installers. Wood, vinyl, chain link, aluminum, privacy, pet, pool, and commercial fence quotes near you in ${CITY.name} ${CITY.stateAbbr}.`,
     canonical: '/get-quotes',
   })
 
@@ -54,9 +54,8 @@ export default function GetQuotes() {
     breadcrumbList([{ label: 'Get Quotes' }]),
     webPageSchema({
       slug: '/get-quotes',
-      title: 'Free Nashville Fence Installation Quotes',
-      description:
-        'Request free fence installation quotes from up to three vetted Nashville fence installers in under 5 minutes.',
+      title: `Free ${CITY.name} Fence Installation Quotes`,
+      description: `Request free fence installation quotes from up to three vetted ${CITY.name} fence installers in under 5 minutes.`,
       potentialAction: requestQuoteAction(),
     }),
   ])
@@ -64,8 +63,8 @@ export default function GetQuotes() {
     <>
       <PageHero
         eyebrow="Free Quote Request"
-        title="Free Nashville Fence Installation Quotes"
-        description="One short form, up to three vetted Nashville fence installers, zero obligation. Most Nashville homeowners hear back within 24 hours, for new installs, fence repair, or commercial work."
+        title={`Free ${CITY.name} Fence Installation Quotes`}
+        description={`One short form, up to three vetted ${CITY.name} fence installers, zero obligation. Most ${CITY.name} homeowners hear back within 24 hours, for new installs, fence repair, or commercial work.`}
         crumbs={[{ label: 'Get Quotes' }]}
       />
 

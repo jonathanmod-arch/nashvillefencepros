@@ -33,6 +33,7 @@ import {
   breadcrumbList,
   contractorLocalBusiness,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const REVIEW_DISTRIBUTION = [
   { stars: 5, ratio: 0.83 },
@@ -48,11 +49,11 @@ export default function ContractorProfile() {
 
   useDocumentMeta({
     title: c
-      ? `${c.name}, ${categoryLabel(c.category)} in Nashville TN`
-      : 'Nashville Fence Pro Not Found',
+      ? `${c.name}, ${categoryLabel(c.category)} in ${CITY.name} ${CITY.stateAbbr}`
+      : `${CITY.name} Fence Pro Not Found`,
     description: c
-      ? `${c.name} is a Nashville-area ${categoryLabel(c.category).toLowerCase()} serving ${c.areas.join(', ')}. ${c.description.slice(0, 110)}…`
-      : 'This Nashville fence contractor listing is no longer available. Browse the full Nashville fence installers directory instead.',
+      ? `${c.name} is a ${CITY.name}-area ${categoryLabel(c.category).toLowerCase()} serving ${c.areas.join(', ')}. ${c.description.slice(0, 110)}…`
+      : `This ${CITY.name} fence contractor listing is no longer available. Browse the full ${CITY.name} fence installers directory instead.`,
     canonical: c ? `/contractors/${c.slug}` : '/contractors',
     noindex: !c,
   })

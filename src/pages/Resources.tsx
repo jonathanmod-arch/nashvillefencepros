@@ -14,6 +14,7 @@ import {
   itemListSchema,
   articleSchema,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const CATEGORY_COLORS: Record<string, string> = {
   Comparison: 'bg-forest-50 text-forest-500',
@@ -172,11 +173,11 @@ export default function Resources() {
 
   useDocumentMeta({
     title: r
-      ? `${displayTitle(r.title)} | Nashville Fence Resource`
-      : 'Nashville Fence Resource Center | Install, Repair & Permits',
+      ? `${displayTitle(r.title)} | ${CITY.name} Fence Resource`
+      : `${CITY.name} Fence Resource Center | Install, Repair & Permits`,
     description: r
-      ? `${r.excerpt} ${r.readTime} read on Nashville Fence Guide.`
-      : 'Nashville fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and Metro permit how-tos.',
+      ? `${r.excerpt} ${r.readTime} read on ${CITY.siteName}.`
+      : `${CITY.name} fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and ${CITY.permitOffice.shortName} permit how-tos.`,
     canonical: slug ? `/resources/${slug}` : '/resources',
   })
 
@@ -202,16 +203,15 @@ export default function Resources() {
           breadcrumbList([{ label: 'Resources' }]),
           collectionPageSchema({
             slug: '/resources',
-            title: 'Nashville Fence Resource Center',
-            description:
-              'In-depth Nashville fence installation, repair, cost, and permit guides written by local pros.',
+            title: `${CITY.name} Fence Resource Center`,
+            description: `In-depth ${CITY.name} fence installation, repair, cost, and permit guides written by local pros.`,
           }),
           itemListSchema(
             RESOURCES.map((x) => ({
               name: x.title,
               url: `/resources/${x.slug}`,
             })),
-            'Nashville Fence Resource Library',
+            `${CITY.name} Fence Resource Library`,
           ),
         ],
   )
@@ -265,18 +265,18 @@ export default function Resources() {
                 <span className="flex items-center gap-1">
                   <Clock className="w-3 h-3" /> {r.readTime} read
                 </span>
-                <span>· Nashville-specific guide</span>
+                <span>· {CITY.name}-specific guide</span>
               </div>
               {'body' in r && Array.isArray((r as { body?: ResourceSection[] }).body) ? (
                 <ArticleBody sections={(r as { body: ResourceSection[] }).body} />
               ) : (
                 <div className="prose-content space-y-5 text-onyx-700">
                   <p className="text-lg leading-relaxed">
-                    {r.excerpt} This guide walks through what Middle Tennessee homeowners
+                    {r.excerpt} This guide walks through what {CITY.metroLabel} homeowners
                     actually run into, not generic national advice.
                   </p>
                   <h2 className="heading-card !text-2xl mt-8">
-                    Why This Matters in Nashville
+                    Why This Matters in {CITY.name}
                   </h2>
                   <p className="leading-relaxed">
                     Nashville's mix of historic neighborhoods, fast-growing suburbs, and

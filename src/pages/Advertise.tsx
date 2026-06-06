@@ -23,6 +23,7 @@ import {
   breadcrumbList,
   webPageSchema,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 type Plan = {
   name: string
@@ -159,9 +160,8 @@ const buildCardCode = (profileUrl: string, businessName?: string): string => {
 
 export default function Advertise() {
   useDocumentMeta({
-    title: 'Advertise on Nashville Fence Guide | Lead Gen for Fence Contractors',
-    description:
-      'Advertise to thousands of Nashville homeowners hiring fence installers. Premium listings, category sponsorships, and homepage placement on the leading Nashville fence directory. From $99/mo, month-to-month.',
+    title: `Advertise on ${CITY.siteName} | Lead Gen for Fence Contractors`,
+    description: `Advertise to thousands of ${CITY.name} homeowners hiring fence installers. Premium listings, category sponsorships, and homepage placement on the leading ${CITY.name} fence directory. From $99/mo, month-to-month.`,
     canonical: '/advertise',
   })
 
@@ -170,9 +170,8 @@ export default function Advertise() {
     breadcrumbList([{ label: 'Advertise' }]),
     webPageSchema({
       slug: '/advertise',
-      title: 'Advertise on Nashville Fence Guide',
-      description:
-        'Premium listings, category sponsorships, and homepage placement on the leading Nashville fence directory.',
+      title: `Advertise on ${CITY.siteName}`,
+      description: `Premium listings, category sponsorships, and homepage placement on the leading ${CITY.name} fence directory.`,
     }),
   ])
   return (

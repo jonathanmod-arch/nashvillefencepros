@@ -21,6 +21,7 @@ import {
   serviceSchema,
 } from '../lib/schema'
 import { RESOURCE_PUBLISHED_AT } from '../data/siteData'
+import { CITY } from '../config/city'
 
 const OVERLAY_DISTRICTS = [
   {
@@ -85,9 +86,8 @@ const SAFER_BETS = [
 
 export default function HistoricOverlays() {
   useDocumentMeta({
-    title: 'Historic Overlay Fence Rules Nashville | HZC Approval Guide',
-    description:
-      'Nashville historic overlay fence requirements for Germantown, Edgefield, Lockeland Springs, Belle Meade, Richland-West End, and Hillsboro-West End. HZC submission steps, approved materials, and how to get a fence approved on the first try.',
+    title: `Historic Overlay Fence Rules ${CITY.name} | ${CITY.historicCommission.abbr} Approval Guide`,
+    description: `${CITY.name} historic overlay fence requirements for Germantown, Edgefield, Lockeland Springs, Belle Meade, Richland-West End, and Hillsboro-West End. ${CITY.historicCommission.abbr} submission steps, approved materials, and how to get a fence approved on the first try.`,
     canonical: '/historic-overlays',
   })
 
@@ -96,18 +96,16 @@ export default function HistoricOverlays() {
     breadcrumbList([{ label: 'Historic Overlays' }]),
     articleSchema({
       slug: '/historic-overlays',
-      title: 'Nashville Historic Overlay Fence Rules & HZC Approval Guide',
-      description:
-        'Fence approval requirements for Nashville historic overlay districts: Germantown, Edgefield, Lockeland Springs, Belle Meade, Richland-West End, and Hillsboro-West End.',
+      title: `${CITY.name} Historic Overlay Fence Rules & ${CITY.historicCommission.abbr} Approval Guide`,
+      description: `Fence approval requirements for ${CITY.name} historic overlay districts: Germantown, Edgefield, Lockeland Springs, Belle Meade, Richland-West End, and Hillsboro-West End.`,
       category: 'Compliance',
-      image: 'https://nashvillefenceguide.com/og.jpg',
+      image: `${CITY.siteUrl}/og.jpg`,
       publishedAt: RESOURCE_PUBLISHED_AT,
     }),
     serviceSchema({
       slug: '/historic-overlays',
-      name: 'Historic-Overlay-Approved Fence Installation in Nashville',
-      description:
-        'Fence installation that passes Metro Historic Zoning Commission review on the first submission, for Germantown, Edgefield, and Conservation overlay districts.',
+      name: `Historic-Overlay-Approved Fence Installation in ${CITY.name}`,
+      description: `Fence installation that passes ${CITY.historicCommission.name} review on the first submission, for Germantown, Edgefield, and Conservation overlay districts.`,
     }),
   ])
 
@@ -115,8 +113,8 @@ export default function HistoricOverlays() {
     <>
       <PageHero
         eyebrow="Historic Zoning"
-        title="Historic Overlay Fence Rules Nashville"
-        description="If your Nashville home is in a historic overlay district, your fence needs HZC approval before installation, and the wrong design can mean a removal order at your expense. Here's how each overlay actually reviews fence applications."
+        title={`Historic Overlay Fence Rules ${CITY.name}`}
+        description={`If your ${CITY.name} home is in a historic overlay district, your fence needs ${CITY.historicCommission.abbr} approval before installation, and the wrong design can mean a removal order at your expense. Here's how each overlay actually reviews fence applications.`}
         crumbs={[{ label: 'Historic Overlays' }]}
         right={<CallbackForm />}
       />

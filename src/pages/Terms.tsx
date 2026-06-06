@@ -3,14 +3,14 @@ import { COMPANY } from '../data/siteData'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import { organization, breadcrumbList, webPageSchema } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const EFFECTIVE_DATE = 'June 5, 2026'
 
 export default function Terms() {
   useDocumentMeta({
-    title: 'Terms of Use | Nashville Fence Guide',
-    description:
-      'Terms governing use of Nashville Fence Guide, the contractor directory, quote-matching service, and submitted listings.',
+    title: `Terms of Use | ${CITY.siteName}`,
+    description: `Terms governing use of ${CITY.siteName}, the contractor directory, quote-matching service, and submitted listings.`,
     canonical: '/terms',
   })
 

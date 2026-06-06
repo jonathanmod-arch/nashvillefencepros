@@ -20,6 +20,7 @@ import {
   webPageSchema,
   registerListingAction,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const SUGGESTED_LICENSES = [
   'Licensed & Insured',
@@ -98,9 +99,8 @@ const initialForm: FormState = {
 
 export default function SubmitListing() {
   useDocumentMeta({
-    title: 'Submit Your Nashville Fence Business | Free Listing',
-    description:
-      'Get listed on the Nashville Fence Guide directory for free. Submit your fence installation, repair, gate, surveying, or staining business in under 5 minutes and start receiving Nashville fence leads.',
+    title: `Submit Your ${CITY.name} Fence Business | Free Listing`,
+    description: `Get listed on the ${CITY.siteName} directory for free. Submit your fence installation, repair, gate, surveying, or staining business in under 5 minutes and start receiving ${CITY.name} fence leads.`,
     canonical: '/submit-listing',
   })
 
@@ -112,9 +112,8 @@ export default function SubmitListing() {
     ]),
     webPageSchema({
       slug: '/submit-listing',
-      title: 'Submit Your Nashville Fence Business',
-      description:
-        'Free listing submission for Nashville fence installation, repair, gate, surveying, staining, and outdoor design pros.',
+      title: `Submit Your ${CITY.name} Fence Business`,
+      description: `Free listing submission for ${CITY.name} fence installation, repair, gate, surveying, staining, and outdoor design pros.`,
       potentialAction: registerListingAction(),
     }),
   ])

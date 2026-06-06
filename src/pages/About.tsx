@@ -21,6 +21,7 @@ import {
   breadcrumbList,
   webPageSchema,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 const VALUES = [
   {
@@ -60,9 +61,8 @@ const WHAT_WE_DONT_DO = [
 
 export default function About() {
   useDocumentMeta({
-    title: 'About Nashville Fence Guide | Independent Local Directory',
-    description:
-      'Nashville Fence Guide is the independent Nashville fence directory. Vetted contractors, transparent pricing, and homeowner-first editorial guides for fence installation, repair, and permits across Davidson and Williamson counties.',
+    title: `About ${CITY.siteName} | Independent Local Directory`,
+    description: `${CITY.siteName} is the independent ${CITY.name} fence directory. Vetted contractors, transparent pricing, and homeowner-first editorial guides for fence installation, repair, and permits across ${CITY.primaryCounty} and ${CITY.secondaryCounty} counties.`,
     canonical: '/about',
   })
 
