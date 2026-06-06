@@ -225,7 +225,7 @@ export default function FenceTypes() {
                   Common Heights
                 </div>
                 <p className="text-sm text-onyx-700">
-                  Most Nashville homeowners install at 6 ft for privacy or 4 ft for open
+                  Most {CITY.name} homeowners install at 6 ft for privacy or 4 ft for open
                   styles. 8 ft is allowed in rear/side yards.
                 </p>
               </div>
@@ -277,8 +277,8 @@ export default function FenceTypes() {
     <>
       <PageHero
         eyebrow="Materials & Styles"
-        title="Nashville Fence Types & Styles"
-        description="Cedar privacy, vinyl, aluminum, chain link, horizontal modern, farm, six material families that cover almost every Nashville install."
+        title={`${CITY.name} Fence Types & Styles`}
+        description={`Cedar privacy, vinyl, aluminum, chain link, horizontal modern, farm, six material families that cover almost every ${CITY.name} install.`}
         crumbs={[{ label: 'Fence Types' }]}
         right={<CallbackForm />}
       />
@@ -298,7 +298,7 @@ export default function FenceTypes() {
                   <div className="relative aspect-[4/3] overflow-hidden bg-warmgray">
                     <SafeImage
                       src={t.img}
-                      alt={`${t.name} fence in Nashville`}
+                      alt={`${t.name} fence in ${CITY.name}`}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-forest-500">

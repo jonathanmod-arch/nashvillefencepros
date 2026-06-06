@@ -221,8 +221,8 @@ export default function Neighborhoods() {
         <div className="container-wide">
           <div className="max-w-2xl mx-auto text-left space-y-4 mb-12">
             <p className="text-body-lead">
-              Fence installation in Nashville covers a sprawling metro. From Davidson County's
-              Belle Meade estates and East Nashville bungalows through Williamson County's
+              Fence installation in {CITY.name} covers a sprawling metro. From {CITY.primaryCounty} County's
+              Belle Meade estates and East {CITY.name} bungalows through {CITY.secondaryCounty} County's
               Franklin and Brentwood subdivisions.
             </p>
             <p className="text-body-lead">

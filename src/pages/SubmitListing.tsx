@@ -208,7 +208,7 @@ export default function SubmitListing() {
               <h2 className="heading-card !text-2xl mb-3">What happens next</h2>
               <ol className="text-left max-w-md mx-auto space-y-3 text-sm text-onyx-700/80">
                 {[
-                  'A Nashville Fence Guide editor verifies your license and business details.',
+                  `A ${CITY.siteName} editor verifies your license and business details.`,
                   'We confirm the photos and pricing match the work shown.',
                   'You receive an email when your free listing goes live, usually within 2 business days.',
                 ].map((step, i) => (
@@ -240,7 +240,7 @@ export default function SubmitListing() {
       <PageHero
         eyebrow="List Your Business, Free"
         title="Submit Your Business"
-        description="Join the Nashville Fence Guide directory in under 5 minutes. Free for verified Tennessee fence contractors, surveyors, gate installers, and outdoor design pros."
+        description={`Join the ${CITY.siteName} directory in under 5 minutes. Free for verified ${CITY.state} fence contractors, surveyors, gate installers, and outdoor design pros.`}
         crumbs={[
           { label: 'Find a Pro', to: '/contractors' },
           { label: 'Submit Your Business' },
@@ -310,7 +310,7 @@ export default function SubmitListing() {
                   maxLength={140}
                   value={form.tagline}
                   onChange={(e) => set('tagline', e.target.value)}
-                  placeholder="e.g. Nashville's largest residential cedar privacy installer."
+                  placeholder={`e.g. ${CITY.name}'s largest residential cedar privacy installer.`}
                   className="ad-input"
                 />
               </Field>
@@ -369,7 +369,7 @@ export default function SubmitListing() {
                     required
                     value={form.address}
                     onChange={(e) => set('address', e.target.value)}
-                    placeholder="1420 Broadway, Nashville, TN 37203"
+                    placeholder={`1420 Broadway, ${CITY.name}, ${CITY.stateAbbr} ${CITY.primaryZip}`}
                     className="ad-input"
                   />
                 </Field>
@@ -398,7 +398,7 @@ export default function SubmitListing() {
                   required
                   value={form.countiesServed}
                   onChange={(e) => set('countiesServed', e.target.value)}
-                  placeholder="Davidson, Williamson, and Rutherford"
+                  placeholder={CITY.counties.slice(0, 3).join(', ')}
                   className="ad-input"
                 />
               </Field>
@@ -663,7 +663,7 @@ export default function SubmitListing() {
                   onChange={(v) => set('agreedToTerms', v)}
                   label={
                     <>
-                      I agree to be listed in the Nashville Fence Guide directory and
+                      I agree to be listed in the {CITY.siteName} directory and
                       consent to be contacted for lead opportunities.
                     </>
                   }
@@ -713,7 +713,7 @@ export default function SubmitListing() {
                     'Free, no contracts, no card on file',
                     'Direct lead emails when homeowners request quotes',
                     'Verified Pro badge widget for your website',
-                    'Nashville-only audience actively shopping for fence work',
+                    `${CITY.name}-only audience actively shopping for fence work`,
                   ].map((b) => (
                     <li key={b} className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-oak-400 mt-0.5 flex-shrink-0" />
