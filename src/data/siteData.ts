@@ -1886,7 +1886,7 @@ export const RESOURCES = [
   },
   {
     slug: 'best-gate-installation-companies-nashville',
-    title: 'Best Gate Installation Companies in Nashville',
+    title: 'Best Gate Companies in Nashville',
     category: 'Gates',
     readTime: '8 min',
     excerpt:

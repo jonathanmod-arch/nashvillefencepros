@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
+import { displayTitle, isAutoMonthly, monthYearString } from '../lib/resourceTitle'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { RESOURCES, RESOURCE_PUBLISHED_AT, type ResourceSection } from '../data/siteData'
@@ -171,7 +172,7 @@ export default function Resources() {
 
   useDocumentMeta({
     title: r
-      ? `${r.title} | Nashville Fence Resource`
+      ? `${displayTitle(r.title)} | Nashville Fence Resource`
       : 'Nashville Fence Resource Center | Install, Repair & Permits',
     description: r
       ? `${r.excerpt} ${r.readTime} read on Nashville Fence Guide.`
@@ -189,7 +190,7 @@ export default function Resources() {
           ]),
           articleSchema({
             slug: `/resources/${r.slug}`,
-            title: r.title,
+            title: displayTitle(r.title),
             description: r.excerpt,
             category: r.category,
             image: r.img,
@@ -237,7 +238,7 @@ export default function Resources() {
       <>
         <PageHero
           eyebrow={r.category}
-          title={r.title}
+          title={displayTitle(r.title)}
           description={r.excerpt}
           crumbs={[{ label: 'Resources', to: '/resources' }, { label: r.category }]}
         />
@@ -254,6 +255,12 @@ export default function Resources() {
                   priority
                 />
               </div>
+              {isAutoMonthly(r.title) && (
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-forest-50 text-forest-500 text-[11px] font-semibold mb-3 border border-forest-100">
+                  <Clock className="w-3 h-3" />
+                  Updated {monthYearString()}
+                </div>
+              )}
               <div className="flex items-center gap-4 text-xs text-onyx-400 mb-6">
                 <span className="flex items-center gap-1">
                   <Clock className="w-3 h-3" /> {r.readTime} read
@@ -387,7 +394,7 @@ export default function Resources() {
                   </div>
                   <div className="p-5">
                     <h3 className="heading-card !text-lg leading-tight mb-2">
-                      {r.title}
+                      {displayTitle(r.title)}
                     </h3>
                     <p className="text-sm text-onyx-700/70 leading-relaxed line-clamp-3 mb-4">
                       {r.excerpt}

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Clock, ArrowRight } from 'lucide-react'
 import { RESOURCES } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
+import { displayTitle } from '../../lib/resourceTitle'
 
 const CATEGORY_COLORS: Record<string, string> = {
   Comparison: 'bg-forest-50 text-forest-500',
@@ -56,7 +57,7 @@ export default function ResourceCenter() {
                 </div>
                 <div className="p-5">
                   <h3 className="heading-card !text-lg leading-tight mb-2 line-clamp-2">
-                    {r.title}
+                    {displayTitle(r.title)}
                   </h3>
                   <p className="text-sm text-onyx-700/70 leading-relaxed line-clamp-3 mb-4">
                     {r.excerpt}
