@@ -511,6 +511,7 @@ export const RESOURCES = [
     excerpt:
       'A homeowner-friendly walkthrough of the 2018 ISPSC barrier code, self-closing gates, and 4 ft minimum requirements.',
     img: IMAGES.resources['pool-fence-safety-tn'],
+    imageAlt: 'Swimming pool with lounge chairs and a code-compliant barrier — Tennessee pool fence safety laws',
     body: [
       {
         type: 'p',
@@ -655,6 +656,7 @@ export const RESOURCES = [
     excerpt:
       'When you do (and do not) need a permit, height limits by yard, and how to handle historic overlay districts.',
     img: IMAGES.resources['metro-nashville-permits'],
+    imageAlt: 'Modern Nashville home with manicured lawn — Metro Nashville fence permit guide',
     body: [
       {
         type: 'p',
@@ -803,6 +805,7 @@ export const RESOURCES = [
     excerpt:
       'Line-item analysis: materials, labor, post-setting, gates, and the hidden costs that surprise first-time buyers.',
     img: IMAGES.resources['fence-cost-breakdown'],
+    imageAlt: 'Black metal fence in front of a Nashville lawn — anatomy of a Nashville fence quote',
     body: [
       {
         type: 'p',
@@ -1109,6 +1112,7 @@ export const RESOURCES = [
     excerpt:
       'A simple cost-based rule for deciding whether to repair or replace a damaged Nashville fence — plus material-by-material repair cost ranges from Davidson and Williamson Counties.',
     img: IMAGES.resources['fence-repair-vs-replace-nashville'],
+    imageAlt: 'Aging chain link fence with weather-worn posts — Nashville fence repair vs replace 60 percent rule',
     body: [
       {
         type: 'p',
@@ -1219,6 +1223,7 @@ export const RESOURCES = [
     excerpt:
       "Step-by-step Nashville guide to documenting storm fence damage, filing your Tennessee homeowner's insurance claim, and getting same-week fence repair from a vetted local contractor.",
     img: IMAGES.resources['storm-damaged-fence-nashville-insurance'],
+    imageAlt: 'Weathered wooden gate at a Nashville-area property — storm-damaged fence insurance claim guide',
     body: [
       {
         type: 'p',
@@ -1358,6 +1363,7 @@ export const RESOURCES = [
     excerpt:
       'Nashville-specific vetting checklist for fence contractors — Tennessee licensing, 811 dig-safe, post depth, HOA approvals, payment terms, and the three recent installs every reputable Nashville crew should be able to show you.',
     img: IMAGES.resources['hire-nashville-fence-installer-questions'],
+    imageAlt: 'Black metal fence in front of a green Nashville lawn — questions to ask before hiring a Nashville fence installer',
     body: [
       {
         type: 'p',
