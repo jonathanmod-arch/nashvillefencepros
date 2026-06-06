@@ -1884,6 +1884,162 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'best-gate-installation-companies-nashville',
+    title: 'Best Gate Installation Companies in Nashville',
+    category: 'Gates',
+    readTime: '8 min',
+    excerpt:
+      'Three ranked picks for driveway gate installation in the Nashville metro — Madison Steel & Iron Works of TN (Davidson), American Fence and Gate (Williamson), and Master Fence (Rutherford). Plus how to vet any gate contractor before signing.',
+    img: IMAGES.resources['best-gate-installation-companies-nashville'],
+    imageAlt: 'Black metal driveway gate on a Nashville property — best gate installation companies guide',
+    body: [
+      {
+        type: 'p',
+        text: "The Nashville gate market is a strange one. A handful of established names dominate Google's local pack — fine companies, often very good, often booked three months out at premium pricing. Behind them is a deeper bench of legitimate local shops that quietly do the bulk of the actual installs across Davidson, Williamson, and Rutherford counties. This article picks three of those quieter shops, ranked in the order I'd start calling for quotes on most residential driveway gate projects.",
+      },
+      { type: 'h2', text: 'How These Three Got the Pick' },
+      {
+        type: 'p',
+        text: "Three filters separate the recommendations below from the rest of the field.",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Verifiable local presence — a public address, a real phone number, project work documented through their own website or active Google Maps listing. Not a stock photo gallery scraped from a manufacturer's catalog.",
+          "Specialization that matches what most Nashville driveway gate projects actually need — ornamental iron fabrication, automated aluminum with LiftMaster or FAAC class operators, or full-service residential automation. Not 'we do everything' marketing copy.",
+          "Geographic spread across the metro. One pick in Davidson County, one in Williamson, one in Rutherford — so wherever your driveway sits, at least one of these crews has install experience in your zip code.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Rankings reflect my honest take on who I'd recommend first for a typical residential install. Your specific project may be a better fit for #2 or #3 — the per-company notes flag where each one wins.",
+      },
+      { type: 'h2', text: '#1 — Madison Steel & Iron Works of TN' },
+      {
+        type: 'p',
+        text: "Madison Steel & Iron Works has been fabricating ornamental and wrought iron in the Nashville metro for over 65 years. That's the headline. The detail that earns the top ranking on this list is what they actually do versus what most 'gate companies' in this market do: they make the gate, in-house, in their Madison shop on Woodruff Street, then their own crew installs it. The catalog gate companies down the road order panels from out-of-state manufacturers and bolt them together on your driveway. Madison Steel fabricates from scratch.",
+      },
+      {
+        type: 'p',
+        text: "For a homeowner who wants an ornamental iron driveway gate that's actually custom — sized to the existing brick columns, designed to coordinate with railings on the front porch, matched to the historic character of a Belle Meade or Forest Hills property — this is the call. The trade-off is timeline. Custom fabrication runs 4 to 8 weeks, not 2.",
+      },
+      {
+        type: 'p',
+        text: "Why we ranked them here:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "65+ years of in-house ornamental and wrought iron fabrication, all in the Nashville metro.",
+          "Custom driveway gate designs sized to the actual columns and driveway opening, not catalog-ordered.",
+          "Architectural metalwork capability — railings, fence panels, stair rails — that can be designed to match the new gate so the front of the house reads as one project.",
+          "Operates within a 50-mile radius of Madison, TN, so install scheduling is genuinely local.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Best fit: estate-grade ornamental iron driveway gates, fully custom designs, and properties where the gate needs to coordinate with other ironwork on the lot. Davidson and Sumner counties, plus the wealthier Williamson neighborhoods within the 50-mile radius.",
+      },
+      {
+        type: 'p',
+        text: "Profile and contact: [Madison Steel & Iron Works of TN](/contractors/madison-steel-iron-works) — Davidson County, (615) 865-8214.",
+      },
+      { type: 'h2', text: '#2 — American Fence and Gate, LLC' },
+      {
+        type: 'p',
+        text: "American Fence and Gate runs out of Brentwood and covers the Williamson County HOA belt — Franklin, Nolensville, Spring Hill — plus southern Davidson and the upscale Nashville neighborhoods (Green Hills, Belle Meade). The thing they do that the catalog gate companies don't is the whole package: fence, gate, automation, brick column work, and the maintenance that comes after. One contract, one crew, one warranty.",
+      },
+      {
+        type: 'p',
+        text: "For a homeowner planning a fence-and-gate-and-columns project at the same time — common when a new build closes or a property gets a major front-yard refresh — running it through one contractor saves the seam between the fence company and the gate company. That seam is where most install problems hide six months in.",
+      },
+      {
+        type: 'p',
+        text: "Why we ranked them here:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Full-service residential and light commercial scope — fence, gate, automation, and brick column work under a single contract.",
+          "Specialization in automated security gates with ornamental aluminum, steel, and wrought iron options.",
+          "Service area covers the Williamson County HOA neighborhoods where coordinated fence-plus-gate-plus-column projects are the norm.",
+          "Strong fit for new-build properties closing with the fence-and-gate scope still open.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Best fit: residential and light commercial coordinated projects — fence, gate, and brick columns done as one install. Brentwood, Franklin, Nolensville, Green Hills, Belle Meade, Spring Hill.",
+      },
+      {
+        type: 'p',
+        text: "Profile and contact: [American Fence and Gate](/contractors/american-fence-and-gate) — Williamson County, (615) 833-2120.",
+      },
+      { type: 'h2', text: '#3 — Master Fence' },
+      {
+        type: 'p',
+        text: "Master Fence is the Rutherford County pick. They run out of a Veterans Parkway shop in Murfreesboro and cover Murfreesboro itself plus the Smyrna, Manchester, La Vergne corridor down through southern Middle Tennessee. Family-owned, with the specialty that matters for that geography: aluminum driveway gates connected to electronic access controls and keypads. Most of the southern Rutherford developments built since the mid-2010s have HOA-spec aluminum that Master Fence has installed on repeat.",
+      },
+      {
+        type: 'p',
+        text: "Why they're #3 rather than higher on the list: less crew coverage in the Davidson and Williamson core, so if you're north of Smyrna they may not be the fastest install. But for anyone south of the airport, this is the call I'd make first.",
+      },
+      {
+        type: 'p',
+        text: "Why we ranked them here:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Family-owned and locally operated out of Murfreesboro.",
+          "Specialization in aluminum driveway gates with electronic access — keypads, card readers, basic intercom.",
+          "Coverage of Rutherford and Coffee counties, where southern Middle Tennessee homeowners rarely have a good local gate option.",
+          "Also does wood and farm fencing alongside the gate work — useful on acreage where the perimeter fence and the entry gate go in as one project.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Best fit: residential aluminum gates with automation across southern Middle Tennessee — Rutherford and Coffee counties primarily. Acreage properties where farm fence and a driveway gate are bid together.",
+      },
+      {
+        type: 'p',
+        text: "Profile and contact: [Master Fence](/contractors/master-fence) — Rutherford County, (615) 692-8299.",
+      },
+      { type: 'h2', text: 'What to Ask Any Nashville Gate Contractor Before You Sign' },
+      {
+        type: 'p',
+        text: "Three picks is three picks — none of them are perfect for every project, and there are good gate installers I don't know about that you might find. Whoever you call, the seven questions in our [Questions to Ask Before Hiring a Nashville Fence Installer](/resources/hire-nashville-fence-installer-questions) article apply double for gate work, because gate jobs involve electrical, mechanical, and safety devices that pure fence crews don't always handle correctly. Five questions specific to gate work:",
+      },
+      {
+        type: 'ol',
+        items: [
+          "What operator brand AND model? Not 'an operator' — the actual brand and series (LiftMaster Elite 8500W, FAAC E045, etc.). Cheap operators get pulled within two years.",
+          "Which UL325 safety devices come standard? Photo eyes are the minimum, loop detectors and edge sensors are the residential standard. If they have to upsell safety, that's a yellow flag.",
+          "Who pulls the electrical permit and trenches from the panel? Get the scope explicit in writing. Gate trenching surprises are the most common budget blow-up.",
+          "What's the cellular service plan for the intercom (if applicable) and whose name is it under? Monthly fees add up if no one's tracking them.",
+          "Will you be on-site for the Metro Codes inspection if one is required? The 'we'll just send the paperwork' answer fails more inspections than it passes.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Their answers to those five are usually the difference between a gate that opens reliably for ten years and one that's on its second operator by year three. The [Anatomy of a Fence Quote](/resources/fence-cost-breakdown) article covers the line-item logic that applies to gate quotes too — operator, access control, posts, and electrical should each be priced separately.",
+      },
+      { type: 'h2', text: 'How We Built This List' },
+      {
+        type: 'p',
+        text: "The strategy for this article: the names already dominating the Google local pack don't need our help. The shops below the fold — legitimate, capable, and quieter — get a fairer shot here. Future entries in the Best [X] in Nashville series follow the same brief: three verified picks researched from outside the top results, ranked by honest fit for the most common local projects. No paid placements, no affiliate deals.",
+      },
+      {
+        type: 'p',
+        text: "If you run a Nashville gate shop and want to be considered for inclusion as we publish more of these, the [submit your business](/submit-listing) form is open. Provide a real address, a real phone number, a website with project photos, and any state or municipal licenses, and we'll review.",
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Gate work is the one fence-adjacent project where the wrong contractor genuinely costs you. The fence company that quoted the cheap install will leave you with sticking operators, mis-calibrated photo eyes, and a service contract someone else has to honor. The three picks above are picks because they don't do that. Call all three for a quote, compare specs side by side, and pick the one whose answers to the operator-and-permit questions read cleanest. That's the gate that opens on year ten.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [

@@ -53,6 +53,7 @@ export const IMAGES = {
     'hire-nashville-fence-installer-questions': 'https://unsplash.com/photos/oVueqggYsbU/download?w=1200&q=80',
     'property-line-survey-nashville-fence': 'https://unsplash.com/photos/D9kfezvATOY/download?w=1200&q=80',
     'driveway-gate-cost-nashville': 'https://unsplash.com/photos/oVueqggYsbU/download?w=1200&q=80',
+    'best-gate-installation-companies-nashville': 'https://unsplash.com/photos/bzqc09sK_D0/download?w=1200&q=80',
   },
   gallery: [
     'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80',
