@@ -1357,135 +1357,99 @@ export const RESOURCES = [
     body: [
       {
         type: 'p',
-        text: "Hiring a Nashville fence installer is a $4,000–$8,000 decision for most homeowners — bigger than appliances, smaller than a kitchen remodel, with no single warranty signal as strong as either. Tennessee doesn't issue a state-level residential fence contractor license for jobs under $25,000, which means the bar to call yourself a Nashville fence company is essentially zero. The seven questions below separate the crews that show up on time with concrete-set posts from the ones that leave you with a leaning fence inside the warranty window.",
+        text: "Hiring a fence installer in Nashville is a $4,000 to $8,000 decision for most homeowners — bigger than a new fridge, smaller than a kitchen remodel, with none of the buyer protections of either. Here's the kicker: Tennessee doesn't issue a state-level residential contractor license for any fence job under $25,000. The bar to print 'Nashville fence company' on a truck door is essentially zero, and that's reflected in the quality range I see when I follow up on the leans, the sags, and the warranty calls. The seven questions below separate the crews that show up on time with concrete-set posts from the ones who leave you with a leaning fence inside the warranty window. Ask all seven before you sign anything.",
       },
       { type: 'h2', text: '1. Are you licensed in Tennessee and properly insured?' },
       {
         type: 'p',
-        text: "Tennessee doesn't require a state contractor license for residential fence work under $25,000. Above that, the Tennessee Board for Licensing Contractors requires a general contractor license. Either way, the two pieces of paper you actually want in hand are a current Certificate of Insurance showing general liability (minimum $1M is standard for Nashville) and workers' comp coverage. Ask the contractor's insurance broker to email the COI directly to you — not a copy forwarded from the contractor's office.",
+        text: "Tennessee does not require a state contractor license for residential fence work under $25,000. Above that threshold, the Tennessee Board for Licensing Contractors requires a general contractor license. Either way, the two pieces of paper you actually want in hand are a current Certificate of Insurance showing general liability (minimum $1M is the Nashville standard) and workers' comp coverage. The right way to verify is to ask the contractor's insurance broker to email the COI directly to you — not a copy forwarded from the contractor's office.",
       },
       {
         type: 'p',
-        text: "Why it matters: If a crew member gets hurt on your property and the contractor doesn't carry workers' comp, your homeowner's insurance becomes the next target. A single back injury claim can run six figures.",
-      },
-      {
-        type: 'ul',
-        items: [
-          'Red flag: vague responses like "we\'re fully insured" without sending a COI',
-          'Red flag: reluctance to have the broker email proof directly',
-          'Red flag: policy that expires in the next 30 days',
-        ],
-      },
-      { type: 'h2', text: '2. Will you call Tennessee 811 before digging, and how many days in advance?' },
-      {
-        type: 'p',
-        text: "Tennessee's Underground Utility Damage Prevention Act requires at least three business days notice to Tennessee 811 before any excavation, including fence post holes. That's not a suggestion — it's state law. Nicking a gas line, fiber run, or water main triggers per-incident fines plus repair costs that can run into the thousands. Gas strikes are the most expensive: a ¾-inch line nick can mean a four- to five-figure repair plus liability if the outage affects neighbors.",
+        text: "Why this matters in plain English: if a crew member gets hurt on your property and the contractor doesn't carry workers' comp, your homeowner's insurance becomes the next target. A single serious back injury claim runs six figures. The $40 in postage to verify is the cheapest insurance you'll ever buy.",
       },
       {
         type: 'p',
-        text: "Tennessee 811 marks public utilities for free. Private utilities — your own irrigation lines, low-voltage landscape lighting, sprinkler valves, septic field — are on you. Ask the contractor how they handle private utility detection.",
+        text: "If you get 'we're fully insured' without a COI in hand, or if the contractor pushes back on having the broker email proof directly, that's the answer. The good ones make it easy because they have nothing to hide.",
       },
-      {
-        type: 'ul',
-        items: [
-          'Red flag: "we\'ll just be careful" or "we don\'t need to call for shallow posts"',
-          'Red flag: any plan to dig the same day you sign — the 3-business-day notice can\'t be compressed',
-          'Red flag: contractor offers to skip 811 to "save time"',
-        ],
-      },
-      { type: 'h2', text: '3. Are posts set in concrete, and how deep below the frost line?' },
+      { type: 'h2', text: '2. Will you call Tennessee 811 before digging, and how many days ahead?' },
       {
         type: 'p',
-        text: "Middle Tennessee's published frost line sits around 12 inches, but Nashville's clay-heavy soil heaves with freeze-thaw cycles more than the depth suggests. The industry standard for residential fence posts in Davidson and Williamson Counties is 24–36 inches deep, set in concrete, with a 6-inch gravel base at the bottom of the hole for drainage. For 6 ft privacy fence and taller, 36 inches is the minimum a reputable Nashville crew will quote.",
+        text: "Tennessee's Underground Utility Damage Prevention Act requires a minimum of three business days notice to Tennessee 811 before any excavation, fence post holes included. That's not a suggestion — it's state law. Nicking a gas line, fiber bundle, or water main triggers per-incident fines plus repair costs that can run into the thousands. The gas strikes are the most expensive: a 3/4-inch line nick can mean a four-figure to five-figure repair plus liability if the outage affects the neighbors.",
       },
       {
         type: 'p',
-        text: "Post depth is the single biggest predictor of how long your fence stays straight. Shallow posts in Nashville clay equal a leaning fence inside three winters. Concrete vs. tamped-dirt-only is the other variable — concrete is the default for any privacy fence, and 'we don't always need concrete' is the wrong answer.",
-      },
-      {
-        type: 'ul',
-        items: [
-          'Red flag: posts set in dirt only without concrete',
-          'Red flag: depth quotes under 24 inches for any privacy fence',
-          'Red flag: "we\'ll see how deep we need to go" with no spec in writing',
-          'Red flag: no gravel base at the bottom of the post hole',
-        ],
-      },
-      { type: 'h2', text: '4. What\'s your warranty on materials AND labor — separately?' },
-      {
-        type: 'p',
-        text: "Two different warranties cover your fence and they don't always come together. The material warranty comes from the manufacturer and passes through the installer — typically 15–25 years on premium vinyl, 1–5 years on pressure-treated wood, lifetime structural on aluminum and iron from established brands. The labor warranty is what the contractor offers on the installation itself: leaning posts, gate alignment, panel attachment defects, hardware failures.",
+        text: "Tennessee 811 marks public utilities for free. Private utilities — your irrigation lines, your low-voltage landscape lighting, your sprinkler valves, your septic field — are on you. Any contractor worth hiring will ask you about private utility runs at the consultation. If they don't, ask them.",
       },
       {
         type: 'p',
-        text: "Look for at least a 1-year labor warranty in writing. A 'lifetime warranty' advertised on the contractor's marketing usually refers to the manufacturer's material warranty — not the contractor's own work. If your gate sags after six months because of a bad install, the manufacturer warranty doesn't cover it. The contractor's labor warranty does, but only if it exists in writing.",
+        text: "If you hear 'we'll just be careful,' or 'we don't need to call for shallow posts,' or 'we can dig the same day you sign,' you're done. The 3-business-day notice cannot be compressed and anyone offering to skip it is offering to put your gas line on the line for the schedule.",
+      },
+      { type: 'h2', text: '3. Are posts set in concrete, and how deep?' },
+      {
+        type: 'p',
+        text: "Nashville's published frost line sits around 12 inches, but the clay-heavy soil here heaves more than the depth alone suggests. The industry standard for residential fence posts in Davidson and Williamson Counties is 24 to 36 inches deep, set in concrete, with a 6-inch gravel base at the bottom of the hole for drainage. For any privacy fence at 6 feet or taller, 36 inches is the minimum a reputable Nashville crew will quote.",
       },
       {
-        type: 'ul',
-        items: [
-          'Red flag: verbal-only warranty commitments',
-          'Red flag: "warranty included" without separating material from labor',
-          'Red flag: anything under 90 days on labor',
-          'Red flag: contractor refuses to put the warranty terms in the contract',
-        ],
+        type: 'p',
+        text: "Post depth is the single biggest predictor of how long your fence stays straight. Shallow posts in Nashville clay equal a leaning fence inside three winters, and the failure usually shows up in the warranty window. Concrete versus tamped-dirt-only is the other variable — concrete is the default for any privacy fence, and 'we don't always need concrete' is the wrong answer from anyone quoting a 6-foot or taller fence.",
+      },
+      {
+        type: 'p',
+        text: "The answers you want to hear: '30 inches minimum, 36 inches on 6-foot privacy and corners, set in concrete, gravel at the bottom.' Anything vaguer than that and you're betting on the crew's good day.",
+      },
+      { type: 'h2', text: "4. What's your warranty on materials AND labor — separately?" },
+      {
+        type: 'p',
+        text: "Two different warranties cover your fence and they don't always come together. The material warranty comes from the manufacturer and passes through the installer — typically 15-25 years on premium vinyl, 1-5 years on pressure-treated wood, lifetime structural on aluminum and iron from established brands. The labor warranty is what the contractor offers on the installation itself: leaning posts, gate alignment, panel attachment defects, hardware failures.",
+      },
+      {
+        type: 'p',
+        text: "What you actually want is at least a 1-year labor warranty in writing. The 'lifetime warranty' you see in contractor marketing usually refers to the manufacturer's material warranty — not the contractor's own work. If your gate sags after six months because of a bad install, the manufacturer doesn't cover it. The contractor's labor warranty does, but only if it exists in writing.",
+      },
+      {
+        type: 'p',
+        text: "Verbal warranties are not warranties. 'Warranty included' without separating material from labor is the contractor hoping you don't ask follow-up questions. Anything under 90 days on labor is a sign that the crew expects something to fail and doesn't want to come back. Get it in the contract.",
       },
       { type: 'h2', text: '5. Who handles HOA approval and Metro Codes submissions?' },
       {
         type: 'p',
-        text: "Most Williamson County subdivisions (Brentwood, Franklin, Nolensville, Spring Hill) require Architectural Review Committee approval before installation. Nashville historic overlays — Germantown, Edgefield, parts of East Nashville, Belle Meade Conservation, Hillsboro-West End, Richland-West End — require Historic Zoning Commission review. Both processes take 2–6 weeks. The question is whether the contractor will help with the submission paperwork or leave it to you.",
+        text: "Most Williamson County subdivisions — Brentwood, Franklin, Nolensville, Spring Hill — require Architectural Review Committee approval before installation. Nashville's historic overlays (Germantown, Edgefield, Lockeland Springs, Belle Meade Conservation, Hillsboro-West End, Richland-West End) require Historic Zoning Commission review. Both processes take 2-6 weeks. The real question is whether the contractor will help submit the paperwork or hand you a stack of PDFs and wish you luck.",
       },
       {
         type: 'p',
-        text: "Installing a non-compliant fence in a historic overlay can result in a removal order at your expense. HOA violations can mean fines and a forced rebuild to spec. A contractor who knows the local approval landscape and helps submit is worth a small premium over one who hands you a stack of forms.",
-      },
-      {
-        type: 'ul',
-        items: [
-          'Red flag: contractor refuses to participate in HOA submissions',
-          "Red flag: doesn't know which Nashville neighborhoods are in historic overlays",
-          'Red flag: insists you handle Metro Codes filings alone for flood-zone or 8+ ft fences',
-        ],
-      },
-      { type: 'h2', text: '6. What\'s your payment schedule, and how much do you require upfront?' },
-      {
-        type: 'p',
-        text: "Industry norm for Nashville fence contractors is 30–50% deposit, balance on completion. Larger jobs (200+ linear ft) might break into three payments: deposit, material delivery, completion. A contractor running an established Nashville crew can usually float materials for 1–2 weeks against a 30% deposit. Anyone demanding 100% upfront, cash-only, or a Friday deadline tied to a contrived urgency is a red flag.",
+        text: "Installing a non-compliant fence in a historic overlay can result in a removal order at your expense. I've watched one homeowner pay for the install, pay for the removal, and pay for the second install. HOA violations can mean fines plus a forced rebuild to spec. A contractor who knows the local approval landscape and submits on your behalf is worth a small premium over one who treats compliance as your job.",
       },
       {
         type: 'p',
-        text: "Tennessee small claims court caps at $25,000 and recovery rates on disappeared contractors are below 20% per consumer affairs data. The deposit you hand over is effectively unrecoverable if the contractor walks. Keep deposits under 50% and never pay cash without a signed contract.",
+        text: "If they don't know which Nashville neighborhoods are in historic overlays, that's the answer. If they refuse to participate in HOA submissions, that's the answer. If they tell you to handle the Metro Codes filing for a flood-zone or 8-foot-plus fence by yourself, that's the answer.",
       },
-      {
-        type: 'ul',
-        items: [
-          'Red flag: 100% payment upfront',
-          'Red flag: cash-only requests',
-          'Red flag: no written contract or vague payment milestones',
-          'Red flag: deposit tied to an external deadline ("starts Monday but only if you pay today")',
-        ],
-      },
-      { type: 'h2', text: '7. Can I see three recent Nashville installs you\'ve completed?' },
+      { type: 'h2', text: "6. What's your payment schedule, and how much do you want upfront?" },
       {
         type: 'p',
-        text: "Photos in a portfolio are easy to fake or borrow from manufacturer marketing. The strongest signal a Nashville fence company is real and consistent is being able to share three specific addresses (or named neighborhoods plus photos) for jobs completed in the last 6 months. Drive past two of them. The fence that's six months old tells you what your fence will look like six months from now — leaning posts, gate sag, and weathering all show up in that window.",
+        text: "Industry norm for Nashville fence contractors is 30-50 percent deposit, balance on completion. Larger jobs (200-plus linear feet) might break into three payments: deposit, material delivery, completion. A contractor running an established Nashville crew can usually float materials for 1-2 weeks against a 30 percent deposit. Anyone demanding 100 percent upfront, cash-only, or a Friday deadline tied to a manufactured urgency is telling you something about their business.",
       },
       {
         type: 'p',
-        text: "Bonus signal: ask whether you can speak to one of those homeowners. A contractor with a strong Nashville reputation will have at least one customer who's happy to take a 5-minute reference call.",
+        text: "Here's the math that should keep you cautious. Tennessee small claims court caps at $25,000 and recovery rates on disappeared contractors are well below 20 percent per consumer affairs data. The deposit you hand over is effectively unrecoverable if the contractor walks. Keep deposits under 50 percent. Never pay cash without a signed contract. And never pay a deposit tied to an external deadline — 'starts Monday but only if you pay today' is a sales tactic, not a real schedule.",
+      },
+      { type: 'h2', text: "7. Can I see three recent Nashville installs you've completed?" },
+      {
+        type: 'p',
+        text: "Photos in a portfolio are easy to fake or borrow from manufacturer marketing. The strongest signal that a Nashville fence company is real and consistent is being able to share three specific addresses, or named neighborhoods plus photos, for jobs completed in the last six months. Drive past two of them. The fence that's six months old tells you what your fence will look like six months from now — leaning posts, gate sag, weathering, fastener bleed all show up in that window.",
       },
       {
-        type: 'ul',
-        items: [
-          'Red flag: "we\'ve done so many we don\'t remember"',
-          'Red flag: refusal to share any specific addresses or neighborhoods',
-          'Red flag: only out-of-state or stock-looking photos',
-          'Red flag: portfolio identical to other Nashville contractors\' websites',
-        ],
+        type: 'p',
+        text: "Bonus move: ask whether you can speak to one of those homeowners. A contractor with a strong Nashville reputation will have at least one customer happy to take a 5-minute reference call. That call is the cheapest due diligence available.",
+      },
+      {
+        type: 'p',
+        text: "'We've done so many we don't remember' is a non-answer. Refusal to share any specific addresses is a non-answer. A portfolio that's identical to three other contractor websites in town means the photos came from a manufacturer's marketing kit, not the contractor's actual installs.",
       },
       { type: 'h2', text: 'How to put these questions to work' },
       {
         type: 'p',
-        text: "When you request fence installation quotes in Nashville, ask all seven questions in the same order, ideally in writing. Save every answer. The contractor who answers all seven clearly and in detail, in under 24 hours, is almost always the right pick — independent of price. The contractor who hedges on any single one of them is the wrong call no matter how good their quote looks on paper.",
+        text: "When you request quotes from Nashville fence installers, ask all seven questions in the same order, in writing where you can. Save every answer. The contractor who answers all seven clearly and in detail, in under 24 hours, is almost always the right pick — independent of price. The contractor who hedges on any single one of them is the wrong call no matter how good the quote looks on paper. A great quote from a contractor who can't answer question 3 isn't a deal — it's the prelude to a warranty call you can't make.",
       },
       {
         type: 'callout',
