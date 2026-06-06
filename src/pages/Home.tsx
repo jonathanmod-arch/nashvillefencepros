@@ -10,7 +10,7 @@ import FAQSection from '../components/home/FAQSection'
 import ResourceCenter from '../components/home/ResourceCenter'
 import LeadGenSection from '../components/home/LeadGenSection'
 import LazyMount from '../components/shared/LazyMount'
-import { FAQS } from '../data/siteData'
+import { FAQS, COMPANY } from '../data/siteData'
 import { CONTRACTORS } from '../data/contractors'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
@@ -21,12 +21,12 @@ import {
   faqPageSchema,
   itemListSchema,
 } from '../lib/schema'
+import { CITY } from '../config/city'
 
 export default function Home() {
   useDocumentMeta({
-    title: 'Fence Installation Nashville | Pros, Costs & Repair | Call (615) 560-9956',
-    description:
-      'Fence installation Nashville, compare vetted Nashville fence contractors, get free fence installation quotes, calculate fence installation cost in Nashville TN, and find privacy, chain link, vinyl, aluminum, and pet fence pros.',
+    title: `${CITY.primaryKeyword} | Pros, Costs & Repair | Call ${COMPANY.phone}`,
+    description: `Fence installation ${CITY.name}, compare vetted ${CITY.name} fence contractors, get free fence installation quotes, calculate fence installation cost in ${CITY.name} ${CITY.stateAbbr}, and find privacy, chain link, vinyl, aluminum, and pet fence pros.`,
     canonical: '/',
   })
 
@@ -40,7 +40,7 @@ export default function Home() {
         name: c.name,
         url: `/contractors/${c.slug}`,
       })),
-      'Featured Nashville Fence Installers',
+      `Featured ${CITY.name} Fence Installers`,
     ),
   ])
 

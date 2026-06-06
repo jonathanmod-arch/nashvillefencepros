@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Phone, Menu, X, ChevronDown } from 'lucide-react'
 import { COMPANY, FENCE_TYPES } from '../../data/siteData'
+import { CITY } from '../../config/city'
 
 const NAV_LINKS = [
   { to: '/cost-guide', label: 'Costs & Pricing' },
@@ -34,7 +35,7 @@ export default function Navbar() {
       <div className="bg-forest-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-[11px] sm:text-xs font-body">
           <p className="font-semibold">
-            Nashville's #1 Fence Resource & Contractor Referral Platform
+            {CITY.hashTagLine}
           </p>
           <a
             href={`tel:${COMPANY.phoneRaw}`}
@@ -62,7 +63,7 @@ export default function Navbar() {
               </div>
               <div className="hidden lg:flex flex-col leading-tight">
                 <span className="font-heading font-bold text-onyx-700 text-base leading-tight">
-                  Nashville
+                  {CITY.name}
                 </span>
                 <span className="font-heading font-bold text-forest-500 text-base leading-tight -mt-1">
                   FenceGuide

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react'
 import { COMPANY, FENCE_TYPES, NEIGHBORHOODS } from '../../data/siteData'
+import { CITY } from '../../config/city'
 
 const POPULAR_NEIGHBORHOOD_SLUGS = [
   'belle-meade',
@@ -27,7 +28,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-[13px] text-onyx-200 leading-relaxed mb-5 max-w-sm">
-              Nashville's most trusted resource for fence installation. We connect homeowners with vetted local pros and arm you with the data to choose well.
+              {CITY.name}'s most trusted resource for fence installation. We connect homeowners with vetted local pros and arm you with the data to choose well.
             </p>
             <div className="space-y-2 text-[13px]">
               <a href={`tel:${COMPANY.phoneRaw}`} className="flex items-center gap-2.5 text-onyx-100 hover:text-oak-300 transition-colors">
@@ -74,11 +75,11 @@ export default function Footer() {
               Pricing & Permits
             </h4>
             <ul className="space-y-2 text-[13px]">
-              <li><Link to="/cost-guide" className="text-onyx-200 hover:text-oak-300 transition-colors">Nashville Cost Guide</Link></li>
-              <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">Metro Permit Rules</Link></li>
+              <li><Link to="/cost-guide" className="text-onyx-200 hover:text-oak-300 transition-colors">{CITY.name} Cost Guide</Link></li>
+              <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">{CITY.permitOffice.shortName} Permit Rules</Link></li>
               <li><Link to="/pool-fence-code" className="text-onyx-200 hover:text-oak-300 transition-colors">Pool Fence Code</Link></li>
               <li><Link to="/historic-overlays" className="text-onyx-200 hover:text-oak-300 transition-colors">Historic Overlays</Link></li>
-              <li><Link to="/repair" className="text-onyx-200 hover:text-oak-300 transition-colors">Fence Repair Nashville</Link></li>
+              <li><Link to="/repair" className="text-onyx-200 hover:text-oak-300 transition-colors">Fence Repair {CITY.name}</Link></li>
               <li><Link to="/commercial-fencing" className="text-onyx-200 hover:text-oak-300 transition-colors">Commercial Fencing</Link></li>
             </ul>
           </div>
@@ -121,7 +122,7 @@ export default function Footer() {
 
         <div className="mt-14 pt-10 border-t border-onyx-500">
           <h4 className="text-white text-[12px] font-bold uppercase tracking-[0.24em] mb-8">
-            Nashville Fence Quick Facts
+            {CITY.name} Fence Quick Facts
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div>
@@ -134,10 +135,10 @@ export default function Footer() {
             </div>
             <div>
               <h5 className="text-white font-heading font-bold text-[14px] mb-3 tracking-tightest">
-                Nashville Permit Rules
+                {CITY.name} Permit Rules
               </h5>
               <p className="text-[13px] text-onyx-300 leading-relaxed">
-                Most residential fences under 6 ft do not require a Metro Nashville permit. Fences in historic overlays may require additional approval. Always check with Metro Nashville Planning.
+                Most residential fences under 6 ft do not require a {CITY.permitOffice.shortName} permit. Fences in historic overlays may require additional approval. Always check with {CITY.permitOffice.name} directly.
               </p>
             </div>
             <div>
@@ -153,7 +154,7 @@ export default function Footer() {
                 Before You Install
               </h5>
               <p className="text-[13px] text-onyx-300 leading-relaxed">
-                Call Tennessee 811 before digging. Get a property survey to confirm boundary lines. Check HOA CC&Rs for approved fence styles and colors. Notify neighbors as a courtesy.
+                Call {CITY.dig811.name} before digging. Get a property survey to confirm boundary lines. Check HOA CC&Rs for approved fence styles and colors. Notify neighbors as a courtesy.
               </p>
             </div>
           </div>
@@ -163,7 +164,7 @@ export default function Footer() {
       <div className="border-t border-onyx-500 bg-onyx-700">
         <div className="container-wide py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
           <p className="text-[12px] text-onyx-300 leading-relaxed max-w-4xl">
-            <span className="text-white font-semibold">Disclaimer:</span> NashvilleFenceGuide.com is an independent local fence information and contractor referral platform created to help homeowners make informed fencing decisions. We are not a licensed contractor. Always verify permits and regulations with Metro Nashville directly.
+            <span className="text-white font-semibold">Disclaimer:</span> {CITY.domain} is an independent local fence information and contractor referral platform created to help homeowners make informed fencing decisions. We are not a licensed contractor. Always verify permits and regulations with {CITY.permitOffice.name} directly.
           </p>
           <div className="flex items-center gap-4 text-[12px] text-onyx-300 whitespace-nowrap">
             <Link to="/privacy" className="hover:text-oak-300 transition-colors">
@@ -172,7 +173,7 @@ export default function Footer() {
             <Link to="/terms" className="hover:text-oak-300 transition-colors">
               Terms
             </Link>
-            <span>© {new Date().getFullYear()} NashvilleFenceGuide.com</span>
+            <span>© {new Date().getFullYear()} {CITY.domain}</span>
           </div>
         </div>
       </div>

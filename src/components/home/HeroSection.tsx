@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Calculator, Star } from 'lucide-react'
 import SafeImage from '../shared/SafeImage'
 import { IMAGES } from '../../data/imageUrls'
+import { CITY } from '../../config/city'
 
 const bullets = [
   'Wood, vinyl, aluminum, chain link and custom fencing',
   'Residential and commercial projects',
-  'Nashville permit and HOA guidance',
+  `${CITY.name} permit and HOA guidance`,
   'Fast local fence estimates',
 ]
 
@@ -22,11 +23,11 @@ export default function HeroSection() {
         <div className="reveal-up">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest-50 text-forest-500 text-[13px] font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-forest-500" />
-            Nashville's Most Trusted Fence Resource
+            {CITY.name}'s Most Trusted Fence Resource
           </span>
 
           <h1 className="mt-7 text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tightest leading-none">
-            <span className="text-onyx-700">Nashville Fence</span>
+            <span className="text-onyx-700">{CITY.name} Fence</span>
             <br />
             <span className="text-forest-500">Installation</span>
             <br />
@@ -37,7 +38,7 @@ export default function HeroSection() {
 
           <p className="mt-6 font-body font-normal text-lg text-onyx-700/70 leading-relaxed max-w-xl">
             Compare fence options, understand local regulations, estimate costs, and connect
-            with trusted Nashville fence professionals.
+            with trusted {CITY.name} fence professionals.
           </p>
 
           <ul className="mt-7 space-y-3.5">
@@ -65,7 +66,7 @@ export default function HeroSection() {
               ))}
             </div>
             <span className="font-semibold text-onyx-700">4.9/5</span>
-            <span className="text-onyx-400">from 380+ Nashville homeowners</span>
+            <span className="text-onyx-400">from 380+ {CITY.name} homeowners</span>
           </div>
 
           <div className="mt-6 inline-flex items-center gap-3 rounded-xl border border-warmgray bg-white/70 px-4 py-2.5 shadow-soft">
@@ -86,7 +87,7 @@ export default function HeroSection() {
           <div className="relative rounded-2xl overflow-hidden shadow-strong w-full h-[550px] bg-warmgray">
             <SafeImage
               src={IMAGES.hero}
-              alt="nashville-fence-installers"
+              alt={`${CITY.nameLower}-fence-installers`}
               className="w-full h-full object-cover"
               sizes="(min-width: 1024px) 45vw, 0px"
               widths={[768, 1024, 1280, 1600]}
@@ -103,10 +104,10 @@ export default function HeroSection() {
               Average Project Cost
             </div>
             <div className="text-[38px] font-heading font-black text-forest-500 tracking-tightest leading-none">
-              $4,800
+              {CITY.heroCardPrice}
             </div>
             <div className="text-[12px] text-onyx-500 mt-1.5">
-              for 150 linear ft in Nashville
+              {CITY.heroCardSubline}
             </div>
           </div>
         </div>

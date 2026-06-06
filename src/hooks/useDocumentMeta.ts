@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { CITY } from '../config/city'
 
 type Meta = {
   title: string
@@ -13,7 +14,7 @@ declare global {
   }
 }
 
-const SITE_URL = 'https://nashvillefenceguide.com'
+const SITE_URL = CITY.siteUrl
 
 function ensureTag<T extends HTMLElement>(
   selector: string,
