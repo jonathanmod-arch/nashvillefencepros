@@ -132,6 +132,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Ornamental Aluminum & Iron',
     avgCost: '$8,400 – $14,200',
     note: 'Estate lots, historic overlay rules. Aluminum and wrought iron dominate for both pools and front-yard estate fencing.',
+    cityResources: [
+      { label: 'City of Belle Meade fence FAQ', url: 'https://citybellemeade.org/faq/fences/' },
+    ],
   },
   {
     slug: 'green-hills',
@@ -141,6 +144,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Wood Privacy & Aluminum',
     avgCost: '$5,800 – $9,800',
     note: 'Family neighborhoods with mature trees. Cedar privacy backyards paired with aluminum side gates are typical.',
+    cityResources: [
+      { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+    ],
   },
   {
     slug: 'east-nashville',
@@ -150,6 +156,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Horizontal Modern Cedar',
     avgCost: '$4,200 – $7,800',
     note: 'Design-forward bungalows. Horizontal slat cedar and mixed wood-metal fences define the look. Watch for historic overlays.',
+    cityResources: [
+      { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+    ],
   },
   {
     slug: 'germantown',
@@ -159,6 +168,10 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Iron & Vinyl Privacy',
     avgCost: '$4,600 – $8,400',
     note: 'Historic district with strict design review. Wrought-iron front, vinyl or wood privacy rear is the standard.',
+    cityResources: [
+      { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+      { label: 'Metro Historic Zoning Commission design guidelines', url: 'https://www.nashville.gov/departments/planning/historic-zoning-information/districts-and-design-guidelines' },
+    ],
   },
   {
     slug: 'brentwood',
@@ -168,6 +181,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Aluminum & Wood Privacy',
     avgCost: '$6,400 – $11,800',
     note: 'Williamson County. HOA-driven aluminum front fencing with cedar privacy backyards. Pool-code compliance is critical.',
+    cityResources: [
+      { label: 'City of Brentwood FAQs', url: 'https://www.brentwoodtn.gov/your-government/faqs' },
+    ],
   },
   {
     slug: 'franklin',
@@ -177,6 +193,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Four-Board & Aluminum',
     avgCost: '$5,200 – $12,000',
     note: 'Mix of estate lots and acreage. Four-board farm fence is common on larger Williamson County parcels.',
+    cityResources: [
+      { label: 'City of Franklin construction handouts', url: 'https://www.franklintn.gov/government/departments-a-j/building-and-neighborhood-services/permit-applications-information/construction-handouts' },
+    ],
   },
   {
     slug: 'twelve-south',
@@ -186,6 +205,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Horizontal Cedar & Iron',
     avgCost: '$4,400 – $7,600',
     note: 'Trendy urban infill. Tight lots favor 6 ft horizontal cedar with steel gate hardware.',
+    cityResources: [
+      { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+    ],
   },
   {
     slug: 'sylvan-park',
@@ -195,6 +217,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Wood Privacy & Modern Horizontal',
     avgCost: '$4,000 – $7,200',
     note: 'Walkable West Nashville. Mix of classic dog-ear cedar and modern horizontal builds.',
+    cityResources: [
+      { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+    ],
   },
   {
     slug: 'hendersonville',
@@ -204,6 +229,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Vinyl Privacy & Aluminum',
     avgCost: '$4,800 – $8,800',
     note: 'Sumner County waterfront and subdivision homes. Vinyl is dominant for HOA-compliant privacy.',
+    cityResources: [
+      { label: 'City of Hendersonville permit applications', url: 'https://www.hvilletn.org/421/Apply-for-a-Permit' },
+    ],
   },
   {
     slug: 'mount-juliet',
@@ -213,6 +241,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Wood Privacy & Chain Link',
     avgCost: '$3,800 – $7,200',
     note: 'Growing Wilson County suburb. New construction favors 6 ft cedar; chain link still common on larger lots.',
+    cityResources: [
+      { label: 'Mount Juliet Building & Codes Department', url: 'https://www.mtjuliet-tn.gov/150/Building-Codes-Department' },
+    ],
   },
   {
     slug: 'hermitage',
@@ -222,6 +253,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Wood Privacy & Chain Link',
     avgCost: '$3,400 – $6,400',
     note: 'Established East Davidson County neighborhoods with practical wood privacy fencing throughout.',
+    cityResources: [
+      { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+    ],
   },
   {
     slug: 'forest-hills',
@@ -231,6 +265,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Aluminum & Cedar Privacy',
     avgCost: '$7,800 – $13,400',
     note: 'Larger lots and rolling terrain. Sloped-yard aluminum and tall cedar privacy panels are most requested.',
+    cityResources: [
+      { label: 'City of Forest Hills permitting process', url: 'https://www.cityofforesthills.com/building-zoning/page/permitting-process' },
+    ],
   },
   {
     slug: 'nashville',
@@ -240,6 +277,10 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Mixed, All Materials',
     avgCost: '$3,800 – $9,800',
     note: 'Davidson County core. Every fence material is represented from historic-overlay neighborhoods to new East Nashville builds, check overlay status before submitting designs.',
+    cityResources: [
+      { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+      { label: 'Metro Historic Zoning Commission design guidelines', url: 'https://www.nashville.gov/departments/planning/historic-zoning-information/districts-and-design-guidelines' },
+    ],
   },
   {
     slug: 'murfreesboro',
@@ -249,6 +290,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Vinyl Privacy & Aluminum',
     avgCost: '$4,200 – $8,400',
     note: 'Largest Rutherford County city and one of the fastest-growing in the state. HOA subdivisions favor 6 ft vinyl and aluminum; rural lots still run chain link and farm board.',
+    cityResources: [
+      { label: 'City of Murfreesboro accessory structure & fence permits', url: 'https://www.murfreesborotn.gov/2767/Accessory-Structure-and-Fence-Permits-In' },
+    ],
   },
   {
     slug: 'spring-hill',
@@ -258,6 +302,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Vinyl & Aluminum',
     avgCost: '$4,400 – $8,800',
     note: 'Williamson and Maury County line. Heavy new-construction with HOA-driven vinyl and aluminum installs; pool-code applies to most backyard builds.',
+    cityResources: [
+      { label: 'City of Spring Hill permit applications', url: 'https://www.springhilltn.org/884/Applications-Permits' },
+    ],
   },
   {
     slug: 'gallatin',
@@ -267,6 +314,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Aluminum & Wood Privacy',
     avgCost: '$4,400 – $9,200',
     note: 'Sumner County seat north of Hendersonville. Old Hickory Lake homes lean aluminum and wrought iron; subdivisions favor wood privacy with vinyl gates.',
+    cityResources: [
+      { label: 'City of Gallatin fence requirements', url: 'https://www.gallatintn.gov/1816/Fence-Requirements' },
+    ],
   },
   {
     slug: 'smyrna',
@@ -276,6 +326,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Wood Privacy & Chain Link',
     avgCost: '$3,400 – $6,800',
     note: 'Rutherford County. Practical 6 ft wood privacy and chain link still dominate older lots; newer subdivisions follow the vinyl-and-aluminum HOA pattern.',
+    cityResources: [
+      { label: 'Town of Smyrna building permits', url: 'https://www.townofsmyrna.org/departments/building_safety/permits.php' },
+    ],
   },
   {
     slug: 'lebanon',
@@ -285,6 +338,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Four-Board & Wood Privacy',
     avgCost: '$3,800 – $8,400',
     note: 'Wilson County seat. Mix of acreage and subdivisions, four-board farm fence is common on rural parcels, cedar privacy in town and around the square.',
+    cityResources: [
+      { label: 'City of Lebanon fence permit FAQ', url: 'https://www.lebanontn.org/FAQ.aspx?QID=94' },
+    ],
   },
   {
     slug: 'nolensville',
@@ -294,6 +350,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Aluminum & Vinyl',
     avgCost: '$5,200 – $10,800',
     note: 'Fast-growing south Williamson County town. Newer HOA-restricted neighborhoods favor aluminum or vinyl; pool-barrier inspections are strict.',
+    cityResources: [
+      { label: 'Town of Nolensville permit applications', url: 'https://www.nolensvilletn.gov/page/applications-permit' },
+    ],
   },
   {
     slug: 'columbia',
@@ -303,6 +362,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Four-Board & Wood Privacy',
     avgCost: '$3,600 – $7,800',
     note: 'Maury County seat south of Spring Hill. Acreage homes lean farm fencing; downtown and newer subdivision lots run cedar privacy.',
+    cityResources: [
+      { label: 'City of Columbia fences page', url: 'https://www.columbiatn.com/587/Fences' },
+    ],
   },
   {
     slug: 'clarksville',
@@ -312,6 +374,9 @@ export const NEIGHBORHOODS = [
     popularStyle: 'Chain Link & Wood Privacy',
     avgCost: '$3,200 – $6,400',
     note: 'Montgomery County, northwest of Nashville near Fort Campbell. Military turnover drives demand for fast-install chain link and standard 6 ft cedar privacy.',
+    cityResources: [
+      { label: 'City of Clarksville fence permit FAQ', url: 'https://www.cityofclarksville.com/faq.aspx?TID=36' },
+    ],
   },
 ]
 export type ResourceSection =
