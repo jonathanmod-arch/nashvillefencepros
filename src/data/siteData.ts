@@ -1,12 +1,13 @@
 import { IMAGES } from './imageUrls'
+import { CITY } from '../config/city'
 
 export const COMPANY = {
-  name: 'Nashville Fence Guide',
-  phone: '(615) 560-9956',
-  phoneRaw: '+16155609956',
-  email: 'hello@nashvillefenceguide.com',
-  address: 'Nashville, TN',
-  hours: 'Mon–Sat, 7:00 AM – 7:00 PM',
+  name: CITY.company.name,
+  phone: CITY.company.phone,
+  phoneRaw: CITY.company.phoneRaw,
+  email: CITY.company.email,
+  address: CITY.company.address,
+  hours: CITY.company.hours,
 }
 
 export const RESOURCE_PUBLISHED_AT = '2026-06-01T08:00:00-05:00'
