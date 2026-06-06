@@ -511,6 +511,141 @@ export const RESOURCES = [
     excerpt:
       'A homeowner-friendly walkthrough of the 2018 ISPSC barrier code, self-closing gates, and 4 ft minimum requirements.',
     img: IMAGES.resources['pool-fence-safety-tn'],
+    body: [
+      {
+        type: 'p',
+        text: "If you have a pool in Nashville and your fence is on the wrong side of the 2018 ISPSC code, two things can happen. The bad one is a child drowns and the lawsuit ends your retirement plan. The annoying one is a Metro inspector pulls into your driveway, puts a tape measure on the gate latch, and writes you a re-inspection ticket. I've seen both. The job of this article is to help you avoid the first and reduce the friction of the second.",
+      },
+      { type: 'h2', text: 'What Tennessee Actually Requires' },
+      {
+        type: 'p',
+        text: "Tennessee adopted the 2018 International Swimming Pool and Spa Code at the state level, and Metro Nashville Codes enforces it. The short version is six rules that catch 95 percent of pool barrier failures:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Minimum 4 ft barrier height from finished grade to the top of the fence.',
+          'No gap anywhere a 4-inch sphere could pass — between pickets, under the fence, around posts.',
+          'No horizontal members within 45 inches of the bottom (would let a child climb the fence like a ladder).',
+          'Self-closing, self-latching gate that swings AWAY from the pool.',
+          'Gate latch positioned at 54 inches minimum from grade.',
+          'Chain link mesh 1.25 inches or smaller — standard 2-1/4" diamond chain link fails on the diagonal.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Those are the legal minimums. Lots of HOAs tighten them further, and most homeowner insurance carriers have their own pool barrier riders that pile on additional rules. Always check both before signing a contract.",
+      },
+      { type: 'h2', text: 'The Five Inspection Failures I See Every Single Time' },
+      {
+        type: 'p',
+        text: "When I get called to a pool job, half the time it's a new install that flunked the first inspection. The same five things, over and over.",
+      },
+      { type: 'h3', text: 'Latch hardware' },
+      {
+        type: 'p',
+        text: "The cheap latches builders use on side-yard gates aren't pool-rated. They look fine, they work fine on the gate to your trash cans, and they don't pass on a pool barrier. Spend the extra $40 on a Magna Latch or equivalent pool-rated self-latching mechanism. Mount it at exactly 54 inches plus a half-inch buffer — inspectors round down.",
+      },
+      { type: 'h3', text: 'Self-closing hinges' },
+      {
+        type: 'p',
+        text: "A standard hinge does not pass. You need spring-loaded self-closing hinges, properly tensioned so the gate closes within about five seconds when released from open. If you have to push the gate the last six inches to get it to latch, the inspector fails you. Adjust tension before the inspection.",
+      },
+      { type: 'h3', text: 'The 45-inch climbing rule' },
+      {
+        type: 'p',
+        text: "If you have any horizontal rail between the bottom of the fence and 45 inches up, the inspector flags it. Plenty of off-the-shelf aluminum and vinyl fence kits have a mid-rail at 28 to 32 inches. That fails. Either spec a kit without that rail or pay a little more for custom panels — far cheaper than a redo.",
+      },
+      { type: 'h3', text: 'Gap under the fence on sloped yards' },
+      {
+        type: 'p',
+        text: "This trips up everyone. When the ground falls away from the fence line, you get a triangle-shaped gap at the low end. If a 4-inch sphere passes under, you fail. The fix is to step the fence down in 4-foot or 8-foot sections so each post bottom sits flush with grade, with the bottom rail following the step rather than the slope.",
+      },
+      { type: 'h3', text: 'Pet doors and low windows in the house wall' },
+      {
+        type: 'p',
+        text: "If your house wall is part of the pool barrier — and it usually is on the side facing the pool deck — any pet door or window low enough for a child to climb through fails. The fix isn't subtle. Block them off, replace with fixed glass, or rebuild the barrier so the house wall isn't part of it.",
+      },
+      { type: 'h2', text: 'When You Actually Need a Permit' },
+      {
+        type: 'p',
+        text: "Three scenarios trigger a Metro Codes permit on a pool barrier in Nashville:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'New pool installation — the pool permit includes the barrier.',
+          'Pool barrier replacement — any tear-down and rebuild.',
+          'Material change — switching from chain link to aluminum, for example.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Cosmetic work — adding decorative trim, repainting — doesn't require a permit. But if you're touching the height, the gate hardware, or the panel structure, pull the permit. The reinspection-and-correction cost dwarfs the permit fee every single time.",
+      },
+      { type: 'h2', text: 'Materials Metro Inspectors Approve Consistently' },
+      { type: 'h3', text: 'Aluminum ornamental' },
+      {
+        type: 'p',
+        text: "The gold standard for pool barriers in Nashville. Vertical pickets at 3-7/8 inch spacing, no horizontal climbable rail in the middle, drains well, looks intentional. Costs more than chain link, less than welded wrought iron, and holds up better than both in a chlorine-spray environment.",
+      },
+      { type: 'h3', text: 'Cedar privacy with pool-rated specs' },
+      {
+        type: 'p',
+        text: "Wood works, but only if you spec it correctly. Standard 5/8-inch dog-ear pickets can warp and create gaps over a single Nashville summer. Use 1x6 boards minimum, install with stainless or hot-dipped galvanized fasteners, and pour a 6-inch concrete curb under the bottom rail on sloped sections to seal the gap.",
+      },
+      { type: 'h3', text: 'Vinyl with pool-pickets' },
+      {
+        type: 'p',
+        text: "Premium vinyl is great. Cheap vinyl sags in a Nashville August and creates climbable gaps as the panels deform. Don't skimp on the panel weight, and verify the manufacturer's pool-code spec sheet before you sign.",
+      },
+      { type: 'h2', text: 'Chain Link — Read This Before You Buy' },
+      {
+        type: 'p',
+        text: "Standard 2-1/4 inch diamond chain link does NOT pass pool code. The mesh is too big — a 4-inch sphere fits through it on the diagonal, and that's the test the inspector runs. If your existing chain link is 2-1/4 inch, you have three real options:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Add privacy slats — Metro will accept properly installed slats as filling the gap. Verify the specific slat brand with Codes before you buy.',
+          'Replace with 1.25-inch tight-mesh chain link, which is sold as security-grade.',
+          'Replace with a different material entirely.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Don't just hope the inspector misses the gap. They have a 4-inch test sphere in the truck for exactly this reason.",
+      },
+      { type: 'h2', text: 'The Metro Nashville Inspection Process' },
+      {
+        type: 'p',
+        text: "Three things that catch homeowners off guard when they actually book the inspection:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Inspectors schedule within five business days of the permit, but the actual inspection slot can land a couple weeks out depending on season. Plan the install timeline around the inspection, not the other way around.",
+          "Pool fill cannot legally happen until the barrier passes. If you're racing to be in the water by Memorial Day, this matters.",
+          "The inspector wants to see the gate close and latch on its own. Have a screwdriver on the truck — a stuck latch or weak hinge tension fails the inspection, and a 30-second tweak passes it.",
+        ],
+      },
+      { type: 'h2', text: 'What to Ask Your Pool Fence Contractor' },
+      {
+        type: 'ol',
+        items: [
+          "Have you pulled at least ten Metro Codes pool permits in the last twelve months?",
+          "Do you stock Magna Latch or equivalent pool-rated hardware on the truck, or do you order it the day of install?",
+          "What's your step-down approach on sloped yards?",
+          "How do you handle the house-wall section of the barrier?",
+          "Will you be on-site for the Codes inspection?",
+        ],
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Pool fences are the one place in residential fencing where the cheap option gets people killed. They're also the one place where the regulations are clear, the inspectors are reasonable, and a couple hundred extra dollars buys you the right hardware. Spend it. Buy yourself the peace of mind that the legal exposure is gone and the kid-from-down-the-street risk is as low as you can make it.",
+      },
+    ],
   },
   {
     slug: 'metro-nashville-permits',
