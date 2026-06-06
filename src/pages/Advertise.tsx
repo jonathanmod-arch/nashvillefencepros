@@ -175,9 +175,269 @@ export default function Advertise() {
       <Hero />
       <Pricing />
       <Services />
+      <ROICalculator />
       <WidgetSection />
       <ContactSection />
     </>
+  )
+}
+
+function ROICalculator() {
+  const [avgTicket, setAvgTicket] = useState(4800)
+  const [leads, setLeads] = useState(20)
+  const [profitMargin, setProfitMargin] = useState(35)
+  const [closeRate, setCloseRate] = useState(30)
+
+  const newCustomers = leads * (closeRate / 100)
+  const monthlyRevenue = newCustomers * avgTicket
+  const monthlyProfit = monthlyRevenue * (profitMargin / 100)
+  const avgProfitPerJob = avgTicket * (profitMargin / 100)
+  const valuePerLead = avgTicket * (closeRate / 100)
+  const netMarginPerLead = valuePerLead * (profitMargin / 100)
+
+  const fmtMoney = (n: number) =>
+    n >= 1000
+      ? `$${Math.round(n).toLocaleString()}`
+      : `$${n.toFixed(2)}`
+
+  const closeFill = ((closeRate - 10) / 80) * 100
+
+  return (
+    <section className="bg-onyx-700 text-white section-padding relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-oak-400/10 blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-forest-700/40 blur-3xl" />
+      </div>
+      <div className="container-wide relative">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="block font-body text-sm font-semibold uppercase tracking-widest text-oak-400 mb-3">
+            Lead Value Calculator
+          </span>
+          <h2 className="font-heading font-black text-3xl sm:text-4xl text-white tracking-tightest leading-[1.05] mb-3">
+            What's a Nashville Fence Lead Worth to Your Shop?
+          </h2>
+          <div className="w-12 h-0.5 bg-oak-400 mx-auto mb-5" />
+          <p className="font-body text-base text-white/70">
+            Plug in your numbers. We'll show you the actual value of a single lead, your
+            projected monthly revenue, and the profit you'd net before lead-gen costs.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-4 mb-4">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <label className="block text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3">
+                Average ticket per install
+              </label>
+              <div className="flex items-center gap-2">
+                <span className="font-heading font-bold text-oak-400 text-2xl">$</span>
+                <input
+                  type="number"
+                  value={avgTicket}
+                  onChange={(e) => setAvgTicket(Math.max(0, Number(e.target.value) || 0))}
+                  min={0}
+                  className="roi-input"
+                />
+              </div>
+            </div>
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <label className="block text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3">
+                Leads you'd take each month
+              </label>
+              <input
+                type="number"
+                value={leads}
+                onChange={(e) => setLeads(Math.max(0, Number(e.target.value) || 0))}
+                min={0}
+                className="roi-input"
+              />
+            </div>
+          </div>
+
+          <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-10 space-y-7">
+            <div>
+              <div className="flex items-baseline justify-between mb-3">
+                <div>
+                  <div className="text-sm font-semibold text-white">Profit Margin</div>
+                  <div className="text-xs text-white/60">Before advertising costs</div>
+                </div>
+                <div className="text-2xl font-heading font-bold text-oak-400 tracking-tightest">
+                  {profitMargin}%
+                </div>
+              </div>
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={profitMargin}
+                onChange={(e) => setProfitMargin(Number(e.target.value))}
+                className="roi-slider"
+                style={{
+                  background: `linear-gradient(to right, #D4A373 0%, #D4A373 ${profitMargin}%, rgba(255,255,255,0.15) ${profitMargin}%, rgba(255,255,255,0.15) 100%)`,
+                }}
+              />
+              <div className="flex justify-between text-[10px] text-white/40 mt-1.5">
+                <span>0%</span>
+                <span>25%</span>
+                <span>50%</span>
+                <span>75%</span>
+                <span>100%</span>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-baseline justify-between mb-3">
+                <div>
+                  <div className="text-sm font-semibold text-white">Close Rate</div>
+                  <div className="text-xs text-white/60">Of leads you actually convert</div>
+                </div>
+                <div className="text-2xl font-heading font-bold text-oak-400 tracking-tightest">
+                  {closeRate}%
+                </div>
+              </div>
+              <input
+                type="range"
+                min={10}
+                max={90}
+                value={closeRate}
+                onChange={(e) => setCloseRate(Number(e.target.value))}
+                className="roi-slider"
+                style={{
+                  background: `linear-gradient(to right, #D4A373 0%, #D4A373 ${closeFill}%, rgba(255,255,255,0.15) ${closeFill}%, rgba(255,255,255,0.15) 100%)`,
+                }}
+              />
+              <div className="flex justify-between text-[10px] text-white/40 mt-1.5">
+                <span>10%</span>
+                <span>30%</span>
+                <span>50%</span>
+                <span>70%</span>
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                label: 'Avg. Profit Per Job',
+                sub: 'Before cost of lead generation',
+                value: fmtMoney(avgProfitPerJob),
+              },
+              {
+                label: 'New Customers / Month',
+                sub: 'From these leads',
+                value: Math.round(newCustomers).toLocaleString(),
+              },
+              {
+                label: 'Actual Value of a Lead',
+                sub: 'Revenue per lead delivered',
+                value: fmtMoney(valuePerLead),
+              },
+              {
+                label: 'Net Margin Per Lead',
+                sub: 'Actual value × profit margin',
+                value: fmtMoney(netMarginPerLead),
+              },
+              {
+                label: 'Total Monthly Revenue',
+                sub: 'For your fence business',
+                value: fmtMoney(monthlyRevenue),
+              },
+              {
+                label: 'Total Monthly Profit',
+                sub: 'Before cost of lead generation',
+                value: fmtMoney(monthlyProfit),
+              },
+            ].map((m) => (
+              <div
+                key={m.label}
+                className="bg-white rounded-2xl p-6 text-onyx-700 shadow-strong"
+              >
+                <div className="font-heading font-bold text-onyx-700 text-base leading-tight mb-1">
+                  {m.label}
+                </div>
+                <div className="text-xs text-onyx-700/60 mb-4">{m.sub}</div>
+                <div className="text-4xl font-heading font-black text-forest-500 tracking-tightest leading-none">
+                  {m.value}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="#advertise-contact"
+              className="inline-flex items-center justify-center gap-2 bg-oak-400 hover:bg-oak-300 text-forest-500 text-base font-semibold px-6 py-3.5 rounded-lg transition-colors"
+            >
+              Get Nashville Fence Leads <ArrowRight className="w-4 h-4" />
+            </a>
+            <p className="text-xs text-white/50 mt-3">
+              Numbers are projections — actuals depend on your sales process and follow-up speed.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .roi-input {
+          width: 100%;
+          padding: 0.625rem 0.875rem;
+          border-radius: 0.5rem;
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          background: rgba(255, 255, 255, 0.04);
+          font-size: 18px;
+          font-weight: 600;
+          color: #fff;
+          outline: none;
+          transition: all .15s ease;
+          font-family: inherit;
+        }
+        .roi-input:focus {
+          border-color: #D4A373;
+          background: rgba(255, 255, 255, 0.08);
+          box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.15);
+        }
+        .roi-input::-webkit-outer-spin-button,
+        .roi-input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        .roi-input[type=number] { -moz-appearance: textfield; }
+        .roi-slider {
+          width: 100%;
+          height: 6px;
+          border-radius: 999px;
+          outline: none;
+          -webkit-appearance: none;
+          appearance: none;
+          cursor: pointer;
+        }
+        .roi-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 22px;
+          height: 22px;
+          background: #D4A373;
+          border-radius: 50%;
+          cursor: pointer;
+          box-shadow: 0 0 0 4px rgba(212, 163, 115, 0.2);
+          transition: box-shadow .15s ease;
+          border: 2px solid #1A1D1E;
+        }
+        .roi-slider::-webkit-slider-thumb:hover {
+          box-shadow: 0 0 0 6px rgba(212, 163, 115, 0.3);
+        }
+        .roi-slider::-moz-range-thumb {
+          width: 22px;
+          height: 22px;
+          background: #D4A373;
+          border: 2px solid #1A1D1E;
+          border-radius: 50%;
+          cursor: pointer;
+          box-shadow: 0 0 0 4px rgba(212, 163, 115, 0.2);
+        }
+      `}</style>
+    </section>
   )
 }
 
