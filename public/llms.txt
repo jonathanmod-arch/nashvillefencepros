@@ -1,6 +1,6 @@
 # Nashville Fence Guide
 
-> Nashville Fence Guide is an independent directory and resource platform for fence installation in the Nashville, TN metro area. We connect homeowners with vetted local fence contractors and publish plain-English guides on cost, permits, materials, repair, and adjacent outdoor-living services. Coverage spans Davidson, Williamson, Rutherford, Sumner, Wilson, Maury, and Montgomery counties.
+> Nashville Fence Guide is an independent directory and resource platform for fence installation in the Nashville, TN metro area. We connect homeowners with vetted local fence contractors and publish plain-English guides on cost, permits, materials, repair, and adjacent outdoor-living services. Coverage spans Davidson, Williamson, Sumner, Wilson, Rutherford, Maury, Montgomery counties.
 
 ## Core pages
 
@@ -9,11 +9,11 @@
 - [Service Areas](https://nashvillefenceguide.com/service-areas): Local pricing, popular styles, and HOA notes for every Nashville-area city and neighborhood we cover.
 - [Fence Types](https://nashvillefenceguide.com/fence-types): Compare wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.
 - [Cost Guide](https://nashvillefenceguide.com/cost-guide): Real installed prices for fence installation in Nashville by material and project size.
-- [Permits and Rules](https://nashvillefenceguide.com/permits): Metro Nashville fence permit requirements, height limits, dig-safe 811 protocol, and pool fence code.
+- [Permits and Rules](https://nashvillefenceguide.com/permits): Metro Nashville Codes fence permit requirements, height limits, dig-safe 811 protocol, and pool fence code.
 - [Fence Repair](https://nashvillefenceguide.com/repair): Nashville fence repair pricing by material and the 60-percent repair-versus-replace rule.
 - [Commercial Fencing](https://nashvillefenceguide.com/commercial-fencing): Security fence and access control for Nashville businesses, multifamily, and industrial sites.
-- [Pool Fence Code](https://nashvillefenceguide.com/pool-fence-code): 2018 ISPSC pool barrier requirements as enforced in Metro Nashville.
-- [Historic Overlay Fence Rules](https://nashvillefenceguide.com/historic-overlays): Nashville historic overlay district fence approval — Germantown, Edgefield, Lockeland Springs, and more.
+- [Pool Fence Code](https://nashvillefenceguide.com/pool-fence-code): 2018 ISPSC pool barrier requirements as enforced in Metro Nashville Codes.
+- [Historic Overlay Fence Rules](https://nashvillefenceguide.com/historic-overlays): Nashville historic overlay district fence approval — submission steps, approved materials.
 - [Resource Center](https://nashvillefenceguide.com/resources): In-depth guides for Middle Tennessee homeowners.
 - [Get Free Fence Quotes](https://nashvillefenceguide.com/get-quotes): Submit project details to receive up to three quotes from vetted Nashville fence pros.
 - [Submit Your Business](https://nashvillefenceguide.com/submit-listing): Free listing for verified Tennessee fence, gate, surveying, and outdoor-living contractors.
@@ -23,53 +23,53 @@
 ## Fence type pages
 
 - [Wood Privacy Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/wood-privacy): Cedar privacy fencing — materials, installed cost per linear foot, lifespan in Middle Tennessee.
-- [Vinyl Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/vinyl): Premium PVC fencing — HOA compatibility, maintenance, cost.
-- [Aluminum Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/aluminum): Ornamental metal fencing for pools and front yards.
-- [Chain Link Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/chain-link): Galvanized and vinyl-coated chain link — residential and commercial use.
-- [Horizontal Cedar Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/horizontal-privacy): Modern slat-style cedar fencing popular in East Nashville and 12 South.
-- [Farm and Ranch Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/farm-ranch): Four-board and woven-wire fencing for acreage in Williamson, Sumner, and Wilson counties.
+- [Premium Vinyl Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/vinyl): Premium PVC fencing — HOA compatibility, maintenance, cost.
+- [Ornamental Aluminum Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/aluminum): Ornamental metal fencing for pools and front yards.
+- [Galvanized Chain Link Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/chain-link): Galvanized and vinyl-coated chain link — residential and commercial use.
+- [Modern Horizontal Privacy Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/horizontal-privacy): Modern slat-style cedar fencing popular in design-forward Nashville neighborhoods.
+- [Farm & Ranch Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/farm-ranch): Four-board and woven-wire fencing for acreage across Middle Tennessee.
 - [Wrought Iron Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/wrought-iron): Estate-grade welded iron fencing.
-- [Pet and Invisible Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/pet-fence): Containment solutions for Nashville dog owners.
-- [Pool Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/pool-safety): ISPSC-compliant pool barriers.
+- [Invisible & Pet Fence Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/pet-fence): Containment solutions for Nashville dog owners.
+- [Pool Safety Fence Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/pool-safety): ISPSC-compliant pool barriers.
 
 ## Service area pages
 
-- [Nashville Fence Installation](https://nashvillefenceguide.com/service-areas/nashville): Davidson County core — pricing, popular styles, overlay considerations.
-- [Brentwood Fence Installation](https://nashvillefenceguide.com/service-areas/brentwood): Williamson County HOA-driven aluminum and cedar privacy.
-- [Franklin Fence Installation](https://nashvillefenceguide.com/service-areas/franklin): Williamson County mix of estate lots and acreage.
-- [Murfreesboro Fence Installation](https://nashvillefenceguide.com/service-areas/murfreesboro): Rutherford County subdivision and rural lot pricing.
-- [Hendersonville Fence Installation](https://nashvillefenceguide.com/service-areas/hendersonville): Sumner County waterfront and subdivision homes.
-- [Mount Juliet Fence Installation](https://nashvillefenceguide.com/service-areas/mount-juliet): Wilson County new construction.
-- [Spring Hill Fence Installation](https://nashvillefenceguide.com/service-areas/spring-hill): Williamson and Maury County HOA neighborhoods.
-- [Gallatin Fence Installation](https://nashvillefenceguide.com/service-areas/gallatin): Sumner County seat, Old Hickory Lake properties.
-- [Smyrna Fence Installation](https://nashvillefenceguide.com/service-areas/smyrna): Rutherford County practical privacy and chain link.
-- [Lebanon Fence Installation](https://nashvillefenceguide.com/service-areas/lebanon): Wilson County mix of acreage and subdivisions.
-- [Nolensville Fence Installation](https://nashvillefenceguide.com/service-areas/nolensville): South Williamson County HOA neighborhoods.
-- [Columbia Fence Installation](https://nashvillefenceguide.com/service-areas/columbia): Maury County seat — farm fencing and town lots.
-- [Clarksville Fence Installation](https://nashvillefenceguide.com/service-areas/clarksville): Montgomery County near Fort Campbell.
-- [Belle Meade Fence Installation](https://nashvillefenceguide.com/service-areas/belle-meade): Estate lots, ornamental aluminum and iron.
-- [Green Hills Fence Installation](https://nashvillefenceguide.com/service-areas/green-hills): Family neighborhoods with mature trees.
-- [East Nashville Fence Installation](https://nashvillefenceguide.com/service-areas/east-nashville): Design-forward bungalows, horizontal cedar.
-- [Germantown Fence Installation](https://nashvillefenceguide.com/service-areas/germantown): Historic district with HZC review requirements.
-- [12 South Fence Installation](https://nashvillefenceguide.com/service-areas/twelve-south): Urban infill with horizontal cedar.
-- [Sylvan Park Fence Installation](https://nashvillefenceguide.com/service-areas/sylvan-park): Walkable West Nashville mix of classic and modern.
-- [Hermitage Fence Installation](https://nashvillefenceguide.com/service-areas/hermitage): East Davidson County wood privacy.
-- [Forest Hills Fence Installation](https://nashvillefenceguide.com/service-areas/forest-hills): Large lots and sloped terrain.
+- [Belle Meade Fence Installation](https://nashvillefenceguide.com/service-areas/belle-meade): Ornamental Aluminum & Iron, typical project $8,400 – $14,200.
+- [Green Hills Fence Installation](https://nashvillefenceguide.com/service-areas/green-hills): Wood Privacy & Aluminum, typical project $5,800 – $9,800.
+- [East Nashville Fence Installation](https://nashvillefenceguide.com/service-areas/east-nashville): Horizontal Modern Cedar, typical project $4,200 – $7,800.
+- [Germantown Fence Installation](https://nashvillefenceguide.com/service-areas/germantown): Iron & Vinyl Privacy, typical project $4,600 – $8,400.
+- [Brentwood Fence Installation](https://nashvillefenceguide.com/service-areas/brentwood): Aluminum & Wood Privacy, typical project $6,400 – $11,800.
+- [Franklin Fence Installation](https://nashvillefenceguide.com/service-areas/franklin): Four-Board & Aluminum, typical project $5,200 – $12,000.
+- [12 South Fence Installation](https://nashvillefenceguide.com/service-areas/twelve-south): Horizontal Cedar & Iron, typical project $4,400 – $7,600.
+- [Sylvan Park Fence Installation](https://nashvillefenceguide.com/service-areas/sylvan-park): Wood Privacy & Modern Horizontal, typical project $4,000 – $7,200.
+- [Hendersonville Fence Installation](https://nashvillefenceguide.com/service-areas/hendersonville): Vinyl Privacy & Aluminum, typical project $4,800 – $8,800.
+- [Mount Juliet Fence Installation](https://nashvillefenceguide.com/service-areas/mount-juliet): Wood Privacy & Chain Link, typical project $3,800 – $7,200.
+- [Hermitage Fence Installation](https://nashvillefenceguide.com/service-areas/hermitage): Wood Privacy & Chain Link, typical project $3,400 – $6,400.
+- [Forest Hills Fence Installation](https://nashvillefenceguide.com/service-areas/forest-hills): Aluminum & Cedar Privacy, typical project $7,800 – $13,400.
+- [Nashville Fence Installation](https://nashvillefenceguide.com/service-areas/nashville): Mixed, All Materials, typical project $3,800 – $9,800.
+- [Murfreesboro Fence Installation](https://nashvillefenceguide.com/service-areas/murfreesboro): Vinyl Privacy & Aluminum, typical project $4,200 – $8,400.
+- [Spring Hill Fence Installation](https://nashvillefenceguide.com/service-areas/spring-hill): Vinyl & Aluminum, typical project $4,400 – $8,800.
+- [Gallatin Fence Installation](https://nashvillefenceguide.com/service-areas/gallatin): Aluminum & Wood Privacy, typical project $4,400 – $9,200.
+- [Smyrna Fence Installation](https://nashvillefenceguide.com/service-areas/smyrna): Wood Privacy & Chain Link, typical project $3,400 – $6,800.
+- [Lebanon Fence Installation](https://nashvillefenceguide.com/service-areas/lebanon): Four-Board & Wood Privacy, typical project $3,800 – $8,400.
+- [Nolensville Fence Installation](https://nashvillefenceguide.com/service-areas/nolensville): Aluminum & Vinyl, typical project $5,200 – $10,800.
+- [Columbia Fence Installation](https://nashvillefenceguide.com/service-areas/columbia): Four-Board & Wood Privacy, typical project $3,600 – $7,800.
+- [Clarksville Fence Installation](https://nashvillefenceguide.com/service-areas/clarksville): Chain Link & Wood Privacy, typical project $3,200 – $6,400.
 
 ## Resource articles
 
-- [Wood vs. Vinyl: Which Fence Wins in Nashville?](https://nashvillefenceguide.com/resources/wood-vs-vinyl-nashville): 15-year total cost comparison, where each material wins in Middle Tennessee.
-- [The Best Fences for Dogs in Nashville Yards](https://nashvillefenceguide.com/resources/best-fences-for-dogs): Climb-proof heights by breed, dig guards, and material picks.
-- [Pool Fence Safety Laws in Tennessee](https://nashvillefenceguide.com/resources/pool-fence-safety-tn): 2018 ISPSC barrier code, Magna Latch hardware, and the five most common inspection failures.
-- [Metro Nashville Fence Permit Guide](https://nashvillefenceguide.com/resources/metro-nashville-permits): When you need a permit, height limits by yard, historic overlay districts.
-- [Anatomy of a Nashville Fence Quote](https://nashvillefenceguide.com/resources/fence-cost-breakdown): Line-item breakdown of materials, labor, post setting, gates, and hidden costs.
-- [Why Horizontal Cedar Took Over East Nashville](https://nashvillefenceguide.com/resources/horizontal-cedar-trend): Design history and the steel-post-core spec that makes them last.
-- [When to Repair vs. Replace Your Nashville Fence (The 60% Rule)](https://nashvillefenceguide.com/resources/fence-repair-vs-replace-nashville): Material-by-material repair cost ranges and the breakeven math.
-- [Storm-Damaged Fence in Nashville: Insurance Claim + Same-Week Repair](https://nashvillefenceguide.com/resources/storm-damaged-fence-nashville-insurance): Documentation, Tennessee insurer process, contractor estimates, common patterns.
-- [7 Questions to Ask Before Hiring a Nashville Fence Installer](https://nashvillefenceguide.com/resources/hire-nashville-fence-installer-questions): Tennessee licensing, 811 dig-safe, post depth, warranty, HOA, payment, references.
-- [Property Line Surveys Before Your Nashville Fence Install](https://nashvillefenceguide.com/resources/property-line-survey-nashville-fence): When to survey, cost ranges, and Tennessee adverse possession risk.
-- [How Much Does a Driveway Gate Cost in Nashville?](https://nashvillefenceguide.com/resources/driveway-gate-cost-nashville): Four cost tiers from manual entry to custom estate, line items, hidden costs.
-- [Best Gate Companies in Nashville](https://nashvillefenceguide.com/resources/best-gate-installation-companies-nashville): Three ranked editorial picks spanning Davidson, Williamson, and Rutherford counties, plus how to vet any gate contractor before signing. (Title auto-updates with the current Month Year.)
+- [Wood vs. Vinyl: Which Fence Wins in Nashville?](https://nashvillefenceguide.com/resources/wood-vs-vinyl-nashville): How Middle Tennessee humidity, freeze-thaw cycles, and HOA rules tip the scale between cedar privacy and premium vinyl.
+- [The Best Fences for Dogs in Nashville Yards](https://nashvillefenceguide.com/resources/best-fences-for-dogs): Climb-proof heights, dig guards, and material picks that keep golden retrievers in and coyotes out across Davidson County.
+- [Pool Fence Safety Laws in Tennessee](https://nashvillefenceguide.com/resources/pool-fence-safety-tn): A homeowner-friendly walkthrough of the 2018 ISPSC barrier code, self-closing gates, and 4 ft minimum requirements.
+- [Metro Nashville Fence Permit Guide](https://nashvillefenceguide.com/resources/metro-nashville-permits): When you do (and do not) need a permit, height limits by yard, and how to handle historic overlay districts.
+- [Anatomy of a Nashville Fence Quote](https://nashvillefenceguide.com/resources/fence-cost-breakdown): Line-item analysis: materials, labor, post-setting, gates, and the hidden costs that surprise first-time buyers.
+- [Why Horizontal Cedar Took Over East Nashville](https://nashvillefenceguide.com/resources/horizontal-cedar-trend): The design history behind the slat-style fence dominating East Nashville, 12 South, and Sylvan Park bungalows.
+- [When to Repair vs. Replace Your Nashville Fence (The 60% Rule)](https://nashvillefenceguide.com/resources/fence-repair-vs-replace-nashville): A simple cost-based rule for deciding whether to repair or replace a damaged Nashville fence, plus material-by-material repair cost ranges from Davidson and Williamson Counties.
+- [Storm-Damaged Fence in Nashville: Insurance Claim + Same-Week Repair](https://nashvillefenceguide.com/resources/storm-damaged-fence-nashville-insurance): Step-by-step Nashville guide to documenting storm fence damage, filing your Tennessee homeowner's insurance claim, and getting same-week fence repair from a vetted local contractor.
+- [7 Questions to Ask Before Hiring a Nashville Fence Installer](https://nashvillefenceguide.com/resources/hire-nashville-fence-installer-questions): Nashville-specific vetting checklist for fence contractors, Tennessee licensing, 811 dig-safe, post depth, HOA approvals, payment terms, and the three recent installs every reputable Nashville crew should be able to show you.
+- [Property Line Surveys Before Your Nashville Fence Install](https://nashvillefenceguide.com/resources/property-line-survey-nashville-fence): When you actually need a property line survey before installing a fence in Nashville, what it costs in Davidson and Williamson Counties, and the Tennessee adverse-possession risk if you skip it.
+- [How Much Does a Driveway Gate Cost in Nashville?](https://nashvillefenceguide.com/resources/driveway-gate-cost-nashville): Real installed price ranges for driveway gates in Nashville, from a basic $2,000 single swing to a $40,000 estate gate, plus the line items most contractors leave off the first quote.
+- [Best Gate Companies in Nashville](https://nashvillefenceguide.com/resources/best-gate-installation-companies-nashville): Three ranked picks for driveway gate installation in the Nashville metro, Madison Steel & Iron Works of TN (Davidson), American Fence and Gate (Williamson), and Master Fence (Rutherford). Plus how to vet any gate contractor before signing.
 
 ## Legal
 
