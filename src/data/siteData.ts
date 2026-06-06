@@ -338,6 +338,134 @@ export const RESOURCES = [
       'How Middle Tennessee humidity, freeze-thaw cycles, and HOA rules tip the scale between cedar privacy and premium vinyl.',
     img: IMAGES.resources['wood-vs-vinyl-nashville'],
     imageAlt: 'Cedar privacy fence in a Nashville backyard — wood vs vinyl fence comparison',
+    body: [
+      {
+        type: 'p',
+        text: "Every week I get this phone call: 'We're trying to decide between wood and vinyl, what would you do?' And every week I have to answer the question they actually meant, which is not the one they asked. People almost always know which one they like; what they really want to know is whether their preference is going to embarrass them in five years. Let me run through both materials the way I would on a driveway consult — what each one actually costs in Nashville, where each one wins, and the math that flips the answer.",
+      },
+      { type: 'h2', text: 'The Five Nashville Variables That Actually Matter' },
+      {
+        type: 'p',
+        text: "Before either material is the right answer, you need to know your inputs. Skip these and the comparison turns into a Pinterest argument.",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Sun exposure on the fence line. South- and west-facing runs in Nashville hit 140-plus degrees of surface temperature on a July afternoon. That breaks cheap vinyl and bakes cheap stain.",
+          "Lot dimensions. Long runs reward vinyl's per-foot maintenance math. Short runs (under 80 feet) hide cedar's bigger maintenance bill.",
+          "HOA jurisdiction. Brentwood and Franklin subdivisions are essentially vinyl-or-aluminum-only territory. Davidson County outside an overlay lets you do whatever you want.",
+          "How long you're staying. The breakeven on vinyl versus cedar lands at year 8-10. Selling in 4? Cedar wins. Staying 15? Vinyl wins.",
+          "How much you actually want to think about this fence. Cedar is a maintained material. Vinyl is a leave-it-alone material. Pick the temperament that matches yours.",
+        ],
+      },
+      { type: 'h2', text: 'Cedar — The Honest Case For' },
+      {
+        type: 'p',
+        text: "Western red cedar is still the best-looking fence material on a Nashville bungalow at year zero. The grain, the warmth, the way it reads against red brick or white painted siding — vinyl doesn't compete on first impression. There's a reason every infill build in East Nashville and 12 South still spec'd cedar through the 2010s and into the 2020s.",
+      },
+      {
+        type: 'ul',
+        items: [
+          "$28-38 per linear foot installed in Davidson County for standard 6-foot vertical privacy. $42-58 for horizontal cedar — see the [horizontal cedar trend article](/resources/horizontal-cedar-trend) for that whole story.",
+          "Repairs are simple and cheap. A bad picket is a $6 board and 10 minutes. A bad vinyl panel is a $180 panel and a careful uninstall.",
+          "Wood weathers to a silver-gray patina that looks intentional. Vinyl doesn't weather — it just gets dirty.",
+          "Material is locally available. Nashville lumber yards stock cedar; vinyl panels usually ship in from out of state and add 3-7 days to the project timeline.",
+        ],
+      },
+      { type: 'h2', text: 'Cedar — The Honest Case Against' },
+      {
+        type: 'p',
+        text: "What contractors don't always volunteer about cedar in Middle Tennessee:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Untreated cedar in Nashville needs a stain or seal every 2-3 years to keep its color. Skip it and the gray-out happens within 18 months.",
+          "Bottom-rail rot is real. Even good cedar takes contact with damp clay soil poorly. Plan to replace the bottom 6 inches of pickets within 8-10 years on a south-facing run.",
+          "Posts go before pickets. Pressure-treated 4x4 posts in Nashville clay soil last 12-15 years if set right, less if they weren't.",
+          "Cedar warps. Some boards lose flatness within a year. Quality of the source lumber matters more than people realize — there's a big difference between Select Tight Knot grade and the no-grade big-box bundles.",
+        ],
+      },
+      { type: 'h2', text: 'Premium Vinyl — The Honest Case For' },
+      {
+        type: 'p',
+        text: "Premium vinyl earns its premium. Not the $18-a-foot stuff at the big-box store — the $32-44-a-foot manufacturer panels you'd order through a real fence company.",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Zero maintenance for the life of the fence. No stain, no seal, no picket replacement, no rotted bottoms.",
+          "Holds up to Nashville heat better than cheap vinyl. Premium vinyl is UV-stabilized through the panel thickness, not just on the surface.",
+          "Manufacturer warranties of 15-25 years are standard. Cedar doesn't come with anything comparable.",
+          "Cleans with a garden hose. Algae and mildew that come off cedar with a power washer come off vinyl with a sponge.",
+          "HOAs love it. If you're in Brentwood, Franklin, Nolensville, or Spring Hill, the ARC paperwork is faster for vinyl than cedar four times out of five.",
+        ],
+      },
+      { type: 'h2', text: 'Premium Vinyl — The Honest Case Against' },
+      {
+        type: 'ul',
+        items: [
+          "$32-44 per linear foot installed in Nashville for standard 6-foot privacy. About 25-40 percent more than cedar at signing.",
+          "Cheap vinyl is a disaster. The big-box panels at $18 a foot installed save you money up front and cost you a full replacement at year 4-6. Sagging in August is the tell. If you're going vinyl in Nashville, go premium or skip it.",
+          "Once a panel is damaged, you can't patch it. You uninstall the whole panel, slide in a new one, and pay $180-280 for the replacement panel plus labor.",
+          "Looks like vinyl. From 20 feet away premium vinyl looks fine. Up close, the texture and the seam lines still read as plastic. Some people don't care; some people do.",
+        ],
+      },
+      { type: 'h2', text: 'The Real Cost Math Over 15 Years' },
+      {
+        type: 'p',
+        text: "Here's the comparison most contractors don't run for you. A 150-foot fence in Nashville, 15-year total cost:",
+      },
+      {
+        type: 'table',
+        headers: ['', 'Cedar privacy', 'Premium vinyl'],
+        rows: [
+          ['Install cost', '$5,250', '$6,750'],
+          ['Stain every 3 years (5 cycles)', '$2,400', '$0'],
+          ['Picket / panel replacement', '$650', '$200'],
+          ['Post replacement', '$800', '$0'],
+          ['15-year total', '$9,100', '$6,950'],
+        ],
+      },
+      {
+        type: 'p',
+        text: "Vinyl wins the 15-year math by about $2,150. Cedar wins the day-one math by $1,500. The crossover point lands somewhere around year 8-10 depending on how thorough you are about the every-3-years stain. The [Anatomy of a Nashville Fence Quote](/resources/fence-cost-breakdown) article walks through the line items behind those numbers.",
+      },
+      { type: 'h2', text: 'Where Cedar Still Wins in Nashville' },
+      {
+        type: 'ul',
+        items: [
+          "[Historic overlay neighborhoods](/historic-overlays) — Edgefield, Germantown, Lockeland Springs. Vinyl rarely gets past Historic Zoning Commission review. Cedar is the default.",
+          "Horizontal modern look. The slat aesthetic in East Nashville and 12 South only works in cedar (or composite at a similar price). No premium vinyl manufacturer makes a horizontal slat panel that looks intentional.",
+          "You're selling inside 4 years. Cedar's lower install cost outperforms vinyl's lower maintenance cost on short timelines.",
+          "Lots over 1 acre. Vinyl makes sense on a 150-foot urban perimeter. On a half-mile farm run in Williamson County, the vinyl premium adds up fast and the maintenance argument shrinks.",
+        ],
+      },
+      { type: 'h2', text: 'Where Vinyl Wins' },
+      {
+        type: 'ul',
+        items: [
+          "HOA neighborhoods that require it. Don't fight the ARC.",
+          "Backyards around pools. Constant moisture and chlorine spray are the worst conditions for cedar. Vinyl shrugs both off. (Pool barriers also need to clear the state code — see the [Pool Fence Safety](/resources/pool-fence-safety-tn) article.)",
+          "Anyone who doesn't want to think about their fence again.",
+          "You're staying 10-plus years. The maintenance math catches up by year 8-10 and pulls away from there.",
+        ],
+      },
+      { type: 'h2', text: 'The One Comparison Mistake Most Homeowners Make' },
+      {
+        type: 'p',
+        text: "They compare $5,250 cedar to $6,750 premium vinyl and decide cedar is the deal. Then they get a $4,200 quote from a cheap vinyl outfit and switch to that. Six months later they have a sagging panel in July and another $5,800 in their future when they have to replace the whole run with premium vinyl.",
+      },
+      {
+        type: 'p',
+        text: "If you're going vinyl in Nashville, go premium or don't go vinyl at all. Cheap vinyl is the worst category of fence in this climate.",
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "There's no universal winner between cedar and premium vinyl in Nashville. The right call depends on your sun exposure, your HOA, your timeline, and your tolerance for maintenance. The wrong call is the third option — a cheap version of either material. A bad cedar fence and a cheap vinyl fence both fail in three years. A good cedar fence and a premium vinyl fence both work for fifteen. Spend the right number on the right material, and the question of which one stops mattering.",
+      },
+    ] as ResourceSection[],
   },
   {
     slug: 'best-fences-for-dogs',
