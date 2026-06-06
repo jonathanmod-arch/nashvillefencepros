@@ -5,7 +5,9 @@ export type SchemaEntity = Record<string, unknown> & {
   '@type': string | string[]
 }
 
-const SITE_URL = 'https://nashvillefenceguide.com'
+import { CITY } from '../config/city'
+
+const SITE_URL = CITY.siteUrl
 const ORG_ID = `${SITE_URL}/#org`
 const LOCAL_BUSINESS_ID = `${SITE_URL}/#localbusiness`
 const WEBSITE_ID = `${SITE_URL}/#website`
@@ -26,19 +28,11 @@ export function organization(): SchemaEntity {
     email: COMPANY.email,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Nashville',
-      addressRegion: 'TN',
+      addressLocality: CITY.name,
+      addressRegion: CITY.stateAbbr,
       addressCountry: 'US',
     },
-    areaServed: [
-      'Nashville, TN',
-      'Brentwood, TN',
-      'Franklin, TN',
-      'Hendersonville, TN',
-      'Mount Juliet, TN',
-      'Murfreesboro, TN',
-      'Belle Meade, TN',
-    ],
+    areaServed: CITY.topServiceAreaCities.map((c) => `${c}, ${CITY.stateAbbr}`),
   }
 }
 
@@ -52,8 +46,8 @@ export function platformLocalBusiness(): SchemaEntity {
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Nashville',
-      addressRegion: 'TN',
+      addressLocality: CITY.name,
+      addressRegion: CITY.stateAbbr,
       addressCountry: 'US',
     },
     aggregateRating: {
@@ -113,12 +107,15 @@ export function faqPageSchema(faqs: typeof FAQS): SchemaEntity {
   }
 }
 
-const NASHVILLE_AREA_SERVED = [
-  { '@type': 'City', name: 'Nashville', address: { '@type': 'PostalAddress', addressRegion: 'TN' } },
-  { '@type': 'AdministrativeArea', name: 'Davidson County, TN' },
-  { '@type': 'AdministrativeArea', name: 'Williamson County, TN' },
-  { '@type': 'AdministrativeArea', name: 'Sumner County, TN' },
-  { '@type': 'AdministrativeArea', name: 'Rutherford County, TN' },
+const AREA_SERVED = [
+  {
+    '@type': 'City',
+    name: CITY.name,
+    address: { '@type': 'PostalAddress', addressRegion: CITY.stateAbbr },
+  },
+  ...CITY.counties
+    .slice(0, 4)
+    .map((c) => ({ '@type': 'AdministrativeArea', name: `${c} County, ${CITY.stateAbbr}` })),
 ]
 
 export function serviceSchema({
@@ -145,7 +142,7 @@ export function serviceSchema({
     name,
     description,
     provider: organizationRef(),
-    areaServed: NASHVILLE_AREA_SERVED,
+    areaServed: AREA_SERVED,
   }
   if (priceLow != null && priceHigh != null) {
     service.offers = {
@@ -215,17 +212,17 @@ export function placeSchema(n: {
   return {
     '@type': 'Place',
     '@id': `${SITE_URL}/service-areas/${n.slug}#place`,
-    name: `${n.name}, Nashville, TN`,
+    name: `${n.name}, ${CITY.name}, ${CITY.stateAbbr}`,
     containedInPlace: {
       '@type': 'City',
-      name: 'Nashville',
-      address: { '@type': 'PostalAddress', addressRegion: 'TN' },
+      name: CITY.name,
+      address: { '@type': 'PostalAddress', addressRegion: CITY.stateAbbr },
     },
     address: {
       '@type': 'PostalAddress',
       addressLocality: n.name,
       postalCode: n.zip,
-      addressRegion: 'TN',
+      addressRegion: CITY.stateAbbr,
       addressCountry: 'US',
     },
     additionalProperty: [
@@ -353,7 +350,7 @@ export function contractorLocalBusiness(c: Contractor): SchemaEntity {
     address: {
       '@type': 'PostalAddress',
       streetAddress: c.address,
-      addressRegion: 'TN',
+      addressRegion: CITY.stateAbbr,
       addressCountry: 'US',
     },
     areaServed: c.areas.map((a) => ({ '@type': 'City', name: a })),

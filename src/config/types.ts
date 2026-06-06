@@ -21,6 +21,8 @@ export type CityConfig = {
   primaryCounty: string
   secondaryCounty: string
   primaryZip: string
+  // City names shown in JSON-LD areaServed, sitemap meta, and SEO copy
+  topServiceAreaCities: string[]
 
   // Climate / soil
   frostLineInches: number

@@ -24,6 +24,15 @@ export const nashville: CityConfig = {
   primaryCounty: 'Davidson',
   secondaryCounty: 'Williamson',
   primaryZip: '37203',
+  topServiceAreaCities: [
+    'Nashville',
+    'Brentwood',
+    'Franklin',
+    'Hendersonville',
+    'Mount Juliet',
+    'Murfreesboro',
+    'Belle Meade',
+  ],
 
   frostLineInches: 10,
   soilType: 'clay',
