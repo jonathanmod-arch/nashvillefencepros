@@ -27,12 +27,12 @@ const VALUES = [
   {
     icon: Shield,
     title: 'Vetted, never sold',
-    body: 'Every contractor listing in our directory clears the same seven-question vetting checklist, Tennessee insurance, 811 protocol, post-depth spec, warranty in writing. We don\'t accept pay-to-play listings.',
+    body: `Every contractor listing in our directory clears the same seven-question vetting checklist, ${CITY.state} insurance, 811 protocol, post-depth spec, warranty in writing. We don't accept pay-to-play listings.`,
   },
   {
     icon: Eye,
     title: 'Transparent pricing',
-    body: 'We publish real Nashville-area cost ranges by material, neighborhood, and project size. No "starting at $99" gimmicks, no contractor-fed inflation.',
+    body: `We publish real ${CITY.name}-area cost ranges by material, neighborhood, and project size. No "starting at $99" gimmicks, no contractor-fed inflation.`,
   },
   {
     icon: Users,
@@ -71,9 +71,8 @@ export default function About() {
     breadcrumbList([{ label: 'About' }]),
     webPageSchema({
       slug: '/about',
-      title: 'About Nashville Fence Guide',
-      description:
-        'How Nashville Fence Guide vets contractors, what we publish, and how we make money. Independent local fence directory for Nashville TN.',
+      title: `About ${CITY.siteName}`,
+      description: `How ${CITY.siteName} vets contractors, what we publish, and how we make money. Independent local fence directory for ${CITY.name} ${CITY.stateAbbr}.`,
     }),
   ])
 
@@ -81,8 +80,8 @@ export default function About() {
     <>
       <PageHero
         eyebrow="About Us"
-        title="The Independent Nashville Fence Directory"
-        description="Nashville Fence Guide is built for homeowners who want one place to compare vetted local fence pros, real installed prices, and Metro permit rules, without sifting through Yelp listings, contractor sales calls, or padded directory sites."
+        title={`The Independent ${CITY.name} Fence Directory`}
+        description={`${CITY.siteName} is built for homeowners who want one place to compare vetted local fence pros, real installed prices, and ${CITY.permitOffice.shortName} permit rules, without sifting through Yelp listings, contractor sales calls, or padded directory sites.`}
         crumbs={[{ label: 'About' }]}
         right={<CallbackForm />}
       />
@@ -91,11 +90,11 @@ export default function About() {
         <div className="container-wide max-w-4xl">
           <div className="mb-14">
             <span className="label-eyebrow">Our Mission</span>
-            <h2 className="mt-3 heading-section">Make the Nashville fence-buying decision honest</h2>
+            <h2 className="mt-3 heading-section">Make the {CITY.name} fence-buying decision honest</h2>
             <div className="heading-accent" />
             <div className="mt-6 space-y-4 text-[15.5px] text-onyx-700/80 leading-relaxed">
               <p>
-                Most Nashville homeowners get a fence quote once every 10–20 years, which
+                Most {CITY.name} homeowners get a fence quote once every 10–20 years, which
                 means they walk into the process with no benchmark for what's normal, what
                 a fair price is, what questions to ask, which contractors actually show up
                 on time, which permits apply, and what their HOA or historic overlay will
@@ -104,9 +103,9 @@ export default function About() {
               <p>
                 We built {COMPANY.name} to be the resource we wished existed when we
                 started our own fence projects. Vetted contractor profiles, real price
-                ranges from Davidson and Williamson County installs, plain-English guides
-                to Metro permit rules, and an honest take on which materials hold up in
-                Middle Tennessee humidity.
+                ranges from {CITY.primaryCounty} and {CITY.secondaryCounty} County installs, plain-English guides
+                to {CITY.permitOffice.shortName} permit rules, and an honest take on which materials hold up in
+                {' '}{CITY.metroLabel} humidity.
               </p>
             </div>
           </div>
@@ -179,11 +178,11 @@ export default function About() {
             </p>
             <ol className="mt-6 space-y-3 text-sm text-onyx-700/85">
               {[
-                'Tennessee general liability + workers\' comp insurance verified directly with the broker',
-                'Tennessee 811 dig-safe protocol confirmed in writing',
+                `${CITY.state} general liability + workers' comp insurance verified directly with the broker`,
+                `${CITY.dig811.name} dig-safe protocol confirmed in writing`,
                 'Post-depth specification of at least 24" set in concrete with gravel base',
                 'Material and labor warranties documented separately, in writing',
-                'HOA + Metro Historic Zoning experience confirmed where applicable',
+                `HOA + ${CITY.historicCommission.abbr} experience confirmed where applicable`,
                 'Payment schedule capped at 50% deposit, balance on completion',
                 'Three recent local installs verified with addresses or photos',
               ].map((step, i) => (

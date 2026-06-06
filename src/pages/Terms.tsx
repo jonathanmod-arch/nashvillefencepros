@@ -20,8 +20,7 @@ export default function Terms() {
     webPageSchema({
       slug: '/terms',
       title: 'Terms of Use',
-      description:
-        'Terms of use for the Nashville Fence Guide directory and contractor referral platform.',
+      description: `Terms of use for the ${CITY.siteName} directory and contractor referral platform.`,
     }),
   ])
 
@@ -30,20 +29,20 @@ export default function Terms() {
       <PageHero
         eyebrow="Legal"
         title="Terms of Use"
-        description={`The rules of the road for using Nashville Fence Guide. Effective ${EFFECTIVE_DATE}.`}
+        description={`The rules of the road for using ${CITY.siteName}. Effective ${EFFECTIVE_DATE}.`}
         crumbs={[{ label: 'Terms of Use' }]}
       />
 
       <section className="bg-white section-padding">
         <div className="container-wide max-w-3xl prose-legal">
           <p className="text-onyx-700/80 leading-relaxed">
-            By using NashvilleFenceGuide.com you agree to these terms.
+            By using {CITY.domain} you agree to these terms.
           </p>
 
           <H2>What we are</H2>
           <p>
-            Nashville Fence Guide is an independent directory and contractor referral
-            platform for Nashville-area homeowners. We are not a licensed fence
+            {CITY.siteName} is an independent directory and contractor referral
+            platform for {CITY.name}-area homeowners. We are not a licensed fence
             contractor and do not perform installation, repair, or inspection work
             ourselves.
           </p>
@@ -69,7 +68,7 @@ export default function Terms() {
           <p>
             When you submit a quote request, we share your project details with up to
             three matched contractors. The resulting estimates and any agreement are
-            between you and those contractors, Nashville Fence Guide is not a party to
+            between you and those contractors, {CITY.siteName} is not a party to
             any contract you sign.
           </p>
 
@@ -96,28 +95,28 @@ export default function Terms() {
           <p>
             The site is provided "as is." Cost estimates, permit guidance, and code
             summaries are for general information only and may be out of date. Always
-            confirm current rules with Metro Nashville Codes, the Tennessee State Board
+            confirm current rules with {CITY.permitOffice.name}, the {CITY.state} State Board
             for Licensing Contractors, or your HOA before you build.
           </p>
 
           <H2>Limitation of liability</H2>
           <p>
-            To the extent allowed by law, Nashville Fence Guide is not liable for any
+            To the extent allowed by law, {CITY.siteName} is not liable for any
             direct, indirect, or consequential damages arising from your use of the site,
             the contractors you connect with, or any work performed by them.
           </p>
 
           <H2>Intellectual property</H2>
           <p>
-            Site copy, design, and code are © Nashville Fence Guide. Contractor names,
+            Site copy, design, and code are © {CITY.siteName}. Contractor names,
             logos, and business details remain the property of their respective owners.
           </p>
 
           <H2>Governing law</H2>
           <p>
-            These terms are governed by the laws of the State of Tennessee. Disputes will
-            be resolved in the state or federal courts located in Davidson County,
-            Tennessee.
+            These terms are governed by the laws of the State of {CITY.state}. Disputes will
+            be resolved in the state or federal courts located in {CITY.primaryCounty} County,
+            {' '}{CITY.state}.
           </p>
 
           <H2>Changes</H2>

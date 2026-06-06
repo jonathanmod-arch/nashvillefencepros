@@ -20,8 +20,7 @@ export default function Privacy() {
     webPageSchema({
       slug: '/privacy',
       title: 'Privacy Policy',
-      description:
-        'Privacy practices for Nashville Fence Guide: what we collect, how we use it, and who we share it with.',
+      description: `Privacy practices for ${CITY.siteName}: what we collect, how we use it, and who we share it with.`,
     }),
   ])
 
@@ -30,14 +29,14 @@ export default function Privacy() {
       <PageHero
         eyebrow="Legal"
         title="Privacy Policy"
-        description={`How we handle the information you share with Nashville Fence Guide. Effective ${EFFECTIVE_DATE}.`}
+        description={`How we handle the information you share with ${CITY.siteName}. Effective ${EFFECTIVE_DATE}.`}
         crumbs={[{ label: 'Privacy Policy' }]}
       />
 
       <section className="bg-white section-padding">
         <div className="container-wide max-w-3xl prose-legal">
           <p className="text-onyx-700/80 leading-relaxed">
-            Nashville Fence Guide ("we," "us") respects the privacy of every visitor and
+            {CITY.siteName} ("we," "us") respects the privacy of every visitor and
             form submitter. This page explains what we collect, how we use it, and the
             choices you have.
           </p>
@@ -59,7 +58,7 @@ export default function Privacy() {
             </li>
             <li>
               <strong>Analytics:</strong> pages visited, referrer, device type, and
-              country via Google Analytics (gtag.js property G-9YZEPGM4X7).
+              country via Google Analytics (gtag.js property {CITY.ga4PropertyId}).
             </li>
             <li>
               <strong>Server logs:</strong> IP address, user-agent, and request timestamp
@@ -69,7 +68,7 @@ export default function Privacy() {
 
           <H2>How we use it</H2>
           <ul>
-            <li>To match Nashville homeowners with up to three vetted local fence contractors.</li>
+            <li>To match {CITY.name} homeowners with up to three vetted local fence contractors.</li>
             <li>To respond to listing and advertising inquiries.</li>
             <li>To detect spam and abuse, a hidden honeypot field on every form plus serverless rate checks.</li>
             <li>To improve the site through aggregated analytics. We do not sell traffic data.</li>
@@ -78,8 +77,8 @@ export default function Privacy() {
           <H2>Who we share it with</H2>
           <ul>
             <li>
-              <strong>Quote-request data</strong> is shared with the matched Nashville
-              contractors whose specialties and service area fit your project. We do not
+              <strong>Quote-request data</strong> is shared with the matched {CITY.name}
+              {' '}contractors whose specialties and service area fit your project. We do not
               share your details with anyone else.
             </li>
             <li>

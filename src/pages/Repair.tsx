@@ -232,7 +232,7 @@ export default function Repair() {
                   Fast-track repair quotes within 24 hours
                 </h3>
                 <p className="text-sm text-white/75 leading-relaxed max-w-xl">
-                  Submit a request with photos and we'll route it to Nashville fence
+                  Submit a request with photos and we'll route it to {CITY.name} fence
                   repair crews who can do emergency work, wood, vinyl, chain link,
                   aluminum, or iron.
                 </p>

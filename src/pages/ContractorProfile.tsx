@@ -243,7 +243,7 @@ export default function ContractorProfile() {
                 </>
               ) : (
                 <p className="text-sm text-onyx-700/80 leading-relaxed">
-                  {c.name} has been Nashville's go-to{' '}
+                  {c.name} has been {CITY.name}'s go-to{' '}
                   {categoryLabel(c.category).toLowerCase()} for over {c.yearsInBusiness} years.
                   Our team of certified installers specializes in{' '}
                   {c.specialties.slice(0, 3).join(', ')}. We serve homeowners throughout{' '}
@@ -295,7 +295,7 @@ export default function ContractorProfile() {
                 <h2 className="heading-card !text-xl">Pricing Guide</h2>
               </div>
               <p className="text-xs text-onyx-700/60 mb-5">
-                Typical price ranges for Nashville-area projects. Final cost depends on materials,
+                Typical price ranges for {CITY.name}-area projects. Final cost depends on materials,
                 site conditions, and project scope. Request a free quote for an exact estimate.
               </p>
               <div className="divide-y divide-[#E2E8F0]">
@@ -551,8 +551,8 @@ export default function ContractorProfile() {
                   Ready for a Quote?
                 </h3>
                 <p className="text-sm text-white/80 leading-relaxed mb-5">
-                  Get competitive estimates from {c.name} and other top Nashville
-                  contractors.
+                  Get competitive estimates from {c.name} and other top {CITY.name}
+                  {' '}contractors.
                 </p>
                 <Link
                   to="/get-quotes#quote-form"
