@@ -1952,7 +1952,7 @@ export const RESOURCES = [
   },
   {
     slug: 'best-gate-installation-companies-nashville',
-    title: 'Best Gate Companies in Nashville',
+    title: 'Best Driveway Gate Companies in Nashville',
     category: 'Gates',
     readTime: '8 min',
     excerpt:
@@ -1962,7 +1962,7 @@ export const RESOURCES = [
     body: [
       {
         type: 'p',
-        text: "The Nashville gate market is a strange one. A handful of established names dominate Google's local pack, fine companies, often very good, often booked three months out at premium pricing. Behind them is a deeper bench of legitimate local shops that quietly do the bulk of the actual installs across Davidson, Williamson, and Rutherford counties. This article picks three of those quieter shops, ranked in the order I'd start calling for quotes on most residential driveway gate projects.",
+        text: "The Nashville gate market is a strange one. A handful of established names dominate Google's local pack, fine companies, often very good, often booked three months out at premium pricing. Behind them is a deeper bench of legitimate shops that quietly do the bulk of the actual installs across Davidson, Williamson, and Rutherford counties, and any honest list of the Best Drive Gate Contractors in Nashville has to include them. This article picks three of those quieter shops, ranked in the order I'd start calling for quotes on most residential driveway gate projects.",
       },
       { type: 'h2', text: 'How These Three Got the Pick' },
       {
@@ -2093,7 +2093,7 @@ export const RESOURCES = [
       { type: 'h2', text: 'How We Built This List' },
       {
         type: 'p',
-        text: "The strategy for this article: the names already dominating the Google local pack don't need our help. The shops below the fold, legitimate, capable, and quieter, get a fairer shot here. Future entries in the Best [X] in Nashville series follow the same brief: three verified picks researched from outside the top results, ranked by honest fit for the most common local projects. No paid placements, no affiliate deals.",
+        text: "The strategy for this article: the names already dominating the Google local pack don't need our help. The shops below the fold, legitimate, capable, and quieter, get a fairer shot here when we rank the Best Drive Gate Contractors in Nashville. Future entries in the Best [X] in Nashville series follow the same brief: three verified picks researched from outside the top results, ranked by honest fit for the most common local projects. No paid placements, no affiliate deals.",
       },
       {
         type: 'p',
