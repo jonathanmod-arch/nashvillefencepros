@@ -72,7 +72,7 @@ function ArticleBody({ sections }: { sections: ResourceSection[] }) {
                       key={j}
                       href={p.to}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer nofollow"
                       className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
                     >
                       {p.text}

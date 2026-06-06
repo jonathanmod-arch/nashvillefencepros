@@ -41,7 +41,7 @@ export default function PermitsSection() {
               <a
                 href="https://tnfencerules.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
                 tnfencerules.com
@@ -92,7 +92,7 @@ export default function PermitsSection() {
                   <a
                     href={CITY.dig811.url}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="text-oak-300 underline underline-offset-4 hover:text-oak-200"
                   >
                     {CITY.dig811.name}

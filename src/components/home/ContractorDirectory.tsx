@@ -327,7 +327,7 @@ function ContractorCard({
         <a
           href={c.googleMapsUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className="inline-flex items-center gap-1.5 mb-4 text-xs font-semibold text-blue-700 hover:text-blue-800"
         >
           <span

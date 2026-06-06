@@ -130,7 +130,7 @@ export default function HistoricOverlays() {
               <a
                 href="https://www.nashville.gov/departments/historical-commission"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
                 Historic Zoning Commission
@@ -141,7 +141,7 @@ export default function HistoricOverlays() {
               <a
                 href="https://tnfencerules.com/fence-rules-nashville-city-tennessee/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
                 Nashville fence-rules summary

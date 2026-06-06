@@ -126,7 +126,7 @@ export default function ContractorProfile() {
                     <a
                       href={mapsHref}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer nofollow"
                       className="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800 font-semibold"
                     >
                       <span
@@ -201,7 +201,7 @@ export default function ContractorProfile() {
                 <a
                   href={mapsHref}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="w-full lg:w-auto inline-flex items-center justify-center gap-2 bg-white text-onyx-700 hover:text-forest-500 border border-[#E2E8F0] text-sm font-semibold px-5 py-3 rounded-lg transition-colors"
                 >
                   <Phone className="w-4 h-4" /> Contact via Google
@@ -212,7 +212,7 @@ export default function ContractorProfile() {
                 <a
                   href={c.website}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-onyx-700/70 hover:text-forest-500 transition-colors lg:justify-end"
                 >
                   <Globe className="w-3.5 h-3.5" /> Visit Website
@@ -343,7 +343,7 @@ export default function ContractorProfile() {
                 <a
                   href={mapsHref}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="text-xs font-semibold text-forest-500 hover:text-forest-600 inline-flex items-center gap-1"
                 >
                   View all on Google <ExternalLink className="w-3 h-3" />
@@ -372,7 +372,7 @@ export default function ContractorProfile() {
                   <a
                     href={mapsHref}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 text-white text-sm font-semibold px-5 py-3 rounded-lg transition-colors"
                   >
                     View Reviews on Google Maps
@@ -468,7 +468,7 @@ export default function ContractorProfile() {
                   <a
                     href={mapsHref}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-warmgray hover:bg-[#E2E8F0] text-onyx-700 text-sm font-semibold px-4 py-3 rounded-xl transition-colors"
                   >
                     <span
@@ -580,7 +580,7 @@ export default function ContractorProfile() {
               <a
                 href={mapsHref}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-forest-500 hover:text-forest-600"
               >
                 View on Google Maps <ExternalLink className="w-3.5 h-3.5" />

@@ -120,7 +120,7 @@ export default function PoolFenceCode() {
               <a
                 href="https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
                 Metro Nashville Codes
@@ -130,7 +130,7 @@ export default function PoolFenceCode() {
               <a
                 href="https://tnfencerules.com"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
                 tnfencerules.com

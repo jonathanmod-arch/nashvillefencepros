@@ -73,7 +73,7 @@ export default function Permits() {
               <a
                 href={CITY.permitOffice.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
                 residential fence code
@@ -141,7 +141,7 @@ export default function Permits() {
               <a
                 href={CITY.historicCommission.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
               >
                 {CITY.historicCommission.name}
