@@ -1,5 +1,6 @@
 import { Eye, Shield, Sparkles, PawPrint, Droplets, TrendingUp } from 'lucide-react'
 import { BENEFITS } from '../../data/siteData'
+import { CITY } from '../../config/city'
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   'eye-off': Eye,
@@ -17,12 +18,12 @@ export default function WhyFenceSection() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="label-eyebrow">Why Homeowners Choose Us</span>
           <h2 className="mt-3 heading-section">
-            Why Nashville Homeowners Install Fences
+            Why {CITY.name} Homeowners Install Fences
           </h2>
           <div className="heading-accent mx-auto" />
           <div className="mt-5 text-left space-y-4">
             <p className="text-body-lead">
-              From acreage in Williamson County to urban infill in East Nashville, the right
+              From acreage in {CITY.secondaryCounty} County to urban infill in East {CITY.name}, the right
               fence does more than mark a line, it solves a specific problem.
             </p>
             <p className="text-body-lead">

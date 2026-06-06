@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { AlertTriangle, Ruler, Phone, ScrollText, ArrowRight } from 'lucide-react'
+import { CITY } from '../../config/city'
 
 const RULES = [
   {
@@ -15,7 +16,7 @@ const RULES = [
   {
     icon: ScrollText,
     title: 'Historic Overlays',
-    detail: 'Germantown, Edgefield, and parts of East Nashville require Historic Zoning Commission review.',
+    detail: `Germantown, Edgefield, and parts of East ${CITY.name} require ${CITY.historicCommission.name} review.`,
   },
   {
     icon: AlertTriangle,
@@ -30,11 +31,11 @@ export default function PermitsSection() {
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="reveal-up">
-            <span className="label-eyebrow">Metro Compliance</span>
-            <h2 className="mt-3 heading-section">Nashville Fence Permits & Rules</h2>
+            <span className="label-eyebrow">{CITY.permitOffice.shortName} Compliance</span>
+            <h2 className="mt-3 heading-section">{CITY.name} Fence Permits & Rules</h2>
             <div className="heading-accent" />
             <p className="mt-4 text-body-lead">
-              Metro Nashville keeps fence rules relatively homeowner-friendly, but the wrong
+              {CITY.permitOffice.shortName} keeps fence rules relatively homeowner-friendly, but the wrong
               height or a missed historic overlay can mean removal at your expense. Here's the
               straightforward breakdown, and{' '}
               <a
@@ -45,7 +46,7 @@ export default function PermitsSection() {
               >
                 tnfencerules.com
               </a>{' '}
-              covers the same ground for the rest of Tennessee.
+              covers the same ground for the rest of {CITY.state}.
             </p>
 
             <div className="mt-7 space-y-4">
@@ -83,18 +84,18 @@ export default function PermitsSection() {
                   <AlertTriangle className="w-3.5 h-3.5" /> Call Before You Dig
                 </div>
                 <h3 className="text-2xl md:text-3xl font-heading font-bold tracking-tightest mb-3">
-                  Always Call Tennessee 811
+                  Always Call {CITY.dig811.name}
                 </h3>
                 <p className="text-white/80 leading-relaxed mb-5 text-sm">
-                  Tennessee state law requires a minimum 3 business-day notice before digging
+                  {CITY.state} state law requires a minimum {CITY.dig811.noticeBusinessDays} business-day notice before digging
                   post holes.{' '}
                   <a
-                    href="https://tennessee811.com/"
+                    href={CITY.dig811.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-oak-300 underline underline-offset-4 hover:text-oak-200"
                   >
-                    Tennessee 811
+                    {CITY.dig811.name}
                   </a>{' '}
                   marks public utilities for free, hitting a gas or fiber line can mean
                   thousands in damages and fines.
@@ -113,7 +114,7 @@ export default function PermitsSection() {
                 HOA Reminder
               </div>
               <p className="text-sm text-onyx-700 leading-relaxed">
-                Williamson County HOAs (Brentwood, Franklin, Nolensville) typically require
+                {CITY.secondaryCounty} County HOAs typically require
                 Architectural Review approval before installation, submit material samples
                 and a site plan first.
               </p>

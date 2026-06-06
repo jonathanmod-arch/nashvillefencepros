@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Calculator, Info } from 'lucide-react'
+import { CITY } from '../../config/city'
 
 const MATERIALS = [
   { id: 'wood', name: 'Wood Privacy', low: 22, high: 35, color: '#D4A373' },
@@ -26,10 +27,10 @@ export default function CostGuideSection() {
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="label-eyebrow">Pricing Transparency</span>
-          <h2 className="mt-3 heading-section">Nashville Fence Cost Guide</h2>
+          <h2 className="mt-3 heading-section">{CITY.name} Fence Cost Guide</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Real Middle Tennessee install prices. Move the slider, pick a material, and see
+            Real {CITY.metroLabel} install prices. Move the slider, pick a material, and see
             your range update live.
           </p>
         </div>
@@ -151,7 +152,7 @@ export default function CostGuideSection() {
                 <Info className="w-4 h-4 text-forest-500 flex-shrink-0 mt-0.5" />
                 <p>
                   Range covers materials + labor for a standard residential install in
-                  Davidson, Williamson, and Sumner counties. Gates, demo, and difficult
+                  {' '}{CITY.counties.slice(0, 3).join(', ')} counties. Gates, demo, and difficult
                   terrain are billed separately.
                 </p>
               </div>

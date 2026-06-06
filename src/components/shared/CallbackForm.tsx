@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Phone, CheckCircle2 } from 'lucide-react'
+import { CITY } from '../../config/city'
 
 export default function CallbackForm() {
   const [name, setName] = useState('')
@@ -43,7 +44,7 @@ export default function CallbackForm() {
         </div>
         <h3 className="font-heading font-bold text-xl mb-2">We'll call you back</h3>
         <p className="text-sm text-onyx-700/70 leading-relaxed">
-          Expect a call within one business day from a vetted Nashville fence pro to walk through your project.
+          Expect a call within one business day from a vetted {CITY.name} fence pro to walk through your project.
         </p>
       </div>
     )
@@ -103,7 +104,7 @@ export default function CallbackForm() {
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            placeholder="(615) 555-0123"
+            placeholder={`(${CITY.company.areaCode}) 555-0123`}
             className="cf-input"
           />
         </div>
@@ -118,7 +119,7 @@ export default function CallbackForm() {
             maxLength={5}
             value={zip}
             onChange={(e) => setZip(e.target.value)}
-            placeholder="e.g. 37205"
+            placeholder={`e.g. ${CITY.primaryZip}`}
             className="cf-input"
           />
         </div>
@@ -155,7 +156,7 @@ export default function CallbackForm() {
         )}
       </button>
       <p className="text-[10px] text-onyx-700/50 text-center leading-relaxed">
-        We share your info only with up to 3 vetted Nashville contractors. No spam.
+        We share your info only with up to 3 vetted {CITY.name} contractors. No spam.
       </p>
 
       <style>{`

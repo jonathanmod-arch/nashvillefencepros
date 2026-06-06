@@ -18,6 +18,7 @@ import {
   categoryLabel,
   type Contractor,
 } from '../../data/contractors'
+import { CITY } from '../../config/city'
 
 export default function ContractorDirectory({ preview = false }: { preview?: boolean } = {}) {
   const [query, setQuery] = useState('')
@@ -51,12 +52,12 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="label-eyebrow">Vetted Local Pros</span>
-          <h2 className="mt-3 heading-section">Best Fence Companies in Nashville</h2>
+          <h2 className="mt-3 heading-section">Best Fence Companies in {CITY.name}</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
             {preview
-              ? "Hand-picked, licensed, and reviewed by real Nashville homeowners. Here are this month's top-rated picks."
-              : 'Hand-picked, licensed, and reviewed by real Nashville homeowners. Filter by area, service, or project type.'}
+              ? `Hand-picked, licensed, and reviewed by real ${CITY.name} homeowners. Here are this month's top-rated picks.`
+              : `Hand-picked, licensed, and reviewed by real ${CITY.name} homeowners. Filter by area, service, or project type.`}
           </p>
         </div>
 
@@ -178,7 +179,7 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
                   to="/contractors"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-forest-500 hover:text-forest-600 underline underline-offset-4"
                 >
-                  See all Nashville Fence Installers
+                  See all {CITY.name} Fence Installers
                   <Sparkles className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -191,7 +192,7 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
             {featured.length > 0 && (
               <div className="mb-5">
                 <span className="label-eyebrow">Full Directory</span>
-                <h3 className="heading-card mt-1">All Nashville pros</h3>
+                <h3 className="heading-card mt-1">All {CITY.name} pros</h3>
               </div>
             )}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -210,7 +211,7 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
                 Free Listing
               </div>
               <h3 className="font-heading font-black text-white text-xl sm:text-2xl tracking-tightest leading-tight mb-2">
-                Are you a Nashville fence pro?
+                Are you a {CITY.name} fence pro?
               </h3>
               <p className="text-sm text-white/75 leading-relaxed max-w-xl">
                 Submit your business to the directory in under 5 minutes. Free listing,

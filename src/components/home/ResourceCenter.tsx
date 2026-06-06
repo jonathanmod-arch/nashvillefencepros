@@ -3,6 +3,7 @@ import { Clock, ArrowRight } from 'lucide-react'
 import { RESOURCES } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
 import { displayTitle } from '../../lib/resourceTitle'
+import { CITY } from '../../config/city'
 
 const CATEGORY_COLORS: Record<string, string> = {
   Comparison: 'bg-forest-50 text-forest-500',
@@ -23,10 +24,10 @@ export default function ResourceCenter() {
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="label-eyebrow">Learn Before You Build</span>
-          <h2 className="mt-3 heading-section">Nashville Fence Resource Center</h2>
+          <h2 className="mt-3 heading-section">{CITY.name} Fence Resource Center</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            In-depth guides built for Middle Tennessee homeowners, written by local pros.
+            In-depth guides built for {CITY.metroLabel} homeowners, written by local pros.
           </p>
         </div>
 

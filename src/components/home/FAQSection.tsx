@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
 import { FAQS } from '../../data/siteData'
+import { CITY } from '../../config/city'
 
 export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(0)
@@ -13,7 +14,7 @@ export default function FAQSection() {
           <h2 className="mt-3 heading-section">Frequently Asked Questions</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            The 8 most-searched fence questions in Nashville, answered by local pros.
+            The 8 most-searched fence questions in {CITY.name}, answered by local pros.
           </p>
         </div>
 

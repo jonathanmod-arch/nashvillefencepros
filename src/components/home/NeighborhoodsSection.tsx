@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { MapPin, ArrowRight } from 'lucide-react'
 import { NEIGHBORHOODS } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
+import { CITY } from '../../config/city'
 
 export default function NeighborhoodsSection() {
   return (
@@ -9,10 +10,10 @@ export default function NeighborhoodsSection() {
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="label-eyebrow">Local Coverage</span>
-          <h2 className="mt-3 heading-section">Nashville Service Areas We Cover</h2>
+          <h2 className="mt-3 heading-section">{CITY.name} Service Areas We Cover</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Every Nashville-area city and neighborhood has its own fence personality, material
+            Every {CITY.name}-area city and neighborhood has its own fence personality, material
             trends, HOA quirks, and price bands. Find yours.
           </p>
         </div>
@@ -31,7 +32,7 @@ export default function NeighborhoodsSection() {
                 <div className="relative aspect-[16/10] overflow-hidden bg-warmgray">
                   <SafeImage
                     src={n.img}
-                    alt={`Fence installation in ${n.name}, Nashville`}
+                    alt={`Fence installation in ${n.name}, ${CITY.name}`}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-onyx-700/60 via-onyx-700/10 to-transparent" />

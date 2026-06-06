@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { FENCE_TYPES } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
+import { CITY } from '../../config/city'
 
 export default function FenceTypesSection() {
   return (
@@ -9,10 +10,10 @@ export default function FenceTypesSection() {
       <div className="container-wide">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="label-eyebrow">Materials & Styles</span>
-          <h2 className="mt-3 heading-section">Nashville Fence Types & Styles</h2>
+          <h2 className="mt-3 heading-section">{CITY.name} Fence Types & Styles</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Six material families cover 95% of Middle Tennessee installs. Compare cost,
+            Six material families cover 95% of {CITY.metroLabel} installs. Compare cost,
             durability, and the look that fits your yard.
           </p>
         </div>
@@ -31,7 +32,7 @@ export default function FenceTypesSection() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-warmgray">
                   <SafeImage
                     src={t.img}
-                    alt={`${t.name} fence in Nashville`}
+                    alt={`${t.name} fence in ${CITY.name}`}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                   />
                   <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded-full text-[11px] font-bold text-forest-500">

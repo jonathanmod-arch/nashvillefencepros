@@ -1,6 +1,7 @@
 import { useState, useRef, DragEvent, ChangeEvent } from 'react'
 import { Upload, CheckCircle2, X, ShieldCheck, Clock, Star } from 'lucide-react'
 import { FENCE_TYPES } from '../../data/siteData'
+import { CITY } from '../../config/city'
 
 type FormState = {
   name: string
@@ -92,17 +93,17 @@ export default function LeadGenSection() {
               Free Estimates
             </span>
             <h2 className="font-heading font-black text-3xl sm:text-4xl text-white tracking-tightest leading-[1.05] mb-4">
-              Get Fence Quotes From Nashville Professionals
+              Get Fence Quotes From {CITY.name} Professionals
             </h2>
             <div className="w-12 h-0.5 bg-oak-400 mb-6" />
             <p className="font-body font-normal text-lg text-white/70 leading-relaxed mb-8">
               Submit your project details and receive estimates from up to 3 pre-vetted
-              Nashville fence contractors. Free, no-obligation, typically within 24 hours.
+              {' '}{CITY.name} fence contractors. Free, no-obligation, typically within 24 hours.
             </p>
 
             <div className="space-y-5 mb-10">
               {[
-                { icon: ShieldCheck, label: 'All contractors are licensed and insured in Tennessee' },
+                { icon: ShieldCheck, label: `All contractors are licensed and insured in ${CITY.state}` },
                 { icon: Star, label: 'Only contractors with 4.7+ star ratings are featured' },
                 { icon: Clock, label: 'Most homeowners receive quotes within 24–48 hours' },
                 { icon: CheckCircle2, label: 'No-obligation, you choose whether to proceed' },
@@ -127,7 +128,7 @@ export default function LeadGenSection() {
                 $1,200
               </div>
               <p className="font-body text-sm text-white/60 mt-2">
-                when comparing 3+ Nashville contractor quotes
+                when comparing 3+ {CITY.name} contractor quotes
               </p>
             </div>
           </div>
@@ -146,7 +147,7 @@ export default function LeadGenSection() {
                   Request Received, Welcome
                 </h3>
                 <p className="text-onyx-700/70 max-w-md mx-auto leading-relaxed">
-                  We're matching you with up to 3 vetted Nashville fence pros. Expect calls
+                  We're matching you with up to 3 vetted {CITY.name} fence pros. Expect calls
                   and detailed quotes via email within the next 24–48 hours.
                 </p>
                 <div className="mt-8 grid grid-cols-3 gap-3 max-w-md mx-auto text-left">
@@ -193,7 +194,7 @@ export default function LeadGenSection() {
                       value={form.phone}
                       onChange={handle('phone')}
                       className="input-base"
-                      placeholder="(615) 555-0123"
+                      placeholder={`(${CITY.company.areaCode}) 555-0123`}
                     />
                   </Field>
                   <Field label="Your ZIP Code" required>
@@ -205,7 +206,7 @@ export default function LeadGenSection() {
                       value={form.zip}
                       onChange={handle('zip')}
                       className="input-base"
-                      placeholder="e.g. 37205"
+                      placeholder={`e.g. ${CITY.primaryZip}`}
                     />
                   </Field>
                 </div>
@@ -347,7 +348,7 @@ export default function LeadGenSection() {
                   {submitting ? 'Sending…' : 'Match Me With Local Pros'}
                 </button>
                 <p className="text-xs text-onyx-400 text-center">
-                  We share your info only with up to 3 vetted Nashville contractors. No spam.
+                  We share your info only with up to 3 vetted {CITY.name} contractors. No spam.
                 </p>
               </form>
             )}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, RefObject } from 'react'
 import { Star } from 'lucide-react'
 import { STATS } from '../../data/siteData'
+import { CITY } from '../../config/city'
 
 function useInViewOnce(ref: RefObject<HTMLElement>, threshold = 0.3): boolean {
   const [inView, setInView] = useState(false)
@@ -84,7 +85,7 @@ export default function TrustBar() {
             ))}
           </div>
           <span className="font-body text-onyx-700 text-[15px] md:text-[16px]">
-            Rated 4.9/5 by Nashville homeowners
+            Rated 4.9/5 by {CITY.name} homeowners
           </span>
         </div>
 
