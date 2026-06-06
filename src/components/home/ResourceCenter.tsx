@@ -28,7 +28,7 @@ export default function ResourceCenter() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {RESOURCES.map((r, i) => (
+          {RESOURCES.slice(-3).reverse().map((r, i) => (
             <div
               key={r.slug}
               className="reveal-up"
