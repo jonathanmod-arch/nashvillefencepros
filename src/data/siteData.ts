@@ -979,6 +979,127 @@ export const RESOURCES = [
       'The design history behind the slat-style fence dominating East Nashville, 12 South, and Sylvan Park bungalows.',
     img: IMAGES.resources['horizontal-cedar-trend'],
     imageAlt: 'Horizontal cedar slat fence — East Nashville horizontal privacy trend',
+    body: [
+      {
+        type: 'p',
+        text: "Drive through Five Points, walk a block in 12 South, take a left in Sylvan Park — same fence. Long horizontal cedar slats, sometimes with a gap between them, almost always six feet tall, almost always around a bungalow built or renovated in the last 12 years. I've installed enough of these now that I can usually name the architect from the corner board. Here's the design story, the actual cost, and the technical reality of the trend I get asked about more than any other.",
+      },
+      { type: 'h2', text: 'Where the Look Came From' },
+      {
+        type: 'p',
+        text: "The horizontal cedar fence is a mid-century revival. Architects in California in the 1950s and 1960s built ranch homes with horizontal slat fences and pergolas because the look complemented low-slung roof lines and big horizontal windows. When the mid-century aesthetic came back into broader residential design in the 2010s — partly through the Dwell magazine crowd, partly through Pinterest, partly because a generation of homeowners stopped wanting their houses to look like every other suburban Colonial — the horizontal fence came with it.",
+      },
+      {
+        type: 'p',
+        text: "Nashville's role in this is specific. The East Nashville rebuild wave from roughly 2012 onward filled neighborhoods like Lockeland Springs, Eastwood, and Cleveland Park with infill bungalows and modern-cottage builds. Their architects pulled from the same mid-century playbook. The horizontal fence wasn't a trend they invented — it was a finishing choice that fit the architecture. By 2018, builders were quoting horizontal cedar as the standard rear-yard option on every spec home east of the Cumberland.",
+      },
+      { type: 'h2', text: 'Why People Actually Want It' },
+      {
+        type: 'p',
+        text: "Set aside the Instagram angle for a second. The horizontal fence has three real functional advantages over a traditional vertical privacy fence:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'It reads as a single design element instead of a row of pickets, which makes a small urban lot feel more intentional and less hemmed-in.',
+          'The horizontal lines extend the eye horizontally, which makes a 30-foot-deep backyard feel longer than it is. Architects use the same trick on interior baseboards.',
+          'A small reveal gap between slats (usually 1/4 to 1/2 inch) lets a tiny bit of light and air through without sacrificing privacy. Vertical privacy fences are totally solid.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If you have a 4,800-square-foot lot in East Nashville with neighbors 10 feet on either side, the horizontal fence does more work for your backyard than vertical privacy. If you're in Brentwood on a half-acre, the design impact is smaller and the cost premium harder to justify.",
+      },
+      { type: 'h2', text: "What It Actually Costs in Nashville" },
+      {
+        type: 'p',
+        text: "Horizontal cedar runs $42-58 per linear foot installed in Nashville right now. That's 20-40 percent more than vertical cedar privacy ($28-38) and about the same as premium vinyl. The premium comes from three places:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'More material per linear foot. Horizontal slats are usually 1x4 or 1x6 cedar, and you need a lot of them — typically 14-18 slats across a 6-foot-tall section. Vertical privacy uses bigger boards in fewer pieces.',
+          'Posts must be set straighter. Horizontal slats expose any post that\'s off-plumb because the slat line shows it. Vertical pickets forgive a half-inch of post wobble. Horizontal slats do not.',
+          'More cutting and fitting. Each slat is individually leveled. A two-person crew installs maybe 60 feet of horizontal fence per day; the same crew installs 100-120 feet of vertical privacy.',
+        ],
+      },
+      { type: 'h2', text: "The Material Spec That Actually Holds Up" },
+      {
+        type: 'p',
+        text: "I've ripped out plenty of horizontal fences that looked perfect on day one and bowed within two summers. The boards moved, the posts shifted, or the fastener pattern was wrong. The spec I write for clients now, after a decade of installs in Nashville's clay-and-humidity climate:",
+      },
+      { type: 'h3', text: 'Boards' },
+      {
+        type: 'p',
+        text: "1x6 western red cedar, S4S (smooth four sides), tongue-and-groove if you want the cleanest reveal, butt-jointed if you want a small intentional gap. 1x4 cedar looks more delicate but moves more — only use it on short runs or in a backyard where you can keep an eye on it.",
+      },
+      { type: 'h3', text: 'Posts' },
+      {
+        type: 'p',
+        text: "Steel posts inside cedar sleeves. This is the spec that separates the contractors who've been doing this for ten years from the ones who haven't. Wood posts in horizontal-slat fences telegraph every bit of movement to the slats. Steel posts (2x2-inch or 2x3-inch galvanized tube) wrapped in a cedar sleeve give you both the look and a structurally sound post.",
+      },
+      { type: 'h3', text: 'Fasteners' },
+      {
+        type: 'p',
+        text: "Stainless steel face screws, two per slat at each post, pre-drilled. Galvanized nails will rust through the cedar within five years and bleed black streaks down each board. The fastener bill on a horizontal cedar fence is twice the bill on vertical privacy. Worth it.",
+      },
+      { type: 'h3', text: 'Top and Bottom Caps' },
+      {
+        type: 'p',
+        text: "A horizontal top cap (a 2x6 cedar running flat across the top) ties the look together and protects the end grain of the slats from rain. Skip it and the top edges weather faster than the rest of the fence.",
+      },
+      { type: 'h2', text: "Where Horizontal Fences Go Wrong" },
+      {
+        type: 'p',
+        text: "Five mistakes I see often, in rough order of how expensive they are to fix:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Wood posts on a long run. The fence will lean within three years. Steel cores are not optional.',
+          'No bottom cap or sealed end grain. Water wicks up from the ground, the bottom slats cup, the look falls apart.',
+          'Uniform slat spacing on uneven ground. Set the post centers level first; if you slat-by-slat on a slope, the gaps look random and amateur.',
+          'Cheap cedar grade. Knotty B-grade cedar costs less but bleeds resin and warps faster. Use Select Tight Knot grade minimum.',
+          'No setback from grade. The bottom slat sitting on dirt is a guaranteed early failure point. Hold it 2-3 inches off the ground.',
+        ],
+      },
+      { type: 'h2', text: 'Maintenance — Realistic, Not Aspirational' },
+      {
+        type: 'p',
+        text: "Horizontal cedar weathers to a silver-gray within 18 months if you leave it untreated. Some people love the patina; some people hate it and call me asking why their brand-new fence looks old. There's no in-between, so decide which camp you're in before the install.",
+      },
+      {
+        type: 'p',
+        text: "If you want the cedar to stay warm-brown, plan on a re-stain every 2-3 years with a penetrating oil-based product. Budget $4-7 per linear foot for a professional re-stain in Nashville. DIY is possible but the labor is more than people expect on a 150-foot run.",
+      },
+      { type: 'h2', text: 'Historic Overlay Considerations' },
+      {
+        type: 'p',
+        text: "Three of the four neighborhoods where horizontal cedar is most popular — Edgefield, Germantown, and Lockeland Springs — are inside historic overlay districts. The Historic Zoning Commission tends to be skeptical of horizontal slat fences in front yards. They read as too modern for the period of the neighborhoods.",
+      },
+      {
+        type: 'p',
+        text: "The compromise that gets approved consistently: traditional picket or wrought iron in the front yard (the street-facing elevation the HZC reviews), horizontal cedar in the rear yard where review concerns drop dramatically. Plan for HZC review whether you're touching the front or not, and prepare to demonstrate that the rear yard fence is not visible from the public right-of-way.",
+      },
+      { type: 'h2', text: "Want the Look Cheaper? Here's How" },
+      {
+        type: 'p',
+        text: "Three legitimate ways to get the horizontal aesthetic without the full $50-per-foot price tag:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Wider slat profile — 1x6 instead of 1x4 cuts the slat count almost in half and the labor with it. Looks slightly less refined, but only the contractor will notice from the street.',
+          'Hybrid panels — alternating horizontal cedar with steel-mesh inserts is cheaper than full cedar and reads as more modern, not less.',
+          'Composite alternatives — Trex and similar composite manufacturers now make horizontal-style fence panels. The look is close, the price is similar to cedar, and they do not need re-staining. The trade-off is texture; composite reads as plastic up close.',
+        ],
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Horizontal cedar isn't a trend that's going anywhere. The architectural style it pairs with is going to be in production in Nashville for another 20 years, and the fence aesthetic is built into the design language of the homes. If you're putting one in, spend the extra money on steel post cores and stainless fasteners. It's the difference between a fence that looks great forever and one that looks great until summer of year three. The horizontal cedar fence you want is the one you don't have to think about for 20 years.",
+      },
+    ],
   },
   {
     slug: 'fence-repair-vs-replace-nashville',
