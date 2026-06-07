@@ -1979,9 +1979,9 @@ export const RESOURCES = [
       },
       {
         type: 'p',
-        text: "Rankings reflect my honest take on who I'd recommend first for a typical residential install. Your specific project may be a better fit for #2 or #3, the per-company notes flag where each one wins.",
+        text: "Rankings reflect my honest take on who I'd recommend first for a typical residential install. Your specific project may be a better fit for #2 or #3. The per-company notes flag where each one wins.",
       },
-      { type: 'h2', text: '#1, Madison Steel & Iron Works of TN' },
+      { type: 'h2', text: '#1. Madison Steel & Iron Works of TN' },
       {
         type: 'p',
         text: "Madison Steel & Iron Works has been fabricating ornamental and wrought iron in the Nashville metro for over 65 years. That's the headline. The detail that earns the top ranking on this list is what they actually do versus what most 'gate companies' in this market do: they make the gate, in-house, in their Madison shop on Woodruff Street, then their own crew installs it. The catalog gate companies down the road order panels from out-of-state manufacturers and bolt them together on your driveway. Madison Steel fabricates from scratch.",
@@ -2011,7 +2011,7 @@ export const RESOURCES = [
         type: 'p',
         text: "Profile and contact: [Madison Steel & Iron Works of TN](/contractors/madison-steel-iron-works), Davidson County, (615) 865-8214.",
       },
-      { type: 'h2', text: '#2, American Fence and Gate, LLC' },
+      { type: 'h2', text: '#2. American Fence and Gate, LLC' },
       {
         type: 'p',
         text: "American Fence and Gate runs out of Brentwood and covers the Williamson County HOA belt, Franklin, Nolensville, Spring Hill, plus southern Davidson and the upscale Nashville neighborhoods (Green Hills, Belle Meade). The thing they do that the catalog gate companies don't is the whole package: fence, gate, automation, brick column work, and the maintenance that comes after. One contract, one crew, one warranty.",
@@ -2041,7 +2041,7 @@ export const RESOURCES = [
         type: 'p',
         text: "Profile and contact: [American Fence and Gate](/contractors/american-fence-and-gate), Williamson County, (615) 833-2120.",
       },
-      { type: 'h2', text: '#3, Master Fence' },
+      { type: 'h2', text: '#3. Master Fence' },
       {
         type: 'p',
         text: "Master Fence is the Rutherford County pick. They run out of a Veterans Parkway shop in Murfreesboro and cover Murfreesboro itself plus the Smyrna, Manchester, La Vergne corridor down through southern Middle Tennessee. Family-owned, with the specialty that matters for that geography: aluminum driveway gates connected to electronic access controls and keypads. Most of the southern Rutherford developments built since the mid-2010s have HOA-spec aluminum that Master Fence has installed on repeat.",
