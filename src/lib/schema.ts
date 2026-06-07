@@ -28,8 +28,10 @@ export function organization(): SchemaEntity {
     email: COMPANY.email,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: COMPANY.streetAddress,
       addressLocality: CITY.name,
       addressRegion: CITY.stateAbbr,
+      postalCode: COMPANY.postalCode,
       addressCountry: 'US',
     },
     areaServed: CITY.topServiceAreaCities.map((c) => `${c}, ${CITY.stateAbbr}`),
@@ -46,8 +48,10 @@ export function platformLocalBusiness(): SchemaEntity {
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: COMPANY.streetAddress,
       addressLocality: CITY.name,
       addressRegion: CITY.stateAbbr,
+      postalCode: COMPANY.postalCode,
       addressCountry: 'US',
     },
     aggregateRating: {

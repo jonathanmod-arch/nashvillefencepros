@@ -7,6 +7,8 @@ export const COMPANY = {
   phoneRaw: CITY.company.phoneRaw,
   email: CITY.company.email,
   address: CITY.company.address,
+  streetAddress: CITY.company.streetAddress,
+  postalCode: CITY.company.postalCode,
   hours: CITY.company.hours,
 }
 

@@ -58,7 +58,11 @@ export type CityConfig = {
     phoneRaw: string
     areaCode: string
     email: string
+    // Single-line address shown in footer, About page, and contact UI
     address: string
+    // Structured parts for JSON-LD PostalAddress
+    streetAddress: string
+    postalCode: string
     hours: string
   }
 

@@ -65,7 +65,9 @@ export const nashville: CityConfig = {
     phoneRaw: '+16155609956',
     areaCode: '615',
     email: 'hello@nashvillefenceguide.com',
-    address: 'Nashville, TN',
+    address: '4117 Hillsboro Pike #215, Nashville, TN 37215',
+    streetAddress: '4117 Hillsboro Pike #215',
+    postalCode: '37215',
     hours: 'Mon–Sat, 7:00 AM – 7:00 PM',
   },
 
