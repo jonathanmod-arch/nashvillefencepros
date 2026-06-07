@@ -16,6 +16,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Hiring: 'bg-[#0F766E] text-white',
   Planning: 'bg-[#1A1D1E]/85 text-white',
   Gates: 'bg-[#1B4332]/15 text-forest-500',
+  Decks: 'bg-[#92400e]/10 text-[#92400e]',
 }
 
 export default function ResourceCenter() {

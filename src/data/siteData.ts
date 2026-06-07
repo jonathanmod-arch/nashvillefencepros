@@ -2106,6 +2106,162 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'best-deck-builders-nashville',
+    title: 'Best Deck Builders in Nashville',
+    category: 'Decks',
+    readTime: '8 min',
+    excerpt:
+      'Three ranked picks for deck and screened-porch installation in the Nashville metro, Outdoor Woodworks Inc (Davidson), Harpeth Decks (Williamson), and The Covered Patio (Rutherford). Plus how to vet any deck contractor before signing.',
+    img: IMAGES.resources['best-deck-builders-nashville'],
+    imageAlt: 'Wood deck slats in warm sunlight on a Nashville property, best deck builders guide',
+    body: [
+      {
+        type: 'p',
+        text: "Decks have the same Nashville problem as gates. The names dominating Google's local pack are real and capable but they're booked, they're premium-priced, and they got there partly through years of SEO budget rather than because they're the only legitimate option. Below the fold there is a deeper bench of deck builders that quietly do the bulk of the actual work across Davidson, Williamson, and Rutherford. This article picks three of them, ranked in the order I'd start calling for a typical residential project. Same template as last week's [Best Driveway Gate Companies in Nashville](/resources/best-gate-installation-companies-nashville), same editorial rules.",
+      },
+      { type: 'h2', text: 'How These Three Got the Pick' },
+      {
+        type: 'p',
+        text: 'Three filters separate the picks below from the rest of the field.',
+      },
+      {
+        type: 'ul',
+        items: [
+          "Verifiable local presence. A public street address (not a P.O. box or 'serving Middle Tennessee'), a real phone number, and a portfolio you can ask about in person. Lead-gen pages with stock photos and no Rutherford or Williamson address don't make the first cut.",
+          "Deck specialization, not 'we do everything.' Composite, cedar, pressure-treated, pergolas, screened porches. We avoided the general remodelers who'll build a deck if asked but learn the brand lineup on your job.",
+          "Geographic spread across the metro. One Davidson pick, one Williamson, one Rutherford, so wherever the project sits, at least one of these shops has install experience in your zip code.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Rankings reflect honest fit, not absolute order. Your specific project may be a better match for #2 or #3. The per-company notes flag where each one wins.",
+      },
+      { type: 'h2', text: '#1. Outdoor Woodworks Inc' },
+      {
+        type: 'p',
+        text: "Outdoor Woodworks has been building custom decks, screened porches, and wood fences out of an 805 Rivergate Parkway shop in Goodlettsville since 1997. That's nearly thirty years of in-the-field work, and the headline detail is that Chris Griffith, the original owner, is still on the jobs. Most decade-plus deck companies in Nashville have transitioned to crew-and-project-manager mode by year ten. Outdoor Woodworks did not.",
+      },
+      {
+        type: 'p',
+        text: "For a homeowner in Madison, Hermitage, Bordeaux, Inglewood, or anywhere across the northern Davidson belt, this is the call when you want the longest-tenured shop you can actually walk into. The trade-off is breadth. Their model is custom builds with the owner involved, so they're not a high-volume composite-installation shop. Timeline is typically 4 to 6 weeks from contract to ground-break.",
+      },
+      {
+        type: 'p',
+        text: 'Why we ranked them here:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Nearly 30 years of in-house deck and screened-porch work at a real Goodlettsville street address.',
+          'Owner-operator model. Chris Griffith pulls his own permits and is on-site for the build.',
+          'Custom design capability that pairs with wood fence work, useful when the deck and the surrounding privacy fence go in as one project.',
+          'Licensed, bonded, and insured for residential structural work, not just general handyman scope.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Best fit: custom wood decks and screened porches across the northern Davidson belt. Properties where you want the owner involved and can wait 4 to 6 weeks.',
+      },
+      {
+        type: 'p',
+        text: 'Profile and contact: [Outdoor Woodworks Inc](/contractors/outdoor-woodworks), Davidson County, (615) 450-1721.',
+      },
+      { type: 'h2', text: '#2. Harpeth Decks' },
+      {
+        type: 'p',
+        text: "Harpeth Decks is the Williamson County pick. Daniel Jones started the shop in 2019 out of a Mallory Station Road suite in Franklin and built it around a deck-only model. No fence work, no remodeling, no roofing. Just decks, screened porches, and the composite manufacturers' certification ladders. They're Trex, TimberTech, Deckorators, and Fiberon certified, which matters because each of those brands has its own warranty and installation spec, and the certifications are how Trex (for one) actually validates a 25-year labor warranty.",
+      },
+      {
+        type: 'p',
+        text: "For a homeowner in Cool Springs, Westhaven, McKay's Mill, Fieldstone Farms, or anywhere across the Brentwood-Franklin-Nolensville HOA belt who is looking at a composite upgrade or a new build, the deck-only focus pays off. Seven years in business is the sweet spot. Long enough to have a real portfolio and references. Short enough that they're not over-booked the way the Google local pack names are.",
+      },
+      {
+        type: 'p',
+        text: 'Why we ranked them here:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Deck-only specialization. No fence or remodeling sideline diluting the focus.',
+          'Certified installer for all four major composite brands (Trex, TimberTech, Deckorators, Fiberon), which directly affects the manufacturer warranty on your finished deck.',
+          'Real Mallory Station Road suite in Franklin and a portfolio of Cool Springs and Westhaven projects.',
+          'Williamson County is most of their service area, so they know the HOA submittal patterns for the major neighborhoods.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Best fit: composite deck upgrades and new builds across the Williamson HOA belt. New-construction homeowners closing with the deck scope still open.',
+      },
+      {
+        type: 'p',
+        text: 'Profile and contact: [Harpeth Decks](/contractors/harpeth-decks), Williamson County, (615) 219-9164.',
+      },
+      { type: 'h2', text: '#3. The Covered Patio' },
+      {
+        type: 'p',
+        text: "The Covered Patio is the Rutherford pick. Family-owned by Taylor Ford out of a 1833 Ward Drive office in Murfreesboro, they specialize in the work that the wood-only deck shops in the region won't quote: screened-in rooms, covered patios with roof extensions, retractable-awning enclosures, and pergola builds with finished overhead structure. They have 400-plus five-star reviews and an active Rutherford County Chamber membership, both rare for shops not already sitting at the top of the search results.",
+      },
+      {
+        type: 'p',
+        text: "Why they're #3 rather than higher on the list: their sweet spot is the covered or screened build, which is a particular ask. If you want an open wood or composite deck with no roof, #1 or #2 are probably better fits. But for the homeowner who actually wants the roof, the screens, and the year-round outdoor room, this is the call.",
+      },
+      {
+        type: 'p',
+        text: 'Why we ranked them here:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Specialization in covered and screened outdoor rooms, the work that often falls between deck builders and general contractors.',
+          'Verifiable Ward Drive office, named owner (Taylor Ford), and Rutherford County Chamber membership.',
+          '400-plus five-star reviews across Google and review sites, atypical for shops outside the top SEO tier.',
+          'Coverage of Rutherford and southern Middle Tennessee, where standalone deck shops are scarcer than further north.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Best fit: screened porches, covered patios, and pergola-with-roof builds across Murfreesboro, Smyrna, and the southern metro. Homeowners who want a year-round outdoor space rather than a seasonal open deck.',
+      },
+      {
+        type: 'p',
+        text: 'Profile and contact: [The Covered Patio](/contractors/the-covered-patio), Rutherford County, (615) 649-7757.',
+      },
+      { type: 'h2', text: 'What to Ask Any Nashville Deck Contractor Before You Sign' },
+      {
+        type: 'p',
+        text: "Three picks is three picks. None of them are perfect for every project, and there are good deck builders out there I don't know about. Whoever you call, the seven questions in our [Questions to Ask Before Hiring a Nashville Fence Installer](/resources/hire-nashville-fence-installer-questions) article apply just as well to deck work, because the same licensing, insurance, permit, and warranty issues show up. Five questions that are deck-specific:",
+      },
+      {
+        type: 'ol',
+        items: [
+          "What composite brand AND warranty class are you quoting? Trex Transcend, TimberTech AZEK Vintage, and Deckorators Voyage have meaningfully different price points and warranties from their entry lines. Get the exact brand and class in writing.",
+          "What's the joist and beam material? Pressure-treated southern yellow pine is standard, ground-contact rated is the upgrade, and steel framing is the long-term play. The difference is 15 years versus 40 on the structure under your boards.",
+          "Hidden fasteners or face-screwed? Hidden is the modern look on composite, face-screwed is faster and cheaper on cedar. Make sure the quoted price matches the answer.",
+          "Will you pull the permit and meet the Metro Codes inspector on-site? Decks over 30 inches off grade need a structural inspection in Metro Nashville. The 'we'll just leave the paperwork' answer fails more inspections than it passes.",
+          "What's the post footing depth and concrete spec? Nashville's frost line is shallow but a 400-plus square foot deck needs 24 to 36 inches of footing depth with proper Sonotube and concrete to avoid the seven-year settle that wrecks ledger boards.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Their answers to those five usually predict whether the deck is the one you brag about at year ten or the one you're rebuilding at year eight. The [Anatomy of a Nashville Fence Quote](/resources/fence-cost-breakdown) article covers the same line-item logic that applies to deck quotes. Materials, labor, framing, fasteners, railing, and any permit work should each be priced separately.",
+      },
+      { type: 'h2', text: 'How We Built This List' },
+      {
+        type: 'p',
+        text: "Same strategy as the rest of the Best [X] in Nashville series. The names already dominating the Google local pack don't need our help. The shops below the fold, legitimate, capable, and quieter, get a fairer shot here. Future entries in the series follow the same brief: three verified picks researched from outside the top results, ranked by honest fit for the most common local projects. No paid placements, no affiliate deals.",
+      },
+      {
+        type: 'p',
+        text: "If you run a Nashville deck shop and want to be considered for future updates, the [submit your business](/submit-listing) form is open. Provide a real address, a real phone number, a website with project photos, and any state or municipal licenses, and we'll review.",
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Decks are the project where the cheap quote burns you twice. The first time when the boards start cupping at year four because the joist spec was wrong. The second time when you find out the manufacturer warranty doesn't apply because the installer wasn't brand-certified. The three picks above are picks because they don't do that. Get three quotes side by side, compare the brand, joist, fastener, and warranty answers, and pick the one whose answers read cleanest. That's the deck that opens onto year fifteen.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
