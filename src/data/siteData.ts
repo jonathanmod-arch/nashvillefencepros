@@ -1964,24 +1964,24 @@ export const RESOURCES = [
     body: [
       {
         type: 'p',
-        text: "The Nashville gate market is a strange one. A handful of established names dominate Google's local pack, fine companies, often very good, often booked three months out at premium pricing. Behind them is a deeper bench of legitimate shops that quietly do the bulk of the actual installs across Davidson, Williamson, and Rutherford counties, and any honest list of the Best Drive Gate Contractors in Nashville has to include them. This article picks three of those quieter shops, ranked in the order I'd start calling for quotes on most residential driveway gate projects.",
+        text: "Driveway gates are the project people get talked into wrong. Every couple of weeks somebody calls me about a fence install and drops the gate question halfway through, and then we spend an hour on the gate. The wrong contractor on a gate job is the difference between a system that opens for fifteen years and a system that's on its second operator by year three. So let's keep it tight. There are about a dozen shops across Davidson, Williamson, and Rutherford I'd trust with a residential driveway gate. Three I'd call first. Any honest list of the Best Drive Gate Contractors in Nashville has to include these three.",
       },
-      { type: 'h2', text: 'How These Three Got the Pick' },
+      { type: 'h2', text: 'Why These Three' },
       {
         type: 'p',
-        text: "Three filters separate the recommendations below from the rest of the field.",
+        text: "Three things matter when you're picking a gate contractor, and none of them are 'they have a fancy truck.'",
       },
       {
         type: 'ul',
         items: [
-          "Verifiable local presence, a public address, a real phone number, project work documented through their own website or active Google Maps listing. Not a stock photo gallery scraped from a manufacturer's catalog.",
-          "Specialization that matches what most Nashville driveway gate projects actually need, ornamental iron fabrication, automated aluminum with LiftMaster or FAAC class operators, or full-service residential automation. Not 'we do everything' marketing copy.",
-          "Geographic spread across the metro. One pick in Davidson County, one in Williamson, one in Rutherford, so wherever your driveway sits, at least one of these crews has install experience in your zip code.",
+          "Real shop, real address, real phone. If the portfolio is catalog photos from the manufacturer's website and the 'service area' is 'Middle Tennessee,' you're talking to a middleman who's about to sub the work out. Every shop on this list has a building you can drive to.",
+          "They specialize in gate work, not 'we'll figure it out.' Ornamental iron, automated aluminum with real operator brands (LiftMaster, FAAC, that tier), or full-service residential automation. Match the specialty to your project, not the other way around.",
+          "One pick in each county. Wherever your driveway sits in the metro, at least one of these crews knows your zip and has poured concrete in your dirt.",
         ],
       },
       {
         type: 'p',
-        text: "Rankings reflect my honest take on who I'd recommend first for a typical residential install. Your specific project may be a better fit for #2 or #3. The per-company notes flag where each one wins.",
+        text: "Rankings are my honest take on who I'd call first for a typical residential install. Your project may fit #2 or #3 better. The notes under each one flag where each shop wins.",
       },
       { type: 'h2', text: '#1. Madison Steel & Iron Works of TN' },
       {
@@ -2092,14 +2092,10 @@ export const RESOURCES = [
         type: 'p',
         text: "Their answers to those five are usually the difference between a gate that opens reliably for ten years and one that's on its second operator by year three. The [Anatomy of a Fence Quote](/resources/fence-cost-breakdown) article covers the line-item logic that applies to gate quotes too, operator, access control, posts, and electrical should each be priced separately.",
       },
-      { type: 'h2', text: 'How We Built This List' },
+      { type: 'h2', text: 'Run a Nashville Gate Shop?' },
       {
         type: 'p',
-        text: "The strategy for this article: the names already dominating the Google local pack don't need our help. The shops below the fold, legitimate, capable, and quieter, get a fairer shot here when we rank the Best Drive Gate Contractors in Nashville. Future entries in the Best [X] in Nashville series follow the same brief: three verified picks researched from outside the top results, ranked by honest fit for the most common local projects. No paid placements, no affiliate deals.",
-      },
-      {
-        type: 'p',
-        text: "If you run a Nashville gate shop and want to be considered for inclusion as we publish more of these, the [submit your business](/submit-listing) form is open. Provide a real address, a real phone number, a website with project photos, and any state or municipal licenses, and we'll review.",
+        text: "Plenty of good gate contractors operate quietly across Middle Tennessee. If yours has a real address, a real phone, and a website with actual project photos (not catalog stock), the [submit your business](/submit-listing) form is open. Include your state or municipal license info. We update this list periodically.",
       },
       { type: 'h2', text: 'One Last Thing' },
       {
@@ -2120,24 +2116,24 @@ export const RESOURCES = [
     body: [
       {
         type: 'p',
-        text: "Decks have the same Nashville problem as gates. The names dominating Google's local pack are real and capable but they're booked, they're premium-priced, and they got there partly through years of SEO budget rather than because they're the only legitimate option. Below the fold there is a deeper bench of deck builders that quietly do the bulk of the actual work across Davidson, Williamson, and Rutherford. This article picks three of them, ranked in the order I'd start calling for a typical residential project. Same template as last week's [Best Driveway Gate Companies in Nashville](/resources/best-gate-installation-companies-nashville), same editorial rules.",
+        text: "Most deck phone calls start the same way. 'We got three quotes and they all said something different.' Yeah, they did. That's what happens when one's quoting Trex Transcend, one's quoting pressure-treated, and one's quietly subbing the framing to whoever's available that week. Sorting the quote is half the work. Picking the contractor first makes the quote sorting easier. There are about ten shops across Davidson, Williamson, and Rutherford I'd trust with a residential deck build, and three I'd actually call first. These are them. Same approach as last week's [Best Driveway Gate Companies in Nashville](/resources/best-gate-installation-companies-nashville).",
       },
-      { type: 'h2', text: 'How These Three Got the Pick' },
+      { type: 'h2', text: 'Why These Three' },
       {
         type: 'p',
-        text: 'Three filters separate the picks below from the rest of the field.',
+        text: "Three things matter when you're picking a deck contractor.",
       },
       {
         type: 'ul',
         items: [
-          "Verifiable local presence. A public street address (not a P.O. box or 'serving Middle Tennessee'), a real phone number, and a portfolio you can ask about in person. Lead-gen pages with stock photos and no Rutherford or Williamson address don't make the first cut.",
-          "Deck specialization, not 'we do everything.' Composite, cedar, pressure-treated, pergolas, screened porches. We avoided the general remodelers who'll build a deck if asked but learn the brand lineup on your job.",
-          "Geographic spread across the metro. One Davidson pick, one Williamson, one Rutherford, so wherever the project sits, at least one of these shops has install experience in your zip code.",
+          "Real shop, real address, real phone. If the portfolio is stock photos and the 'service area' is 'Middle Tennessee,' you're talking to a middleman who's about to sub the framing out. Every shop here has a building you can drive to.",
+          "Deck specialization, not 'we do everything.' Composite, cedar, pressure-treated, pergolas, screened porches. Pick the one whose answer to 'what do you build most?' actually matches your project, not the general remodeler who'll learn the composite brand lineup on your dime.",
+          "One pick in each county. Wherever the project sits in the metro, at least one of these shops knows your zip and has set ledger bolts on a house like yours.",
         ],
       },
       {
         type: 'p',
-        text: "Rankings reflect honest fit, not absolute order. Your specific project may be a better match for #2 or #3. The per-company notes flag where each one wins.",
+        text: "Rankings are my honest take on who I'd call first for a typical residential build. Your project may fit #2 or #3 better. The notes under each one flag where each shop wins.",
       },
       { type: 'h2', text: '#1. Outdoor Woodworks Inc' },
       {
@@ -2248,14 +2244,10 @@ export const RESOURCES = [
         type: 'p',
         text: "Their answers to those five usually predict whether the deck is the one you brag about at year ten or the one you're rebuilding at year eight. The [Anatomy of a Nashville Fence Quote](/resources/fence-cost-breakdown) article covers the same line-item logic that applies to deck quotes. Materials, labor, framing, fasteners, railing, and any permit work should each be priced separately.",
       },
-      { type: 'h2', text: 'How We Built This List' },
+      { type: 'h2', text: 'Run a Nashville Deck Shop?' },
       {
         type: 'p',
-        text: "Same strategy as the rest of the Best [X] in Nashville series. The names already dominating the Google local pack don't need our help. The shops below the fold, legitimate, capable, and quieter, get a fairer shot here. Future entries in the series follow the same brief: three verified picks researched from outside the top results, ranked by honest fit for the most common local projects. No paid placements, no affiliate deals.",
-      },
-      {
-        type: 'p',
-        text: "If you run a Nashville deck shop and want to be considered for future updates, the [submit your business](/submit-listing) form is open. Provide a real address, a real phone number, a website with project photos, and any state or municipal licenses, and we'll review.",
+        text: "Plenty of good deck builders operate quietly across Middle Tennessee. If yours has a real address, a real phone, and a website with actual project photos (not stock), the [submit your business](/submit-listing) form is open. Include your license info. We update this list periodically.",
       },
       { type: 'h2', text: 'One Last Thing' },
       {
