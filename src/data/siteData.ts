@@ -14,6 +14,30 @@ export const COMPANY = {
 
 export const RESOURCE_PUBLISHED_AT = '2026-06-01T08:00:00-05:00'
 
+/**
+ * Current month's Gold Sponsor displayed in the SponsorStrip just under
+ * the hero on most pages. Set to `null` to hide the strip everywhere.
+ *
+ * `profileHref` accepts an internal path (e.g. `/contractors/<slug>`) or
+ * an external URL (starting with `http`). When external, the link gets
+ * the sitewide `rel="noopener noreferrer nofollow"` treatment.
+ */
+export const SPONSOR: {
+  name: string
+  initials: string
+  tagline: string
+  rating: number
+  reviews: number
+  profileHref: string
+} | null = {
+  name: 'Music City Fence Co.',
+  initials: 'MC',
+  tagline: `${CITY.name}'s #1 Residential Fence Installer · Licensed & Insured · Free Estimates`,
+  rating: 4.9,
+  reviews: 214,
+  profileHref: '/contractors',
+}
+
 export const FENCE_TYPES = [
   {
     slug: 'wood-privacy',

@@ -9,6 +9,7 @@ import {
   Wrench,
 } from 'lucide-react'
 import PageHero from '../components/shared/PageHero'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
@@ -124,6 +125,7 @@ export default function Repair() {
         crumbs={[{ label: 'Fence Repair' }]}
         right={<CallbackForm />}
       />
+      <SponsorStrip />
 
       <section className="bg-white section-padding">
         <div className="container-wide">

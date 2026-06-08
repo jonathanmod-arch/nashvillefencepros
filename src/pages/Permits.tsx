@@ -1,4 +1,5 @@
 import PageHero from '../components/shared/PageHero'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import CallbackForm from '../components/shared/CallbackForm'
 import PermitsSection from '../components/home/PermitsSection'
 import LeadGenSection from '../components/home/LeadGenSection'
@@ -59,6 +60,7 @@ export default function Permits() {
         crumbs={[{ label: 'Permits & Rules' }]}
         right={<CallbackForm />}
       />
+      <SponsorStrip />
 
       <PermitsSection />
 

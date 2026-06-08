@@ -1,4 +1,5 @@
 import PageHero from '../components/shared/PageHero'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import ContractorDirectory from '../components/home/ContractorDirectory'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { CONTRACTORS } from '../data/contractors'
@@ -40,6 +41,7 @@ export default function Contractors() {
         description={`Compare licensed ${CITY.name} fence installers and companies for residential and commercial fence installation. Hand-picked, insured, and rated by real ${CITY.name} homeowners, filter by area, fence type, and project type.`}
         crumbs={[{ label: 'Find a Pro' }]}
       />
+      <SponsorStrip />
       <ContractorDirectory />
       <LeadGenSection />
     </>

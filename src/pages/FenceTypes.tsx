@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
@@ -136,6 +137,7 @@ export default function FenceTypes() {
           ]}
           right={<CallbackForm />}
         />
+        <SponsorStrip />
 
         <section className="bg-white section-padding">
           <div className="container-wide grid lg:grid-cols-3 gap-10">
@@ -282,6 +284,7 @@ export default function FenceTypes() {
         crumbs={[{ label: 'Fence Types' }]}
         right={<CallbackForm />}
       />
+      <SponsorStrip />
       <section className="bg-white section-padding">
         <div className="container-wide">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,4 +1,5 @@
 import HeroSection from '../components/home/HeroSection'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import TrustBar from '../components/home/TrustBar'
 import WhyFenceSection from '../components/home/WhyFenceSection'
 import FenceTypesSection from '../components/home/FenceTypesSection'
@@ -47,6 +48,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <SponsorStrip />
       <TrustBar />
       <WhyFenceSection />
       <FenceTypesSection />

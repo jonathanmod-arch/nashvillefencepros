@@ -1,4 +1,5 @@
 import PageHero from '../components/shared/PageHero'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import CallbackForm from '../components/shared/CallbackForm'
 import CostGuideSection from '../components/home/CostGuideSection'
 import LeadGenSection from '../components/home/LeadGenSection'
@@ -57,6 +58,7 @@ export default function CostGuide() {
         crumbs={[{ label: 'Cost Guide' }]}
         right={<CallbackForm />}
       />
+      <SponsorStrip />
 
       <CostGuideSection />
 

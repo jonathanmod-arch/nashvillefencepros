@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import { displayTitle, isAutoMonthly, monthYearString } from '../lib/resourceTitle'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
@@ -242,6 +243,7 @@ export default function Resources() {
           description={r.excerpt}
           crumbs={[{ label: 'Resources', to: '/resources' }, { label: r.category }]}
         />
+        <SponsorStrip />
         <section className="bg-white section-padding">
           <div className="container-wide grid lg:grid-cols-3 gap-12">
             <article className="lg:col-span-2">
@@ -365,6 +367,7 @@ export default function Resources() {
         description="In-depth, locally-written guides on every part of installing a fence in Middle Tennessee."
         crumbs={[{ label: 'Resources' }]}
       />
+      <SponsorStrip />
       <section className="bg-white section-padding">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

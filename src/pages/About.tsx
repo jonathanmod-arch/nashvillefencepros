@@ -11,6 +11,7 @@ import {
   Users,
 } from 'lucide-react'
 import PageHero from '../components/shared/PageHero'
+import SponsorStrip from '../components/shared/SponsorStrip'
 import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import { COMPANY } from '../data/siteData'
@@ -85,6 +86,7 @@ export default function About() {
         crumbs={[{ label: 'About' }]}
         right={<CallbackForm />}
       />
+      <SponsorStrip />
 
       <section className="bg-white section-padding">
         <div className="container-wide max-w-4xl">
