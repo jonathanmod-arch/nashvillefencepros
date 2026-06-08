@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Calculator, Star } from 'lucide-react'
+import { ArrowRight, Calculator } from 'lucide-react'
 import HeroQuoteForm from './HeroQuoteForm'
 import { CITY } from '../../config/city'
 
@@ -56,16 +56,6 @@ export default function HeroSection() {
             <Link to="/cost-guide" className="btn-secondary">
               <Calculator className="w-4 h-4" /> Fence Cost Calculator
             </Link>
-          </div>
-
-          <div className="mt-7 flex items-center gap-2.5 text-[13.5px]">
-            <div className="flex">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <Star key={i} className="w-4 h-4 fill-oak-400 text-oak-400" />
-              ))}
-            </div>
-            <span className="font-semibold text-onyx-700">4.9/5</span>
-            <span className="text-onyx-400">from 380+ {CITY.name} homeowners</span>
           </div>
         </div>
 

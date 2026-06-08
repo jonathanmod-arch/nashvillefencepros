@@ -42,7 +42,10 @@ export default function WhyFenceSection() {
             </div>
           </div>
 
-          <div className="relative reveal-up" style={{ animationDelay: '0.1s' }}>
+          <div
+            className="relative reveal-up pb-16 sm:pb-20 lg:pb-0"
+            style={{ animationDelay: '0.1s' }}
+          >
             <div className="relative rounded-2xl overflow-hidden shadow-strong w-full h-[420px] lg:h-[480px] bg-warmgray">
               <SafeImage
                 src={IMAGES.hero}
@@ -55,7 +58,7 @@ export default function WhyFenceSection() {
             </div>
 
             <div
-              className="absolute -bottom-5 left-4 sm:left-8 bg-white rounded-2xl shadow-strong px-6 py-5 max-w-[260px] reveal-up"
+              className="absolute bottom-0 lg:-bottom-5 left-4 sm:left-8 bg-white rounded-2xl shadow-strong px-6 py-5 max-w-[260px] reveal-up"
               style={{ animationDelay: '0.4s' }}
             >
               <div className="text-[11px] font-semibold text-onyx-400 mb-1">
