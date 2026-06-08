@@ -233,6 +233,9 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Master+Fence+LLC+Murfreesboro+TN',
     source: 'google-maps',
+    credentials: {
+      licenses: ['Tennessee Contractor License #82926'],
+    },
   },
   {
     slug: 'precision-fencing',
@@ -636,6 +639,9 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=American+Fence+and+Gate+Brentwood+TN',
     source: 'google-maps',
+    credentials: {
+      memberships: ['BBB Accredited Business, A+ rating (accredited since 2022)'],
+    },
   },
   {
     slug: 'outdoor-woodworks',
@@ -686,6 +692,9 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Harpeth+Decks+Franklin+TN',
     source: 'google-maps',
+    credentials: {
+      certifications: ['TrexPro Platinum Installer (since 2020)'],
+    },
   },
   {
     slug: 'the-covered-patio',
@@ -711,6 +720,12 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=The+Covered+Patio+Murfreesboro+TN',
     source: 'google-maps',
+    credentials: {
+      memberships: [
+        'BBB Accredited Business, A+ rating (accredited since 2021)',
+        'Rutherford County Chamber of Commerce Member',
+      ],
+    },
   },
 ]
 
