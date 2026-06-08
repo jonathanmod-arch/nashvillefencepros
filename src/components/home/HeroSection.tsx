@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Calculator, Star } from 'lucide-react'
-import SafeImage from '../shared/SafeImage'
-import { IMAGES } from '../../data/imageUrls'
+import HeroQuoteForm from './HeroQuoteForm'
 import { CITY } from '../../config/city'
 
 const bullets = [
@@ -70,33 +69,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="hidden lg:block relative reveal-up" style={{ animationDelay: '0.1s' }}>
-          <div className="relative rounded-2xl overflow-hidden shadow-strong w-full h-[550px] bg-warmgray">
-            <SafeImage
-              src={IMAGES.hero}
-              alt={`${CITY.nameLower}-fence-installers`}
-              className="w-full h-full object-cover"
-              sizes="(min-width: 1024px) 45vw, 0px"
-              widths={[768, 1024, 1280, 1600]}
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-forest-500/15 via-transparent to-transparent" />
-          </div>
-
-          <div
-            className="absolute -bottom-5 left-4 sm:left-8 bg-white rounded-2xl shadow-strong px-6 py-5 max-w-[260px] reveal-up"
-            style={{ animationDelay: '0.5s' }}
-          >
-            <div className="text-[11px] font-semibold text-onyx-400 mb-1">
-              Average Project Cost
-            </div>
-            <div className="text-[38px] font-heading font-black text-forest-500 tracking-tightest leading-none">
-              {CITY.heroCardPrice}
-            </div>
-            <div className="text-[12px] text-onyx-500 mt-1.5">
-              {CITY.heroCardSubline}
-            </div>
-          </div>
+        <div className="reveal-up" style={{ animationDelay: '0.1s' }}>
+          <HeroQuoteForm />
         </div>
       </div>
     </section>
