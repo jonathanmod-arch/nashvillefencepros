@@ -174,7 +174,18 @@ export default function About() {
             <div className="heading-accent" />
             <p className="mt-4 text-[15.5px] text-onyx-700/80 leading-relaxed">
               Every contractor before being added to the directory must clear the same
-              checklist we wrote for homeowners hiring on their own:
+              checklist we wrote for homeowners hiring on their own. We also flag{' '}
+              <a
+                href="https://www.americanfenceassociation.com"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
+              >
+                American Fence Association
+              </a>{' '}
+              membership and Certified Fence Professional (CFP) credentials on profiles
+              where applicable, both are voluntary signals that a contractor is investing
+              in trade education beyond what Tennessee requires.
             </p>
             <ol className="mt-6 space-y-3 text-sm text-onyx-700/85">
               {[

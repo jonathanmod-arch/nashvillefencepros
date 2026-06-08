@@ -1578,6 +1578,10 @@ export const RESOURCES = [
         type: 'p',
         text: "If you get 'we're fully insured' without a COI in hand, or if the contractor pushes back on having the broker email proof directly, that's the answer. The good ones make it easy because they have nothing to hide.",
       },
+      {
+        type: 'p',
+        text: "One more credential worth asking about while you're checking paperwork: trade association membership. The [American Fence Association](https://www.americanfenceassociation.com) is the industry's national body, and member companies commit to a code of ethics plus have access to the AFA's Certified Fence Professional (CFP) program. AFA membership isn't a license substitute, and plenty of solid Nashville crews aren't members. But when a contractor IS a member, it signals they're investing in trade education beyond what Tennessee licensing requires. Ask if they're an AFA member, and ask if anyone on the crew holds the CFP designation.",
+      },
       { type: 'h2', text: '2. Will you call Tennessee 811 before digging, and how many days ahead?' },
       {
         type: 'p',
@@ -1978,6 +1982,10 @@ export const RESOURCES = [
           "They specialize in gate work, not 'we'll figure it out.' Ornamental iron, automated aluminum with real operator brands (LiftMaster, FAAC, that tier), or full-service residential automation. Match the specialty to your project, not the other way around.",
           "One pick in each county. Wherever your driveway sits in the metro, at least one of these crews knows your zip and has poured concrete in your dirt.",
         ],
+      },
+      {
+        type: 'p',
+        text: "Trade association membership is the tiebreaker when the three above are even. [American Fence Association](https://www.americanfenceassociation.com) membership or a Certified Fence Professional on staff both signal a shop that's plugged into the trade beyond what Tennessee licensing requires. Worth asking when you're calling for quotes.",
       },
       {
         type: 'p',
