@@ -68,19 +68,6 @@ export default function HeroSection() {
             <span className="font-semibold text-onyx-700">4.9/5</span>
             <span className="text-onyx-400">from 380+ {CITY.name} homeowners</span>
           </div>
-
-          <div className="mt-6 inline-flex items-center gap-3 rounded-xl border border-warmgray bg-white/70 px-4 py-2.5 shadow-soft">
-            <img
-              src="/images/afa-logo.png"
-              alt="American Fence Association"
-              className="h-9 w-auto"
-              loading="eager"
-              decoding="async"
-            />
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-onyx-500 border-l border-onyx-200/70 pl-3">
-              Proud Member
-            </span>
-          </div>
         </div>
 
         <div className="hidden lg:block relative reveal-up" style={{ animationDelay: '0.1s' }}>
