@@ -90,7 +90,7 @@ export default function HeroQuoteForm() {
           Free Quote · No Obligation
         </div>
         <h3 className="font-heading font-black text-xl md:text-2xl tracking-tightest text-onyx-700 leading-tight">
-          Get Up to 3 {CITY.name} Quotes
+          Get Up to 3 Fence Installation Quotes from Local {CITY.name} Contractors
         </h3>
         <p className="text-[12px] text-onyx-700/60 mt-1">
           One form, vetted local pros, replies within 24 hours.
