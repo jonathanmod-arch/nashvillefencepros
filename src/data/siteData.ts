@@ -2264,6 +2264,126 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'pool-safety-barriers-nashville',
+    title: 'Pool Safety Barriers in Nashville: Mesh, Aluminum, Glass, or Vinyl?',
+    category: 'Comparison',
+    readTime: '8 min',
+    excerpt:
+      "Buyer's guide to the four pool barrier types that pass 2018 ISPSC code in Tennessee — removable mesh, ornamental aluminum, glass panels, and narrow-profile vinyl picket. What each costs in Nashville, where each wins, and what I'd actually install if it were my pool.",
+    img: IMAGES.resources['pool-safety-barriers-nashville'],
+    imageAlt: 'Aluminum pool safety barrier around a Nashville backyard pool, pool barrier types compared',
+    body: [
+      {
+        type: 'p',
+        text: "Every spring my phone lights up with the same call. 'We're putting in a pool and the contractor is quoting us a removable mesh barrier, is that the right call?' Sometimes it is. Often it's not. Pool barriers are one of those backyard projects where the cheapest code-compliant option is the one inspectors approve fastest, which is why a lot of Nashville pools end up with a removable mesh that the kid figures out how to walk around by age six. The real question on a pool barrier project isn't 'will this pass code,' it's 'will this be the right barrier fifteen years from now?' Let me run through the four real options the way I would on a backyard walk-around in Forest Hills or Brentwood, and tell you what I'd actually install if the pool was mine.",
+      },
+      { type: 'h2', text: "Quick Recap: What 'Code-Compliant' Actually Means" },
+      {
+        type: 'p',
+        text: "Tennessee enforces the 2018 ISPSC pool barrier code at the state level, and Metro Nashville Codes applies it to every residential pool. The full requirement list is in our [Pool Fence Safety Laws in Tennessee](/resources/pool-fence-safety-tn) guide, but the cliff notes: 48-inch minimum height, openings under 4 inches anywhere in the barrier, no climbable horizontals on the outside face, self-closing self-latching gates with the latch 54 inches above grade, and a maximum 2-inch gap at the bottom (4 inches if the surface is a concrete slab). Every barrier on this list passes those rules when installed right. The interesting question is which one you actually want to live with.",
+      },
+      { type: 'h2', text: 'The Four Barriers That Pass ISPSC in Nashville' },
+      {
+        type: 'p',
+        text: 'Pool barriers in Davidson and Williamson typically fall into one of these four buckets. Each one has a sweet spot and a list of trade-offs. Pick the bucket that fits your yard first, then work the install variables.',
+      },
+      { type: 'h3', text: '1. Removable Mesh Pool Barriers' },
+      {
+        type: 'p',
+        text: "Black polyester mesh stretched over thin aluminum poles set into ground sleeves drilled into the pool deck. The whole barrier comes apart for the off-season and re-installs in about 30 minutes. Most Nashville mesh installs run $14 to $22 per linear foot, putting a typical 80-foot pool barrier with a self-closing gate at $1,400 to $2,200 installed.",
+      },
+      {
+        type: 'p',
+        text: "Where it wins: budget, removability, decent visibility through the mesh, fastest install of the four. Pool parties feel uninterrupted because you can pull the barrier between the gathering and the water. The mesh is forgiving in a way the others aren't — kids who run into it bounce, they don't bruise.",
+      },
+      {
+        type: 'p',
+        text: "Where it loses: aesthetics (a black mesh wall in a Forest Hills backyard reads 'pool fence,' not 'integrated landscape'), durability (5 to 7 years before UV degrades the mesh and pole sleeves loosen in the deck), and the climb question. Mesh is harder to climb than people think, but a determined seven-year-old figures it out by year three. If your safety calculus depends on the barrier alone, no pool alarm, no door alarm, no cover, mesh is not where you'd start.",
+      },
+      { type: 'h3', text: '2. Ornamental Aluminum' },
+      {
+        type: 'p',
+        text: "Powder-coated aluminum pickets, usually black, at 48 or 54 inches tall, with narrow picket spacing under 4 inches and a code-compliant self-closing gate. This is what most code-compliant Nashville pool installs land on once they look past mesh. Installed cost runs $35 to $55 per linear foot for residential 4-foot, plus $450 to $850 for the gate. A typical 80-foot pool barrier with one gate hits $3,300 to $5,250 installed.",
+      },
+      {
+        type: 'p',
+        text: "Where it wins: lifespan (powder-coated aluminum hits 25-plus years in Nashville humidity with zero maintenance), aesthetics (reads as ornamental, not as 'safety barrier'), zero rust, and serious climb-resistance when the picket profile is right. The pool-rated profiles eliminate any horizontal that can serve as a foothold.",
+      },
+      {
+        type: 'p',
+        text: "Where it loses: cost (roughly twice mesh), permanence (you're not pulling it down for a Saturday cookout), and the visual block. A 54-inch aluminum picket fence is visible from every angle of the yard. Some homeowners prefer the visual openness of glass for exactly that reason.",
+      },
+      { type: 'h3', text: '3. Glass Panel Pool Barriers' },
+      {
+        type: 'p',
+        text: "Tempered glass panels (12mm minimum thickness) mounted on stainless steel posts or set into a frameless channel system. The highest install cost of the four by a wide margin, anywhere from $120 to $240 per linear foot in Davidson and Williamson, so an 80-foot pool barrier with one gate hits $10,000 to $19,500 installed.",
+      },
+      {
+        type: 'p',
+        text: "Where it wins: visual openness (the barrier disappears from most viewing angles), high-end aesthetic, zero climb-aid horizontals at all, and a maintenance pattern of 'wipe it down twice a year.' For a Belle Meade pool deck or a Forest Hills modern build where the landscape sightlines matter, glass is the call.",
+      },
+      {
+        type: 'p',
+        text: "Where it loses: cost (4 to 6x aluminum), spotting in Nashville's hard water (you'll be wiping mineral marks twice a week if the pool sees heavy use), and replacement complexity. A broken panel takes 2 to 4 weeks to source-match, and pool toys hitting glass crack it. Panel replacements aren't cheap.",
+      },
+      { type: 'h3', text: '4. Vinyl Picket (Narrow-Profile)' },
+      {
+        type: 'p',
+        text: "Vinyl picket with sub-4-inch spacing, 48-inch height, and code-compliant gate hardware. The trick is the profile, standard 6-inch vinyl picket spacing fails ISPSC immediately. The pool-rated profile sits at 3.5 to 3.75-inch picket spacing. Installed cost runs $32 to $48 per linear foot, so an 80-foot barrier with a gate hits $2,900 to $4,250.",
+      },
+      {
+        type: 'p',
+        text: "Where it wins: maintenance-free aesthetic, white-or-tan color options that work with HOA architectural review, decent climb resistance at the narrow profile, and a 25-year manufacturer warranty on the vinyl itself. A common pick on Williamson County HOA pool builds where aluminum reads too industrial.",
+      },
+      {
+        type: 'p',
+        text: "Where it loses: limited color palette (mostly white, sometimes tan or gray), visual heft (vinyl always reads as 'fence' even at narrow spacing), and the post anchor question. Vinyl posts pulled out of clay-heavy Nashville soil within 5 years if the installer didn't set them deep with concrete. Spec at least 30-inch post depth set in concrete and you'll be fine.",
+      },
+      { type: 'h2', text: "What I'd Install on My Own Pool" },
+      {
+        type: 'p',
+        text: 'If it were my pool, the call would depend on the yard and the kids:',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Estate property, no specific kid-safety urgency, sightline-focused yard: glass.',
+          'Standard residential pool, kids under 12, normal yard, want it to last: ornamental aluminum at 48 inches with a narrow picket profile.',
+          'Williamson County HOA build where aluminum reads too industrial for ARC review: narrow-profile vinyl picket.',
+          'Rental property, budget-driven, planning to swap out in 5 to 7 years: removable mesh.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "The default I'd push toward for most family pools in the Nashville metro is aluminum. The cost premium over mesh pays back in lifespan within 8 years, the aesthetic doesn't shout 'safety barrier,' and the climb-resistance is meaningfully better when the picket profile is specced right. Glass is the upgrade pick. Vinyl is the HOA-friendly pick. Mesh is the rental pick.",
+      },
+      { type: 'h2', text: 'What to Ask Your Nashville Pool Barrier Installer' },
+      {
+        type: 'p',
+        text: 'Code compliance is the floor. These five questions separate the installer who passes inspection on the first walk from the one who needs a return visit and a punch list:',
+      },
+      {
+        type: 'ol',
+        items: [
+          "What's the picket profile and on-center spacing? Sub-4-inch is mandatory, but some profiles handle it more elegantly. Get the exact dimension in writing.",
+          'Show me the gate hardware spec, self-closing AND self-latching, latch at 54 inches minimum, swing direction away from the pool. Magna Latch or equivalent.',
+          'How are you anchoring the posts in our soil type? Davidson and Williamson clay needs at least 30-inch post depth set in concrete for any barrier expected to last past year five.',
+          "What's the climb-aid plan for any decorative top rails? Horizontals under 45 inches apart on the outside face are climbable per ISPSC, even when they look like trim.",
+          "Will you be on-site for the Metro Codes pool barrier inspection? The 'we'll just leave the paperwork' answer fails more inspections than it passes, and a failed inspection means you reschedule the entire pool fill date.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Anyone hedging on any of those five is the wrong installer. The [seven questions in our installer-vetting guide](/resources/hire-nashville-fence-installer-questions) apply double for pool barrier work, because the failure mode here isn't a leaning fence at year three, it's the kind of failure mode you can't ever fix.",
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "Pool barriers are the one fence-adjacent project where the cheap option isn't just lower quality, it's actively riskier. Removable mesh that gets pulled and not re-installed before a kid finds the pool is the highest-frequency drowning scenario in Tennessee residential pool incident data. Pick the barrier you want to live with for ten-plus years, the install crew who can pass Metro Codes on the first inspection, and the gate hardware that closes itself even when you're not watching. The 'we'll save a thousand on the barrier' line is the line right before the unspeakable phone call. Pick once, install right, walk away.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
