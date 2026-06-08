@@ -62,6 +62,50 @@
   .card-soft {
     @apply bg-white rounded-xl shadow-soft hover:shadow-medium transition-all duration-300;
   }
+
+  /* Unified form input chrome across every form on the site.
+     Each form (CallbackForm, HeroQuoteForm, LeadGenSection,
+     SubmitListing, Advertise) keeps its own size/color block,
+     but appearance reset, spinner hiding, and custom select
+     arrow live here so selects and number inputs match the
+     styled text inputs across every browser. */
+  .cf-input,
+  .hq-input,
+  .input-base,
+  .ad-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: inherit;
+  }
+
+  .cf-input[type='number'],
+  .hq-input[type='number'],
+  .input-base[type='number'],
+  .ad-input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  .cf-input[type='number']::-webkit-outer-spin-button,
+  .cf-input[type='number']::-webkit-inner-spin-button,
+  .hq-input[type='number']::-webkit-outer-spin-button,
+  .hq-input[type='number']::-webkit-inner-spin-button,
+  .input-base[type='number']::-webkit-outer-spin-button,
+  .input-base[type='number']::-webkit-inner-spin-button,
+  .ad-input[type='number']::-webkit-outer-spin-button,
+  .ad-input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  select.cf-input,
+  select.hq-input,
+  select.input-base,
+  select.ad-input {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1.5L6 6.5L11 1.5' stroke='%231A1D1E' stroke-opacity='0.55' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.875rem center;
+    padding-right: 2.5rem;
+  }
 }
 
 @layer utilities {
