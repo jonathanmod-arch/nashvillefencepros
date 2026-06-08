@@ -253,6 +253,48 @@ export default function ContractorProfile() {
               )}
             </Card>
 
+            {c.credentials &&
+              (c.credentials.licenses?.length ||
+                c.credentials.memberships?.length ||
+                c.credentials.certifications?.length) && (
+                <Card>
+                  <div className="flex items-center gap-2 mb-4">
+                    <ShieldCheck className="w-4 h-4 text-forest-500" />
+                    <h2 className="heading-card !text-xl">
+                      Memberships, Licenses & Associations
+                    </h2>
+                  </div>
+                  <div className="space-y-5">
+                    {(
+                      [
+                        ['Licenses', c.credentials.licenses],
+                        ['Memberships', c.credentials.memberships],
+                        ['Certifications', c.credentials.certifications],
+                      ] as const
+                    ).map(([label, items]) =>
+                      items && items.length > 0 ? (
+                        <div key={label}>
+                          <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 mb-2">
+                            {label}
+                          </div>
+                          <ul className="space-y-1.5">
+                            {items.map((item) => (
+                              <li
+                                key={item}
+                                className="flex items-start gap-2 text-sm text-onyx-700/85"
+                              >
+                                <CheckCircle2 className="w-3.5 h-3.5 text-forest-500 mt-0.5 flex-shrink-0" />
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ) : null,
+                    )}
+                  </div>
+                </Card>
+              )}
+
             <Card>
               <h2 className="heading-card !text-xl mb-4">Project Gallery</h2>
               <div className="relative rounded-xl overflow-hidden bg-warmgray aspect-[16/9] mb-3">

@@ -58,6 +58,9 @@ type FormState = {
   yearsInBusiness: string
   projectsCompleted: string
   license: string
+  detailedLicenses: string
+  memberships: string
+  certifications: string
   specialties: string
   responseTime: string
   pricing: Pricing[]
@@ -87,6 +90,9 @@ const initialForm: FormState = {
   yearsInBusiness: '',
   projectsCompleted: '',
   license: '',
+  detailedLicenses: '',
+  memberships: '',
+  certifications: '',
   specialties: '',
   responseTime: '',
   pricing: [EMPTY_PRICING, EMPTY_PRICING, EMPTY_PRICING, EMPTY_PRICING],
@@ -486,6 +492,45 @@ export default function SubmitListing() {
                   onChange={(e) => set('license', e.target.value)}
                   placeholder="Licensed & Insured"
                   className="ad-input"
+                />
+              </Field>
+
+              <Field
+                label="Licenses (one per line)"
+                hint="Specific licenses you hold. State GC license number, municipal business license, electrical license, etc."
+              >
+                <textarea
+                  rows={3}
+                  value={form.detailedLicenses}
+                  onChange={(e) => set('detailedLicenses', e.target.value)}
+                  placeholder={`TN General Contractor License #00012345\nDavidson County Business License`}
+                  className="ad-input resize-y"
+                />
+              </Field>
+
+              <Field
+                label="Memberships & associations (one per line)"
+                hint="Trade associations and industry bodies. AFA, BBB, chamber of commerce, etc."
+              >
+                <textarea
+                  rows={3}
+                  value={form.memberships}
+                  onChange={(e) => set('memberships', e.target.value)}
+                  placeholder={`American Fence Association (AFA) Member\nBBB Accredited Business\nNashville Chamber of Commerce`}
+                  className="ad-input resize-y"
+                />
+              </Field>
+
+              <Field
+                label="Certifications (one per line)"
+                hint="Trade certifications or manufacturer-certified installer programs."
+              >
+                <textarea
+                  rows={3}
+                  value={form.certifications}
+                  onChange={(e) => set('certifications', e.target.value)}
+                  placeholder={`Certified Fence Professional (CFP)\nTrex Pro Installer\nLiftMaster Certified Dealer`}
+                  className="ad-input resize-y"
                 />
               </Field>
 

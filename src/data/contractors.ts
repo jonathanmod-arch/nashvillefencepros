@@ -27,6 +27,15 @@ export type Contractor = {
   placeId?: string
   coordinates?: [number, number]
   source?: 'directory' | 'google-maps'
+  // Optional detailed credentials for the profile's
+  // Memberships, Licenses & Associations card. Each array entry is
+  // one display string (e.g. "American Fence Association Member"
+  // or "TN GC License #00012345"). Omit fields with no entries.
+  credentials?: {
+    licenses?: string[]
+    memberships?: string[]
+    certifications?: string[]
+  }
 }
 
 export const AREAS = [
