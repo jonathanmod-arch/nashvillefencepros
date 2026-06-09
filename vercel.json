@@ -6,7 +6,23 @@
   "installCommand": "npm install",
   "redirects": [
     { "source": "/neighborhoods", "destination": "/service-areas", "permanent": true },
-    { "source": "/neighborhoods/:slug", "destination": "/service-areas/:slug", "permanent": true }
+    { "source": "/neighborhoods/:slug", "destination": "/service-areas/:slug", "permanent": true },
+
+    { "source": "/fence-types", "destination": "/services/fence-installation", "permanent": true },
+    { "source": "/fence-types/wood-privacy", "destination": "/services/wood-fence", "permanent": true },
+    { "source": "/fence-types/vinyl", "destination": "/services/vinyl-fence", "permanent": true },
+    { "source": "/fence-types/aluminum", "destination": "/services/aluminum-fence", "permanent": true },
+    { "source": "/fence-types/chain-link", "destination": "/services/chain-link-fence", "permanent": true },
+    { "source": "/fence-types/horizontal-privacy", "destination": "/services/horizontal-cedar-fence", "permanent": true },
+    { "source": "/fence-types/farm-ranch", "destination": "/services/farm-ranch-fence", "permanent": true },
+    { "source": "/fence-types/wrought-iron", "destination": "/services/wrought-iron-fence", "permanent": true },
+    { "source": "/fence-types/pet-fence", "destination": "/services/pet-fence", "permanent": true },
+    { "source": "/fence-types/hidden-pet-fence", "destination": "/services/hidden-pet-fence", "permanent": true },
+    { "source": "/fence-types/pool-safety", "destination": "/services/pool-fence", "permanent": true },
+
+    { "source": "/repair", "destination": "/services/fence-repair", "permanent": true },
+    { "source": "/commercial-fencing", "destination": "/services/commercial-fencing", "permanent": true },
+    { "source": "/services/warehouse-industrial-fencing", "destination": "/services/commercial-fencing", "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
