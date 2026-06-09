@@ -69,7 +69,7 @@ export default function CallbackForm() {
 
       <div>
         <label className="block text-[10px] font-bold uppercase tracking-[0.18em] text-onyx-500 mb-1.5">
-          Full Name <span className="text-oak-500">*</span>
+          Full Name
         </label>
         <input
           required
@@ -82,7 +82,7 @@ export default function CallbackForm() {
 
       <div>
         <label className="block text-[10px] font-bold uppercase tracking-[0.18em] text-onyx-500 mb-1.5">
-          Email <span className="text-oak-500">*</span>
+          Email
         </label>
         <input
           required
@@ -97,7 +97,7 @@ export default function CallbackForm() {
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="block text-[10px] font-bold uppercase tracking-[0.18em] text-onyx-500 mb-1.5">
-            Phone <span className="text-oak-500">*</span>
+            Phone
           </label>
           <input
             required
@@ -110,7 +110,7 @@ export default function CallbackForm() {
         </div>
         <div>
           <label className="block text-[10px] font-bold uppercase tracking-[0.18em] text-onyx-500 mb-1.5">
-            ZIP Code <span className="text-oak-500">*</span>
+            ZIP Code
           </label>
           <input
             required
