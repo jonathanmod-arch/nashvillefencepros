@@ -216,7 +216,7 @@ export default function Navbar() {
         aria-hidden={!mobileOpen}
       >
         <div className="overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
+          <div className="max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
             <div className="py-2">
               <Link
                 to="/services/fence-installation"
