@@ -16,6 +16,7 @@ export const IMAGES = {
     'farm-ranch': 'https://unsplash.com/photos/Jl5wx2QVrSs/download?w=1200&q=80',
     'wrought-iron': 'https://unsplash.com/photos/oVueqggYsbU/download?w=1200&q=80',
     'pet-fence': 'https://unsplash.com/photos/7U1q8b4hinQ/download?w=1200&q=80',
+    'hidden-pet-fence': 'https://unsplash.com/photos/7U1q8b4hinQ/download?w=1200&q=80',
     'pool-safety': 'https://unsplash.com/photos/rCHO0tFxLlk/download?w=1200&q=80',
   },
   neighborhoods: {

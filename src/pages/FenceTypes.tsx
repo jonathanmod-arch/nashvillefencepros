@@ -50,6 +50,10 @@ const FENCE_TYPE_META: Record<string, { title: string; description: string }> = 
     title: `Invisible & Pet Fence Installation ${CITY.name} ${CITY.stateAbbr} | Dog Fences`,
     description: `Invisible, hidden, and electric dog fence installation in ${CITY.name}. Best-rated invisible fence installation in ${CITY.name} plus traditional pet fence installation services. Compare ${CITY.name} best dog fence installers.`,
   },
+  'hidden-pet-fence': {
+    title: `${CITY.name} Hidden Dog Fence Installers | Buried Wire & GPS Collar Systems`,
+    description: `${CITY.name} hidden dog fence installers, compare vetted contractors of buried boundary wire and GPS collar systems for dogs in ${CITY.name} ${CITY.stateAbbr}. Pricing per linear foot, containment training included, free quotes within 24 hours.`,
+  },
   'pool-safety': {
     title: `Pool Fence Installation ${CITY.name} ${CITY.stateAbbr} | ISPSC Pool Barriers`,
     description: `Pool fence installation in ${CITY.name} ${CITY.stateAbbr} that meets the ${CITY.poolBarrierCode} barrier code. Aluminum, mesh, and glass pool fencing installation and repair services in ${CITY.name} from vetted installers.`,
@@ -129,7 +133,7 @@ export default function FenceTypes() {
       <>
         <PageHero
           eyebrow="Fence Material Guide"
-          title={`${t.name} Fencing in ${CITY.name}`}
+          title={t.pageTitle ?? `${t.name} Fencing in ${CITY.name}`}
           description={t.description}
           crumbs={[
             { label: 'Fence Types', to: '/fence-types' },

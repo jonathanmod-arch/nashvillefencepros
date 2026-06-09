@@ -167,7 +167,6 @@ export default function HeroQuoteForm() {
                 {t.short ?? t.name}
               </option>
             ))}
-            <option value="hidden-pet-fence">Hidden Pet Fence</option>
             <option value="commercial-fencing">Commercial Fencing</option>
             <option value="undecided">Not sure yet</option>
           </select>

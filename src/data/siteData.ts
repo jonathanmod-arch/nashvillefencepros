@@ -136,6 +136,25 @@ export const FENCE_TYPES = [
     bestFor: 'Dog owners, HOA-restricted yards, large lots',
   },
   {
+    slug: 'hidden-pet-fence',
+    name: 'Hidden Dog Fence',
+    short: 'Hidden Pet Fence',
+    pageTitle: 'Hidden Dog Fence Installation in Nashville',
+    priceLow: 6,
+    priceHigh: 14,
+    description:
+      'Nashville hidden dog fence installers handle buried boundary wire systems, GPS collar setups, and HOA-friendly invisible dog fences. Most installs run $6–$14 per linear foot of buried wire plus the collar and transmitter package. Includes yard mapping, containment training, and a money-back trial period from the contractors we work with.',
+    img: IMAGES.fenceTypes['hidden-pet-fence'] ?? IMAGES.fenceTypes['pet-fence'],
+    features: [
+      'Buried boundary wire (no visible fence)',
+      'GPS or wireless collar systems',
+      'HOA-friendly invisible install',
+      'Containment training included',
+    ],
+    bestFor:
+      'Nashville dog owners with HOA-restricted yards, large lots, or homes where visible fencing is not allowed',
+  },
+  {
     slug: 'pool-safety',
     name: 'Pool Safety Fence',
     short: 'Pool',
