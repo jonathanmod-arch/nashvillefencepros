@@ -21,10 +21,12 @@ import { CITY } from '../config/city'
 
 // Surface the same 12 cityPages services the cross-product is sitemapped
 // against, so every neighborhood page links into its area-specific service
-// pages.
+// pages. Uses the full service name (not the short form) for commercial
+// intent — "Wood Fence Installation in Green Hills" reads as a CTA where
+// "Wood in Green Hills" doesn't.
 const CITY_SERVICE_LINKS = SERVICES.filter((s) => s.cityPages).map((s) => ({
   slug: s.slug,
-  label: s.short ?? s.name,
+  label: s.name,
 }))
 
 export default function Neighborhoods() {
@@ -168,10 +170,12 @@ export default function Neighborhoods() {
 
               <div className="mt-12 pt-10 border-t border-warmgray">
                 <h3 className="heading-card !text-2xl mb-2">
-                  Services in {n.name}
+                  Get Free {n.name} Quotes by Service
                 </h3>
                 <p className="text-body-lead mb-6">
-                  The highest-intent services we cover with {n.name}-specific pages.
+                  Tap the service that fits your project for installed pricing, popular{' '}
+                  {n.name} styles, and a free no-obligation quote from a vetted local
+                  crew. Replies within 2 hours, sometimes minutes.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-2">
                   {CITY_SERVICE_LINKS.map((cs) => (
@@ -186,6 +190,17 @@ export default function Neighborhoods() {
                       <ArrowRight className="w-3.5 h-3.5 text-onyx-300 group-hover:text-forest-500" />
                     </Link>
                   ))}
+                </div>
+                <div className="mt-5 flex flex-wrap gap-3 text-xs text-onyx-700/70">
+                  <span className="inline-flex items-center gap-1">
+                    <Check className="w-3.5 h-3.5 text-forest-500" /> Licensed & insured
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <Check className="w-3.5 h-3.5 text-forest-500" /> Free, no-obligation quotes
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <Check className="w-3.5 h-3.5 text-forest-500" /> Vetted {n.name} crews
+                  </span>
                 </div>
               </div>
             </div>
