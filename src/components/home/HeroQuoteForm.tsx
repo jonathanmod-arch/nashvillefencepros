@@ -93,7 +93,7 @@ export default function HeroQuoteForm() {
           Get Up to 3 Fence Installation Quotes from Local {CITY.name} Contractors
         </h3>
         <p className="text-[12px] text-onyx-700/60 mt-1">
-          One form, vetted local pros, replies within 24 hours.
+          One form, vetted local pros, replies within 2 hours, sometimes minutes.
         </p>
         <div className="mt-2.5 flex items-center gap-1.5 text-[11.5px]">
           <div className="flex">
@@ -167,6 +167,8 @@ export default function HeroQuoteForm() {
                 {t.short ?? t.name}
               </option>
             ))}
+            <option value="hidden-pet-fence">Hidden Pet Fence</option>
+            <option value="commercial-fencing">Commercial Fencing</option>
             <option value="undecided">Not sure yet</option>
           </select>
         </Field>

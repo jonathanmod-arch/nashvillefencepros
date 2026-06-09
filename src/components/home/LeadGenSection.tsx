@@ -224,6 +224,8 @@ export default function LeadGenSection() {
                           {t.name}
                         </option>
                       ))}
+                      <option value="hidden-pet-fence">Hidden Pet Fence</option>
+                      <option value="commercial-fencing">Commercial Fencing</option>
                       <option value="undecided">I need help deciding</option>
                     </select>
                   </Field>
