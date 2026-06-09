@@ -18,6 +18,7 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { CONTRACTORS } from '../src/data/contractors'
 import { FENCE_TYPES, NEIGHBORHOODS, RESOURCES, RESOURCE_PUBLISHED_AT } from '../src/data/siteData'
+import { SERVICES, SERVICE_BUCKETS } from '../src/data/services'
 import { CITY } from '../src/config/city'
 
 const SITE_URL = CITY.siteUrl
@@ -25,6 +26,7 @@ const SITE_URL = CITY.siteUrl
 const STATIC_ROUTES: string[] = [
   '/',
   '/contractors',
+  '/services',
   '/fence-types',
   '/cost-guide',
   '/permits',
@@ -48,6 +50,8 @@ const today = new Date().toISOString().slice(0, 10)
 
 const urls: UrlEntry[] = [
   ...STATIC_ROUTES.map((path) => ({ loc: `${SITE_URL}${path}`, lastmod: today })),
+  ...SERVICE_BUCKETS.map((b) => ({ loc: `${SITE_URL}/services/${b.slug}`, lastmod: today })),
+  ...SERVICES.map((s) => ({ loc: `${SITE_URL}/services/${s.slug}`, lastmod: today })),
   ...FENCE_TYPES.map((t) => ({ loc: `${SITE_URL}/fence-types/${t.slug}`, lastmod: today })),
   ...NEIGHBORHOODS.map((n) => ({ loc: `${SITE_URL}/service-areas/${n.slug}`, lastmod: today })),
   ...CONTRACTORS.map((c) => ({ loc: `${SITE_URL}/contractors/${c.slug}`, lastmod: today })),
@@ -123,6 +127,22 @@ llmsLines.push('## Core pages')
 llmsLines.push('')
 for (const p of CORE_PAGES) {
   llmsLines.push(`- [${p.label}](${SITE_URL}${p.path}): ${p.desc}`)
+}
+llmsLines.push('')
+llmsLines.push('## Services')
+llmsLines.push('')
+llmsLines.push(`- [All Services](${SITE_URL}/services): Service hub organizing every fence, gate, repair, and outdoor-structure service we cover.`)
+for (const b of SERVICE_BUCKETS) {
+  llmsLines.push(`- [${b.name}](${SITE_URL}/services/${b.slug}): ${b.summary}`)
+}
+for (const s of SERVICES) {
+  const price =
+    s.priceLow != null && s.priceHigh != null
+      ? s.unitCode === 'PCE'
+        ? ` Installed $${s.priceLow.toLocaleString()}–$${s.priceHigh.toLocaleString()}.`
+        : ` $${s.priceLow}–$${s.priceHigh}/${s.unitCode === 'HUR' ? 'hour' : 'linear foot'}.`
+      : ''
+  llmsLines.push(`- [${s.name} ${CITY.name}](${SITE_URL}/services/${s.slug}): ${s.description.slice(0, 160)}${price}`)
 }
 llmsLines.push('')
 llmsLines.push('## Fence type pages')

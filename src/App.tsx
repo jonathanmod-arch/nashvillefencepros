@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate, useParams } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import ScrollToTop from './components/layout/ScrollToTop'
@@ -14,6 +14,7 @@ const Contractors = lazy(() => import('./pages/Contractors'))
 const ContractorProfile = lazy(() => import('./pages/ContractorProfile'))
 const Resources = lazy(() => import('./pages/Resources'))
 const FenceTypes = lazy(() => import('./pages/FenceTypes'))
+const Services = lazy(() => import('./pages/Services'))
 const Advertise = lazy(() => import('./pages/Advertise'))
 const SubmitListing = lazy(() => import('./pages/SubmitListing'))
 const Repair = lazy(() => import('./pages/Repair'))
@@ -23,6 +24,32 @@ const HistoricOverlays = lazy(() => import('./pages/HistoricOverlays'))
 const About = lazy(() => import('./pages/About'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Terms = lazy(() => import('./pages/Terms'))
+
+/**
+ * Phase 1 migration: old /fence-types/<slug> URLs redirect to the new
+ * /services/<service-slug> shape. Server-side 301s live in vercel.json;
+ * this client-side <Navigate> is the second layer so SPA navigation
+ * resolves to the same place.
+ */
+const FENCE_TYPE_TO_SERVICE: Record<string, string> = {
+  'wood-privacy': 'wood-fence',
+  vinyl: 'vinyl-fence',
+  aluminum: 'aluminum-fence',
+  'chain-link': 'chain-link-fence',
+  'horizontal-privacy': 'horizontal-cedar-fence',
+  'pet-fence': 'pet-fence',
+  'hidden-pet-fence': 'hidden-pet-fence',
+  'pool-safety': 'pool-fence',
+}
+
+function FenceTypeRedirect() {
+  const { slug } = useParams<{ slug: string }>()
+  const target = slug ? FENCE_TYPE_TO_SERVICE[slug] : undefined
+  if (target) return <Navigate to={`/services/${target}`} replace />
+  // Slugs without a mapping (farm-ranch, wrought-iron — Phase 2 backfill)
+  // fall through to the existing FenceTypes page for now.
+  return <FenceTypes />
+}
 
 function RouteLoader() {
   return (
@@ -50,11 +77,14 @@ function App() {
             <Route path="/contractors/:slug" element={<ContractorProfile />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:slug" element={<Resources />} />
-            <Route path="/fence-types" element={<FenceTypes />} />
-            <Route path="/fence-types/:slug" element={<FenceTypes />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<Services />} />
+            <Route path="/services/:slug/:area" element={<Services />} />
+            <Route path="/fence-types" element={<Navigate to="/services/fence-installation" replace />} />
+            <Route path="/fence-types/:slug" element={<FenceTypeRedirect />} />
             <Route path="/advertise" element={<Advertise />} />
             <Route path="/submit-listing" element={<SubmitListing />} />
-            <Route path="/repair" element={<Repair />} />
+            <Route path="/repair" element={<Navigate to="/services/fence-repair" replace />} />
             <Route path="/commercial-fencing" element={<CommercialFencing />} />
             <Route path="/pool-fence-code" element={<PoolFenceCode />} />
             <Route path="/historic-overlays" element={<HistoricOverlays />} />

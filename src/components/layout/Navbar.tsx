@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Phone, Menu, X, ChevronDown } from 'lucide-react'
-import { COMPANY, FENCE_TYPES } from '../../data/siteData'
+import { COMPANY } from '../../data/siteData'
+import { SERVICE_BUCKETS, servicesByBucket } from '../../data/services'
 import { CITY } from '../../config/city'
 
 const NAV_LINKS = [
   { to: '/cost-guide', label: 'Costs & Pricing' },
   { to: '/permits', label: 'Permits & Rules' },
-  { to: '/repair', label: 'Fence Repair' },
   { to: '/contractors', label: 'Find a Pro' },
   { to: '/service-areas', label: 'Service Areas' },
 ]
@@ -86,33 +86,67 @@ export default function Navbar() {
               onMouseLeave={() => setTypesOpen(false)}
             >
               <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-onyx-700 hover:text-forest-500 transition-colors">
-                Fence Types <ChevronDown className="w-3.5 h-3.5" />
+                Services <ChevronDown className="w-3.5 h-3.5" />
               </button>
               <div
-                className={`absolute top-full left-0 pt-2 w-72 transition-all duration-150 ${
+                className={`absolute top-full left-0 pt-2 w-[760px] transition-all duration-150 ${
                   typesOpen
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 -translate-y-1 pointer-events-none'
                 }`}
               >
-                <div className="bg-white rounded-xl shadow-strong border border-warmgray p-2">
-                  {FENCE_TYPES.map((t) => (
+                <div className="bg-white rounded-xl shadow-strong border border-warmgray p-5">
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                    {SERVICE_BUCKETS.map((b) => {
+                      const items = servicesByBucket(b.slug)
+                      return (
+                        <div key={b.slug}>
+                          <Link
+                            to={`/services/${b.slug}`}
+                            className="block text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 hover:text-forest-500 mb-2"
+                          >
+                            {b.name}
+                          </Link>
+                          {items.length === 0 ? (
+                            <div className="text-xs text-onyx-400 italic">
+                              Coming soon
+                            </div>
+                          ) : (
+                            <ul className="space-y-1">
+                              {items.slice(0, 5).map((s) => (
+                                <li key={s.slug}>
+                                  <Link
+                                    to={`/services/${s.slug}`}
+                                    className="block text-sm text-onyx-700 hover:text-forest-500"
+                                  >
+                                    {s.name}
+                                  </Link>
+                                </li>
+                              ))}
+                              {items.length > 5 && (
+                                <li>
+                                  <Link
+                                    to={`/services/${b.slug}`}
+                                    className="block text-xs text-forest-500 font-semibold mt-1"
+                                  >
+                                    +{items.length - 5} more →
+                                  </Link>
+                                </li>
+                              )}
+                            </ul>
+                          )}
+                        </div>
+                      )
+                    })}
+                  </div>
+                  <div className="mt-5 pt-4 border-t border-warmgray">
                     <Link
-                      key={t.slug}
-                      to={`/fence-types/${t.slug}`}
-                      className="flex items-center justify-between px-3 py-2.5 rounded-md hover:bg-warmgray group"
+                      to="/services"
+                      className="text-sm font-semibold text-forest-500 hover:text-forest-600 inline-flex items-center gap-1"
                     >
-                      <div>
-                        <div className="text-sm font-semibold text-onyx-700 group-hover:text-forest-500">
-                          {t.name}
-                        </div>
-                        <div className="text-xs text-onyx-400">
-                          ${t.priceLow}–${t.priceHigh}/linear ft
-                        </div>
-                      </div>
-                      <ChevronDown className="w-3.5 h-3.5 -rotate-90 text-onyx-300 group-hover:text-forest-500" />
+                      Browse all services <ChevronDown className="w-3 h-3 -rotate-90" />
                     </Link>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -162,22 +196,39 @@ export default function Navbar() {
       >
         <div className="overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
-            <div className="py-2">
-              <div className="text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-2">
-                Fence Types
-              </div>
-              {FENCE_TYPES.map((t) => (
-                <Link
-                  key={t.slug}
-                  to={`/fence-types/${t.slug}`}
-                  className="block py-2 text-sm font-medium text-onyx-700"
-                  tabIndex={mobileOpen ? 0 : -1}
-                >
-                  {t.name}
-                </Link>
-              ))}
-            </div>
-            <div className="border-t border-warmgray pt-2">
+            <Link
+              to="/services"
+              className="block py-2 text-sm font-bold text-forest-500"
+              tabIndex={mobileOpen ? 0 : -1}
+            >
+              All Services →
+            </Link>
+            {SERVICE_BUCKETS.map((b) => {
+              const items = servicesByBucket(b.slug)
+              if (items.length === 0) return null
+              return (
+                <div key={b.slug} className="py-2 border-t border-warmgray">
+                  <Link
+                    to={`/services/${b.slug}`}
+                    className="block text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-1.5"
+                    tabIndex={mobileOpen ? 0 : -1}
+                  >
+                    {b.name}
+                  </Link>
+                  {items.map((s) => (
+                    <Link
+                      key={s.slug}
+                      to={`/services/${s.slug}`}
+                      className="block py-1.5 text-sm text-onyx-700"
+                      tabIndex={mobileOpen ? 0 : -1}
+                    >
+                      {s.name}
+                    </Link>
+                  ))}
+                </div>
+              )
+            })}
+            <div className="border-t border-warmgray pt-2 mt-2">
               {NAV_LINKS.map((l) => (
                 <NavLink
                   key={l.label}
