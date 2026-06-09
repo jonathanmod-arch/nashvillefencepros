@@ -219,6 +219,13 @@ export default function ContractorProfile() {
                   <ExternalLink className="w-3 h-3" />
                 </a>
               )}
+              <Link
+                to="/submit-listing"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-forest-500 hover:text-forest-600 lg:justify-end mt-1"
+              >
+                Is this your business? Claim listing
+                <ArrowRight className="w-3 h-3" />
+              </Link>
             </div>
           </div>
         </div>
@@ -252,6 +259,21 @@ export default function ContractorProfile() {
                 </p>
               )}
             </Card>
+
+            <div className="flex items-center justify-between gap-3 p-4 rounded-xl bg-oak-50 border border-oak-100">
+              <div className="text-sm">
+                <div className="font-bold text-onyx-700">Is this your business?</div>
+                <div className="text-xs text-onyx-700/70">
+                  Claim or update this listing to keep contact info, hours, and services current.
+                </div>
+              </div>
+              <Link
+                to="/submit-listing"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-forest-500 hover:text-forest-600 whitespace-nowrap"
+              >
+                Claim listing <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
 
             {c.credentials &&
               (c.credentials.licenses?.length ||
