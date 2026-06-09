@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from 'react'
-import { CheckCircle2, ArrowRight, Star } from 'lucide-react'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { FENCE_TYPES } from '../../data/siteData'
 import { CITY } from '../../config/city'
 
@@ -95,15 +95,6 @@ export default function HeroQuoteForm() {
         <p className="text-[12px] text-onyx-700/60 mt-1">
           One form, vetted local pros, replies within 2 hours, sometimes minutes.
         </p>
-        <div className="mt-2.5 flex items-center gap-1.5 text-[11.5px]">
-          <div className="flex">
-            {[0, 1, 2, 3, 4].map((i) => (
-              <Star key={i} className="w-3 h-3 fill-oak-400 text-oak-400" />
-            ))}
-          </div>
-          <span className="font-semibold text-onyx-700">4.9/5</span>
-          <span className="text-onyx-400">· 380+ {CITY.name} homeowners</span>
-        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-2.5">
