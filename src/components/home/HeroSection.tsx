@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Calculator } from 'lucide-react'
-import HeroQuoteForm from './HeroQuoteForm'
+import CallbackForm from '../shared/CallbackForm'
 import { CITY } from '../../config/city'
 
 const bullets = [
@@ -60,7 +60,7 @@ export default function HeroSection() {
         </div>
 
         <div className="reveal-up" style={{ animationDelay: '0.1s' }}>
-          <HeroQuoteForm />
+          <CallbackForm />
         </div>
       </div>
     </section>
