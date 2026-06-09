@@ -17,8 +17,6 @@ const FenceTypes = lazy(() => import('./pages/FenceTypes'))
 const Services = lazy(() => import('./pages/Services'))
 const Advertise = lazy(() => import('./pages/Advertise'))
 const SubmitListing = lazy(() => import('./pages/SubmitListing'))
-const Repair = lazy(() => import('./pages/Repair'))
-const CommercialFencing = lazy(() => import('./pages/CommercialFencing'))
 const PoolFenceCode = lazy(() => import('./pages/PoolFenceCode'))
 const HistoricOverlays = lazy(() => import('./pages/HistoricOverlays'))
 const About = lazy(() => import('./pages/About'))
@@ -37,6 +35,8 @@ const FENCE_TYPE_TO_SERVICE: Record<string, string> = {
   aluminum: 'aluminum-fence',
   'chain-link': 'chain-link-fence',
   'horizontal-privacy': 'horizontal-cedar-fence',
+  'farm-ranch': 'farm-ranch-fence',
+  'wrought-iron': 'wrought-iron-fence',
   'pet-fence': 'pet-fence',
   'hidden-pet-fence': 'hidden-pet-fence',
   'pool-safety': 'pool-fence',
@@ -85,7 +85,7 @@ function App() {
             <Route path="/advertise" element={<Advertise />} />
             <Route path="/submit-listing" element={<SubmitListing />} />
             <Route path="/repair" element={<Navigate to="/services/fence-repair" replace />} />
-            <Route path="/commercial-fencing" element={<CommercialFencing />} />
+            <Route path="/commercial-fencing" element={<Navigate to="/services/warehouse-industrial-fencing" replace />} />
             <Route path="/pool-fence-code" element={<PoolFenceCode />} />
             <Route path="/historic-overlays" element={<HistoricOverlays />} />
             <Route path="/about" element={<About />} />
