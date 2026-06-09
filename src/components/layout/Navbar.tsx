@@ -89,40 +89,83 @@ export default function Navbar() {
                 Services <ChevronDown className="w-3.5 h-3.5" />
               </button>
               <div
-                className={`absolute top-full left-0 pt-2 w-72 transition-all duration-150 ${
+                className={`absolute top-full left-0 pt-2 w-[820px] transition-all duration-150 ${
                   typesOpen
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 -translate-y-1 pointer-events-none'
                 }`}
               >
-                <div className="bg-white rounded-xl shadow-strong border border-warmgray p-2">
-                  {SERVICE_BUCKETS.map((b) => {
-                    const count = servicesByBucket(b.slug).length
-                    return (
+                <div className="bg-white rounded-xl shadow-strong border border-warmgray p-5">
+                  <div className="grid grid-cols-3 gap-x-6">
+                    <div>
                       <Link
-                        key={b.slug}
-                        to={`/services/${b.slug}`}
-                        className="flex items-center justify-between px-3 py-2.5 rounded-md hover:bg-warmgray group"
+                        to="/services/fence-installation"
+                        className="block text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 hover:text-forest-500 mb-2.5"
                       >
-                        <div className="text-sm font-semibold text-onyx-700 group-hover:text-forest-500">
-                          {b.name}
-                        </div>
-                        <div className="flex items-center gap-2 text-xs text-onyx-400 group-hover:text-forest-500">
-                          {count}
-                          <ChevronDown className="w-3.5 h-3.5 -rotate-90" />
-                        </div>
+                        Fence Types
                       </Link>
-                    )
-                  })}
-                  <div className="mt-1 pt-2 border-t border-warmgray">
+                      <ul className="space-y-1">
+                        {servicesByBucket('fence-installation').map((s) => (
+                          <li key={s.slug}>
+                            <Link
+                              to={`/services/${s.slug}`}
+                              className="block text-sm text-onyx-700 hover:text-forest-500 py-0.5"
+                            >
+                              {s.short ?? s.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <Link
+                        to="/services/specialty"
+                        className="block text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 hover:text-forest-500 mb-2.5"
+                      >
+                        Purpose-Built Fences
+                      </Link>
+                      <ul className="space-y-1">
+                        {servicesByBucket('specialty').map((s) => (
+                          <li key={s.slug}>
+                            <Link
+                              to={`/services/${s.slug}`}
+                              className="block text-sm text-onyx-700 hover:text-forest-500 py-0.5"
+                            >
+                              {s.short ?? s.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 mb-2.5">
+                        Other Categories
+                      </div>
+                      <ul className="space-y-1">
+                        {SERVICE_BUCKETS.filter(
+                          (b) => b.slug !== 'fence-installation' && b.slug !== 'specialty',
+                        ).map((b) => (
+                          <li key={b.slug}>
+                            <Link
+                              to={`/services/${b.slug}`}
+                              className="block text-sm text-onyx-700 hover:text-forest-500 py-0.5"
+                            >
+                              {b.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-warmgray">
                     <Link
                       to="/services"
-                      className="flex items-center justify-between px-3 py-2.5 rounded-md hover:bg-forest-50 group"
+                      className="text-sm font-bold text-forest-500 hover:text-forest-600 inline-flex items-center gap-1"
                     >
-                      <div className="text-sm font-bold text-forest-500">
-                        All services
-                      </div>
-                      <ChevronDown className="w-3.5 h-3.5 -rotate-90 text-forest-500" />
+                      All services <ChevronDown className="w-3.5 h-3.5 -rotate-90" />
                     </Link>
                   </div>
                 </div>
@@ -175,23 +218,61 @@ export default function Navbar() {
         <div className="overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
             <div className="py-2">
-              <div className="text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-2">
-                Services
+              <Link
+                to="/services/fence-installation"
+                className="block text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-1.5"
+                tabIndex={mobileOpen ? 0 : -1}
+              >
+                Fence Types
+              </Link>
+              {servicesByBucket('fence-installation').map((s) => (
+                <Link
+                  key={s.slug}
+                  to={`/services/${s.slug}`}
+                  className="block py-1.5 text-sm text-onyx-700"
+                  tabIndex={mobileOpen ? 0 : -1}
+                >
+                  {s.short ?? s.name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="py-2 border-t border-warmgray">
+              <Link
+                to="/services/specialty"
+                className="block text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-1.5 mt-2"
+                tabIndex={mobileOpen ? 0 : -1}
+              >
+                Purpose-Built Fences
+              </Link>
+              {servicesByBucket('specialty').map((s) => (
+                <Link
+                  key={s.slug}
+                  to={`/services/${s.slug}`}
+                  className="block py-1.5 text-sm text-onyx-700"
+                  tabIndex={mobileOpen ? 0 : -1}
+                >
+                  {s.short ?? s.name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="py-2 border-t border-warmgray">
+              <div className="text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-1.5 mt-2">
+                Other Categories
               </div>
-              {SERVICE_BUCKETS.map((b) => {
-                const count = servicesByBucket(b.slug).length
-                return (
-                  <Link
-                    key={b.slug}
-                    to={`/services/${b.slug}`}
-                    className="flex items-center justify-between py-2 text-sm font-medium text-onyx-700"
-                    tabIndex={mobileOpen ? 0 : -1}
-                  >
-                    <span>{b.name}</span>
-                    <span className="text-xs text-onyx-400">{count}</span>
-                  </Link>
-                )
-              })}
+              {SERVICE_BUCKETS.filter(
+                (b) => b.slug !== 'fence-installation' && b.slug !== 'specialty',
+              ).map((b) => (
+                <Link
+                  key={b.slug}
+                  to={`/services/${b.slug}`}
+                  className="block py-1.5 text-sm text-onyx-700"
+                  tabIndex={mobileOpen ? 0 : -1}
+                >
+                  {b.name}
+                </Link>
+              ))}
               <Link
                 to="/services"
                 className="block mt-2 py-2 text-sm font-bold text-forest-500"
