@@ -5,6 +5,7 @@ import CallbackForm from '../components/shared/CallbackForm'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { NEIGHBORHOODS } from '../data/siteData'
+import { SERVICES } from '../data/services'
 import { MapPin, ArrowRight, ArrowLeft, Check, ExternalLink } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
@@ -17,6 +18,14 @@ import {
   serviceSchema,
 } from '../lib/schema'
 import { CITY } from '../config/city'
+
+// Surface the same 12 cityPages services the cross-product is sitemapped
+// against, so every neighborhood page links into its area-specific service
+// pages.
+const CITY_SERVICE_LINKS = SERVICES.filter((s) => s.cityPages).map((s) => ({
+  slug: s.slug,
+  label: s.short ?? s.name,
+}))
 
 export default function Neighborhoods() {
   const { slug } = useParams<{ slug: string }>()
@@ -156,6 +165,29 @@ export default function Neighborhoods() {
               <Link to="/get-quotes#quote-form" className="btn-primary">
                 Get {n.name} Quotes <ArrowRight className="w-4 h-4" />
               </Link>
+
+              <div className="mt-12 pt-10 border-t border-warmgray">
+                <h3 className="heading-card !text-2xl mb-2">
+                  Services in {n.name}
+                </h3>
+                <p className="text-body-lead mb-6">
+                  The highest-intent services we cover with {n.name}-specific pages.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-2">
+                  {CITY_SERVICE_LINKS.map((cs) => (
+                    <Link
+                      key={cs.slug}
+                      to={`/services/${cs.slug}/${n.slug}`}
+                      className="flex items-center justify-between gap-2 px-3 py-2.5 rounded-lg text-sm text-onyx-700 hover:text-forest-500 hover:bg-warmgray transition-colors group"
+                    >
+                      <span>
+                        {cs.label} in {n.name}
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 text-onyx-300 group-hover:text-forest-500" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <aside className="space-y-5">

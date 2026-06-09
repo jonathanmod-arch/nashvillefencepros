@@ -11,7 +11,8 @@ import {
   findService,
   findBucket,
 } from '../data/services'
-import { ArrowRight, ArrowLeft, Check, Wrench, Calendar, Ruler } from 'lucide-react'
+import { NEIGHBORHOODS } from '../data/siteData'
+import { ArrowRight, ArrowLeft, Check, Wrench, Calendar, Ruler, MapPin } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import {
@@ -20,13 +21,13 @@ import {
   collectionPageSchema,
   itemListSchema,
   serviceSchema,
+  placeSchema,
 } from '../lib/schema'
 import { CITY } from '../config/city'
 
 export default function Services() {
   const { slug, area } = useParams<{ slug?: string; area?: string }>()
 
-  // ----- Route 4: Service detail (or service x area when wired in Phase 3) -----
   if (slug) {
     const bucket = findBucket(slug)
     if (bucket) return <BucketLanding bucketSlug={slug} />
@@ -35,7 +36,6 @@ export default function Services() {
     return <ServiceDetail service={service} areaSlug={area} />
   }
 
-  // ----- Route 1: Service hub -----
   return <ServiceHub />
 }
 
@@ -223,47 +223,89 @@ function ServiceDetail({
   service: ReturnType<typeof findService> & object
   areaSlug?: string
 }) {
-  // areaSlug is reserved for Phase 3 — the city overlay branch. For Phase 1
-  // we render the same detail page regardless, so we silence unused-var.
-  void areaSlug
-
   const bucket = findBucket(s.bucket)!
   const related = SERVICES.filter((x) => x.bucket === s.bucket && x.slug !== s.slug).slice(0, 3)
 
+  // Phase 3: city overlay. If an areaSlug is in the URL, look up the
+  // neighborhood and only render if the service is flagged cityPages.
+  // Otherwise fall back to the Nashville-wide detail.
+  const area = areaSlug ? NEIGHBORHOODS.find((n) => n.slug === areaSlug) : undefined
+  const isAreaPage = Boolean(area && s.cityPages)
+
+  const locationLabel = isAreaPage ? area!.name : CITY.name
+  const pageH1 = isAreaPage
+    ? `${s.name} in ${area!.name}, ${CITY.name}`
+    : (s.pageTitle ?? `${s.name} in ${CITY.name}`)
+  const canonical = isAreaPage
+    ? `/services/${s.slug}/${area!.slug}`
+    : `/services/${s.slug}`
+
+  const titleSeo = isAreaPage
+    ? `${s.name} ${area!.name} ${CITY.stateAbbr} | Vetted Local Installers`
+    : `${s.name} ${CITY.name} ${CITY.stateAbbr} | Vetted Local Installers`
+  const descriptionSeo = isAreaPage
+    ? `${s.name} in ${area!.name}, ${CITY.name} ${CITY.stateAbbr}. Popular style: ${area!.popularStyle}. Typical project ${area!.avgCost}. Compare vetted ${area!.name} installers.`
+    : s.description.slice(0, 180)
+
   useDocumentMeta({
-    title: `${s.name} ${CITY.name} ${CITY.stateAbbr} | Vetted Local Installers`,
-    description: `${s.description.slice(0, 180)}`,
-    canonical: `/services/${s.slug}`,
+    title: titleSeo,
+    description: descriptionSeo,
+    canonical,
   })
 
   useStructuredData([
     organization(),
-    breadcrumbList([
-      { label: 'Services', to: '/services' },
-      { label: bucket.name, to: `/services/${bucket.slug}` },
-      { label: s.name },
-    ]),
+    breadcrumbList(
+      isAreaPage
+        ? [
+            { label: 'Services', to: '/services' },
+            { label: bucket.name, to: `/services/${bucket.slug}` },
+            { label: s.name, to: `/services/${s.slug}` },
+            { label: area!.name },
+          ]
+        : [
+            { label: 'Services', to: '/services' },
+            { label: bucket.name, to: `/services/${bucket.slug}` },
+            { label: s.name },
+          ],
+    ),
     serviceSchema({
-      slug: `/services/${s.slug}`,
-      name: `${s.name} in ${CITY.name} ${CITY.stateAbbr}`,
-      description: s.description,
+      slug: canonical,
+      name: `${s.name} in ${locationLabel}, ${CITY.stateAbbr}`,
+      description: isAreaPage
+        ? `${s.description} Serving ${area!.name} (ZIP ${area!.zip}) and surrounding ${CITY.metroLabel}.`
+        : s.description,
       priceLow: s.priceLow,
       priceHigh: s.priceHigh,
       unitCode: s.unitCode,
     }),
+    ...(isAreaPage ? [placeSchema(area!)] : []),
   ])
 
   return (
     <>
       <PageHero
-        eyebrow={bucket.eyebrow}
-        title={s.pageTitle ?? `${s.name} in ${CITY.name}`}
-        description={s.description}
-        crumbs={[
-          { label: 'Services', to: '/services' },
-          { label: bucket.name, to: `/services/${bucket.slug}` },
-          { label: s.name },
-        ]}
+        eyebrow={isAreaPage ? `${area!.name} · ZIP ${area!.zip}` : bucket.eyebrow}
+        title={pageH1}
+        description={
+          isAreaPage
+            ? `${s.description} For ${area!.name} homeowners, the local style favors ${area!.popularStyle.toLowerCase()}, with typical projects landing at ${area!.avgCost}.`
+            : s.description
+        }
+        crumbs={
+          isAreaPage
+            ? [
+                { label: 'Services', to: '/services' },
+                { label: bucket.name, to: `/services/${bucket.slug}` },
+                { label: s.name, to: `/services/${s.slug}` },
+                { label: area!.name },
+              ]
+            : [
+                { label: 'Services', to: '/services' },
+                { label: bucket.name, to: `/services/${bucket.slug}` },
+                { label: s.name },
+              ]
+        }
         right={<CallbackForm />}
       />
       <SponsorStrip />
@@ -274,7 +316,7 @@ function ServiceDetail({
             <div className="aspect-[16/9] rounded-3xl overflow-hidden shadow-medium mb-8">
               <SafeImage
                 src={s.img}
-                alt={`${s.name} in ${CITY.name}, ${CITY.stateAbbr}`}
+                alt={`${s.name} in ${locationLabel}, ${CITY.stateAbbr}`}
                 className="w-full h-full object-cover"
                 sizes="(min-width: 1024px) 66vw, 100vw"
                 widths={[480, 768, 1024, 1280, 1600]}
@@ -282,9 +324,25 @@ function ServiceDetail({
               />
             </div>
 
-            <h2 className="heading-section !text-3xl mb-2">The Service, the Cost, the Fit</h2>
+            <h2 className="heading-section !text-3xl mb-2">
+              {isAreaPage
+                ? `${s.name} in ${area!.name}`
+                : 'The Service, the Cost, the Fit'}
+            </h2>
             <div className="heading-accent mb-4" />
             <p className="text-body-lead mb-5">{s.description}</p>
+
+            {isAreaPage && (
+              <p className="text-body-lead mb-5">
+                {area!.note} For {s.name.toLowerCase()} specifically in {area!.name}, the
+                popular style locally is <strong>{area!.popularStyle.toLowerCase()}</strong>{' '}
+                and typical project budgets land at{' '}
+                <strong className="text-forest-500">{area!.avgCost}</strong>. Our network's
+                crews work {area!.name} routinely and know the lot-size, soil, and HOA
+                patterns specific to ZIP {area!.zip}.
+              </p>
+            )}
+
             {s.priceLow != null && s.priceHigh != null && (
               <p className="text-body-lead mb-8">
                 Across {CITY.primaryCounty} and {CITY.secondaryCounty} counties,{' '}
@@ -313,8 +371,32 @@ function ServiceDetail({
             <p className="text-body-lead mb-8">{s.bestFor}.</p>
 
             <Link to="/get-quotes#quote-form" className="btn-primary">
-              Get {s.name} Quotes <ArrowRight className="w-4 h-4" />
+              Get {isAreaPage ? `${area!.name} ` : ''}
+              {s.name} Quotes <ArrowRight className="w-4 h-4" />
             </Link>
+
+            {!isAreaPage && s.cityPages && (
+              <div className="mt-12 pt-10 border-t border-warmgray">
+                <h3 className="heading-card !text-2xl mb-2">
+                  {s.name} by {CITY.name} Neighborhood
+                </h3>
+                <p className="text-body-lead mb-6">
+                  Tap a neighborhood for local pricing, popular styles, and crews who
+                  work that zip code routinely.
+                </p>
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+                  {NEIGHBORHOODS.map((n) => (
+                    <Link
+                      key={n.slug}
+                      to={`/services/${s.slug}/${n.slug}`}
+                      className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-onyx-700 hover:text-forest-500 hover:bg-warmgray transition-colors"
+                    >
+                      <MapPin className="w-3.5 h-3.5 text-forest-500" /> {n.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <aside className="space-y-5">
@@ -332,6 +414,38 @@ function ServiceDetail({
                   {s.unitCode === 'PCE' ? 'per project' : `per ${s.unitCode === 'HUR' ? 'hour' : 'linear foot'}`}
                 </div>
               </div>
+            )}
+
+            {isAreaPage && (
+              <>
+                <div className="bg-warmgray rounded-2xl p-6">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
+                    Popular Style in {area!.name}
+                  </div>
+                  <div className="text-xl font-heading font-bold text-forest-500 tracking-tightest">
+                    {area!.popularStyle}
+                  </div>
+                </div>
+                <div className="bg-warmgray rounded-2xl p-6">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
+                    Typical {area!.name} Project
+                  </div>
+                  <div className="text-xl font-heading font-bold text-forest-500 tracking-tightest">
+                    {area!.avgCost}
+                  </div>
+                </div>
+                <Link
+                  to={`/service-areas/${area!.slug}`}
+                  className="block bg-white border border-warmgray rounded-2xl p-6 hover:border-forest-500 transition-colors"
+                >
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
+                    More about {area!.name}
+                  </div>
+                  <div className="text-sm font-semibold text-forest-500 inline-flex items-center gap-1">
+                    Area guide and permit notes <ArrowRight className="w-3 h-3" />
+                  </div>
+                </Link>
+              </>
             )}
 
             <div className="bg-warmgray rounded-2xl p-6">
@@ -352,20 +466,22 @@ function ServiceDetail({
                 Project Timeline
               </div>
               <p className="text-sm text-onyx-700">
-                Most {CITY.name} installs land in the 2–5 day range, weather permitting. Custom
-                fabrication and automation add 2–6 weeks to the lead time.
+                Most {locationLabel} installs land in the 2–5 day range, weather permitting.
+                Custom fabrication and automation add 2–6 weeks to the lead time.
               </p>
             </div>
 
-            <div className="bg-warmgray rounded-2xl p-6">
-              <Ruler className="w-5 h-5 text-forest-500 mb-2" />
-              <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
-                Counties Served
+            {!isAreaPage && (
+              <div className="bg-warmgray rounded-2xl p-6">
+                <Ruler className="w-5 h-5 text-forest-500 mb-2" />
+                <div className="text-xs font-bold uppercase tracking-[0.18em] text-oak-500 mb-1">
+                  Counties Served
+                </div>
+                <p className="text-sm text-onyx-700">
+                  {CITY.counties.slice(0, 5).join(', ')} and surrounding {CITY.metroLabel}.
+                </p>
               </div>
-              <p className="text-sm text-onyx-700">
-                {CITY.counties.slice(0, 5).join(', ')} and surrounding {CITY.metroLabel}.
-              </p>
-            </div>
+            )}
           </aside>
         </div>
       </section>

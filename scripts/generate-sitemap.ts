@@ -48,10 +48,18 @@ type UrlEntry = { loc: string; lastmod: string }
 
 const today = new Date().toISOString().slice(0, 10)
 
+const SERVICE_AREA_URLS = SERVICES.filter((s) => s.cityPages).flatMap((s) =>
+  NEIGHBORHOODS.map((n) => ({
+    loc: `${SITE_URL}/services/${s.slug}/${n.slug}`,
+    lastmod: today,
+  })),
+)
+
 const urls: UrlEntry[] = [
   ...STATIC_ROUTES.map((path) => ({ loc: `${SITE_URL}${path}`, lastmod: today })),
   ...SERVICE_BUCKETS.map((b) => ({ loc: `${SITE_URL}/services/${b.slug}`, lastmod: today })),
   ...SERVICES.map((s) => ({ loc: `${SITE_URL}/services/${s.slug}`, lastmod: today })),
+  ...SERVICE_AREA_URLS,
   ...FENCE_TYPES.map((t) => ({ loc: `${SITE_URL}/fence-types/${t.slug}`, lastmod: today })),
   ...NEIGHBORHOODS.map((n) => ({ loc: `${SITE_URL}/service-areas/${n.slug}`, lastmod: today })),
   ...CONTRACTORS.map((c) => ({ loc: `${SITE_URL}/contractors/${c.slug}`, lastmod: today })),
@@ -143,6 +151,16 @@ for (const s of SERVICES) {
         : ` $${s.priceLow}–$${s.priceHigh}/${s.unitCode === 'HUR' ? 'hour' : 'linear foot'}.`
       : ''
   llmsLines.push(`- [${s.name} ${CITY.name}](${SITE_URL}/services/${s.slug}): ${s.description.slice(0, 160)}${price}`)
+}
+llmsLines.push('')
+llmsLines.push('## Service × area pages')
+llmsLines.push('')
+llmsLines.push(`> Hyperlocal landing pages for each high-intent service across every ${CITY.name} neighborhood we cover. ${SERVICES.filter((s) => s.cityPages).length} services × ${NEIGHBORHOODS.length} neighborhoods.`)
+llmsLines.push('')
+for (const s of SERVICES.filter((x) => x.cityPages)) {
+  for (const n of NEIGHBORHOODS) {
+    llmsLines.push(`- [${s.name} in ${n.name}](${SITE_URL}/services/${s.slug}/${n.slug}): ${s.short ?? s.name} for ${n.name} homeowners (popular: ${n.popularStyle}, typical project ${n.avgCost}).`)
+  }
 }
 llmsLines.push('')
 llmsLines.push('## Fence type pages')
