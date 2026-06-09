@@ -820,20 +820,21 @@ export const SERVICES: Service[] = [
 
   // === Commercial & Agricultural (Phase 2 backfill) ===
   {
-    slug: 'warehouse-industrial-fencing',
+    slug: 'commercial-fencing',
     bucket: 'commercial-agricultural',
-    name: 'Warehouse & Industrial Fencing',
-    short: 'Industrial',
+    name: 'Commercial Fence Installation',
+    short: 'Commercial',
+    pageTitle: 'Commercial Fencing in Nashville',
     description:
-      'Warehouse and industrial fence installation in Nashville. 8 ft chain link with privacy slats and barbed top, ornamental steel security fence, anti-climb mesh, and integrated access control for commercial perimeters.',
+      'Commercial fence installation in Nashville for warehouses, distribution centers, industrial facilities, fleet yards, multifamily, and corporate campuses. 8 ft chain link with privacy slats and barbed top, ornamental steel security fence, anti-climb mesh, and integrated access control for commercial perimeters.',
     features: ['8 ft anti-climb heights', 'Privacy slats and barbed top', 'Ornamental steel security', 'Integrated access control'],
-    bestFor: 'Warehouses, distribution centers, manufacturing, fleet yards, storage facilities',
+    bestFor: 'Warehouses, distribution centers, industrial facilities, manufacturing, fleet yards, multifamily, corporate campuses',
     priceLow: 22,
     priceHigh: 68,
     unitCode: 'FOT',
     img: IMAGES.fenceTypes['chain-link'],
     cityPages: false,
-    keywords: ['industrial fence', 'warehouse fence', 'commercial perimeter fence'],
+    keywords: ['commercial fencing', 'commercial fence installation', 'industrial fence', 'warehouse fence', 'commercial perimeter fence'],
   },
   {
     slug: 'sports-field-court-fencing',
