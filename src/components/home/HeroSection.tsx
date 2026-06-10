@@ -26,9 +26,9 @@ export default function HeroSection() {
           </span>
 
           <h1 className="mt-7 text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tightest leading-none">
-            <span className="text-onyx-700">{CITY.name} Fence</span>
+            <span className="text-onyx-700">Fence Installation</span>
             <br />
-            <span className="text-forest-500">Installation</span>
+            <span className="text-forest-500">in {CITY.name} {CITY.stateAbbr}</span>
             <br />
             <span className="text-onyx-700">Done Right</span>
           </h1>
