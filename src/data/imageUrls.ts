@@ -57,6 +57,7 @@ export const IMAGES = {
     'best-gate-installation-companies-nashville': 'https://unsplash.com/photos/bzqc09sK_D0/download?w=1200&q=80',
     'best-deck-builders-nashville': 'https://unsplash.com/photos/nNBU-9VxSWs/download?w=1200&q=80',
     'pool-safety-barriers-nashville': 'https://unsplash.com/photos/rCHO0tFxLlk/download?w=1200&q=80',
+    'fence-before-or-after-deck-nashville': 'https://unsplash.com/photos/nNBU-9VxSWs/download?w=1200&q=80',
   },
   gallery: [
     'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80',

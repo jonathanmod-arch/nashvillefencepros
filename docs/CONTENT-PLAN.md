@@ -155,6 +155,95 @@ Each article ships in a single commit and is identical in mechanics to the exist
 - `src/data/siteData.ts` — `fence-cost-breakdown` body (best for the "Cost in Nashville" articles)
 - `src/data/siteData.ts` — `hire-nashville-fence-installer-questions` body (best template for the "Best X Contractors" articles)
 
+## Human Voice Editor — Run Before Every Commit
+
+Before returning any article, page, email, social post, or marketing copy, run an internal editing pass using these rules. This pass is non-optional. Apply it to drafts after the body is written; revise until every paragraph passes.
+
+Write like a person who actually lived it, not a content writer describing it.
+
+### Remove AI Writing Patterns
+- Eliminate phrases that sound rehearsed, corporate, overly polished, or written to impress.
+- Replace generic observations with specific ones.
+- Cut filler, throat-clearing, and unnecessary transitions.
+- Avoid sounding like a neutral observer trying to satisfy everyone.
+
+### Fix Thought Flow
+- Writing should move like real thinking.
+- Not every paragraph should be the same length.
+- Not every sentence should be perfectly structured.
+- Allow occasional abrupt transitions when they feel natural.
+- Mix short punchy statements with longer explanations.
+
+### Break Predictable Structure
+- Avoid repetitive sentence openings.
+- Avoid list-heavy writing unless necessary.
+- Vary paragraph length dramatically.
+- Do not follow the same rhythm for every section.
+
+### Banned phrases (rewrite on sight)
+- "Whether you're..."
+- "In today's world..."
+- "It's important to note..."
+- "By understanding..."
+- "When it comes to..."
+- "At the end of the day..."
+- "More than ever..."
+- "In the realm of..."
+- "Look no further..."
+- "Game-changer / game-changing"
+- "Unlock the secrets..."
+- "Dive into / Dive deep into..."
+- "Navigate the world of..."
+- "It's no secret..."
+
+### Apply the Credibility Test
+Read the content as a skeptical reader. For every sentence ask: Would a real person actually say this out loud?
+If not:
+- Simplify it.
+- Make it more direct.
+- Remove unnecessary precision.
+- Remove marketing language.
+
+### Strengthen Point of View
+The writing should feel like it came from one person. Allow:
+- Opinions
+- Preferences
+- Small contradictions
+- Imperfect observations
+- Personality
+
+Do not force false neutrality.
+
+### Final Pass — every article must meet all five
+- Sound spoken, not constructed.
+- Feel experienced, not researched.
+- Be clear, not polished.
+- Be useful, not impressive.
+- Read like a knowledgeable local operator explaining something to another person.
+
+If any sentence feels like AI wrote it, rewrite it until it doesn't.
+
+## Local Expert Rule
+
+Specific to the local-resource sites (Fence, Fire Protection, Compliance, Flooring, etc.) — this is where AI content most often gets caught and ranked poorly.
+
+Write like someone who has spent 10 years talking to customers in this industry.
+
+**Prefer:**
+- Observations.
+- Stories.
+- Practical advice.
+- Trade-offs.
+- Things customers commonly misunderstand.
+
+**Avoid:**
+- Textbook explanations.
+- Dictionary definitions.
+- Generic introductions.
+- SEO filler paragraphs.
+
+**Start with the most useful information first. Don't make the reader work to find the answer.** If the article title is a question, the first paragraph should answer it directly. Reasoning, exceptions, and edge cases come after — never before.
+
 ### Image strategy
 
 Pull from the verified working pool (`D9kfezvATOY`, `gmRXcuYNV6Q`, `bzqc09sK_D0`, `hJtoxKXnCyo`, `nNBU-9VxSWs`, `Jl5wx2QVrSs`, `7U1q8b4hinQ`, `XFLY0Yp3Gow`, `oVueqggYsbU`, `KNBDHM8XZG0`, `rCHO0tFxLlk`). Reuse is acceptable — the existing 10 articles already reuse heavily. Send new Unsplash URLs when you want category-specific photos (e.g., a pergola photo for the pergola bucket).
@@ -210,7 +299,7 @@ Tracked here so the next article in the queue is always one grep away. Update on
 |-----|---------------|--------|-------|
 | 1 | How Much Does a Driveway Gate Cost in Nashville? | ✅ shipped | `/resources/driveway-gate-cost-nashville` |
 | 2 | Pool Safety Barrier Requirements Every Homeowner Should Know | ⚠ shipped under alt title | Published as `/resources/pool-safety-barriers-nashville` titled "Pool Safety Barriers in Nashville: Mesh, Aluminum, Glass, or Vinyl?" — angle is buyer's-guide comparison, not requirements deep-dive (existing `/resources/pool-fence-safety-tn` already covers the laws). If you want a separate requirements article, ask. |
-| 3 | Should You Build a Fence Before or After a New Deck? | ⏳ next | Deck Builders #1 |
+| 3 | Should You Build a Fence Before or After a New Deck? | ✅ shipped | `/resources/fence-before-or-after-deck-nashville` — Deck Builders #1, first article written under the new Human Voice Editor + Local Expert Rule pass |
 | 4 | Driveway Gate Permits in Nashville | ⏳ queued | Driveway Gates #7 |
 | 5 | How Much Does a New Deck Cost in Nashville? | ⏳ queued | Deck Builders #5 |
 | 6 | Composite vs Wood Decking: Which Works Better With Privacy Fencing? | ⏳ queued | Deck Builders #3 |

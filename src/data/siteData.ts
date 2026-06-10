@@ -2427,6 +2427,122 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'fence-before-or-after-deck-nashville',
+    title: 'Fence Before or After a New Deck? The Order Most Nashville Crews Use',
+    category: 'Planning',
+    readTime: '6 min',
+    excerpt:
+      "Short answer: deck first, fence after. The exception is when part of your fence attaches to the deck. Here's what changes the order, what damages a new fence, and how to keep both crews from working over each other.",
+    img: IMAGES.resources['fence-before-or-after-deck-nashville'],
+    imageAlt: "Horizontal cedar privacy fence next to a wood deck in a Nashville backyard",
+    body: [
+      {
+        type: 'p',
+        text: "Deck first, fence after. That's the order on roughly 80% of Nashville backyard projects, and it's the order both contractors will quietly prefer if you ask them. The exception is when a stretch of fence physically attaches to the deck — a privacy screen on the deck side, or a walk-gate where the deck meets the yard. Those get built as part of the deck job, not the fence job. Everything else in this article is the reasoning, and the situations that flip the order.",
+      },
+      { type: 'h2', text: 'Why Deck First, Almost Always' },
+      {
+        type: 'p',
+        text: "Deck demo and deck framing brings equipment into your yard. Not always heavy equipment — a small attached deck might just be two guys with a wheelbarrow — but anything bigger means a skid steer, a dump trailer, sometimes a mini excavator for the footings. Anything mechanized rolling through your yard will damage a new fence. The fresh concrete around a fence post takes 24 to 48 hours to set hard. A skid steer that brushes a post in hour 20 leaves it leaning for the rest of its life.",
+      },
+      {
+        type: 'p',
+        text: "Excavation is the bigger one. Even a modest attached deck means four to twelve footings dug 24 to 36 inches down. If any of those footings sit within six feet of your fence line, you're working in soil that's already supporting a fence post. Dig a footing too close, you destabilize the post next to it. Dig three, you'll lean a section.",
+      },
+      {
+        type: 'p',
+        text: "Then there's the material trip. Deck lumber comes in 10 and 12-foot bundles. They get unloaded somewhere — usually the front yard or the driveway — and carried through the side gate or over the fence. Watch a crew carry 200 board-feet of pressure-treated 2x10s over a fresh fence top rail sometime. The cracked rail isn't always visible from the ground, but you'll find it when the next storm pushes that section.",
+      },
+      { type: 'h2', text: 'When Fence Comes First Anyway' },
+      {
+        type: 'p',
+        text: "The order flips for three real reasons:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "The fence and deck aren't anywhere near each other. Back perimeter fence and a small front-yard deck — independent projects, run them in whatever order the contractors are available.",
+          "You need pet containment during a long deck build. If you have dogs and the deck is going to be a three-week job with crew in and out of the yard, getting the fence in first saves you from leashing them four times a day. The fence crew finishes in two to five days. The deck might take three weeks.",
+          "Fall or winter timing with a slow deck contractor. If you're starting in October and your deck builder has a six-week lead time, the fence can go in now and you'll have privacy through the wait. Just confirm the deck crew can stage their equipment without crossing the new fence run.",
+        ],
+      },
+      { type: 'h2', text: 'Same-Week Builds Where Both Get Installed Together' },
+      {
+        type: 'p',
+        text: "Two configurations don't really have an order, because the deck and fence get built as one job:",
+      },
+      {
+        type: 'p',
+        text: "The privacy screen attached to the deck. A six to eight-foot horizontal cedar wall between you and the neighbor, anchored to the deck framing, often holding up a string of café lights. That's deck, not fence — your deck contractor builds it as part of the deck. If you treat it like a fence job and call a fence company, they'll either say no or quote it like a custom one-off, which costs more.",
+      },
+      {
+        type: 'p',
+        text: "The walk-gate from the deck to the yard. When the deck spans across what was the fence line, the gate gets framed into the deck and the fence terminates into it. Same crew on both, same week, ideally same permit pull.",
+      },
+      { type: 'h2', text: 'Permits, HOAs, and the 30-Day Trap' },
+      {
+        type: 'p',
+        text: "Metro Nashville fence under eight feet doesn't need a permit. Decks over 30 inches off the ground or attached to the house do — and the permit takes two to three weeks once submitted. Knowing this is half the planning. The other half is the HOA.",
+      },
+      {
+        type: 'p',
+        text: "Most Williamson County subdivisions — Brentwood, Franklin, Spring Hill — want the full backyard plan in one Architectural Review Committee submission. Deck plus fence plus landscaping plus pergola, reviewed as a finished aesthetic. Submitting the deck first and then coming back for the fence later gets you 30 to 45 days of review for the deck, then 30 to 45 more for the fence. One packet with everything saves you 30 days. The [full Williamson County HOA playbook](/resources/metro-nashville-permits) walks through the submission shape ARC reviewers actually look at.",
+      },
+      { type: 'h2', text: 'Where the Money Leaks' },
+      {
+        type: 'p',
+        text: "Two cost decisions ride on the order:",
+      },
+      {
+        type: 'p',
+        text: "Same trip vs. separate trips. If one fence company handles both the perimeter fence and the deck-attached privacy screen — and a lot of them can, the cedar work is identical — you pay one mobilization fee instead of two. That's $200 to $400 saved. Have the conversation up front; most quotes don't break mobilization out as a line item, but it's in there.",
+      },
+      {
+        type: 'p',
+        text: "Matching the stain. A new cedar deck and a new cedar fence stained in the same week, by the same crew, with the same can of stain, look like one project. Stain them a year apart and they will never quite match — the older one has weathered, the new one is still pulling oil. If matching matters to you, get them both built and stained in the same window. If it doesn't, ignore this and stain on whatever schedule suits the weather. The [line-item breakdown of a Nashville fence quote](/resources/fence-cost-breakdown) shows where stain and finish usually hide.",
+      },
+      {
+        type: 'p',
+        text: "Damage repair is the other one. Fence first, deck demo damages it, you're paying to fix what you just bought. The deck contractor's general liability probably covers it, but you'll spend a week of phone tag getting it sorted while a cracked rail sits in your yard. The hassle is worse than the money.",
+      },
+      { type: 'h2', text: 'Coordinating Two Crews Who Don\'t Talk to Each Other' },
+      {
+        type: 'p',
+        text: "Nashville fence companies don't build decks. Deck companies don't build fences. You'll have two contractors who've never met and aren't naturally inclined to coordinate. Three questions to ask each of them before you sign anything:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "What's your window? You want consecutive windows, not overlapping. Deck week 1-3, fence week 4. Or deck week 1-2, fence week 3, if the deck is small.",
+          "Are you OK with the other contractor on-site while you work? Some are fine; some want exclusive yard access. The deck guys usually want exclusive access for the framing days — there are sheets of plywood and cuts happening that don't pair well with another crew.",
+          "Who's responsible if your equipment damages the other contractor's work? Get the answer in writing if either of them hedges. Standard answer is the damaging contractor's general liability, but the document trail matters more than the verbal agreement.",
+        ],
+      },
+      {
+        type: 'p',
+        text: "Most of the time both contractors will say the right things. The issue is when neither knows the other one is coming, and the deck crew shows up Monday to find a fresh fence post in their dig zone. A two-minute call between the project managers prevents that.",
+      },
+      { type: 'h2', text: 'Edge Cases Worth Knowing' },
+      {
+        type: 'p',
+        text: "Pool deck plus pool fence is a different sequence entirely — excavation first, fence second (Tennessee pool code requires the barrier in place before the pool can be filled), deck last. The [pool fence code rules in Tennessee](/resources/pool-fence-safety-tn) get specific about which fence configurations satisfy the barrier requirement, because not every fence does.",
+      },
+      {
+        type: 'p',
+        text: "Replacement fence plus new deck is the easy version. Demo the old fence as part of the deck crew's site prep — they're already swinging tools and have a dumpster on site — and the fence company comes in after both are done. Saves a day of labor on each side.",
+      },
+      {
+        type: 'p',
+        text: "Grading or land clearing work always goes first. If the yard needs to be leveled or cleared before either crew can work, that's day one and the rest plans around it.",
+      },
+      { type: 'h2', text: 'Wrapping It Up' },
+      {
+        type: 'p',
+        text: "The default is deck first, fence after. Most Nashville projects fit that. The exceptions are the integrated builds where the fence is part of the deck, the pet-containment situations where you want the fence sooner, and the unusual cases where the fence and deck are on opposite sides of the yard and the order doesn't matter at all. Talk to both contractors before either of them shows up, get their windows aligned, and tell each one that the other exists. That's most of the coordination problem solved. If you're still picking the fence contractor itself, the [seven questions to ask any Nashville installer](/resources/hire-nashville-fence-installer-questions) apply here too — the deck-adjacent fence work is a slightly higher-skill job than a perimeter privacy fence, and you want a crew that's comfortable working around someone else's project.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
