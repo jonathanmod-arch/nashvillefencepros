@@ -47,17 +47,29 @@ const VALUES = [
   },
 ]
 
-const HOW_WE_MAKE_MONEY = [
-  'Lead referral fees from contractors when a homeowner requests a quote through our platform',
-  'Optional premium directory listings for contractors who want enhanced placement',
-  'Sponsored homepage banners (clearly labeled as advertising)',
+const HOW_COMPANIES_LISTED = [
+  'Customer reviews and reputation',
+  'Years in business',
+  'Project portfolio quality',
+  'Responsiveness to inquiries',
+  'Local experience',
+  'Service area coverage',
+  'Overall reputation within the community',
 ]
 
-const WHAT_WE_DONT_DO = [
-  'We are not a licensed fence contractor, we do not install fences ourselves',
-  'We do not accept payment from contractors to suppress negative reviews',
-  'We do not pad our directory with companies we have not personally verified',
+const ADVERTISING_POLICY = [
+  'Advertising, sponsored placements, and featured directory profiles support the site',
+  'Referral partnerships and lead generation programs with vetted providers',
+  'Sponsored placements are disclosed when appropriate',
+  'Rankings and editorial content stay independent of advertising relationships',
+]
+
+const LEAD_GEN_POLICY = [
+  `Quote requests may be shared with one or more providers serving the requested ${CITY.name} area`,
+  'Providers may contact you about your project',
+  'No obligation to hire any company we recommend',
   'We do not sell your contact information to third-party data brokers',
+  'Do your own due diligence before selecting a contractor',
 ]
 
 export default function About() {
@@ -92,24 +104,53 @@ export default function About() {
         <div className="container-wide max-w-4xl">
           <div className="mb-14">
             <span className="label-eyebrow">Our Mission</span>
-            <h2 className="mt-3 heading-section">Make the {CITY.name} fence-buying decision honest</h2>
+            <h2 className="mt-3 heading-section">Make {CITY.name} fence decisions easier</h2>
             <div className="heading-accent" />
             <div className="mt-6 space-y-4 text-[15.5px] text-onyx-700/80 leading-relaxed">
               <p>
-                Most {CITY.name} homeowners get a fence quote once every 10–20 years, which
-                means they walk into the process with no benchmark for what's normal, what
-                a fair price is, what questions to ask, which contractors actually show up
-                on time, which permits apply, and what their HOA or historic overlay will
-                accept.
+                {CITY.siteName} is a local resource built for homeowners, property managers,
+                and commercial property owners making decisions about fence installation in{' '}
+                {CITY.name} and the surrounding {CITY.metroLabel}. The goal is practical,
+                locally-grounded information that helps you understand your options before
+                starting a project — comparing materials, working through local regulations,
+                planning a privacy fence, securing a commercial property, or finding a
+                contractor.
               </p>
               <p>
-                We built {COMPANY.name} to be the resource we wished existed when we
-                started our own fence projects. Vetted contractor profiles, real price
-                ranges from {CITY.primaryCounty} and {CITY.secondaryCounty} County installs, plain-English guides
-                to {CITY.permitOffice.shortName} permit rules, and an honest take on which materials hold up in
-                {' '}{CITY.metroLabel} humidity.
+                We publish local guides on installation costs, permits, property line
+                considerations, contractor research, project inspiration, maintenance, and
+                other topics relevant to {CITY.name} property owners. Coverage spans the{' '}
+                {CITY.primaryCounty} and {CITY.secondaryCounty} County market and the
+                surrounding {CITY.metroLabel} suburbs.
+              </p>
+              <p>
+                {CITY.siteName} is part of a broader network of local fence installation
+                resources and industry publications focused on helping property owners
+                and commercial business owners better understand their options.
+              </p>
+              <p>
+                Our mission is straightforward: publish the most useful fence installation
+                information in {CITY.name} while helping homeowners and commercial business
+                owners understand their options, compare providers, and make better
+                decisions before investing in a project.
               </p>
             </div>
+          </div>
+
+          <div className="mb-14 rounded-2xl bg-warmgray border-l-4 border-forest-500 p-6 md:p-7">
+            <h3 className="heading-card !text-lg mb-2">Who publishes this site</h3>
+            <p className="text-sm text-onyx-700/80 leading-relaxed">
+              {CITY.siteName} is independently published as an informational resource for
+              the {CITY.name} market.
+            </p>
+            <p className="text-sm font-bold text-forest-500 leading-relaxed my-3">
+              We are not a fence installation company.
+            </p>
+            <p className="text-sm text-onyx-700/80 leading-relaxed">
+              Our role is to research local providers, publish educational content, maintain
+              local directories, and help connect property owners with companies that may
+              be a good fit for their projects.
+            </p>
           </div>
 
           <div className="mb-14">
@@ -134,12 +175,12 @@ export default function About() {
 
           <div className="grid lg:grid-cols-2 gap-6 mb-14">
             <div className="rounded-2xl border border-[#E2E8F0] p-6">
-              <h3 className="heading-card !text-lg mb-3">How we make money</h3>
+              <h3 className="heading-card !text-lg mb-3">Advertising Policy</h3>
               <p className="text-sm text-onyx-700/70 mb-4 leading-relaxed">
-                Transparency matters. Here's how the platform pays its bills.
+                Where revenue comes from and how it's labeled.
               </p>
               <ul className="space-y-2.5">
-                {HOW_WE_MAKE_MONEY.map((item) => (
+                {ADVERTISING_POLICY.map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-2 text-sm text-onyx-700/85"
@@ -149,56 +190,47 @@ export default function About() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-xs text-onyx-700/60 leading-relaxed">
+                Advertising helps support the ongoing operation of the site and keeps the
+                resources free for {CITY.name} property owners.
+              </p>
             </div>
 
             <div className="rounded-2xl border border-[#E2E8F0] p-6">
-              <h3 className="heading-card !text-lg mb-3">What we don't do</h3>
+              <h3 className="heading-card !text-lg mb-3">Lead Generation Policy</h3>
               <p className="text-sm text-onyx-700/70 mb-4 leading-relaxed">
-                Some explicit commitments worth putting in writing.
+                What happens when you submit a quote request through the site.
               </p>
               <ul className="space-y-2.5">
-                {WHAT_WE_DONT_DO.map((item) => (
+                {LEAD_GEN_POLICY.map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-2 text-sm text-onyx-700/85"
                   >
-                    <span className="text-red-600 mt-0.5">×</span>
+                    <CheckCircle2 className="w-4 h-4 text-forest-500 mt-0.5 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-xs text-onyx-700/60 leading-relaxed">
+                Our goal is to connect property owners with companies that may be a good
+                fit for the project at hand.
+              </p>
             </div>
           </div>
 
           <div className="mb-14">
-            <span className="label-eyebrow">How We Vet</span>
-            <h2 className="mt-3 heading-section">Our 7-step contractor screen</h2>
+            <span className="label-eyebrow">How Companies Are Listed</span>
+            <h2 className="mt-3 heading-section">How we evaluate {CITY.name} fence pros</h2>
             <div className="heading-accent" />
             <p className="mt-4 text-[15.5px] text-onyx-700/80 leading-relaxed">
-              Every contractor before being added to the directory must clear the same
-              checklist we wrote for homeowners hiring on their own. We also flag{' '}
-              <a
-                href="https://www.americanfenceassociation.com"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="text-forest-500 underline underline-offset-4 hover:text-forest-600"
-              >
-                American Fence Association
-              </a>{' '}
-              membership and Certified Fence Professional (CFP) credentials on profiles
-              where applicable, both are voluntary signals that a contractor is investing
-              in trade education beyond what Tennessee requires.
+              We maintain company profiles and local directories to help visitors find fence
+              installation companies serving the {CITY.name} area. Businesses get included
+              through public research, direct submissions, customer recommendations, or
+              editorial review. When we evaluate and rank providers, we look at:
             </p>
             <ol className="mt-6 space-y-3 text-sm text-onyx-700/85">
-              {[
-                `${CITY.state} general liability + workers' comp insurance verified directly with the broker`,
-                `${CITY.dig811.name} dig-safe protocol confirmed in writing`,
-                'Post-depth specification of at least 24" set in concrete with gravel base',
-                'Material and labor warranties documented separately, in writing',
-                `HOA + ${CITY.historicCommission.abbr} experience confirmed where applicable`,
-                'Payment schedule capped at 50% deposit, balance on completion',
-                'Three recent local installs verified with addresses or photos',
-              ].map((step, i) => (
+              {HOW_COMPANIES_LISTED.map((step, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="w-6 h-6 rounded-full bg-forest-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                     {i + 1}
@@ -207,6 +239,12 @@ export default function About() {
                 </li>
               ))}
             </ol>
+            <p className="mt-5 text-sm text-onyx-700/70 leading-relaxed">
+              Some companies participate in advertising or promotional programs. Rankings
+              and editorial content are based on our evaluation criteria and not
+              automatically influenced by advertising relationships. The full homeowner-
+              facing vetting checklist below is the same standard we apply to every listing.
+            </p>
             <Link
               to="/resources/hire-nashville-fence-installer-questions"
               className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-forest-500 hover:text-forest-600"
@@ -216,10 +254,10 @@ export default function About() {
           </div>
 
           <div className="rounded-2xl bg-warmgray p-6 md:p-8">
-            <h3 className="heading-card !text-xl mb-3">Get in touch</h3>
+            <h3 className="heading-card !text-xl mb-2">Contact Information</h3>
             <p className="text-sm text-onyx-700/70 mb-5 leading-relaxed">
-              Questions about a contractor on our directory, a guide we've published, or
-              listing your fence business? Reach the editorial team directly.
+              Questions, corrections, company submissions, advertising inquiries, and
+              partnership opportunities are always welcome.
             </p>
             <div className="grid sm:grid-cols-3 gap-4 text-sm">
               <a
