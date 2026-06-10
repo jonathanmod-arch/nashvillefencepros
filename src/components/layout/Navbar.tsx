@@ -12,6 +12,17 @@ const NAV_LINKS = [
   { to: '/service-areas', label: 'Service Areas' },
 ]
 
+// Mobile menu intentionally collapses to a flat 5-item list — no
+// service submenus, no bucket nesting. Bucket browsing lives behind
+// the top-level "Services" link → /services hub.
+const MOBILE_NAV_LINKS = [
+  { to: '/services', label: 'Services' },
+  { to: '/cost-guide', label: 'Costs and Pricing' },
+  { to: '/permits', label: 'Permits' },
+  { to: '/contractors', label: 'Find a Pro' },
+  { to: '/service-areas', label: 'Service Areas' },
+]
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -216,90 +227,36 @@ export default function Navbar() {
         aria-hidden={!mobileOpen}
       >
         <div className="overflow-hidden">
-          <div className="max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-1">
-            <div className="py-2">
-              <Link
-                to="/services/fence-installation"
-                className="block text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-1.5"
+          <div className="max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-col">
+            {MOBILE_NAV_LINKS.map((l) => (
+              <NavLink
+                key={l.label}
+                to={l.to}
+                className={({ isActive }) =>
+                  `block py-4 text-lg font-semibold border-b border-warmgray ${
+                    isActive ? 'text-forest-500' : 'text-onyx-700'
+                  }`
+                }
                 tabIndex={mobileOpen ? 0 : -1}
               >
-                Fence Types
-              </Link>
-              {servicesByBucket('fence-installation').map((s) => (
-                <Link
-                  key={s.slug}
-                  to={`/services/${s.slug}`}
-                  className="block py-1.5 text-sm text-onyx-700"
-                  tabIndex={mobileOpen ? 0 : -1}
-                >
-                  {s.short ?? s.name}
-                </Link>
-              ))}
-            </div>
+                {l.label}
+              </NavLink>
+            ))}
 
-            <div className="py-2 border-t border-warmgray">
-              <Link
-                to="/services/specialty"
-                className="block text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-1.5 mt-2"
-                tabIndex={mobileOpen ? 0 : -1}
-              >
-                Purpose-Built Fences
-              </Link>
-              {servicesByBucket('specialty').map((s) => (
-                <Link
-                  key={s.slug}
-                  to={`/services/${s.slug}`}
-                  className="block py-1.5 text-sm text-onyx-700"
-                  tabIndex={mobileOpen ? 0 : -1}
-                >
-                  {s.short ?? s.name}
-                </Link>
-              ))}
-            </div>
-
-            <div className="py-2 border-t border-warmgray">
-              <div className="text-[10px] uppercase font-bold tracking-[0.22em] text-oak-500 mb-1.5 mt-2">
-                Other Categories
-              </div>
-              {SERVICE_BUCKETS.filter(
-                (b) => b.slug !== 'fence-installation' && b.slug !== 'specialty',
-              ).map((b) => (
-                <Link
-                  key={b.slug}
-                  to={`/services/${b.slug}`}
-                  className="block py-1.5 text-sm text-onyx-700"
-                  tabIndex={mobileOpen ? 0 : -1}
-                >
-                  {b.name}
-                </Link>
-              ))}
-              <Link
-                to="/services"
-                className="block mt-2 py-2 text-sm font-bold text-forest-500"
-                tabIndex={mobileOpen ? 0 : -1}
-              >
-                All services →
-              </Link>
-            </div>
-            <div className="border-t border-warmgray pt-2 mt-2">
-              {NAV_LINKS.map((l) => (
-                <NavLink
-                  key={l.label}
-                  to={l.to}
-                  className="block py-2.5 text-sm font-medium text-onyx-700"
-                  tabIndex={mobileOpen ? 0 : -1}
-                >
-                  {l.label}
-                </NavLink>
-              ))}
-            </div>
             <Link
               to="/get-quotes#quote-form"
-              className="bg-forest-500 hover:bg-forest-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors text-center mt-3"
+              className="mt-5 inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 text-white text-sm font-bold px-5 py-3.5 rounded-lg transition-colors"
               tabIndex={mobileOpen ? 0 : -1}
             >
-              Get Fence Quotes
+              Get a Free Quote
             </Link>
+            <a
+              href={`tel:${COMPANY.phoneRaw}`}
+              className="mt-3 mb-2 inline-flex items-center justify-center gap-2 bg-white border border-forest-500 text-forest-500 hover:bg-forest-50 text-sm font-bold px-5 py-3.5 rounded-lg transition-colors"
+              tabIndex={mobileOpen ? 0 : -1}
+            >
+              <Phone className="w-4 h-4" /> Call {COMPANY.phone}
+            </a>
           </div>
         </div>
       </div>
