@@ -69,4 +69,10 @@ export const IMAGES = {
     'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80',
     'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80',
   ],
-} as const
+  /**
+   * Per-service images, populated incrementally by the MCP image server
+   * (scripts/mcp-image-server.mjs → set_image). Empty by default; services.ts
+   * falls back to IMAGES.fenceTypes URLs when a slug has no entry here.
+   */
+  services: {} as Record<string, string>,
+}
