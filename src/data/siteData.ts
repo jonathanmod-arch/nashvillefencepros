@@ -2498,10 +2498,10 @@ export const BENEFITS = [
 ]
 
 export const STATS = [
-  { label: 'Nashville Homeowners Served', value: 2400, suffix: '+' },
-  { label: 'Fence Projects Completed', value: 3800, suffix: '+' },
-  { label: 'Average Fence Cost Savings', value: 22, suffix: '%', prefix: '$' },
-  { label: 'Combined Contractor Experience', value: 85, suffix: ' yrs' },
+  { label: `${CITY.name} Homeowners Served`, value: 2400, suffix: '+' },
+  { label: 'Contractors Listed', value: 40, suffix: '+' },
+  { label: 'Average Costs Saved', value: 22, suffix: '%' },
+  { label: 'Combined Contractor Experience', value: 575, suffix: ' yrs' },
 ]
 
 const GALLERY_CATEGORIES = [
