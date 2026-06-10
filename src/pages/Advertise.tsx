@@ -106,22 +106,22 @@ const PLANS: Plan[] = [
 const SERVICES = [
   {
     icon: Search,
-    name: 'Google My Business Optimization',
-    blurb: `We audit, optimize, and manage your Google Business Profile so you show up in local map searches across ${CITY.name}. Includes photo uploads, review response management, and category optimization.`,
-    startingAt: '$149/mo',
+    name: 'Google My Business Optimization + Reviews Automation',
+    blurb: `We audit, optimize, and manage your Google Business Profile so you show up in local map searches across ${CITY.name}. Includes photo uploads, category optimization, and Google Reviews Automation — automated review requests after every job, monitoring, and AI-assisted responses to every new review.`,
+    startingAt: '$279/mo',
   },
   {
     icon: Globe2,
     name: 'Website Management',
     blurb:
       'Monthly website maintenance, content updates, speed optimization, and security monitoring. Keep your online presence professional and up to date without lifting a finger.',
-    startingAt: '$199/mo',
+    startingAt: '$499/mo',
   },
   {
     icon: BarChart3,
     name: 'Local SEO Services',
-    blurb: `Get your business ranking for "fence contractor ${CITY.name}" and other high-intent keywords. Includes on-page SEO, local citations, backlink building, and monthly ranking reports.`,
-    startingAt: '$299/mo',
+    blurb: `Get your business ranking for "fence contractor ${CITY.name}" and other high-intent keywords. Includes on-page SEO, local citations, and white-hat backlinks built through Digital PR — real placements on regional and trade publications, no PBNs, no link farms. Monthly ranking reports included.`,
+    startingAt: '$699/mo',
   },
 ]
 
