@@ -41,12 +41,17 @@ const CITY_OPTIONS = AREAS.filter((a) => a !== 'All Areas')
 
 type Pricing = { label: string; sub: string; price: string }
 
+const OWNERSHIP_OPTIONS = ['Local', 'Regional', 'National', 'Franchise'] as const
+type OwnershipType = typeof OWNERSHIP_OPTIONS[number]
+
 type FormState = {
   businessName: string
   category: string
   projectType: 'residential' | 'commercial' | 'both' | ''
   tagline: string
   about: string
+  founded: string
+  ownership: '' | OwnershipType
   phone: string
   email: string
   website: string
@@ -56,17 +61,32 @@ type FormState = {
   cities: string[]
   otherCity: string
   yearsInBusiness: string
+  employees: string
   projectsCompleted: string
   license: string
   detailedLicenses: string
   memberships: string
   certifications: string
+  awards: string
+  manufacturerPartnerships: string
   specialties: string
   responseTime: string
   pricing: Pricing[]
   ownerName: string
   ownerRole: string
   ownerEmail: string
+  managerSameAsOwner: boolean
+  managerName: string
+  managerRole: string
+  managerLinkedinUrl: string
+  // Online presence URLs — surfaced on the listing's OnlinePresenceCard.
+  facebookUrl: string
+  bbbUrl: string
+  yelpUrl: string
+  linkedinBusinessUrl: string
+  houzzUrl: string
+  angiUrl: string
+  chamberUrl: string
   authorized: boolean
   agreedToTerms: boolean
 }
@@ -79,6 +99,8 @@ const initialForm: FormState = {
   projectType: '',
   tagline: '',
   about: '',
+  founded: '',
+  ownership: '',
   phone: '',
   email: '',
   website: '',
@@ -88,17 +110,31 @@ const initialForm: FormState = {
   cities: [],
   otherCity: '',
   yearsInBusiness: '',
+  employees: '',
   projectsCompleted: '',
   license: '',
   detailedLicenses: '',
   memberships: '',
   certifications: '',
+  awards: '',
+  manufacturerPartnerships: '',
   specialties: '',
   responseTime: '',
   pricing: [EMPTY_PRICING, EMPTY_PRICING, EMPTY_PRICING, EMPTY_PRICING],
   ownerName: '',
   ownerRole: '',
   ownerEmail: '',
+  managerSameAsOwner: true,
+  managerName: '',
+  managerRole: '',
+  managerLinkedinUrl: '',
+  facebookUrl: '',
+  bbbUrl: '',
+  yelpUrl: '',
+  linkedinBusinessUrl: '',
+  houzzUrl: '',
+  angiUrl: '',
+  chamberUrl: '',
   authorized: false,
   agreedToTerms: false,
 }
@@ -125,12 +161,17 @@ export default function SubmitListing() {
   ])
   const [form, setForm] = useState<FormState>(initialForm)
   const [files, setFiles] = useState<File[]>([])
+  // Manager headshot is a single image kept separate from the project-photo
+  // gallery so submitters can drop a portrait without it ending up in the
+  // public reference-photo set.
+  const [managerHeadshot, setManagerHeadshot] = useState<File | null>(null)
   const [dragOver, setDragOver] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [hp, setHp] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
+  const headshotInputRef = useRef<HTMLInputElement>(null)
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((s) => ({ ...s, [key]: value }))
@@ -174,12 +215,23 @@ export default function SubmitListing() {
     setSubmitting(true)
     setError(null)
     try {
+      // Resolve the manager fields the editor will land in the Contractor
+      // entry. When "use my info as the listing manager" is checked, copy
+      // from the owner block so the editor doesn't have to dedupe.
+      const resolvedManager = form.managerSameAsOwner
+        ? { name: form.ownerName, role: form.ownerRole }
+        : { name: form.managerName, role: form.managerRole }
       const res = await fetch('/api/notify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           formType: 'submit-listing',
-          data: { ...form, fileNames: files.map((f) => f.name) },
+          data: {
+            ...form,
+            resolvedManager,
+            fileNames: files.map((f) => f.name),
+            managerHeadshotName: managerHeadshot?.name ?? null,
+          },
           _hp: hp,
         }),
       })
@@ -331,6 +383,36 @@ export default function SubmitListing() {
                   className="ad-input resize-y"
                 />
               </Field>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Field label="Year founded" required hint="Shown in the Business Information card.">
+                  <input
+                    required
+                    type="number"
+                    min={1900}
+                    max={new Date().getFullYear()}
+                    value={form.founded}
+                    onChange={(e) => set('founded', e.target.value)}
+                    placeholder="2008"
+                    className="ad-input"
+                  />
+                </Field>
+                <Field label="Ownership type" required>
+                  <select
+                    required
+                    value={form.ownership}
+                    onChange={(e) => set('ownership', e.target.value as FormState['ownership'])}
+                    className="ad-input"
+                  >
+                    <option value="">Choose ownership type</option>
+                    {OWNERSHIP_OPTIONS.map((o) => (
+                      <option key={o} value={o}>
+                        {o}
+                      </option>
+                    ))}
+                  </select>
+                </Field>
+              </div>
             </FormSection>
 
             <FormSection
@@ -444,7 +526,7 @@ export default function SubmitListing() {
               title="Credentials & specialties"
               hint="These power the At a Glance card and the search filters."
             >
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-3 gap-4">
                 <Field label="Years in business" required>
                   <input
                     required
@@ -462,6 +544,16 @@ export default function SubmitListing() {
                     value={form.projectsCompleted}
                     onChange={(e) => set('projectsCompleted', e.target.value)}
                     placeholder="1,800+"
+                    className="ad-input"
+                  />
+                </Field>
+                <Field label="Employees" hint="Approximate is fine.">
+                  <input
+                    type="number"
+                    min={0}
+                    value={form.employees}
+                    onChange={(e) => set('employees', e.target.value)}
+                    placeholder="12"
                     className="ad-input"
                   />
                 </Field>
@@ -530,6 +622,32 @@ export default function SubmitListing() {
                   value={form.certifications}
                   onChange={(e) => set('certifications', e.target.value)}
                   placeholder={`Certified Fence Professional (CFP)\nTrex Pro Installer\nLiftMaster Certified Dealer`}
+                  className="ad-input resize-y"
+                />
+              </Field>
+
+              <Field
+                label="Awards & recognition (one per line)"
+                hint="Industry awards, 'Best of' lists, Angi Super Service Awards, etc."
+              >
+                <textarea
+                  rows={3}
+                  value={form.awards}
+                  onChange={(e) => set('awards', e.target.value)}
+                  placeholder={`Angi Super Service Award 2024\nNashville Scene Best of 2023`}
+                  className="ad-input resize-y"
+                />
+              </Field>
+
+              <Field
+                label="Manufacturer partnerships (one per line)"
+                hint="Products you're a certified installer or authorized dealer for."
+              >
+                <textarea
+                  rows={3}
+                  value={form.manufacturerPartnerships}
+                  onChange={(e) => set('manufacturerPartnerships', e.target.value)}
+                  placeholder={`Trex Authorized Dealer\nSimTek Preferred Installer`}
                   className="ad-input resize-y"
                 />
               </Field>
@@ -696,8 +814,169 @@ export default function SubmitListing() {
                   className="ad-input"
                 />
               </Field>
+            </FormSection>
 
-              <div className="space-y-3 pt-2">
+            <FormSection
+              eyebrow="08"
+              title="Listing manager (Managed by)"
+              hint="The primary contact we surface on your listing — name, role, headshot, and LinkedIn appear in the Business Information card."
+            >
+              <CheckboxRow
+                checked={form.managerSameAsOwner}
+                onChange={(v) => set('managerSameAsOwner', v)}
+                label="Show me as the listing manager (uses the name and role above)."
+              />
+
+              {!form.managerSameAsOwner && (
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <Field label="Manager name" required>
+                    <input
+                      required
+                      value={form.managerName}
+                      onChange={(e) => set('managerName', e.target.value)}
+                      placeholder="Alex Carter"
+                      className="ad-input"
+                    />
+                  </Field>
+                  <Field label="Manager role" required>
+                    <input
+                      required
+                      value={form.managerRole}
+                      onChange={(e) => set('managerRole', e.target.value)}
+                      placeholder="General Manager"
+                      className="ad-input"
+                    />
+                  </Field>
+                </div>
+              )}
+
+              <Field
+                label="LinkedIn URL"
+                hint="Optional. Links from the Managed-by chip on your listing."
+              >
+                <input
+                  type="url"
+                  value={form.managerLinkedinUrl}
+                  onChange={(e) => set('managerLinkedinUrl', e.target.value)}
+                  placeholder="https://www.linkedin.com/in/yourname"
+                  className="ad-input"
+                />
+              </Field>
+
+              <Field label="Headshot" hint="Square JPG/PNG, 5 MB max. Falls back to your initial if omitted.">
+                <div
+                  onClick={() => headshotInputRef.current?.click()}
+                  className="border-2 border-dashed border-[#E2E8F0] hover:border-forest-200 hover:bg-warmgray rounded-xl p-5 text-center cursor-pointer transition-colors flex items-center justify-center gap-3"
+                >
+                  <Upload className="w-5 h-5 text-forest-500" />
+                  <span className="text-sm font-semibold text-onyx-700">
+                    {managerHeadshot ? managerHeadshot.name : 'Upload a headshot'}
+                  </span>
+                  {managerHeadshot && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setManagerHeadshot(null)
+                      }}
+                      className="text-onyx-400 hover:text-forest-500"
+                      aria-label="Remove headshot"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                  <input
+                    ref={headshotInputRef}
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      const f = e.target.files?.[0]
+                      if (f && f.type.startsWith('image/')) setManagerHeadshot(f)
+                    }}
+                    className="hidden"
+                  />
+                </div>
+              </Field>
+            </FormSection>
+
+            <FormSection
+              eyebrow="09"
+              title="Online presence"
+              hint="Verified profile URLs render as citation chips on your listing. All optional — paste any that apply."
+            >
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Field label="Facebook page">
+                  <input
+                    type="url"
+                    value={form.facebookUrl}
+                    onChange={(e) => set('facebookUrl', e.target.value)}
+                    placeholder="https://www.facebook.com/yourbiz"
+                    className="ad-input"
+                  />
+                </Field>
+                <Field label="BBB profile">
+                  <input
+                    type="url"
+                    value={form.bbbUrl}
+                    onChange={(e) => set('bbbUrl', e.target.value)}
+                    placeholder="https://www.bbb.org/us/tn/.../profile/..."
+                    className="ad-input"
+                  />
+                </Field>
+                <Field label="Yelp profile">
+                  <input
+                    type="url"
+                    value={form.yelpUrl}
+                    onChange={(e) => set('yelpUrl', e.target.value)}
+                    placeholder="https://www.yelp.com/biz/yourbiz"
+                    className="ad-input"
+                  />
+                </Field>
+                <Field label="Business LinkedIn">
+                  <input
+                    type="url"
+                    value={form.linkedinBusinessUrl}
+                    onChange={(e) => set('linkedinBusinessUrl', e.target.value)}
+                    placeholder="https://www.linkedin.com/company/yourbiz"
+                    className="ad-input"
+                  />
+                </Field>
+                <Field label="Houzz profile">
+                  <input
+                    type="url"
+                    value={form.houzzUrl}
+                    onChange={(e) => set('houzzUrl', e.target.value)}
+                    placeholder="https://www.houzz.com/pro/yourbiz"
+                    className="ad-input"
+                  />
+                </Field>
+                <Field label="Angi profile">
+                  <input
+                    type="url"
+                    value={form.angiUrl}
+                    onChange={(e) => set('angiUrl', e.target.value)}
+                    placeholder="https://www.angi.com/companylist/.../yourbiz"
+                    className="ad-input"
+                  />
+                </Field>
+              </div>
+              <Field label="Chamber of Commerce profile">
+                <input
+                  type="url"
+                  value={form.chamberUrl}
+                  onChange={(e) => set('chamberUrl', e.target.value)}
+                  placeholder="https://web.nashvillechamber.com/list/member/..."
+                  className="ad-input"
+                />
+              </Field>
+            </FormSection>
+
+            <FormSection
+              eyebrow="10"
+              title="Confirm & submit"
+              hint="Quick double-check before we get your listing in the review queue."
+            >
+              <div className="space-y-3">
                 <CheckboxRow
                   checked={form.authorized}
                   onChange={(v) => set('authorized', v)}
