@@ -329,7 +329,7 @@ export function contractorLocalBusiness(c: Contractor): SchemaEntity {
   // Intentionally no aggregateRating, reviewCount, or priceRange so
   // fabricated ratings don't get indexed as rich-result data.
   if (c.source !== 'google-maps') {
-    return {
+    const placeholder: SchemaEntity = {
       '@type': 'LocalBusiness',
       '@id': id,
       name: c.name,
@@ -337,6 +337,9 @@ export function contractorLocalBusiness(c: Contractor): SchemaEntity {
       serviceType: categoryLabel(c.category),
       areaServed: c.areas.map((a) => ({ '@type': 'City', name: a })),
     }
+    const managerPerson = managerToPerson(c)
+    if (managerPerson) placeholder.employee = [managerPerson]
+    return placeholder
   }
 
   // Full schema for verified Google-Maps-sourced listings.
@@ -403,5 +406,23 @@ export function contractorLocalBusiness(c: Contractor): SchemaEntity {
     }
   }
 
+  const managerPerson = managerToPerson(c)
+  if (managerPerson) lb.employee = [managerPerson]
+
   return lb
+}
+
+// Translate the listing's `manager` (one primary point of contact) into a
+// schema.org Person. Returns undefined when no manager is set so callers can
+// skip emitting an empty employee array.
+function managerToPerson(c: Contractor): SchemaEntity | undefined {
+  if (!c.manager) return undefined
+  const person: SchemaEntity = {
+    '@type': 'Person',
+    name: c.manager.name,
+    jobTitle: c.manager.role,
+  }
+  if (c.manager.headshot) person.image = c.manager.headshot
+  if (c.manager.linkedinUrl) person.sameAs = [c.manager.linkedinUrl]
+  return person
 }

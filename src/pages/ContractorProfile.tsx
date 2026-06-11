@@ -842,6 +842,43 @@ function BusinessInfoCard({ c }: { c: Contractor }) {
           </div>
         ))}
       </dl>
+      {c.manager && (
+        <div className="mt-4 pt-4 border-t border-[#E2E8F0] flex items-start gap-3">
+          {c.manager.headshot ? (
+            <SafeImage
+              src={c.manager.headshot}
+              alt={c.manager.name}
+              className="w-11 h-11 rounded-full object-cover border border-[#E2E8F0] flex-shrink-0"
+            />
+          ) : (
+            <div className="w-11 h-11 rounded-full bg-forest-50 text-forest-500 flex items-center justify-center font-bold border border-[#E2E8F0] flex-shrink-0">
+              {c.manager.name.charAt(0)}
+            </div>
+          )}
+          <div className="min-w-0 flex-1">
+            <div className="text-[10px] uppercase tracking-wider font-semibold text-onyx-700/55">
+              Managed by
+            </div>
+            <div className="text-sm font-semibold text-onyx-700 truncate">{c.manager.name}</div>
+            <div className="text-xs text-onyx-700/60 mt-0.5 flex flex-wrap items-center gap-x-1.5">
+              <span>{c.manager.role}</span>
+              {c.manager.linkedinUrl && (
+                <>
+                  <span aria-hidden>·</span>
+                  <a
+                    href={c.manager.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-0.5 text-forest-500 hover:text-forest-600 hover:underline font-semibold"
+                  >
+                    LinkedIn <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </Card>
   )
 }

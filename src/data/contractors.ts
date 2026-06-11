@@ -99,6 +99,16 @@ export type Contractor = {
   financing?: { available: boolean; partners?: string[]; notes?: string }
   warranty?: { material?: string; workmanship?: string; notes?: string }
   team?: { name: string; role: string; bio?: string; photo?: string }[]
+  // Primary point of contact for the listing. Distinct from `team` — this is
+  // the *one* person we surface in the "Managed by" sidebar slot and the
+  // schema.org employee Person on the JSON-LD. Headshot + LinkedIn are
+  // optional; the UI falls back to an initial avatar when headshot is absent.
+  manager?: {
+    name: string
+    role: string
+    headshot?: string
+    linkedinUrl?: string
+  }
   leadCaptureFormUrl?: string
 
   // === AI-derived (regenerated on a schedule via MCP review summarizer) ===
@@ -228,6 +238,15 @@ export const CONTRACTORS: Contractor[] = [
       addressVerified: true,
       phoneVerified: true,
       googleBusinessFound: true,
+    },
+    // Demo placeholder so the "Managed by" sidebar slot is visible while we
+    // iterate on the layout. Replace with real owner data on claim.
+    manager: {
+      name: 'K. Crawford',
+      role: 'Co-Owner',
+      headshot:
+        'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=faces&auto=format&q=80',
+      linkedinUrl: 'https://www.linkedin.com/in/example',
     },
   },
   {
