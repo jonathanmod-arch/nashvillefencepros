@@ -3,6 +3,10 @@
     "images": {
       "command": "node",
       "args": ["scripts/mcp-image-server.mjs"]
+    },
+    "contractors": {
+      "command": "node",
+      "args": ["scripts/mcp-contractor-server.mjs"]
     }
   }
 }
