@@ -173,25 +173,9 @@ export default function ContractorProfile() {
                   )}
                 </div>
 
-                <h1 className="font-heading font-black text-onyx-700 text-3xl sm:text-4xl tracking-tightest leading-tight mb-1.5">
+                <h1 className="font-heading font-black text-onyx-700 text-3xl sm:text-4xl tracking-tightest leading-tight mb-3">
                   {c.name}
                 </h1>
-
-                <div className="flex flex-wrap items-center gap-2.5 mb-3 text-xs">
-                  <span className="inline-flex items-center gap-1 text-onyx-700/60">
-                    <Clock className="w-3 h-3" /> Updated {updatedLabel}
-                  </span>
-                  {recentlyUpdated && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-forest-50 text-forest-500 font-semibold border border-forest-100">
-                      <Sparkles className="w-3 h-3" /> Recently updated
-                    </span>
-                  )}
-                  {isClaimed && (
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-forest-50 text-forest-500 font-semibold border border-forest-100">
-                      <BadgeCheck className="w-3 h-3" /> Claimed by owner
-                    </span>
-                  )}
-                </div>
 
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-sm mb-3">
                   {isLiveGoogle ? (
@@ -228,14 +212,6 @@ export default function ContractorProfile() {
                     {c.areas.join(' · ')}
                   </div>
                 </div>
-
-                <div className="flex flex-wrap gap-1.5">
-                  {c.specialties.map((s) => (
-                    <span key={s} className="px-2.5 py-1 rounded-full bg-[#D4A373]/10 text-[#92400e] border border-[#D4A373]/20 text-[11px] font-semibold">
-                      {s}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -270,6 +246,22 @@ export default function ContractorProfile() {
       <section className="bg-warmgray py-10">
         <div className="container-wide grid lg:grid-cols-[1fr_360px] gap-8 items-start">
           <div className="space-y-6">
+
+            <div className="flex flex-wrap items-center gap-2.5 text-xs">
+              <span className="inline-flex items-center gap-1 text-onyx-700/60">
+                <Clock className="w-3 h-3" /> Updated {updatedLabel}
+              </span>
+              {recentlyUpdated && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-forest-50 text-forest-500 font-semibold border border-forest-100">
+                  <Sparkles className="w-3 h-3" /> Recently updated
+                </span>
+              )}
+              {isClaimed && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-forest-50 text-forest-500 font-semibold border border-forest-100">
+                  <BadgeCheck className="w-3 h-3" /> Claimed by owner
+                </span>
+              )}
+            </div>
 
             <Section eyebrow="Overview" title={`About ${c.name}`}>
               <p className="text-sm text-onyx-700/85 leading-relaxed">

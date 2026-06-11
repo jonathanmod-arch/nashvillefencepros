@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Calculator } from 'lucide-react'
+import { ArrowRight, Calculator, Sparkles } from 'lucide-react'
 import CallbackForm from '../shared/CallbackForm'
 import { CITY } from '../../config/city'
+import { RESOURCES, RESOURCE_PUBLISHED_AT } from '../../data/siteData'
+import { monthYearString } from '../../lib/resourceTitle'
 
 const bullets = [
   'Wood, vinyl, aluminum, chain link and custom fencing',
@@ -9,6 +11,12 @@ const bullets = [
   `${CITY.name} permit and HOA guidance`,
   'Fast local fence estimates',
 ]
+
+// Latest article promoted in the hero pill — the last item in RESOURCES is
+// the most recently added (single global RESOURCE_PUBLISHED_AT date for all
+// articles in v1).
+const latestArticle = RESOURCES[RESOURCES.length - 1]
+const latestArticleDate = monthYearString(new Date(RESOURCE_PUBLISHED_AT))
 
 export default function HeroSection() {
   return (
@@ -20,10 +28,19 @@ export default function HeroSection() {
 
       <div className="container-wide relative pt-10 pb-14 md:pt-14 md:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
         <div className="reveal-up">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest-50 text-forest-500 text-[13px] font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-forest-500" />
-            {CITY.name}'s Most Trusted Fence Resource
-          </span>
+          <Link
+            to={`/resources/${latestArticle.slug}`}
+            className="inline-flex items-center gap-2 max-w-full px-4 py-2 rounded-full bg-forest-50 text-forest-500 text-[13px] font-semibold hover:bg-forest-100 transition-colors group"
+          >
+            <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
+            <span className="truncate">
+              <span className="text-[10px] uppercase tracking-[0.18em] mr-2 opacity-70">
+                Just published · {latestArticleDate}
+              </span>
+              {latestArticle.title}
+            </span>
+            <ArrowRight className="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
+          </Link>
 
           <h1 className="mt-7 text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tightest leading-none">
             <span className="text-onyx-700">Fence Installation</span>
