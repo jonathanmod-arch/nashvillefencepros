@@ -297,6 +297,35 @@ export default function ContractorProfile() {
               </Link>
             )}
 
+            {/* Sample Visuals — only renders when there's no Pro portfolio yet.
+                Sits above Trust & Verification so the page leads with imagery. */}
+            {(!c.portfolio || c.portfolio.length === 0) && (
+              <Section eyebrow="Sample Visuals" title="Reference project photos">
+                <p className="text-xs text-onyx-700/60 mb-4">
+                  Stock visuals representative of the {categoryLabel(c.category).toLowerCase()} category. Replaced with the owner's own portfolio after claim.
+                </p>
+                <div className="relative rounded-xl overflow-hidden bg-warmgray aspect-[16/9] mb-3">
+                  <SafeImage
+                    src={gallery[activeGallery]}
+                    alt={`${c.name} reference project ${activeGallery + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <div className="grid grid-cols-5 gap-2">
+                  {gallery.slice(0, 5).map((img, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => setActiveGallery(i)}
+                      className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all ${activeGallery === i ? 'border-forest-500' : 'border-transparent opacity-75 hover:opacity-100'}`}
+                    >
+                      <SafeImage src={img} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              </Section>
+            )}
+
             <Section eyebrow="Trust & Verification" title="What we've confirmed">
               <VerificationChecklist c={c} />
             </Section>
@@ -400,33 +429,6 @@ export default function ContractorProfile() {
               </Section>
             )}
 
-            {/* Optional Project Gallery — legacy thumbnail strip when no portfolio yet */}
-            {(!c.portfolio || c.portfolio.length === 0) && (
-              <Section eyebrow="Sample Visuals" title="Reference project photos">
-                <p className="text-xs text-onyx-700/60 mb-4">
-                  Stock visuals representative of the {categoryLabel(c.category).toLowerCase()} category. Replaced with the owner's own portfolio after claim.
-                </p>
-                <div className="relative rounded-xl overflow-hidden bg-warmgray aspect-[16/9] mb-3">
-                  <SafeImage
-                    src={gallery[activeGallery]}
-                    alt={`${c.name} reference project ${activeGallery + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-                <div className="grid grid-cols-5 gap-2">
-                  {gallery.slice(0, 5).map((img, i) => (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => setActiveGallery(i)}
-                      className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all ${activeGallery === i ? 'border-forest-500' : 'border-transparent opacity-75 hover:opacity-100'}`}
-                    >
-                      <SafeImage src={img} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                    </button>
-                  ))}
-                </div>
-              </Section>
-            )}
           </div>
 
           <aside className="space-y-5">
@@ -827,10 +829,12 @@ function BusinessInfoCard({ c }: { c: Contractor }) {
   if (c.ownership) rows.push({ label: 'Ownership', value: c.ownership })
   if (c.employees) rows.push({ label: 'Employees', value: String(c.employees) })
   if (c.yearsInBusiness > 0) rows.push({ label: 'Years in business', value: String(c.yearsInBusiness) })
-  rows.push({ label: 'Service area', value: `${c.countiesServed} Counties` })
   if (c.isCommercialProjects) rows.push({ label: 'Commercial projects', value: 'Yes' })
   if (c.isResidentialProjects) rows.push({ label: 'Residential projects', value: 'Yes' })
   if (c.responseTime) rows.push({ label: 'Response time', value: c.responseTime })
+  // Service area lives last because the value wraps to two lines and gets more
+  // breathing room at the bottom of the card.
+  rows.push({ label: 'Service area', value: `${c.countiesServed} Counties` })
 
   return (
     <Card>
