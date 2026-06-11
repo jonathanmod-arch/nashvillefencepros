@@ -195,6 +195,34 @@ export const CONTRACTORS: Contractor[] = [
     source: 'google-maps',
     claimStatus: 'unclaimed',
     lastUpdated: '2026-06-11',
+    lastVerifiedAt: '2026-06-11',
+    founded: 2008,
+    ownership: 'Local',
+    isResidentialProjects: true,
+    isCommercialProjects: true,
+    snapshot:
+      "K & C Fence Company is a family-owned fence contractor serving Nashville and the surrounding Middle Tennessee market since 2008. Public listings put them in the residential and commercial fence installation category, with wood privacy, vinyl, chain link, and aluminum as named specialties on the Google Business Profile. Service area covers Davidson County and reaches into Williamson County for Brentwood-area work. They publish a phone-first contact pattern (no online quote form on the current site), and the East Nashville street address suggests a physical yard and shop rather than a route-from-home operation. Owner has not yet claimed this listing, so hours, pricing, and project portfolio are not owner-verified.",
+    editorialAssessment:
+      "K & C Fence Company shows the profile shape of a long-running family fence company — physical Hart Street address with what looks like a working yard, 17+ years in market, residential and commercial work mixed. The Google Business Profile is active and consistent with the website. We have not been able to independently verify license number or insurance certificates, and the listing has no claim from the owner, so the Trust & Verification block reflects only what's publicly visible. For homeowners considering them: standard pre-hire due diligence applies — ask for license verification and proof of insurance on the first phone call, and confirm Brentwood / Williamson County HOA experience separately if your subdivision requires ARC review.",
+    servicesOffered: [
+      'wood-fence',
+      'vinyl-fence',
+      'chain-link-fence',
+      'aluminum-fence',
+      'fence-repair',
+      'commercial-fencing',
+    ],
+    areasServedDetail: [
+      { slug: 'east-nashville', name: 'East Nashville' },
+      { slug: 'germantown', name: 'Germantown' },
+      { slug: 'sylvan-park', name: 'Sylvan Park' },
+      { slug: 'twelve-south', name: '12 South' },
+      { slug: 'brentwood', name: 'Brentwood' },
+    ],
+    onlinePresence: {
+      googleBusiness:
+        'https://www.google.com/maps/search/?api=1&query=K+%26+C+Fence+Company+Nashville+TN',
+    },
     verification: {
       websiteVerified: true,
       addressVerified: true,
