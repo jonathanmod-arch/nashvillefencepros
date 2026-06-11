@@ -97,7 +97,7 @@ export default function ContractorProfile() {
 
   useDocumentMeta({
     title: c
-      ? `${c.name}, ${categoryLabel(c.category)} in ${CITY.name} ${CITY.stateAbbr}`
+      ? `${c.name} Reviews | ${categoryLabel(c.category)} in ${CITY.name} ${CITY.stateAbbr}`
       : `${CITY.name} Fence Pro Not Found`,
     description: c
       ? `${c.name} is a ${CITY.name}-area ${categoryLabel(c.category).toLowerCase()} serving ${c.areas.join(', ')}. ${c.description.slice(0, 110)}…`
