@@ -9,6 +9,16 @@ import {
   Sparkles,
   ExternalLink,
 } from 'lucide-react'
+
+function formatUpdated(iso: string): string {
+  const d = new Date(iso)
+  return d.toLocaleString('en-US', { month: 'short', year: 'numeric' })
+}
+
+function isRecentlyUpdated(iso: string): boolean {
+  const days = (Date.now() - new Date(iso).getTime()) / (1000 * 60 * 60 * 24)
+  return days <= 90
+}
 import {
   CONTRACTORS,
   AREAS,
@@ -44,8 +54,17 @@ export default function ContractorDirectory({ preview = false }: { preview?: boo
     [query, area, category, projectType],
   )
 
-  const featured = filtered.filter((c) => c.featured)
-  const rest = filtered.filter((c) => !c.featured)
+  // Pro-tier listings always anchor the top of the featured rail (per
+  // docs/CONTRACTOR-PROFILE-PLAN.md — priority placement is the Pro perk),
+  // then editorial "featured" picks fill the rest of the rail.
+  const featured = filtered
+    .filter((c) => c.claimStatus === 'pro' || c.featured)
+    .sort((a, b) => {
+      const aPro = a.claimStatus === 'pro' ? 1 : 0
+      const bPro = b.claimStatus === 'pro' ? 1 : 0
+      return bPro - aPro
+    })
+  const rest = filtered.filter((c) => c.claimStatus !== 'pro' && !c.featured)
 
   return (
     <section className="bg-white section-padding">
@@ -298,13 +317,18 @@ function ContractorCard({
       }`}
     >
       <div className="flex items-start justify-between gap-2 mb-4">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <div className="w-7 h-7 rounded-lg bg-warmgray flex items-center justify-center">
             <Shield className="w-3.5 h-3.5 text-onyx-700/60" />
           </div>
           <span className="text-[10px] font-bold uppercase tracking-wider text-onyx-700/70 px-2 py-1 rounded-md bg-warmgray">
             {c.license}
           </span>
+          {c.claimStatus === 'pro' && (
+            <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-white px-2 py-1 rounded-md bg-forest-500">
+              Pro
+            </span>
+          )}
         </div>
         <span
           className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider whitespace-nowrap ${
@@ -316,8 +340,18 @@ function ContractorCard({
       </div>
 
       <h3 className="heading-card !text-xl leading-tight mb-1">{c.name}</h3>
-      <div className="text-[11px] font-bold uppercase tracking-wider text-oak-500 mb-3">
-        {categoryLabel(c.category)}
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-oak-500">
+          {categoryLabel(c.category)}
+        </span>
+        <span className="text-[11px] text-onyx-700/55">
+          · Updated {formatUpdated(c.lastUpdated)}
+        </span>
+        {isRecentlyUpdated(c.lastUpdated) && (
+          <span className="text-[10px] font-bold uppercase tracking-wider text-forest-500 px-1.5 py-0.5 rounded bg-forest-50 border border-forest-100">
+            Fresh
+          </span>
+        )}
       </div>
       <p className="text-sm text-onyx-700/70 leading-relaxed mb-4 flex-1">
         {c.description}
