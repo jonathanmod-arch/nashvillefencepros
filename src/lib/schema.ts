@@ -358,10 +358,42 @@ export function contractorLocalBusiness(c: Contractor): SchemaEntity {
 
   if (c.phone) lb.telephone = c.phone
 
+  // Last Updated trust signal — see docs/CONTRACTOR-PROFILE-PLAN.md
+  if (c.lastUpdated) lb.dateModified = c.lastUpdated
+  if (c.founded) lb.foundingDate = String(c.founded)
+  if (c.employees) lb.numberOfEmployees = c.employees
+
+  if (c.servicesOffered && c.servicesOffered.length) {
+    lb.knowsAbout = c.servicesOffered
+  }
+
+  if (c.rating > 0 && c.reviews > 0) {
+    lb.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: c.rating,
+      reviewCount: c.reviews,
+    }
+  }
+
   const sameAs: string[] = []
   if (c.googleMapsUrl) sameAs.push(c.googleMapsUrl)
   if (c.website) sameAs.push(c.website)
+  if (c.onlinePresence) {
+    for (const url of Object.values(c.onlinePresence)) {
+      if (typeof url === 'string' && url && !sameAs.includes(url)) sameAs.push(url)
+    }
+  }
   if (sameAs.length > 0) lb.sameAs = sameAs
+
+  if (c.credentials?.awards && c.credentials.awards.length) {
+    lb.award = c.credentials.awards
+  }
+  if (c.credentials?.memberships && c.credentials.memberships.length) {
+    lb.memberOf = c.credentials.memberships.map((name) => ({
+      '@type': 'Organization',
+      name,
+    }))
+  }
 
   if (c.coordinates) {
     lb.geo = {

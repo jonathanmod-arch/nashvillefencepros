@@ -27,14 +27,99 @@ export type Contractor = {
   placeId?: string
   coordinates?: [number, number]
   source?: 'directory' | 'google-maps'
-  // Optional detailed credentials for the profile's
-  // Memberships, Licenses & Associations card. Each array entry is
-  // one display string (e.g. "American Fence Association Member"
-  // or "TN GC License #00012345"). Omit fields with no entries.
   credentials?: {
     licenses?: string[]
     memberships?: string[]
     certifications?: string[]
+    awards?: string[]
+    manufacturerPartnerships?: string[]
+  }
+
+  // === Knowledge-panel expansion fields (added per
+  //     docs/CONTRACTOR-PROFILE-PLAN.md) ===
+
+  // Lifecycle / claim state — claimStatus and lastUpdated are
+  // required on every entry; default to 'unclaimed' and today's date
+  // when the editorial team adds a new contractor.
+  claimStatus: 'unclaimed' | 'free' | 'pro'
+  claimedAt?: string                              // ISO date
+  planTier?: 'pro'
+  planRenewsAt?: string                           // ISO date
+  lastUpdated: string                             // ISO date — auto-bumped on every field change
+  lastVerifiedAt?: string                         // ISO date — set on verification re-run
+
+  // Business information (right sidebar card)
+  founded?: number                                // year (e.g. 2009)
+  ownership?: 'Local' | 'Regional' | 'National' | 'Franchise'
+  employees?: number
+  isCommercialProjects?: boolean
+  isResidentialProjects?: boolean
+
+  // Editorial copy
+  snapshot?: string                               // 150–200 word overview
+  editorialAssessment?: string                    // Fence Guide Assessment paragraph
+
+  // Coverage cross-links
+  servicesOffered?: string[]                      // service slugs from src/data/services.ts
+  areasServedDetail?: { slug: string; name: string }[]  // neighborhood slugs from siteData.ts
+
+  // Verification checklist (rendered as the Trust & Verification section)
+  verification?: {
+    websiteVerified: boolean
+    addressVerified: boolean
+    phoneVerified: boolean
+    googleBusinessFound: boolean
+    bbbFound?: boolean
+    bbbAccreditation?: 'A+' | 'A' | 'B' | 'C' | 'D' | 'F' | 'NR'
+    chamberMember?: boolean
+    licensedInsured?: boolean
+    employeeCountConfirmed?: boolean
+  }
+
+  // === Pro-tier data — owner-populated; gated placeholder otherwise ===
+  portfolio?: {
+    id: string
+    title: string
+    location: string                              // e.g. "Brentwood, TN"
+    fenceType: string
+    projectSize: string                           // e.g. "240 linear feet"
+    completionDate: string                        // ISO date
+    photos: string[]
+    videos?: string[]
+    beforePhoto?: string
+    afterPhoto?: string
+  }[]
+  pricing?: {
+    privacy?: { lo: number; hi: number; unit: 'ft' | 'project' }
+    pool?:    { lo: number; hi: number; unit: 'ft' | 'project' }
+    aluminum?:{ lo: number; hi: number; unit: 'ft' | 'project' }
+    gate?:    { lo: number; hi: number; unit: 'ft' | 'project' }
+  }
+  faqs?: { q: string; a: string }[]
+  financing?: { available: boolean; partners?: string[]; notes?: string }
+  warranty?: { material?: string; workmanship?: string; notes?: string }
+  team?: { name: string; role: string; bio?: string; photo?: string }[]
+  leadCaptureFormUrl?: string
+
+  // === AI-derived (regenerated on a schedule via MCP review summarizer) ===
+  reviewSummary?: {
+    commonPraise: string[]
+    commonConcerns: string[]
+    summarizedAt: string                          // ISO date
+    reviewsAnalyzed: number
+  }
+
+  // === Citation badges across the broader online presence ===
+  onlinePresence?: {
+    googleBusiness?: string
+    facebook?: string
+    bbb?: string
+    yelp?: string
+    buildzoom?: string
+    houzz?: string
+    angi?: string
+    linkedin?: string
+    chamber?: string
   }
 }
 
@@ -108,6 +193,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=K+%26+C+Fence+Company+Nashville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'yard-dog-fence',
@@ -133,6 +226,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Yard+Dog+Fence+Nashville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'pro-line-fence-co',
@@ -158,6 +259,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Pro-Line+Fence+Co+Nolensville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'echo-fence',
@@ -183,6 +292,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Echo+Fence+LLC+Franklin+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'heron-building-co',
@@ -208,6 +325,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Heron+Building+Co+Franklin+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'master-fence',
@@ -236,6 +361,15 @@ export const CONTRACTORS: Contractor[] = [
     credentials: {
       licenses: ['Tennessee Contractor License #82926'],
     },
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+      licensedInsured: true,
+    },
   },
   {
     slug: 'precision-fencing',
@@ -261,6 +395,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Precision+Fencing+LLC+Murfreesboro+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'hooper-fence',
@@ -286,6 +428,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Hooper+Fence+Murfreesboro+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'mid-center-fence',
@@ -311,6 +461,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Mid+Center+Fence+LLC+Mount+Juliet+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'volunteer-fence-company',
@@ -337,6 +495,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Volunteer+Fence+Company+Hendersonville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'kowboy-fence-co',
@@ -362,6 +528,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Kowboy+Fence+Co+Nashville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'franklin-fence-and-deck',
@@ -388,6 +562,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Franklin+Fence+%26+Deck+Franklin+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'quality-fence-and-deck',
@@ -413,6 +595,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Quality+Fence+and+Deck+Murfreesboro+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'rio-grande-fence-co-nashville',
@@ -438,6 +628,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Rio+Grande+Fence+Co+Nashville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'east-tennessee-fence-co',
@@ -464,6 +662,14 @@ export const CONTRACTORS: Contractor[] = [
     placeId: '0x885c1f2b6fa4ac71:0x532f5f526c40be32',
     coordinates: [35.845548, -83.894237],
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'elantra-gate-systems',
@@ -489,6 +695,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Elantra+Gate+Systems+Fairview+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'chesnut-land-surveying',
@@ -514,6 +728,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Chesnut+Land+Surveying+Nashville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'all-terrain-land-clearing',
@@ -539,6 +761,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=All+Terrain+Land+Clearing+Spring+Hill+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'mid-south-seal-and-stain',
@@ -564,6 +794,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Mid+South+Seal+and+Stain+Lebanon+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'landscape-solutions',
@@ -589,6 +827,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Landscape+Solutions+Nashville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'madison-steel-iron-works',
@@ -614,6 +860,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Madison+Steel+%26+Iron+Works+Madison+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'american-fence-and-gate',
@@ -642,6 +896,16 @@ export const CONTRACTORS: Contractor[] = [
     credentials: {
       memberships: ['BBB Accredited Business, A+ rating (accredited since 2022)'],
     },
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+      bbbFound: true,
+      bbbAccreditation: 'A+',
+    },
   },
   {
     slug: 'outdoor-woodworks',
@@ -667,6 +931,14 @@ export const CONTRACTORS: Contractor[] = [
     googleMapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Outdoor+Woodworks+Inc+Goodlettsville+TN',
     source: 'google-maps',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+    },
   },
   {
     slug: 'harpeth-decks',
@@ -694,6 +966,15 @@ export const CONTRACTORS: Contractor[] = [
     source: 'google-maps',
     credentials: {
       certifications: ['TrexPro Platinum Installer (since 2020)'],
+      manufacturerPartnerships: ['Trex'],
+    },
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
     },
   },
   {
@@ -725,6 +1006,17 @@ export const CONTRACTORS: Contractor[] = [
         'BBB Accredited Business, A+ rating (accredited since 2021)',
         'Rutherford County Chamber of Commerce Member',
       ],
+    },
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-11',
+    verification: {
+      websiteVerified: true,
+      addressVerified: true,
+      phoneVerified: true,
+      googleBusinessFound: true,
+      bbbFound: true,
+      bbbAccreditation: 'A+',
+      chamberMember: true,
     },
   },
 ]
