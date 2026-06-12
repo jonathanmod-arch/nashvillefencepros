@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Calculator, Sparkles } from 'lucide-react'
+import { ArrowRight, Calculator } from 'lucide-react'
 import CallbackForm from '../shared/CallbackForm'
 import { CITY } from '../../config/city'
 import { RESOURCES, RESOURCE_PUBLISHED_AT } from '../../data/siteData'
-import { monthYearString } from '../../lib/resourceTitle'
 
 const bullets = [
   'Wood, vinyl, aluminum, chain link and custom fencing',
@@ -13,10 +12,23 @@ const bullets = [
 ]
 
 // Latest article promoted in the hero pill — the last item in RESOURCES is
-// the most recently added (single global RESOURCE_PUBLISHED_AT date for all
-// articles in v1).
-const latestArticle = RESOURCES[RESOURCES.length - 1]
-const latestArticleDate = monthYearString(new Date(RESOURCE_PUBLISHED_AT))
+// the most recently added. Per-article `publishedAt` (ISO date string) wins
+// over the global RESOURCE_PUBLISHED_AT for the pill date.
+const latestArticle = RESOURCES[RESOURCES.length - 1] as
+  (typeof RESOURCES)[number] & { publishedAt?: string }
+const latestArticleDate = formatShortDate(latestArticle.publishedAt ?? RESOURCE_PUBLISHED_AT)
+
+// Format an ISO date string (date-only or full) as "Mon DD" — e.g. "Jun 12".
+// Anchors at noon-UTC for date-only inputs so the local-time render doesn't
+// kick a 'YYYY-MM-DD' string back to the previous day in any U.S. timezone.
+function formatShortDate(iso: string): string {
+  const isoSafe = iso.includes('T') ? iso : `${iso}T12:00:00Z`
+  return new Date(isoSafe).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'America/Chicago',
+  })
+}
 
 export default function HeroSection() {
   return (
@@ -30,16 +42,16 @@ export default function HeroSection() {
         <div className="reveal-up">
           <Link
             to={`/resources/${latestArticle.slug}`}
-            className="inline-flex items-center gap-2 max-w-full px-4 py-2 rounded-full bg-forest-50 text-forest-500 text-[13px] font-semibold hover:bg-forest-100 transition-colors group"
+            className="inline-flex items-center gap-3 max-w-full pl-4 pr-4 py-2.5 rounded-full bg-onyx-700/10 text-onyx-700 text-sm hover:bg-onyx-700/15 transition-colors group"
           >
-            <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-onyx-700 flex-shrink-0" aria-hidden />
             <span className="truncate">
-              <span className="text-[10px] uppercase tracking-[0.18em] mr-2 opacity-70">
-                Just published · {latestArticleDate}
+              <span className="font-normal opacity-70 mr-1.5">
+                New {latestArticleDate}:
               </span>
-              {latestArticle.title}
+              <span className="font-semibold">{latestArticle.title}</span>
             </span>
-            <ArrowRight className="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight className="w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
           </Link>
 
           <h1 className="mt-7 text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tightest leading-none">

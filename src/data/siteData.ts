@@ -2548,6 +2548,10 @@ export const RESOURCES = [
     title: 'Driveway Gate Permits in Nashville: What You Actually Need, and What You Don\'t',
     category: 'Permits',
     readTime: '7 min',
+    // Per-article publish date overrides the global RESOURCE_PUBLISHED_AT for
+    // the home-hero "New {Mon DD}:" pill. ISO date is anchored noon-UTC at
+    // format time so the timezone shift doesn't bump it back a day.
+    publishedAt: '2026-06-12',
     excerpt:
       "A manual swing gate doesn't need a Metro permit. The electric operator does. The right-of-way setback gets people in trouble more than either one. Here's how Nashville actually inspects driveway gates.",
     img: IMAGES.resources['driveway-gate-permits-nashville'],
