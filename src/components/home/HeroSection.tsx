@@ -42,7 +42,7 @@ export default function HeroSection() {
         <div className="reveal-up">
           <Link
             to={`/resources/${latestArticle.slug}`}
-            className="inline-flex items-center gap-3 max-w-full pl-4 pr-4 py-2.5 rounded-full bg-onyx-700/10 text-onyx-700 text-sm hover:bg-onyx-700/15 transition-colors group"
+            className="inline-flex items-center gap-2.5 max-w-full px-4 py-2 rounded-full bg-onyx-700/10 text-onyx-700 text-[13px] hover:bg-onyx-700/15 transition-colors group"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-onyx-700 flex-shrink-0" aria-hidden />
             <span className="truncate">
@@ -51,7 +51,7 @@ export default function HeroSection() {
               </span>
               <span className="font-semibold">{latestArticle.title}</span>
             </span>
-            <ArrowRight className="w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight className="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
           </Link>
 
           <h1 className="mt-7 text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tightest leading-none">
