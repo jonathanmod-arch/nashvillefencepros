@@ -2543,6 +2543,121 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'driveway-gate-permits-nashville',
+    title: 'Driveway Gate Permits in Nashville: What You Actually Need, and What You Don\'t',
+    category: 'Permits',
+    readTime: '7 min',
+    excerpt:
+      "A manual swing gate doesn't need a Metro permit. The electric operator does. The right-of-way setback gets people in trouble more than either one. Here's how Nashville actually inspects driveway gates.",
+    img: IMAGES.resources['driveway-gate-permits-nashville'],
+    imageAlt: 'Black ornamental driveway gate set back from a Nashville street with stone columns',
+    body: [
+      {
+        type: 'p',
+        text: "A standard manual driveway gate built as part of a fence under 8 feet doesn't need a Metro Nashville permit. An electric operator does — you need an electrical permit for the power run. If any part of the gate crosses or swings into the public right-of-way, you also need a Public Works ROW permit. And whether or not a permit is required, the setback from the road is a separate code rule that catches a lot of homeowners flat-footed. Below is what triggers each permit, what doesn't, and the order most contractors don't tell you to handle first.",
+      },
+      { type: 'h2', text: 'The Short Answer' },
+      { type: 'p', text: 'For the impatient:' },
+      {
+        type: 'ul',
+        items: [
+          'Manual swing or slide gate, under 8 ft, no electric operator → no Metro permit. Just install.',
+          'Electric operator, hardwired or trickle-charged from the house → electrical permit for the power circuit.',
+          'Gate over 8 ft tall, or attached to a masonry column over 4 ft → building permit.',
+          'Gate or sweep arc that crosses the public right-of-way → Public Works ROW permit.',
+          'Williamson County HOA — Brentwood, Franklin, Spring Hill, Cool Springs → ARC approval, regardless of what Metro says.',
+          'Property where the address has a fire hydrant inside the trigger distance → Knox Box required for emergency override.',
+        ],
+      },
+      { type: 'h2', text: 'The Electrical Permit Is Where People Get Caught' },
+      {
+        type: 'p',
+        text: "A homeowner watches a YouTube install video, buys a $1,200 solar opener kit, mounts it themselves, and never thinks about a permit because there's no concrete being poured. Six months later a Metro inspector walks by during a different job, sees the operator and the buried conduit running back toward the house, and writes a stop-work order until it's permitted and inspected.",
+      },
+      {
+        type: 'p',
+        text: "Metro Codes treats any low-voltage gate operator that runs off household current as an electrical installation. The conduit run from the panel out to the gate post is a permit pull and an inspection — typically $90 to $140 for the permit and a one-day turnaround on the inspection. Solar-only operators are technically outside this because there's no household circuit involved, but as soon as you tie in a charging trickle line from the house, you're back inside the permit.",
+      },
+      {
+        type: 'p',
+        text: "The fix is dumb-simple if you know it in advance: have your gate contractor or a licensed electrician pull the permit before they cut the trench. After the fact, the same inspection costs more and a few inspectors will ask you to uncover the conduit run to verify burial depth — 18 inches for direct-bury at our soil type, 12 inches if it's in PVC conduit.",
+      },
+      { type: 'h2', text: 'The Right-of-Way Trap That Has Nothing to Do With Permits' },
+      {
+        type: 'p',
+        text: "Metro Public Works owns the first 10 to 25 feet behind the street curb — the exact number varies by road class. It's in your plat survey if you have one, and Public Works will tell you over the phone otherwise. That land is technically yours but encumbered by an easement, which means you can't build into it without a ROW permit and you can't have a gate that swings into it on either side.",
+      },
+      {
+        type: 'p',
+        text: "The setback that matters most is the one the gate needs from the public roadway. Public Works asks for at least 20 feet between the back of the curb and the closed position of the gate. The reasoning: a vehicle waiting for the gate to open should be fully off the public road. Twenty feet is roughly one car length plus a few feet of buffer. Some properties on busier roads — Hillsboro, Granny White, Old Hickory Boulevard — get asked for 25 or 30 feet because the speed of through-traffic makes a queued vehicle a hazard sooner.",
+      },
+      {
+        type: 'p',
+        text: "The mistake people make is measuring from the property line instead of the curb. Property line is usually 10 to 15 feet inside the curb. If you put your gate at the property line, you have a gate roughly 10 feet from the road, and you'll get a courtesy phone call from Public Works inside a month. The fix at that point is moving the gate, which is exactly the install bill twice.",
+      },
+      { type: 'h2', text: 'HOA Approval Comes Before Everything Else' },
+      {
+        type: 'p',
+        text: "This is the upstream one. If you're inside a Williamson County subdivision — most of Brentwood, Franklin, Cool Springs, Spring Hill — the ARC packet is the gating step. Skip it and you'll get a violation letter and a mandate to remove the gate at your cost, regardless of whether Metro approved everything downstream.",
+      },
+      {
+        type: 'p',
+        text: "The ARC packet wants the gate elevation drawing, the column material — stone, brick, stucco, painted metal — the operator hardware brand, and the keypad location. Some HOAs ban swing gates entirely and only allow slide gates because the sweep arc is more predictable from the street. Others ban anything but pedestrian-scale 4-foot gates on driveways. Read your covenants before you spec a single piece of hardware. The [Williamson County HOA submission shape](/resources/metro-nashville-permits) covers what those packets typically require alongside the Metro rules.",
+      },
+      { type: 'h2', text: 'Fire Marshal — The Knox Box Rule' },
+      {
+        type: 'p',
+        text: "If your driveway is the only access to a residence, and the residence has a fire hydrant within a certain distance, Metro Fire Marshal can require a Knox Box override on the gate operator. The Knox Box is a small lockbox that holds the manual override key, accessible only by Nashville Fire keys. One-time $300-ish hardware addition, not a permit, but it has to be installed and active before the gate passes inspection.",
+      },
+      {
+        type: 'p',
+        text: "This catches people on the rural end of Davidson County and across into Williamson — Joelton, Whites Creek, parts of Forest Hills, anywhere you have one driveway serving one house with a hydrant on the line. Ask your installer to call the Fire Marshal's office before you specify the operator. The answer comes fast and it saves you from retrofitting the lockbox after the install crew has already packed up.",
+      },
+      { type: 'h2', text: 'UL 325 Isn\'t a Permit, But It\'s How You Pass Inspection' },
+      {
+        type: 'p',
+        text: "Every automatic gate operator sold legally in the U.S. has to be UL 325 compliant. That covers the obstruction sensing — the gate has to reverse if it hits anything — the photo-eye safety beams, and the edge sensors on slide gates. There's no permit for it. The operator either is or isn't compliant when you buy it. But if you have an old non-compliant operator from before 2016 and you replace your gate around it, the inspector pulling the electrical permit will flag the operator and tell you it has to come out.",
+      },
+      {
+        type: 'p',
+        text: "Two practical implications. Don't buy a used operator off Marketplace unless you can verify the UL 325 listing. And if you're swapping a manual gate for an electric one on existing posts, plan to spend another $300 to $500 on photo eyes and edge sensors that weren't on the manual job. Those aren't optional — they're how the operator passes its own listing test.",
+      },
+      { type: 'h2', text: 'The Order Most Contractors Don\'t Walk You Through' },
+      { type: 'p', text: 'The approvals and permits stack in this sequence:' },
+      {
+        type: 'ol',
+        items: [
+          'HOA / ARC approval first. Gets you the right to build at all in subdivisions.',
+          'Survey or plat review. Confirms where the right-of-way line actually sits and how far back the gate has to land.',
+          'Public Works ROW permit if the gate or sweep crosses the easement.',
+          'Electrical permit pulled by your gate contractor or a licensed electrician.',
+          'Fire Marshal sign-off if the address has a hydrant within the trigger distance.',
+          'Install the gate and operator.',
+          'Schedule the electrical inspection.',
+          'Final operability test and Knox Box install if required.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Skipping HOA approval is the most expensive mistake because you can be ordered to remove a fully installed gate. Skipping the electrical permit is the most common one — almost always discovered during an unrelated inspection later. Skipping the setback calculation is the most embarrassing, because there's no fix for a gate three feet too close to the road except moving it.",
+      },
+      { type: 'h2', text: 'When You Probably Don\'t Need Any of This' },
+      {
+        type: 'p',
+        text: "A manual swing gate built as part of a perimeter fence under 8 ft, set more than 20 feet back from the curb, no electric anything, no masonry columns over 4 ft, no HOA — no permits. Just build it. Most rural Davidson County lots and a fair amount of older East Nashville and Inglewood properties fall in this bucket. The fence contractor handles it as part of the fence job, the gate becomes a wider section with hinges, and the only inspection is whether your neighbor likes the color.",
+      },
+      {
+        type: 'p',
+        text: "That's the answer for maybe 30% of Nashville driveway gates. The other 70% have at least one of the triggers above and need at least one approval. Knowing which bucket you're in before you sign anything is the difference between a $0 paperwork bill and a $1,400 retrofit. If you're still pricing the install side, the [cost ranges for Nashville driveway gates](/resources/driveway-gate-cost-nashville) walk through what the build actually runs, and the [shortlist of Nashville gate installers](/resources/best-gate-installation-companies-nashville) is a useful place to start the conversation.",
+      },
+      { type: 'h2', text: 'Wrapping It Up' },
+      {
+        type: 'p',
+        text: "Three things will save you money on a Nashville driveway gate project: pulling the electrical permit before the trench is cut, measuring the setback from the curb instead of the property line, and getting HOA approval before you spec hardware. The rest is dollars and time, both of which are easier to plan when the rules are clear upfront. The [walk-through of Metro Nashville's other fence and structure permits](/resources/metro-nashville-permits) covers the parent rules these gate rules sit inside, and the [seven questions every Nashville fence installer should answer](/resources/hire-nashville-fence-installer-questions) apply just as cleanly to gate contractors — most fence companies handle gate work in-house anyway.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
