@@ -7,11 +7,16 @@
  *
  * Run with:
  *   PEXELS_API_KEY=xxx npm run fetch-images
- * or set PEXELS_API_KEY in a .env file at the repo root.
+ * or set PEXELS_API_KEY in .env.local (preferred) or .env at the repo root.
  *
  * Get a free key at https://www.pexels.com/api/
  */
-import 'dotenv/config'
+import { config as dotenvConfig } from 'dotenv'
+// Match the env-file convention used by scripts/mcp-image-server.mjs:
+// prefer .env.local (gitignored), fall back to .env. Both are silently
+// skipped if absent, so an external env still wins.
+dotenvConfig({ path: '.env.local' })
+dotenvConfig({ path: '.env' })
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
