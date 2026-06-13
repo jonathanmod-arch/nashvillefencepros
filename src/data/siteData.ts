@@ -2662,6 +2662,177 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'deck-cost-nashville',
+    title: 'How Much Does a New Deck Cost in Nashville?',
+    category: 'Decks',
+    readTime: '7 min',
+    publishedAt: '2026-06-13',
+    excerpt:
+      'Honest installed price ranges for new decks in Nashville — pressure-treated pine to premium composite, ground-level to elevated multi-level. Plus the line items most quotes leave off and the permit traps that catch homeowners on Metro builds.',
+    img: IMAGES.resources['deck-cost-nashville'],
+    imageAlt: 'New composite deck with cedar privacy fence at a Nashville home, deck cost guide',
+    body: [
+      {
+        type: 'p',
+        text: "A new deck in Nashville runs anywhere from $4,000 to $120,000-plus. That's the actual span, and where your project lands inside it depends on five things: square footage, elevation off the ground, decking material, whether the deck attaches to the house, and what neighborhood you're in (HOA review and permit overhead is real money). Below is the way I'd walk through it at the end of your driveway in Brentwood or Inglewood, and how to read any deck quote that hits your inbox.",
+      },
+      { type: 'h2', text: 'The Four Cost Tiers in Nashville' },
+      {
+        type: 'p',
+        text: "Most decks in Davidson and Williamson Counties fall into one of these buckets. Pick the bucket first, then work the line items inside it.",
+      },
+      {
+        type: 'table',
+        headers: ['Tier', 'What you get', 'Installed cost in Nashville'],
+        rows: [
+          ['Ground-level basic', '100-180 sqft pressure-treated pine, no railings, 0-1 stair', '$3,500-$7,500'],
+          ['Mid-range elevated', '200-350 sqft, PT framing, composite or cedar decking, full railings', '$10,000-$22,000'],
+          ['Premium composite', '350-500 sqft, full composite, powder-coated aluminum rails, hidden fasteners', '$22,000-$45,000'],
+          ['Custom outdoor living', '500+ sqft, multi-level, pergola or roof, built-in features', '$45,000-$120,000+'],
+        ],
+      },
+      {
+        type: 'p',
+        text: "The mid-range bracket is where most of my Nashville builds land. The most common phone call is 'I want something nicer than my dad's deck but I'm not building a resort,' and the honest answer is usually 'OK, 280 square feet, composite decking on PT framing, full railings, single stair run — somewhere around $14,500 to $18,000 depending on how high off the ground you're sitting.'",
+      },
+      { type: 'h2', text: 'Per-Square-Foot, Because That\'s How Most Estimators Quote' },
+      {
+        type: 'table',
+        headers: ['Decking material', 'Installed cost per sqft in Nashville'],
+        rows: [
+          ['Pressure-treated pine', '$25-$40'],
+          ['Western red cedar', '$30-$50'],
+          ['Mid-grade composite (Trex Enhance)', '$40-$65'],
+          ['Premium composite (TimberTech, Trex Transcend)', '$55-$85'],
+          ['Hardwood (ipé, mahogany)', '$70-$110'],
+        ],
+      },
+      {
+        type: 'p',
+        text: "The per-square-foot number includes the framing, decking surface, railings, and one set of stairs. It assumes a flat rectangular deck near the ground, no built-ins. Every variation from that adds a multiplier.",
+      },
+      { type: 'h2', text: 'The Line Items Hiding in a Deck Quote' },
+      {
+        type: 'p',
+        text: "A real deck quote has at least nine separate cost lines. If yours is one number on a page, ask for the breakdown before you sign.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Permit fee plus drawings: $200-$700 in Metro Nashville. Decks over 30 inches off the ground or attached to the house require a permit. Some require an engineer stamp on top ($400-$1,200 extra).',
+          "Demo of an existing deck: $1,000-$4,000 if you're replacing. Skip if it's a new build on bare ground.",
+          'Footings: $80-$150 each, typically 4-12 footings on a residential deck. Concrete piers or helical piles, 30-42 inches deep in Nashville clay.',
+          'Framing: $8-$14 per square foot. Pressure-treated 2x10 or 2x12 joists, beams, and posts. Always specify ground-contact-rated lumber for anything touching dirt.',
+          'Decking surface: $4-$15 per sqft for pine, $8-$22 for composite, $15-$28 for hardwood. The biggest single variable in the quote.',
+          'Railings: $35-$120 per linear foot. Code requires guards on any deck more than 30 inches off grade. Composite with metal balusters is the modern Nashville default.',
+          'Stairs: $1,200-$4,000 per stair run, depending on rise and run.',
+          "Ledger flashing and hardware: $300-$800. Don't skip this and don't accept it bundled into another line. Bad flashing is the number-one cause of rot inside the house wall ten years later.",
+          'Skirt or fascia: $400-$1,500. The finished look around the deck base. Cosmetic-only — but only if the framing is vented behind it.',
+        ],
+      },
+      { type: 'h2', text: 'What Drives the Price Up' },
+      {
+        type: 'ul',
+        items: [
+          'Elevation. Anything more than 8 feet off the ground adds $4,000-$15,000 — engineered beams, taller posts, mandatory guard rails, and usually a separate engineer review.',
+          'Multi-level or wraparound. Each level is basically a separate small deck. Roughly 1.3x to 1.8x the simple-rectangle price of the same total square footage.',
+          'Composite versus pine. The material is 1.5x to 3x. The labor is roughly the same, but board cost stacks fast across 400 square feet.',
+          'Built-ins. Benches, planters, pergolas, partial roofs: add $5,000-$30,000-plus depending on the spec.',
+          "Curves or angles. Anything that isn't a 90-degree corner runs 20-40 percent over straight-edge framing.",
+          'HOA review in Williamson County subdivisions. Brentwood, Franklin, Cool Springs: 4-8 weeks of waiting plus $300-$1,500 in review fees. Some HOAs reject pressure-treated decking outright and force composite.',
+        ],
+      },
+      { type: 'h2', text: 'What Keeps the Price Down' },
+      {
+        type: 'ul',
+        items: [
+          'Ground-level builds. No railings, no stairs, no engineering, no separate inspection.',
+          'Rectangular footprint, single elevation.',
+          "Pressure-treated pine. Still the most affordable, and Nashville's climate doesn't punish it the way Florida or coastal Carolina do.",
+          'Standard joist spacing (16 inches on center). Tightening to 12-inch on-center for the firmer composite feel adds 20 percent to framing.',
+          'One site access point with no carrying materials over fences. If your only access is a 36-inch side gate, plan to pay a delivery upcharge.',
+          'Off-season build. November through February gets you discounted labor in Nashville, weather permitting. Most crews are slow then and will trim 5-10 percent.',
+        ],
+      },
+      { type: 'h2', text: 'Hidden Costs Most Quotes Skip' },
+      {
+        type: 'p',
+        text: "Six line items that show up on the final invoice if they weren't on the first quote:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Engineer stamp on elevated decks: $400-$1,200. Metro Codes inspectors ask for it on anything more than 4 feet off grade with a complex framing plan.',
+          'HOA approval review and resubmission: $300-$1,500 plus the wait. ARC packets get rejected the first time on cosmetic items — railing color, skirt material — and the revision cycle adds weeks.',
+          'Asbestos siding removal at the ledger attachment point on pre-1980 homes: $800-$2,500. Common in older East Nashville, Inglewood, and parts of West Meade. Required by code if disturbed.',
+          "Old footings that weren't to code. If you're replacing a deck, expect the existing footings to fail inspection: $1,500-$4,500 to dig and reset.",
+          'Utility relocation. A footing that hits a gas, water, or electrical line needs the utility moved before the deck can go in: $500-$3,000.',
+          'Difficult-site-access fee: $200-$800. Steep slope, narrow gate, no street parking — the crew passes some of that through.',
+        ],
+      },
+      { type: 'h2', text: 'Maintenance Costs Are a Real Line Item Too' },
+      {
+        type: 'ul',
+        items: [
+          'Pressure-treated pine: re-stain every 2-3 years, $400-$1,200 per cycle.',
+          'Western red cedar: re-stain every 2-3 years, $500-$1,500 per cycle.',
+          'Composite: annual cleaning plus a cap-board inspection, $0-$300 if you do it yourself, $300-$700 hired out.',
+          'Hardwood: oil every 2-4 years, $600-$2,000 per cycle.',
+          'Railing repair after a few seasons of Tennessee weather: $200-$2,000 depending on what failed. Wood balusters crack first.',
+        ],
+      },
+      { type: 'h2', text: 'Does a New Deck Actually Add Property Value?' },
+      {
+        type: 'p',
+        text: "Reality check from the Nashville appraiser side. A mid-range deck ($12,000-$22,000) recovers 60-75 percent of installed cost at sale, which is one of the better returns on any exterior project. A premium composite deck ($30,000-plus) recovers closer to 50-60 percent because MLS comps don't yet separate composite from PT in this market. Custom outdoor-living buildouts at $50,000-plus recover less of the dollar amount, but they meaningfully accelerate time-on-market — homes with a built-out backyard sell faster in the same price band, particularly to family buyers in the Sumner County and 615 exurbs.",
+      },
+      { type: 'h2', text: 'How to Read a Deck Quote' },
+      {
+        type: 'p',
+        text: "Seven things to verify before you sign:",
+      },
+      {
+        type: 'ol',
+        items: [
+          'Footing count, depth, and material. "4 concrete piers at 36 inches" is a spec. "Standard footings" is a slogan.',
+          'Joist size, spacing, and treatment grade. "PT 2x10, 16-inch on-center, ground-contact-rated where applicable" is a spec.',
+          'Decking brand AND product line. "Trex Enhance Naturals in Coastal Bluff" is a spec. "Composite decking" is a slogan that lets the contractor swap to whatever\'s cheap that week.',
+          'Railing spec by brand and product. Code-compliant 36-inch guard for anything over 30 inches of fall.',
+          "Ledger attachment method, hardware, and flashing brand. This is where decks fail twenty years out. Don't accept a bullet point that just says 'attach to house.'",
+          'Permit responsibility. Who pulls. Who pays. Who attends the inspection.',
+          'Three separate warranties: framing structural (often 5-10 years), decking material (manufacturer-backed, 25-50 years on composite), install workmanship (1-2 years).',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If any of those seven are missing, ask before signing. The same logic that applies to a [fence quote breakdown](/resources/fence-cost-breakdown) applies double to a deck quote, because the deck is structural and the consequences of skipped specs show up as actual rot or collapse later, not just an ugly fence line.",
+      },
+      { type: 'h2', text: 'Red Flags in a Deck Quote' },
+      {
+        type: 'ul',
+        items: [
+          'Quote without a permit line on a deck over 30 inches off the ground.',
+          'Pressure-treated decking marketed as "composite" in the description. Read the actual product spec.',
+          'Missing flashing detail on the ledger attachment. The single biggest cause of deck-related house damage in the Nashville market.',
+          'Skirt or fascia installed without ventilation behind it — traps moisture and rots the framing from the inside in five years.',
+          'A single warranty number that doesn\'t separate material from workmanship.',
+          'Two-week turnaround on a complex deck. Custom framing and proper ledger flashing take 6-10 weeks. Anyone promising faster is using stock components or skipping permits.',
+          'Verbal estimate with no written breakdown. The number you got verbally is not the number you\'ll be billed.',
+          'Deposit over 50 percent. The Nashville norm is 25-40 percent.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "The same screening logic from the [seven questions to ask any Nashville fence installer](/resources/hire-nashville-fence-installer-questions) article applies to deck builders — actually more strictly, because deck work involves structural framing, weatherproofing, and elevated guard-rail code that residential carpenter crews don't always nail on the first inspection. If you're shopping, the [shortlist of Nashville deck builders](/resources/best-deck-builders-nashville) is where to start, and the [build-order article on decks plus fences](/resources/fence-before-or-after-deck-nashville) covers what to do if both projects are happening in the same window.",
+      },
+      { type: 'h2', text: 'One Last Thing' },
+      {
+        type: 'p',
+        text: "The deck is the only exterior project on the house with skin contact. You'll walk on it barefoot in July, lean on the rails watching a storm roll across Davidson County, and sit on the steps at 11 p.m. when the dog's been outside too long. It's worth spending at the level you want to live with for the next decade. The cheap deck is the one with the silvery boards and the spongy spot near the stair landing that you've been meaning to fix since 2024. The right deck is the one you forget is new — because it just feels like part of the house. Spend at the right level. Get the flashing detail in writing. And don't sign anything that doesn't separate the decking brand from the framing spec.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
