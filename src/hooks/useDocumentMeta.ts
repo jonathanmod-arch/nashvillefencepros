@@ -16,6 +16,17 @@ declare global {
 
 const SITE_URL = CITY.siteUrl
 
+// Brand suffix appended to every page title for SERP recognition. Derived
+// from CITY.siteName so the Charlotte deploy (Charlotte Fence Guide) gets
+// the right suffix automatically. Pages whose title already mentions the
+// brand (About, Terms, Privacy, Cost Guide, Advertise) are skipped so we
+// don't double up.
+const TITLE_SUFFIX = ` | ${CITY.siteName}`
+function withBrandSuffix(title: string): string {
+  if (title.includes(CITY.siteName)) return title
+  return `${title}${TITLE_SUFFIX}`
+}
+
 function ensureTag<T extends HTMLElement>(
   selector: string,
   create: () => T,
@@ -35,8 +46,9 @@ export function useDocumentMeta({
   noindex,
 }: Meta) {
   useEffect(() => {
+    const fullTitle = withBrandSuffix(title)
     const prevTitle = document.title
-    document.title = title
+    document.title = fullTitle
 
     const descTag = ensureTag<HTMLMetaElement>(
       'meta[name="description"]',
@@ -58,7 +70,7 @@ export function useDocumentMeta({
       },
     )
     const prevOgTitle = ogTitle.getAttribute('content') ?? ''
-    ogTitle.setAttribute('content', title)
+    ogTitle.setAttribute('content', fullTitle)
 
     const ogDesc = ensureTag<HTMLMetaElement>(
       'meta[property="og:description"]',
@@ -101,7 +113,7 @@ export function useDocumentMeta({
       window.gtag('event', 'page_view', {
         page_path: window.location.pathname + window.location.search,
         page_location: canonicalHref,
-        page_title: title,
+        page_title: fullTitle,
       })
     }
 
