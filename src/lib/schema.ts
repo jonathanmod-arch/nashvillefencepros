@@ -64,6 +64,12 @@ export function webSiteSchema(): SchemaEntity {
     '@id': WEBSITE_ID,
     url: SITE_URL,
     name: COMPANY.name,
+    // alternateName feeds Google's site-name selection in SERPs alongside
+    // `name`. The no-space form mirrors the domain branding and is one of
+    // the candidates Google picks between for the indexed display name.
+    // Derived from COMPANY.name so the Charlotte deploy (Charlotte Fence
+    // Guide → CharlotteFenceGuide) gets the right value automatically.
+    alternateName: COMPANY.name.replace(/\s+/g, ''),
     publisher: organizationRef(),
     potentialAction: {
       '@type': 'SearchAction',
