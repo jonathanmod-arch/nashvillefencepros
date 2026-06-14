@@ -174,8 +174,8 @@ export default function Resources() {
 
   useDocumentMeta({
     title: r
-      ? `${displayTitle(r.title)} | ${CITY.name} Fence Resource`
-      : `${CITY.name} Fence Resource Center | Install, Repair & Permits`,
+      ? displayTitle(r.title)
+      : `${CITY.name} Fence Resource Center`,
     description: r
       ? `${r.excerpt} ${r.readTime} read on ${CITY.siteName}.`
       : `${CITY.name} fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and ${CITY.permitOffice.shortName} permit how-tos.`,
