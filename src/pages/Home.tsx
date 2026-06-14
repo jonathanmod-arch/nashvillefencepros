@@ -26,7 +26,7 @@ import { CITY } from '../config/city'
 
 export default function Home() {
   useDocumentMeta({
-    title: `Fence installation ${CITY.name} ${CITY.stateAbbr} | Call ${COMPANY.phone}`,
+    title: `Fence Installation ${CITY.name} ${CITY.stateAbbr} | Call ${COMPANY.phone}`,
     description:
       `Fence installation ${CITY.name}, compare vetted ${CITY.name} fence contractors, get free fence installation quotes, calculate fence installation cost in ${CITY.name} ${CITY.stateAbbr}, and find privacy, chain link, vinyl, aluminum, and pet fence pros.`,
     canonical: '/',
