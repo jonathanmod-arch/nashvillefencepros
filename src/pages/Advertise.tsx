@@ -1,21 +1,20 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import {
   ArrowRight,
-  BarChart3,
+  Award,
+  CheckCircle2,
   Check,
-  Clipboard,
-  ClipboardCheck,
-  Globe2,
+  ChevronDown,
   Mail,
-  MapPin,
+  Megaphone,
   Phone,
-  Search,
-  Star,
+  ShieldCheck,
+  Sparkles,
   TrendingUp,
   Users,
+  Zap,
 } from 'lucide-react'
 import { COMPANY } from '../data/siteData'
-import { CONTRACTORS } from '../data/contractors'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import {
@@ -26,140 +25,121 @@ import {
 import { CITY } from '../config/city'
 
 type Plan = {
+  id: 'free' | 'pro' | 'sponsor'
   name: string
   price: string
-  leads: number
+  priceSuffix: string
   blurb: string
   features: string[]
   cta: string
-  ctaTo?: string
-  highlight?: 'popular' | 'best' | 'premium'
-  dark?: boolean
+  ctaHref: string
+  highlight?: boolean
+  trialNote?: string
 }
 
 const PLANS: Plan[] = [
   {
-    name: 'Premium Listing',
-    price: '$99',
-    leads: 3,
-    blurb: 'Get noticed with a standout listing and direct lead forwarding.',
+    id: 'free',
+    name: 'Free',
+    price: '$0',
+    priceSuffix: '/month',
+    blurb: 'Get found by local homeowners',
     features: [
-      'Enhanced directory listing',
-      'Lead forwarding to your inbox',
-      'Priority placement in search results',
-      'Contact button on listing',
+      'Business profile page',
+      'Contact info displayed (phone + email)',
+      'Service area listing',
+      'Up to 3 photos',
+      'Listed in search results',
+      'Monthly profile view stats',
+      'Quote request notifications',
     ],
-    cta: 'Get Started',
+    cta: 'Claim Your Listing',
+    ctaHref: '#add-your-business',
   },
   {
-    name: 'Category Feature',
-    price: '$249',
-    leads: 6,
-    blurb: 'Own your service category and capture more leads in your specialty.',
+    id: 'pro',
+    name: 'Pro',
+    price: '$79',
+    priceSuffix: '/month',
+    blurb: 'Unlimited leads + featured placement',
     features: [
-      'Featured placement in your category',
-      'Lead forwarding to your inbox',
-      'Company showcase article on blog',
-      'Enhanced directory listing',
-      '"Featured" badge on your card',
+      'Everything in Free, plus:',
+      'Website link on profile AND search results',
+      'Featured placement on city pages',
+      'Verified Pro badge on every surface',
+      'Priority in search results',
+      'Lead analytics dashboard (views, clicks, quotes)',
+      'Unlimited photos & portfolio',
+      'Google review integration',
     ],
-    cta: 'Get Started',
-    highlight: 'popular',
+    cta: 'Start Free Trial',
+    ctaHref: '#start-pro-trial',
+    highlight: true,
+    trialNote: 'One fence job pays for 4+ years',
   },
   {
-    name: 'Directory Feature',
-    price: '$349',
-    leads: 9,
-    blurb:
-      'Maximum visibility across the platform, homepage, directory, and blog.',
+    id: 'sponsor',
+    name: 'Sitewide Sponsor',
+    price: '$999',
+    priceSuffix: '/month',
+    blurb: 'Brand-level placement across the entire site',
     features: [
-      'Homepage featured contractor spot',
-      'Directory page featured placement',
-      'Enhanced listing page',
-      'Lead forwarding to your inbox',
-      'Company showcase article on blog',
+      'Everything in Pro, plus:',
+      'Sponsor banner on the home page',
+      'Banner across every directory + resource page',
+      'Logo on every contractor card',
+      'Co-marketing on monthly resource articles',
+      'Dedicated landing page',
+      'Monthly performance report',
       'Priority support',
     ],
-    cta: 'Get Started',
-    highlight: 'best',
-    dark: true,
-  },
-  {
-    name: 'Homepage Sponsor',
-    price: '$499',
-    leads: 15,
-    blurb:
-      'Maximum brand exposure with a dedicated sponsor banner on the homepage.',
-    features: [
-      'Dedicated homepage sponsor banner',
-      'Logo + tagline + CTA link',
-      'Seen by every homepage visitor',
-      'Monthly performance report',
-      'Lead forwarding to your inbox',
-      'Company showcase article on blog',
-    ],
-    cta: 'Contact Us',
-    highlight: 'premium',
+    cta: 'Contact Sales',
+    ctaHref: '#add-your-business',
   },
 ]
 
-const SERVICES = [
+// Plans available in the ROI slider. Free isn't on the picker because the
+// per-lead math doesn't apply, and Sitewide Sponsor is brand-level rather
+// than direct-attribution lead-gen. The calculator stays focused on Pro,
+// where the per-lead math is most defensible.
+const ROI_PLANS = [
+  { id: 'pro', name: 'Pro', price: 79, leads: 12 },
+  { id: 'sponsor', name: 'Sitewide Sponsor', price: 999, leads: 40 },
+] as const
+
+type PlanId = (typeof ROI_PLANS)[number]['id']
+
+const FAQ_ITEMS = [
   {
-    icon: Search,
-    name: 'Google My Business Optimization + Reviews Automation',
-    blurb: `We audit, optimize, and manage your Google Business Profile so you show up in local map searches across ${CITY.name}. Includes photo uploads, category optimization, and Google Reviews Automation — automated review requests after every job, monitoring, and AI-assisted responses to every new review.`,
-    startingAt: '$279/mo',
+    q: 'What does "unlimited leads" mean?',
+    a: `Every quote request submitted in your service area on ${CITY.siteName} gets forwarded directly to your inbox. No caps, no per-lead surcharges, no bidding wars with other contractors. The same lead doesn't get sold to 4 other shops. You pay the flat monthly fee — that's it.`,
   },
   {
-    icon: Globe2,
-    name: 'Website Management',
-    blurb:
-      'Monthly website maintenance, content updates, speed optimization, and security monitoring. Keep your online presence professional and up to date without lifting a finger.',
-    startingAt: '$499/mo',
+    q: 'Can I cancel anytime?',
+    a: 'Yes. Pro is month-to-month with no contracts. Cancel from your dashboard or email us — your listing reverts to the Free plan automatically and stays live in the directory. No cancellation fee.',
   },
   {
-    icon: BarChart3,
-    name: 'Local SEO Services',
-    blurb: `Get your business ranking for "fence contractor ${CITY.name}" and other high-intent keywords. Includes on-page SEO, local citations, and white-hat backlinks built through Digital PR — real placements on regional and trade publications, no PBNs, no link farms. Monthly ranking reports included.`,
-    startingAt: '$699/mo',
+    q: 'Is there a free trial?',
+    a: 'Yes — 14 days of full Pro access, no charge. We collect a card to verify the business but nothing is billed until the trial ends. Cancel before day 14 and you pay nothing.',
+  },
+  {
+    q: `How is ${CITY.siteName} different from HomeAdvisor or Angi?`,
+    a: 'Three differences. First, the same lead doesn\'t get sold to multiple contractors — you\'re the only Pro who hears about it. Second, no per-lead pricing — one flat monthly fee whether you get 3 leads or 30. Third, we publish editorial content (cost guides, permit walkthroughs, hiring questions) that drives the traffic, not paid ad bidding. Homeowners arrive ready to talk, not after clicking a sponsored result.',
+  },
+  {
+    q: 'How do I claim my existing listing?',
+    a: `If your business already appears in our directory (sourced from public Google Business Profile data), use the "claim" link on your profile page to verify ownership. We confirm via the phone number on file. Claim is free — Pro upgrades from there.`,
+  },
+  {
+    q: 'How does the Sitewide Sponsor slot work?',
+    a: 'One sponsor at a time per city. Logo and link in the header strip on every page, dedicated landing page, and co-marketing on the monthly resource articles. We don\'t run multiple sponsors against each other — exclusive brand placement. Limited to one slot per category at any given time.',
   },
 ]
-
-const SITE_URL = CITY.siteUrl
-
-const escapeHtml = (s: string): string =>
-  s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;')
-
-const buildBadgeCode = (profileUrl: string): string =>
-  `<a href="${profileUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:13px;font-weight:600;text-decoration:none;color:#1B4332;background:#fff;border:1px solid #1B4332;border-radius:9999px;line-height:1;">
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B4332" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-  Verified on ${CITY.domain}
-</a>`
-
-const buildCardCode = (profileUrl: string, businessName?: string): string => {
-  const heading = businessName ? escapeHtml(businessName) : `Featured on ${CITY.siteName}`
-  return `<a href="${profileUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;flex-direction:column;gap:8px;padding:16px 20px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;text-decoration:none;background:#fff;border:1px solid #E2E8F0;border-radius:12px;max-width:280px;color:#1A1D1E;">
-  <div style="display:flex;align-items:center;gap:10px;">
-    <div style="width:32px;height:32px;border-radius:6px;background:#1B4332;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:-0.02em;">NF</div>
-    <div style="font-size:10px;color:#1A1D1E;opacity:0.55;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;">Verified Pro</div>
-  </div>
-  <div style="font-size:14px;font-weight:700;color:#1A1D1E;line-height:1.25;">${heading}</div>
-  <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#1A1D1E;">
-    <span style="color:#D4A373;letter-spacing:1px;">★★★★★</span>
-    <span style="font-weight:600;">Top Rated</span>
-  </div>
-</a>`
-}
 
 export default function Advertise() {
   useDocumentMeta({
-    title: `Advertise on ${CITY.siteName} | Lead Gen for Fence Contractors`,
-    description: `Advertise to thousands of ${CITY.name} homeowners hiring fence installers. Premium listings, category sponsorships, and homepage placement on the leading ${CITY.name} fence directory. From $99/mo, month-to-month.`,
+    title: `Advertise on ${CITY.siteName}`,
+    description: `Grow your ${CITY.name} fence business with unlimited leads. Free directory listing, $79/mo Pro plan with 14-day free trial, or sitewide brand sponsorship. Month-to-month, cancel anytime.`,
     canonical: '/advertise',
   })
 
@@ -169,37 +149,242 @@ export default function Advertise() {
     webPageSchema({
       slug: '/advertise',
       title: `Advertise on ${CITY.siteName}`,
-      description: `Premium listings, category sponsorships, and homepage placement on the leading ${CITY.name} fence directory.`,
+      description: `Free directory listing or $79/mo Pro with unlimited leads in ${CITY.name}.`,
     }),
   ])
+
   return (
     <>
       <Hero />
       <Pricing />
-      <Services />
+      <MathStrip />
       <ROICalculator />
-      <WidgetSection />
-      <ContactSection />
+      <FAQSection />
+      <StartProTrial />
+      <AddYourBusiness />
     </>
   )
 }
 
-const ROI_PLANS = [
-  { id: 'premium', name: 'Premium Listing', price: 99, leads: 3 },
-  { id: 'category', name: 'Category Feature', price: 249, leads: 6 },
-  { id: 'directory', name: 'Directory Feature', price: 349, leads: 9 },
-  { id: 'sponsor', name: 'Homepage Sponsor', price: 499, leads: 15 },
-] as const
+// ---------------------------------------------------------------------------
+// Hero
+// ---------------------------------------------------------------------------
 
-type PlanId = (typeof ROI_PLANS)[number]['id']
+function Hero() {
+  return (
+    <section className="bg-white relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-forest-50/60 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full bg-oak-50/40 blur-3xl" />
+      </div>
+      <div className="container-wide relative pt-14 pb-10 md:pt-20 md:pb-14 text-center">
+        <span className="label-eyebrow">Partner With Us</span>
+        <h1 className="mt-3 font-heading font-black tracking-tightest leading-[1.05] text-onyx-700">
+          <span className="block text-4xl sm:text-5xl lg:text-6xl">
+            Grow Your {CITY.name}
+          </span>
+          <span className="block text-4xl sm:text-5xl lg:text-6xl text-forest-500 mt-1">
+            Fence Business
+          </span>
+        </h1>
+        <p className="mt-5 font-body text-base sm:text-lg text-onyx-700/70 leading-relaxed max-w-2xl mx-auto">
+          One simple choice. Unlimited leads. No per-lead fees, no bidding wars.
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <HeroCallout
+            icon={Zap}
+            title="Unlimited Leads"
+            body={`Every quote request in your ${CITY.name} area goes straight to you. No caps.`}
+          />
+          <HeroCallout
+            icon={TrendingUp}
+            title="Top Placement"
+            body={`Featured at the top of your ${CITY.name} city page where homeowners look first.`}
+          />
+          <HeroCallout
+            icon={ShieldCheck}
+            title="No Contracts"
+            body="Month-to-month. Cancel anytime. Your listing reverts to free automatically."
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function HeroCallout({
+  icon: Icon,
+  title,
+  body,
+}: {
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  body: string
+}) {
+  return (
+    <div className="text-center">
+      <div className="w-11 h-11 rounded-xl bg-forest-50 text-forest-500 flex items-center justify-center mx-auto mb-3">
+        <Icon className="w-5 h-5" />
+      </div>
+      <div className="font-heading font-bold text-onyx-700 text-lg tracking-tightest">
+        {title}
+      </div>
+      <p className="mt-1.5 text-sm text-onyx-700/65 leading-relaxed max-w-xs mx-auto">
+        {body}
+      </p>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Pricing — three plans
+// ---------------------------------------------------------------------------
+
+function Pricing() {
+  return (
+    <section className="bg-warmgray section-padding">
+      <div className="container-wide">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="label-eyebrow">Pricing</span>
+          <h2 className="mt-3 heading-section">Pick a Plan</h2>
+          <div className="heading-accent mx-auto" />
+          <p className="mt-4 text-body-lead">
+            Free forever or upgrade to Pro for unlimited leads. Sitewide Sponsor for brand-level placement across every page.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch max-w-6xl mx-auto">
+          {PLANS.map((p) => (
+            <PlanCard key={p.id} plan={p} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function PlanCard({ plan }: { plan: Plan }) {
+  const isPro = plan.highlight
+  return (
+    <div
+      className={`relative rounded-2xl p-7 flex flex-col bg-white ${
+        isPro
+          ? 'border-2 border-forest-500 shadow-medium'
+          : 'border border-[#E2E8F0]'
+      }`}
+    >
+      {isPro && (
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-forest-500 text-white text-[11px] font-bold uppercase tracking-wider">
+          Best Value
+        </span>
+      )}
+
+      <h3 className="font-heading font-bold text-onyx-700 text-2xl tracking-tightest">
+        {plan.name}
+      </h3>
+      <p className="mt-1 text-sm text-onyx-700/65">{plan.blurb}</p>
+
+      <div className="mt-5 flex items-baseline gap-1">
+        <span className="font-heading font-black text-5xl text-onyx-700 tracking-tightest">
+          {plan.price}
+        </span>
+        <span className="text-sm text-onyx-700/55">{plan.priceSuffix}</span>
+      </div>
+
+      {plan.trialNote && (
+        <p className="mt-2 text-sm font-semibold text-forest-500">
+          {plan.trialNote}
+        </p>
+      )}
+
+      <a
+        href={plan.ctaHref}
+        className={`mt-6 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3.5 text-sm font-semibold transition-colors ${
+          isPro
+            ? 'bg-forest-500 text-white hover:bg-forest-600'
+            : 'bg-white text-forest-500 border-2 border-forest-500 hover:bg-forest-50'
+        }`}
+      >
+        {plan.cta}
+        {isPro && <ArrowRight className="w-4 h-4" />}
+      </a>
+
+      <div className="mt-6 pt-6 border-t border-[#E2E8F0]">
+        {isPro && (
+          <p className="text-xs text-onyx-700/55 mb-3">Everything in Free, plus:</p>
+        )}
+        <ul className="space-y-2.5">
+          {plan.features
+            .filter((f) => !f.startsWith('Everything in'))
+            .map((f) => (
+              <li key={f} className="flex items-start gap-2 text-sm text-onyx-700/85">
+                <Check className="w-4 h-4 text-forest-500 flex-shrink-0 mt-0.5" strokeWidth={3} />
+                <span>{f}</span>
+              </li>
+            ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// "The Math is Simple" strip — short ROI summary
+// ---------------------------------------------------------------------------
+
+function MathStrip() {
+  return (
+    <section className="bg-white pt-2 pb-12">
+      <div className="container-wide max-w-4xl">
+        <div className="rounded-2xl bg-forest-50 border border-forest-100 px-6 py-8 md:px-10 md:py-10 text-center">
+          <h3 className="font-heading font-bold text-onyx-700 text-2xl tracking-tightest mb-6">
+            The Math is Simple
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            <MathStat value="$79" label="Monthly cost" />
+            <MathStat value="$4,500" label="Average fence job" />
+            <MathStat value="57× ROI" label="From just one job" valueColor="text-forest-500" />
+          </div>
+          <p className="mt-6 text-sm text-onyx-700/70">
+            Close just one Pro lead and {CITY.siteName} pays for itself 57 times over.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function MathStat({
+  value,
+  label,
+  valueColor = 'text-onyx-700',
+}: {
+  value: string
+  label: string
+  valueColor?: string
+}) {
+  return (
+    <div>
+      <div className={`font-heading font-black text-4xl tracking-tightest ${valueColor}`}>
+        {value}
+      </div>
+      <div className="text-sm text-onyx-700/60 mt-1">{label}</div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// ROI Calculator — kept from previous implementation, plan options trimmed
+// ---------------------------------------------------------------------------
 
 function ROICalculator() {
-  const [planId, setPlanId] = useState<PlanId>('directory')
-  const [avgTicket, setAvgTicket] = useState(4800)
+  const [planId, setPlanId] = useState<PlanId>('pro')
+  const [avgTicket, setAvgTicket] = useState(4500)
   const [profitMargin, setProfitMargin] = useState(35)
   const [closeRate, setCloseRate] = useState(30)
 
-  const plan = ROI_PLANS.find((p) => p.id === planId) ?? ROI_PLANS[2]
+  const plan = ROI_PLANS.find((p) => p.id === planId) ?? ROI_PLANS[0]
   const leads = plan.leads
 
   const newCustomers = leads * (closeRate / 100)
@@ -212,9 +397,7 @@ function ROICalculator() {
   const roiMultiple = plan.price > 0 ? monthlyProfit / plan.price : 0
 
   const fmtMoney = (n: number) =>
-    n >= 1000
-      ? `$${Math.round(n).toLocaleString()}`
-      : `$${n.toFixed(2)}`
+    n >= 1000 ? `$${Math.round(n).toLocaleString()}` : `$${n.toFixed(2)}`
 
   const closeFill = ((closeRate - 10) / 80) * 100
 
@@ -234,17 +417,16 @@ function ROICalculator() {
           </h2>
           <div className="w-12 h-0.5 bg-oak-400 mx-auto mb-5" />
           <p className="font-body text-base text-white/70">
-            Plug in your numbers. We'll show you the actual value of a single lead, your
-            projected monthly revenue, and the profit you'd net before lead-gen costs.
+            Plug in your numbers. We'll show you the actual value of a single lead, your projected monthly revenue, and the profit you'd net before lead-gen costs.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
           <div className="mb-4">
             <div className="text-xs font-bold uppercase tracking-[0.15em] text-white/70 mb-3 text-center">
-              Pick a Plan, Drag the sliders below to see your ROI
+              Pick a Plan, drag the sliders below to see your ROI
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 gap-3 max-w-2xl mx-auto">
               {ROI_PLANS.map((p) => {
                 const active = p.id === planId
                 return (
@@ -258,7 +440,11 @@ function ROICalculator() {
                         : 'bg-white/5 border-white/10 hover:border-white/30 hover:bg-white/10'
                     }`}
                   >
-                    <div className={`text-[10px] font-bold uppercase tracking-[0.18em] mb-1 ${active ? 'text-oak-400' : 'text-white/50'}`}>
+                    <div
+                      className={`text-[10px] font-bold uppercase tracking-[0.18em] mb-1 ${
+                        active ? 'text-oak-400' : 'text-white/50'
+                      }`}
+                    >
                       {active ? 'Selected' : 'Plan'}
                     </div>
                     <div className="font-heading font-bold text-white text-base leading-tight">
@@ -266,7 +452,8 @@ function ROICalculator() {
                     </div>
                     <div className="mt-2 flex items-baseline justify-between gap-2">
                       <span className="text-white font-heading font-black text-xl tracking-tightest">
-                        ${p.price}<span className="text-xs font-semibold text-white/60 ml-0.5">/mo</span>
+                        ${p.price}
+                        <span className="text-xs font-semibold text-white/60 ml-0.5">/mo</span>
                       </span>
                       <span className="text-xs font-semibold text-oak-400">
                         {p.leads}+ leads/mo
@@ -358,41 +545,14 @@ function ROICalculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              {
-                label: 'Avg. Profit Per Job',
-                sub: 'Before cost of lead generation',
-                value: fmtMoney(avgProfitPerJob),
-              },
-              {
-                label: 'New Customers / Month',
-                sub: 'From these leads',
-                value: Math.round(newCustomers).toLocaleString(),
-              },
-              {
-                label: 'Actual Value of a Lead',
-                sub: 'Revenue per lead delivered',
-                value: fmtMoney(valuePerLead),
-              },
-              {
-                label: 'Net Margin Per Lead',
-                sub: 'Actual value × profit margin',
-                value: fmtMoney(netMarginPerLead),
-              },
-              {
-                label: 'Total Monthly Revenue',
-                sub: 'For your fence business',
-                value: fmtMoney(monthlyRevenue),
-              },
-              {
-                label: 'Total Monthly Profit',
-                sub: 'Before cost of lead generation',
-                value: fmtMoney(monthlyProfit),
-              },
+              { label: 'Avg. Profit Per Job', sub: 'Before cost of lead generation', value: fmtMoney(avgProfitPerJob) },
+              { label: 'New Customers / Month', sub: 'From these leads', value: Math.round(newCustomers).toLocaleString() },
+              { label: 'Actual Value of a Lead', sub: 'Revenue per lead delivered', value: fmtMoney(valuePerLead) },
+              { label: 'Net Margin Per Lead', sub: 'Actual value × profit margin', value: fmtMoney(netMarginPerLead) },
+              { label: 'Total Monthly Revenue', sub: 'For your fence business', value: fmtMoney(monthlyRevenue) },
+              { label: 'Total Monthly Profit', sub: 'Before cost of lead generation', value: fmtMoney(monthlyProfit) },
             ].map((m) => (
-              <div
-                key={m.label}
-                className="bg-white rounded-2xl p-6 text-onyx-700 shadow-strong"
-              >
+              <div key={m.label} className="bg-white rounded-2xl p-6 text-onyx-700 shadow-strong">
                 <div className="font-heading font-bold text-onyx-700 text-base leading-tight mb-1">
                   {m.label}
                 </div>
@@ -414,13 +574,14 @@ function ROICalculator() {
                 <div className="font-heading font-black text-white text-2xl md:text-3xl tracking-tightest leading-tight">
                   On the {plan.name} at ${plan.price}/mo, you net{' '}
                   <span className={netAfterPlan >= 0 ? 'text-oak-400' : 'text-white'}>
-                    {netAfterPlan >= 0 ? fmtMoney(netAfterPlan) : `-${fmtMoney(Math.abs(netAfterPlan))}`}
+                    {netAfterPlan >= 0
+                      ? fmtMoney(netAfterPlan)
+                      : `-${fmtMoney(Math.abs(netAfterPlan))}`}
                   </span>
                   /mo after the listing fee.
                 </div>
                 <p className="text-sm text-white/75 mt-3 leading-relaxed max-w-2xl">
-                  ${Math.round(monthlyProfit).toLocaleString()} projected monthly profit minus the ${plan.price} plan
-                  cost. Tap a different plan above to compare.
+                  ${Math.round(monthlyProfit).toLocaleString()} projected monthly profit minus the ${plan.price} plan cost. Tap a different plan above to compare.
                 </p>
               </div>
               <div className="text-center md:text-right md:border-l md:border-white/15 md:pl-6">
@@ -428,7 +589,8 @@ function ROICalculator() {
                   Return Multiple
                 </div>
                 <div className="font-heading font-black text-oak-400 text-5xl md:text-6xl tracking-tightest leading-none">
-                  {roiMultiple.toFixed(1)}<span className="text-3xl md:text-4xl">×</span>
+                  {roiMultiple.toFixed(1)}
+                  <span className="text-3xl md:text-4xl">×</span>
                 </div>
                 <div className="text-xs text-white/60 mt-2">profit ÷ plan cost</div>
               </div>
@@ -437,13 +599,13 @@ function ROICalculator() {
 
           <div className="text-center mt-10">
             <a
-              href="#advertise-contact"
+              href="#start-pro-trial"
               className="inline-flex items-center justify-center gap-2 bg-oak-400 hover:bg-oak-300 text-forest-500 text-base font-semibold px-6 py-3.5 rounded-lg transition-colors"
             >
-              Get {CITY.name} Fence Leads <ArrowRight className="w-4 h-4" />
+              Start Pro Free Trial <ArrowRight className="w-4 h-4" />
             </a>
             <p className="text-xs text-white/50 mt-3">
-              Numbers are projections, actuals depend on your sales process and follow-up speed.
+              Numbers are projections. Actuals depend on your sales process and follow-up speed.
             </p>
           </div>
         </div>
@@ -512,75 +674,23 @@ function ROICalculator() {
   )
 }
 
-function Hero() {
-  return (
-    <section className="bg-forest-500 text-white relative overflow-hidden">
-      <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-oak-400/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-forest-700/40 blur-3xl pointer-events-none" />
-      <div className="container-wide relative py-16 md:py-20 text-center">
-        <span className="label-eyebrow !text-oak-400">Partner With Us</span>
-        <h1 className="mt-3 font-heading font-black tracking-tightest leading-none">
-          <span className="block text-4xl sm:text-5xl lg:text-6xl text-white">
-            Reach {CITY.name} Homeowners
-          </span>
-          <span className="block text-4xl sm:text-5xl lg:text-6xl text-oak-400 mt-1">
-            Ready to Buy
-          </span>
-        </h1>
-        <p className="mt-5 font-body text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-          {CITY.domain} connects thousands of {CITY.name} homeowners and
-          businesses with fence contractors every month. Get your company in front of
-          high-intent buyers.
-        </p>
+// ---------------------------------------------------------------------------
+// FAQ
+// ---------------------------------------------------------------------------
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
-          <StatCard icon={Users} value="12,000+" label="Monthly visitors" />
-          <StatCard icon={MapPin} value="100%" label={`${CITY.name}-focused traffic`} />
-          <StatCard icon={TrendingUp} value="4.8★" label="Avg. contractor rating" />
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function StatCard({
-  icon: Icon,
-  value,
-  label,
-}: {
-  icon: React.ComponentType<{ className?: string }>
-  value: string
-  label: string
-}) {
-  return (
-    <div className="rounded-2xl bg-white/5 border border-white/10 p-6 text-center">
-      <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center mx-auto mb-3">
-        <Icon className="w-4 h-4 text-oak-400" />
-      </div>
-      <div className="font-heading font-black text-white text-3xl tracking-tightest leading-none">
-        {value}
-      </div>
-      <div className="font-body text-xs text-white/70 mt-1.5">{label}</div>
-    </div>
-  )
-}
-
-function Pricing() {
+function FAQSection() {
   return (
     <section className="bg-white section-padding">
-      <div className="container-wide">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="label-eyebrow">Advertising Packages</span>
-          <h2 className="mt-3 heading-section">Choose Your Plan</h2>
+      <div className="container-wide max-w-3xl">
+        <div className="text-center mb-10">
+          <span className="label-eyebrow">FAQ</span>
+          <h2 className="mt-3 heading-section">Frequently Asked Questions</h2>
           <div className="heading-accent mx-auto" />
-          <p className="mt-4 text-body-lead">
-            All plans are month-to-month with no long-term contracts. Cancel anytime.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
-          {PLANS.map((p) => (
-            <PlanCard key={p.name} plan={p} />
+        <div className="space-y-3">
+          {FAQ_ITEMS.map((item) => (
+            <FAQRow key={item.q} q={item.q} a={item.a} />
           ))}
         </div>
       </div>
@@ -588,360 +698,49 @@ function Pricing() {
   )
 }
 
-function PlanCard({ plan }: { plan: Plan }) {
-  const dark = plan.dark
-  const wrapper = dark
-    ? 'bg-forest-500 text-white border border-forest-500 ring-1 ring-oak-400/40'
-    : 'bg-white text-onyx-700 border border-[#E2E8F0]'
-
-  const badgeStyles: Record<NonNullable<Plan['highlight']>, string> = {
-    popular: 'bg-oak-400 text-forest-500',
-    best: 'bg-oak-400 text-forest-500',
-    premium: 'bg-[#1A1D1E] text-white',
-  }
-
-  const badgeLabel: Record<NonNullable<Plan['highlight']>, string> = {
-    popular: 'Popular',
-    best: 'Best Value',
-    premium: 'Premium',
-  }
-
+function FAQRow({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false)
   return (
-    <div className={`relative rounded-2xl p-6 flex flex-col ${wrapper}`}>
-      {plan.highlight && (
-        <span
-          className={`absolute top-4 right-4 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
-            badgeStyles[plan.highlight]
+    <div className="rounded-xl border border-[#E2E8F0] bg-white">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left"
+      >
+        <span className="font-heading font-bold text-onyx-700 text-base">{q}</span>
+        <ChevronDown
+          className={`w-5 h-5 text-forest-500 flex-shrink-0 transition-transform ${
+            open ? 'rotate-180' : ''
           }`}
-        >
-          {badgeLabel[plan.highlight]}
-        </span>
+        />
+      </button>
+      {open && (
+        <div className="px-5 pb-5 -mt-1 text-sm text-onyx-700/75 leading-relaxed">
+          {a}
+        </div>
       )}
-
-      <h3
-        className={`font-heading font-bold text-lg tracking-tightest ${
-          dark ? 'text-white' : 'text-onyx-700'
-        }`}
-      >
-        {plan.name}
-      </h3>
-      <div className="mt-2 flex items-baseline gap-1">
-        <span
-          className={`font-heading font-black text-4xl tracking-tightest ${
-            dark ? 'text-white' : 'text-onyx-700'
-          }`}
-        >
-          {plan.price}
-        </span>
-        <span className={`text-sm ${dark ? 'text-white/60' : 'text-onyx-700/60'}`}>
-          /mo
-        </span>
-      </div>
-      <div
-        className={`mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold w-fit ${
-          dark
-            ? 'bg-white/10 text-oak-300 border border-white/15'
-            : 'bg-forest-50 text-forest-500 border border-forest-100'
-        }`}
-      >
-        <span className={`w-1.5 h-1.5 rounded-full ${dark ? 'bg-oak-400' : 'bg-forest-500'}`} />
-        {plan.leads}+ leads/mo
-      </div>
-      <p
-        className={`mt-3 font-body text-sm leading-relaxed ${
-          dark ? 'text-white/70' : 'text-onyx-700/70'
-        }`}
-      >
-        {plan.blurb}
-      </p>
-
-      <ul className="mt-5 space-y-2.5 flex-1">
-        {plan.features.map((f) => (
-          <li
-            key={f}
-            className={`flex items-start gap-2 text-sm ${
-              dark ? 'text-white/85' : 'text-onyx-700/85'
-            }`}
-          >
-            <span
-              className={`mt-0.5 w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${
-                dark ? 'bg-oak-400 text-forest-500' : 'bg-forest-50 text-forest-500'
-              }`}
-            >
-              <Check className="w-2.5 h-2.5" strokeWidth={3} />
-            </span>
-            {f}
-          </li>
-        ))}
-      </ul>
-
-      <a
-        href="#advertise-contact"
-        className={`mt-6 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors ${
-          dark
-            ? 'bg-oak-400 text-forest-500 hover:bg-oak-300'
-            : 'bg-forest-500 text-white hover:bg-forest-600'
-        }`}
-      >
-        {plan.cta}
-      </a>
     </div>
   )
 }
 
-function Services() {
-  return (
-    <section className="bg-warmgray section-padding">
-      <div className="container-wide">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="label-eyebrow">Additional Services</span>
-          <h2 className="mt-3 heading-section">Grow Your Online Presence</h2>
-          <div className="heading-accent mx-auto" />
-          <p className="mt-4 text-body-lead">
-            Beyond directory placement, we offer full-service digital marketing for
-            {' '}{CITY.name} fence contractors.
-          </p>
-        </div>
+// ---------------------------------------------------------------------------
+// Start Pro Trial — dedicated Pro signup form
+// ---------------------------------------------------------------------------
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {SERVICES.map((s) => {
-            const Icon = s.icon
-            return (
-              <div
-                key={s.name}
-                className="bg-white rounded-2xl border border-[#E2E8F0] p-6 flex flex-col"
-              >
-                <div className="w-11 h-11 rounded-lg bg-forest-50 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-forest-500" />
-                </div>
-                <h3 className="font-heading font-bold text-lg text-onyx-700 tracking-tightest mb-2">
-                  {s.name}
-                </h3>
-                <p className="font-body text-sm text-onyx-700/70 leading-relaxed flex-1">
-                  {s.blurb}
-                </p>
-                <div className="mt-5 pt-5 border-t border-[#E2E8F0]">
-                  <div className="text-xs text-onyx-700/60">Starting at</div>
-                  <div className="font-heading font-bold text-onyx-700 text-lg">
-                    {s.startingAt}
-                  </div>
-                  <a
-                    href="#advertise-contact"
-                    className="mt-3 inline-flex items-center justify-center gap-1.5 w-full px-4 py-2.5 rounded-lg border border-forest-500 text-forest-500 text-sm font-semibold hover:bg-forest-50 transition-colors"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function WidgetSection() {
-  const [listingUrl, setListingUrl] = useState('')
-  const [variant, setVariant] = useState<'badge' | 'card'>('badge')
-  const [copied, setCopied] = useState(false)
-
-  const matched = useMemo(() => {
-    const trimmed = listingUrl.trim()
-    if (!trimmed) return null
-    const slugMatch = trimmed.match(/\/contractors\/([a-z0-9-]+)/i)
-    if (!slugMatch) return null
-    return CONTRACTORS.find((c) => c.slug === slugMatch[1]) ?? null
-  }, [listingUrl])
-
-  const hasInput = listingUrl.trim().length > 0
-  const profileUrl = matched
-    ? `${SITE_URL}/contractors/${matched.slug}`
-    : `${SITE_URL}/contractors`
-  const businessName = matched?.name
-
-  const code =
-    variant === 'badge'
-      ? buildBadgeCode(profileUrl)
-      : buildCardCode(profileUrl, businessName)
-
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(code)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1800)
-    } catch {
-      /* ignore */
-    }
-  }
-
-  return (
-    <section className="bg-white section-padding">
-      <div className="container-wide">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="label-eyebrow">Free Widget</span>
-          <h2 className="mt-3 heading-section">Add a Badge to Your Website</h2>
-          <div className="heading-accent mx-auto" />
-          <p className="mt-4 text-body-lead">
-            Paste your {CITY.siteName} listing URL to generate a badge that links
-            directly to your profile. Copy and paste the code anywhere on your website.
-          </p>
-        </div>
-
-        <div className="max-w-3xl mx-auto bg-[#F8F9FA] rounded-2xl border border-[#E2E8F0] p-5">
-          <label className="block mb-5">
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-onyx-700/60 mb-2 block">
-              Your listing URL
-            </span>
-            <input
-              type="url"
-              value={listingUrl}
-              onChange={(e) => setListingUrl(e.target.value)}
-              placeholder={`${CITY.siteUrl}/contractors/your-business-slug`}
-              className="ad-input"
-              autoComplete="off"
-              spellCheck={false}
-            />
-            <div className="mt-2 min-h-[18px] text-xs">
-              {!hasInput && (
-                <span className="text-onyx-700/55">
-                  Leave blank for a generic badge linking to the full directory.
-                </span>
-              )}
-              {hasInput && matched && (
-                <span className="inline-flex items-center gap-1.5 text-forest-500 font-semibold">
-                  <Check className="w-3.5 h-3.5" strokeWidth={3} />
-                  Customized for {matched.name}
-                </span>
-              )}
-              {hasInput && !matched && (
-                <span className="text-[#92400e] font-semibold">
-                  No matching listing found at that URL. Check the slug and try again.
-                </span>
-              )}
-            </div>
-          </label>
-
-          <div className="inline-flex p-1 bg-white rounded-lg border border-[#E2E8F0] mb-5">
-            <button
-              type="button"
-              onClick={() => setVariant('badge')}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-colors ${
-                variant === 'badge'
-                  ? 'bg-forest-500 text-white'
-                  : 'text-onyx-700/70 hover:text-onyx-700'
-              }`}
-            >
-              Badge
-            </button>
-            <button
-              type="button"
-              onClick={() => setVariant('card')}
-              className={`px-4 py-1.5 rounded-md text-sm font-semibold transition-colors ${
-                variant === 'card'
-                  ? 'bg-forest-500 text-white'
-                  : 'text-onyx-700/70 hover:text-onyx-700'
-              }`}
-            >
-              Card
-            </button>
-          </div>
-
-          <div className="bg-white rounded-xl border border-[#E2E8F0] p-8 flex items-center justify-center mb-4">
-            {variant === 'badge' ? <BadgePreview /> : <CardPreview businessName={businessName} />}
-          </div>
-
-          <div className="relative">
-            <pre className="bg-[#1A1D1E] text-onyx-100 rounded-xl p-4 pr-24 text-[11.5px] leading-relaxed overflow-x-auto whitespace-pre-wrap break-all font-mono">
-              {code}
-            </pre>
-            <button
-              type="button"
-              onClick={copy}
-              className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-onyx-700 text-xs font-semibold hover:bg-warmgray transition-colors"
-              aria-label="Copy embed code"
-            >
-              {copied ? (
-                <>
-                  <ClipboardCheck className="w-3.5 h-3.5 text-forest-500" /> Copied
-                </>
-              ) : (
-                <>
-                  <Clipboard className="w-3.5 h-3.5" /> Copy
-                </>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function BadgePreview() {
-  return (
-    <span
-      className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-forest-500 text-forest-500 text-[13px] font-semibold"
-      style={{ fontFamily: "system-ui, -apple-system, 'Segoe UI', sans-serif" }}
-    >
-      <svg
-        width="14"
-        height="14"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M9 12l2 2 4-4" />
-        <circle cx="12" cy="12" r="10" />
-      </svg>
-      Verified on {CITY.domain}
-    </span>
-  )
-}
-
-function CardPreview({ businessName }: { businessName?: string }) {
-  return (
-    <a
-      href="#"
-      onClick={(e) => e.preventDefault()}
-      className="inline-flex flex-col gap-2 px-5 py-4 bg-white border border-[#E2E8F0] rounded-xl max-w-[280px] no-underline"
-      style={{ fontFamily: "system-ui, -apple-system, 'Segoe UI', sans-serif" }}
-    >
-      <div className="flex items-center gap-2.5">
-        <div className="w-8 h-8 rounded-md bg-forest-500 text-white font-bold text-xs flex items-center justify-center">
-          NF
-        </div>
-        <div className="text-[10px] text-onyx-700/55 font-bold uppercase tracking-[0.15em]">
-          Verified Pro
-        </div>
-      </div>
-      <div className="text-sm font-bold text-onyx-700 leading-tight">
-        {businessName || `Featured on ${CITY.siteName}`}
-      </div>
-      <div className="flex items-center gap-1.5 text-xs text-onyx-700">
-        <span className="text-oak-400 tracking-wider">★★★★★</span>
-        <span className="font-semibold">Top Rated</span>
-      </div>
-    </a>
-  )
-}
-
-function ContactSection() {
+function StartProTrial() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [hp, setHp] = useState('')
   const [form, setForm] = useState({
-    name: '',
-    company: '',
+    businessName: '',
     email: '',
-    phone: '',
-    interest: '',
-    message: '',
+    city: CITY.name,
+    state: CITY.stateAbbr,
   })
+
+  const set = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) =>
+    setForm((s) => ({ ...s, [k]: v }))
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -953,7 +752,7 @@ function ContactSection() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          formType: 'advertise-inquiry',
+          formType: 'pro-trial-start',
           data: form,
           _hp: hp,
         }),
@@ -967,202 +766,133 @@ function ContactSection() {
     }
   }
 
-  const interestOptions = useMemo(
-    () => [
-      'Premium Listing, $99/mo',
-      'Category Feature, $249/mo',
-      'Directory Feature, $349/mo',
-      'Homepage Sponsor, $499/mo',
-      'Google My Business Optimization',
-      'Website Management',
-      'Local SEO Services',
-      'General inquiry',
-    ],
-    [],
-  )
-
-  const handle =
-    (k: keyof typeof form) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
-      setForm((s) => ({ ...s, [k]: e.target.value }))
+  if (submitted) {
+    return (
+      <section id="start-pro-trial" className="bg-warmgray section-padding">
+        <div className="container-wide max-w-xl text-center">
+          <div className="bg-white rounded-2xl border border-[#E2E8F0] p-8 md:p-10">
+            <div className="w-14 h-14 rounded-full bg-forest-500 mx-auto flex items-center justify-center mb-5">
+              <CheckCircle2 className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="heading-card !text-2xl mb-3">Trial request received</h2>
+            <p className="text-sm text-onyx-700/75 leading-relaxed">
+              We'll email {form.businessName ? `${form.businessName} at ${form.email}` : form.email}{' '}
+              within one business day with the trial activation link and onboarding steps.
+              No charge until day 14.
+            </p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   return (
-    <section
-      id="advertise-contact"
-      className="bg-onyx-700 text-white section-padding scroll-mt-24"
-    >
-      <div className="container-wide grid lg:grid-cols-2 gap-12 items-start">
-        <div>
-          <span className="block font-body text-sm font-semibold uppercase tracking-widest text-oak-400 mb-3">
-            Get In Touch
+    <section id="start-pro-trial" className="bg-warmgray section-padding">
+      <div className="container-wide max-w-xl">
+        <div className="text-center mb-8">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-50 text-forest-500 text-xs font-semibold">
+            <Sparkles className="w-3.5 h-3.5" />
+            14-day free trial
           </span>
-          <h2 className="font-heading font-black text-white text-3xl sm:text-4xl tracking-tightest leading-[1.05] mb-4">
-            Ready to Grow Your Business?
-          </h2>
-          <div className="w-12 h-0.5 bg-oak-400 mb-6" />
-          <p className="font-body text-lg text-white/70 leading-relaxed mb-8">
-            Fill out the form and we'll reach out within one business day to discuss
-            the best options for your company.
+          <h2 className="mt-4 heading-section">Start {CITY.siteName} Pro</h2>
+          <p className="mt-3 text-body-lead">
+            Unlimited leads, featured placement, verified badge.{' '}
+            <span className="font-semibold">$79/mo</span> after trial — cancel anytime.
           </p>
-
-          <div className="space-y-2.5 mb-8">
-            <a
-              href={`mailto:${COMPANY.email}`}
-              className="flex items-center gap-3 text-sm text-white/80 hover:text-oak-400 transition-colors"
-            >
-              <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                <Mail className="w-4 h-4 text-oak-400" />
-              </span>
-              {COMPANY.email}
-            </a>
-            <a
-              href={`tel:${COMPANY.phoneRaw}`}
-              className="flex items-center gap-3 text-sm text-white/80 hover:text-oak-400 transition-colors"
-            >
-              <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
-                <Phone className="w-4 h-4 text-oak-400" />
-              </span>
-              {COMPANY.phone}
-            </a>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-            <div className="font-heading font-bold text-white text-sm mb-3">
-              Why advertise with us?
-            </div>
-            <ul className="space-y-2.5 text-sm text-white/80">
-              {[
-                `100% ${CITY.name}-focused, high-intent traffic`,
-                'No long-term contracts, month-to-month',
-                'Dedicated account support',
-                'Real lead forwarding, not just impressions',
-              ].map((line) => (
-                <li key={line} className="flex items-start gap-2">
-                  <Check className="w-3.5 h-3.5 text-oak-400 mt-1 flex-shrink-0" />
-                  {line}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-strong p-6 md:p-8 text-onyx-700">
-          {submitted ? (
-            <div className="text-center py-12">
-              <div className="w-14 h-14 rounded-full bg-forest-500 mx-auto flex items-center justify-center mb-4">
-                <Check className="w-7 h-7 text-white" strokeWidth={2.5} />
-              </div>
-              <h3 className="font-heading font-black text-onyx-700 text-2xl tracking-tightest mb-2">
-                Inquiry received
-              </h3>
-              <p className="text-onyx-700/70 max-w-sm mx-auto text-sm leading-relaxed">
-                Thanks for reaching out. We'll respond within one business day to walk
-                you through the right plan for your business.
-              </p>
-            </div>
-          ) : (
-            <form onSubmit={onSubmit} className="space-y-4">
-              <h3 className="font-heading font-bold text-lg text-onyx-700 mb-4">
-                Advertising Inquiry
-              </h3>
+        <div className="bg-forest-50 border border-forest-100 rounded-2xl p-5 mb-5">
+          <ul className="space-y-2 text-sm text-onyx-700/85">
+            {[
+              `Unlimited leads in your ${CITY.name} area`,
+              `Featured at the top of your ${CITY.name} city page`,
+              'Verified Pro badge on your profile',
+              'One fence job pays for 4+ years',
+            ].map((f) => (
+              <li key={f} className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-forest-500 flex-shrink-0 mt-0.5" strokeWidth={3} />
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Field label="Your Name" required>
-                  <input
-                    required
-                    value={form.name}
-                    onChange={handle('name')}
-                    placeholder="Jane Smith"
-                    className="ad-input"
-                  />
-                </Field>
-                <Field label="Company Name" required>
-                  <input
-                    required
-                    value={form.company}
-                    onChange={handle('company')}
-                    placeholder="Your Fence Co."
-                    className="ad-input"
-                  />
-                </Field>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Field label="Email" required>
-                  <input
-                    required
-                    type="email"
-                    value={form.email}
-                    onChange={handle('email')}
-                    placeholder="jane@yourco.com"
-                    className="ad-input"
-                  />
-                </Field>
-                <Field label="Phone">
-                  <input
-                    type="tel"
-                    value={form.phone}
-                    onChange={handle('phone')}
-                    placeholder="(615) 555-0123"
-                    className="ad-input"
-                  />
-                </Field>
-              </div>
-
-              <Field label="I'm interested in…" required>
-                <select
-                  required
-                  value={form.interest}
-                  onChange={handle('interest')}
-                  className="ad-input"
-                >
-                  <option value="">Select an option</option>
-                  {interestOptions.map((o) => (
-                    <option key={o} value={o}>
-                      {o}
-                    </option>
-                  ))}
-                </select>
-              </Field>
-
-              <Field label="Message">
-                <textarea
-                  rows={4}
-                  value={form.message}
-                  onChange={handle('message')}
-                  placeholder="Tell us a bit about your business and goals…"
-                  className="ad-input resize-y"
-                />
-              </Field>
-
+        <form
+          onSubmit={onSubmit}
+          className="bg-white rounded-2xl border border-[#E2E8F0] p-6 md:p-8 space-y-4"
+        >
+          <Field label="Business Name" required>
+            <input
+              required
+              value={form.businessName}
+              onChange={(e) => set('businessName', e.target.value)}
+              placeholder="Your Fence Company"
+              className="ad-input"
+            />
+          </Field>
+          <Field label="Email" required>
+            <input
+              required
+              type="email"
+              value={form.email}
+              onChange={(e) => set('email', e.target.value)}
+              placeholder="you@company.com"
+              className="ad-input"
+            />
+          </Field>
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="City" required>
               <input
-                type="text"
-                name="_hp"
-                tabIndex={-1}
-                autoComplete="off"
-                value={hp}
-                onChange={(e) => setHp(e.target.value)}
-                className="hidden"
-                aria-hidden="true"
+                required
+                value={form.city}
+                onChange={(e) => set('city', e.target.value)}
+                className="ad-input"
               />
-              {error && (
-                <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3">
-                  {error}
-                </div>
-              )}
-              <button
-                type="submit"
-                disabled={submitting}
-                className="w-full inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 disabled:opacity-60 disabled:cursor-not-allowed text-white text-base font-semibold px-5 py-3.5 rounded-lg transition-colors"
-              >
-                {submitting ? 'Sending…' : (<>Send Inquiry <ArrowRight className="w-4 h-4" /></>)}
-              </button>
-              <p className="text-xs text-onyx-700/50 text-center">
-                We'll respond within one business day. No spam. Ever.
-              </p>
-            </form>
+            </Field>
+            <Field label="State" required>
+              <input
+                required
+                value={form.state}
+                onChange={(e) => set('state', e.target.value)}
+                className="ad-input"
+              />
+            </Field>
+          </div>
+
+          <input
+            type="text"
+            name="_hp"
+            tabIndex={-1}
+            autoComplete="off"
+            value={hp}
+            onChange={(e) => setHp(e.target.value)}
+            className="hidden"
+            aria-hidden="true"
+          />
+
+          {error && (
+            <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3">
+              {error}
+            </div>
           )}
-        </div>
+
+          <button
+            type="submit"
+            disabled={submitting}
+            className="w-full inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 disabled:bg-onyx-700/30 disabled:cursor-not-allowed text-white text-base font-semibold px-5 py-3.5 rounded-lg transition-colors"
+          >
+            {submitting ? 'Starting…' : (<>Start Free Trial <ArrowRight className="w-4 h-4" /></>)}
+          </button>
+
+          <div className="flex items-center justify-center gap-2 text-[11px] text-onyx-700/55 pt-1">
+            <ShieldCheck className="w-3.5 h-3.5 text-forest-500" />
+            Secure checkout
+            <span aria-hidden>·</span>
+            Cancel anytime
+            <span aria-hidden>·</span>
+            No charge for 14 days
+          </div>
+        </form>
       </div>
 
       <style>{`
@@ -1185,6 +915,284 @@ function ContactSection() {
         }
       `}</style>
     </section>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Add Your Business — Free signup
+// ---------------------------------------------------------------------------
+
+function AddYourBusiness() {
+  const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [hp, setHp] = useState('')
+  const [form, setForm] = useState({
+    businessName: '',
+    contactName: '',
+    email: '',
+    phone: '',
+    city: CITY.name,
+    state: CITY.stateAbbr,
+    website: '',
+    about: '',
+  })
+
+  const set = <K extends keyof typeof form>(k: K, v: (typeof form)[K]) =>
+    setForm((s) => ({ ...s, [k]: v }))
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (submitting) return
+    setSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/notify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'add-your-business-free',
+          data: form,
+          _hp: hp,
+        }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setSubmitted(true)
+    } catch {
+      setError('Sorry, something went wrong. Please try again or email us directly.')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  if (submitted) {
+    return (
+      <section id="add-your-business" className="bg-white section-padding">
+        <div className="container-wide max-w-xl text-center">
+          <div className="bg-warmgray rounded-2xl border border-[#E2E8F0] p-8 md:p-10">
+            <div className="w-14 h-14 rounded-full bg-forest-500 mx-auto flex items-center justify-center mb-5">
+              <CheckCircle2 className="w-7 h-7 text-white" />
+            </div>
+            <h2 className="heading-card !text-2xl mb-3">Listing request received</h2>
+            <p className="text-sm text-onyx-700/75 leading-relaxed">
+              We'll review and email {form.email} within two business days with the live listing
+              URL and instructions for upgrading to Pro whenever you're ready.
+            </p>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <section id="add-your-business" className="bg-white section-padding">
+      <div className="container-wide grid lg:grid-cols-[1fr_1.1fr] gap-10 items-start">
+        <div>
+          <h2 className="heading-section">Add Your Fence Business</h2>
+          <div className="heading-accent" />
+          <p className="mt-4 text-body-lead">
+            Don't see your business on {CITY.siteName}? Add it for free and start connecting with
+            homeowners searching for fence contractors in your area.
+          </p>
+
+          <div className="mt-8 space-y-5">
+            <Benefit
+              icon={Users}
+              title="Reach More Customers"
+              body={`Get found by homeowners searching for fence contractors in your ${CITY.name} area. Our SEO-optimized pages rank on Google.`}
+            />
+            <Benefit
+              icon={Award}
+              title="Showcase Your Work"
+              body="Display your ratings, reviews, photos, and specialties. Stand out from the competition."
+            />
+            <Benefit
+              icon={Megaphone}
+              title="Grow Your Business"
+              body="Pro listings get featured placement, unlimited leads, and direct notifications. Upgrade anytime."
+            />
+          </div>
+
+          <div className="mt-8 rounded-2xl bg-warmgray border border-[#E2E8F0] p-5">
+            <div className="text-xs font-bold uppercase tracking-[0.15em] text-onyx-700/55 mb-3">
+              Free vs Pro
+            </div>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div className="font-semibold text-onyx-700 mb-2">Free Listing</div>
+                <ul className="space-y-1 text-onyx-700/75">
+                  <li>Basic profile</li>
+                  <li>Contact info</li>
+                  <li>Service area</li>
+                  <li>3 photos</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-semibold text-forest-500 mb-2">Pro — $79/mo</div>
+                <ul className="space-y-1 text-onyx-700/75">
+                  <li>Unlimited leads</li>
+                  <li>Featured placement</li>
+                  <li>Verified Pro badge</li>
+                  <li>Unlimited photos</li>
+                  <li>Lead notifications</li>
+                  <li>14-day free trial</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form
+          onSubmit={onSubmit}
+          className="bg-white rounded-2xl border border-[#E2E8F0] p-6 md:p-8 space-y-4"
+        >
+          <div>
+            <h3 className="font-heading font-bold text-onyx-700 text-xl tracking-tightest">
+              Add Your Business — Free
+            </h3>
+            <p className="mt-1 text-xs text-onyx-700/55">
+              No credit card required. Listing live within 2 business days.
+            </p>
+          </div>
+
+          <Field label="Business Name" required>
+            <input
+              required
+              value={form.businessName}
+              onChange={(e) => set('businessName', e.target.value)}
+              placeholder="Your Fence Company"
+              className="ad-input"
+            />
+          </Field>
+          <Field label="Contact Name" required>
+            <input
+              required
+              value={form.contactName}
+              onChange={(e) => set('contactName', e.target.value)}
+              placeholder="John Smith"
+              className="ad-input"
+            />
+          </Field>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Field label="Email" required>
+              <input
+                required
+                type="email"
+                value={form.email}
+                onChange={(e) => set('email', e.target.value)}
+                placeholder="you@company.com"
+                className="ad-input"
+              />
+            </Field>
+            <Field label="Phone" required>
+              <input
+                required
+                type="tel"
+                value={form.phone}
+                onChange={(e) => set('phone', e.target.value)}
+                placeholder="(615) 123-4567"
+                className="ad-input"
+              />
+            </Field>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <Field label="City" required>
+              <input
+                required
+                value={form.city}
+                onChange={(e) => set('city', e.target.value)}
+                className="ad-input"
+              />
+            </Field>
+            <Field label="State" required>
+              <input
+                required
+                value={form.state}
+                onChange={(e) => set('state', e.target.value)}
+                className="ad-input"
+              />
+            </Field>
+          </div>
+          <Field label="Website (optional)">
+            <input
+              type="url"
+              value={form.website}
+              onChange={(e) => set('website', e.target.value)}
+              placeholder="https://yourcompany.com"
+              className="ad-input"
+            />
+          </Field>
+          <Field label="Tell us about your business">
+            <textarea
+              rows={3}
+              value={form.about}
+              onChange={(e) => set('about', e.target.value)}
+              placeholder="Services, materials, years in business…"
+              className="ad-input resize-y"
+            />
+          </Field>
+
+          <input
+            type="text"
+            name="_hp"
+            tabIndex={-1}
+            autoComplete="off"
+            value={hp}
+            onChange={(e) => setHp(e.target.value)}
+            className="hidden"
+            aria-hidden="true"
+          />
+
+          {error && (
+            <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3">
+              {error}
+            </div>
+          )}
+
+          <button
+            type="submit"
+            disabled={submitting}
+            className="w-full inline-flex items-center justify-center gap-2 bg-forest-500 hover:bg-forest-600 disabled:bg-onyx-700/30 disabled:cursor-not-allowed text-white text-base font-semibold px-5 py-3.5 rounded-lg transition-colors"
+          >
+            {submitting ? 'Submitting…' : (<>Submit Free Listing <ArrowRight className="w-4 h-4" /></>)}
+          </button>
+
+          <div className="flex items-center justify-center gap-3 text-[11px] text-onyx-700/55 pt-1">
+            <a href={`mailto:${COMPANY.email}`} className="inline-flex items-center gap-1 hover:text-forest-500">
+              <Mail className="w-3.5 h-3.5" /> {COMPANY.email}
+            </a>
+            <span aria-hidden>·</span>
+            <a href={`tel:${COMPANY.phoneRaw}`} className="inline-flex items-center gap-1 hover:text-forest-500">
+              <Phone className="w-3.5 h-3.5" /> {COMPANY.phone}
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+  )
+}
+
+function Benefit({
+  icon: Icon,
+  title,
+  body,
+}: {
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  body: string
+}) {
+  return (
+    <div className="flex items-start gap-3">
+      <div className="w-11 h-11 rounded-xl bg-forest-50 text-forest-500 flex items-center justify-center flex-shrink-0">
+        <Icon className="w-5 h-5" />
+      </div>
+      <div>
+        <div className="font-heading font-bold text-onyx-700 text-base tracking-tightest">
+          {title}
+        </div>
+        <p className="mt-1 text-sm text-onyx-700/65 leading-relaxed">{body}</p>
+      </div>
+    </div>
   )
 }
 
