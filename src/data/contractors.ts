@@ -153,6 +153,16 @@ export const SERVICE_CATEGORIES = [
   { id: 'prep', label: 'Site Prep & Clearing' },
   { id: 'staining', label: 'Staining & Restoration' },
   { id: 'design', label: 'Fence & Landscape Design' },
+  // Adjacent-service categories expanding the directory beyond fence-core.
+  // Maps to the /companies/<slug>/ URL pattern when category landing pages
+  // are added. `restoration` is intentionally separate from `staining`:
+  // staining covers fence-stain + refinish; restoration covers water/fire/
+  // structural restoration work across decks, fences, and outdoor structures.
+  { id: 'landscaping', label: 'Landscaping Companies' },
+  { id: 'pool', label: 'Pool Builders' },
+  { id: 'concrete', label: 'Concrete Contractors' },
+  { id: 'drainage', label: 'Drainage Contractors' },
+  { id: 'restoration', label: 'Restoration Companies' },
 ] as const
 
 export const PROJECT_TYPES = [
