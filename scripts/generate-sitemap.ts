@@ -16,7 +16,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { CONTRACTORS } from '../src/data/contractors'
+import { CONTRACTORS, COMPANY_TYPE_SLUGS } from '../src/data/contractors'
 import { FENCE_TYPES, NEIGHBORHOODS, RESOURCES, RESOURCE_PUBLISHED_AT } from '../src/data/siteData'
 import { SERVICES, SERVICE_BUCKETS } from '../src/data/services'
 import { CITY } from '../src/config/city'
@@ -63,6 +63,7 @@ const urls: UrlEntry[] = [
   ...FENCE_TYPES.map((t) => ({ loc: `${SITE_URL}/fence-types/${t.slug}`, lastmod: today })),
   ...NEIGHBORHOODS.map((n) => ({ loc: `${SITE_URL}/service-areas/${n.slug}`, lastmod: today })),
   ...CONTRACTORS.map((c) => ({ loc: `${SITE_URL}/contractors/${c.slug}`, lastmod: today })),
+  ...COMPANY_TYPE_SLUGS.map((t) => ({ loc: `${SITE_URL}/companies/${t.slug}`, lastmod: today })),
   ...RESOURCES.map((r) => ({
     loc: `${SITE_URL}/resources/${r.slug}`,
     lastmod: RESOURCE_PUBLISHED_AT.slice(0, 10),

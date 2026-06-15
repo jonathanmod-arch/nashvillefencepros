@@ -30,10 +30,13 @@ import {
 } from '../../data/contractors'
 import { CITY } from '../../config/city'
 
-export default function ContractorDirectory({ preview = false }: { preview?: boolean } = {}) {
+export default function ContractorDirectory({
+  preview = false,
+  initialCategory = 'all',
+}: { preview?: boolean; initialCategory?: string } = {}) {
   const [query, setQuery] = useState('')
   const [area, setArea] = useState<string>('All Areas')
-  const [category, setCategory] = useState<string>('all')
+  const [category, setCategory] = useState<string>(initialCategory)
   const [projectType, setProjectType] = useState<string>('all')
 
   const filtered = useMemo(

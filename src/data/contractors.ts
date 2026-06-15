@@ -165,6 +165,26 @@ export const SERVICE_CATEGORIES = [
   { id: 'restoration', label: 'Restoration Companies' },
 ] as const
 
+// Maps the /companies/<slug>/ URL path to a SERVICE_CATEGORIES id. Each
+// entry powers one category landing page. The seven slugs match the URL
+// shape the editorial team uses externally; the right-hand category id
+// hooks into the existing ContractorDirectory filter.
+export const COMPANY_TYPE_SLUGS = [
+  { slug: 'fence-companies', category: 'fencing' },
+  { slug: 'landscaping-companies', category: 'landscaping' },
+  { slug: 'deck-builders', category: 'decks' },
+  { slug: 'pool-builders', category: 'pool' },
+  { slug: 'concrete-contractors', category: 'concrete' },
+  { slug: 'drainage-contractors', category: 'drainage' },
+  { slug: 'restoration-companies', category: 'restoration' },
+] as const
+
+export type CompanyTypeSlug = (typeof COMPANY_TYPE_SLUGS)[number]['slug']
+
+export function categoryForCompanySlug(slug: string): string | undefined {
+  return COMPANY_TYPE_SLUGS.find((t) => t.slug === slug)?.category
+}
+
 export const PROJECT_TYPES = [
   { id: 'all', label: 'All Projects' },
   { id: 'residential', label: 'Residential' },
