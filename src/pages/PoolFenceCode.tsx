@@ -76,7 +76,7 @@ const APPROVED_MATERIALS = [
 
 export default function PoolFenceCode() {
   useDocumentMeta({
-    title: `Pool Fence Code ${CITY.name} ${CITY.stateAbbr} | ISPSC Compliance Guide 2026`,
+    title: `Pool Fence Code in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Pool fence code requirements in ${CITY.name} ${CITY.stateAbbr}, ${CITY.state} ISPSC barrier rules, minimum height, gate latch, common inspection failures, and how to install a pool fence that passes the first time.`,
     canonical: '/pool-fence-code',
   })

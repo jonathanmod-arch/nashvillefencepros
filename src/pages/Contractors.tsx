@@ -15,7 +15,7 @@ import { CITY } from '../config/city'
 
 export default function Contractors() {
   useDocumentMeta({
-    title: `${CITY.name} Fence Installers & Companies | Vetted Directory`,
+    title: `Fence Installers in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Vetted directory of ${CITY.name} fence installers and companies. Compare licensed fence contractors in ${CITY.name} ${CITY.stateAbbr} for installation and repair, filter by service area, fence type, and project type.`,
     canonical: '/contractors',
   })

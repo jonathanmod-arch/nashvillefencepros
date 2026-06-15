@@ -44,7 +44,7 @@ export default function Services() {
 // ===================================================================
 function ServiceHub() {
   useDocumentMeta({
-    title: `${CITY.name} Fence Services | Installation, Repair, Gates & More`,
+    title: `Fence Services in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Every fence-related service we cover in ${CITY.name} ${CITY.stateAbbr}: installation by material, specialty fencing, gates, repair, outdoor structures, site prep, commercial, and custom work. Compare vetted local pros.`,
     canonical: '/services',
   })
@@ -121,7 +121,7 @@ function BucketLanding({ bucketSlug }: { bucketSlug: string }) {
   const services = servicesByBucket(bucket.slug)
 
   useDocumentMeta({
-    title: `${bucket.name} ${CITY.name} ${CITY.stateAbbr} | Vetted Local Pros`,
+    title: `${bucket.name} in ${CITY.name} ${CITY.stateAbbr}`,
     description: `${bucket.summary} Compare vetted ${CITY.name} contractors for every service in the ${bucket.name.toLowerCase()} bucket.`,
     canonical: `/services/${bucket.slug}`,
   })
@@ -241,8 +241,8 @@ function ServiceDetail({
     : `/services/${s.slug}`
 
   const titleSeo = isAreaPage
-    ? `${s.name} ${area!.name} ${CITY.stateAbbr} | Vetted Local Installers`
-    : `${s.name} ${CITY.name} ${CITY.stateAbbr} | Vetted Local Installers`
+    ? `${s.name} in ${area!.name}, ${CITY.stateAbbr}`
+    : `${s.name} in ${CITY.name} ${CITY.stateAbbr}`
   const descriptionSeo = isAreaPage
     ? `${s.name} in ${area!.name}, ${CITY.name} ${CITY.stateAbbr}. Popular style: ${area!.popularStyle}. Typical project ${area!.avgCost}. Compare vetted ${area!.name} installers.`
     : s.description.slice(0, 180)

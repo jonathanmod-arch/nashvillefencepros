@@ -34,7 +34,7 @@ const HISTORIC_AREAS = [
 
 export default function Permits() {
   useDocumentMeta({
-    title: `${CITY.name} Fence Permit Rules & Height Limits`,
+    title: `Fence Permits in ${CITY.name} ${CITY.stateAbbr}`,
     description: `${CITY.name} fence permit requirements, ${CITY.permitOffice.shortName} height limits, HOA rules, dig-safe 811, and historic overlay districts. Plain-English fence installation rules for ${CITY.primaryCounty} and ${CITY.secondaryCounty} County homeowners.`,
     canonical: '/permits',
   })

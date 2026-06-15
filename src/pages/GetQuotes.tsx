@@ -44,7 +44,7 @@ const BENEFITS = [
 
 export default function GetQuotes() {
   useDocumentMeta({
-    title: `Free ${CITY.name} Fence Installation Quotes | Compare 3 Pros`,
+    title: `Free Fence Quotes in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Get free fence installation quotes from up to 3 vetted ${CITY.name} fence installers. Wood, vinyl, chain link, aluminum, privacy, pet, pool, and commercial fence quotes near you in ${CITY.name} ${CITY.stateAbbr}.`,
     canonical: '/get-quotes',
   })

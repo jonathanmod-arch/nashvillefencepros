@@ -141,7 +141,7 @@ const initialForm: FormState = {
 
 export default function SubmitListing() {
   useDocumentMeta({
-    title: `Submit Your ${CITY.name} Fence Business | Free Listing`,
+    title: `Submit a Fence Business in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Get listed on the ${CITY.siteName} directory for free. Submit your fence installation, repair, gate, surveying, or staining business in under 5 minutes and start receiving ${CITY.name} fence leads.`,
     canonical: '/submit-listing',
   })

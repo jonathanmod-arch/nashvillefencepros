@@ -87,7 +87,7 @@ const SAFER_BETS = [
 
 export default function HistoricOverlays() {
   useDocumentMeta({
-    title: `Historic Overlay Fence Rules ${CITY.name} | ${CITY.historicCommission.abbr} Approval Guide`,
+    title: `Historic Fence Rules in ${CITY.name} ${CITY.stateAbbr}`,
     description: `${CITY.name} historic overlay fence requirements for Germantown, Edgefield, Lockeland Springs, Belle Meade, Richland-West End, and Hillsboro-West End. ${CITY.historicCommission.abbr} submission steps, approved materials, and how to get a fence approved on the first try.`,
     canonical: '/historic-overlays',
   })

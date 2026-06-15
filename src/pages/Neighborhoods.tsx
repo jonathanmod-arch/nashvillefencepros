@@ -35,8 +35,8 @@ export default function Neighborhoods() {
 
   useDocumentMeta({
     title: n
-      ? `Fence Installation in ${n.name}, ${CITY.stateAbbr} | Pros & Quotes`
-      : `Fence Installation ${CITY.name} | Service Areas`,
+      ? `Fence Installation in ${n.name}, ${CITY.stateAbbr}`
+      : `Fence Installation Areas in ${CITY.name} ${CITY.stateAbbr}`,
     description: n
       ? `Fence installation in ${CITY.name}'s ${n.name} area (ZIP ${n.zip}). Compare vetted ${n.name} fence contractors for ${n.popularStyle.toLowerCase()}, typical project ${n.avgCost}. Wood, vinyl, aluminum, chain link, and ornamental iron, free quotes within 24 hours.`
       : `Fence installation ${CITY.name}, compare vetted fence contractors across every city and neighborhood in the ${CITY.name} metro. Local pricing, popular fence styles, and HOA notes for ${CITY.topServiceAreaCities.slice(1).join(', ')}, and more.`,

@@ -98,7 +98,7 @@ const WHEN_TO_REPAIR_VS_REPLACE = [
 
 export default function Repair() {
   useDocumentMeta({
-    title: `Fence Repair ${CITY.name} ${CITY.stateAbbr} | Wood, Vinyl, Chain Link, Iron`,
+    title: `Fence Repair in ${CITY.name} ${CITY.stateAbbr}`,
     description: `${CITY.name} fence repair for wood, vinyl, chain link, aluminum, wrought iron, and pet fences. Compare licensed ${CITY.name} fence repair companies and get free repair estimates.`,
     canonical: '/repair',
   })

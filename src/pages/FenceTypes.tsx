@@ -19,43 +19,43 @@ import { CITY } from '../config/city'
 
 const FENCE_TYPE_META: Record<string, { title: string; description: string }> = {
   'wood-privacy': {
-    title: `Wood Privacy Fence Installation ${CITY.name} ${CITY.stateAbbr} | Cedar Fencing`,
+    title: `Wood Privacy Fence in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Wood privacy fence installation in ${CITY.name} ${CITY.stateAbbr}. Cedar privacy fencing, 6 ft and 8 ft heights, $22–$35 per linear foot installed. Compare vetted ${CITY.name} wood fence installers and get free quotes.`,
   },
   vinyl: {
-    title: `Vinyl Fence Installation ${CITY.name} ${CITY.stateAbbr} | Premium PVC Fencing`,
+    title: `Vinyl Fence Installation in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Vinyl fence installation in ${CITY.name} ${CITY.stateAbbr}. Premium PVC privacy and picket vinyl fencing, $32–$48 per linear foot. Compare licensed ${CITY.name} vinyl fence installers and get free quotes.`,
   },
   aluminum: {
-    title: `Aluminum Fence Installation ${CITY.name} ${CITY.stateAbbr} | Ornamental Metal`,
+    title: `Aluminum Fence Installation in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Aluminum and metal fence installation in ${CITY.name} ${CITY.stateAbbr}. Powder-coated ornamental aluminum from $38–$62 per linear foot, pool-code compliant. Compare ${CITY.name} aluminum fence installers.`,
   },
   'chain-link': {
-    title: `Chain Link Fence Installation ${CITY.name} ${CITY.stateAbbr} | Wire Fencing`,
+    title: `Chain Link Fence Installation in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Chain link fence installation in ${CITY.name} ${CITY.stateAbbr}. Galvanized and black vinyl-coated chain link from $12–$22 per linear foot, plus wire fencing supplies in ${CITY.name}. Compare vetted installers.`,
   },
   'horizontal-privacy': {
-    title: `Horizontal Cedar Privacy Fence Installation ${CITY.name}`,
+    title: `Horizontal Cedar Fence in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Horizontal cedar privacy fence installation in ${CITY.name}. Modern slat fencing for East ${CITY.name}, 12 South, and Sylvan Park, $38–$58 per linear foot. Compare design-build ${CITY.name} fence installers.`,
   },
   'farm-ranch': {
-    title: `Farm & Ranch Fence Installation ${CITY.name} ${CITY.stateAbbr} | ${CITY.secondaryCounty} + Sumner`,
+    title: `Farm & Ranch Fence in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Farm and ranch fence installation across ${CITY.secondaryCounty}, Sumner, and Wilson Counties. Four-board, split-rail, and wire fencing supplies in ${CITY.name} from $8–$18 per linear foot.`,
   },
   'wrought-iron': {
-    title: `Wrought Iron Fence Installation ${CITY.name} ${CITY.stateAbbr} | Estate Iron`,
+    title: `Wrought Iron Fence in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Wrought iron fence installation in ${CITY.name} ${CITY.stateAbbr}. Hand-forged ornamental iron fences and automated gates for Belle Meade, Forest Hills, and Brentwood estates. Compare iron fence installers + iron fence repair ${CITY.name}.`,
   },
   'pet-fence': {
-    title: `Invisible & Pet Fence Installation ${CITY.name} ${CITY.stateAbbr} | Dog Fences`,
+    title: `Invisible & Pet Fence in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Invisible, hidden, and electric dog fence installation in ${CITY.name}. Best-rated invisible fence installation in ${CITY.name} plus traditional pet fence installation services. Compare ${CITY.name} best dog fence installers.`,
   },
   'hidden-pet-fence': {
-    title: `${CITY.name} Hidden Dog Fence Installers | Buried Wire & GPS Collar Systems`,
+    title: `Hidden Dog Fence in ${CITY.name} ${CITY.stateAbbr}`,
     description: `${CITY.name} hidden dog fence installers, compare vetted contractors of buried boundary wire and GPS collar systems for dogs in ${CITY.name} ${CITY.stateAbbr}. Pricing per linear foot, containment training included, free quotes within 24 hours.`,
   },
   'pool-safety': {
-    title: `Pool Fence Installation ${CITY.name} ${CITY.stateAbbr} | ISPSC Pool Barriers`,
+    title: `Pool Fence Installation in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Pool fence installation in ${CITY.name} ${CITY.stateAbbr} that meets the ${CITY.poolBarrierCode} barrier code. Aluminum, mesh, and glass pool fencing installation and repair services in ${CITY.name} from vetted installers.`,
   },
 }
@@ -68,7 +68,7 @@ export default function FenceTypes() {
   useDocumentMeta({
     title:
       typeMeta?.title ??
-      `${CITY.name} Fence Types & Materials | Installation Guide`,
+      `Fence Types in ${CITY.name} ${CITY.stateAbbr}`,
     description:
       typeMeta?.description ??
       `Compare every ${CITY.name} fence type, wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm & ranch, wrought iron, pet/invisible, and pool safety fencing. Pricing per linear ft + vetted ${CITY.name} installers.`,

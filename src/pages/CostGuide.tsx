@@ -27,7 +27,7 @@ const LINE_ITEMS = [
 
 export default function CostGuide() {
   useDocumentMeta({
-    title: `Fence Installation Cost ${CITY.name} 2026 | Price by Material | ${CITY.siteName}`,
+    title: `Fence Installation Cost in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Real ${CITY.name} fence installation cost data for wood, vinyl, chain link, aluminum, wrought iron, pet, and pool fences. Interactive ${CITY.name} fence cost calculator + price-per-linear-foot ranges by material.`,
     canonical: '/cost-guide',
   })

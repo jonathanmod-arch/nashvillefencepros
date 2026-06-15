@@ -51,7 +51,7 @@ const SPECS = [
 
 export default function CommercialFencing() {
   useDocumentMeta({
-    title: `Commercial Fence Installation ${CITY.name} | Security Fencing ${CITY.stateAbbr}`,
+    title: `Commercial Fence Installation in ${CITY.name} ${CITY.stateAbbr}`,
     description: `Commercial fence installation in ${CITY.name}, chain link, security fencing, automated gates, and temporary construction-site fencing. Compare licensed commercial fence contractors and get free ${CITY.name} ${CITY.stateAbbr} quotes.`,
     canonical: '/commercial-fencing',
   })
