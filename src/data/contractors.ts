@@ -151,39 +151,18 @@ export const SERVICE_CATEGORIES = [
   { id: 'decks', label: 'Deck Builders' },
   { id: 'surveying', label: 'Land Surveyors' },
   { id: 'prep', label: 'Site Prep & Clearing' },
+  // `staining` covers fence-stain + refinish + general exterior restoration
+  // work (water/fire/structural restoration on decks, fences, outdoor
+  // structures). Kept as one category so filter chips don't fragment a
+  // small contractor pool.
   { id: 'staining', label: 'Staining & Restoration' },
   { id: 'design', label: 'Fence & Landscape Design' },
   // Adjacent-service categories expanding the directory beyond fence-core.
-  // Maps to the /companies/<slug>/ URL pattern when category landing pages
-  // are added. `restoration` is intentionally separate from `staining`:
-  // staining covers fence-stain + refinish; restoration covers water/fire/
-  // structural restoration work across decks, fences, and outdoor structures.
   { id: 'landscaping', label: 'Landscaping Companies' },
   { id: 'pool', label: 'Pool Builders' },
   { id: 'concrete', label: 'Concrete Contractors' },
   { id: 'drainage', label: 'Drainage Contractors' },
-  { id: 'restoration', label: 'Restoration Companies' },
 ] as const
-
-// Maps the /companies/<slug>/ URL path to a SERVICE_CATEGORIES id. Each
-// entry powers one category landing page. The seven slugs match the URL
-// shape the editorial team uses externally; the right-hand category id
-// hooks into the existing ContractorDirectory filter.
-export const COMPANY_TYPE_SLUGS = [
-  { slug: 'fence-companies', category: 'fencing' },
-  { slug: 'landscaping-companies', category: 'landscaping' },
-  { slug: 'deck-builders', category: 'decks' },
-  { slug: 'pool-builders', category: 'pool' },
-  { slug: 'concrete-contractors', category: 'concrete' },
-  { slug: 'drainage-contractors', category: 'drainage' },
-  { slug: 'restoration-companies', category: 'restoration' },
-] as const
-
-export type CompanyTypeSlug = (typeof COMPANY_TYPE_SLUGS)[number]['slug']
-
-export function categoryForCompanySlug(slug: string): string | undefined {
-  return COMPANY_TYPE_SLUGS.find((t) => t.slug === slug)?.category
-}
 
 export const PROJECT_TYPES = [
   { id: 'all', label: 'All Projects' },
@@ -1095,6 +1074,316 @@ export const CONTRACTORS: Contractor[] = [
       bbbAccreditation: 'A+',
       chamberMember: true,
     },
+  },
+
+  // === PLACEHOLDER LISTINGS — adjacent-service categories ===
+  // Editorial demo entries so the new SERVICE_CATEGORIES (landscaping,
+  // pool, concrete, drainage) render with contractors in the directory
+  // grid until real businesses are sourced. Each carries:
+  //   - source: 'directory' (skipped from the rich-result LocalBusiness
+  //     schema in src/lib/schema.ts, so fabricated rating data can't get
+  //     indexed)
+  //   - rating: 0, reviews: 0 (no fabricated review data)
+  //   - claimStatus: 'unclaimed', license: 'Placeholder Listing'
+  //   - 'Sample' name prefix so the placeholder shape is obvious to
+  //     anyone browsing the directory before real entries land
+  // Swap each entry with a real verified business as the editorial
+  // sourcing pass completes the category.
+
+  // --- Landscaping ---
+  {
+    slug: 'sample-landscape-group',
+    name: 'Sample Landscape Group',
+    category: 'landscaping',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville-area landscape design and installation company. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Brentwood', 'Franklin'],
+    specialties: ['Landscape Design', 'Sod Installation', 'Planting', 'Outdoor Lighting'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and surrounding Middle Tennessee',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-outdoor-living-co',
+    name: 'Sample Outdoor Living Co.',
+    category: 'landscaping',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville outdoor-living and full-yard buildout contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Hendersonville'],
+    specialties: ['Hardscape', 'Patios', 'Pergolas', 'Outdoor Kitchens'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and Sumner',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-lawn-garden-services',
+    name: 'Sample Lawn & Garden Services',
+    category: 'landscaping',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville residential lawn-care and maintenance contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Mt. Juliet', 'Murfreesboro'],
+    specialties: ['Lawn Care', 'Mulching', 'Tree Trimming', 'Seasonal Cleanup'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson, Wilson, and Rutherford',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+
+  // --- Pool Builders ---
+  {
+    slug: 'sample-pool-builders',
+    name: 'Sample Pool Builders',
+    category: 'pool',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville in-ground pool installation contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Brentwood', 'Franklin'],
+    specialties: ['Gunite Pools', 'Vinyl Liner Pools', 'Pool Decks', 'Pool Fences'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and Williamson',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-custom-pools-co',
+    name: 'Sample Custom Pools Co.',
+    category: 'pool',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville custom pool design and installation contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Belle Meade'],
+    specialties: ['Custom Pool Design', 'Infinity Edge Pools', 'Pool Renovation'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and Williamson',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-spa-pool-group',
+    name: 'Sample Spa & Pool Group',
+    category: 'pool',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville pool, spa, and outdoor-water-feature contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Hendersonville', 'Mt. Juliet'],
+    specialties: ['Pool Installation', 'Spa Installation', 'Water Features', 'Pool Equipment'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson, Sumner, and Wilson',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+
+  // --- Concrete Contractors ---
+  {
+    slug: 'sample-concrete-works',
+    name: 'Sample Concrete Works',
+    category: 'concrete',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville flatwork and decorative concrete contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Brentwood'],
+    specialties: ['Driveways', 'Patios', 'Stamped Concrete', 'Foundations'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and Williamson',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-flatwork-co',
+    name: 'Sample Flatwork Co.',
+    category: 'concrete',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville residential and commercial flatwork contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Franklin', 'Murfreesboro'],
+    specialties: ['Sidewalks', 'Driveways', 'Garage Slabs', 'ADA Ramps'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson, Williamson, and Rutherford',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-decorative-concrete-services',
+    name: 'Sample Decorative Concrete Services',
+    category: 'concrete',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville decorative and stained-concrete contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Hendersonville'],
+    specialties: ['Stamped Concrete', 'Stained Concrete', 'Polished Concrete', 'Overlays'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and Sumner',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+
+  // --- Drainage Contractors ---
+  {
+    slug: 'sample-drainage-solutions',
+    name: 'Sample Drainage Solutions',
+    category: 'drainage',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville yard drainage and stormwater management contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Brentwood', 'Franklin'],
+    specialties: ['French Drains', 'Yard Grading', 'Downspout Extensions', 'Sump Pumps'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and Williamson',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-yard-drainage-co',
+    name: 'Sample Yard Drainage Co.',
+    category: 'drainage',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville residential yard drainage and erosion-control contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Mt. Juliet'],
+    specialties: ['Surface Drains', 'Catch Basins', 'Erosion Control', 'Retaining Walls'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson and Wilson',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
+  },
+  {
+    slug: 'sample-stormwater-services',
+    name: 'Sample Stormwater Services',
+    category: 'drainage',
+    projectType: 'residential',
+    description:
+      'Placeholder listing for a Nashville stormwater and foundation-drainage contractor. Replace with a real verified business on editorial review.',
+    areas: ['Nashville', 'Hendersonville', 'Murfreesboro'],
+    specialties: ['Foundation Drains', 'Curtain Drains', 'Dry Wells', 'Permeable Pavers'],
+    rating: 0,
+    reviews: 0,
+    badge: 'Placeholder',
+    license: 'Placeholder Listing',
+    yearsInBusiness: 0,
+    projectsCompleted: '',
+    phone: '',
+    phoneRaw: '',
+    address: '',
+    responseTime: '',
+    countiesServed: 'Davidson, Sumner, and Rutherford',
+    source: 'directory',
+    claimStatus: 'unclaimed',
+    lastUpdated: '2026-06-15',
   },
 ]
 

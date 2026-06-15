@@ -12,7 +12,6 @@ const Permits = lazy(() => import('./pages/Permits'))
 const Neighborhoods = lazy(() => import('./pages/Neighborhoods'))
 const Contractors = lazy(() => import('./pages/Contractors'))
 const ContractorProfile = lazy(() => import('./pages/ContractorProfile'))
-const CompaniesCategory = lazy(() => import('./pages/CompaniesCategory'))
 const Resources = lazy(() => import('./pages/Resources'))
 const FenceTypes = lazy(() => import('./pages/FenceTypes'))
 const Services = lazy(() => import('./pages/Services'))
@@ -76,8 +75,6 @@ function App() {
             <Route path="/service-areas/:slug" element={<Neighborhoods />} />
             <Route path="/contractors" element={<Contractors />} />
             <Route path="/contractors/:slug" element={<ContractorProfile />} />
-            <Route path="/companies" element={<Navigate to="/contractors" replace />} />
-            <Route path="/companies/:category" element={<CompaniesCategory />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:slug" element={<Resources />} />
             <Route path="/services" element={<Services />} />
