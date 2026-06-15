@@ -44,6 +44,8 @@
 
       gtag('config', '%CITY_GA4_ID%', { send_page_view: false });
     </script>
+    <!-- CallRail dynamic number insertion (DNI) — swaps tel: numbers + phone strings on the page with tracking numbers per source. Loads synchronously per CallRail's docs so swaps happen before the user sees the static number. -->
+    <script type="text/javascript" src="//cdn.callrail.com/companies/877326162/3b5b54380e78704d116f/12/swap.js"></script>
   </head>
   <body>
     <div id="root"></div>
