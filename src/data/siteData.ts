@@ -2833,6 +2833,155 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'composite-vs-wood-decking-privacy-fence',
+    title: 'Composite vs Wood Decking: Which Works Better With Privacy Fencing?',
+    category: 'Comparison',
+    readTime: '7 min',
+    publishedAt: '2026-06-15',
+    excerpt:
+      'Composite holds color while your cedar fence greys. Wood matches but means a re-stain cycle on both. Heat retention, color drift, clearance, and the 10-year cost in Nashville — broken down side by side.',
+    img: IMAGES.resources['composite-vs-wood-decking-privacy-fence'],
+    imageAlt: 'Composite deck next to a cedar privacy fence in a Nashville backyard, material comparison',
+    body: [
+      {
+        type: 'p',
+        text: "Composite decking next to a cedar privacy fence ages into two different finishes — composite stays the color you bought, cedar greys to silver. Wood decking next to a cedar fence ages together because you re-stain both on the same cycle. Which is better depends on whether you want the deck and fence to read as one project at year five, or two. The rest of this article is the numbers behind that choice — heat, color drift, clearance, cost, and the 10-year maintenance bill in Nashville.",
+      },
+      { type: 'h2', text: 'Do composite and a cedar privacy fence even look good together?' },
+      {
+        type: 'p',
+        text: "Yes, if you pick the composite color before the fence stain. Mid-tone composite boards in the Trex Enhance Naturals range or TimberTech Reserve read as a deliberate contrast against a freshly stained cedar fence — same warm undertone, different surface texture. The match looks intentional. The combination that fails is a gray-toned composite (Trex Enhance Saddle, Reserve Driftwood) against a freshly stained warm cedar — the gray reads cold, the cedar reads orange, and they fight each other from across the yard.",
+      },
+      {
+        type: 'p',
+        text: "The fix is sequencing. Pick the composite first, then have the fence stained in a complementary tone. Cabot Solid Stain in Cedar Tone Brown gets the closest match for warm composites; Cabot Stain in Driftwood Gray pairs cool composites. Order the stain sample card before either contractor breaks ground.",
+      },
+      { type: 'h2', text: 'Will the composite deck get too hot to walk on in a Nashville July?' },
+      {
+        type: 'p',
+        text: "Yes — and the privacy fence next to it makes it hotter. Composite boards in direct sun run 35-50°F above ambient air temp. In a Nashville July at 95°F ambient, that's 130-145°F surface temp. Add a 6-foot solid privacy fence on the south side trapping radiant heat against the deck, and you add another 5-8°F. Lighter composite colors (Trex Enhance Naturals in Coastal Bluff, TimberTech Vintage in Weathered Teak) run 10-15°F cooler than dark colors (Trex Transcend Spiced Rum, TimberTech Reserve Mocha). If you're putting composite next to a south- or west-facing fence, pick the lightest color you'll tolerate.",
+      },
+      {
+        type: 'p',
+        text: "Wood decking sits 15-25°F cooler than composite in the same sun because wood conducts heat slower than the PVC + wood-fiber composite matrix. Cedar specifically runs cooler than pressure-treated pine because the cells are less dense. If your deck takes 6-plus hours of direct sun a day and barefoot use is the primary mode — kids, dogs, pool entry — wood wins this category outright.",
+      },
+      { type: 'h2', text: 'What happens to the color over five years?' },
+      {
+        type: 'p',
+        text: "Composite stays inside 5-10 percent of original color through year 10. Manufacturer warranties cover fade and stain up to 25-30 years (Trex Transcend at 25, TimberTech Advanced PVC at 30, mid-grade Trex Enhance at 25). The drift is real but measured in single-digit percentages — mostly visible when you place a fresh replacement board next to old ones.",
+      },
+      {
+        type: 'p',
+        text: "Cedar privacy fence, untreated and unstained, goes from honey-brown to driftwood silver in 12-18 months in Tennessee humidity. Stained cedar — the Nashville norm, semi-transparent oil stain re-applied every 2-3 years — holds its color across the cycle but the stain itself dulls by month 18.",
+      },
+      {
+        type: 'p',
+        text: "Wood decking, whether cedar or pressure-treated pine, follows the same arc as the fence. Re-stain the fence, re-stain the deck, same weekend. They age together.",
+      },
+      {
+        type: 'p',
+        text: "The visible outcome at year five with composite + cedar fence is two distinct planes: deck still warm-toned, fence silvered. Some homeowners read that as 'modern and intentional.' Others read it as 'the deck is newer than the fence.' Decide which you'd rather see before you order materials.",
+      },
+      { type: 'h2', text: 'How close can the privacy fence sit to the deck edge?' },
+      {
+        type: 'p',
+        text: "4 inches minimum for either material. Composite needs 4-6 inches of air gap on the fence-side joist for ventilation — boards under a fence with no airflow grow mildew on the underside in two summers and the warranty doesn't cover it. Wood decking needs the same gap for the opposite reason: standing moisture between deck and fence rots both faster.",
+      },
+      {
+        type: 'p',
+        text: "If your privacy fence is already in and sits closer than 4 inches to where the deck will go, the deck contractor has two options. Set the deck framing back to create the gap (loses 4-6 inches of usable surface), or install a continuous vented spacer along the fence-adjacent joist. The spacer adds about $120 to the build and saves the warranty on composite installs.",
+      },
+      { type: 'h2', text: 'Does the maintenance schedule actually match between materials?' },
+      {
+        type: 'p',
+        text: "No, and that's the strongest argument for picking one or the other deliberately. Here's the 10-year maintenance bill for a typical 350-square-foot Nashville deck adjacent to 80 linear feet of cedar privacy fence:",
+      },
+      {
+        type: 'table',
+        headers: ['Year', 'Composite deck + cedar fence', 'Wood deck + cedar fence'],
+        rows: [
+          ['0 (install)', '$22,700', '$14,700'],
+          ['Year 2', 'Stain fence: $450', 'Stain both: $900'],
+          ['Year 4', 'Cleaning + stain fence: $700', 'Stain both: $900'],
+          ['Year 6', 'Stain fence: $450', 'Stain both: $1,000'],
+          ['Year 8', 'Cleaning + cap-board repair + stain fence: $900', 'Stain both: $1,000'],
+          ['Year 10', 'Stain fence: $500', 'Stain both + spot board replace: $1,500'],
+          ['10-year total', '$25,700', '$20,000'],
+        ],
+      },
+      {
+        type: 'p',
+        text: "Composite costs $5,700 more across 10 years on this footprint. That's the premium for not having to keep the deck on the same stain cycle as the fence. If you want a backyard you don't have to schedule around, composite is worth it. If your deck is part of a 'stain everything one weekend in April' routine, wood wins on cost and visual continuity.",
+      },
+      { type: 'h2', text: 'What\'s the actual installed cost gap in Nashville right now?' },
+      {
+        type: 'p',
+        text: "Pressure-treated pine deck on PT framing runs $25-$40 per square foot installed in Davidson and Williamson Counties as of mid-2026. Mid-grade composite (Trex Enhance) on PT framing runs $40-$65 per square foot. Premium composite (TimberTech, Trex Transcend) runs $55-$85 per square foot. On the 350-square-foot example above:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Pressure-treated pine deck: $8,750-$14,000',
+          'Western red cedar deck (warmer than PT, still wood): $10,500-$17,500',
+          'Mid-grade composite deck: $14,000-$22,750',
+          'Premium composite deck: $19,250-$29,750',
+        ],
+      },
+      {
+        type: 'p',
+        text: "The composite premium is real and front-loaded. The 10-year math closes some of the gap through skipped re-stains but doesn't reverse it. If budget is the primary constraint and you're OK with the spring stain cycle, pressure-treated pine plus a cedar privacy fence is the cheapest combination that doesn't look cheap. The [full deck cost breakdown by material](/resources/deck-cost-nashville) covers what each line item runs across the four tiers.",
+      },
+      { type: 'h2', text: 'When should you pick composite over wood with a privacy fence?' },
+      {
+        type: 'p',
+        text: "Five situations where composite is the right call:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "Your privacy fence is vinyl, not cedar. Vinyl doesn't grey or need re-staining, so the visual-match argument for wood decking goes away. Composite + vinyl ages together at a measured 5-10 percent drift.",
+          'You have a pool inside the privacy fence enclosure. Pool decks see chlorine splashback that destroys wood fibers in 3-4 years. Composite shrugs it off and the warranty stays valid.',
+          'The deck takes more than 6 hours of direct sun a day AND a north-side privacy fence partially shades it. Composite holds color through the half-shade cycle; wood bleaches unevenly across the line.',
+          "You travel, rent the property, or otherwise don't want to schedule yard work. Composite needs annual cleaning, not re-staining — about 90 minutes versus a full weekend.",
+          "You're inside an HOA that mandates composite decking. Several Brentwood and Franklin subdivisions require it as of 2026 covenant updates. Match the deck to the mandate.",
+        ],
+      },
+      { type: 'h2', text: 'When does real wood decking still beat composite next to a privacy fence?' },
+      {
+        type: 'p',
+        text: "Four situations where wood wins:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'The fence is fresh cedar and you want the deck to age with it. Wood-on-wood at year five reads as one project. Composite-on-cedar at year five reads as two materials.',
+          'Barefoot use is the primary mode (kids, dogs, pool). Wood runs 15-25°F cooler than composite in Nashville July sun. That difference is the line between "comfortable" and "shoes on."',
+          "Budget tops out under $15 per square foot installed. Composite doesn't fit that envelope; pressure-treated pine does.",
+          'You re-stain the fence every other spring anyway. The deck stain ride-along is a half-day of additional work that costs you the same gallon of stain you already opened. No new schedule, no new vendor.',
+        ],
+      },
+      { type: 'h2', text: 'What do most Nashville deck builders actually recommend in 2026?' },
+      {
+        type: 'p',
+        text: "Two-bucket pattern across Davidson and Williamson installs. Composite for new builds where the homeowner wants a 15-year set-and-forget deck. Wood for replacements and add-ons to existing wood fences where matching the aesthetic matters more than the maintenance break. The split is roughly 55-45 in favor of composite as of mid-2026, up from 35-65 wood-dominant five years ago. The reason isn't price — composite is still 1.5-2x — it's that the 10-year maintenance line item is climbing faster than the composite premium as labor rates rise in the Nashville market.",
+      },
+      {
+        type: 'p',
+        text: "The pattern most installers actively warn against: premium composite next to an unfinished cedar fence with no plan for the fence over the next decade. The deck outlasts the fence by years, and replacing the fence around an existing premium deck adds 15-20 percent to the fence install because the crew has to work around the finished decking.",
+      },
+      { type: 'h2', text: 'What\'s the build-order if both are getting installed in the same window?' },
+      {
+        type: 'p',
+        text: "Fence first by 3-5 days. The fence crew can stage materials in the yard without crossing finished decking. Once the fence is in, the deck crew can use it as a layout reference — the deck joists usually run parallel to one fence run. Reverse order, deck first then fence, means the fence crew is walking on, leaning over, and occasionally dropping tools on a $20,000 composite surface. The [build-order article on decks plus fences](/resources/fence-before-or-after-deck-nashville) covers the coordination logistics in more detail.",
+      },
+      { type: 'h2', text: 'What\'s the one-line recommendation if you don\'t want to read all of this?' },
+      {
+        type: 'p',
+        text: "Match the deck to the fence's expected lifespan. If you'll re-stain the fence forever, pick wood. If the fence will end up replaced or painted in the next 8 years, pick composite. The [shortlist of Nashville deck builders](/resources/best-deck-builders-nashville) is where to start once you've picked the material, and the [seven questions to ask any Nashville installer](/resources/hire-nashville-fence-installer-questions) apply equally to deck contractors — actually more strictly, because the deck is structural and the cost of a bad install shows up faster.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
