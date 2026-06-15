@@ -64,11 +64,13 @@ const PLANS: Plan[] = [
     blurb: 'Unlimited leads + featured placement',
     features: [
       'Everything in Free, plus:',
-      'Website link on profile AND search results',
+      'All form leads and calls routed directly to you',
+      'Phone number with tap-to-call on every surface',
+      'Do-follow website link for SEO + referral traffic',
+      'Powerful citation that boosts your Google Business Profile ranking',
       'Featured placement on city pages',
       'Verified Pro badge on every surface',
       'Priority in search results',
-      'Lead analytics dashboard (views, clicks, quotes)',
       'Unlimited photos & portfolio',
       'Google review integration',
     ],
@@ -79,10 +81,10 @@ const PLANS: Plan[] = [
   },
   {
     id: 'sponsor',
-    name: 'Sitewide Sponsor',
+    name: 'Gold Sponsor',
     price: '$999',
     priceSuffix: '/month',
-    blurb: 'Brand-level placement across the entire site',
+    blurb: `Brand-level placement across the entire site — only 1 slot per ${CITY.name}`,
     features: [
       'Everything in Pro, plus:',
       'Sponsor banner on the home page',
@@ -104,7 +106,7 @@ const PLANS: Plan[] = [
 // where the per-lead math is most defensible.
 const ROI_PLANS = [
   { id: 'pro', name: 'Pro', price: 79, leads: 12 },
-  { id: 'sponsor', name: 'Sitewide Sponsor', price: 999, leads: 40 },
+  { id: 'sponsor', name: 'Gold Sponsor', price: 999, leads: 40 },
 ] as const
 
 type PlanId = (typeof ROI_PLANS)[number]['id']
@@ -131,8 +133,8 @@ const FAQ_ITEMS = [
     a: `If your business already appears in our directory (sourced from public Google Business Profile data), use the "claim" link on your profile page to verify ownership. We confirm via the phone number on file. Claim is free — Pro upgrades from there.`,
   },
   {
-    q: 'How does the Sitewide Sponsor slot work?',
-    a: 'One sponsor at a time per city. Logo and link in the header strip on every page, dedicated landing page, and co-marketing on the monthly resource articles. We don\'t run multiple sponsors against each other — exclusive brand placement. Limited to one slot per category at any given time.',
+    q: 'How does the Gold Sponsor slot work?',
+    a: `Only one Gold Sponsor per ${CITY.name} at any given time — exclusive brand placement, no rotation against other sponsors. You get the logo and link in the header strip on every page, a dedicated landing page, and co-marketing on the monthly resource articles. When the slot fills, the page changes the CTA to a waitlist until it opens up again.`,
   },
 ]
 
@@ -250,7 +252,7 @@ function Pricing() {
           <h2 className="mt-3 heading-section">Pick a Plan</h2>
           <div className="heading-accent mx-auto" />
           <p className="mt-4 text-body-lead">
-            Free forever or upgrade to Pro for unlimited leads. Sitewide Sponsor for brand-level placement across every page.
+            Free forever or upgrade to Pro for unlimited leads. Gold Sponsor for exclusive brand-level placement — only one slot per {CITY.name}.
           </p>
         </div>
 
