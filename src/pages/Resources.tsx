@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../components/shared/PageHero'
 import SponsorStrip from '../components/shared/SponsorStrip'
-import { displayTitle, isAutoMonthly, monthYearString } from '../lib/resourceTitle'
+import { displayTitle, shortDateString } from '../lib/resourceTitle'
 import LeadGenSection from '../components/home/LeadGenSection'
 import SafeImage from '../components/shared/SafeImage'
 import { RESOURCES, RESOURCE_PUBLISHED_AT, type ResourceSection } from '../data/siteData'
@@ -16,6 +16,23 @@ import {
   articleSchema,
 } from '../lib/schema'
 import { CITY } from '../config/city'
+
+// Resolve a per-article publish date with fallback to the global value.
+// `publishedAt` is optional on RESOURCES entries — only the newer articles
+// carry it. Legacy entries get the original RESOURCE_PUBLISHED_AT so the
+// sort still produces a stable order and the "Last updated on" pill still
+// renders something sensible on every article.
+function resolvePublishedAt(r: (typeof RESOURCES)[number]): string {
+  const p = (r as { publishedAt?: string }).publishedAt
+  return typeof p === 'string' && p ? p : RESOURCE_PUBLISHED_AT
+}
+
+// RESOURCES sorted newest-first by resolved publishedAt. Used for the index
+// grid and the related-articles strip on individual article pages so the
+// freshest content surfaces at the top of both lists.
+const SORTED_RESOURCES = [...RESOURCES].sort((a, b) =>
+  resolvePublishedAt(b).localeCompare(resolvePublishedAt(a)),
+)
 
 const CATEGORY_COLORS: Record<string, string> = {
   Comparison: 'bg-forest-50 text-forest-500',
@@ -234,7 +251,7 @@ export default function Resources() {
         </>
       )
     }
-    const related = RESOURCES.filter((x) => x.slug !== r.slug).slice(0, 3)
+    const related = SORTED_RESOURCES.filter((x) => x.slug !== r.slug).slice(0, 3)
     return (
       <>
         <PageHero
@@ -257,12 +274,10 @@ export default function Resources() {
                   priority
                 />
               </div>
-              {isAutoMonthly(r.title) && (
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-forest-50 text-forest-500 text-[11px] font-semibold mb-3 border border-forest-100">
-                  <Clock className="w-3 h-3" />
-                  Updated {monthYearString()}
-                </div>
-              )}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-forest-50 text-forest-500 text-[11px] font-semibold mb-3 border border-forest-100">
+                <Clock className="w-3 h-3" />
+                Last updated on {shortDateString(resolvePublishedAt(r))}
+              </div>
               <div className="flex items-center gap-4 text-xs text-onyx-400 mb-6">
                 <span className="flex items-center gap-1">
                   <Clock className="w-3 h-3" /> {r.readTime} read
@@ -371,7 +386,7 @@ export default function Resources() {
       <section className="bg-white section-padding">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {RESOURCES.map((r, i) => (
+            {SORTED_RESOURCES.map((r, i) => (
               <div
                 key={r.slug}
                 className="reveal-up"

@@ -11,6 +11,20 @@ export function monthYearString(date: Date = new Date()): string {
   return date.toLocaleString('en-US', { month: 'long', year: 'numeric' })
 }
 
+// "Last updated on" pill format for resource articles: "Jun 15, 2026".
+// Accepts ISO date-only or full ISO strings. Anchors date-only inputs at
+// noon UTC and formats in America/Chicago so 'YYYY-MM-DD' values don't
+// kick back to the previous day in any U.S. timezone.
+export function shortDateString(iso: string): string {
+  const isoSafe = iso.includes('T') ? iso : `${iso}T12:00:00Z`
+  return new Date(isoSafe).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'America/Chicago',
+  })
+}
+
 export function isAutoMonthly(title: string): boolean {
   return /^Best\s/i.test(title)
 }
