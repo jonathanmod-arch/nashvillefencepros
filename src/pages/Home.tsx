@@ -11,7 +11,7 @@ import FAQSection from '../components/home/FAQSection'
 import ResourceCenter from '../components/home/ResourceCenter'
 import LeadGenSection from '../components/home/LeadGenSection'
 import LazyMount from '../components/shared/LazyMount'
-import { FAQS, COMPANY } from '../data/siteData'
+import { FAQS } from '../data/siteData'
 import { CONTRACTORS } from '../data/contractors'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useStructuredData } from '../hooks/useStructuredData'
@@ -26,7 +26,7 @@ import { CITY } from '../config/city'
 
 export default function Home() {
   useDocumentMeta({
-    title: `Fence Installation ${CITY.name} ${CITY.stateAbbr} | Call ${COMPANY.phone}`,
+    title: `Fence Installation in ${CITY.name} ${CITY.stateAbbr} | Get Free Quotes`,
     description:
       `Fence installation ${CITY.name}, compare vetted ${CITY.name} fence contractors, get free fence installation quotes, calculate fence installation cost in ${CITY.name} ${CITY.stateAbbr}, and find privacy, chain link, vinyl, aluminum, and pet fence pros.`,
     canonical: '/',
