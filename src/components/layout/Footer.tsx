@@ -120,7 +120,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-10 border-t border-onyx-500">
+        {/* Quick Facts is identical boilerplate on every page; wrap it in
+            data-nosnippet so Google never picks one of these paragraphs as
+            the SERP snippet on a page whose primary content is thinner
+            than the footer prose. Users still see it. */}
+        <div data-nosnippet className="mt-14 pt-10 border-t border-onyx-500">
           <h4 className="text-white text-[12px] font-bold uppercase tracking-[0.24em] mb-8">
             {CITY.name} Fence Quick Facts
           </h4>
@@ -163,8 +167,16 @@ export default function Footer() {
 
       <div className="border-t border-onyx-500 bg-onyx-700">
         <div className="container-wide py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-          <p className="text-[12px] text-onyx-300 leading-relaxed max-w-4xl">
-            <span className="text-white font-semibold">Disclaimer:</span> {CITY.domain} is an independent local fence information and contractor referral platform created to help homeowners make informed fencing decisions. We are not a licensed contractor. Always verify permits and regulations with {CITY.permitOffice.name} directly.
+          {/* data-nosnippet keeps the boilerplate disclaimer out of Google's
+              meta-description fallback. Without this, Google was picking it
+              as the SERP snippet on dynamic pages where other prose was
+              thinner than the disclaimer paragraph. */}
+          <p
+            data-nosnippet
+            className="text-[12px] text-onyx-300/80 leading-relaxed max-w-4xl"
+          >
+            {CITY.siteName} is an editorial directory. We do not perform fence
+            work. Verify permits with {CITY.permitOffice.name} before any install.
           </p>
           <div className="flex items-center gap-4 text-[12px] text-onyx-300 whitespace-nowrap">
             <Link to="/privacy" className="hover:text-oak-300 transition-colors">

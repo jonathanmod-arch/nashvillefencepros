@@ -41,6 +41,7 @@ import {
 import { SERVICES, findService } from '../data/services'
 import { NEIGHBORHOODS } from '../data/siteData'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { cleanMetaDescription } from '../lib/meta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import {
   organization,
@@ -100,8 +101,10 @@ export default function ContractorProfile() {
       ? `${c.name} Reviews | ${categoryLabel(c.category)} in ${CITY.name} ${CITY.stateAbbr}`
       : `${CITY.name} Fence Pro Not Found`,
     description: c
-      ? `${c.name} is a ${CITY.name}-area ${categoryLabel(c.category).toLowerCase()} serving ${c.areas.join(', ')}. ${c.description.slice(0, 110)}…`
-      : `This ${CITY.name} fence contractor listing is no longer available. Browse the full ${CITY.name} fence installers directory instead.`,
+      ? cleanMetaDescription(
+          `${c.name} reviews, photos, services, and pricing. ${categoryLabel(c.category)} serving ${CITY.name}, ${CITY.stateAbbr}. ${c.description}`,
+        )
+      : `This ${CITY.name} fence contractor listing is no longer available. Browse the full directory instead.`,
     canonical: c ? `/contractors/${c.slug}` : '/contractors',
     noindex: !c,
   })

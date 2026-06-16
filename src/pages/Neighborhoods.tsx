@@ -8,6 +8,7 @@ import { NEIGHBORHOODS } from '../data/siteData'
 import { SERVICES } from '../data/services'
 import { MapPin, ArrowRight, ArrowLeft, Check, ExternalLink } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { cleanMetaDescription } from '../lib/meta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import {
   organization,
@@ -38,8 +39,12 @@ export default function Neighborhoods() {
       ? `Fence Installation in ${n.name}, ${CITY.stateAbbr}`
       : `Fence Installation Areas in ${CITY.name} ${CITY.stateAbbr}`,
     description: n
-      ? `Fence installation in ${CITY.name}'s ${n.name} area (ZIP ${n.zip}). Compare vetted ${n.name} fence contractors for ${n.popularStyle.toLowerCase()}, typical project ${n.avgCost}. Wood, vinyl, aluminum, chain link, and ornamental iron, free quotes within 24 hours.`
-      : `Fence installation ${CITY.name}, compare vetted fence contractors across every city and neighborhood in the ${CITY.name} metro. Local pricing, popular fence styles, and HOA notes for ${CITY.topServiceAreaCities.slice(1).join(', ')}, and more.`,
+      ? cleanMetaDescription(
+          `Fence installation in ${n.name}, ${CITY.name} (ZIP ${n.zip}). Popular style: ${n.popularStyle}. Typical project ${n.avgCost}. Free quotes within 24 hours.`,
+        )
+      : cleanMetaDescription(
+          `Local ${CITY.name} fence pricing, popular styles, and HOA notes by neighborhood across the ${CITY.name} metro — ${CITY.topServiceAreaCities.slice(1).join(', ')}, and more.`,
+        ),
     canonical: slug ? `/service-areas/${slug}` : '/service-areas',
   })
 

@@ -14,6 +14,7 @@ import {
 import { NEIGHBORHOODS } from '../data/siteData'
 import { ArrowRight, ArrowLeft, Check, Wrench, Calendar, Ruler, MapPin } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { cleanMetaDescription } from '../lib/meta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import {
   organization,
@@ -122,7 +123,9 @@ function BucketLanding({ bucketSlug }: { bucketSlug: string }) {
 
   useDocumentMeta({
     title: `${bucket.name} in ${CITY.name} ${CITY.stateAbbr}`,
-    description: `${bucket.summary} Compare vetted ${CITY.name} contractors for every service in the ${bucket.name.toLowerCase()} bucket.`,
+    description: cleanMetaDescription(
+      `${bucket.name} in ${CITY.name}, ${CITY.stateAbbr}. ${bucket.summary} Compare vetted local pros and get free quotes within 24 hours.`,
+    ),
     canonical: `/services/${bucket.slug}`,
   })
 
@@ -244,8 +247,10 @@ function ServiceDetail({
     ? `${s.name} in ${area!.name}, ${CITY.stateAbbr}`
     : `${s.name} in ${CITY.name} ${CITY.stateAbbr}`
   const descriptionSeo = isAreaPage
-    ? `${s.name} in ${area!.name}, ${CITY.name} ${CITY.stateAbbr}. Popular style: ${area!.popularStyle}. Typical project ${area!.avgCost}. Compare vetted ${area!.name} installers.`
-    : s.description.slice(0, 180)
+    ? cleanMetaDescription(
+        `${s.name} in ${area!.name}, ${CITY.name}. Popular style: ${area!.popularStyle}. Typical project ${area!.avgCost}. Free local quotes within 24 hours.`,
+      )
+    : cleanMetaDescription(s.description)
 
   useDocumentMeta({
     title: titleSeo,

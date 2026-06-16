@@ -7,6 +7,7 @@ import SafeImage from '../components/shared/SafeImage'
 import { RESOURCES, RESOURCE_PUBLISHED_AT, type ResourceSection } from '../data/siteData'
 import { Clock, ArrowRight, ArrowLeft } from 'lucide-react'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
+import { cleanMetaDescription } from '../lib/meta'
 import { useStructuredData } from '../hooks/useStructuredData'
 import {
   organization,
@@ -194,8 +195,10 @@ export default function Resources() {
       ? displayTitle(r.title)
       : `${CITY.name} Fence Resource Center`,
     description: r
-      ? `${r.excerpt} ${r.readTime} read on ${CITY.siteName}.`
-      : `${CITY.name} fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and ${CITY.permitOffice.shortName} permit how-tos.`,
+      ? cleanMetaDescription(`${r.excerpt} ${r.readTime} read on ${CITY.siteName}.`)
+      : cleanMetaDescription(
+          `${CITY.name} fence installation, repair, and permit guides written by local pros. Wood vs vinyl, fence cost breakdown, pool fence laws, pet fences, and ${CITY.permitOffice.shortName} permit how-tos.`,
+        ),
     canonical: slug ? `/resources/${slug}` : '/resources',
   })
 
