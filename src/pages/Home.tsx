@@ -1,7 +1,7 @@
 import HeroSection from '../components/home/HeroSection'
 import SponsorStrip from '../components/shared/SponsorStrip'
 import TrustBar from '../components/home/TrustBar'
-import WhyFenceSection from '../components/home/WhyFenceSection'
+import HowItWorksSection from '../components/home/HowItWorksSection'
 import FenceTypesSection from '../components/home/FenceTypesSection'
 import CostGuideSection from '../components/home/CostGuideSection'
 import PermitsSection from '../components/home/PermitsSection'
@@ -51,7 +51,7 @@ export default function Home() {
       <HeroSection />
       <SponsorStrip />
       <TrustBar />
-      <WhyFenceSection />
+      <HowItWorksSection />
       <FenceTypesSection />
       <CostGuideSection />
       <PermitsSection />
