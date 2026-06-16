@@ -2982,6 +2982,150 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'pergola-vs-covered-patio-nashville',
+    title: 'Pergola vs Covered Patio: Which Actually Keeps You Dry in Nashville?',
+    category: 'Comparison',
+    readTime: '7 min',
+    publishedAt: '2026-06-16',
+    excerpt:
+      'A bare pergola is a beautiful sculpture that does not function as a roof. A covered patio is the boring right answer 80 percent of the time. The middle-ground options cost more than you think. Nashville-specific math, no hedging.',
+    img: IMAGES.resources['pergola-vs-covered-patio-nashville'],
+    imageAlt: 'Cedar pergola over a Nashville backyard patio, pergola vs covered patio comparison',
+    body: [
+      {
+        type: 'p',
+        text: "A bare wood pergola — the kind that shows up in every Instagram backyard photo — does almost nothing for you in a Nashville July thunderstorm. A covered patio with a real solid roof does. That's the entire comparison in one sentence, and I'm not going to pretend it's more complicated than it is. The interesting question is what you actually want — shade and aesthetics, or shade plus weather protection — and how much you're willing to pay for the middle-ground options that try to do both without committing. Below is the math, the actual Nashville-specific HOA wrinkles, and which crew you call for which.",
+      },
+      { type: 'h2', text: 'Does a bare pergola keep the rain off you in a July thunderstorm?' },
+      {
+        type: 'p',
+        text: "No. It does not. Stop kidding yourself.",
+      },
+      {
+        type: 'p',
+        text: "The slats sit 4-6 inches apart so the structure breathes and looks airy in the listing photo. Rain falls through that gap onto your shoulders, your phone, your bourbon, and the cedar deck you spent $19,000 on last year. A 20-minute Nashville pop-up storm dumps roughly half an inch of water on whatever's underneath, and a pergola does almost nothing to slow it down. Wood pergolas are not roofs. They are sculptures with mood lighting potential.",
+      },
+      {
+        type: 'p',
+        text: "The retrofit options — climbing vines, retractable canopies, polycarbonate panels, stretched shade fabric — all exist because the people who built pergolas figured out within one summer that they didn't actually have a roof. Every one of those add-ons is the homeowner equivalent of duct-taping a tarp to the rafters and pretending it was the plan all along.",
+      },
+      { type: 'h2', text: 'When does a bare pergola actually make sense in Nashville?' },
+      {
+        type: 'p',
+        text: "Three situations. That's it. Three.",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Pure architectural moment in a side yard or front yard where the patio furniture does not actually live. Looks great, photographs well, your designer is happy, you sip coffee under it twice a year.',
+          'Climbing-vine trellis as part of a real landscape plan — wisteria, climbing roses, kiwifruit. The vines become the roof in year three or four. Cool, but you are now signed up for 20 years of vine maintenance, and wisteria will absolutely pull a $7,000 pergola out of plumb if you stop pruning it.',
+          'HOA-mandated lattice in a neighborhood that does not allow solid roof structures over the rear patio. Parts of Brentwood, Belle Meade, and Forest Hills enforce this in their covenants. The pergola is the only legal option.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "If you're not in one of those three buckets, you don't want a pergola. You want what a pergola is pretending to be — a covered patio.",
+      },
+      { type: 'h2', text: 'What does a covered patio actually do, and why is it boring?' },
+      {
+        type: 'p',
+        text: "A covered patio is a solid roof — shingled or metal — attached to the house, with proper rafters and beams. Same construction as the house roof itself. Total weather protection. Ceiling fans, recessed lighting, infrared heaters mount cleanly into the rafters. The patio is usable in any weather short of a tornado warning.",
+      },
+      {
+        type: 'p',
+        text: "Why I call it boring: it looks like another room added onto the house. There is no Instagram angle that makes a covered patio look unique. It just looks like a house with a porch on the back. The aesthetic loss is real if you cared about the open-sky thing. The functional gain is the entire reason to build one.",
+      },
+      {
+        type: 'p',
+        text: "Most Nashville homes built before 2000 already have a small covered back porch and a larger uncovered patio behind it. The covered porch is where you actually live in July. The uncovered patio is where you grill on the four nights a year the weather is genuinely perfect. The pre-2000 architects had this figured out.",
+      },
+      { type: 'h2', text: 'What does each one cost installed in Nashville?' },
+      {
+        type: 'table',
+        headers: ['Structure', 'Footprint', 'Installed cost in Nashville'],
+        rows: [
+          ['Bare cedar pergola', '12×16 ft, posts + beams + slats', '$4,800-$9,500'],
+          ['Bare aluminum pergola', '12×16 ft, powder-coated', '$7,500-$14,000'],
+          ['Pergola + polycarbonate roof', 'Cedar/aluminum + clear or tinted panels', 'add $2,800-$5,200'],
+          ['Motorized louvered pergola', 'Equinox / StruXure / Renson, smart-home wired', '$25,000-$60,000'],
+          ['Standard covered patio', '12×16 ft, shingled roof matching house', '$14,000-$28,000'],
+          ['Premium covered patio', 'Cathedral ceiling, fan, beadboard, recessed lighting', '$24,000-$48,000'],
+        ],
+      },
+      {
+        type: 'p',
+        text: "One-line summary you can hand your spouse: a bare pergola is one-third the price of a covered patio. The motorized louvered pergola is twice the price of a covered patio. The polycarbonate-roof pergola lands in the same price band as a basic covered patio but looks worse and protects the same amount.",
+      },
+      { type: 'h2', text: 'Is the polycarbonate-roof pergola the smart middle ground or the worst of both worlds?' },
+      {
+        type: 'p',
+        text: "It works. You stay dry. From underneath you still see the slats above the polycarbonate, which preserves the airy pergola look from inside the structure. From the yard looking back, it reads as a corrugated plastic roof bolted to wood beams. There is no version of polycarbonate that hides itself — it always looks like greenhouse material because it is greenhouse material.",
+      },
+      {
+        type: 'p',
+        text: "The right move is to either lean all the way in (matte bronze polycarbonate, hidden gutters integrated into the beams, color-matched trim) or skip it entirely and build a real covered patio. The half-measure where you bolt clear corrugated panels to a $4,000 cedar pergola and call it done looks exactly like what it is — duct tape on a furniture-grade structure. Your neighbor will know. Your appraiser will know. You will know.",
+      },
+      { type: 'h2', text: 'What about the motorized louvered pergola (Equinox, StruXure, Renson)?' },
+      {
+        type: 'p',
+        text: "Honest opinion: this is the only pergola variant that genuinely competes with a covered patio for utility. The aluminum louvers tilt open for sun, close for rain. A roof-mounted sensor closes them automatically when a storm rolls in. Heaters, lights, speakers, and screens integrate into the rafter cavities. It is a real outdoor room with a programmable roof.",
+      },
+      {
+        type: 'p',
+        text: "The catches are real. $25-$60K installed, motors and electronics that the Nashville humidity beats on every summer, and a five-year service bill that nobody wants to discuss in the sales pitch — motor replacement runs $1,200-$3,000 per louver bank, and the smart-home integration breaks every time one of the brands EOLs their app or pivots to a new platform.",
+      },
+      {
+        type: 'p',
+        text: "The Williamson County HOA wrinkle nobody warned you about: several Brentwood, Franklin, and Cool Springs subdivisions have started rejecting motorized louvered pergolas in 2025 and 2026 ARC reviews. The argument is that motorized louvers qualify as 'permanent structure with mechanical systems' and aren't covered by the pergola exemption in the covenants. Get the ARC sign-off in writing before you spec one — verbal yes from the committee chair does not survive the next neighbor complaint. The [Williamson County HOA submission playbook](/resources/metro-nashville-permits) covers what the packet should include before you sit down with the ARC.",
+      },
+      { type: 'h2', text: 'Which one should you build if you actually plan to use the backyard year-round?' },
+      {
+        type: 'p',
+        text: "Covered patio. Sorry. It's not even close.",
+      },
+      {
+        type: 'p',
+        text: "Nashville's outdoor season is bookended by 95°F afternoons in July and 25°F mornings in January. A covered patio with two ceiling fans and a small infrared heater stays comfortable from late March through November and through a decent chunk of December if you commit to the heater. A bare pergola gets you maybe May, late September, and three perfect weeks in October. The cost-per-usable-hour math is brutal on the pergola if you actually wanted an outdoor room.",
+      },
+      {
+        type: 'p',
+        text: "If you have $30K to spend on the backyard and you want one outdoor room you'll use, the right answer is covered patio plus a ceiling fan plus a $400 heater. If you have $30K and you want a bare pergola plus an outdoor kitchen plus a fire feature, get the kitchen and the fire feature, skip the pergola entirely, and use the back wall of the house as your weather protection. That's not a sad compromise — it's a better backyard for the money.",
+      },
+      { type: 'h2', text: 'Which one should you build if it\'s purely aesthetic and weekend entertaining?' },
+      {
+        type: 'p',
+        text: "Bare pergola, honestly. The aesthetic case is real. A 12×16 cedar pergola with string lights and climbing wisteria is genuinely beautiful in a way no covered patio will ever be. If your 'outdoor time' is a two-hour dinner with friends in the 60-80°F window of spring and fall, that is exactly what the pergola is for. Lean into it.",
+      },
+      {
+        type: 'p',
+        text: "Just be honest with yourself that you're buying a sculpture, not a structure. Don't show up two summers from now asking the contractor to bolt polycarbonate to the rafters because you realized you wanted a roof — that's the path that looks the worst and costs the most over time. Either commit to the open-sky thing or commit to the covered patio. The hybrid path is what eats budget and breaks the aesthetic at the same time.",
+      },
+      { type: 'h2', text: 'What\'s the build order if you\'re doing this alongside a fence or deck project?' },
+      {
+        type: 'p',
+        text: "Same crew if possible. Most Nashville deck builders also build pergolas and covered patios — the framing crew that's already on site can swing into rafter framing without a separate mobilization fee. The Saturday morning where you have one truck in the driveway is the cheapest version of this project.",
+      },
+      {
+        type: 'p',
+        text: "Build order matters more than people think. Get the deck framed, set the pergola or patio cover posts THROUGH the deck framing (notched, not bolted to the surface), THEN deck the surface, THEN do the roof finish work. Building the deck surface first and trying to set 6×6 posts through finished cedar boards is the expensive version that ruins the deck warranty. If you're also doing a fence, the [build-order article on decks plus fences](/resources/fence-before-or-after-deck-nashville) covers the broader sequencing logic.",
+      },
+      { type: 'h2', text: 'What are most Nashville deck and pergola contractors actually building in 2026?' },
+      {
+        type: 'p',
+        text: "Rough split across the active install base: 60% covered patios, 25% bare pergolas, 12% motorized louvered pergolas, 3% polycarbonate-roof pergolas. Most contractors will quietly steer you toward the covered patio if you tell them you actually plan to use the space. The pergola crowd is mostly designer-driven projects in Belle Meade, Forest Hills, and the older parts of Green Hills where the architecture supports the look and the owner cares about the aesthetic for its own sake.",
+      },
+      {
+        type: 'p',
+        text: "The polycarbonate-roof variant has been declining since 2023. Customers see a few up-close, decide it looks too commercial, and either go bare or upgrade to the motorized louvered pergola. The middle-ground pergola-plus-plastic concept is dying out in Nashville and I'd argue that's correct.",
+      },
+      { type: 'h2', text: 'What\'s the one-line recommendation?' },
+      {
+        type: 'p',
+        text: "If you want to use the backyard in the rain: covered patio. If you want a beautiful sculpture in your yard for occasional entertaining: bare pergola. If you have a serious budget and want both at once: motorized louvered pergola, eyes wide open on the service cost. There is no honest middle ground at the polycarbonate-retrofit price band, and pretending there is will cost you twice. The [shortlist of Nashville deck builders](/resources/best-deck-builders-nashville) covers most of the contractors who build all three of these — same crews, different upcharges.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [

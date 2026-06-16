@@ -214,6 +214,17 @@ The writing should feel like it came from one person. Allow:
 
 Do not force false neutrality.
 
+### Be Very Opinionated (mandatory)
+Every article must take a clear position and defend it. No hedging, no "it depends" cop-outs, no listing five equal-weight options and refusing to recommend one.
+
+- **Lead with the recommendation.** The direct-answer paragraph at the top should pick a side. The rest of the article is the reasoning behind that pick, plus the exceptions.
+- **Name the bad option as bad.** If the polycarbonate-roof pergola looks like a Home Depot awning, write that. If pressure-treated decking marketed as "composite" is misleading, write that. Specific criticism beats safe both-sides framing every time.
+- **Use direct phrasing.** "Sorry. It's not even close." "Stop kidding yourself." "Three situations. That's it. Three." These land better than "There are many factors to consider."
+- **Humour is part of the voice.** Dry humour, observed-on-the-jobsite humour, mild self-deprecation about the trade. NOT corporate cleverness or punny headlines. The bourbon-and-the-cedar-deck line works; "Fence-tastic Findings!" does not.
+- **Have a take on the brand-named middle ground.** Polycarbonate-roof pergolas, mid-grade Trex, $99 "Premium Listings" on directory sites — these are the half-measures customers ask about, and a strong article tells them whether the half-measure is honest or a compromise.
+
+The five Final Pass rules below still apply. Opinionation is what makes them survive the editor — without a point of view, the article reads as competent but forgettable.
+
 ### Final Pass — every article must meet all five
 - Sound spoken, not constructed.
 - Feel experienced, not researched.
@@ -304,3 +315,9 @@ Tracked here so the next article in the queue is always one grep away. Update on
 | 5 | How Much Does a New Deck Cost in Nashville? | ✅ shipped | `/resources/deck-cost-nashville` — Deck Builders #5, anchored to the driveway-gate-cost article structure (four tiers + per-sqft table + line items + drivers + hidden costs + maintenance + property value + how to read a quote + red flags + close) |
 | 6 | Composite vs Wood Decking: Which Works Better With Privacy Fencing? | ✅ shipped | `/resources/composite-vs-wood-decking-privacy-fence` — Deck Builders #3, comparison angle (color drift, heat, clearance, 10-yr maintenance bill). First article with the all-questions H2 format the user requested. |
 | 7 | Best Gate Installation Companies in Nashville | ✅ shipped | `/resources/best-gate-installation-companies-nashville` |
+
+### Week 2 progress
+
+| Day | Planned title | Status | Notes |
+|-----|---------------|--------|-------|
+| 8 | Pergola vs Covered Patio: Which Actually Keeps You Dry in Nashville? | ✅ shipped | `/resources/pergola-vs-covered-patio-nashville` — Pergola Builders #2, first article under the "Be Very Opinionated" rule added to the voice section. Strong take: bare pergola is a sculpture, covered patio is the boring right answer 80% of the time, polycarbonate retrofit is duct tape, motorized louvered pergola is the only middle ground that works. |

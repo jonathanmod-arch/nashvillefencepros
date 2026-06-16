@@ -61,6 +61,7 @@ export const IMAGES = {
     'driveway-gate-permits-nashville': 'https://unsplash.com/photos/gmRXcuYNV6Q/download?w=1200&q=80',
     'deck-cost-nashville': 'https://unsplash.com/photos/nNBU-9VxSWs/download?w=1200&q=80',
     'composite-vs-wood-decking-privacy-fence': 'https://unsplash.com/photos/nNBU-9VxSWs/download?w=1200&q=80',
+    'pergola-vs-covered-patio-nashville': 'https://unsplash.com/photos/nNBU-9VxSWs/download?w=1200&q=80',
   },
   gallery: [
     'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80',
