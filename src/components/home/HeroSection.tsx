@@ -45,11 +45,8 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2.5 max-w-full px-4 py-2 rounded-full bg-onyx-700/10 text-onyx-700 text-[13px] hover:bg-onyx-700/15 transition-colors group"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-onyx-700 flex-shrink-0" aria-hidden />
-            <span className="truncate">
-              <span className="font-normal opacity-70 mr-1.5">
-                New {latestArticleDate}:
-              </span>
-              <span className="font-semibold">{latestArticle.title}</span>
+            <span className="font-semibold whitespace-nowrap">
+              New {latestArticleDate} Article
             </span>
             <ArrowRight className="w-3.5 h-3.5 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
           </Link>
