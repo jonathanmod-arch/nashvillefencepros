@@ -3126,6 +3126,137 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'best-plants-privacy-fence-nashville',
+    title: 'Best Plants to Grow Along a Privacy Fence in Nashville (and What to Never Plant)',
+    category: 'Landscaping',
+    readTime: '7 min',
+    publishedAt: '2026-06-17',
+    excerpt:
+      'Leyland cypress will break your fence in eight years. Running bamboo will eat your neighbor\'s yard. Climbing hydrangea is the right answer if you can wait four years. Here\'s the actual plant list for a Nashville privacy fence, and the three plants every contractor begs you not to put there.',
+    img: IMAGES.resources['best-plants-privacy-fence-nashville'],
+    imageAlt: 'Privacy fence with climbing plants and shrubs in a Nashville backyard',
+    body: [
+      {
+        type: 'p',
+        text: "The right plant along a privacy fence in Nashville depends on three things: how much sun the line gets, whether the fence is wood or vinyl, and whether you're willing to wait four years for the look you actually want. The wrong plants — Leyland cypress, running bamboo, English ivy on cedar, wisteria on anything — will cost you the fence or your neighbor's relationship inside the first decade. Below is the actual list of plants that work, the cost ranges, and which Nashville landscape contractors will quietly steer you toward the smart picks versus the ones still pushing the cheap fast-growers.",
+      },
+      { type: 'h2', text: 'What\'s the one plant every Nashville fence contractor begs you not to put against the fence?' },
+      {
+        type: 'p',
+        text: "Leyland cypress. I cannot say this strongly enough. Leyland cypress (Cupressus × leylandii) is the cheap green hedge plant every big-box nursery pushes because it grows three feet a year and the row looks great in year three. The catch lands in year eight. Adult roots break fence posts. The dense canopy starves the fence panel of airflow and the cedar rots from the back side faster than the front. And — this is the part nobody warns you about — Leyland cypress dies en masse in Tennessee. Seiridium canker shows up around year 12-15, and the entire row turns brown over a single summer.",
+      },
+      {
+        type: 'p',
+        text: "Drive through Brentwood, Franklin, or any 2010s-era subdivision in Williamson County and count the dead Leyland rows. They're everywhere. The replacement bill for a 100-foot dead row plus the fence repair underneath: $4,500-$9,500. The original 100-foot Leyland row cost the homeowner $1,200-$2,000. Doing it right the first time would have cost $3,500-$5,500 for slower-growing screens that don't die. The Leyland math never works out. Anyone selling you a Leyland row in 2026 either hasn't been in the trade long enough to see one die or doesn't care because you'll be calling someone else for the replacement.",
+      },
+      { type: 'h2', text: 'What about bamboo? Isn\'t bamboo supposed to be the privacy plant?' },
+      {
+        type: 'p',
+        text: "Yes — and also absolutely not. There are two bamboo families and they behave like different species. Running bamboo (Phyllostachys family) spreads underground via rhizomes and will absolutely eat your neighbor's yard within six to eight years. Clumping bamboo (Fargesia, Bambusa) stays in tidy clumps and does the job beautifully.",
+      },
+      {
+        type: 'p',
+        text: "If your landscaper is quoting you 'golden bamboo' or 'black bamboo' at $40 per plant, that's almost certainly running bamboo. Walk away. Williamson County and parts of Davidson County have started enforcing setback rules and homeowner-paid removal orders when running bamboo crosses property lines. The neighbor's lawsuit math runs $8,000-$25,000 in remediation and legal fees once it gets serious, and the precedent in Tennessee small-claims is bad — the planting homeowner pays.",
+      },
+      {
+        type: 'p',
+        text: "Clumping bamboo, on the other hand, is wonderful. Fargesia 'Rufa' is the workhorse — handles our heat and humidity, dense screen, no rhizome problem. Runs $60-$120 per plant on 4-foot centers. A 100-foot screen lands at $1,800-$3,200 for plants alone. Worth every dollar if you want the bamboo aesthetic done correctly.",
+      },
+      { type: 'h2', text: 'What\'s the actual best plant for a Nashville privacy fence?' },
+      {
+        type: 'p',
+        text: "Climbing hydrangea (Hydrangea anomala petiolaris) on a wood or aluminum fence with eastern or northern exposure. Best plant for the job in our climate, and the one most landscapers won't recommend because it takes four years to look like anything. Year one: nothing. Year two: a few leaves and your spouse asks why you spent $700. Year three: starting to climb. Year four: covered with white lacecap flowers in May, dense green coverage through October. Years five through twenty: gorgeous, low-maintenance, peels off cleanly the day you ever need to replace the fence behind it.",
+      },
+      {
+        type: 'p',
+        text: "Cost: $35-$60 per plant, 6-foot spacing for a covered fence. 100 linear feet is 17 plants, call it $700 installed plus another $400-$600 for soil amendment and a wire trellis. The math is incredible if you can survive the awkward years. The catch: climbing hydrangea does not love full afternoon sun in our climate. South- and west-facing fences need a different plant.",
+      },
+      { type: 'h2', text: 'What works on a south- or west-facing fence that bakes all afternoon?' },
+      {
+        type: 'p',
+        text: "Carolina jessamine (Gelsemium sempervirens) is the answer for the hot exposure. Native to the Southeast, evergreen, yellow trumpet flowers in February and March when you actually need a color signal, handles full sun and Tennessee humidity without complaint. $20-$35 per plant, 5-foot spacing. A 100-foot fence is 20 plants at $500-$700 installed.",
+      },
+      {
+        type: 'p',
+        text: "The other workhorse for full sun: Confederate jasmine (Trachelospermum jasminoides). It's zone-pushing in our area but reliable in protected microclimates. Fragrant white flowers in May and June, dense evergreen coverage, fast establishment after a slow year one. Needs protection in a hard winter — the 2022 Christmas freeze that bottomed out around 1°F killed a lot of unprotected jasmine. Most years it shrugs off the cold and you forget you have it.",
+      },
+      {
+        type: 'p',
+        text: "Both are vining plants. Both need a stainless wire trellis stapled to the fence to climb. The trellis adds about $4-$6 per linear foot to the install. Skipping the trellis is the number-one reason vines fail in Nashville — the homeowner buys the plants, sticks them in the ground next to a bare fence panel, and three years later there's a sad tangle on the dirt because nothing was guiding the vine up.",
+      },
+      { type: 'h2', text: 'What about a real evergreen hedge instead of a vine?' },
+      {
+        type: 'p',
+        text: "Two answers, depending on lot size. For a tight side yard (under 4 feet of plant width available): 'Sky Pencil' Japanese holly. Columnar, 6-8 feet tall at maturity, 2 feet wide. Stays out of the fence entirely, doesn't need pruning, holds its shape for decades. $80-$140 per plant on 3-foot spacing. A 100-foot screen is 34 plants at $3,000-$4,800 installed. Premium price, but it's the only narrow evergreen that actually works in our heat.",
+      },
+      {
+        type: 'p',
+        text: "For a wider side or back yard (5-plus feet of plant width available): Nellie R. Stevens holly. The Nashville landscape contractor default for a reason — fast, hardy, dense, evergreen, red berries in winter, doesn't kill the fence. $60-$100 per plant on 4-5 foot spacing. 100-foot screen is 25 plants at $1,800-$3,000 installed. Boring choice that works for 30 years.",
+      },
+      {
+        type: 'p',
+        text: "Skip Italian cypress (it's not Italy here, they die), arborvitae (deer destroy them in any Williamson County yard with deer pressure), and wax myrtle (looks great year one, sparse year five, and the bottom always goes leggy).",
+      },
+      { type: 'h2', text: 'What plants ruin wood fences the fastest?' },
+      {
+        type: 'p',
+        text: "Three offenders, in order of damage caused:",
+      },
+      {
+        type: 'ul',
+        items: [
+          "English ivy (Hedera helix) on cedar. The ivy's aerial roots pry into the cedar grain, lift the stain, and lock in moisture against the wood. A stained cedar fence with mature English ivy has 8-10 years of life instead of 15-18. Skip it. Also it's invasive in Tennessee and Metro Parks has started removal programs.",
+          "Wisteria (Wisteria sinensis) on any wood fence. Wisteria gets thicker every year. By year 7 the trunk is the size of your wrist and it has pulled the fence into a slow lean. By year 12 it's pulling rails off entirely. Beautiful in bloom, structurally lethal. Only plant wisteria on a heavy pergola or a steel-cabled arbor designed to hold the weight.",
+          'Japanese honeysuckle (Lonicera japonica). Spreads aggressively, wraps anything climbable, shelters voles that then chew on the fence base. Native bee gardens love it; fences hate it. Plant it in the back of the yard if you must have it, not on the fence.',
+        ],
+      },
+      { type: 'h2', text: 'What plants don\'t ruin the fence?' },
+      {
+        type: 'p',
+        text: "Carolina jessamine, climbing hydrangea, Confederate jasmine, and — with a caveat — clematis. All four climb with tendrils or twining stems that don't dig into the wood. All four come off cleanly the day you ever need to replace a fence panel. Clematis varieties like 'Sweet Autumn' and 'Henryi' are reliable in our heat zone; the fancier large-flowered hybrids you see at the boutique nurseries struggle in July.",
+      },
+      {
+        type: 'p',
+        text: "The hard rule: anything with aerial roots (English ivy, Boston ivy, climbing fig, trumpet vine) damages cedar over a decade. Anything with twining stems or tendrils is fine. If you don't know which family your vine is in, look up before you plant.",
+      },
+      { type: 'h2', text: 'Does Nashville\'s deer pressure change the plant choices?' },
+      {
+        type: 'p',
+        text: "Yes, and it gets worse every year. In any yard within a half-mile of the Cumberland River, Percy Warner Park, Radnor Lake, or the Williamson County subdivisions backing onto wooded land, deer pressure is genuine and most of the textbook 'good' fence plants get browsed flat in their first winter.",
+      },
+      {
+        type: 'p',
+        text: "Deer-resistant fence plants that actually work in Nashville: Carolina jessamine (mildly toxic, deer leave it alone), Nellie Stevens holly (the spines stop them), Confederate jasmine (deer don't love it), 'Sky Pencil' holly (same spine logic as Nellie). Plants the deer destroy: clematis (browsed flat), English ivy (the few months of fresh growth gets eaten down to the woody stems), most hostas planted under the fence line as understory.",
+      },
+      {
+        type: 'p',
+        text: "A 7-foot wood privacy fence solves the deer-browse problem entirely if your back lot abuts the woods. The [build-order article on decks plus fences](/resources/fence-before-or-after-deck-nashville) covers why building the fence first matters when you're also doing landscape work — getting the deer-proof boundary up before you put $2,500 of plants in the ground saves you from feeding the local herd in year one.",
+      },
+      { type: 'h2', text: 'How do you actually install plants along a new fence without killing either?' },
+      {
+        type: 'p',
+        text: "Three rules:",
+      },
+      {
+        type: 'ol',
+        items: [
+          'Wait 30 days after the fence install before you plant. Fresh cedar leaches tannins for the first month and plants set against the freshly stained wood get root burn. The fence contractor wants to invoice for the landscape on the same day; resist that, even if it costs you a separate trip charge.',
+          'Set plants 12-18 inches off the fence for vines, 24-36 inches for hedges. The "right at the fence line" install is what fails because the plant has no root-expansion room and the fence has no airflow behind it. Both die slowly.',
+          'Use a 4-inch mulch ring around each plant, NOT a continuous mulch bed running the length of the fence. The continuous bed traps moisture against the bottom rail, rots the cedar, and invites termites. The discrete rings let water move and keep the fence dry.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Contractor pricing patterns to know: most Nashville landscape companies will quote a 'fence-line install' for $35-$60 per linear foot installed (plants + soil amendment + trellis if needed + mulch + warranty). That's about right. The companies quoting $15-$20 per linear foot are using Leyland cypress, running bamboo, or both. You now know what to do with those quotes.",
+      },
+      { type: 'h2', text: 'What\'s the one-line recommendation if you\'re not going to read the whole thing?' },
+      {
+        type: 'p',
+        text: "Climbing hydrangea on shaded fences. Carolina jessamine on sunny fences. Nellie Stevens holly if you want a hedge instead of a vine. Run from Leyland cypress, running bamboo, English ivy, and wisteria like the bad ideas they are. If you're shopping for a contractor, filter the [directory](/contractors) to Landscaping and you'll see the shops actually capable of having this conversation — and the [seven questions to ask any Nashville installer](/resources/hire-nashville-fence-installer-questions) apply just as cleanly to landscape contractors as they do to fence pros, because the cost of getting this wrong shows up on both the fence and the plants.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
