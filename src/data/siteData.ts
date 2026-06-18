@@ -180,6 +180,26 @@ export const NEIGHBORHOODS = [
     cityResources: [
       { label: 'City of Belle Meade fence FAQ', url: 'https://citybellemeade.org/faq/fences/' },
     ],
+    landmarks: [
+      { name: 'Belle Meade Historic Site & Winery', note: 'Antebellum mansion and former thoroughbred farm at 5025 Harding Pike; 30+ acres open for tours and tastings.' },
+      { name: 'Cheekwood Estate & Gardens', note: '55-acre botanical garden and 1930s mansion at 1200 Forrest Park Dr; seasonal exhibits run year-round.' },
+      { name: 'Percy Warner Park', note: '2,684 acres bordering Belle Meade — the largest municipally administered park in Tennessee.' },
+      { name: 'The Parthenon', note: 'Full-scale Centennial Park replica with the Athena Parthenos statue and art museum, 2500 West End Ave.' },
+      { name: 'Belle Meade Country Club', note: 'Private 1901-founded club at 815 Belle Meade Blvd hosting the annual Iroquois Steeplechase.' },
+    ],
+    amenities: [
+      { name: 'Belle Meade Plaza', note: 'Local shopping center anchored by Publix and CVS at 4548 Harding Pike.' },
+      { name: 'Saint Thomas West Hospital', note: 'Level III trauma center at 4220 Harding Pike, the closest hospital to Belle Meade.' },
+      { name: 'The Mall at Green Hills', note: 'Flagship Nordstrom, Apple, and Tiffany & Co. at 2126 Abbott Martin Rd, about 5 minutes east.' },
+      { name: 'Whole Foods Market Belle Meade', note: 'Full-service grocery at 4021 Hillsboro Pike, the closest Whole Foods to the neighborhood.' },
+    ],
+    thingsToDo: [
+      { name: 'Iroquois Steeplechase', note: 'Annual May horse race at Percy Warner Park drawing 25,000+ spectators since 1941.' },
+      { name: 'Cheekwood seasonal festivals', note: 'Cheekwood in Bloom (spring tulips), Holiday LIGHTS, and Pumpkin Village rotate through the year.' },
+      { name: 'Warner Parks trails', note: '12+ miles of paved and unpaved trails for hiking, running, and equestrian use.' },
+      { name: 'Belle Meade Plantation tours', note: 'Carriage House restaurant on site plus a winery tasting room for adult-focused visits.' },
+      { name: 'Frist Art Museum', note: '10 minutes east at 919 Broadway in the historic 1934 post office building, rotating exhibitions.' },
+    ],
   },
   {
     slug: 'green-hills',
@@ -192,6 +212,26 @@ export const NEIGHBORHOODS = [
     cityResources: [
       { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
     ],
+    landmarks: [
+      { name: 'The Mall at Green Hills', note: '750,000 sqft luxury mall at 2126 Abbott Martin Rd, anchor for Apple, Nordstrom, Tiffany & Co.' },
+      { name: 'Bluebird Cafe', note: 'Legendary 100-seat songwriter venue at 4104 Hillsboro Pike; alumni include Garth Brooks and Taylor Swift.' },
+      { name: 'Lipscomb University', note: 'Private university at 1 University Park Dr with a 65-acre campus inside the neighborhood.' },
+      { name: 'Radnor Lake State Natural Area', note: '1,368-acre nature preserve 3 miles south at 1160 Otter Creek Rd; no pets, no bicycles.' },
+      { name: 'Hill Center Green Hills', note: 'Outdoor mixed-use shopping center across from the mall at 4017 Hillsboro Pike.' },
+    ],
+    amenities: [
+      { name: 'Whole Foods Market Green Hills', note: 'Full-service grocery anchor at 4021 Hillsboro Pike.' },
+      { name: 'Publix at Hill Center', note: 'Convenient pickup-and-go grocery at 4015 Hillsboro Circle.' },
+      { name: 'YMCA Green Hills', note: 'Family fitness facility at 4041 Hillsboro Pike with pool and group classes.' },
+      { name: 'Green Hills Branch Library', note: 'Nashville Public Library branch at 3701 Benham Ave, kid programming and study rooms.' },
+    ],
+    thingsToDo: [
+      { name: 'Bluebird Cafe shows', note: 'Two songwriter rounds nightly; tickets routinely sell out within minutes of release.' },
+      { name: 'Radnor Lake trails', note: '6+ miles of foot trails with deer, otter, and bald-eagle sightings inside the city limits.' },
+      { name: 'Hillsboro Village', note: 'Adjacent walking strip with Pancake Pantry, Belcourt Theatre, and local boutiques.' },
+      { name: 'Belcourt Theatre', note: '1925-era cinema at 2102 Belcourt Ave running indie, foreign, and 35mm screenings.' },
+      { name: 'Catbird Seat', note: 'High-end tasting-menu restaurant at 1711 Division St, perpetual best-restaurant list inclusion.' },
+    ],
   },
   {
     slug: 'east-nashville',
@@ -203,6 +243,26 @@ export const NEIGHBORHOODS = [
     note: 'Design-forward bungalows. Horizontal slat cedar and mixed wood-metal fences define the look. Watch for historic overlays.',
     cityResources: [
       { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
+    ],
+    landmarks: [
+      { name: 'Five Points', note: 'Main commercial intersection at Woodland and 11th Streets — anchor of the East Nashville restaurant scene.' },
+      { name: 'Edgefield Historic District', note: 'National Register of Historic Places residential district of Victorian and Queen Anne homes.' },
+      { name: 'Shelby Bottoms Greenway', note: '900+ acres of paved trail and bottomland forest along the Cumberland River.' },
+      { name: 'Lockeland Springs Park', note: 'Neighborhood-park anchor with playground and the historic Lockeland Spring monument.' },
+      { name: 'East Nashville Magnet High School', note: 'Metro Nashville Public Schools magnet at 110 Gallatin Pike S.' },
+    ],
+    amenities: [
+      { name: 'Turnip Truck Natural Market', note: 'Local organic grocery at 970 Woodland St, neighborhood institution since 2001.' },
+      { name: 'East Nashville Farmers Market', note: 'Wednesday-afternoon seasonal market at Shelby Park, May through October.' },
+      { name: 'Tennova Healthcare East', note: 'Full-service hospital at 73 Glenn St, the closest ER to the neighborhood.' },
+      { name: 'Sweet 16th Bakery', note: 'Cult-favorite bakery at 311 N 16th St with a fiercely loyal local following.' },
+    ],
+    thingsToDo: [
+      { name: 'Tomato Art Fest', note: 'Annual August street festival in Five Points celebrating the tomato as fruit AND vegetable since 2004.' },
+      { name: 'Shelby Bottoms trails', note: '5+ miles of paved greenway connecting to Cornelia Fort Air Park and the Cumberland River.' },
+      { name: 'Five Points dining + nightlife', note: 'Walking-distance restaurants including Margot, Lockeland Table, and I Dream of Weenie.' },
+      { name: 'The Basement East', note: '"The Beast" — independent live music venue at 917 Woodland St rebuilt after the 2020 tornado.' },
+      { name: 'East Side Hootenanny', note: 'Free outdoor music series at the East Park amphitheater on summer Sunday evenings.' },
     ],
   },
   {
@@ -217,6 +277,26 @@ export const NEIGHBORHOODS = [
       { label: 'Metro Nashville Codes fence permits', url: 'https://www.nashville.gov/departments/codes/construction-and-permits/building-permits-central/fence' },
       { label: 'Metro Historic Zoning Commission design guidelines', url: 'https://www.nashville.gov/departments/planning/historic-zoning-information/districts-and-design-guidelines' },
     ],
+    landmarks: [
+      { name: 'Germantown Historic District', note: 'Nashville\'s oldest residential neighborhood, founded 1850s; on the National Register of Historic Places.' },
+      { name: 'First Horizon Park', note: 'Nashville Sounds AAA baseball stadium at 19 Junior Gilliam Way; 10,000-seat venue opened in 2015.' },
+      { name: 'Bicentennial Capitol Mall State Park', note: '19-acre state park at 600 James Robertson Pkwy with the Tennessee history walk and World War II memorial.' },
+      { name: 'Tennessee State Capitol', note: '1859 Greek Revival statehouse at 600 Dr. M.L.K. Jr. Blvd, two blocks south of the historic district.' },
+      { name: 'Nashville Farmers\' Market', note: 'Year-round indoor and outdoor market at 900 Rosa L. Parks Blvd hosting 100+ vendors.' },
+    ],
+    amenities: [
+      { name: 'Nashville Farmers\' Market', note: 'Daily-open grocery + restaurants + flea market with free covered parking.' },
+      { name: 'Tennova Healthcare Centennial', note: 'Major hospital at 2300 Patterson St about 10 minutes west of the historic district.' },
+      { name: 'Rolf and Daughters', note: 'Acclaimed restaurant at 700 Taylor St — multiple James Beard nominations.' },
+      { name: 'City House', note: 'Italian-influenced Southern restaurant at 1222 4th Ave N, brick-oven pizza staple.' },
+    ],
+    thingsToDo: [
+      { name: 'Sounds baseball games', note: '70-game home schedule April through September with skyline views from First Horizon Park.' },
+      { name: 'Tennessee State Museum', note: 'Free state museum at 1000 Rosa L. Parks Blvd opened in 2018, focused on Tennessee history.' },
+      { name: 'Bicentennial Mall walks', note: 'Quarter-mile granite map of Tennessee plus the 95-bell carillon, runs an hour at the top.' },
+      { name: 'Oktoberfest', note: 'Annual October street festival on 4th Avenue celebrating the neighborhood\'s German heritage since 1980.' },
+      { name: 'Henrietta Red', note: 'Seafood-focused restaurant at 1200 4th Ave N from chef Julia Sullivan; oyster bar and wood-fired program.' },
+    ],
   },
   {
     slug: 'brentwood',
@@ -229,6 +309,26 @@ export const NEIGHBORHOODS = [
     cityResources: [
       { label: 'City of Brentwood FAQs', url: 'https://www.brentwoodtn.gov/your-government/faqs' },
     ],
+    landmarks: [
+      { name: 'Maryland Farms', note: 'Corporate office park along Maryland Way home to Tractor Supply, Comdata, and dozens of regional HQs.' },
+      { name: 'Crockett Park', note: '167-acre municipal park at 1500 Volunteer Pkwy with athletic fields, playgrounds, and the Cool Springs House.' },
+      { name: 'Brentwood Library', note: 'Williamson County branch at 8109 Concord Rd with maker space and large community-room program.' },
+      { name: 'Owl Creek Park', note: '23-acre park at 911 Concord Pass with walking trails and disc-golf course.' },
+      { name: 'Concord Park', note: '13-acre park anchoring the Concord Road corridor with sports fields and a 1.2-mile loop trail.' },
+    ],
+    amenities: [
+      { name: 'CoolSprings Galleria', note: 'Major mall at 1800 Galleria Blvd anchored by Macy\'s, Dillard\'s, and Belk; the south Williamson retail center.' },
+      { name: 'Whole Foods Market Brentwood', note: 'Full-service grocery anchor at 782 Old Hickory Blvd.' },
+      { name: 'Williamson Medical Center', note: 'Full-service hospital at 4321 Carothers Pkwy, the closest hospital to most Brentwood ZIP codes.' },
+      { name: 'YMCA Maryland Farms', note: 'Large family Y at 5101 Maryland Way with indoor pool and group classes.' },
+    ],
+    thingsToDo: [
+      { name: 'Brentwood Country Club golf', note: 'Private 18-hole course at 5123 Country Club Dr; affiliated with Belle Meade C.C. memberships.' },
+      { name: 'Maryland Way Trail', note: '4-mile paved trail looping through Maryland Farms and connecting to Crockett Park.' },
+      { name: 'Hot August Wines', note: 'Annual August wine-and-food fundraiser hosted at Maryland Farms by Currey Ingram Academy.' },
+      { name: 'Brentwood Library author series', note: 'Regular touring-author events including James Patterson and Liane Moriarty appearances.' },
+      { name: 'Smith Park', note: '46-acre nature-focused park off Wikle Rd East with a creek-side boardwalk.' },
+    ],
   },
   {
     slug: 'franklin',
@@ -240,6 +340,26 @@ export const NEIGHBORHOODS = [
     note: 'Mix of estate lots and acreage. Four-board farm fence is common on larger Williamson County parcels.',
     cityResources: [
       { label: 'City of Franklin construction handouts', url: 'https://www.franklintn.gov/government/departments-a-j/building-and-neighborhood-services/permit-applications-information/construction-handouts' },
+    ],
+    landmarks: [
+      { name: 'Downtown Franklin Historic District', note: '15-block 19th-century commercial district along Main Street, National Register listed since 1972.' },
+      { name: 'Carnton Plantation', note: '1826 Civil War-era home at 1345 Eastern Flank Cir; site of the November 1864 Battle of Franklin field hospital.' },
+      { name: 'The Franklin Theatre', note: '1937 art-deco cinema at 419 Main St restored in 2011, runs first-run films and live music.' },
+      { name: 'Carter House', note: '1830 farmhouse at 1140 Columbia Ave that became the focal point of the Battle of Franklin.' },
+      { name: 'Williamson County Performing Arts Center', note: '1,000-seat theater at 905 Murfreesboro Rd hosting Studio Tenn productions and touring acts.' },
+    ],
+    amenities: [
+      { name: 'The Factory at Franklin', note: 'Adaptive-reuse retail and event venue in a former 1920s stove factory at 230 Franklin Rd.' },
+      { name: 'Williamson Medical Center', note: 'Full-service hospital at 4321 Carothers Pkwy serving all of Williamson County.' },
+      { name: 'Publix at Cool Springs', note: 'Grocery anchor at 7048 Bakers Bridge Ave with full pharmacy and delivery.' },
+      { name: 'CoolSprings Galleria', note: '15-minute drive north on Mack Hatcher; the largest mall in south-of-Nashville Williamson.' },
+    ],
+    thingsToDo: [
+      { name: 'Pilgrimage Music Festival', note: 'Annual late-September music festival at Harlinsdale Farm — headliners have included Justin Timberlake and Foo Fighters.' },
+      { name: 'Main Street Festival', note: 'Annual April art-and-craft festival drawing 125,000+ to downtown Franklin since 1983.' },
+      { name: 'Franklin Theatre concerts', note: 'Intimate 300-seat live-music room with reliable national touring-act bookings.' },
+      { name: 'Harlinsdale Farm Park', note: '200-acre former Tennessee Walking Horse farm now a public park at 239 Franklin Rd.' },
+      { name: 'Civil War battlefield tours', note: 'Walking tours of the Battle of Franklin sites organized by the Battle of Franklin Trust.' },
     ],
   },
   {

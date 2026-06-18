@@ -30,9 +30,24 @@ const CITY_SERVICE_LINKS = SERVICES.filter((s) => s.cityPages).map((s) => ({
   label: s.name,
 }))
 
+type LocalPlace = { name: string; note: string }
+
+type NeighborhoodWithExtras = (typeof NEIGHBORHOODS)[number] & {
+  // Local landmarks / amenities / things to do. Renders an "Around
+  // {Area}" section on the service-area detail page. Populated for
+  // the priority areas; other entries render without the section.
+  // Optional so new entries can ship without forcing local-content
+  // authorship up front.
+  landmarks?: LocalPlace[]
+  amenities?: LocalPlace[]
+  thingsToDo?: LocalPlace[]
+}
+
 export default function Neighborhoods() {
   const { slug } = useParams<{ slug: string }>()
-  const n = slug ? NEIGHBORHOODS.find((x) => x.slug === slug) : undefined
+  const n = (slug ? NEIGHBORHOODS.find((x) => x.slug === slug) : undefined) as
+    | NeighborhoodWithExtras
+    | undefined
 
   useDocumentMeta({
     title: n
@@ -99,6 +114,11 @@ export default function Neighborhoods() {
         </>
       )
     }
+    const landmarks = n.landmarks ?? []
+    const amenities = n.amenities ?? []
+    const thingsToDo = n.thingsToDo ?? []
+    const hasLocalContext =
+      landmarks.length > 0 || amenities.length > 0 || thingsToDo.length > 0
     return (
       <>
         <PageHero
@@ -208,6 +228,78 @@ export default function Neighborhoods() {
                   </span>
                 </div>
               </div>
+
+              {hasLocalContext && (
+                <div className="mt-12 pt-10 border-t border-warmgray">
+                  <h3 className="heading-card !text-2xl mb-2">
+                    Around {n.name}
+                  </h3>
+                  <p className="text-body-lead mb-6">
+                    Local landmarks, amenities, and things to do — useful
+                    context when a fence project bundles into a broader
+                    yard or backyard build-out around the {n.name} area.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {landmarks.length > 0 && (
+                      <div>
+                        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 mb-3">
+                          Landmarks
+                        </div>
+                        <ul className="space-y-3">
+                          {landmarks.map((l) => (
+                            <li key={l.name}>
+                              <div className="text-sm font-bold text-onyx-700 leading-tight">
+                                {l.name}
+                              </div>
+                              <div className="text-[13px] text-onyx-700/70 leading-snug mt-0.5">
+                                {l.note}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {amenities.length > 0 && (
+                      <div>
+                        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 mb-3">
+                          Amenities
+                        </div>
+                        <ul className="space-y-3">
+                          {amenities.map((a) => (
+                            <li key={a.name}>
+                              <div className="text-sm font-bold text-onyx-700 leading-tight">
+                                {a.name}
+                              </div>
+                              <div className="text-[13px] text-onyx-700/70 leading-snug mt-0.5">
+                                {a.note}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {thingsToDo.length > 0 && (
+                      <div>
+                        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-oak-500 mb-3">
+                          Things to Do
+                        </div>
+                        <ul className="space-y-3">
+                          {thingsToDo.map((t) => (
+                            <li key={t.name}>
+                              <div className="text-sm font-bold text-onyx-700 leading-tight">
+                                {t.name}
+                              </div>
+                              <div className="text-[13px] text-onyx-700/70 leading-snug mt-0.5">
+                                {t.note}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <aside className="space-y-5">
