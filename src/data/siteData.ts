@@ -3377,6 +3377,138 @@ export const RESOURCES = [
       },
     ] as ResourceSection[],
   },
+  {
+    slug: 'pergola-permits-nashville',
+    title: 'Pergola Permits in Metro Nashville: The 200 Sqft Trap and What Else Will Catch You',
+    category: 'Permits',
+    readTime: '7 min',
+    publishedAt: '2026-06-18',
+    excerpt:
+      "A freestanding pergola under 200 sqft skips the Metro permit. An attached one always needs one. Motorized louvered pergolas need both a building and an electrical permit. Williamson County HOAs make Metro's process look fast. Here's the real rule set, the gaming pattern most contractors quietly use, and what happens when you skip the paperwork.",
+    img: IMAGES.resources['pergola-permits-nashville'],
+    imageAlt: 'Cedar pergola on a Nashville back patio, pergola permit guide',
+    body: [
+      {
+        type: 'p',
+        text: "A freestanding pergola under 200 square feet does not need a Metro Nashville building permit. An attached pergola — bolted to the house, sharing a roof tie-in, or anchored to the deck framing — always needs one. A motorized louvered pergola needs both a building permit and an electrical permit. And if you're inside any Williamson County subdivision with an HOA — Brentwood, Franklin, Cool Springs, Spring Hill — the ARC approval will take 4-8 weeks and will outweigh the Metro side by a wide margin. Below is the actual rule set, the threshold-gaming pattern most contractors will quietly walk you through, and what happens when you skip the permits entirely.",
+      },
+      { type: 'h2', text: 'Does a pergola actually need a permit in Metro Nashville?' },
+      {
+        type: 'p',
+        text: "It depends on three things: footprint, attachment, and whether there's an operator. Freestanding pergola under 200 sqft, no electrical, no attachment to the house — no Metro permit, just build it. Anything over 200 sqft, attached to the house or deck, or carrying an electric operator — yes, building permit at minimum, often electrical on top.",
+      },
+      {
+        type: 'p',
+        text: "The honest answer most contractors won't lead with: most residential cedar pergolas land between 12×16 (192 sqft) and 14×18 (252 sqft). Those two footprints straddle the threshold. The difference between 'no permit needed' and '$200-$400 permit plus 2-3 weeks of review' comes down to whether you built 8 extra square feet of footprint. Contractors absolutely point this out as a feature.",
+      },
+      { type: 'h2', text: 'What\'s the 200 sqft threshold and why do contractors keep flirting with it?' },
+      {
+        type: 'p',
+        text: "Metro Codes exempts accessory structures under 200 sqft from the building permit requirement, provided they're freestanding, single-story, and don't carry habitable floor area. Pergolas qualify when the math works. A 12×16 footprint lands at 192 sqft — 8 square feet under the threshold. The design is identical in structural terms to a 12×18 at 216 sqft, but the smaller footprint dodges the permit fee and the review window.",
+      },
+      {
+        type: 'p',
+        text: "The gaming pattern: build the 12×16, sometimes drift the patio apron or deck up to the pergola edge so the visual footprint looks larger, occasionally add a 4×4 attached cedar trellis the next year that quietly brings the effective footprint over 200 sqft. Metro inspectors don't drive around hunting for this — but a neighbor complaint triggers a full review, and the original exempt structure gets re-evaluated against the as-built. The 200 sqft trap works until it doesn't. The neighbor-complaint scenario in Williamson County, Belle Meade, and Forest Hills is the most common trigger.",
+      },
+      { type: 'h2', text: 'Why does an attached pergola always need a permit?' },
+      {
+        type: 'p',
+        text: "Attached pergolas — anchored to the house structure, the deck framing, or a load-bearing column — count as structural additions under Metro Code. The 200 sqft exemption only applies to freestanding accessory structures. The attached version transfers load to the house, and that's what Metro Codes inspects.",
+      },
+      {
+        type: 'p',
+        text: "Why Metro cares: the bolts that hold the pergola ledger board to the house wall are pulling on the rim joist or band board. Done correctly, fine. Done wrong — incorrect fastener spacing, missing flashing, no through-bolts where the structure demands them — the pergola pulls the wall in a storm or sags into the gutter inside 5 years. The inspection process verifies the attachment hardware, the flashing detail, and the load path. Contractors who frame attached pergolas as 'just a few bolts in the ledger' are skipping the permit and the inspection. Looks great year one. The structural failure shows up in year 6-12 when a heavy storm puts the gust load on the structure or when the wall's wood swells and contracts around the fasteners.",
+      },
+      { type: 'h2', text: 'What about motorized louvered pergolas (Equinox, StruXure, Renson)?' },
+      {
+        type: 'p',
+        text: "Always permitted. No exceptions. The motorized louver mechanism is treated as both a structural element (the louvers carry weight when open or closed) and an electrical installation. Metro requires a building permit for the structure and a separate electrical permit for the operator wiring. Combined permit cost: typically $400-$700 in Metro Nashville. Combined inspection schedule: one structural inspection, one electrical inspection, both scheduled separately.",
+      },
+      {
+        type: 'p',
+        text: "Williamson County wrinkle, repeated from the [Pergola vs Covered Patio breakdown](/resources/pergola-vs-covered-patio-nashville): several Brentwood, Franklin, and Cool Springs subdivisions have started rejecting motorized louvered pergolas outright in 2025-2026 ARC reviews. The committee's read is that motors plus louvers plus electrical wiring qualify as 'structure with mechanical systems' and aren't covered by the pergola exemption in the covenants. Verify the ARC approval BEFORE pulling the Metro permit, because Metro will happily issue the permit and the HOA will still tell you to take it down.",
+      },
+      { type: 'h2', text: 'How does the HOA approval process actually work in Williamson County?' },
+      {
+        type: 'p',
+        text: "Slower, stricter, and more arbitrary than Metro. Most Williamson County HOAs require ARC (Architectural Review Committee) approval before any exterior structure goes in. The packet typically wants the site plan with the pergola location marked, elevation drawings showing the height profile from each side, materials list (cedar species, stain color, hardware finish), connection details if attached, and a photo of the proposed location with the structure outlined.",
+      },
+      {
+        type: 'p',
+        text: "Review time: 4-8 weeks for a clean submission. 8-16 weeks if the committee requests revisions. Most ARCs meet monthly, so a packet that misses the cutoff waits a full extra month for the next meeting. The committee can deny for aesthetic reasons that Metro Codes legally cannot — Brentwood Country Club neighborhoods reject pergolas that don't match the existing house material, Cool Springs subdivisions reject anything over 9 feet of overall height, Westhaven and McKay's Mill have a 'no metal structure' rule that excludes most aluminum pergolas outright.",
+      },
+      {
+        type: 'p',
+        text: "Translation: in Williamson County, the HOA review is the hard part. Metro is the easy part. Most homeowners get this backwards because Metro is the entity that sends inspectors, and the ARC is just a volunteer committee. The volunteer committee can cost you 12 weeks and a redesign.",
+      },
+      { type: 'h2', text: 'What happens if I skip the permit and just build it?' },
+      {
+        type: 'p',
+        text: "Three outcomes, depending on where you build:",
+      },
+      {
+        type: 'ul',
+        items: [
+          'Metro Nashville proper (Davidson County, no HOA): you probably get away with it until you sell the house. Most title companies pull a permit history on inspection contingency. An unpermitted pergola becomes a 5-day delay on closing while you pay the retroactive permit fee ($500-$1,200 with the after-the-fact surcharge) and schedule the inspection. Annoying, not catastrophic.',
+          'Belle Meade, Forest Hills, or Oak Hill: each city has its own codes department and yes, they do drive around. Belle Meade in particular issues citations within 30 days of an unpermitted structure showing up. Fine: $250-$800 plus the retroactive permit plus inspection. Average remediation: $1,200-$2,500.',
+          'Any Williamson County HOA: the neighbor complaint triggers a covenant violation letter from the ARC. Best case, you pay the late ARC fee plus the Metro permit and get retroactive approval. Worst case, the ARC denies and orders removal at your cost. Average remediation: $2,500-$8,000 to take down and re-install correctly.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "The 'build under cover of darkness and apologize later' pattern works at Metro Nashville maybe 60 percent of the time. In Belle Meade it works 5 percent of the time. In Williamson HOA neighborhoods it works zero percent of the time. The math is not in your favor outside Davidson County.",
+      },
+      { type: 'h2', text: 'What does the permit actually cost in Metro Nashville?' },
+      {
+        type: 'p',
+        text: "Building permit for a residential pergola: $200-$400 depending on the declared structure value and footprint. Electrical permit if you have a motorized operator or hardwired lighting that runs off house current: $90-$180. Plan review fee on top if Metro requires structural drawings (typically over 250 sqft or with attached construction): $150-$300.",
+      },
+      {
+        type: 'p',
+        text: "Total range for a standard residential pergola pulled correctly: $200-$880. Total for a motorized louvered install: $400-$1,200 once you stack the building permit, electrical permit, plan review, and the dual inspection schedule. Compare those numbers to a $4,800 bare cedar pergola or a $32,000 motorized louvered install — the permit fee is 1 to 4 percent of the project. Skipping it to save that fraction is the math nobody can defend out loud.",
+      },
+      { type: 'h2', text: 'How long does the permit process actually take?' },
+      {
+        type: 'p',
+        text: "Standard residential pergola permit through Metro Codes: 5-15 business days from submission to issued permit. Add another 1-2 days for the post-construction inspection scheduling. Plan review (required on attached structures or pergolas over 250 sqft) adds 2-3 weeks. The plan reviewer queues vary by season — late winter is fast (2-3 days), April through July is slow (3-4 weeks) because of the spring deck-building rush.",
+      },
+      {
+        type: 'p',
+        text: "Electrical permit for the operator runs a separate 3-7 business day track. If you're combining Metro permit plus Williamson HOA approval, the HOA is always the longer wait. The right order is HOA first, Metro second — pull the HOA submission first, get the approval in writing, THEN file the Metro permit so the schedules don't desync. The Metro permit doesn't expire fast enough to be a problem on this stack.",
+      },
+      { type: 'h2', text: 'What about historic overlays in East Nashville and Germantown?' },
+      {
+        type: 'p',
+        text: "Different process entirely. Pergolas in Edgefield, Lockeland Springs, Germantown, Belle Meade Conservation, and the other Metro historic overlays go through the Metro Historic Zoning Commission (MHZC) first. MHZC reviews focus on visibility from the street. A pergola tucked in the back corner of a lot, fully hidden by the house from the street view, often gets administrative-level approval in 5-10 days. A pergola visible from the public right-of-way goes to the full commission for a hearing — that adds 4-8 weeks and the design has to match the approved materials list (no aluminum, cedar only, specific hardware finishes, no motorized mechanisms in most cases).",
+      },
+      {
+        type: 'p',
+        text: "MHZC fee: $25-$150 depending on the review level. Free for administrative approvals. The commission's website lists the criteria — and the [walk-through of Metro Nashville's other fence and structure permits](/resources/metro-nashville-permits) covers how the historic-overlay process interlocks with the regular Metro Codes track.",
+      },
+      { type: 'h2', text: 'What\'s the build-order if you\'re getting both the permit and the HOA approval?' },
+      {
+        type: 'p',
+        text: "Three-stage stack:",
+      },
+      {
+        type: 'ol',
+        items: [
+          'Survey or plat review first. Confirms the property setbacks and the right-of-way line so you know where the pergola can legally land. Avoid the embarrassing rebuild that comes from missing the rear-yard setback by 2 feet.',
+          'HOA / ARC submission second. Goes in 4-8 weeks before you want the contractor to break ground. Get the approval letter in writing before you spend money on permits. No verbal approvals — they do not survive a neighbor complaint.',
+          'Metro permit plus electrical permit third. With ARC approval in hand, file the permits. They typically clear in 1-2 weeks for the standard residential pergola, 2-3 weeks for an attached or motorized structure.',
+        ],
+      },
+      {
+        type: 'p',
+        text: "Schedule the contractor to break ground the week AFTER the Metro permit is issued. Most Nashville pergola installers will hold a slot up to 30 days out without a deposit on the basis of a pending permit — beyond that, expect a 25 percent reserve. The same parallel logic applies to driveway gates with electric operators, walked through in the [Driveway Gate Permits article](/resources/driveway-gate-permits-nashville).",
+      },
+      { type: 'h2', text: 'What\'s the one-line recommendation?' },
+      {
+        type: 'p',
+        text: "Freestanding under 200 sqft, no electrical, no HOA: build it. Anything attached, over 200 sqft, motorized, or inside a Williamson County HOA: pull the permit and get the approval before you sign the install contract, even if your contractor tells you it's fine. The [Pergola vs Covered Patio article](/resources/pergola-vs-covered-patio-nashville) covers which structure type to actually pick before the permit question even comes up, and the [shortlist of Nashville deck builders](/resources/best-deck-builders-nashville) is where to find the contractors who'll pull the paperwork without you having to ask twice.",
+      },
+    ] as ResourceSection[],
+  },
 ]
 
 export const FAQS = [
