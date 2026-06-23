@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { FENCE_TYPES } from '../../data/siteData'
+import { FENCE_TYPES, fenceTypeServiceUrl } from '../../data/siteData'
 import SafeImage from '../shared/SafeImage'
 import { CITY } from '../../config/city'
 
@@ -26,7 +26,7 @@ export default function FenceTypesSection() {
               style={{ animationDelay: `${i * 0.04}s` }}
             >
               <Link
-                to={`/fence-types/${t.slug}`}
+                to={fenceTypeServiceUrl(t.slug)}
                 className="group block bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300 border border-warmgray hover:-translate-y-0.5"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-warmgray">

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react'
-import { COMPANY, FENCE_TYPES, NEIGHBORHOODS } from '../../data/siteData'
+import { COMPANY, FENCE_TYPES, NEIGHBORHOODS, fenceTypeServiceUrl } from '../../data/siteData'
 import { CITY } from '../../config/city'
 
 const POPULAR_NEIGHBORHOOD_SLUGS = [
@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-2 text-[13px]">
               {FENCE_TYPES.map((t) => (
                 <li key={t.slug}>
-                  <Link to={`/fence-types/${t.slug}`} className="text-onyx-200 hover:text-oak-300 transition-colors">
+                  <Link to={fenceTypeServiceUrl(t.slug)} className="text-onyx-200 hover:text-oak-300 transition-colors">
                     {t.name}
                   </Link>
                 </li>
@@ -79,8 +79,8 @@ export default function Footer() {
               <li><Link to="/permits" className="text-onyx-200 hover:text-oak-300 transition-colors">{CITY.permitOffice.shortName} Permit Rules</Link></li>
               <li><Link to="/pool-fence-code" className="text-onyx-200 hover:text-oak-300 transition-colors">Pool Fence Code</Link></li>
               <li><Link to="/historic-overlays" className="text-onyx-200 hover:text-oak-300 transition-colors">Historic Overlays</Link></li>
-              <li><Link to="/repair" className="text-onyx-200 hover:text-oak-300 transition-colors">Fence Repair {CITY.name}</Link></li>
-              <li><Link to="/commercial-fencing" className="text-onyx-200 hover:text-oak-300 transition-colors">Commercial Fencing</Link></li>
+              <li><Link to="/services/fence-repair" className="text-onyx-200 hover:text-oak-300 transition-colors">Fence Repair {CITY.name}</Link></li>
+              <li><Link to="/services/commercial-fencing" className="text-onyx-200 hover:text-oak-300 transition-colors">Commercial Fencing</Link></li>
             </ul>
           </div>
 

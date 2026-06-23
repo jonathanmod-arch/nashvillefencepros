@@ -17,23 +17,25 @@ import { writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { CONTRACTORS } from '../src/data/contractors'
-import { FENCE_TYPES, NEIGHBORHOODS, RESOURCES, RESOURCE_PUBLISHED_AT } from '../src/data/siteData'
+import { FENCE_TYPES, NEIGHBORHOODS, RESOURCES, RESOURCE_PUBLISHED_AT, fenceTypeServiceUrl } from '../src/data/siteData'
 import { SERVICES, SERVICE_BUCKETS } from '../src/data/services'
 import { CITY } from '../src/config/city'
 
 const SITE_URL = CITY.siteUrl
 
+// Routes shipped in the sitemap. URLs that 301-redirect (e.g. /fence-types
+// → /services/fence-installation, /repair → /services/fence-repair,
+// /commercial-fencing → /services/commercial-fencing) are intentionally
+// omitted — every entry here resolves with a 200 so SEMrush / Search
+// Console don't flag the sitemap as 20% redirect chain.
 const STATIC_ROUTES: string[] = [
   '/',
   '/contractors',
   '/services',
-  '/fence-types',
   '/cost-guide',
   '/permits',
   '/service-areas',
   '/resources',
-  '/repair',
-  '/commercial-fencing',
   '/pool-fence-code',
   '/historic-overlays',
   '/about',
@@ -60,7 +62,12 @@ const urls: UrlEntry[] = [
   ...SERVICE_BUCKETS.map((b) => ({ loc: `${SITE_URL}/services/${b.slug}`, lastmod: today })),
   ...SERVICES.map((s) => ({ loc: `${SITE_URL}/services/${s.slug}`, lastmod: today })),
   ...SERVICE_AREA_URLS,
-  ...FENCE_TYPES.map((t) => ({ loc: `${SITE_URL}/fence-types/${t.slug}`, lastmod: today })),
+  // Fence-type URLs are NOT sitemapped. Every /fence-types/<slug> 301s to
+  // /services/<service-slug>; the canonical /services/<slug> URLs are
+  // already in the SERVICES sitemap loop above. Leaving the legacy paths
+  // out of the sitemap stops SEMrush from flagging the site as 20%
+  // redirect chain. Vercel.json keeps the server-side 301s for external
+  // backlinks.
   ...NEIGHBORHOODS.map((n) => ({ loc: `${SITE_URL}/service-areas/${n.slug}`, lastmod: today })),
   ...CONTRACTORS.map((c) => ({ loc: `${SITE_URL}/contractors/${c.slug}`, lastmod: today })),
   ...RESOURCES.map((r) => ({
@@ -96,15 +103,18 @@ Allow: /
 Sitemap: ${SITE_URL}/sitemap.xml
 `
 
+// llms.txt core-page list. Same omission rule as STATIC_ROUTES above —
+// /fence-types, /repair, /commercial-fencing all 301 to a /services/<slug>
+// URL, so the canonical destination is listed instead of the legacy path.
 const CORE_PAGES: { path: string; label: string; desc: string }[] = [
   { path: '/', label: 'Home', desc: `Overview of ${CITY.name} fence installation — costs, repair, vetted local contractors, free quotes.` },
   { path: '/contractors', label: 'Find a Pro', desc: `Directory of vetted ${CITY.name} fence installers, gate companies, land surveyors, site prep crews, staining specialists, and outdoor design firms. Filter by area, service category, and project type.` },
   { path: '/service-areas', label: 'Service Areas', desc: `Local pricing, popular styles, and HOA notes for every ${CITY.name}-area city and neighborhood we cover.` },
-  { path: '/fence-types', label: 'Fence Types', desc: 'Compare wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.' },
+  { path: '/services/fence-installation', label: 'Fence Installation Services', desc: 'Compare wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing services in one place.' },
   { path: '/cost-guide', label: 'Cost Guide', desc: `Real installed prices for fence installation in ${CITY.name} by material and project size.` },
   { path: '/permits', label: 'Permits and Rules', desc: `${CITY.permitOffice.name} fence permit requirements, height limits, dig-safe 811 protocol, and pool fence code.` },
-  { path: '/repair', label: 'Fence Repair', desc: `${CITY.name} fence repair pricing by material and the 60-percent repair-versus-replace rule.` },
-  { path: '/commercial-fencing', label: 'Commercial Fencing', desc: `Security fence and access control for ${CITY.name} businesses, multifamily, and industrial sites.` },
+  { path: '/services/fence-repair', label: 'Fence Repair', desc: `${CITY.name} fence repair pricing by material and the 60-percent repair-versus-replace rule.` },
+  { path: '/services/commercial-fencing', label: 'Commercial Fencing', desc: `Security fence and access control for ${CITY.name} businesses, multifamily, and industrial sites.` },
   { path: '/pool-fence-code', label: 'Pool Fence Code', desc: `${CITY.poolBarrierCode} pool barrier requirements as enforced in ${CITY.permitOffice.name}.` },
   { path: '/historic-overlays', label: 'Historic Overlay Fence Rules', desc: `${CITY.name} historic overlay district fence approval — submission steps, approved materials.` },
   { path: '/resources', label: 'Resource Center', desc: `In-depth guides for ${CITY.metroLabel} homeowners.` },
@@ -165,9 +175,12 @@ for (const s of SERVICES.filter((x) => x.cityPages)) {
 llmsLines.push('')
 llmsLines.push('## Fence type pages')
 llmsLines.push('')
+// Canonical destinations under /services/<slug> — the legacy /fence-types
+// URLs 301 here and are deliberately omitted from llms.txt so AI crawlers
+// index the canonical URL only.
 for (const t of FENCE_TYPES) {
   const desc = FENCE_TYPE_DESCRIPTIONS[t.slug] ?? `${t.name} fence installation in ${CITY.name}.`
-  llmsLines.push(`- [${t.name} Fence Installation ${CITY.name}](${SITE_URL}/fence-types/${t.slug}): ${desc}`)
+  llmsLines.push(`- [${t.name} Fence Installation ${CITY.name}](${SITE_URL}${fenceTypeServiceUrl(t.slug)}): ${desc}`)
 }
 llmsLines.push('')
 llmsLines.push('## Service area pages')

@@ -241,7 +241,7 @@ export default function PoolFenceCode() {
 
           <div className="mt-8 grid sm:grid-cols-2 gap-4 text-sm">
             <Link
-              to="/fence-types/pool-safety"
+              to="/services/pool-fence"
               className="block bg-white border border-[#E2E8F0] rounded-xl p-5 hover:border-forest-500 transition-colors"
             >
               <div className="font-heading font-bold text-forest-500 mb-1">

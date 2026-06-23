@@ -168,6 +168,33 @@ export const FENCE_TYPES = [
   },
 ]
 
+// Maps an old FENCE_TYPES slug to the canonical /services/<slug> URL it
+// redirects to. Used by internal links and the sitemap/llms.txt generators
+// so the site never serves its own crawler a redirect — Google + Bing +
+// audit tools were flagging the 301 chain even though the destinations
+// resolve correctly. Vercel.json still ships the server-side 301s for
+// external backlinks that point at the old URLs.
+const FENCE_TYPE_TO_SERVICE_SLUG: Record<string, string> = {
+  'wood-privacy': 'wood-fence',
+  vinyl: 'vinyl-fence',
+  aluminum: 'aluminum-fence',
+  'chain-link': 'chain-link-fence',
+  'horizontal-privacy': 'horizontal-cedar-fence',
+  'farm-ranch': 'farm-ranch-fence',
+  'wrought-iron': 'wrought-iron-fence',
+  'pet-fence': 'pet-fence',
+  'hidden-pet-fence': 'hidden-pet-fence',
+  'pool-safety': 'pool-fence',
+}
+
+export function fenceTypeServiceSlug(fenceTypeSlug: string): string {
+  return FENCE_TYPE_TO_SERVICE_SLUG[fenceTypeSlug] ?? fenceTypeSlug
+}
+
+export function fenceTypeServiceUrl(fenceTypeSlug: string): string {
+  return `/services/${fenceTypeServiceSlug(fenceTypeSlug)}`
+}
+
 export const NEIGHBORHOODS = [
   {
     slug: 'belle-meade',

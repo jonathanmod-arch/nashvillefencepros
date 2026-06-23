@@ -292,7 +292,7 @@ export default function HistoricOverlays() {
               </div>
             </Link>
             <Link
-              to="/neighborhoods/germantown"
+              to="/service-areas/germantown"
               className="block bg-white border border-[#E2E8F0] rounded-xl p-5 hover:border-forest-500 transition-colors"
             >
               <div className="font-heading font-bold text-forest-500 mb-1">

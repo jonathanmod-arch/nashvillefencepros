@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer'
 import ScrollToTop from './components/layout/ScrollToTop'
 import StickyMobileCTA from './components/layout/StickyMobileCTA'
 import Home from './pages/Home'
+import { fenceTypeServiceUrl } from './data/siteData'
 
 const GetQuotes = lazy(() => import('./pages/GetQuotes'))
 const CostGuide = lazy(() => import('./pages/CostGuide'))
@@ -13,7 +14,6 @@ const Neighborhoods = lazy(() => import('./pages/Neighborhoods'))
 const Contractors = lazy(() => import('./pages/Contractors'))
 const ContractorProfile = lazy(() => import('./pages/ContractorProfile'))
 const Resources = lazy(() => import('./pages/Resources'))
-const FenceTypes = lazy(() => import('./pages/FenceTypes'))
 const Services = lazy(() => import('./pages/Services'))
 const Advertise = lazy(() => import('./pages/Advertise'))
 const SubmitListing = lazy(() => import('./pages/SubmitListing'))
@@ -23,32 +23,14 @@ const About = lazy(() => import('./pages/About'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Terms = lazy(() => import('./pages/Terms'))
 
-/**
- * Phase 1 migration: old /fence-types/<slug> URLs redirect to the new
- * /services/<service-slug> shape. Server-side 301s live in vercel.json;
- * this client-side <Navigate> is the second layer so SPA navigation
- * resolves to the same place.
- */
-const FENCE_TYPE_TO_SERVICE: Record<string, string> = {
-  'wood-privacy': 'wood-fence',
-  vinyl: 'vinyl-fence',
-  aluminum: 'aluminum-fence',
-  'chain-link': 'chain-link-fence',
-  'horizontal-privacy': 'horizontal-cedar-fence',
-  'farm-ranch': 'farm-ranch-fence',
-  'wrought-iron': 'wrought-iron-fence',
-  'pet-fence': 'pet-fence',
-  'hidden-pet-fence': 'hidden-pet-fence',
-  'pool-safety': 'pool-fence',
-}
-
+// Legacy /fence-types/<slug> SPA fallback. Server-side 301s in vercel.json
+// handle external backlinks before React loads; this in-app Navigate is
+// only the safety net for the rare case someone reaches an old URL via
+// SPA navigation. Removed FenceTypes page itself in this commit because
+// every fence-type slug maps cleanly to a /services/<slug> URL.
 function FenceTypeRedirect() {
   const { slug } = useParams<{ slug: string }>()
-  const target = slug ? FENCE_TYPE_TO_SERVICE[slug] : undefined
-  if (target) return <Navigate to={`/services/${target}`} replace />
-  // Slugs without a mapping (farm-ranch, wrought-iron — Phase 2 backfill)
-  // fall through to the existing FenceTypes page for now.
-  return <FenceTypes />
+  return <Navigate to={slug ? fenceTypeServiceUrl(slug) : '/services/fence-installation'} replace />
 }
 
 function RouteLoader() {

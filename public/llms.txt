@@ -7,11 +7,11 @@
 - [Home](https://nashvillefenceguide.com/): Overview of Nashville fence installation — costs, repair, vetted local contractors, free quotes.
 - [Find a Pro](https://nashvillefenceguide.com/contractors): Directory of vetted Nashville fence installers, gate companies, land surveyors, site prep crews, staining specialists, and outdoor design firms. Filter by area, service category, and project type.
 - [Service Areas](https://nashvillefenceguide.com/service-areas): Local pricing, popular styles, and HOA notes for every Nashville-area city and neighborhood we cover.
-- [Fence Types](https://nashvillefenceguide.com/fence-types): Compare wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing.
+- [Fence Installation Services](https://nashvillefenceguide.com/services/fence-installation): Compare wood privacy, vinyl, aluminum, chain link, horizontal cedar, farm and ranch, wrought iron, pet, and pool safety fencing services in one place.
 - [Cost Guide](https://nashvillefenceguide.com/cost-guide): Real installed prices for fence installation in Nashville by material and project size.
 - [Permits and Rules](https://nashvillefenceguide.com/permits): Metro Nashville Codes fence permit requirements, height limits, dig-safe 811 protocol, and pool fence code.
-- [Fence Repair](https://nashvillefenceguide.com/repair): Nashville fence repair pricing by material and the 60-percent repair-versus-replace rule.
-- [Commercial Fencing](https://nashvillefenceguide.com/commercial-fencing): Security fence and access control for Nashville businesses, multifamily, and industrial sites.
+- [Fence Repair](https://nashvillefenceguide.com/services/fence-repair): Nashville fence repair pricing by material and the 60-percent repair-versus-replace rule.
+- [Commercial Fencing](https://nashvillefenceguide.com/services/commercial-fencing): Security fence and access control for Nashville businesses, multifamily, and industrial sites.
 - [Pool Fence Code](https://nashvillefenceguide.com/pool-fence-code): 2018 ISPSC pool barrier requirements as enforced in Metro Nashville Codes.
 - [Historic Overlay Fence Rules](https://nashvillefenceguide.com/historic-overlays): Nashville historic overlay district fence approval — submission steps, approved materials.
 - [Resource Center](https://nashvillefenceguide.com/resources): In-depth guides for Middle Tennessee homeowners.
@@ -345,16 +345,16 @@
 
 ## Fence type pages
 
-- [Wood Privacy Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/wood-privacy): Cedar privacy fencing — materials, installed cost per linear foot, lifespan in Middle Tennessee.
-- [Premium Vinyl Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/vinyl): Premium PVC fencing — HOA compatibility, maintenance, cost.
-- [Ornamental Aluminum Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/aluminum): Ornamental metal fencing for pools and front yards.
-- [Galvanized Chain Link Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/chain-link): Galvanized and vinyl-coated chain link — residential and commercial use.
-- [Modern Horizontal Privacy Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/horizontal-privacy): Modern slat-style cedar fencing popular in design-forward Nashville neighborhoods.
-- [Farm & Ranch Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/farm-ranch): Four-board and woven-wire fencing for acreage across Middle Tennessee.
-- [Wrought Iron Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/wrought-iron): Estate-grade welded iron fencing.
-- [Invisible & Pet Fence Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/pet-fence): Containment solutions for Nashville dog owners.
-- [Hidden Dog Fence Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/hidden-pet-fence): Hidden Dog Fence fence installation in Nashville.
-- [Pool Safety Fence Fence Installation Nashville](https://nashvillefenceguide.com/fence-types/pool-safety): ISPSC-compliant pool barriers.
+- [Wood Privacy Fence Installation Nashville](https://nashvillefenceguide.com/services/wood-fence): Cedar privacy fencing — materials, installed cost per linear foot, lifespan in Middle Tennessee.
+- [Premium Vinyl Fence Installation Nashville](https://nashvillefenceguide.com/services/vinyl-fence): Premium PVC fencing — HOA compatibility, maintenance, cost.
+- [Ornamental Aluminum Fence Installation Nashville](https://nashvillefenceguide.com/services/aluminum-fence): Ornamental metal fencing for pools and front yards.
+- [Galvanized Chain Link Fence Installation Nashville](https://nashvillefenceguide.com/services/chain-link-fence): Galvanized and vinyl-coated chain link — residential and commercial use.
+- [Modern Horizontal Privacy Fence Installation Nashville](https://nashvillefenceguide.com/services/horizontal-cedar-fence): Modern slat-style cedar fencing popular in design-forward Nashville neighborhoods.
+- [Farm & Ranch Fence Installation Nashville](https://nashvillefenceguide.com/services/farm-ranch-fence): Four-board and woven-wire fencing for acreage across Middle Tennessee.
+- [Wrought Iron Fence Installation Nashville](https://nashvillefenceguide.com/services/wrought-iron-fence): Estate-grade welded iron fencing.
+- [Invisible & Pet Fence Fence Installation Nashville](https://nashvillefenceguide.com/services/pet-fence): Containment solutions for Nashville dog owners.
+- [Hidden Dog Fence Fence Installation Nashville](https://nashvillefenceguide.com/services/hidden-pet-fence): Hidden Dog Fence fence installation in Nashville.
+- [Pool Safety Fence Fence Installation Nashville](https://nashvillefenceguide.com/services/pool-fence): ISPSC-compliant pool barriers.
 
 ## Service area pages
 
