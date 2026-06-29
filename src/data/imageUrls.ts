@@ -65,6 +65,7 @@ export const IMAGES = {
     'best-plants-privacy-fence-nashville': 'https://unsplash.com/photos/XFLY0Yp3Gow/download?w=1200&q=80',
     'pergola-permits-nashville': 'https://unsplash.com/photos/gmRXcuYNV6Q/download?w=1200&q=80',
     'landscaping-cost-nashville': 'https://unsplash.com/photos/XFLY0Yp3Gow/download?w=1200&q=80',
+    'bermuda-vs-fescue-vs-zoysia-nashville': 'https://unsplash.com/photos/XFLY0Yp3Gow/download?w=1200&q=80',
   },
   gallery: [
     'https://images.unsplash.com/photo-1597215593569-2b67d4ad6ca5?auto=format&fit=crop&w=900&q=80',
